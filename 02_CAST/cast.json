@@ -1,0 +1,84 @@
+{
+  "_note": "Bảng giọng cố định cho các hình tượng nhân vật lặp lại qua mọi tập. 'voice' là tên giọng dựng sẵn của Gemini TTS – nghe thử và đổi nếu chưa hợp. 'style' là chỉ đạo diễn xuất mặc định (có thể ghi đè bằng 'style' trong từng câu thoại). 'af': chuỗi filter FFmpeg hoặc alias 'phone' (giọng qua điện thoại).",
+  "speakers": {
+    "nguoi_boc_tran": {
+      "label": "Người Bóc Trần (dẫn chuyện của kênh)",
+      "label_short": "BÓC TRẦN",
+      "voice": "Charon",
+      "style": "Giọng nam trung niên miền Nam, điềm tĩnh, rõ ràng, ấm và đáng tin như một người anh lớn đang nhắc nhở người nhà; nhịp vừa phải, nhấn chữ quan trọng.",
+      "subtitle_rgb": [255, 214, 90],
+      "af": "highpass=f=70,equalizer=f=150:width_type=o:width=1.2:g=2.5,acompressor=threshold=-18dB:ratio=2.5:attack=10:release=120:makeup=2dB"
+    },
+    "co_tu": {
+      "label": "Cô Tư – người mẹ/người bán hàng ngoài 50 tuổi",
+      "label_short": "CÔ TƯ",
+      "voice": "Gacrux",
+      "style": "Giọng nữ miền Nam ngoài 50 tuổi, chân chất, hiền, dễ tin người; khi hoảng thì run, nói vội.",
+      "subtitle_rgb": [255, 240, 225]
+    },
+    "ong_bay": {
+      "label": "Ông Bảy – người hưu trí 65+",
+      "label_short": "ÔNG BẢY",
+      "voice": "Algenib",
+      "style": "Giọng ông cụ miền Nam ngoài 65 tuổi, chậm, hơi khàn, cẩn thận nhưng tin vào giấy tờ và 'cơ quan'.",
+      "subtitle_rgb": [255, 240, 225]
+    },
+    "anh_hai": {
+      "label": "Anh Hai – lao động/tiểu thương 30–40 tuổi",
+      "label_short": "ANH HAI",
+      "voice": "Orus",
+      "style": "Giọng nam miền Nam 35 tuổi, thẳng tính, chăm làm, hay lo chuyện tiền nong cho gia đình.",
+      "subtitle_rgb": [255, 240, 225]
+    },
+    "chi_ba": {
+      "label": "Chị Ba – nhân viên văn phòng/nội trợ 30–40 tuổi",
+      "label_short": "CHỊ BA",
+      "voice": "Kore",
+      "style": "Giọng nữ 35 tuổi, nhanh nhẹn, tự tin dùng điện thoại, nhưng bận rộn nên dễ bị dồn ép.",
+      "subtitle_rgb": [255, 240, 225]
+    },
+    "be_na": {
+      "label": "Bé Na – sinh viên 19–22 tuổi",
+      "label_short": "NA",
+      "voice": "Leda",
+      "style": "Giọng nữ sinh viên 20 tuổi, trong, hồn nhiên, ham việc làm thêm và thích săn deal online.",
+      "subtitle_rgb": [255, 240, 225]
+    },
+    "thang_tun": {
+      "label": "Tùng – nam thanh niên 18–24 tuổi",
+      "label_short": "TÙNG",
+      "voice": "Puck",
+      "style": "Giọng nam thanh niên 20 tuổi, sôi nổi, hơi liều, muốn kiếm tiền nhanh.",
+      "subtitle_rgb": [255, 240, 225]
+    },
+    "ke_gia_danh": {
+      "label": "Kẻ giả danh (cán bộ / nhân viên ngân hàng / nhà mạng)",
+      "label_short": "SỐ LẠ",
+      "voice": "Fenrir",
+      "style": "Giọng nam nghiêm giọng, lạnh, dồn dập, tạo áp lực như đang đọc lệnh; không quát tháo, không thô tục.",
+      "subtitle_rgb": [255, 120, 120],
+      "af": "phone"
+    },
+    "ke_ngot_ngao_nu": {
+      "label": "Kẻ lừa ngọt ngào (nữ) – tuyển dụng, tình cảm, chăm sóc khách hàng",
+      "label_short": "NGƯỜI LẠ",
+      "voice": "Aoede",
+      "style": "Giọng nữ trẻ ngọt ngào, nhiệt tình quá mức, luôn khen ngợi và hứa hẹn.",
+      "subtitle_rgb": [255, 150, 190]
+    },
+    "ke_ngot_ngao_nam": {
+      "label": "Kẻ lừa ngọt ngào (nam) – đầu tư, tình cảm, 'chuyên gia'",
+      "label_short": "NGƯỜI LẠ",
+      "voice": "Achird",
+      "style": "Giọng nam trẻ lịch sự, tự tin, nói như chuyên gia, hay dùng từ 'cơ hội', 'chắc chắn'.",
+      "subtitle_rgb": [255, 150, 190]
+    },
+    "ke_ban_hang": {
+      "label": "MC hội thảo / người bán hàng lưu động (offline)",
+      "label_short": "MC",
+      "voice": "Zephyr",
+      "style": "Giọng nữ MC sân khấu, hồ hởi, to, nói liến thoắng, tạo không khí 'cơ hội có một không hai'.",
+      "subtitle_rgb": [255, 150, 190]
+    }
+  }
+}

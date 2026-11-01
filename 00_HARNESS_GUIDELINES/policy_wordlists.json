@@ -1,0 +1,44 @@
+{
+  "_note": "Danh sách quét tự động ở Gate 5 (lời thoại, chữ trên hình, phụ đề, tiêu đề/description). hard_block = FAIL bắt buộc sửa. soft_warn = WARN, chỉ qua khi người duyệt ký xác nhận bối cảnh dùng là an toàn (run.py signoff --point 1 hoặc 3). Cập nhật danh sách này khi phát hiện từ mới bị nền tảng gắn cờ.",
+
+  "identity_hard_block": [
+    "vietcombank", "vietinbank", "bidv", "agribank", "techcombank", "mb bank", "mbbank", "acb", "vpbank", "tpbank",
+    "sacombank", "vib", "shb", "hdbank", "ocb", "msb", "seabank", "lpbank", "eximbank", "abbank", "nam a bank", "bac a bank",
+    "momo", "zalopay", "viettel money", "viettelpay", "vnpay", "shopeepay",
+    "viettel", "vinaphone", "mobifone", "vietnamobile",
+    "viettel post", "vietnam post", "vnpost", "giao hàng nhanh", "giao hàng tiết kiệm", "ghtk", "j&t",
+    "shopee", "lazada", "tiki", "tiktok shop", "sendo",
+    "evn"
+  ],
+
+  "identity_soft_warn": [
+    "zalo", "facebook", "messenger", "telegram", "tiktok", "youtube", "instagram", "viber", "whatsapp",
+    "vneid", "dịch vụ công", "bộ công an", "công an phường", "công an quận", "viện kiểm sát", "tòa án",
+    "cục thuế", "bảo hiểm xã hội", "bhxh", "bộ y tế", "bệnh viện", "điện lực"
+  ],
+
+  "allowed_domains": [],
+
+  "asr_ocr_hard_block": [
+    "giết", "sát hại", "chém", "đâm chết", "máu me", "đẫm máu", "xác chết", "thi thể",
+    "tự tử", "tự sát", "tự vẫn", "nhảy cầu", "uống thuốc ngủ",
+    "ma túy", "thuốc lắc", "mại dâm", "khỏa thân", "ảnh nóng", "clip nóng",
+    "đánh đập", "tra tấn"
+  ],
+
+  "asr_ocr_soft_warn": [
+    "chết", "bắt cóc", "đe dọa", "tống tiền", "khiêu dâm", "nhạy cảm",
+    "cờ bạc", "cá độ", "casino", "nhà cái", "tài xỉu", "lô đề", "cá cược",
+    "kiếm tiền online", "làm giàu nhanh", "lãi khủng", "x2 tài khoản", "nhân đôi tiền",
+    "súng", "cầm dao", "dí dao", "dao găm"
+  ],
+
+  "safe_rephrase_examples": {
+    "Nó dọa giết cả nhà tôi": "Nó dọa sẽ làm hại người nhà tôi",
+    "Chết rồi, mất hết tiền rồi!": "Thôi xong rồi... mất sạch tiền rồi!",
+    "Clip nóng của con bị phát tán": "Hình ảnh riêng tư của con bị đem ra đe dọa",
+    "Con bị bắt cóc rồi mẹ ơi": "Con đang bị giữ lại, mẹ chuyển tiền gấp!",
+    "Nhà cái uy tín, x2 tài khoản": "Ứng dụng hứa lãi gấp đôi trong một ngày",
+    "Chuyển vào Vietcombank số 0123456789": "Chuyển vào tài khoản ngân hàng mà người lạ đưa"
+  }
+}

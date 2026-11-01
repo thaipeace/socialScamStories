@@ -1,0 +1,24 @@
+# Rendered videos (giữ trên ổ đĩa / cloud, không đưa vào Git)
+*.mp4
+06_RENDERED_SHORTS/*
+!06_RENDERED_SHORTS/.gitkeep
+
+# WAV trung gian tái tạo được bằng engine (giữ MP3 và WAV giọng TTS gốc)
+factory/materialAndDraft/*/audio/mix/*.wav
+factory/materialAndDraft/*/audio/sfx/*.wav
+factory/materialAndDraft/*/audio/bgm/*.wav
+
+# Tập chạy thử engine
+factory/*/EP00_SMOKE/
+
+# Backup / tạm
+factory/materialAndDraft/*/assets/originals_backup/
+factory/materialAndDraft/*/_archive_*/
+__pycache__/
+*.py[cod]
+.DS_Store
+Thumbs.db
+
+# Không bao giờ commit khóa API
+*api-keys*.json
+.env

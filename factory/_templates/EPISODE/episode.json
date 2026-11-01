@@ -1,0 +1,97 @@
+{
+  "episode_id": "EPXX",
+  "slug": "TenTapKhongDau",
+  "title": "<Tên tập hiển thị>",
+  "version": "v1",
+  "scam_family": "<mã nhóm trong 01_SCAM_MAP, ví dụ ON-01>",
+  "duration_sec": 70.0,
+
+  "hook": {
+    "kicker": "<NHÓM CHIÊU, vd: GIẢ DANH CƠ QUAN>",
+    "title": "<Câu hook ≤ 10 từ, gây tò mò ngay>",
+    "start": 0.3,
+    "end": 4.8
+  },
+
+  "scenes": [
+    {"id": "s1_hook",     "image": "assets/scene1.jpg", "start": 0.0,  "end": 5.0,
+     "motion": {"scale": [1.08, 1.16], "focus": [[0.5, 0.45], [0.5, 0.42]], "wobble": "tense"},
+     "shakes": [{"at": 0.6, "amp": 26}]},
+    {"id": "s2_moi_nhu",  "image": "assets/scene2.jpg", "start": 5.0,  "end": 20.0,
+     "motion": {"scale": [1.03, 1.10], "focus": [[0.5, 0.5], [0.52, 0.46]], "wobble": "calm"},
+     "transition_in": {"type": "dissolve", "dur": 0.3}},
+    {"id": "s3_leo_thang","image": "assets/scene3.jpg", "start": 20.0, "end": 38.0,
+     "motion": {"scale": [1.04, 1.14], "focus": [[0.5, 0.5], [0.48, 0.44]], "wobble": "handheld"},
+     "transition_in": {"type": "dissolve", "dur": 0.3}},
+    {"id": "s4_cu_chot",  "image": "assets/scene4.jpg", "start": 38.0, "end": 50.0,
+     "motion": {"scale": [1.10, 1.02], "focus": [[0.5, 0.42], [0.5, 0.5]], "wobble": "tense"},
+     "transition_in": {"type": "flash_red", "dur": 0.25},
+     "shakes": [{"at": 46.0, "amp": 34}]},
+    {"id": "s5_boc_tran", "image": "assets/scene5.jpg", "start": 50.0, "end": 60.0,
+     "motion": {"scale": [1.02, 1.10], "focus": [[0.5, 0.5], [0.5, 0.45]], "wobble": "calm"},
+     "transition_in": {"type": "glitch", "dur": 0.4}},
+    {"id": "s6_dau_hieu", "image": "assets/scene6.jpg", "start": 60.0, "end": 70.0,
+     "motion": {"scale": [1.04, 1.08], "focus": [[0.5, 0.5], [0.5, 0.5]], "wobble": "none"},
+     "transition_in": {"type": "fade_black", "dur": 0.4}}
+  ],
+
+  "dialogue": [
+    {"id": "l1", "speaker": "ke_gia_danh",    "start": 1.0,  "window": 3.8, "text": "<câu mở đầu gây sốc>"},
+    {"id": "l2", "speaker": "co_tu",          "start": 8.0,  "window": 3.5, "text": "<nạn nhân phản ứng>"},
+    {"id": "l3", "speaker": "ke_gia_danh",    "start": 23.0, "window": 4.5, "text": "<kẻ lừa dồn ép, tạo áp lực thời gian>"},
+    {"id": "l4", "speaker": "co_tu",          "start": 41.0, "window": 3.5, "text": "<nạn nhân làm theo>"},
+    {"id": "l5", "speaker": "nguoi_boc_tran", "start": 51.0, "window": 8.0, "text": "<bóc trần: đây là chiêu gì, vì sao dễ tin>"}
+  ],
+
+  "chat_bubbles": [
+    {"start": 12.0, "end": 18.0, "side": "left", "sender": "Số lạ", "text": "<nội dung tin nhắn giả lập>", "y": 560, "stamp": "21:47"}
+  ],
+
+  "callouts": [
+    {"start": 28.0, "end": 33.0, "style": "danger", "text": "<Dấu hiệu: tạo áp lực thời gian>", "y": 760}
+  ],
+
+  "red_flags": {
+    "start": 60.0,
+    "end": 66.8,
+    "stagger_sec": 0.9,
+    "title": "DẤU HIỆU NHẬN BIẾT",
+    "items": ["<dấu hiệu 1>", "<dấu hiệu 2>", "<dấu hiệu 3>"],
+    "action": "<Việc nên làm ngay: cúp máy, gọi lại số chính thức, báo người thân...>"
+  },
+
+  "disclaimer": {"start": 67.0, "end": 70.0},
+
+  "audio": {
+    "ambience": [
+      {"preset": "room_tone", "start": 0.0, "end": 50.0},
+      {"preset": "night_room", "start": 50.0, "end": 70.0}
+    ],
+    "foley": [
+      {"preset": "phone_ring", "at": 0.2, "dur": 2.2},
+      {"preset": "notification", "at": 12.0},
+      {"preset": "heartbeat", "at": 34.0, "dur": 4.0},
+      {"preset": "bank_ting", "at": 45.6},
+      {"preset": "impact", "at": 46.0},
+      {"preset": "riser", "at": 47.0, "dur": 3.0},
+      {"preset": "glitch", "at": 50.0},
+      {"preset": "call_end", "at": 48.5}
+    ],
+    "bgm": [
+      {"preset": "suspense_pulse", "start": 0.0, "end": 50.0},
+      {"preset": "tension_drone", "start": 50.0, "end": 60.0},
+      {"preset": "warm_outro", "start": 60.0, "end": 70.0}
+    ],
+    "duck_extra": [{"start": 45.5, "end": 48.0, "bgm_db": -12, "amb_db": -10}]
+  },
+
+  "forbidden_terms": [],
+
+  "publish": {
+    "titles": ["<Tiêu đề 1 #Shorts>", "<Tiêu đề 2>", "<Tiêu đề 3>"],
+    "description": "<2–3 câu tóm tình huống + 3 dấu hiệu nhận biết + việc nên làm>",
+    "pinned_comment": "📌 Bạn hoặc người thân từng gặp chiêu này chưa? Chia sẻ để mọi người cùng cảnh giác (đừng đăng số điện thoại, số tài khoản hay tên người thật nhé).",
+    "hashtags": ["#LuaDaoQuaDienThoai"],
+    "thumbnail_sec": 2.0
+  }
+}
