@@ -58,6 +58,19 @@ def load_api_keys(ep: Episode) -> list[str]:
                     keys.append(k)
         except Exception:
             pass
+    # Giống dự án 779: lấy key đang kích hoạt từ HaizFlow (file keys chỉ lưu id/label)
+    try:
+        import sys as _sys
+        from core import HAIZFLOW_ROOT
+        src = HAIZFLOW_ROOT / "src"
+        if src.is_dir() and str(src) not in _sys.path:
+            _sys.path.insert(0, str(src))
+        from haizflow.services.image_generator import get_effective_gemini_api_key  # type: ignore
+        eff = get_effective_gemini_api_key()
+        if eff and eff not in keys:
+            keys.append(eff)
+    except Exception:
+        pass
     return keys
 
 

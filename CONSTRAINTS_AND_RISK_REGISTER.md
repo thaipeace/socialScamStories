@@ -46,4 +46,5 @@
 ## F. NHẬT KÝ
 | Ngày | ID | Việc đã làm |
 | :--- | :--- | :--- |
-| 01/11/2026 | — | Khởi tạo dự án, port engine 6 Gate từ 779, viết harness pháp lý & định dạng mới, chạy thử engine với tập giả `EP00_SMOKE` |
+| 01/11/2026 | — | Khởi tạo dự án, port engine 6 Gate từ 779, viết harness pháp lý & định dạng mới, chạy thử engine với tập giả `EP00_SMOKE` (Gate 0→5 chạy trọn, Gate 6 từ chối đúng khi chưa ký duyệt) |
+| 01/11/2026 | C3, C4 | Gọi thử thật `gemini-3.8-flash-tts` (giọng Charon) qua key HaizFlow: trả về WAV 24 kHz hợp lệ. Các giọng khác trong cast.json chưa nghe thử |
