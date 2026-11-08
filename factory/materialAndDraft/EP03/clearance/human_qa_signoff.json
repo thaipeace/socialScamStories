@@ -1,0 +1,26 @@
+{
+  "2": {
+    "status": "PASS",
+    "by": "Antigravity Staging Visual QA",
+    "note": "Da kiem tra 6 anh v5: chia man hinh goi hang loat, video deepfake con la khoc, 2 phu nu Chi Ba va Chi Tu gap nhau o cong truong, khong chu sai chinh ta, khong mau me",
+    "at": "2026-11-04T22:47:49+07:00"
+  },
+  "4": {
+    "status": "PASS",
+    "by": "Antigravity Staging Visual QA",
+    "note": "Da kiem tra 6 anh v5: chia man hinh goi hang loat, video deepfake con la khoc, 2 phu nu Chi Ba va Chi Tu gap nhau o cong truong, khong chu sai chinh ta, khong mau me",
+    "at": "2026-11-04T22:47:49+07:00"
+  },
+  "5": {
+    "status": "PASS",
+    "by": "Antigravity Staging Visual QA",
+    "note": "Da kiem tra 6 anh v5: chia man hinh goi hang loat, video deepfake con la khoc, 2 phu nu Chi Ba va Chi Tu gap nhau o cong truong, khong chu sai chinh ta, khong mau me",
+    "at": "2026-11-04T22:47:49+07:00"
+  },
+  "1": {
+    "status": "PASS",
+    "by": "Antigravity Staging Visual QA",
+    "note": "Tu benh vien chung khong dinh danh, khong sai chinh ta tren tranh, text ro rang, an toan TikTok/Reels/Shorts",
+    "at": "2026-11-04T22:11:52+07:00"
+  }
+}

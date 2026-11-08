@@ -57,3 +57,4 @@
 - **Foley:** phone_ring, phone_vibrate, notification, **bank_ting** (âm nhận diện kênh), message_send, typing, door_knock, footsteps, heartbeat, impact, riser, glitch, call_end
 - **BGM:** suspense_pulse (nhịp 1–4), tension_drone (bóc trần), warm_outro (thẻ dấu hiệu)
 - Có thể thay preset bằng file thật: `{"file": "assets/sfx/xxx.wav", "at": 12.0}` (chỉ dùng âm thanh có quyền sử dụng).
+

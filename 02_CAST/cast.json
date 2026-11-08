@@ -1,9 +1,10 @@
 {
-  "_note": "Bảng giọng cố định cho các hình tượng nhân vật lặp lại qua mọi tập. 'voice' là tên giọng dựng sẵn của Gemini TTS – nghe thử và đổi nếu chưa hợp. 'style' là chỉ đạo diễn xuất mặc định (có thể ghi đè bằng 'style' trong từng câu thoại). 'af': chuỗi filter FFmpeg hoặc alias 'phone' (giọng qua điện thoại).",
+  "_note": "Bảng giọng cố định cho các hình tượng nhân vật lặp lại qua mọi tập. Mỗi nhân vật khóa cố định 'model' + 'voice' + 'style' + 'af' để đảm bảo giọng đồng nhất 100% xuyên suốt các cảnh và các tập. CẤM dùng asetrate/atempo.",
   "speakers": {
     "nguoi_boc_tran": {
       "label": "Người Bóc Trần (dẫn chuyện của kênh)",
       "label_short": "BÓC TRẦN",
+      "model": "gemini-3.8-flash-tts",
       "voice": "Charon",
       "style": "Giọng nam trung niên miền Nam, điềm tĩnh, rõ ràng, ấm và đáng tin như một người anh lớn đang nhắc nhở người nhà; nhịp vừa phải, nhấn chữ quan trọng.",
       "subtitle_rgb": [255, 214, 90],
@@ -12,70 +13,114 @@
     "co_tu": {
       "label": "Cô Tư – người mẹ/người bán hàng ngoài 50 tuổi",
       "label_short": "CÔ TƯ",
-      "voice": "Gacrux",
-      "style": "Giọng nữ miền Nam ngoài 50 tuổi, chân chất, hiền, dễ tin người; khi hoảng thì run, nói vội.",
+      "model": "gemini-3.8-flash-tts",
+      "voice": "Kore",
+      "style": "Giọng phụ nữ miền Nam Sài Gòn 45 tuổi bán quán nước, phát âm chuẩn phương ngữ miền Nam xuyên suốt mọi câu, giữ cố định một âm sắc rõ chữ, tự nhiên như đời thực, tốc độ vừa phải, tuyệt đối không giả giọng bà già run rẩy.",
       "subtitle_rgb": [255, 240, 225]
     },
     "ong_bay": {
       "label": "Ông Bảy – người hưu trí 65+",
       "label_short": "ÔNG BẢY",
+      "model": "gemini-3.8-flash-tts",
       "voice": "Algenib",
-      "style": "Giọng ông cụ miền Nam ngoài 65 tuổi, chậm, hơi khàn, cẩn thận nhưng tin vào giấy tờ và 'cơ quan'.",
+      "style": "Giọng ông cụ miền Nam ngoài 65 tuổi, chậm, hơi khàn, cẩn thận nhưng ấm áp, hay nhắc nhở bà con lối xóm.",
       "subtitle_rgb": [255, 240, 225]
     },
     "anh_hai": {
-      "label": "Anh Hai – lao động/tiểu thương 30–40 tuổi",
+      "label": "Anh Hai – lao động/nhân viên/chồng Chị Ba 35 tuổi",
       "label_short": "ANH HAI",
+      "model": "gemini-3.8-flash-tts",
       "voice": "Orus",
-      "style": "Giọng nam miền Nam 35 tuổi, thẳng tính, chăm làm, hay lo chuyện tiền nong cho gia đình.",
+      "style": "Giọng nam miền Nam 35 tuổi, thẳng tính, tỉnh táo, chăm làm, luôn bình tĩnh giữ nhịp cho gia đình.",
       "subtitle_rgb": [255, 240, 225]
     },
     "chi_ba": {
-      "label": "Chị Ba – nhân viên văn phòng/nội trợ 30–40 tuổi",
+      "label": "Chị Ba – nhân viên văn phòng/mẹ bé Tom 35 tuổi",
       "label_short": "CHỊ BA",
+      "model": "gemini-3.8-flash-tts",
       "voice": "Kore",
-      "style": "Giọng nữ 35 tuổi, nhanh nhẹn, tự tin dùng điện thoại, nhưng bận rộn nên dễ bị dồn ép.",
+      "style": "Giọng phụ nữ miền Nam Sài Gòn 35 tuổi, phát âm chuẩn phương ngữ miền Nam xuyên suốt mọi câu, giữ cố định một âm sắc rõ chữ; thương con nên dễ hoảng hốt khi nghe tin dữ.",
       "subtitle_rgb": [255, 240, 225]
     },
+    "chi_tu": {
+      "label": "Chị Tư – phụ huynh cùng lớp/mẹ bé Bống 36 tuổi, tỉnh táo",
+      "label_short": "CHỊ TƯ",
+      "model": "gemini-3.8-flash-tts",
+      "voice": "Zephyr",
+      "style": "Giọng phụ nữ miền Nam Sài Gòn 36 tuổi, phát âm chuẩn phương ngữ miền Nam xuyên suốt mọi câu, giữ cố định một âm sắc ấm áp, điềm tĩnh, chín chắn và chân thành khi chia sẻ với bạn đồng trang lứa.",
+      "subtitle_rgb": [185, 245, 215]
+    },
     "be_na": {
-      "label": "Bé Na – sinh viên 19–22 tuổi",
+      "label": "Bé Na – cô gái trẻ 22 tuổi",
       "label_short": "NA",
+      "model": "gemini-3.8-flash-tts",
       "voice": "Leda",
-      "style": "Giọng nữ sinh viên 20 tuổi, trong, hồn nhiên, ham việc làm thêm và thích săn deal online.",
-      "subtitle_rgb": [255, 240, 225]
+      "style": "Giọng cô gái trẻ miền Nam Sài Gòn 22 tuổi, phát âm chuẩn phương ngữ miền Nam xuyên suốt mọi câu, giữ cố định một âm sắc trong trẻo, giàu cảm xúc, nghẹn ngào hoảng hốt khi nhận ra mình sập bẫy tình tiền.",
+      "subtitle_rgb": [255, 230, 240]
     },
     "thang_tun": {
       "label": "Tùng – nam thanh niên 18–24 tuổi",
       "label_short": "TÙNG",
+      "model": "gemini-3.8-flash-tts",
       "voice": "Puck",
-      "style": "Giọng nam thanh niên 20 tuổi, sôi nổi, hơi liều, muốn kiếm tiền nhanh.",
+      "style": "Giọng nam thanh niên miền Nam 20 tuổi, sôi nổi, nhanh nhảu, hay quét mã thanh toán vội.",
       "subtitle_rgb": [255, 240, 225]
     },
+    "be_tom": {
+      "label": "Tom – học sinh nam lớp 2 (7–8 tuổi), cậu bé lanh lợi được ba mẹ thầy cô dạy cảnh giác",
+      "label_short": "TOM",
+      "model": "gemini-3.8-flash-tts",
+      "voice": "Puck",
+      "style": "Giọng cậu bé trai 8 tuổi người miền Nam, trong sáng, lễ phép, nói tốc độ vừa phải, rõ chữ, tự nhiên như đời thực, giữ đúng một tông giọng duy nhất.",
+      "subtitle_rgb": [170, 225, 255],
+      "af": "highpass=f=95,acompressor=threshold=-18dB:ratio=2.5:attack=8:release=100:makeup=2dB"
+    },
+    "chu_bao_ve": {
+      "label": "Chú Bảo Vệ – bảo vệ trường học / nhân viên an ninh ngoài 50 tuổi",
+      "label_short": "BẢO VỆ",
+      "model": "gemini-3.8-flash-tts",
+      "voice": "Orus",
+      "style": "Giọng bác bảo vệ miền Nam ngoài 50 tuổi, dứt khoát, vang, nghiêm nghị khi quát kẻ gian nhưng ấm áp với người dân và học sinh.",
+      "subtitle_rgb": [140, 230, 170]
+    },
+    "be_bong": {
+      "label": "Bông – học sinh nữ lớp 2 (7–8 tuổi), được ba mẹ thầy cô dạy cảnh giác",
+      "label_short": "BÔNG",
+      "model": "gemini-3.8-flash-lite-tts",
+      "voice": "Leda",
+      "style": "Giọng một bé gái 7 tuổi miền Nam, trong, hồn nhiên, đồng nhất một tông giọng duy nhất xuyên suốt tập.",
+      "subtitle_rgb": [170, 225, 255]
+    },
     "ke_gia_danh": {
-      "label": "Kẻ giả danh (cán bộ / nhân viên ngân hàng / nhà mạng)",
+      "label": "Kẻ giả danh qua điện thoại (bác sĩ/thầy giáo/cán bộ/ngân hàng giả)",
       "label_short": "SỐ LẠ",
+      "model": "gemini-3.8-flash-tts",
       "voice": "Fenrir",
-      "style": "Giọng nam nghiêm giọng, lạnh, dồn dập, tạo áp lực như đang đọc lệnh; không quát tháo, không thô tục.",
+      "style": "Giọng nam miền Nam Sài Gòn 40 tuổi, phát âm chuẩn phương ngữ miền Nam xuyên suốt mọi câu, giữ cố định một âm sắc duy nhất; nghiêm giọng, lạnh, dồn dập, tạo áp lực khẩn cấp.",
       "subtitle_rgb": [255, 120, 120],
       "af": "phone"
     },
     "ke_ngot_ngao_nu": {
-      "label": "Kẻ lừa ngọt ngào (nữ) – tuyển dụng, tình cảm, chăm sóc khách hàng",
+      "label": "Kẻ lừa ngọt ngào (nữ) – dụ trẻ, nhờ cầm hộ đồ, tuyển CTV online",
       "label_short": "NGƯỜI LẠ",
+      "model": "gemini-3.8-flash-tts",
       "voice": "Aoede",
-      "style": "Giọng nữ trẻ ngọt ngào, nhiệt tình quá mức, luôn khen ngợi và hứa hẹn.",
+      "style": "Giọng nữ miền Nam Sài Gòn 30 tuổi, phát âm chuẩn phương ngữ miền Nam xuyên suốt mọi câu, giữ cố định một âm sắc và độ cao giọng duy nhất; ngọt ngào chuyên nghiệp khi mời chào và gấp gáp thúc giục khi hối nạn nhân.",
       "subtitle_rgb": [255, 150, 190]
     },
     "ke_ngot_ngao_nam": {
-      "label": "Kẻ lừa ngọt ngào (nam) – đầu tư, tình cảm, 'chuyên gia'",
-      "label_short": "NGƯỜI LẠ",
+      "label": "Kẻ lừa ngọt ngào (nam) – bạn trai ảo qua mạng dụ làm nhiệm vụ chốt đơn",
+      "label_short": "BẠN TRAI ẢO",
+      "model": "gemini-3.8-flash-tts",
       "voice": "Achird",
-      "style": "Giọng nam trẻ lịch sự, tự tin, nói như chuyên gia, hay dùng từ 'cơ hội', 'chắc chắn'.",
-      "subtitle_rgb": [255, 150, 190]
+      "style": "Giọng nam thanh niên miền Nam Sài Gòn 28 tuổi, phát âm chuẩn phương ngữ miền Nam xuyên suốt mọi câu, giữ cố định một âm sắc; lúc đầu ngọt ngào tình cảm, lúc sau dồn dập thúc ép nạn nhân nạp thêm tiền.",
+      "subtitle_rgb": [255, 150, 190],
+      "af": "phone"
     },
     "ke_ban_hang": {
       "label": "MC hội thảo / người bán hàng lưu động (offline)",
       "label_short": "MC",
+      "model": "gemini-3.8-flash-tts",
       "voice": "Zephyr",
       "style": "Giọng nữ MC sân khấu, hồ hởi, to, nói liến thoắng, tạo không khí 'cơ hội có một không hai'.",
       "subtitle_rgb": [255, 150, 190]

@@ -47,20 +47,18 @@
     {"start": 12.0, "end": 18.0, "side": "left", "sender": "Số lạ", "text": "<nội dung tin nhắn giả lập>", "y": 560, "stamp": "21:47"}
   ],
 
-  "callouts": [
-    {"start": 28.0, "end": 33.0, "style": "danger", "text": "<Dấu hiệu: tạo áp lực thời gian>", "y": 760}
-  ],
+  "callouts": [],
 
   "red_flags": {
-    "start": 60.0,
-    "end": 66.8,
-    "stagger_sec": 0.9,
-    "title": "DẤU HIỆU NHẬN BIẾT",
-    "items": ["<dấu hiệu 1>", "<dấu hiệu 2>", "<dấu hiệu 3>"],
+    "start": 51.0,
+    "end": 53.5,
+    "stagger_sec": 0.4,
+    "title": "NHỚ KỸ",
+    "items": ["<dấu hiệu 1>", "<dấu hiệu 2>"],
     "action": "<Việc nên làm ngay: cúp máy, gọi lại số chính thức, báo người thân...>"
   },
 
-  "disclaimer": {"start": 67.0, "end": 70.0},
+  "disclaimer": {"start": 53.5, "end": 56.0},
 
   "audio": {
     "ambience": [
@@ -88,10 +86,13 @@
   "forbidden_terms": [],
 
   "publish": {
-    "titles": ["<Tiêu đề 1 #Shorts>", "<Tiêu đề 2>", "<Tiêu đề 3>"],
-    "description": "<2–3 câu tóm tình huống + 3 dấu hiệu nhận biết + việc nên làm>",
+    "titles": ["<Tiêu đề 1 (≤100 ký tự) #Shorts>", "<Tiêu đề 2 #Shorts>", "<Tiêu đề 3 #Shorts>"],
+    "description": "<2–3 câu tóm tình huống + mốc thời gian 00:00 + dấu hiệu nhận biết + việc nên làm>",
     "pinned_comment": "📌 Bạn hoặc người thân từng gặp chiêu này chưa? Chia sẻ để mọi người cùng cảnh giác (đừng đăng số điện thoại, số tài khoản hay tên người thật nhé).",
-    "hashtags": ["#LuaDaoQuaDienThoai"],
-    "thumbnail_sec": 2.0
+    "hashtags": ["#BocTranLuaDao", "#CanhGiacLuaDao"],
+    "tags": ["bóc trần lừa đảo", "cảnh giác lừa đảo", "kỹ năng thoát hiểm", "vạn chuyện", "shorts"],
+    "category": "Education (Giáo dục)",
+    "playlist": "Bóc Trần Lừa Đảo – Kỹ Năng Cảnh Giác & An Toàn Đời Thực",
+    "thumbnail_sec": 36.0
   }
 }

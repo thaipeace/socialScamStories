@@ -1,0 +1,379 @@
+{
+  "episode_id": "EP07",
+  "slug": "CamHoDoSanBay",
+  "title": "Người lạ giả quên giấy tờ nhờ giữ hộ đồ ở sân bay",
+  "version": "v4",
+  "scam_family": "OFF-13",
+  "duration_sec": 56.0,
+  "hook": {
+    "kicker": "CỬA KIỂM TRA AN NINH SÂN BAY",
+    "title": "\"Chị quên căn cước ở ghế chờ, giữ giùm hộp quà 2 phút\"? Cẩn thận gánh tội thay!",
+    "start": 0.3,
+    "end": 4.2
+  },
+  "scenes": [
+    {
+      "id": "s1_hook",
+      "image": "assets/scene1.jpg",
+      "start": 0.0,
+      "end": 5.0,
+      "motion": {
+        "scale": [
+          1.06,
+          1.15
+        ],
+        "focus": [
+          [
+            0.5,
+            0.5
+          ],
+          [
+            0.5,
+            0.46
+          ]
+        ],
+        "wobble": "tense"
+      }
+    },
+    {
+      "id": "s2_moi_nhu",
+      "image": "assets/scene2.jpg",
+      "start": 5.0,
+      "end": 18.0,
+      "motion": {
+        "scale": [
+          1.03,
+          1.12
+        ],
+        "focus": [
+          [
+            0.5,
+            0.5
+          ],
+          [
+            0.46,
+            0.44
+          ]
+        ],
+        "wobble": "calm"
+      },
+      "transition_in": {
+        "type": "dissolve",
+        "dur": 0.3
+      }
+    },
+    {
+      "id": "s3_leo_thang",
+      "image": "assets/scene3.jpg",
+      "start": 18.0,
+      "end": 34.0,
+      "motion": {
+        "scale": [
+          1.04,
+          1.15
+        ],
+        "focus": [
+          [
+            0.5,
+            0.48
+          ],
+          [
+            0.5,
+            0.42
+          ]
+        ],
+        "wobble": "handheld"
+      },
+      "transition_in": {
+        "type": "dissolve",
+        "dur": 0.35
+      }
+    },
+    {
+      "id": "s4_cu_chot",
+      "image": "assets/scene4.jpg",
+      "start": 34.0,
+      "end": 44.0,
+      "motion": {
+        "scale": [
+          1.14,
+          1.04
+        ],
+        "focus": [
+          [
+            0.52,
+            0.46
+          ],
+          [
+            0.5,
+            0.5
+          ]
+        ],
+        "wobble": "handheld"
+      },
+      "transition_in": {
+        "type": "flash_white",
+        "dur": 0.25
+      },
+      "shakes": [
+        {
+          "at": 34.2,
+          "amp": 32
+        }
+      ]
+    },
+    {
+      "id": "s5_boc_tran",
+      "image": "assets/scene5.jpg",
+      "start": 44.0,
+      "end": 51.0,
+      "motion": {
+        "scale": [
+          1.02,
+          1.09
+        ],
+        "focus": [
+          [
+            0.5,
+            0.5
+          ],
+          [
+            0.5,
+            0.45
+          ]
+        ],
+        "wobble": "calm"
+      },
+      "transition_in": {
+        "type": "glitch",
+        "dur": 0.35
+      }
+    },
+    {
+      "id": "s6_dau_hieu",
+      "image": "assets/scene6.jpg",
+      "start": 51.0,
+      "end": 56.0,
+      "motion": {
+        "scale": [
+          1.03,
+          1.07
+        ],
+        "focus": [
+          [
+            0.5,
+            0.5
+          ],
+          [
+            0.5,
+            0.5
+          ]
+        ],
+        "wobble": "none"
+      },
+      "transition_in": {
+        "type": "fade_black",
+        "dur": 0.35
+      }
+    }
+  ],
+  "dialogue": [
+    {
+      "id": "l1",
+      "speaker": "ke_ngot_ngao_nu",
+      "start": 0.7,
+      "window": 4.2,
+      "text": "Ối, chị quên căn cước ở ghế chờ! Em giữ giùm hộp quà nha!"
+    },
+    {
+      "id": "l2",
+      "speaker": "be_na",
+      "start": 5.6,
+      "window": 4.8,
+      "text": "Dạ đưa em giữ giùm cho, chị chạy lẹ lấy căn cước đi!"
+    },
+    {
+      "id": "l3",
+      "speaker": "anh_hai",
+      "start": 11.4,
+      "window": 5.4,
+      "text": "Khoan Na! Sắp qua cửa soi chiếu rồi, gửi lại bàn nhân viên kia!"
+    },
+    {
+      "id": "l4",
+      "speaker": "ke_ngot_ngao_nu",
+      "start": 18.6,
+      "window": 5.2,
+      "text": "Ơ đừng gửi nhân viên! Em cứ xách qua cổng, qua bển chị lấy!"
+    },
+    {
+      "id": "l5",
+      "speaker": "anh_hai",
+      "start": 25.0,
+      "window": 5.0,
+      "text": "Đồ của ai người đó tự mang qua máy soi chị ơi!"
+    },
+    {
+      "id": "l6",
+      "speaker": "chu_bao_ve",
+      "start": 34.8,
+      "window": 4.3,
+      "text": "Báo động đỏ! Hộp quà này giấu hàng cấm, mời chị ở lại!"
+    },
+    {
+      "id": "l7",
+      "speaker": "be_na",
+      "start": 39.5,
+      "window": 4.2,
+      "text": "Hú hồn, nãy em mà cầm giùm là giờ tiêu đời rồi!"
+    },
+    {
+      "id": "l8",
+      "speaker": "nguoi_boc_tran",
+      "start": 44.5,
+      "window": 6.3,
+      "text": "Kẻ xấu hay giả quên giấy tờ nhờ giữ đồ; tuyệt đối đừng cầm hộ!",
+      "subtitle": [
+        "Kẻ xấu hay giả quên giấy tờ nhờ giữ đồ ngay cửa an ninh;",
+        "tuyệt đối không cầm hộ đồ của người lạ!"
+      ]
+    }
+  ],
+  "chat_bubbles": [],
+  "callouts": [],
+  "red_flags": {
+    "start": 51.0,
+    "end": 53.5,
+    "stagger_sec": 0.4,
+    "title": "NHỚ KỸ",
+    "items": [
+      "Giả vờ quên căn cước/đi vệ sinh nhờ giữ hộ đồ ngay lúc dòng người vào cửa soi chiếu",
+      "Ngăn cản khi bạn định gửi đồ lại quầy nhân viên sân bay và năn nỉ xách qua cổng"
+    ],
+    "action": "Hành lý của ai người nấy giữ, chỉ hướng dẫn họ gửi tại quầy nhân viên sân bay!"
+  },
+  "disclaimer": {
+    "start": 53.5,
+    "end": 56.0
+  },
+  "audio": {
+    "ambience": [
+      {
+        "preset": "crowd",
+        "start": 0.0,
+        "end": 44.0,
+        "gain_db": -2.5
+      },
+      {
+        "preset": "office",
+        "start": 0.0,
+        "end": 56.0,
+        "gain_db": -3.0
+      }
+    ],
+    "foley": [
+      {
+        "preset": "footsteps",
+        "at": 0.5,
+        "dur": 1.8,
+        "gain_db": -3.0
+      },
+      {
+        "preset": "heartbeat",
+        "at": 19.5,
+        "dur": 11.0,
+        "gain_db": 0.0
+      },
+      {
+        "preset": "riser",
+        "at": 31.2,
+        "dur": 2.9,
+        "gain_db": 2.5
+      },
+      {
+        "preset": "impact",
+        "at": 34.1,
+        "dur": 2.2,
+        "gain_db": 3.5
+      },
+      {
+        "preset": "whistle",
+        "at": 34.4,
+        "gain_db": 2.0
+      },
+      {
+        "preset": "footsteps",
+        "at": 41.0,
+        "dur": 2.0,
+        "gain_db": 1.0
+      },
+      {
+        "preset": "glitch",
+        "at": 44.0,
+        "gain_db": 0.0
+      }
+    ],
+    "bgm": [
+      {
+        "preset": "suspense_pulse",
+        "start": 0.0,
+        "end": 18.0
+      },
+      {
+        "preset": "tension_drone",
+        "start": 18.0,
+        "end": 34.0,
+        "gain_db": 2.0
+      },
+      {
+        "preset": "action_climax",
+        "start": 34.0,
+        "end": 48.0,
+        "gain_db": 3.0
+      },
+      {
+        "preset": "warm_outro",
+        "start": 48.0,
+        "end": 56.0
+      }
+    ],
+    "duck_extra": [
+      {
+        "start": 33.7,
+        "end": 34.1,
+        "bgm_db": -14,
+        "amb_db": -10
+      }
+    ]
+  },
+  "forbidden_terms": [],
+  "publish": {
+    "titles": [
+      "\"Chị để quên căn cước ở ghế chờ, giữ giùm hộp quà 2 phút nha\"… và tiếng còi báo động đỏ ở máy soi! #Shorts",
+      "Suýt gánh tội thay ở sân bay chỉ vì thương người lạ \"để quên căn cước nhờ giữ giùm túi đồ\"! #Shorts",
+      "Tại sao người lạ nhờ giữ đồ 2 phút ngay trước vạch kiểm tra an ninh lại nguy hiểm đến vậy? #Shorts"
+    ],
+    "description": "Đang xếp hàng chuẩn bị bước vào cổng kiểm tra an ninh sân bay, một người phụ nữ nói chuyện rất thân thiện bỗng hốt hoảng vỗ túi báo để quên căn cước ở ghế chờ và nhờ Bé Na đứng giữ giùm hộp quà quê 2 phút... Vì lòng tốt, Na đưa tay định nhận ngay mà không hề biết dòng người đang đẩy thẳng vào máy soi!\n\nXem ngay phản ứng tỉnh táo, đời thường của Anh Hai khi từ chối mang đồ qua cổng và khoảnh khắc rùng mình khi máy soi chiếu báo động đỏ ngay phía sau lưng!\n\n⏱️ Bố cục tình huống:\n00:00 Màn kịch \"quên căn cước ở ghế chờ, giữ giùm hộp quà 2 phút\"\n00:05 Bé Na suýt nhận lời vì thương người & Anh Hai nhắc gửi lại bàn nhân viên\n00:18 Kẻ lạ lộ ý đồ thật khi ngăn gửi nhân viên và ép xách qua cổng\n00:34 Máy soi báo động đỏ phía sau lưng – Na bủn rủn vì suýt gánh tội thay\n00:51 2 dấu hiệu nhận diện & quy tắc an toàn khi đi sân bay, bến xe\n\n⚠️ 2 dấu hiệu cảnh giác:\n1. Giả vờ quên giấy tờ / đi vệ sinh gấp nhờ giữ hộ đồ đúng lúc dòng người bước vào cửa soi chiếu\n2. Hốt hoảng ngăn cản khi bạn định gửi đồ lại quầy nhân viên hỗ trợ và năn nỉ xách qua cổng\n\n✅ Quy tắc vàng: Hành lý của ai người nấy giữ, tuyệt đối không cầm hộ đồ của người lạ dưới mọi hình thức!",
+    "pinned_comment": "📌 Kẻ xấu ngoài đời không bao giờ nói toẹt ra là cầm hộ hàng cấm đâu, mà hay giả vờ \"quên căn cước/đau bụng gấp\" nhờ bạn giữ giùm 2 phút ngay sát vạch soi chiếu! Hãy chia sẻ để người thân luôn cảnh giác nhé!",
+    "hashtags": [
+      "#AnToanDuLich",
+      "#KyNangSong",
+      "#CanhGiac",
+      "#BocTranLuaDao"
+    ],
+    "tags": [
+      "bóc trần lừa đảo",
+      "cầm hộ đồ ở sân bay",
+      "an toàn du lịch",
+      "kỹ năng sống",
+      "cảnh giác",
+      "nhờ cầm hộ hành lý",
+      "vạn chuyện",
+      "shorts"
+    ],
+    "category": "Education (Giáo dục)",
+    "playlist": "Bóc Trần Lừa Đảo – Kỹ Năng Cảnh Giác & An Toàn Đời Thực",
+    "thumbnail_sec": 36.0
+  },
+  "_status_note": "KỊCH BẢN TỆ / CHƯA ĐẠT — Tạm xếp cuối (EP07), chờ phương án thay thế sau"
+}

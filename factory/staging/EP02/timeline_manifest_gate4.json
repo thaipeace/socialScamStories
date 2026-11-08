@@ -1,0 +1,705 @@
+{
+  "episode_id": "EP02",
+  "gate": "GATE_4_TIMELINE_SAFE_ZONE",
+  "preview_only": false,
+  "canvas": {
+    "width": 1080,
+    "height": 1920,
+    "fps": 30,
+    "total_frames": 1680,
+    "total_duration_sec": 56.0
+  },
+  "safe_zone_rules": {
+    "left_x": 80,
+    "right_x": 920,
+    "max_y": 1420,
+    "top_hook_y": 170,
+    "platform_ui_bottom_y": 1440,
+    "all_overlays_compliant": true
+  },
+  "scenes": [
+    {
+      "id": "s1_hook",
+      "image": "assets/scene1.jpg",
+      "video": "assets/scene1.mp4",
+      "start": 0.0,
+      "end": 5.0,
+      "motion": {
+        "scale": [
+          1.06,
+          1.15
+        ],
+        "focus": [
+          [
+            0.5,
+            0.5
+          ],
+          [
+            0.5,
+            0.46
+          ]
+        ],
+        "wobble": "tense"
+      }
+    },
+    {
+      "id": "s2_moi_nhu",
+      "image": "assets/scene2.jpg",
+      "video": "assets/scene2.mp4",
+      "start": 5.0,
+      "end": 18.0,
+      "motion": {
+        "scale": [
+          1.03,
+          1.12
+        ],
+        "focus": [
+          [
+            0.5,
+            0.5
+          ],
+          [
+            0.46,
+            0.44
+          ]
+        ],
+        "wobble": "calm"
+      },
+      "transition_in": {
+        "type": "dissolve",
+        "dur": 0.3
+      }
+    },
+    {
+      "id": "s3_leo_thang",
+      "image": "assets/scene3.jpg",
+      "video": "assets/scene3.mp4",
+      "start": 18.0,
+      "end": 34.0,
+      "motion": {
+        "scale": [
+          1.04,
+          1.15
+        ],
+        "focus": [
+          [
+            0.5,
+            0.48
+          ],
+          [
+            0.5,
+            0.42
+          ]
+        ],
+        "wobble": "handheld"
+      },
+      "transition_in": {
+        "type": "dissolve",
+        "dur": 0.35
+      }
+    },
+    {
+      "id": "s4_cu_chot",
+      "image": "assets/scene4.jpg",
+      "video": "assets/scene4.mp4",
+      "start": 34.0,
+      "end": 44.0,
+      "motion": {
+        "scale": [
+          1.14,
+          1.04
+        ],
+        "focus": [
+          [
+            0.52,
+            0.46
+          ],
+          [
+            0.5,
+            0.5
+          ]
+        ],
+        "wobble": "handheld"
+      },
+      "transition_in": {
+        "type": "flash_white",
+        "dur": 0.25
+      },
+      "shakes": [
+        {
+          "at": 34.2,
+          "amp": 32
+        }
+      ]
+    },
+    {
+      "id": "s5_boc_tran",
+      "image": "assets/scene5.jpg",
+      "video": "assets/scene5.mp4",
+      "start": 44.0,
+      "end": 51.0,
+      "motion": {
+        "scale": [
+          1.02,
+          1.09
+        ],
+        "focus": [
+          [
+            0.5,
+            0.5
+          ],
+          [
+            0.5,
+            0.45
+          ]
+        ],
+        "wobble": "calm"
+      },
+      "transition_in": {
+        "type": "glitch",
+        "dur": 0.35
+      }
+    },
+    {
+      "id": "s6_dau_hieu",
+      "image": "assets/scene6.jpg",
+      "video": "assets/scene6.mp4",
+      "start": 51.0,
+      "end": 56.0,
+      "motion": {
+        "scale": [
+          1.03,
+          1.07
+        ],
+        "focus": [
+          [
+            0.5,
+            0.5
+          ],
+          [
+            0.5,
+            0.5
+          ]
+        ],
+        "wobble": "none"
+      },
+      "transition_in": {
+        "type": "fade_black",
+        "dur": 0.35
+      }
+    }
+  ],
+  "subtitle_srt": "factory/staging/EP02/subtitles/EP02.srt",
+  "video_track_noaudio": "factory/staging/EP02/timeline_video_gate4.mp4",
+  "channel_branding": {
+    "type": "channel_branding",
+    "logo_text": "VCH",
+    "watermark_text": "VẠN CHUYỆN",
+    "safe_zone_compliant": true
+  },
+  "overlays": [
+    {
+      "id": "00_hook",
+      "start_sec": 0.3,
+      "end_sec": 4.2,
+      "fade_sec": 0.3,
+      "png_path": "factory/staging/EP02/overlays/00_hook.png",
+      "type": "text_hook",
+      "text": "BẪY PHỎNG VẤN 90 ĐÔ MỘT GIỜ — Đang cần việc gặp lời mời 90 đô/giờ, quét virus báo sạch… suýt bấm chuột mất trắng!",
+      "bbox_px": [
+        100,
+        170,
+        901,
+        416
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "01_sub_l1",
+      "start_sec": 0.4,
+      "end_sec": 1.967,
+      "fade_sec": 0.1,
+      "png_path": "factory/staging/EP02/overlays/01_sub_l1.png",
+      "type": "subtitle",
+      "lines": [
+        "Việc 90 đô một giờ nè!"
+      ],
+      "bbox_px": [
+        251,
+        1324,
+        750,
+        1380
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "02_sub_l1",
+      "start_sec": 1.967,
+      "end_sec": 4.032,
+      "fade_sec": 0.1,
+      "png_path": "factory/staging/EP02/overlays/02_sub_l1.png",
+      "type": "subtitle",
+      "lines": [
+        "Tải bài kiểm tra mở liền nha!"
+      ],
+      "bbox_px": [
+        187,
+        1324,
+        813,
+        1380
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "03_sub_l2",
+      "start_sec": 5.5,
+      "end_sec": 7.879,
+      "fade_sec": 0.1,
+      "png_path": "factory/staging/EP02/overlays/03_sub_l2.png",
+      "type": "subtitle",
+      "lines": [
+        "Đang thất nghiệp rất cần việc..."
+      ],
+      "bbox_px": [
+        162,
+        1324,
+        839,
+        1380
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "04_sub_l2",
+      "start_sec": 7.879,
+      "end_sec": 10.48,
+      "fade_sec": 0.1,
+      "png_path": "factory/staging/EP02/overlays/04_sub_l2.png",
+      "type": "subtitle",
+      "lines": [
+        "tự quét phần mềm cũng báo sạch rồi."
+      ],
+      "bbox_px": [
+        99,
+        1324,
+        902,
+        1380
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "05_sub_l3",
+      "start_sec": 11.4,
+      "end_sec": 13.115,
+      "fade_sec": 0.1,
+      "png_path": "factory/staging/EP02/overlays/05_sub_l3.png",
+      "type": "subtitle",
+      "lines": [
+        "Lương 90 đô một giờ đó!"
+      ],
+      "bbox_px": [
+        225,
+        1324,
+        775,
+        1380
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "06_sub_l3",
+      "start_sec": 13.115,
+      "end_sec": 15.352,
+      "fade_sec": 0.1,
+      "png_path": "factory/staging/EP02/overlays/06_sub_l3.png",
+      "type": "subtitle",
+      "lines": [
+        "Chia sẻ màn hình chạy liền đi!"
+      ],
+      "bbox_px": [
+        178,
+        1324,
+        823,
+        1380
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "07_sub_l4",
+      "start_sec": 18.2,
+      "end_sec": 20.588,
+      "fade_sec": 0.1,
+      "png_path": "factory/staging/EP02/overlays/07_sub_l4.png",
+      "type": "subtitle",
+      "lines": [
+        "Khoan, lương cao bất thường quá!"
+      ],
+      "bbox_px": [
+        128,
+        1324,
+        873,
+        1380
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "08_sub_l4",
+      "start_sec": 20.588,
+      "end_sec": 24.02,
+      "fade_sec": 0.1,
+      "png_path": "factory/staging/EP02/overlays/08_sub_l4.png",
+      "type": "subtitle",
+      "lines": [
+        "Nhờ AI chỉ đọc code chứ không chạy",
+        "là an toàn!"
+      ],
+      "bbox_px": [
+        107,
+        1268,
+        893,
+        1380
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "09_sub_l5",
+      "start_sec": 25.2,
+      "end_sec": 27.244,
+      "fade_sec": 0.1,
+      "png_path": "factory/staging/EP02/overlays/09_sub_l5.png",
+      "type": "subtitle",
+      "lines": [
+        "Bấm nút chạy thôi mà hẹn mai!"
+      ],
+      "bbox_px": [
+        163,
+        1324,
+        838,
+        1380
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "10_sub_l5",
+      "start_sec": 27.244,
+      "end_sec": 29.712,
+      "fade_sec": 0.1,
+      "png_path": "factory/staging/EP02/overlays/10_sub_l5.png",
+      "type": "subtitle",
+      "lines": [
+        "Không mở liền là hủy phỏng vấn nha!"
+      ],
+      "bbox_px": [
+        96,
+        1324,
+        905,
+        1380
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "11_sub_l6",
+      "start_sec": 34.2,
+      "end_sec": 34.78,
+      "fade_sec": 0.1,
+      "png_path": "factory/staging/EP02/overlays/11_sub_l6.png",
+      "type": "subtitle",
+      "lines": [
+        "Hú hồn!"
+      ],
+      "bbox_px": [
+        402,
+        1324,
+        599,
+        1380
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "12_sub_l6",
+      "start_sec": 34.78,
+      "end_sec": 39.34,
+      "fade_sec": 0.1,
+      "png_path": "factory/staging/EP02/overlays/12_sub_l6.png",
+      "type": "subtitle",
+      "lines": [
+        "Nhờ AI đọc thư mục ẩn mới thấy lệnh",
+        "ngầm cướp mật khẩu!"
+      ],
+      "bbox_px": [
+        96,
+        1268,
+        905,
+        1380
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "13_sub_l7",
+      "start_sec": 39.6,
+      "end_sec": 39.89,
+      "fade_sec": 0.1,
+      "png_path": "factory/staging/EP02/overlays/13_sub_l7.png",
+      "type": "subtitle",
+      "lines": [
+        "Alo!"
+      ],
+      "bbox_px": [
+        443,
+        1324,
+        558,
+        1380
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "14_sub_l7",
+      "start_sec": 39.89,
+      "end_sec": 42.792,
+      "fade_sec": 0.1,
+      "png_path": "factory/staging/EP02/overlays/14_sub_l7.png",
+      "type": "subtitle",
+      "lines": [
+        "Sao tắt màn hình, bấm chạy bài kiểm",
+        "tra!"
+      ],
+      "bbox_px": [
+        103,
+        1268,
+        898,
+        1380
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "15_sub_l8",
+      "start_sec": 44.5,
+      "end_sec": 47.316,
+      "fade_sec": 0.1,
+      "png_path": "factory/staging/EP02/overlays/15_sub_l8.png",
+      "type": "subtitle",
+      "lines": [
+        "Gặp mồi lương cao bất thường, hãy",
+        "nhờ AI chỉ đọc code"
+      ],
+      "bbox_px": [
+        116,
+        1268,
+        884,
+        1380
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "16_sub_l8",
+      "start_sec": 47.316,
+      "end_sec": 49.92,
+      "fade_sec": 0.1,
+      "png_path": "factory/staging/EP02/overlays/16_sub_l8.png",
+      "type": "subtitle",
+      "lines": [
+        "(không chạy code) để phát hiện lệnh",
+        "ngầm an toàn!"
+      ],
+      "bbox_px": [
+        107,
+        1268,
+        893,
+        1380
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "17_callout1",
+      "start_sec": 11.4,
+      "end_sec": 17.5,
+      "fade_sec": 0.2,
+      "png_path": "factory/staging/EP02/overlays/17_callout1.png",
+      "type": "callout",
+      "style": "warn",
+      "text": "Quét ngoài báo sạch -> HR hối chia sẻ màn hình & bấm chạy ngay!",
+      "bbox_px": [
+        89,
+        157,
+        912,
+        263
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "18_callout2",
+      "start_sec": 18.4,
+      "end_sec": 24.8,
+      "fade_sec": 0.2,
+      "png_path": "factory/staging/EP02/overlays/18_callout2.png",
+      "type": "callout",
+      "style": "safe",
+      "text": "Dừng tay kịp lúc: Nhờ AI chỉ đọc code (không chạy code)!",
+      "bbox_px": [
+        107,
+        157,
+        894,
+        263
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "19_callout3",
+      "start_sec": 25.3,
+      "end_sec": 33.5,
+      "fade_sec": 0.2,
+      "png_path": "factory/staging/EP02/overlays/19_callout3.png",
+      "type": "callout",
+      "style": "danger",
+      "text": "Xin kiểm tra kỹ -> HR lập tức cáu gắt, dọa hủy phỏng vấn!",
+      "bbox_px": [
+        101,
+        157,
+        899,
+        263
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "20_callout4",
+      "start_sec": 34.3,
+      "end_sec": 43.5,
+      "fade_sec": 0.2,
+      "png_path": "factory/staging/EP02/overlays/20_callout4.png",
+      "type": "callout",
+      "style": "danger",
+      "text": "Thư mục ẩn chứa lệnh ngầm chờ cướp sạch mật khẩu & ví!",
+      "bbox_px": [
+        93,
+        157,
+        908,
+        263
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "21_redflags_0",
+      "start_sec": 51.0,
+      "end_sec": 51.4,
+      "fade_sec": 0.25,
+      "png_path": "factory/staging/EP02/overlays/21_redflags_0.png",
+      "type": "red_flags",
+      "title": "NHỚ KỸ",
+      "lines": [
+        "Hứa trả thù lao cao bất thường (90 đô/giờ) đánh vào tâm lý đang cần việc gấp",
+        "Tệp bài test quét ngoài báo sạch nhưng HR ép chia sẻ màn hình, hối bấm chạy ngay",
+        "Đừng bấm chạy ngay! Hãy nhờ AI chỉ đọc kiểm tra mã nguồn (không chạy code) để an toàn!"
+      ],
+      "bbox_px": [
+        80,
+        420,
+        920,
+        902
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "22_redflags_1",
+      "start_sec": 51.4,
+      "end_sec": 51.8,
+      "fade_sec": 0.0,
+      "png_path": "factory/staging/EP02/overlays/22_redflags_1.png",
+      "type": "red_flags",
+      "title": "NHỚ KỸ",
+      "lines": [
+        "Hứa trả thù lao cao bất thường (90 đô/giờ) đánh vào tâm lý đang cần việc gấp",
+        "Tệp bài test quét ngoài báo sạch nhưng HR ép chia sẻ màn hình, hối bấm chạy ngay",
+        "Đừng bấm chạy ngay! Hãy nhờ AI chỉ đọc kiểm tra mã nguồn (không chạy code) để an toàn!"
+      ],
+      "bbox_px": [
+        80,
+        420,
+        920,
+        902
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "23_redflags_2",
+      "start_sec": 51.8,
+      "end_sec": 53.5,
+      "fade_sec": 0.0,
+      "png_path": "factory/staging/EP02/overlays/23_redflags_2.png",
+      "type": "red_flags",
+      "title": "NHỚ KỸ",
+      "lines": [
+        "Hứa trả thù lao cao bất thường (90 đô/giờ) đánh vào tâm lý đang cần việc gấp",
+        "Tệp bài test quét ngoài báo sạch nhưng HR ép chia sẻ màn hình, hối bấm chạy ngay",
+        "Đừng bấm chạy ngay! Hãy nhờ AI chỉ đọc kiểm tra mã nguồn (không chạy code) để an toàn!"
+      ],
+      "bbox_px": [
+        80,
+        420,
+        920,
+        902
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "24_disclaimer",
+      "start_sec": 53.5,
+      "end_sec": 56.0,
+      "fade_sec": 0.25,
+      "png_path": "factory/staging/EP02/overlays/24_disclaimer.png",
+      "type": "disclaimer",
+      "text": "Tình huống được dựng lại để cảnh báo. Nhân vật, tên, số liệu đều là hư cấu.",
+      "bbox_px": [
+        80,
+        210,
+        920,
+        340
+      ],
+      "safe_zone_compliant": true
+    }
+  ],
+  "qa_preview_frames": [
+    {
+      "timestamp_sec": 1.3,
+      "clean": "factory/staging/EP02/preview_frames/qa_01_30s_clean.jpg",
+      "safezone": "factory/staging/EP02/preview_frames/qa_01_30s_safezone.jpg"
+    },
+    {
+      "timestamp_sec": 2.5,
+      "clean": "factory/staging/EP02/preview_frames/qa_02_50s_clean.jpg",
+      "safezone": "factory/staging/EP02/preview_frames/qa_02_50s_safezone.jpg"
+    },
+    {
+      "timestamp_sec": 11.5,
+      "clean": "factory/staging/EP02/preview_frames/qa_11_50s_clean.jpg",
+      "safezone": "factory/staging/EP02/preview_frames/qa_11_50s_safezone.jpg"
+    },
+    {
+      "timestamp_sec": 26.0,
+      "clean": "factory/staging/EP02/preview_frames/qa_26_00s_clean.jpg",
+      "safezone": "factory/staging/EP02/preview_frames/qa_26_00s_safezone.jpg"
+    },
+    {
+      "timestamp_sec": 39.0,
+      "clean": "factory/staging/EP02/preview_frames/qa_39_00s_clean.jpg",
+      "safezone": "factory/staging/EP02/preview_frames/qa_39_00s_safezone.jpg"
+    },
+    {
+      "timestamp_sec": 47.5,
+      "clean": "factory/staging/EP02/preview_frames/qa_47_50s_clean.jpg",
+      "safezone": "factory/staging/EP02/preview_frames/qa_47_50s_safezone.jpg"
+    },
+    {
+      "timestamp_sec": 53.0,
+      "clean": "factory/staging/EP02/preview_frames/qa_53_00s_clean.jpg",
+      "safezone": "factory/staging/EP02/preview_frames/qa_53_00s_safezone.jpg"
+    },
+    {
+      "timestamp_sec": 53.5,
+      "clean": "factory/staging/EP02/preview_frames/qa_53_50s_clean.jpg",
+      "safezone": "factory/staging/EP02/preview_frames/qa_53_50s_safezone.jpg"
+    },
+    {
+      "timestamp_sec": 54.75,
+      "clean": "factory/staging/EP02/preview_frames/qa_54_75s_clean.jpg",
+      "safezone": "factory/staging/EP02/preview_frames/qa_54_75s_safezone.jpg"
+    }
+  ]
+}

@@ -1,0 +1,71 @@
+{
+  "episode_id": "EP03",
+  "title": "Con Đang Cấp Cứu, Chuyển Gấp Viện Phí!",
+  "gate": "GATE_6_PRODUCTION_RELEASE",
+  "status": "PRODUCED_READY_FOR_PUBLISH",
+  "released_at": "2026-11-08T00:08:59.661529+07:00",
+  "master_video": {
+    "path": "factory/production/EP03/EP03_CapCuuGiaMao_56s.mp4",
+    "mirror": "06_RENDERED_SHORTS/EP03_CapCuuGiaMao_56s.mp4",
+    "srt": "factory/production/EP03/EP03_CapCuuGiaMao_56s.srt",
+    "thumbnail_9x16": "factory/production/EP03/EP03_Thumbnail_9x16.jpg",
+    "thumbnail_16x9": "factory/production/EP03/EP03_Thumbnail_16x9.jpg",
+    "thumbnail_sec": 8.0,
+    "size_mb": 51.63,
+    "sha256": "b1239ed531734476de11b03ca394fb892a1a87d8336dcf159065f7c5f3c45192"
+  },
+  "youtube_upload": {
+    "primary_title": "Nhá video AI giả con khóc cấp cứu: Đừng đưa thông tin con lên mạng! #shorts #lừađảocấpcứu",
+    "primary_title_length": 89,
+    "alternative_titles": [
+      "Hàng loạt phụ huynh bị gọi báo con cấp cứu kèm video ghép mặt AI! #shorts #lừađảocấpcứu",
+      "Thấy video con khóc đòi tiền mổ, nhớ kiểm chứng ngay trước khi chuyển! #shorts #cảnhgiáclừađảo"
+    ],
+    "description": "Tình huống tái dựng từ cảnh báo thực tế: Kẻ gian thu thập hình ảnh giấy khen, bảng tên học sinh được phụ huynh đăng công khai trên mạng xã hội để gọi hàng loạt báo tin con ngã cầu thang cấp cứu, thậm chí nhá video ghép mặt AI (Deepfake) cảnh con la khóc đau đớn nhằm ép chuyển tiền ngay. Hãy tuyệt đối bảo mật thông tin trường lớp của con và luôn gọi giáo viên chủ nhiệm xác thực trước mọi yêu cầu chuyển tiền!\n\n🎬 ĐÂY LÀ PHIM HOẠT HÌNH DỰNG LẠI TÌNH HUỐNG ĐỂ CẢNH BÁO\nNhân vật, tên gọi, số điện thoại, số tiền trong phim đều là hư cấu nhằm mục đích cảnh báo.\n\n🤖 Hình ảnh và âm thanh được hỗ trợ sản xuất bởi công cụ AI.\n\n#shorts #lừađảocấpcứu #cảnhgiáclừađảo",
+    "tags_csv": "bóc trần lừa đảo, lừa đảo con cấp cứu, deepfake lừa đảo, an toàn cho trẻ, cảnh giác mạng xã hội, shorts, cảnh giác lừa đảo, kỹ năng thoát hiểm, an toàn đời thực, phim hoạt hình cảnh báo, vạn chuyện",
+    "tags_list": [
+      "bóc trần lừa đảo",
+      "lừa đảo con cấp cứu",
+      "deepfake lừa đảo",
+      "an toàn cho trẻ",
+      "cảnh giác mạng xã hội",
+      "shorts",
+      "cảnh giác lừa đảo",
+      "kỹ năng thoát hiểm",
+      "an toàn đời thực",
+      "phim hoạt hình cảnh báo",
+      "vạn chuyện"
+    ],
+    "hashtags": [
+      "#shorts",
+      "#lừađảocấpcứu",
+      "#cảnhgiáclừađảo"
+    ],
+    "pinned_comment": "Cha mẹ tuyệt đối đừng đăng công khai ảnh giấy khen, bảng tên, trường lớp của con lên mạng xã hội, và nhớ nguyên tắc: Chưa gọi cô chủ nhiệm xác thực thì tuyệt đối không chuyển tiền!",
+    "studio_settings": {
+      "playlist": "Bóc Trần Lừa Đảo – Kỹ Năng Cảnh Giác & An Toàn Đời Thực",
+      "made_for_kids": false,
+      "age_restricted": false,
+      "altered_or_synthetic_content": true,
+      "category": "Education (Giáo dục)",
+      "video_language": "vi",
+      "subtitles_file": "factory/production/EP03/EP03_CapCuuGiaMao_56s.srt",
+      "comments": "ON_MODERATION_BASIC"
+    },
+    "copy_paste_files": {
+      "title_txt": "factory/production/EP03/youtube_upload/1_TITLE.txt",
+      "description_txt": "factory/production/EP03/youtube_upload/2_DESCRIPTION.txt",
+      "tags_txt": "factory/production/EP03/youtube_upload/3_TAGS.txt",
+      "pinned_comment_txt": "factory/production/EP03/youtube_upload/4_PINNED_COMMENT.txt",
+      "studio_settings_md": "factory/production/EP03/youtube_upload/5_YOUTUBE_STUDIO_SETTINGS.md"
+    }
+  },
+  "gate5_reference": "factory/staging/EP03/qa_audit_report_gate5.json",
+  "compliance_flags": {
+    "no_real_identity": true,
+    "no_how_to_detail": true,
+    "red_flags_card": true,
+    "dramatized_disclaimer": true,
+    "ai_disclosure_required": true
+  }
+}

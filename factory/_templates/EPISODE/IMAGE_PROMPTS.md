@@ -18,3 +18,4 @@ no real police/bank uniforms or insignia, no blood, no gore.
 | 6 | Nền thẻ dấu hiệu | ảnh dịu, ít chi tiết (sẽ bị làm tối 60%) | | ☐ |
 
 Ảnh duyệt xong lưu `assets/scene1.jpg … scene6.jpg`.
+

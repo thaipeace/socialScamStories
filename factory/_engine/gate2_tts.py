@@ -16,6 +16,7 @@ import base64
 import json
 import math
 import os
+import re
 import subprocess
 import tempfile
 import time
@@ -33,6 +34,9 @@ DEFAULT_AF = "highpass=f=80,acompressor=threshold=-18dB:ratio=2.5:attack=8:relea
 AF_ALIASES = {
     "phone": "highpass=f=320,lowpass=f=3400,equalizer=f=1800:width_type=o:width=1.0:g=4,"
              "acompressor=threshold=-20dB:ratio=4:attack=5:release=80:makeup=3dB,aecho=0.8:0.6:12:0.15",
+    # Giọng hồi tưởng / lời dặn vọng lại trong trí nhớ
+    "memory": "highpass=f=180,lowpass=f=6000,aecho=0.8:0.7:60|120:0.35|0.2,"
+              "acompressor=threshold=-18dB:ratio=2.5:attack=10:release=120:makeup=2dB",
     "default": DEFAULT_AF,
 }
 
@@ -58,19 +62,46 @@ def load_api_keys(ep: Episode) -> list[str]:
                     keys.append(k)
         except Exception:
             pass
-    # Giống dự án 779: lấy key đang kích hoạt từ HaizFlow (file keys chỉ lưu id/label)
+    # Giống dự án 779: lấy toàn bộ các key từ HaizFlow Credential Manager để tự động xoay vòng khi hết quota
     try:
         import sys as _sys
         from core import HAIZFLOW_ROOT
         src = HAIZFLOW_ROOT / "src"
         if src.is_dir() and str(src) not in _sys.path:
             _sys.path.insert(0, str(src))
-        from haizflow.services.image_generator import get_effective_gemini_api_key  # type: ignore
-        eff = get_effective_gemini_api_key()
-        if eff and eff not in keys:
-            keys.append(eff)
-    except Exception:
-        pass
+        from haizflow.services import secure_credentials  # type: ignore
+        if kf.is_file():
+            idx = load_json(kf)
+            active_id = str(idx.get("active") or "")
+            all_ids = ([active_id] if active_id else []) + ["legacy"] + [
+                str(e.get("id", "")) for e in idx.get("keys", []) if isinstance(e, dict)
+            ]
+            for kid in all_ids:
+                if not kid:
+                    continue
+                target = "HaizFlow/Gemini/APIKey" if kid == "legacy" else f"HaizFlow/Gemini/APIKey/{kid}"
+                sec = secure_credentials.read_secret(target).strip()
+                if sec and sec not in keys:
+                    keys.append(sec)
+    except Exception as exc:
+        print(f"    [warn load_api_keys]: {exc}")
+    # Nạp bổ sung các GEMINI_API_KEY dự phòng trong workspace C:/projects nếu có
+    for env_path in (
+        Path("C:/projects/vfc/vfc-ai-diagnose/.env"),
+        Path("C:/projects/optisign/kb-delta-indexer/.env"),
+        Path("C:/projects/vfc/vfc-fs/.env.local"),
+        Path("C:/projects/vfc/vnmadministrative/.env.local"),
+        Path("C:/projects/779/.env"),
+    ):
+        if env_path.is_file():
+            try:
+                for m in re.findall(r'(AIzaSy[A-Za-z0-9_\-]{33})', env_path.read_text(encoding="utf-8", errors="ignore")):
+                    if m and m not in keys:
+                        keys.append(m)
+            except Exception:
+                pass
+    keys = [k for k in keys if k.startswith("AIzaSy")]
+    print(f" -> Đã nạp {len(keys)} API key để tổng hợp TTS.")
     return keys
 
 
@@ -89,48 +120,80 @@ def _extract_audio_b64(resp: dict) -> tuple[str, str]:
     return found
 
 
-def synthesize(ep: Episode, text: str, voice: str, style: str, keys: list[str], out_raw: Path) -> str:
+def synthesize(ep: Episode, text: str, voice: str, style: str, keys: list[str], out_raw: Path,
+               preferred_model: str | None = None) -> tuple[str, str]:
     tts_cfg = ep.channel["tts"]
+    if preferred_model:
+        models_to_try = [preferred_model]
+        if tts_cfg.get("fallback_model") and tts_cfg["fallback_model"] not in models_to_try:
+            models_to_try.append(tts_cfg["fallback_model"])
+    else:
+        models_to_try = [tts_cfg["model"]]
+        if tts_cfg.get("fallback_model") and tts_cfg["fallback_model"] not in models_to_try:
+            models_to_try.append(tts_cfg["fallback_model"])
     content: dict = {"type": "text", "text": text}
     if style:
         content["annotations"] = [{"type": "speech_metadata", "style": style}]
-    payload = {
-        "model": tts_cfg["model"],
-        "input": [{"type": "user_input", "content": [content]}],
-        "response_format": {"type": "audio"},
-        "generation_config": {"speech_config": [{"voice": voice}]},
-    }
-    body = json.dumps(payload, ensure_ascii=False).encode("utf-8")
     last_err: Exception | None = None
-    for key in keys:
-        for _ in range(2):
-            req = urllib.request.Request(tts_cfg["endpoint"], data=body,
-                                         headers={"Content-Type": "application/json", "x-goog-api-key": key})
-            try:
-                with urllib.request.urlopen(req, timeout=90) as r:
-                    resp = json.loads(r.read().decode("utf-8"))
-                data_b64, mime = _extract_audio_b64(resp)
-                raw = base64.b64decode(data_b64)
-                if "l16" in mime.lower() or "pcm" in mime.lower():
-                    rate = 24000
-                    for part in mime.split(";"):
-                        if part.strip().startswith("rate="):
-                            rate = int(part.split("=")[1])
-                    with wave.open(str(out_raw), "wb") as wf:
-                        wf.setnchannels(1)
-                        wf.setsampwidth(2)
-                        wf.setframerate(rate)
-                        wf.writeframes(raw)
-                else:
-                    out_raw.write_bytes(raw)
-                return mime
-            except urllib.error.HTTPError as exc:
-                last_err = RuntimeError(f"HTTP {exc.code}: {exc.read().decode('utf-8', 'replace')[:300]}")
-                time.sleep(1.5)
-            except Exception as exc:  # noqa: BLE001
-                last_err = exc
-                time.sleep(1.5)
-    raise GateError(f"TTS thất bại trên mọi API key: {last_err}")
+    for model_name in models_to_try:
+        payload = {
+            "model": model_name,
+            "input": [{"type": "user_input", "content": [content]}],
+            "response_format": {"type": "audio"},
+            "generation_config": {"speech_config": [{"voice": voice}]},
+        }
+        body = json.dumps(payload, ensure_ascii=False).encode("utf-8")
+        for key in keys:
+            attempt = 0
+            while attempt < 5:
+                attempt += 1
+                req = urllib.request.Request(tts_cfg["endpoint"], data=body,
+                                             headers={"Content-Type": "application/json", "x-goog-api-key": key})
+                try:
+                    with urllib.request.urlopen(req, timeout=90) as r:
+                        resp = json.loads(r.read().decode("utf-8"))
+                    data_b64, mime = _extract_audio_b64(resp)
+                    raw = base64.b64decode(data_b64)
+                    if "l16" in mime.lower() or "pcm" in mime.lower():
+                        rate = 24000
+                        for part in mime.split(";"):
+                            if part.strip().startswith("rate="):
+                                rate = int(part.split("=")[1])
+                        with wave.open(str(out_raw), "wb") as wf:
+                            wf.setnchannels(1)
+                            wf.setsampwidth(2)
+                            wf.setframerate(rate)
+                            wf.writeframes(raw)
+                    else:
+                        out_raw.write_bytes(raw)
+                    return mime, model_name
+                except urllib.error.HTTPError as exc:
+                    msg = exc.read().decode("utf-8", "replace")
+                    last_err = RuntimeError(f"HTTP {exc.code} ({model_name}): {msg[:300]}")
+                    if exc.code == 429:
+                        if "per day" in msg.lower() or "requests per day" in msg.lower():
+                            print(f"    (Key hiện tại chạm giới hạn ngày cho {model_name} – chuyển key/model...)")
+                            break
+                        m = re.search(r"retry in (\d+(?:\.\d+)?)s", msg)
+                        wait = float(m.group(1)) + 2.0 if m else 25.0
+                        if wait > 90.0:
+                            print("    (Thời gian chờ quá dài – chuyển sang API key tiếp theo...)")
+                            break
+                        print(f"    (giới hạn tốc độ API – chờ {wait:.0f}s rồi thử lại)")
+                        time.sleep(wait)
+                        continue
+                    if exc.code in {400, 401, 403} and ("api_key_invalid" in msg.lower() or "key not valid" in msg.lower()):
+                        print("    (Key không hợp lệ – chuyển sang API key tiếp theo...)")
+                        break
+                    if attempt >= 2:
+                        break
+                    time.sleep(1.5)
+                except Exception as exc:  # noqa: BLE001
+                    last_err = exc
+                    if attempt >= 2:
+                        break
+                    time.sleep(1.5)
+    raise GateError(f"TTS thất bại trên mọi API key/model: {last_err}")
 
 
 def placeholder_voice(text: str, out_raw: Path) -> str:
@@ -153,6 +216,76 @@ def placeholder_voice(text: str, out_raw: Path) -> str:
         wf.setframerate(sr)
         wf.writeframes(pcm.tobytes())
     return "placeholder/wav"
+
+
+def synthesize_speaker_batch(ep: Episode, items: list[dict], voice: str, style: str, keys: list[str], out_raw: Path) -> str:
+    """Tổng hợp nhiều câu thoại của cùng 1 nhân vật trong 1 request multi-turn duy nhất (cách nhau bằng khoảng nghỉ)
+    để đảm bảo âm sắc, tông giọng 100% đồng nhất giữa mọi cảnh và tiết kiệm số lượt gọi API."""
+    joined = " ... ... ".join(it["text"] for it in items)
+    return synthesize(ep, joined, voice, style, keys, out_raw)
+
+
+def split_wav_by_pauses(in_wav: Path, expected_count: int, out_wavs: list[Path], af_chain: str, peak_db: float) -> list[dict]:
+    """Tách file wav ghép của 1 nhân vật thành từng câu riêng theo khoảng lặng > 0.38s rồi master từng câu."""
+    with tempfile.NamedTemporaryFile(suffix=".wav", delete=False) as tf:
+        tmp_48k = Path(tf.name)
+    try:
+        subprocess.run([FFMPEG, "-y", "-v", "error", "-i", str(in_wav), "-af", af_chain or DEFAULT_AF,
+                        "-ac", "1", "-ar", "48000", "-c:a", "pcm_s16le", str(tmp_48k)], check=True)
+        with wave.open(str(tmp_48k), "rb") as wf:
+            sr = wf.getframerate()
+            s = np.frombuffer(wf.readframes(wf.getnframes()), dtype=np.int16).astype(np.float32)
+        # Tính envelope theo khung 20ms
+        win = int(0.02 * sr)
+        n_frames = len(s) // win
+        rms_env = np.array([np.sqrt(np.mean(s[i * win:(i + 1) * win] ** 2)) for i in range(n_frames)])
+        thr = max(float(np.max(rms_env)) * 0.045, 120.0)
+        is_speech = rms_env > thr
+        # Tìm các đoạn im lặng liên tiếp >= 16 frames (~0.32s) ở giữa các đoạn nói
+        sil_runs = []
+        i = 0
+        while i < n_frames:
+            if not is_speech[i]:
+                j = i
+                while j < n_frames and not is_speech[j]:
+                    j += 1
+                if i > 5 and j < n_frames - 5 and (j - i) >= 14:
+                    sil_runs.append((j - i, (i + j) // 2 * win))
+                i = j
+            else:
+                i += 1
+        sil_runs.sort(key=lambda x: x[0], reverse=True)
+        cuts = sorted([pos for _, pos in sil_runs[:expected_count - 1]])
+        if len(cuts) < expected_count - 1:
+            # Fallback chia theo tỉ lệ độ dài chữ nếu không đủ khoảng lặng rõ
+            cuts = [int(len(s) * (k + 1) / expected_count) for k in range(expected_count - 1)]
+        bounds = [0] + cuts + [len(s)]
+        metrics = []
+        for idx, out_w in enumerate(out_wavs):
+            seg = s[bounds[idx]:bounds[idx + 1]].copy()
+            act = np.where(np.abs(seg) > 32768.0 * (10.0 ** (-55.0 / 20.0)))[0]
+            if len(act):
+                seg = seg[max(0, int(act[0]) - int(0.06 * sr)): min(len(seg), int(act[-1]) + int(0.22 * sr))]
+            fi, fo = min(len(seg), int(0.025 * sr)), min(len(seg), int(0.06 * sr))
+            if fi:
+                seg[:fi] *= np.linspace(0, 1, fi, dtype=np.float32)
+            if fo:
+                seg[-fo:] *= np.linspace(1, 0, fo, dtype=np.float32)
+            pk = float(np.max(np.abs(seg))) if len(seg) else 0.0
+            if pk > 0:
+                seg = np.clip(seg * (32767.0 * 10 ** (peak_db / 20.0) / pk), -32768, 32767)
+            full = np.concatenate([np.zeros(int(0.05 * sr), np.float32), seg, np.zeros(int(0.10 * sr), np.float32)]).astype(np.int16)
+            with wave.open(str(out_w), "wb") as wf2:
+                wf2.setnchannels(1)
+                wf2.setsampwidth(2)
+                wf2.setframerate(sr)
+                wf2.writeframes(full.tobytes())
+            subprocess.run([FFMPEG, "-y", "-v", "error", "-i", str(out_w), "-c:a", "libmp3lame", "-b:a", "192k",
+                            str(out_w.with_suffix(".mp3"))], check=True)
+            metrics.append(measure(out_w))
+        return metrics
+    finally:
+        tmp_48k.unlink(missing_ok=True)
 
 
 def master_line(in_wav: Path, out_wav: Path, af_chain: str, peak_db: float) -> dict:
@@ -210,27 +343,35 @@ def run(ep: Episode, placeholder: bool = False, force: bool = False, only: list[
 
     with tempfile.TemporaryDirectory(prefix="gate2_tts_") as tmpd:
         tmp = Path(tmpd)
+        mode = "placeholder" if placeholder else ep.channel["tts"]["model"]
         for item in lines:
             lid = item["id"]
             spk = ep.speaker(item["speaker"])
             voice = item.get("voice", spk["voice"])
             style = item.get("style", spk.get("style", ""))
+            spk_model = item.get("model", spk.get("model"))
+            line_mode = "placeholder" if placeholder else (spk_model or mode)
             af = resolve_af(item.get("af", spk.get("af", DEFAULT_AF)))
             final_wav = ep.tts_dir / f"{lid}.wav"
             old = prev_by_id.get(lid, {})
-            text_changed = old.get("text") != item["text"] or old.get("voice") != voice or old.get("style") != style
-            mode = "placeholder" if placeholder else ep.channel["tts"]["model"]
-            mode_changed = old.get("engine") != mode
+            text_changed = (
+                old.get("text") != item["text"]
+                or old.get("voice") != voice
+                or old.get("style") != style
+                or old.get("af") != af
+            )
+            mode_changed = old.get("engine") != line_mode
             must_synth = force or item.get("force") or not final_wav.is_file() or text_changed or mode_changed
             if only and lid not in only:
                 must_synth = False
             if must_synth:
                 raw = tmp / f"{lid}_raw.wav"
-                print(f" -> Tổng hợp {lid} [{voice}] : {item['text']}")
+                print(f" -> Tổng hợp {lid} [{voice} @ {line_mode}] : {item['text']}")
                 if placeholder:
                     placeholder_voice(item["text"], raw)
                 else:
-                    synthesize(ep, item["text"], voice, style, keys, raw)
+                    _, used_model = synthesize(ep, item["text"], voice, style, keys, raw, preferred_model=spk_model)
+                    line_mode = used_model
                 m = master_line(raw, final_wav, af, peak_db)
                 subprocess.run([FFMPEG, "-y", "-v", "error", "-i", str(final_wav), "-c:a", "libmp3lame", "-b:a", "192k",
                                 str(final_wav.with_suffix(".mp3"))], check=True)
@@ -245,7 +386,8 @@ def run(ep: Episode, placeholder: bool = False, force: bool = False, only: list[
                 "speaker_label": spk.get("label", item["speaker"]),
                 "voice": voice,
                 "style": style,
-                "engine": mode,
+                "af": af,
+                "engine": line_mode,
                 "text": item["text"],
                 "subtitle": item.get("subtitle"),
                 "timeline_start_sec": float(item["start"]),
@@ -257,20 +399,29 @@ def run(ep: Episode, placeholder: bool = False, force: bool = False, only: list[
                 "qa_status": "PASS" if fits and m["duration_sec"] > 0.4 else "WARN_DURATION",
                 "human_listen_check": "PENDING" if must_synth else old.get("human_listen_check", "PENDING"),
             })
-            print(f"    {m['duration_sec']}s / cửa sổ {window}s, peak {m['peak_dbfs']} dBFS -> {out_lines[-1]['qa_status']}")
+            print(f"    {lid}: {m['duration_sec']}s / cửa sổ {window}s, peak {m['peak_dbfs']} dBFS -> {out_lines[-1]['qa_status']}")
+            done = {ln["line_id"] for ln in out_lines}
+            _save(ep, placeholder, peak_db, out_lines + [ln for ln in prev.get("lines", []) if ln["line_id"] not in done],
+                  partial=True)
 
+    manifest = _save(ep, placeholder, peak_db, out_lines, partial=False)
+    warn = [ln["line_id"] for ln in out_lines if ln["qa_status"] != "PASS"]
+    if warn:
+        print(f" !! Câu vượt cửa sổ thời gian: {warn} – rút ngắn thoại hoặc nới 'window'.")
+    print(f" -> Manifest: {rel(ep.tts_manifest_path)}")
+    return manifest
+
+
+def _save(ep: Episode, placeholder: bool, peak_db: float, lines: list, partial: bool) -> dict:
     manifest = {
         "episode_id": ep.id,
         "gate": "GATE_2_TTS_VOICE",
         "engine": "placeholder" if placeholder else ep.channel["tts"]["model"],
         "placeholder_mode": placeholder,
+        "partial": partial,
         "target_peak_dbfs": peak_db,
-        "lines": out_lines,
+        "lines": lines,
         "note": "Bắt buộc nghe lại từng câu (dấu thanh, cảm xúc). Đặt human_listen_check = PASS sau khi duyệt.",
     }
     save_json(ep.tts_manifest_path, manifest)
-    warn = [ln["line_id"] for ln in out_lines if ln["qa_status"] != "PASS"]
-    if warn:
-        print(f" !! Câu vượt cửa sổ thời gian: {warn} – rút ngắn thoại hoặc nới 'window'.")
-    print(f" -> Manifest: {rel(ep.tts_manifest_path)}")
     return manifest

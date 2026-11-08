@@ -85,3 +85,4 @@ Chỉ dùng các khuyến nghị **phổ quát, không gây hại nếu làm the
 1. Ẩn ngay bình luận chứa tên người, số điện thoại, số tài khoản, ảnh chụp tin nhắn có thông tin cá nhân.
 2. Nếu có người/doanh nghiệp cho rằng video ám chỉ họ: chuyển video sang *Riêng tư*, ghi nhận nội dung, đối chiếu hồ sơ clearance, chỉnh sửa trước khi đăng lại.
 3. Không tranh cãi công khai; không đăng lại thông tin cá nhân của người khiếu nại.
+

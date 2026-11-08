@@ -1,0 +1,358 @@
+{
+  "episode_id": "EP03",
+  "slug": "CapCuuGiaMao",
+  "title": "Con Đang Cấp Cứu, Chuyển Gấp Viện Phí!",
+  "version": "v6",
+  "scam_family": "ON-03",
+  "duration_sec": 56.0,
+  "hook": {
+    "kicker": "GỌI HÀNG LOẠT & VIDEO DEEPFAKE CON LA KHÓC",
+    "title": "Nghe tin con cấp cứu kèm video mặt con gào khóc: Đừng vội chuyển tiền khi chưa xác thực!",
+    "start": 0.2,
+    "end": 4.2
+  },
+  "scenes": [
+    {
+      "id": "s1_tung_luoi",
+      "image": "assets/scene1.jpg",
+      "video": "assets/scene1.mp4",
+      "start": 0.0,
+      "end": 6.0,
+      "motion": {
+        "scale": [1.05, 1.14],
+        "focus": [[0.5, 0.5], [0.5, 0.45]],
+        "wobble": "tense"
+      }
+    },
+    {
+      "id": "s2_deepfake",
+      "image": "assets/scene2.jpg",
+      "video": "assets/scene2.mp4",
+      "start": 6.0,
+      "end": 16.8,
+      "motion": {
+        "scale": [1.04, 1.15],
+        "focus": [[0.5, 0.52], [0.5, 0.46]],
+        "wobble": "handheld"
+      },
+      "transition_in": {
+        "type": "glitch",
+        "dur": 0.3
+      },
+      "shakes": [
+        {
+          "at": 6.2,
+          "amp": 28
+        }
+      ]
+    },
+    {
+      "id": "s3_phan_hoa",
+      "image": "assets/scene3.jpg",
+      "video": "assets/scene3.mp4",
+      "start": 16.8,
+      "end": 29.5,
+      "motion": {
+        "scale": [1.03, 1.11],
+        "focus": [[0.5, 0.48], [0.5, 0.52]],
+        "wobble": "calm"
+      },
+      "transition_in": {
+        "type": "dissolve",
+        "dur": 0.35
+      }
+    },
+    {
+      "id": "s4_cong_truong",
+      "image": "assets/scene4.jpg",
+      "video": "assets/scene4.mp4",
+      "start": 29.5,
+      "end": 41.9,
+      "motion": {
+        "scale": [1.10, 1.03],
+        "focus": [[0.5, 0.48], [0.5, 0.5]],
+        "wobble": "calm"
+      },
+      "transition_in": {
+        "type": "flash_white",
+        "dur": 0.25
+      }
+    },
+    {
+      "id": "s5_boc_tran",
+      "image": "assets/scene5.jpg",
+      "video": "assets/scene5.mp4",
+      "start": 41.9,
+      "end": 48.3,
+      "motion": {
+        "scale": [1.03, 1.10],
+        "focus": [[0.5, 0.5], [0.52, 0.46]],
+        "wobble": "calm"
+      },
+      "transition_in": {
+        "type": "dissolve",
+        "dur": 0.3
+      }
+    },
+    {
+      "id": "s6_ket_luan",
+      "image": "assets/scene6.jpg",
+      "video": "assets/scene6.mp4",
+      "start": 48.3,
+      "end": 56.0,
+      "motion": {
+        "scale": [1.02, 1.06],
+        "focus": [[0.5, 0.48], [0.5, 0.48]],
+        "wobble": "none"
+      },
+      "transition_in": {
+        "type": "fade_black",
+        "dur": 0.3
+      }
+    }
+  ],
+  "dialogue": [
+    {
+      "id": "l1",
+      "speaker": "ke_gia_danh",
+      "start": 0.2,
+      "window": 5.7,
+      "text": "Alo phụ huynh lớp Hai A hả? Cháu ngã cầu thang chấn thương nặng, chuyển gấp hai mươi triệu mổ ngay!"
+    },
+    {
+      "id": "l2",
+      "speaker": "chi_ba",
+      "start": 6.0,
+      "window": 5.8,
+      "text": "Trời đất ơi! Trong video đúng mặt bé Tom đang la khóc đau đớn kìa! Cứu con tôi với!"
+    },
+    {
+      "id": "l3",
+      "speaker": "ke_gia_danh",
+      "start": 11.9,
+      "window": 4.9,
+      "text": "Đẩy cháu vô phòng mổ rồi! Chuyển khoản ngay lập tức đi, chậm một phút là không kịp!"
+    },
+    {
+      "id": "l4",
+      "speaker": "chi_ba",
+      "start": 16.9,
+      "window": 6.4,
+      "text": "Con ơi ráng lên, mẹ chuyển tiền ngay đây! Ủa... sao vừa chuyển xong gọi lại đã khóa máy?!"
+    },
+    {
+      "id": "l5",
+      "speaker": "chi_tu",
+      "start": 23.4,
+      "window": 6.0,
+      "text": "Khoan đã, video gì mà nhòe nhoẹt giả tạo quá! Để gọi cô chủ nhiệm hỏi lại cho chắc!"
+    },
+    {
+      "id": "l6",
+      "speaker": "chi_ba",
+      "start": 29.6,
+      "window": 6.8,
+      "text": "Chị Tư ơi, thấy con lành lặn chạy ra mà tôi rụng rời! Trưa nay tôi chuyển mất hai mươi triệu rồi!"
+    },
+    {
+      "id": "l7",
+      "speaker": "chi_tu",
+      "start": 36.5,
+      "window": 5.3,
+      "text": "Trưa nay mấy chục phụ huynh lớp mình đều bị gọi cùng một kịch bản cấp cứu đó chị!"
+    },
+    {
+      "id": "l8",
+      "speaker": "chi_tu",
+      "start": 42.0,
+      "window": 6.2,
+      "text": "Tụi nó gom ảnh giấy khen trên mạng, rồi dùng công nghệ cao ghép mặt giả cảnh con la khóc đó!"
+    },
+    {
+      "id": "l9",
+      "speaker": "chi_tu",
+      "start": 48.5,
+      "window": 6.7,
+      "text": "Thôi con bình an là may rồi! Đừng đưa thông tin con lên mạng, chưa kiểm chứng thì đừng chuyển tiền nha!"
+    }
+  ],
+  "chat_bubbles": [],
+  "callouts": [
+    {
+      "text": "Hàng loạt phụ huynh hoảng loạn vì cùng 1 kịch bản cấp cứu!",
+      "style": "danger",
+      "y": 210,
+      "start": 4.35,
+      "end": 5.9
+    },
+    {
+      "text": "Video Deepfake AI bị nhiễu vỡ nét mặt khi con vươn tay!",
+      "style": "danger",
+      "y": 210,
+      "start": 11.9,
+      "end": 16.5
+    },
+    {
+      "text": "Chuyển xong 20 triệu -> Khóa máy! | Gọi cô giáo -> An toàn!",
+      "style": "warn",
+      "y": 210,
+      "start": 20.2,
+      "end": 29.0
+    },
+    {
+      "text": "Lấy ảnh giấy khen trên mạng -> Ghép mặt AI giả cảnh cấp cứu!",
+      "style": "danger",
+      "y": 210,
+      "start": 42.2,
+      "end": 48.0
+    }
+  ],
+  "red_flags": {
+    "start": 51.0,
+    "end": 53.5,
+    "stagger_sec": 0.4,
+    "title": "NHỚ KỸ",
+    "items": [
+      "Gọi hàng loạt phụ huynh cùng một kịch bản báo con ngã cấp cứu",
+      "Nhá video Deepfake ghép mặt con la khóc từ ảnh giấy khen đăng trên mạng",
+      "Hối chuyển tiền tạm ứng gấp, không cho thời gian kiểm chứng"
+    ],
+    "action": "Đừng đăng thông tin con lên mạng; chưa gọi cô chủ nhiệm xác thực thì tuyệt đối không chuyển tiền!"
+  },
+  "disclaimer": {
+    "start": 53.5,
+    "end": 56.0
+  },
+  "audio": {
+    "ambience": [
+      {
+        "preset": "office",
+        "start": 0.0,
+        "end": 29.5,
+        "gain_db": -3.5
+      },
+      {
+        "preset": "street",
+        "start": 29.5,
+        "end": 56.0,
+        "gain_db": -3.0
+      }
+    ],
+    "foley": [
+      {
+        "preset": "phone_ring",
+        "at": 0.0,
+        "dur": 1.2,
+        "gain_db": 0.0
+      },
+      {
+        "preset": "impact",
+        "at": 2.8,
+        "dur": 1.2,
+        "gain_db": 1.5
+      },
+      {
+        "preset": "glitch",
+        "at": 6.0,
+        "gain_db": 1.5
+      },
+      {
+        "preset": "heartbeat",
+        "at": 6.2,
+        "dur": 16.0,
+        "gain_db": 0.5
+      },
+      {
+        "preset": "glitch",
+        "at": 11.8,
+        "dur": 0.9,
+        "gain_db": 2.0
+      },
+      {
+        "preset": "bank_ting",
+        "at": 19.3,
+        "gain_db": 0.5
+      },
+      {
+        "preset": "call_end",
+        "at": 20.2,
+        "dur": 1.5,
+        "gain_db": 1.5
+      },
+      {
+        "preset": "notification",
+        "at": 23.4,
+        "gain_db": 0.0
+      },
+      {
+        "preset": "school_bell",
+        "at": 29.5,
+        "dur": 2.2,
+        "gain_db": 0.5
+      },
+      {
+        "preset": "impact",
+        "at": 29.6,
+        "dur": 1.8,
+        "gain_db": 2.0
+      },
+      {
+        "preset": "glitch",
+        "at": 45.0,
+        "dur": 0.9,
+        "gain_db": 1.5
+      }
+    ],
+    "bgm": [
+      {
+        "preset": "suspense_pulse",
+        "start": 0.0,
+        "end": 16.8
+      },
+      {
+        "preset": "tension_drone",
+        "start": 16.8,
+        "end": 29.5,
+        "gain_db": 2.0
+      },
+      {
+        "preset": "action_climax",
+        "start": 29.5,
+        "end": 45.0,
+        "gain_db": 1.5
+      },
+      {
+        "preset": "warm_outro",
+        "start": 45.0,
+        "end": 56.0
+      }
+    ],
+    "duck_extra": []
+  },
+  "forbidden_terms": [],
+  "publish": {
+    "titles": [
+      "Nhá video AI giả con khóc cấp cứu: Đừng đưa thông tin con lên mạng! #shorts #lừađảocấpcứu",
+      "Hàng loạt phụ huynh bị gọi báo con cấp cứu kèm video ghép mặt AI! #shorts #lừađảocấpcứu",
+      "Thấy video con khóc đòi tiền mổ, nhớ kiểm chứng ngay trước khi chuyển! #shorts #cảnhgiáclừađảo"
+    ],
+    "description": "Tình huống tái dựng từ cảnh báo thực tế: Kẻ gian thu thập hình ảnh giấy khen, bảng tên học sinh được phụ huynh đăng công khai trên mạng xã hội để gọi hàng loạt báo tin con ngã cầu thang cấp cứu, thậm chí nhá video ghép mặt AI (Deepfake) cảnh con la khóc đau đớn nhằm ép chuyển tiền ngay. Hãy tuyệt đối bảo mật thông tin trường lớp của con và luôn gọi giáo viên chủ nhiệm xác thực trước mọi yêu cầu chuyển tiền!",
+    "hashtags": [
+      "#shorts",
+      "#lừađảocấpcứu",
+      "#cảnhgiáclừađảo"
+    ],
+    "pinned_comment": "Cha mẹ tuyệt đối đừng đăng công khai ảnh giấy khen, bảng tên, trường lớp của con lên mạng xã hội, và nhớ nguyên tắc: Chưa gọi cô chủ nhiệm xác thực thì tuyệt đối không chuyển tiền!",
+    "tags": [
+      "bóc trần lừa đảo",
+      "lừa đảo con cấp cứu",
+      "deepfake lừa đảo",
+      "an toàn cho trẻ",
+      "cảnh giác mạng xã hội",
+      "shorts"
+    ],
+    "category": "Education (Giáo dục)",
+    "playlist": "Bóc Trần Lừa Đảo – Kỹ Năng Cảnh Giác & An Toàn Đời Thực",
+    "thumbnail_sec": 8.0
+  }
+}

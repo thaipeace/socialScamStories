@@ -237,3 +237,4 @@ def soft_limit(x: np.ndarray, knee: float = 0.72, headroom: float = 0.17) -> np.
     """Transparent soft-knee limiter (ceiling ≈ knee+headroom ≈ -1 dBFS)."""
     a = np.abs(x)
     return np.where(a > knee, np.sign(x) * (knee + headroom * np.tanh((a - knee) / headroom)), x)
+

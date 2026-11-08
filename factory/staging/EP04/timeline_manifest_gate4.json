@@ -1,0 +1,671 @@
+{
+  "episode_id": "EP04",
+  "gate": "GATE_4_TIMELINE_SAFE_ZONE",
+  "preview_only": false,
+  "canvas": {
+    "width": 1080,
+    "height": 1920,
+    "fps": 30,
+    "total_frames": 1680,
+    "total_duration_sec": 56.0
+  },
+  "safe_zone_rules": {
+    "left_x": 80,
+    "right_x": 920,
+    "max_y": 1420,
+    "top_hook_y": 170,
+    "platform_ui_bottom_y": 1440,
+    "all_overlays_compliant": true
+  },
+  "scenes": [
+    {
+      "id": "s1_dem_dan_de",
+      "image": "assets/scene1.jpg",
+      "start": 0.0,
+      "end": 7.1,
+      "motion": {
+        "scale": [
+          1.05,
+          1.14
+        ],
+        "focus": [
+          [
+            0.5,
+            0.5
+          ],
+          [
+            0.5,
+            0.45
+          ]
+        ],
+        "wobble": "tense"
+      }
+    },
+    {
+      "id": "s2_xung_dot_sang",
+      "image": "assets/scene2.jpg",
+      "start": 7.1,
+      "end": 19.0,
+      "motion": {
+        "scale": [
+          1.04,
+          1.14
+        ],
+        "focus": [
+          [
+            0.5,
+            0.5
+          ],
+          [
+            0.5,
+            0.46
+          ]
+        ],
+        "wobble": "handheld"
+      },
+      "transition_in": {
+        "type": "dissolve",
+        "dur": 0.3
+      },
+      "shakes": [
+        {
+          "at": 13.5,
+          "amp": 24
+        }
+      ]
+    },
+    {
+      "id": "s3_tung_phat_hien",
+      "image": "assets/scene3.jpg",
+      "start": 19.0,
+      "end": 29.0,
+      "motion": {
+        "scale": [
+          1.03,
+          1.12
+        ],
+        "focus": [
+          [
+            0.5,
+            0.48
+          ],
+          [
+            0.5,
+            0.52
+          ]
+        ],
+        "wobble": "handheld"
+      },
+      "transition_in": {
+        "type": "dissolve",
+        "dur": 0.3
+      }
+    },
+    {
+      "id": "s4_lot_decal",
+      "image": "assets/scene4.jpg",
+      "start": 29.0,
+      "end": 42.6,
+      "motion": {
+        "scale": [
+          1.12,
+          1.03
+        ],
+        "focus": [
+          [
+            0.5,
+            0.48
+          ],
+          [
+            0.5,
+            0.5
+          ]
+        ],
+        "wobble": "calm"
+      },
+      "transition_in": {
+        "type": "flash_white",
+        "dur": 0.25
+      },
+      "shakes": [
+        {
+          "at": 29.1,
+          "amp": 28
+        }
+      ]
+    },
+    {
+      "id": "s5_boc_tran",
+      "image": "assets/scene5.jpg",
+      "start": 42.6,
+      "end": 48.6,
+      "motion": {
+        "scale": [
+          1.03,
+          1.1
+        ],
+        "focus": [
+          [
+            0.5,
+            0.5
+          ],
+          [
+            0.5,
+            0.45
+          ]
+        ],
+        "wobble": "calm"
+      },
+      "transition_in": {
+        "type": "glitch",
+        "dur": 0.3
+      }
+    },
+    {
+      "id": "s6_ket_luan",
+      "image": "assets/scene6.jpg",
+      "start": 48.6,
+      "end": 56.0,
+      "motion": {
+        "scale": [
+          1.02,
+          1.06
+        ],
+        "focus": [
+          [
+            0.5,
+            0.48
+          ],
+          [
+            0.5,
+            0.48
+          ]
+        ],
+        "wobble": "none"
+      },
+      "transition_in": {
+        "type": "fade_black",
+        "dur": 0.3
+      }
+    }
+  ],
+  "subtitle_srt": "factory/staging/EP04/subtitles/EP04.srt",
+  "video_track_noaudio": "factory/staging/EP04/timeline_video_gate4.mp4",
+  "channel_branding": {
+    "type": "channel_branding",
+    "logo_text": "VCH",
+    "watermark_text": "VẠN CHUYỆN",
+    "safe_zone_compliant": true
+  },
+  "overlays": [
+    {
+      "id": "00_hook",
+      "start_sec": 0.2,
+      "end_sec": 4.2,
+      "fade_sec": 0.3,
+      "png_path": "factory/staging/EP04/overlays/00_hook.png",
+      "type": "text_hook",
+      "text": "DÁN ĐÈ MÃ QR HÀNG LOẠT QUÁN ĂN BAN ĐÊM — Khách quét mã đã trừ tiền mà chủ quán không nhận được đồng nào… Suýt cãi nhau to!",
+      "bbox_px": [
+        84,
+        170,
+        916,
+        416
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "01_sub_l1",
+      "start_sec": 0.05,
+      "end_sec": 7.07,
+      "fade_sec": 0.1,
+      "png_path": "factory/staging/EP04/overlays/01_sub_l1.png",
+      "type": "subtitle",
+      "lines": [
+        "Đêm khuya kẻ gian rảo khắp phố, lén",
+        "dán đè mã thanh toán của chúng lên",
+        "hàng chục quán ăn!"
+      ],
+      "bbox_px": [
+        99,
+        1212,
+        902,
+        1380
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "02_sub_l2",
+      "start_sec": 7.12,
+      "end_sec": 8.233,
+      "fade_sec": 0.1,
+      "png_path": "factory/staging/EP04/overlays/02_sub_l2.png",
+      "type": "subtitle",
+      "lines": [
+        "Khoan đã anh ơi!"
+      ],
+      "bbox_px": [
+        309,
+        1324,
+        692,
+        1380
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "03_sub_l2",
+      "start_sec": 8.233,
+      "end_sec": 13.38,
+      "fade_sec": 0.1,
+      "png_path": "factory/staging/EP04/overlays/03_sub_l2.png",
+      "type": "subtitle",
+      "lines": [
+        "Sáng giờ mấy chục khách báo chuyển",
+        "rồi mà máy tôi chưa nhận được đồng",
+        "nào!"
+      ],
+      "bbox_px": [
+        98,
+        1212,
+        903,
+        1380
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "04_sub_l3",
+      "start_sec": 13.45,
+      "end_sec": 14.416,
+      "fade_sec": 0.1,
+      "png_path": "factory/staging/EP04/overlays/04_sub_l3.png",
+      "type": "subtitle",
+      "lines": [
+        "Cô nói kỳ vậy?!"
+      ],
+      "bbox_px": [
+        330,
+        1324,
+        671,
+        1380
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "05_sub_l3",
+      "start_sec": 14.416,
+      "end_sec": 18.99,
+      "fade_sec": 0.1,
+      "png_path": "factory/staging/EP04/overlays/05_sub_l3.png",
+      "type": "subtitle",
+      "lines": [
+        "Tôi quét đúng bảng mã trên quầy cô,",
+        "trừ tiền thành công rõ ràng đây nè!"
+      ],
+      "bbox_px": [
+        100,
+        1268,
+        901,
+        1380
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "06_sub_l4",
+      "start_sec": 19.05,
+      "end_sec": 20.529,
+      "fade_sec": 0.1,
+      "png_path": "factory/staging/EP04/overlays/06_sub_l4.png",
+      "type": "subtitle",
+      "lines": [
+        "Hai người đừng cãi nhau!"
+      ],
+      "bbox_px": [
+        220,
+        1324,
+        780,
+        1380
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "07_sub_l4",
+      "start_sec": 20.529,
+      "end_sec": 24.35,
+      "fade_sec": 0.1,
+      "png_path": "factory/staging/EP04/overlays/07_sub_l4.png",
+      "type": "subtitle",
+      "lines": [
+        "Em vừa quét thử nè, sao quán Cô Tư",
+        "mà tên người nhận lạ hoắc?!"
+      ],
+      "bbox_px": [
+        110,
+        1268,
+        891,
+        1380
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "08_sub_l5",
+      "start_sec": 24.42,
+      "end_sec": 25.702,
+      "fade_sec": 0.1,
+      "png_path": "factory/staging/EP04/overlays/08_sub_l5.png",
+      "type": "subtitle",
+      "lines": [
+        "Nhìn sát vô bảng mã kìa!"
+      ],
+      "bbox_px": [
+        227,
+        1324,
+        774,
+        1380
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "09_sub_l5",
+      "start_sec": 25.702,
+      "end_sec": 28.96,
+      "fade_sec": 0.1,
+      "png_path": "factory/staging/EP04/overlays/09_sub_l5.png",
+      "type": "subtitle",
+      "lines": [
+        "Có nguyên một miếng decal mới tinh",
+        "vừa bị ai dán đè lên trên!"
+      ],
+      "bbox_px": [
+        100,
+        1268,
+        900,
+        1380
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "10_sub_l6",
+      "start_sec": 29.05,
+      "end_sec": 30.067,
+      "fade_sec": 0.1,
+      "png_path": "factory/staging/EP04/overlays/10_sub_l6.png",
+      "type": "subtitle",
+      "lines": [
+        "Trời đất ơi!"
+      ],
+      "bbox_px": [
+        369,
+        1324,
+        632,
+        1380
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "11_sub_l6",
+      "start_sec": 30.067,
+      "end_sec": 32.356,
+      "fade_sec": 0.1,
+      "png_path": "factory/staging/EP04/overlays/11_sub_l6.png",
+      "type": "subtitle",
+      "lines": [
+        "Bị dán đè mã giả thiệt rồi!"
+      ],
+      "bbox_px": [
+        215,
+        1324,
+        785,
+        1380
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "12_sub_l6",
+      "start_sec": 32.356,
+      "end_sec": 36.51,
+      "fade_sec": 0.1,
+      "png_path": "factory/staging/EP04/overlays/12_sub_l6.png",
+      "type": "subtitle",
+      "lines": [
+        "Hèn gì sáng giờ tiền khách chuyển",
+        "bay đi đâu hết!"
+      ],
+      "bbox_px": [
+        128,
+        1268,
+        872,
+        1380
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "13_sub_l7",
+      "start_sec": 36.58,
+      "end_sec": 37.075,
+      "fade_sec": 0.1,
+      "png_path": "factory/staging/EP04/overlays/13_sub_l7.png",
+      "type": "subtitle",
+      "lines": [
+        "Hú hồn!"
+      ],
+      "bbox_px": [
+        402,
+        1324,
+        599,
+        1380
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "14_sub_l7",
+      "start_sec": 37.075,
+      "end_sec": 42.52,
+      "fade_sec": 0.1,
+      "png_path": "factory/staging/EP04/overlays/14_sub_l7.png",
+      "type": "subtitle",
+      "lines": [
+        "May mà em trai nhìn kỹ tên, không là",
+        "tôi vừa mất tiền vừa mang tiếng quỵt",
+        "nợ!"
+      ],
+      "bbox_px": [
+        96,
+        1212,
+        904,
+        1380
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "15_sub_l8",
+      "start_sec": 42.6,
+      "end_sec": 48.58,
+      "fade_sec": 0.1,
+      "png_path": "factory/staging/EP04/overlays/15_sub_l8.png",
+      "type": "subtitle",
+      "lines": [
+        "Chỉ vài miếng decal dán trộm ban",
+        "đêm, kẻ gian đã chiếm đoạt tiền của",
+        "hàng chục người mua vội!"
+      ],
+      "bbox_px": [
+        109,
+        1212,
+        892,
+        1380
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "16_sub_l9",
+      "start_sec": 48.65,
+      "end_sec": 55.59,
+      "fade_sec": 0.1,
+      "png_path": "factory/staging/EP04/overlays/16_sub_l9.png",
+      "type": "subtitle",
+      "lines": [
+        "Nhớ nha: Chủ quán phải kiểm tra",
+        "bảng mã mỗi sáng, còn khách phải",
+        "nhìn đúng tên chủ quán hãy chuyển!"
+      ],
+      "bbox_px": [
+        106,
+        1212,
+        894,
+        1380
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "17_redflags_0",
+      "start_sec": 51.0,
+      "end_sec": 51.4,
+      "fade_sec": 0.25,
+      "png_path": "factory/staging/EP04/overlays/17_redflags_0.png",
+      "type": "red_flags",
+      "title": "NHỚ KỸ",
+      "lines": [
+        "Kẻ gian lợi dụng đêm vắng dán đè decal mã QR cá nhân lên bảng thanh toán của quán",
+        "Sau khi quét mã, tên người thụ hưởng hiện ra là tên cá nhân lạ không khớp với chủ quán",
+        "Bảng mã QR có dấu hiệu bong mép hoặc có lớp giấy decal dán chồng lên trên",
+        "Chủ quán phải kiểm tra bảng mã mỗi sáng và cất kỹ ban đêm; khách mua luôn hỏi lại đúng tên chủ tài khoản trước khi bấm chuyển!"
+      ],
+      "bbox_px": [
+        80,
+        420,
+        920,
+        1100
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "18_redflags_1",
+      "start_sec": 51.4,
+      "end_sec": 51.8,
+      "fade_sec": 0.0,
+      "png_path": "factory/staging/EP04/overlays/18_redflags_1.png",
+      "type": "red_flags",
+      "title": "NHỚ KỸ",
+      "lines": [
+        "Kẻ gian lợi dụng đêm vắng dán đè decal mã QR cá nhân lên bảng thanh toán của quán",
+        "Sau khi quét mã, tên người thụ hưởng hiện ra là tên cá nhân lạ không khớp với chủ quán",
+        "Bảng mã QR có dấu hiệu bong mép hoặc có lớp giấy decal dán chồng lên trên",
+        "Chủ quán phải kiểm tra bảng mã mỗi sáng và cất kỹ ban đêm; khách mua luôn hỏi lại đúng tên chủ tài khoản trước khi bấm chuyển!"
+      ],
+      "bbox_px": [
+        80,
+        420,
+        920,
+        1100
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "19_redflags_2",
+      "start_sec": 51.8,
+      "end_sec": 52.2,
+      "fade_sec": 0.0,
+      "png_path": "factory/staging/EP04/overlays/19_redflags_2.png",
+      "type": "red_flags",
+      "title": "NHỚ KỸ",
+      "lines": [
+        "Kẻ gian lợi dụng đêm vắng dán đè decal mã QR cá nhân lên bảng thanh toán của quán",
+        "Sau khi quét mã, tên người thụ hưởng hiện ra là tên cá nhân lạ không khớp với chủ quán",
+        "Bảng mã QR có dấu hiệu bong mép hoặc có lớp giấy decal dán chồng lên trên",
+        "Chủ quán phải kiểm tra bảng mã mỗi sáng và cất kỹ ban đêm; khách mua luôn hỏi lại đúng tên chủ tài khoản trước khi bấm chuyển!"
+      ],
+      "bbox_px": [
+        80,
+        420,
+        920,
+        1100
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "20_redflags_3",
+      "start_sec": 52.2,
+      "end_sec": 53.5,
+      "fade_sec": 0.0,
+      "png_path": "factory/staging/EP04/overlays/20_redflags_3.png",
+      "type": "red_flags",
+      "title": "NHỚ KỸ",
+      "lines": [
+        "Kẻ gian lợi dụng đêm vắng dán đè decal mã QR cá nhân lên bảng thanh toán của quán",
+        "Sau khi quét mã, tên người thụ hưởng hiện ra là tên cá nhân lạ không khớp với chủ quán",
+        "Bảng mã QR có dấu hiệu bong mép hoặc có lớp giấy decal dán chồng lên trên",
+        "Chủ quán phải kiểm tra bảng mã mỗi sáng và cất kỹ ban đêm; khách mua luôn hỏi lại đúng tên chủ tài khoản trước khi bấm chuyển!"
+      ],
+      "bbox_px": [
+        80,
+        420,
+        920,
+        1100
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "21_disclaimer",
+      "start_sec": 53.5,
+      "end_sec": 56.0,
+      "fade_sec": 0.25,
+      "png_path": "factory/staging/EP04/overlays/21_disclaimer.png",
+      "type": "disclaimer",
+      "text": "Tình huống được dựng lại để cảnh báo. Nhân vật, tên, số liệu đều là hư cấu.",
+      "bbox_px": [
+        80,
+        1260,
+        920,
+        1390
+      ],
+      "safe_zone_compliant": true
+    }
+  ],
+  "qa_preview_frames": [
+    {
+      "timestamp_sec": 1.2,
+      "clean": "factory/staging/EP04/preview_frames/qa_01_20s_clean.jpg",
+      "safezone": "factory/staging/EP04/preview_frames/qa_01_20s_safezone.jpg"
+    },
+    {
+      "timestamp_sec": 3.55,
+      "clean": "factory/staging/EP04/preview_frames/qa_03_55s_clean.jpg",
+      "safezone": "factory/staging/EP04/preview_frames/qa_03_55s_safezone.jpg"
+    },
+    {
+      "timestamp_sec": 13.05,
+      "clean": "factory/staging/EP04/preview_frames/qa_13_05s_clean.jpg",
+      "safezone": "factory/staging/EP04/preview_frames/qa_13_05s_safezone.jpg"
+    },
+    {
+      "timestamp_sec": 24.0,
+      "clean": "factory/staging/EP04/preview_frames/qa_24_00s_clean.jpg",
+      "safezone": "factory/staging/EP04/preview_frames/qa_24_00s_safezone.jpg"
+    },
+    {
+      "timestamp_sec": 35.8,
+      "clean": "factory/staging/EP04/preview_frames/qa_35_80s_clean.jpg",
+      "safezone": "factory/staging/EP04/preview_frames/qa_35_80s_safezone.jpg"
+    },
+    {
+      "timestamp_sec": 45.6,
+      "clean": "factory/staging/EP04/preview_frames/qa_45_60s_clean.jpg",
+      "safezone": "factory/staging/EP04/preview_frames/qa_45_60s_safezone.jpg"
+    },
+    {
+      "timestamp_sec": 52.3,
+      "clean": "factory/staging/EP04/preview_frames/qa_52_30s_clean.jpg",
+      "safezone": "factory/staging/EP04/preview_frames/qa_52_30s_safezone.jpg"
+    },
+    {
+      "timestamp_sec": 53.0,
+      "clean": "factory/staging/EP04/preview_frames/qa_53_00s_clean.jpg",
+      "safezone": "factory/staging/EP04/preview_frames/qa_53_00s_safezone.jpg"
+    },
+    {
+      "timestamp_sec": 54.75,
+      "clean": "factory/staging/EP04/preview_frames/qa_54_75s_clean.jpg",
+      "safezone": "factory/staging/EP04/preview_frames/qa_54_75s_safezone.jpg"
+    }
+  ]
+}

@@ -22,3 +22,4 @@ Thumbs.db
 # Không bao giờ commit khóa API
 *api-keys*.json
 .env
+

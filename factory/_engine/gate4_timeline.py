@@ -120,23 +120,23 @@ def plate_branding(cv: Canvas) -> tuple[Image.Image, dict]:
 def plate_hook(cv: Canvas, title: str, kicker: str = "") -> tuple[Image.Image, dict]:
     img = cv.blank()
     d = ImageDraw.Draw(img)
-    fm, fk = font(52), font(28)
-    max_w = cv.R - cv.L - 70
+    fm, fk = font(46), font(24)
+    max_w = cv.R - cv.L - 60
     lines = wrap(d, title, fm, max_w, 4)
-    lh = 64
-    box_h = 36 + (44 if kicker else 0) + lh * len(lines) + 20
-    box_w = min(cv.R - cv.L, max([text_w(d, ln, fm, 4) for ln in lines] + [text_w(d, kicker, fk, 2)]) + 70)
+    lh = 56
+    box_h = 26 + (38 if kicker else 0) + lh * len(lines) + 14
+    box_w = min(cv.R - cv.L, max([text_w(d, ln, fm, 4) for ln in lines] + [text_w(d, kicker, fk, 2)]) + 56)
     cx = (cv.L + cv.R) // 2
     x0, y0 = max(cv.L, cx - box_w // 2), cv.TOPY
     x1, y1 = min(cv.R, x0 + box_w), cv.TOPY + box_h
     danger = tuple(cv.pal["danger_rgb"])
-    d.rounded_rectangle([x0, y0, x1, y1], radius=18, fill=(10, 12, 18, 215), outline=(*danger, 240), width=4)
-    y = y0 + 22
+    d.rounded_rectangle([x0, y0, x1, y1], radius=16, fill=(10, 12, 18, 125), outline=(*danger, 210), width=3)
+    y = y0 + 16
     if kicker:
-        kw = text_w(d, kicker, fk, 0) + 28
-        d.rounded_rectangle([cx - kw // 2, y - 4, cx + kw // 2, y + 36], radius=10, fill=(*danger, 255))
-        d.text((cx, y + 16), kicker, font=fk, anchor="mm", fill=(255, 255, 255, 255))
-        y += 52
+        kw = text_w(d, kicker, fk, 0) + 24
+        d.rounded_rectangle([cx - kw // 2, y - 2, cx + kw // 2, y + 32], radius=8, fill=(*danger, 230))
+        d.text((cx, y + 15), kicker, font=fk, anchor="mm", fill=(255, 255, 255, 255))
+        y += 44
     for ln in lines:
         d.text((cx, y + lh // 2 - 4), ln, font=fm, anchor="mm", fill=(255, 255, 255, 255), stroke_width=4, stroke_fill=(0, 0, 0, 255))
         y += lh
@@ -145,30 +145,27 @@ def plate_hook(cv: Canvas, title: str, kicker: str = "") -> tuple[Image.Image, d
 
 
 def plate_subtitle(cv: Canvas, text: str, color: tuple, speaker_label: str = "") -> tuple[Image.Image, dict]:
+    """Phụ đề điện ảnh thuần túy (không hộp đen, không nhãn tên người nói): chữ có bóng đổ & viền đen sắc nét ở cạnh dưới Safe Zone."""
     img = cv.blank()
     d = ImageDraw.Draw(img)
-    f = font(46)
-    lines = wrap(d, text, f, cv.R - cv.L - 80, 5)
-    lh = 58
-    box_h = lh * len(lines) + 40
-    box_w = min(cv.R - cv.L, max(text_w(d, ln, f, 5) for ln in lines) + 72)
+    f = font(44)
+    lines = wrap(d, text, f, cv.R - cv.L - 40, 5)
+    lh = 56
+    box_h = lh * len(lines)
+    box_w = min(cv.R - cv.L, max(text_w(d, ln, f, 5) for ln in lines) + 20)
     cx = (cv.L + cv.R) // 2
     x0 = max(cv.L, cx - box_w // 2)
     x1 = min(cv.R, x0 + box_w)
-    y1 = 1375
+    y1 = 1380
     y0 = y1 - box_h
-    d.rounded_rectangle([x0, y0, x1, y1], radius=20, fill=(8, 12, 18, 190), outline=(255, 255, 255, 55), width=2)
-    if speaker_label:
-        sf = font(24)
-        sw = text_w(d, speaker_label, sf) + 24
-        d.rounded_rectangle([x0 + 18, y0 - 20, x0 + 18 + sw, y0 + 14], radius=10, fill=(30, 34, 44, 235))
-        d.text((x0 + 30, y0 - 3), speaker_label, font=sf, anchor="lm", fill=(*color, 255))
-    y = y0 + 20
+    y = y0
     for ln in lines:
-        d.text((cx, y + lh // 2), ln, font=f, anchor="mm", fill=(*color, 255), stroke_width=5, stroke_fill=(0, 0, 0, 255))
+        cy = y + lh // 2
+        d.text((cx + 3, cy + 4), ln, font=f, anchor="mm", fill=(0, 0, 0, 180), stroke_width=6, stroke_fill=(0, 0, 0, 180))
+        d.text((cx, cy), ln, font=f, anchor="mm", fill=(*color, 255), stroke_width=5, stroke_fill=(0, 0, 0, 255))
         y += lh
-    return img, {"type": "subtitle", "lines": lines, "bbox_px": [x0, y0 - 20, x1, y1],
-                 "safe_zone_compliant": cv.compliant(x0, y0 - 20, x1, y1)}
+    return img, {"type": "subtitle", "lines": lines, "bbox_px": [x0, y0, x1, y1],
+                 "safe_zone_compliant": cv.compliant(x0, y0, x1, y1)}
 
 
 def plate_chat(cv: Canvas, text: str, side: str = "left", sender: str = "", y_top: int = 520,
@@ -213,27 +210,31 @@ def _warn_icon(d: ImageDraw.ImageDraw, cx: int, cy: int, r: int, color) -> None:
     d.text((cx, cy + int(r * 0.15)), "!", font=font(int(r * 1.1)), anchor="mm", fill=(20, 20, 20, 255))
 
 
-def plate_callout(cv: Canvas, text: str, style: str = "danger", y_center: int = 760) -> tuple[Image.Image, dict]:
+def plate_callout(cv: Canvas, text: str, style: str = "danger", y_center: int = 185) -> tuple[Image.Image, dict]:
+    """Tag ghi chú gọn nhẹ ôm sát chữ ở mép trên (không làm hộp đen che giữa màn hình)."""
     img = cv.blank()
     d = ImageDraw.Draw(img)
-    color = {"danger": cv.pal["danger_rgb"], "safe": cv.pal["safe_rgb"], "info": cv.pal["accent_rgb"]}.get(style, cv.pal["danger_rgb"])
-    f = font(40)
-    lines = wrap(d, text, f, cv.R - cv.L - 140, 3)
-    lh = 52
-    bh = lh * len(lines) + 34
-    x0, x1 = cv.L, cv.R
-    y0 = y_center - bh // 2
+    color = {"danger": cv.pal["danger_rgb"], "safe": cv.pal["safe_rgb"], "info": cv.pal["accent_rgb"], "warn": cv.pal["accent_rgb"]}.get(style, cv.pal["danger_rgb"])
+    f = font(32)
+    lines = wrap(d, text, f, cv.R - cv.L - 110, 3)
+    lh = 42
+    bh = lh * len(lines) + 22
+    text_max_w = max(text_w(d, ln, f, 3) for ln in lines)
+    bw = min(cv.R - cv.L, text_max_w + 96)
+    cx = (cv.L + cv.R) // 2
+    x0 = max(cv.L, cx - bw // 2)
+    x1 = min(cv.R, x0 + bw)
+    y0 = max(130, min(cv.MAXY - bh, y_center - bh // 2))
     y1 = y0 + bh
-    d.rounded_rectangle([x0, y0, x1, y1], radius=16, fill=(12, 14, 20, 225), outline=(*color, 255), width=4)
-    d.rectangle([x0, y0 + 10, x0 + 10, y1 - 10], fill=(*color, 255))
+    d.rounded_rectangle([x0, y0, x1, y1], radius=14, fill=(12, 14, 20, 140), outline=(*color, 220), width=3)
     if style == "danger":
-        _warn_icon(d, x0 + 58, (y0 + y1) // 2, 24, (*color, 255))
+        _warn_icon(d, x0 + 40, (y0 + y1) // 2, 18, (*color, 255))
     else:
-        d.ellipse([x0 + 34, (y0 + y1) // 2 - 22, x0 + 80, (y0 + y1) // 2 + 22], fill=(*color, 255))
-        d.text((x0 + 57, (y0 + y1) // 2), "i" if style == "info" else "✓", font=font(30), anchor="mm", fill=(20, 20, 20, 255))
-    y = y0 + 17
+        d.ellipse([x0 + 22, (y0 + y1) // 2 - 17, x0 + 58, (y0 + y1) // 2 + 17], fill=(*color, 255))
+        d.text((x0 + 40, (y0 + y1) // 2), "!" if style == "warn" else ("i" if style == "info" else "✓"), font=font(24), anchor="mm", fill=(20, 20, 20, 255))
+    y = y0 + 11
     for ln in lines:
-        d.text((x0 + 104, y + lh // 2), ln, font=f, anchor="lm", fill=(255, 255, 255, 255), stroke_width=3, stroke_fill=(0, 0, 0, 255))
+        d.text((x0 + 74, y + lh // 2), ln, font=f, anchor="lm", fill=(255, 255, 255, 255), stroke_width=3, stroke_fill=(0, 0, 0, 255))
         y += lh
     return img, {"type": "callout", "style": style, "text": text, "bbox_px": [x0, y0, x1, y1],
                  "safe_zone_compliant": cv.compliant(x0, y0, x1, y1)}
@@ -243,44 +244,41 @@ def plate_red_flags(cv: Canvas, title: str, items: list[str], action: str, n_vis
                     show_action: bool) -> tuple[Image.Image, dict]:
     img = cv.blank()
     d = ImageDraw.Draw(img)
-    # làm tối toàn khung để chữ nổi bật (lớp nền, không phải chữ)
-    d.rectangle([0, 0, cv.W, cv.H], fill=(0, 0, 0, 150))
     danger, safe = tuple(cv.pal["danger_rgb"]), tuple(cv.pal["safe_rgb"])
     x0, x1 = cv.L, cv.R
-    y0 = 300
-    ft, fi, fa = font(50), font(38), font(36)
-    inner_w = x1 - x0 - 150
+    y0 = 420
+    ft, fi, fa = font(42), font(34), font(32)
+    inner_w = x1 - x0 - 130
     item_lines = [wrap(d, it, fi, inner_w, 3) for it in items]
-    action_lines = wrap(d, action, fa, x1 - x0 - 90, 3) if action else []
-    h_items = sum(len(ls) * 50 + 34 for ls in item_lines)
-    h_action = (len(action_lines) * 48 + 76) if action else 0
-    y1 = y0 + 120 + h_items + h_action + 30
-    d.rounded_rectangle([x0, y0, x1, y1], radius=24, fill=(14, 16, 24, 252), outline=(*danger, 255), width=5)
-    d.rounded_rectangle([x0, y0, x1, y0 + 96], radius=24, fill=(*danger, 255))
-    d.rectangle([x0, y0 + 60, x1, y0 + 96], fill=(*danger, 255))
-    _warn_icon(d, x0 + 60, y0 + 46, 26, (255, 220, 60, 255))
-    d.text(((x0 + x1) // 2 + 24, y0 + 48), title, font=ft, anchor="mm", fill=(255, 255, 255, 255))
-    y = y0 + 120
+    action_lines = wrap(d, action, fa, x1 - x0 - 80, 3) if action else []
+    h_items = sum(len(ls) * 44 + 24 for ls in item_lines)
+    h_action = (len(action_lines) * 42 + 54) if action else 0
+    y1 = y0 + 96 + h_items + h_action + 24
+    d.rounded_rectangle([x0, y0, x1, y1], radius=22, fill=(14, 16, 24, 195), outline=(*danger, 230), width=4)
+    d.rounded_rectangle([x0, y0, x1, y0 + 80], radius=22, fill=(*danger, 235))
+    d.rectangle([x0, y0 + 50, x1, y0 + 80], fill=(*danger, 235))
+    _warn_icon(d, x0 + 52, y0 + 40, 22, (255, 220, 60, 255))
+    d.text(((x0 + x1) // 2 + 20, y0 + 40), title, font=ft, anchor="mm", fill=(255, 255, 255, 255))
+    y = y0 + 100
     for k, ls in enumerate(item_lines):
         if k >= n_visible:
             break
-        cy = y + 25
-        d.ellipse([x0 + 30, cy - 26, x0 + 82, cy + 26], fill=(*danger, 255))
-        d.text((x0 + 56, cy), str(k + 1), font=font(32), anchor="mm", fill=(255, 255, 255, 255))
+        cy = y + 22
+        d.ellipse([x0 + 28, cy - 22, x0 + 72, cy + 22], fill=(*danger, 255))
+        d.text((x0 + 50, cy), str(k + 1), font=font(28), anchor="mm", fill=(255, 255, 255, 255))
         for ln in ls:
-            d.text((x0 + 104, y + 25), ln, font=fi, anchor="lm", fill=(255, 255, 255, 255))
-            y += 50
-        y += 34
+            d.text((x0 + 92, y + 22), ln, font=fi, anchor="lm", fill=(255, 255, 255, 255))
+            y += 44
+        y += 24
     if action and show_action:
-        y = y0 + 120 + h_items
-        ay1 = y + len(action_lines) * 48 + 56
-        # màu đặc (pha sẵn) – ImageDraw ghi đè alpha nên không dùng màu bán trong suốt ở đây
+        y = y0 + 100 + h_items
+        ay1 = y + len(action_lines) * 42 + 40
         box_fill = tuple(int(0.28 * c + 0.72 * b) for c, b in zip(safe, (14, 16, 24))) + (255,)
-        d.rounded_rectangle([x0 + 24, y, x1 - 24, ay1], radius=16, fill=box_fill, outline=(*safe, 255), width=3)
-        yy = y + 28
+        d.rounded_rectangle([x0 + 20, y, x1 - 20, ay1], radius=14, fill=box_fill, outline=(*safe, 255), width=2)
+        yy = y + 20
         for ln in action_lines:
-            d.text(((x0 + x1) // 2, yy + 20), ln, font=fa, anchor="mm", fill=(255, 255, 255, 255))
-            yy += 48
+            d.text(((x0 + x1) // 2, yy + 18), ln, font=fa, anchor="mm", fill=(255, 255, 255, 255))
+            yy += 42
     return img, {"type": "red_flags", "title": title, "lines": items + ([action] if action else []),
                  "bbox_px": [x0, y0, x1, y1], "safe_zone_compliant": cv.compliant(x0, y0, x1, y1)}
 
@@ -288,19 +286,19 @@ def plate_red_flags(cv: Canvas, title: str, items: list[str], action: str, n_vis
 def plate_disclaimer(cv: Canvas, header: str, lines: list[str]) -> tuple[Image.Image, dict]:
     img = cv.blank()
     d = ImageDraw.Draw(img)
-    fh, fb = font(24), font(29)
+    fh, fb = font(22), font(26)
     wrapped = [w for ln in lines for w in wrap(d, ln, fb, cv.R - cv.L - 60, 3)]
     x0, x1 = cv.L, cv.R
-    y1 = 1395
-    y0 = y1 - (70 + 44 * len(wrapped))
+    y0 = 210
+    y1 = y0 + (54 + 38 * len(wrapped))
     acc = tuple(cv.pal["accent_rgb"])
-    d.rounded_rectangle([x0, y0, x1, y1], radius=16, fill=(10, 14, 22, 225), outline=(*acc, 210), width=2)
+    d.rounded_rectangle([x0, y0, x1, y1], radius=14, fill=(10, 14, 22, 160), outline=(*acc, 180), width=2)
     cx = (x0 + x1) // 2
-    d.text((cx, y0 + 28), header, font=fh, anchor="mm", fill=(*acc, 255), stroke_width=2, stroke_fill=(0, 0, 0, 240))
-    y = y0 + 64
+    d.text((cx, y0 + 22), header, font=fh, anchor="mm", fill=(*acc, 255), stroke_width=2, stroke_fill=(0, 0, 0, 220))
+    y = y0 + 50
     for ln in wrapped:
-        d.text((cx, y + 4), ln, font=fb, anchor="mm", fill=(245, 247, 250, 255), stroke_width=3, stroke_fill=(0, 0, 0, 245))
-        y += 44
+        d.text((cx, y + 4), ln, font=fb, anchor="mm", fill=(245, 247, 250, 255), stroke_width=3, stroke_fill=(0, 0, 0, 230))
+        y += 38
     return img, {"type": "disclaimer", "text": " ".join(lines), "bbox_px": [x0, y0, x1, y1],
                  "safe_zone_compliant": cv.compliant(x0, y0, x1, y1)}
 
@@ -324,9 +322,55 @@ def camera_frame(src: Image.Image, W: int, H: int, scale: float, fx: float, fy: 
     return src.transform((W, H), Image.Transform.EXTENT, (left, top, left + cw, top + ch), resample=Image.Resampling.BILINEAR)
 
 
+class SceneVideoReader:
+    def __init__(self, vpath: Path, W: int, H: int, fps: int, n_frames: int):
+        self.vpath = vpath
+        self.W, self.H, self.fps, self.n_frames = W, H, fps, max(1, n_frames)
+        self.frame_sz = W * H * 3
+        self._proc = None
+        self._cur_idx = -1
+        self._cur_img = None
+
+    def get_frame(self, idx: int) -> Image.Image:
+        idx = max(0, min(self.n_frames - 1, idx))
+        if idx == self._cur_idx and self._cur_img is not None:
+            return self._cur_img
+        if self._proc is None or idx < self._cur_idx:
+            self.close()
+            self._proc = subprocess.Popen([
+                FFMPEG, "-v", "error", "-i", str(self.vpath),
+                "-vf", f"scale={self.W}:{self.H}:force_original_aspect_ratio=increase,crop={self.W}:{self.H},fps={self.fps}",
+                "-f", "rawvideo", "-pix_fmt", "rgb24", "-"
+            ], stdout=subprocess.PIPE)
+            self._cur_idx = -1
+        while self._cur_idx < idx:
+            buf = self._proc.stdout.read(self.frame_sz)
+            if len(buf) < self.frame_sz:
+                break
+            self._cur_idx += 1
+            if self._cur_idx == idx or self._cur_img is None:
+                self._cur_img = Image.frombytes("RGB", (self.W, self.H), buf)
+        return self._cur_img if self._cur_img is not None else Image.new("RGB", (self.W, self.H))
+
+    def close(self):
+        if self._proc is not None:
+            try:
+                self._proc.stdout.close()
+                self._proc.kill()
+                self._proc.wait()
+            except Exception:
+                pass
+            self._proc = None
+
+
 def scene_frame(sc: dict, t: float, W: int, H: int) -> Image.Image:
     s, e = sc["start"], sc["end"]
     u = smoothstep((max(s, min(e, t)) - s) / max(e - s, 1e-4))
+    if sc.get("_vreader"):
+        vr: SceneVideoReader = sc["_vreader"]
+        lin_u = max(0.0, min(1.0, (t - s) / max(e - s, 1e-4)))
+        v_idx = min(vr.n_frames - 1, max(0, int(round(lin_u * (vr.n_frames - 1)))))
+        return vr.get_frame(v_idx)
     m = sc.get("motion", {})
     s0, s1 = m.get("scale", [1.03, 1.12])
     (fx0, fy0), (fx1, fy1) = m.get("focus", [[0.5, 0.5], [0.5, 0.5]])
@@ -427,6 +471,15 @@ def run(ep: Episode, preview_only: bool = False) -> dict:
     # --- scenes ---
     scenes = []
     for sc in cfg["scenes"]:
+        sc2 = dict(sc)
+        sc2["start"], sc2["end"] = float(sc["start"]), float(sc["end"])
+        vpath = ep.resolve_asset(sc["video"]) if sc.get("video") else None
+        if vpath and vpath.is_file():
+            dur_s = max(0.5, sc2["end"] - sc2["start"])
+            n_vf = max(2, int(round(dur_s * FPS)))
+            sc2["_vreader"] = SceneVideoReader(vpath, W, H, FPS, n_vf)
+            scenes.append(sc2)
+            continue
         p = ep.resolve_asset(sc["image"])
         if not p.is_file():
             raise GateError(f"Thiếu ảnh cảnh: {rel(p)}")
@@ -439,8 +492,6 @@ def run(ep: Episode, preview_only: bool = False) -> dict:
             else:
                 th = int(img.width * H / W)
                 img = img.crop((0, (img.height - th) // 2, img.width, (img.height - th) // 2 + th))
-        sc2 = dict(sc)
-        sc2["start"], sc2["end"] = float(sc["start"]), float(sc["end"])
         sc2["_img"] = img.resize((int(W * 1.3333), int(H * 1.3333)), Image.Resampling.LANCZOS)
         scenes.append(sc2)
     scenes.sort(key=lambda s: s["start"])
@@ -485,7 +536,7 @@ def run(ep: Episode, preview_only: bool = False) -> dict:
         add(im, me, f"chat{i + 1}", cb["start"], cb["end"], 0.15)
 
     for i, co in enumerate(cfg.get("callouts", [])):
-        im, me = plate_callout(cv, co["text"], co.get("style", "danger"), int(co.get("y", 760)))
+        im, me = plate_callout(cv, co["text"], co.get("style", "danger"), int(co.get("y", 185)))
         add(im, me, f"callout{i + 1}", co["start"], co["end"], 0.2)
 
     rf = cfg.get("red_flags")
@@ -565,6 +616,10 @@ def run(ep: Episode, preview_only: bool = False) -> dict:
         if proc.wait() != 0:
             raise GateError(f"FFmpeg lỗi: {err}")
 
+    for sc in scenes:
+        if sc.get("_vreader"):
+            sc["_vreader"].close()
+
     overlays = [{k: v for k, v in ev.items() if k != "image"} for ev in events]
     manifest = {
         "episode_id": ep.id,
@@ -572,7 +627,7 @@ def run(ep: Episode, preview_only: bool = False) -> dict:
         "preview_only": preview_only,
         "canvas": {"width": W, "height": H, "fps": FPS, "total_frames": total_frames, "total_duration_sec": DUR},
         "safe_zone_rules": {**ep.safe, "all_overlays_compliant": all(o.get("safe_zone_compliant", True) for o in overlays)},
-        "scenes": [{k: v for k, v in sc.items() if k != "_img"} for sc in scenes],
+        "scenes": [{k: v for k, v in sc.items() if k not in ("_img", "_vframes", "_vreader")} for sc in scenes],
         "subtitle_srt": rel(ep.srt_path),
         "video_track_noaudio": None if preview_only else rel(out_mp4),
         "channel_branding": brand_meta,

@@ -1,0 +1,776 @@
+{
+  "episode_id": "EP03",
+  "gate": "GATE_4_TIMELINE_SAFE_ZONE",
+  "preview_only": false,
+  "canvas": {
+    "width": 1080,
+    "height": 1920,
+    "fps": 30,
+    "total_frames": 1680,
+    "total_duration_sec": 56.0
+  },
+  "safe_zone_rules": {
+    "left_x": 80,
+    "right_x": 920,
+    "max_y": 1420,
+    "top_hook_y": 170,
+    "platform_ui_bottom_y": 1440,
+    "all_overlays_compliant": true
+  },
+  "scenes": [
+    {
+      "id": "s1_tung_luoi",
+      "image": "assets/scene1.jpg",
+      "video": "assets/scene1.mp4",
+      "start": 0.0,
+      "end": 6.0,
+      "motion": {
+        "scale": [
+          1.05,
+          1.14
+        ],
+        "focus": [
+          [
+            0.5,
+            0.5
+          ],
+          [
+            0.5,
+            0.45
+          ]
+        ],
+        "wobble": "tense"
+      }
+    },
+    {
+      "id": "s2_deepfake",
+      "image": "assets/scene2.jpg",
+      "video": "assets/scene2.mp4",
+      "start": 6.0,
+      "end": 16.8,
+      "motion": {
+        "scale": [
+          1.04,
+          1.15
+        ],
+        "focus": [
+          [
+            0.5,
+            0.52
+          ],
+          [
+            0.5,
+            0.46
+          ]
+        ],
+        "wobble": "handheld"
+      },
+      "transition_in": {
+        "type": "glitch",
+        "dur": 0.3
+      },
+      "shakes": [
+        {
+          "at": 6.2,
+          "amp": 28
+        }
+      ]
+    },
+    {
+      "id": "s3_phan_hoa",
+      "image": "assets/scene3.jpg",
+      "video": "assets/scene3.mp4",
+      "start": 16.8,
+      "end": 29.5,
+      "motion": {
+        "scale": [
+          1.03,
+          1.11
+        ],
+        "focus": [
+          [
+            0.5,
+            0.48
+          ],
+          [
+            0.5,
+            0.52
+          ]
+        ],
+        "wobble": "calm"
+      },
+      "transition_in": {
+        "type": "dissolve",
+        "dur": 0.35
+      }
+    },
+    {
+      "id": "s4_cong_truong",
+      "image": "assets/scene4.jpg",
+      "video": "assets/scene4.mp4",
+      "start": 29.5,
+      "end": 41.9,
+      "motion": {
+        "scale": [
+          1.1,
+          1.03
+        ],
+        "focus": [
+          [
+            0.5,
+            0.48
+          ],
+          [
+            0.5,
+            0.5
+          ]
+        ],
+        "wobble": "calm"
+      },
+      "transition_in": {
+        "type": "flash_white",
+        "dur": 0.25
+      }
+    },
+    {
+      "id": "s5_boc_tran",
+      "image": "assets/scene5.jpg",
+      "video": "assets/scene5.mp4",
+      "start": 41.9,
+      "end": 48.3,
+      "motion": {
+        "scale": [
+          1.03,
+          1.1
+        ],
+        "focus": [
+          [
+            0.5,
+            0.5
+          ],
+          [
+            0.52,
+            0.46
+          ]
+        ],
+        "wobble": "calm"
+      },
+      "transition_in": {
+        "type": "dissolve",
+        "dur": 0.3
+      }
+    },
+    {
+      "id": "s6_ket_luan",
+      "image": "assets/scene6.jpg",
+      "video": "assets/scene6.mp4",
+      "start": 48.3,
+      "end": 56.0,
+      "motion": {
+        "scale": [
+          1.02,
+          1.06
+        ],
+        "focus": [
+          [
+            0.5,
+            0.48
+          ],
+          [
+            0.5,
+            0.48
+          ]
+        ],
+        "wobble": "none"
+      },
+      "transition_in": {
+        "type": "fade_black",
+        "dur": 0.3
+      }
+    }
+  ],
+  "subtitle_srt": "factory/staging/EP03/subtitles/EP03.srt",
+  "video_track_noaudio": "factory/staging/EP03/timeline_video_gate4.mp4",
+  "channel_branding": {
+    "type": "channel_branding",
+    "logo_text": "VCH",
+    "watermark_text": "VẠN CHUYỆN",
+    "safe_zone_compliant": true
+  },
+  "overlays": [
+    {
+      "id": "00_hook",
+      "start_sec": 0.2,
+      "end_sec": 4.2,
+      "fade_sec": 0.3,
+      "png_path": "factory/staging/EP03/overlays/00_hook.png",
+      "type": "text_hook",
+      "text": "GỌI HÀNG LOẠT & VIDEO DEEPFAKE CON LA KHÓC — Nghe tin con cấp cứu kèm video mặt con gào khóc: Đừng vội chuyển tiền khi chưa xác thực!",
+      "bbox_px": [
+        118,
+        170,
+        883,
+        416
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "01_sub_l1",
+      "start_sec": 0.2,
+      "end_sec": 1.741,
+      "fade_sec": 0.1,
+      "png_path": "factory/staging/EP03/overlays/01_sub_l1.png",
+      "type": "subtitle",
+      "lines": [
+        "Alo phụ huynh lớp Hai A hả?"
+      ],
+      "bbox_px": [
+        189,
+        1324,
+        811,
+        1380
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "02_sub_l1",
+      "start_sec": 1.741,
+      "end_sec": 5.792,
+      "fade_sec": 0.1,
+      "png_path": "factory/staging/EP03/overlays/02_sub_l1.png",
+      "type": "subtitle",
+      "lines": [
+        "Cháu ngã cầu thang chấn thương",
+        "nặng, chuyển gấp hai mươi triệu mổ",
+        "ngay!"
+      ],
+      "bbox_px": [
+        108,
+        1212,
+        893,
+        1380
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "03_sub_l2",
+      "start_sec": 6.0,
+      "end_sec": 6.85,
+      "fade_sec": 0.1,
+      "png_path": "factory/staging/EP03/overlays/03_sub_l2.png",
+      "type": "subtitle",
+      "lines": [
+        "Trời đất ơi!"
+      ],
+      "bbox_px": [
+        369,
+        1324,
+        632,
+        1380
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "04_sub_l2",
+      "start_sec": 6.85,
+      "end_sec": 10.606,
+      "fade_sec": 0.1,
+      "png_path": "factory/staging/EP03/overlays/04_sub_l2.png",
+      "type": "subtitle",
+      "lines": [
+        "Trong video đúng mặt bé Tom đang",
+        "la khóc đau đớn kìa!"
+      ],
+      "bbox_px": [
+        109,
+        1268,
+        891,
+        1380
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "05_sub_l2",
+      "start_sec": 10.606,
+      "end_sec": 11.74,
+      "fade_sec": 0.1,
+      "png_path": "factory/staging/EP03/overlays/05_sub_l2.png",
+      "type": "subtitle",
+      "lines": [
+        "Cứu con tôi với!"
+      ],
+      "bbox_px": [
+        320,
+        1324,
+        680,
+        1380
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "06_sub_l3",
+      "start_sec": 11.9,
+      "end_sec": 13.345,
+      "fade_sec": 0.1,
+      "png_path": "factory/staging/EP03/overlays/06_sub_l3.png",
+      "type": "subtitle",
+      "lines": [
+        "Đẩy cháu vô phòng mổ rồi!"
+      ],
+      "bbox_px": [
+        204,
+        1324,
+        796,
+        1380
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "07_sub_l3",
+      "start_sec": 13.345,
+      "end_sec": 16.64,
+      "fade_sec": 0.1,
+      "png_path": "factory/staging/EP03/overlays/07_sub_l3.png",
+      "type": "subtitle",
+      "lines": [
+        "Chuyển khoản ngay lập tức đi, chậm",
+        "một phút là không kịp!"
+      ],
+      "bbox_px": [
+        109,
+        1268,
+        892,
+        1380
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "08_sub_l4",
+      "start_sec": 16.9,
+      "end_sec": 19.869,
+      "fade_sec": 0.1,
+      "png_path": "factory/staging/EP03/overlays/08_sub_l4.png",
+      "type": "subtitle",
+      "lines": [
+        "Con ơi ráng lên, mẹ chuyển tiền ngay",
+        "đây!"
+      ],
+      "bbox_px": [
+        98,
+        1268,
+        902,
+        1380
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "09_sub_l4",
+      "start_sec": 19.869,
+      "end_sec": 20.231,
+      "fade_sec": 0.1,
+      "png_path": "factory/staging/EP03/overlays/09_sub_l4.png",
+      "type": "subtitle",
+      "lines": [
+        "Ủa..."
+      ],
+      "bbox_px": [
+        439,
+        1324,
+        561,
+        1380
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "10_sub_l4",
+      "start_sec": 20.231,
+      "end_sec": 23.2,
+      "fade_sec": 0.1,
+      "png_path": "factory/staging/EP03/overlays/10_sub_l4.png",
+      "type": "subtitle",
+      "lines": [
+        "sao vừa chuyển xong gọi lại đã khóa",
+        "máy?!"
+      ],
+      "bbox_px": [
+        107,
+        1268,
+        893,
+        1380
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "11_sub_l5",
+      "start_sec": 23.4,
+      "end_sec": 26.66,
+      "fade_sec": 0.1,
+      "png_path": "factory/staging/EP03/overlays/11_sub_l5.png",
+      "type": "subtitle",
+      "lines": [
+        "Khoan đã, video gì mà nhòe nhoẹt giả",
+        "tạo quá!"
+      ],
+      "bbox_px": [
+        91,
+        1268,
+        910,
+        1380
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "12_sub_l5",
+      "start_sec": 26.66,
+      "end_sec": 29.34,
+      "fade_sec": 0.1,
+      "png_path": "factory/staging/EP03/overlays/12_sub_l5.png",
+      "type": "subtitle",
+      "lines": [
+        "Để gọi cô chủ nhiệm hỏi lại cho chắc!"
+      ],
+      "bbox_px": [
+        102,
+        1324,
+        899,
+        1380
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "13_sub_l6",
+      "start_sec": 29.6,
+      "end_sec": 33.321,
+      "fade_sec": 0.1,
+      "png_path": "factory/staging/EP03/overlays/13_sub_l6.png",
+      "type": "subtitle",
+      "lines": [
+        "Chị Tư ơi, thấy con lành lặn chạy ra",
+        "mà tôi rụng rời!"
+      ],
+      "bbox_px": [
+        122,
+        1268,
+        879,
+        1380
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "14_sub_l6",
+      "start_sec": 33.321,
+      "end_sec": 36.34,
+      "fade_sec": 0.1,
+      "png_path": "factory/staging/EP03/overlays/14_sub_l6.png",
+      "type": "subtitle",
+      "lines": [
+        "Trưa nay tôi chuyển mất hai mươi",
+        "triệu rồi!"
+      ],
+      "bbox_px": [
+        133,
+        1268,
+        867,
+        1380
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "15_sub_l7",
+      "start_sec": 36.5,
+      "end_sec": 41.68,
+      "fade_sec": 0.1,
+      "png_path": "factory/staging/EP03/overlays/15_sub_l7.png",
+      "type": "subtitle",
+      "lines": [
+        "Trưa nay mấy chục phụ huynh lớp",
+        "mình đều bị gọi cùng một kịch bản",
+        "cấp cứu đó chị!"
+      ],
+      "bbox_px": [
+        123,
+        1212,
+        878,
+        1380
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "16_sub_l8",
+      "start_sec": 42.0,
+      "end_sec": 48.02,
+      "fade_sec": 0.1,
+      "png_path": "factory/staging/EP03/overlays/16_sub_l8.png",
+      "type": "subtitle",
+      "lines": [
+        "Tụi nó gom ảnh giấy khen trên mạng,",
+        "rồi dùng công nghệ cao ghép mặt giả",
+        "cảnh con la khóc đó!"
+      ],
+      "bbox_px": [
+        95,
+        1212,
+        906,
+        1380
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "17_sub_l9",
+      "start_sec": 48.5,
+      "end_sec": 50.284,
+      "fade_sec": 0.1,
+      "png_path": "factory/staging/EP03/overlays/17_sub_l9.png",
+      "type": "subtitle",
+      "lines": [
+        "Thôi con bình an là may rồi!"
+      ],
+      "bbox_px": [
+        195,
+        1324,
+        805,
+        1380
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "18_sub_l9",
+      "start_sec": 50.284,
+      "end_sec": 55.0,
+      "fade_sec": 0.1,
+      "png_path": "factory/staging/EP03/overlays/18_sub_l9.png",
+      "type": "subtitle",
+      "lines": [
+        "Đừng đưa thông tin con lên mạng,",
+        "chưa kiểm chứng thì đừng chuyển",
+        "tiền nha!"
+      ],
+      "bbox_px": [
+        126,
+        1212,
+        874,
+        1380
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "19_callout1",
+      "start_sec": 4.35,
+      "end_sec": 5.9,
+      "fade_sec": 0.2,
+      "png_path": "factory/staging/EP03/overlays/19_callout1.png",
+      "type": "callout",
+      "style": "danger",
+      "text": "Hàng loạt phụ huynh hoảng loạn vì cùng 1 kịch bản cấp cứu!",
+      "bbox_px": [
+        95,
+        157,
+        906,
+        263
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "20_callout2",
+      "start_sec": 11.9,
+      "end_sec": 16.5,
+      "fade_sec": 0.2,
+      "png_path": "factory/staging/EP03/overlays/20_callout2.png",
+      "type": "callout",
+      "style": "danger",
+      "text": "Video Deepfake AI bị nhiễu vỡ nét mặt khi con vươn tay!",
+      "bbox_px": [
+        100,
+        157,
+        900,
+        263
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "21_callout3",
+      "start_sec": 20.2,
+      "end_sec": 29.0,
+      "fade_sec": 0.2,
+      "png_path": "factory/staging/EP03/overlays/21_callout3.png",
+      "type": "callout",
+      "style": "warn",
+      "text": "Chuyển xong 20 triệu -> Khóa máy! | Gọi cô giáo -> An toàn!",
+      "bbox_px": [
+        120,
+        157,
+        880,
+        263
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "22_callout4",
+      "start_sec": 42.2,
+      "end_sec": 48.0,
+      "fade_sec": 0.2,
+      "png_path": "factory/staging/EP03/overlays/22_callout4.png",
+      "type": "callout",
+      "style": "danger",
+      "text": "Lấy ảnh giấy khen trên mạng -> Ghép mặt AI giả cảnh cấp cứu!",
+      "bbox_px": [
+        112,
+        157,
+        888,
+        263
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "23_redflags_0",
+      "start_sec": 51.0,
+      "end_sec": 51.4,
+      "fade_sec": 0.25,
+      "png_path": "factory/staging/EP03/overlays/23_redflags_0.png",
+      "type": "red_flags",
+      "title": "NHỚ KỸ",
+      "lines": [
+        "Gọi hàng loạt phụ huynh cùng một kịch bản báo con ngã cấp cứu",
+        "Nhá video Deepfake ghép mặt con la khóc từ ảnh giấy khen đăng trên mạng",
+        "Hối chuyển tiền tạm ứng gấp, không cho thời gian kiểm chứng",
+        "Đừng đăng thông tin con lên mạng; chưa gọi cô chủ nhiệm xác thực thì tuyệt đối không chuyển tiền!"
+      ],
+      "bbox_px": [
+        80,
+        420,
+        920,
+        1056
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "24_redflags_1",
+      "start_sec": 51.4,
+      "end_sec": 51.8,
+      "fade_sec": 0.0,
+      "png_path": "factory/staging/EP03/overlays/24_redflags_1.png",
+      "type": "red_flags",
+      "title": "NHỚ KỸ",
+      "lines": [
+        "Gọi hàng loạt phụ huynh cùng một kịch bản báo con ngã cấp cứu",
+        "Nhá video Deepfake ghép mặt con la khóc từ ảnh giấy khen đăng trên mạng",
+        "Hối chuyển tiền tạm ứng gấp, không cho thời gian kiểm chứng",
+        "Đừng đăng thông tin con lên mạng; chưa gọi cô chủ nhiệm xác thực thì tuyệt đối không chuyển tiền!"
+      ],
+      "bbox_px": [
+        80,
+        420,
+        920,
+        1056
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "25_redflags_2",
+      "start_sec": 51.8,
+      "end_sec": 52.2,
+      "fade_sec": 0.0,
+      "png_path": "factory/staging/EP03/overlays/25_redflags_2.png",
+      "type": "red_flags",
+      "title": "NHỚ KỸ",
+      "lines": [
+        "Gọi hàng loạt phụ huynh cùng một kịch bản báo con ngã cấp cứu",
+        "Nhá video Deepfake ghép mặt con la khóc từ ảnh giấy khen đăng trên mạng",
+        "Hối chuyển tiền tạm ứng gấp, không cho thời gian kiểm chứng",
+        "Đừng đăng thông tin con lên mạng; chưa gọi cô chủ nhiệm xác thực thì tuyệt đối không chuyển tiền!"
+      ],
+      "bbox_px": [
+        80,
+        420,
+        920,
+        1056
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "26_redflags_3",
+      "start_sec": 52.2,
+      "end_sec": 53.5,
+      "fade_sec": 0.0,
+      "png_path": "factory/staging/EP03/overlays/26_redflags_3.png",
+      "type": "red_flags",
+      "title": "NHỚ KỸ",
+      "lines": [
+        "Gọi hàng loạt phụ huynh cùng một kịch bản báo con ngã cấp cứu",
+        "Nhá video Deepfake ghép mặt con la khóc từ ảnh giấy khen đăng trên mạng",
+        "Hối chuyển tiền tạm ứng gấp, không cho thời gian kiểm chứng",
+        "Đừng đăng thông tin con lên mạng; chưa gọi cô chủ nhiệm xác thực thì tuyệt đối không chuyển tiền!"
+      ],
+      "bbox_px": [
+        80,
+        420,
+        920,
+        1056
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "27_disclaimer",
+      "start_sec": 53.5,
+      "end_sec": 56.0,
+      "fade_sec": 0.25,
+      "png_path": "factory/staging/EP03/overlays/27_disclaimer.png",
+      "type": "disclaimer",
+      "text": "Tình huống được dựng lại để cảnh báo. Nhân vật, tên, số liệu đều là hư cấu.",
+      "bbox_px": [
+        80,
+        210,
+        920,
+        340
+      ],
+      "safe_zone_compliant": true
+    }
+  ],
+  "qa_preview_frames": [
+    {
+      "timestamp_sec": 1.2,
+      "clean": "factory/staging/EP03/preview_frames/qa_01_20s_clean.jpg",
+      "safezone": "factory/staging/EP03/preview_frames/qa_01_20s_safezone.jpg"
+    },
+    {
+      "timestamp_sec": 3.0,
+      "clean": "factory/staging/EP03/preview_frames/qa_03_00s_clean.jpg",
+      "safezone": "factory/staging/EP03/preview_frames/qa_03_00s_safezone.jpg"
+    },
+    {
+      "timestamp_sec": 11.4,
+      "clean": "factory/staging/EP03/preview_frames/qa_11_40s_clean.jpg",
+      "safezone": "factory/staging/EP03/preview_frames/qa_11_40s_safezone.jpg"
+    },
+    {
+      "timestamp_sec": 23.15,
+      "clean": "factory/staging/EP03/preview_frames/qa_23_15s_clean.jpg",
+      "safezone": "factory/staging/EP03/preview_frames/qa_23_15s_safezone.jpg"
+    },
+    {
+      "timestamp_sec": 35.7,
+      "clean": "factory/staging/EP03/preview_frames/qa_35_70s_clean.jpg",
+      "safezone": "factory/staging/EP03/preview_frames/qa_35_70s_safezone.jpg"
+    },
+    {
+      "timestamp_sec": 45.1,
+      "clean": "factory/staging/EP03/preview_frames/qa_45_10s_clean.jpg",
+      "safezone": "factory/staging/EP03/preview_frames/qa_45_10s_safezone.jpg"
+    },
+    {
+      "timestamp_sec": 52.15,
+      "clean": "factory/staging/EP03/preview_frames/qa_52_15s_clean.jpg",
+      "safezone": "factory/staging/EP03/preview_frames/qa_52_15s_safezone.jpg"
+    },
+    {
+      "timestamp_sec": 53.0,
+      "clean": "factory/staging/EP03/preview_frames/qa_53_00s_clean.jpg",
+      "safezone": "factory/staging/EP03/preview_frames/qa_53_00s_safezone.jpg"
+    },
+    {
+      "timestamp_sec": 54.75,
+      "clean": "factory/staging/EP03/preview_frames/qa_54_75s_clean.jpg",
+      "safezone": "factory/staging/EP03/preview_frames/qa_54_75s_safezone.jpg"
+    }
+  ]
+}

@@ -344,6 +344,34 @@ def fx_call_end(dur: float = 1.6, seed: int = 33) -> np.ndarray:
     return normalize_to_dbfs(fade_in_out(stereo_pan(sig, 0.0), 0.005, 0.02), -10.0)
 
 
+def fx_whistle(dur: float = 1.6, seed: int = 34) -> np.ndarray:
+    """Còi bảo vệ (còi bi): 2 hồi tuýt ngắn có rung bi."""
+    rng = np.random.default_rng(seed)
+    n = int(SR * dur)
+    t = _t(n)
+    out = np.zeros(n)
+    for s0, ln in [(0.02, 0.35), (0.5, 0.9)]:
+        m = (t >= s0) & (t < s0 + ln)
+        tt = t[m] - s0
+        trill = 1.0 + 0.04 * np.sign(np.sin(2 * np.pi * 28 * tt))
+        env = np.minimum(1.0, tt / 0.02) * np.minimum(1.0, (ln - tt) / 0.05)
+        out[m] = np.sin(2 * np.pi * np.cumsum(2900 * trill) / SR) * env * 0.7
+    out += fft_bandpass(rng.standard_normal(n), 2500, 6000) * (np.abs(out) > 0.01) * 0.12
+    st = add_reverb(stereo_pan(out, 0.15), 0.25, 0.9, seed)
+    return normalize_to_dbfs(st, -7.0)
+
+
+def fx_school_bell(dur: float = 3.0, seed: int = 35) -> np.ndarray:
+    """Trống/chuông tan trường xa xa (3 tiếng ngân)."""
+    rng = np.random.default_rng(seed)
+    out = np.zeros(int(SR * dur))
+    for c in [0.0, 0.7, 1.4]:
+        b = _bell(880.0, dur - c, rng, 0.8) * 0.5
+        idx = int(c * SR)
+        out[idx: idx + len(b)] += b[: len(out) - idx]
+    return normalize_to_dbfs(add_reverb(stereo_pan(out, -0.3), 0.45, 1.6, seed), -10.0)
+
+
 # ============================================================================
 # LAYER 3 – BGM (nhạc nền)
 # ============================================================================
@@ -405,6 +433,50 @@ def bgm_suspense_pulse(dur: float, seed: int = 42, bpm: float = 110.0) -> np.nda
     return normalize_to_dbfs(fade_in_out(out, 0.5, 1.0), -15.0)
 
 
+def bgm_action_climax(dur: float, seed: int = 44, bpm: float = 136.0) -> np.ndarray:
+    """Nhạc cao trào kịch tính & bứt phá (A minor -> C major): trống hành động dồn dập + bass staccato + brass/synth stabs gây bất ngờ."""
+    rng = np.random.default_rng(seed)
+    n = int(SR * dur)
+    t = _t(n)
+    out = np.zeros((n, 2))
+    beat = 60.0 / bpm
+    # Kick + Snare + Hi-hat dồn dập
+    for k, c in enumerate(np.arange(0.0, dur - 0.15, beat / 2)):
+        idx = int(c * SR)
+        if k % 2 == 0:
+            # Kick + Sub punch
+            ln = int(0.28 * SR)
+            tt = _t(ln)
+            kick = np.sin(2 * np.pi * np.cumsum(52 + 95 * np.exp(-tt * 28)) / SR) * np.exp(-tt * 9) * 0.95
+            out[idx: idx + ln] += stereo_pan(kick[: n - idx], 0.0)
+        else:
+            # Snare / clap sắc ở nhịp lẻ
+            ln = int(0.18 * SR)
+            tt = _t(ln)
+            sn = (fft_bandpass(pink_noise(ln, rng), 400, 6500) * np.exp(-tt * 24) * 0.65
+                  + np.sin(2 * np.pi * 185 * tt) * np.exp(-tt * 30) * 0.4)
+            out[idx: idx + ln] += stereo_pan(sn[: n - idx], 0.08 if (k // 2) % 2 else -0.08)
+        # 16th hi-hat
+        for sub in (0.0, beat / 4):
+            hidx = int((c + sub) * SR)
+            hln = int(0.04 * SR)
+            if hidx + hln < n:
+                hh = fft_bandpass(rng.standard_normal(hln), 5000, 12000) * np.exp(-_t(hln) * 140) * 0.25
+                out[hidx: hidx + hln] += stereo_pan(hh, 0.25)
+    # Synth brass / stabs tạo cảm giác cú lật ngược tình thế (plot twist)
+    prog = [220.0, 261.63, 293.66, 329.63]
+    for k, c in enumerate(np.arange(0.0, dur - 0.4, beat * 2)):
+        idx = int(c * SR)
+        ln = int(min(0.65, dur - c) * SR)
+        tt = _t(ln)
+        f0 = prog[k % len(prog)]
+        stab = (np.tanh((np.sin(2 * np.pi * f0 * tt) + 0.6 * np.sin(2 * np.pi * f0 * 1.5 * tt)
+                         + 0.4 * np.sin(2 * np.pi * f0 * 2.0 * tt)) * 1.8)
+                * np.exp(-tt * 4.5) * 0.45)
+        out[idx: idx + ln] += add_reverb(stereo_pan(stab, -0.15 if k % 2 else 0.15), 0.25, 0.7, seed + k)
+    return normalize_to_dbfs(fade_in_out(out, 0.05, 0.8), -12.0)
+
+
 def bgm_warm_outro(dur: float, seed: int = 43) -> np.ndarray:
     """Nhạc ấm, sáng (C major) cho phần 'Dấu hiệu nhận biết' – cảm giác an toàn, được bảo vệ."""
     rng = np.random.default_rng(seed)
@@ -449,20 +521,24 @@ FOLEY: dict[str, Callable[..., np.ndarray]] = {
     "riser": fx_riser,
     "glitch": fx_glitch,
     "call_end": fx_call_end,
+    "whistle": fx_whistle,
+    "school_bell": fx_school_bell,
 }
 
 BGM: dict[str, Callable[..., np.ndarray]] = {
     "tension_drone": bgm_tension_drone,
     "suspense_pulse": bgm_suspense_pulse,
+    "action_climax": bgm_action_climax,
     "warm_outro": bgm_warm_outro,
 }
 
 FOLEY_DEFAULT_DUR = {
     "phone_ring": 4.0, "phone_vibrate": 2.4, "notification": 0.8, "bank_ting": 1.4, "message_send": 0.5,
     "typing": 2.0, "door_knock": 1.2, "footsteps": 2.0, "heartbeat": 4.0, "impact": 2.0, "riser": 3.0,
-    "glitch": 0.9, "call_end": 1.6,
+    "glitch": 0.9, "call_end": 1.6, "whistle": 1.6, "school_bell": 3.0,
 }
 
 
 def list_presets() -> dict[str, list[str]]:
     return {"ambience": sorted(AMBIENCE), "foley": sorted(FOLEY), "bgm": sorted(BGM)}
+

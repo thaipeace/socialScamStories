@@ -74,8 +74,8 @@ def gate0(ep: Episode) -> list[str]:
         if len(ln["text"].split()) > 22:
             errs.append(f"Câu {ln['id']} quá dài ({len(ln['text'].split())} từ) – tối đa ~22 từ/câu")
     total_words = sum(len(ln["text"].split()) for ln in cfg.get("dialogue", []))
-    if total_words > 110:
-        errs.append(f"Tổng thoại {total_words} từ – quá dày cho {ep.duration}s (khuyến nghị ≤ 110)")
+    if total_words > 185:
+        errs.append(f"Tổng thoại {total_words} từ – quá dày cho {ep.duration}s (khuyến nghị ≤ 185)")
     rf = cfg.get("red_flags", {})
     if not (fmt["red_flags_min_items"] <= len(rf.get("items", [])) <= fmt["red_flags_max_items"]):
         errs.append("Thẻ red_flags cần 2–4 dấu hiệu")

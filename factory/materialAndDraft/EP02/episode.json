@@ -1,0 +1,436 @@
+{
+  "episode_id": "EP02",
+  "slug": "BayPhongVanHackMay",
+  "title": "Bẫy phỏng vấn việc lương 90 đô một giờ chiếm quyền máy tính",
+  "version": "v7",
+  "scam_family": "ON-21",
+  "duration_sec": 56.0,
+  "hook": {
+    "kicker": "BẪY PHỎNG VẤN 90 ĐÔ MỘT GIỜ",
+    "title": "Đang cần việc gặp lời mời 90 đô/giờ, quét virus báo sạch… suýt bấm chuột mất trắng!",
+    "start": 0.3,
+    "end": 4.2
+  },
+  "scenes": [
+    {
+      "id": "s1_hook",
+      "image": "assets/scene1.jpg",
+      "video": "assets/scene1.mp4",
+      "start": 0.0,
+      "end": 5.0,
+      "motion": {
+        "scale": [
+          1.06,
+          1.15
+        ],
+        "focus": [
+          [
+            0.5,
+            0.5
+          ],
+          [
+            0.5,
+            0.46
+          ]
+        ],
+        "wobble": "tense"
+      }
+    },
+    {
+      "id": "s2_moi_nhu",
+      "image": "assets/scene2.jpg",
+      "video": "assets/scene2.mp4",
+      "start": 5.0,
+      "end": 18.0,
+      "motion": {
+        "scale": [
+          1.03,
+          1.12
+        ],
+        "focus": [
+          [
+            0.5,
+            0.5
+          ],
+          [
+            0.46,
+            0.44
+          ]
+        ],
+        "wobble": "calm"
+      },
+      "transition_in": {
+        "type": "dissolve",
+        "dur": 0.3
+      }
+    },
+    {
+      "id": "s3_leo_thang",
+      "image": "assets/scene3.jpg",
+      "video": "assets/scene3.mp4",
+      "start": 18.0,
+      "end": 34.0,
+      "motion": {
+        "scale": [
+          1.04,
+          1.15
+        ],
+        "focus": [
+          [
+            0.5,
+            0.48
+          ],
+          [
+            0.5,
+            0.42
+          ]
+        ],
+        "wobble": "handheld"
+      },
+      "transition_in": {
+        "type": "dissolve",
+        "dur": 0.35
+      }
+    },
+    {
+      "id": "s4_cu_chot",
+      "image": "assets/scene4.jpg",
+      "video": "assets/scene4.mp4",
+      "start": 34.0,
+      "end": 44.0,
+      "motion": {
+        "scale": [
+          1.14,
+          1.04
+        ],
+        "focus": [
+          [
+            0.52,
+            0.46
+          ],
+          [
+            0.5,
+            0.5
+          ]
+        ],
+        "wobble": "handheld"
+      },
+      "transition_in": {
+        "type": "flash_white",
+        "dur": 0.25
+      },
+      "shakes": [
+        {
+          "at": 34.2,
+          "amp": 32
+        }
+      ]
+    },
+    {
+      "id": "s5_boc_tran",
+      "image": "assets/scene5.jpg",
+      "video": "assets/scene5.mp4",
+      "start": 44.0,
+      "end": 51.0,
+      "motion": {
+        "scale": [
+          1.02,
+          1.09
+        ],
+        "focus": [
+          [
+            0.5,
+            0.5
+          ],
+          [
+            0.5,
+            0.45
+          ]
+        ],
+        "wobble": "calm"
+      },
+      "transition_in": {
+        "type": "glitch",
+        "dur": 0.35
+      }
+    },
+    {
+      "id": "s6_dau_hieu",
+      "image": "assets/scene6.jpg",
+      "video": "assets/scene6.mp4",
+      "start": 51.0,
+      "end": 56.0,
+      "motion": {
+        "scale": [
+          1.03,
+          1.07
+        ],
+        "focus": [
+          [
+            0.5,
+            0.5
+          ],
+          [
+            0.5,
+            0.5
+          ]
+        ],
+        "wobble": "none"
+      },
+      "transition_in": {
+        "type": "fade_black",
+        "dur": 0.35
+      }
+    }
+  ],
+  "dialogue": [
+    {
+      "id": "l1",
+      "speaker": "ke_ngot_ngao_nu",
+      "af": "phone",
+      "start": 0.4,
+      "window": 4.9,
+      "text": "Việc 90 đô một giờ nè! Tải bài kiểm tra mở liền nha!"
+    },
+    {
+      "id": "l2",
+      "speaker": "anh_hai",
+      "start": 5.5,
+      "window": 5.4,
+      "text": "Đang thất nghiệp rất cần việc... tự quét phần mềm cũng báo sạch rồi."
+    },
+    {
+      "id": "l3",
+      "speaker": "ke_ngot_ngao_nu",
+      "af": "phone",
+      "start": 11.4,
+      "window": 5.8,
+      "text": "Lương 90 đô một giờ đó! Chia sẻ màn hình chạy liền đi!"
+    },
+    {
+      "id": "l4",
+      "speaker": "anh_hai",
+      "start": 18.2,
+      "window": 6.6,
+      "text": "Khoan, lương cao bất thường quá! Nhờ AI chỉ đọc code chứ không chạy là an toàn!"
+    },
+    {
+      "id": "l5",
+      "speaker": "ke_ngot_ngao_nu",
+      "af": "phone",
+      "start": 25.2,
+      "window": 5.6,
+      "text": "Bấm nút chạy thôi mà hẹn mai! Không mở liền là hủy phỏng vấn nha!"
+    },
+    {
+      "id": "l6",
+      "speaker": "anh_hai",
+      "start": 34.2,
+      "window": 5.25,
+      "text": "Hú hồn! Nhờ AI đọc thư mục ẩn mới thấy lệnh ngầm cướp mật khẩu!"
+    },
+    {
+      "id": "l7",
+      "speaker": "ke_ngot_ngao_nu",
+      "af": "phone",
+      "start": 39.6,
+      "window": 4.3,
+      "text": "Alo! Sao tắt màn hình, bấm chạy bài kiểm tra!"
+    },
+    {
+      "id": "l8",
+      "speaker": "nguoi_boc_tran",
+      "start": 44.5,
+      "window": 6.3,
+      "text": "Gặp mồi lương cao bất thường, hãy nhờ AI chỉ đọc code chứ đừng chạy!",
+      "subtitle": [
+        "Gặp mồi lương cao bất thường, hãy nhờ AI chỉ đọc code",
+        "(không chạy code) để phát hiện lệnh ngầm an toàn!"
+      ]
+    }
+  ],
+  "chat_bubbles": [],
+  "callouts": [
+    {
+      "text": "Quét ngoài báo sạch -> HR hối chia sẻ màn hình & bấm chạy ngay!",
+      "style": "warn",
+      "y": 210,
+      "start": 11.4,
+      "end": 17.5
+    },
+    {
+      "text": "Dừng tay kịp lúc: Nhờ AI chỉ đọc code (không chạy code)!",
+      "style": "safe",
+      "y": 210,
+      "start": 18.4,
+      "end": 24.8
+    },
+    {
+      "text": "Xin kiểm tra kỹ -> HR lập tức cáu gắt, dọa hủy phỏng vấn!",
+      "style": "danger",
+      "y": 210,
+      "start": 25.3,
+      "end": 33.5
+    },
+    {
+      "text": "Thư mục ẩn chứa lệnh ngầm chờ cướp sạch mật khẩu & ví!",
+      "style": "danger",
+      "y": 210,
+      "start": 34.3,
+      "end": 43.5
+    }
+  ],
+  "red_flags": {
+    "start": 51.0,
+    "end": 53.5,
+    "stagger_sec": 0.4,
+    "title": "NHỚ KỸ",
+    "items": [
+      "Hứa trả thù lao cao bất thường (90 đô/giờ) đánh vào tâm lý đang cần việc gấp",
+      "Tệp bài test quét ngoài báo sạch nhưng HR ép chia sẻ màn hình, hối bấm chạy ngay"
+    ],
+    "action": "Đừng bấm chạy ngay! Hãy nhờ AI chỉ đọc kiểm tra mã nguồn (không chạy code) để an toàn!"
+  },
+  "disclaimer": {
+    "start": 53.5,
+    "end": 56.0
+  },
+  "audio": {
+    "ambience": [
+      {
+        "preset": "office",
+        "start": 0.0,
+        "end": 56.0,
+        "gain_db": -3.0
+      }
+    ],
+    "foley": [
+      {
+        "preset": "notification",
+        "at": 0.4,
+        "gain_db": -1.5
+      },
+      {
+        "preset": "message_send",
+        "at": 2.3,
+        "gain_db": 0.0
+      },
+      {
+        "preset": "typing",
+        "at": 6.0,
+        "dur": 2.2,
+        "gain_db": -2.0
+      },
+      {
+        "preset": "notification",
+        "at": 11.4,
+        "gain_db": 0.5
+      },
+      {
+        "preset": "heartbeat",
+        "at": 18.2,
+        "dur": 12.0,
+        "gain_db": 0.5
+      },
+      {
+        "preset": "impact",
+        "at": 25.2,
+        "dur": 1.3,
+        "gain_db": 2.0
+      },
+      {
+        "preset": "riser",
+        "at": 31.2,
+        "dur": 2.9,
+        "gain_db": 2.5
+      },
+      {
+        "preset": "impact",
+        "at": 34.1,
+        "dur": 2.2,
+        "gain_db": 3.5
+      },
+      {
+        "preset": "glitch",
+        "at": 34.4,
+        "gain_db": 1.5
+      },
+      {
+        "preset": "call_end",
+        "at": 39.6,
+        "dur": 1.5,
+        "gain_db": 1.5
+      },
+      {
+        "preset": "glitch",
+        "at": 44.0,
+        "gain_db": 0.0
+      },
+      {
+        "preset": "bank_ting",
+        "at": 47.5,
+        "gain_db": 0.5
+      }
+    ],
+    "bgm": [
+      {
+        "preset": "suspense_pulse",
+        "start": 0.0,
+        "end": 18.0
+      },
+      {
+        "preset": "tension_drone",
+        "start": 18.0,
+        "end": 34.0,
+        "gain_db": 2.0
+      },
+      {
+        "preset": "action_climax",
+        "start": 34.0,
+        "end": 48.0,
+        "gain_db": 3.0
+      },
+      {
+        "preset": "warm_outro",
+        "start": 48.0,
+        "end": 56.0
+      }
+    ],
+    "duck_extra": [
+      {
+        "start": 33.7,
+        "end": 34.1,
+        "bgm_db": -14,
+        "amb_db": -10
+      }
+    ]
+  },
+  "forbidden_terms": [],
+  "publish": {
+    "titles": [
+      "Lời mời làm việc 90 đô/giờ và dòng lệnh ngầm trước cú click chuột! #shorts #bẫyphỏngvấnonline",
+      "Tại sao HR hứa trả 90 đô/giờ lại hối chia sẻ màn hình và ép chạy bài test? #shorts #bẫyphỏngvấnonline",
+      "Đấu trí 1-1 với HR giả mạo và dòng lệnh ngầm giấu trong thư mục ẩn! #shorts #cảnhgiáclừađảo"
+    ],
+    "description": "Đang lúc thất nghiệp rất cần việc làm, một lập trình viên nhận được cuộc gọi phỏng vấn ban ngày với mức đãi ngộ cực hời: 90 đô một giờ! Nhà tuyển dụng (HR) gửi thư mục bài kiểm tra về máy. Chủ động quét phần mềm diệt virus thấy báo sạch bóng, lại bị HR liên tục hối thúc chia sẻ màn hình và bấm chạy ngay kẻo mất cơ hội, ngón tay anh đã đặt lên chuột chực bấm...\n\nĐúng khoảnh khắc đắn đo đó, một ý nghĩ chợt lóe lên khi anh nhìn lại con số 90 đô/giờ quá bất thường: phải nhờ AI đọc kiểm tra kỹ mã nguồn một lần nữa, vì nhờ AI chỉ đọc code chứ không chạy code thì hoàn toàn an toàn! Khi anh dừng tay lại, HR lập tức lộ mặt cáu gắt. Nhờ AI quét đọc thư mục cấu hình ẩn, anh phát hiện dòng lệnh ngầm chờ sẵn để cướp sạch mật khẩu và tiền tiết kiệm ngay khi bấm chạy!\n\n⏱️ Bố cục tình huống:\n00:00 Lời mời phỏng vấn ban ngày với mức lương 90 đô/giờ\n00:05 Đang cần việc gấp, tự quét virus báo sạch & sự nao núng khi bị HR hối thúc\n00:18 Đắn đo trước cú click chuột & ý nghĩ lóe lên: nhờ AI chỉ đọc code chứ không chạy code\n00:34 Nhờ AI đọc thư mục ẩn phát hiện lệnh ngầm cướp sạch mật khẩu máy tính!\n00:51 2 dấu hiệu nhận biết & nguyên tắc tự bảo vệ khi phỏng vấn online\n\n⚠️ 2 dấu hiệu cảnh giác:\n1. Hứa hẹn mức thù lao cao bất thường (90 đô/giờ) đánh trúng tâm lý đang cần việc gấp\n2. Dù quét ngoài báo sạch nhưng HR liên tục hối chia sẻ màn hình, ép bấm chạy ngay và cáu gắt khi bạn xin kiểm tra kỹ\n\n✅ Quy tắc vàng: Thấy mức lương cao bất thường kèm hối mở tệp ngay trong cuộc gọi phải dừng tay lại, nhờ AI chỉ đọc kiểm tra mã nguồn (không chạy code) để phát hiện lệnh ngầm an toàn!",
+    "pinned_comment": "📌 Trải nghiệm thực tế 100%: Giữa lúc đang rất cần việc, quét virus báo sạch mà đầu dây bên kia cứ giục bấm chạy với mức lương 90 đô/giờ rất dễ khiến chúng ta nao núng. Chính ý nghĩ lóe lên: nhìn lại mức lương bất thường và nhờ AI chỉ đọc code (không chạy code) đã cứu toàn bộ máy tính và tiền tiết kiệm!",
+    "hashtags": [
+      "#shorts",
+      "#bẫyphỏngvấnonline",
+      "#cảnhgiáclừađảo"
+    ],
+    "tags": [
+      "bóc trần lừa đảo",
+      "lừa đảo xin việc",
+      "bẫy phỏng vấn online",
+      "hack máy tính khi xin việc",
+      "an ninh mạng",
+      "kỹ năng sống",
+      "vạn chuyện",
+      "shorts"
+    ],
+    "category": "Education (Giáo dục)",
+    "playlist": "Bóc Trần Lừa Đảo – Kỹ Năng Cảnh Giác & An Toàn Đời Thực",
+    "thumbnail_sec": 36.0
+  }
+}

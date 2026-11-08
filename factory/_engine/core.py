@@ -212,3 +212,4 @@ class Episode:
         if speaker_id not in self.cast:
             raise GateError(f"Speaker '{speaker_id}' chưa khai báo trong 02_CAST/cast.json")
         return self.cast[speaker_id]
+

@@ -30,9 +30,9 @@
 Bản đồ chi tiết các nhóm chiêu: [01_SCAM_MAP/SCAM_MAP_ONLINE_TO_OFFLINE.md](01_SCAM_MAP/SCAM_MAP_ONLINE_TO_OFFLINE.md).
 
 ## 5. SERIES & LỊCH ĐĂNG
-- **2 tập/tuần** (đề xuất T3 & T6 tối, khung 19–21h). Thử 8–12 tập đầu, đo giữ chân rồi mới tăng nhịp (bài học `C1` từ 779).
-- Mùa 1 gợi ý: xen kẽ trụ A–B–C để thăm dò nhóm khán giả nào phản hồi tốt nhất.
-- Xen kẽ tập **“mất tiền”** và tập **“thoát hiểm”** (nạn nhân nhận ra dấu hiệu).
+- **2 tập/tuần vào Thứ 7 & Chủ Nhật hàng tuần** (khung 19–21h tối). Kế hoạch kịch bản Tháng 11 xem tại [01_SCAM_MAP/KHO_KICH_BAN_THANG_11.md](01_SCAM_MAP/KHO_KICH_BAN_THANG_11.md).
+- Mùa 1 (Tháng 11/2026): xoay quanh đại gia đình & khu phố của **Chị Ba – Anh Hai – Bé Tom – Cô Tư – Ông Bảy – Bé Na – Tùng – Chú Bảo Vệ**, xen kẽ các trụ Online (`ON`), Offline (`OFF`) và Lai (`MIX`).
+- Ưu tiên kết thúc bằng **phản xạ tỉnh táo / thoát hiểm ngoạn mục** (nhận ra dấu hiệu kịp thời nhờ người thân/cộng đồng nhắc nhở) để truyền năng lượng chủ động cho khán giả.
 
 ## 6. TƯƠNG TÁC
 - Bình luận ghim mời kể trải nghiệm **nhưng dặn không đăng SĐT, STK, tên người thật**.
@@ -46,3 +46,4 @@ Bản đồ chi tiết các nhóm chiêu: [01_SCAM_MAP/SCAM_MAP_ONLINE_TO_OFFLIN
 | Xem hết (đến thẻ dấu hiệu) | > 35% |
 | Tỷ lệ chia sẻ / lượt xem | theo dõi – chỉ số quan trọng nhất của kênh cảnh báo |
 | Nền tảng nào giữ chân tốt nhất | So sánh YouTube Shorts / TikTok / Facebook Reels |
+

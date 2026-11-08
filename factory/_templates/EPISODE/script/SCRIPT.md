@@ -36,3 +36,4 @@
 - [ ] Không có câu thoại kẻ lừa đủ chi tiết để người xem chép lại làm kịch bản lừa thật.
 - [ ] Không chỉ cách lập tài khoản giả, vượt xác thực, lấy OTP, rửa tiền.
 - [ ] Phần “bóc trần” giải thích **vì sao nạn nhân tin** và **dấu hiệu**, không giải thích **cách vận hành đường dây**.
+

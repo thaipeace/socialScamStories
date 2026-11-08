@@ -1,0 +1,422 @@
+{
+  "episode_id": "EP05",
+  "slug": "ViecNheLuongCao",
+  "title": "Bẫy Tình Ái Kết Hợp Nhiệm Vụ Chốt Đơn: Quơ Tay Ngang Mặt, Vỡ Mặt Nạ AI Ngay Trên Sóng!",
+  "version": "v4",
+  "scam_family": "ON-11",
+  "duration_sec": 56.0,
+  "hook": {
+    "kicker": "BẪY TÌNH ÁI & NHIỆM VỤ SÀN THƯƠNG MẠI ĐIỆN TỬ",
+    "title": "Bạn trai qua mạng ngọt ngào dụ chốt đơn gom tiền cưới… vỡ mặt nạ AI ngay lúc gọi video!",
+    "start": 0.2,
+    "end": 4.2
+  },
+  "scenes": [
+    {
+      "id": "s1_bay_tinh_ai",
+      "image": "assets/scene1.jpg",
+      "start": 0.0,
+      "end": 5.5,
+      "motion": {
+        "scale": [
+          1.05,
+          1.14
+        ],
+        "focus": [
+          [
+            0.5,
+            0.5
+          ],
+          [
+            0.5,
+            0.45
+          ]
+        ],
+        "wobble": "tense"
+      }
+    },
+    {
+      "id": "s2_khoa_tai_khoan",
+      "image": "assets/scene2.jpg",
+      "start": 5.5,
+      "end": 16.0,
+      "motion": {
+        "scale": [
+          1.04,
+          1.15
+        ],
+        "focus": [
+          [
+            0.5,
+            0.5
+          ],
+          [
+            0.5,
+            0.46
+          ]
+        ],
+        "wobble": "handheld"
+      },
+      "transition_in": {
+        "type": "glitch",
+        "dur": 0.3
+      },
+      "shakes": [
+        {
+          "at": 11.1,
+          "amp": 26
+        }
+      ]
+    },
+    {
+      "id": "s3_chi_ba_nhu_moi",
+      "image": "assets/scene3.jpg",
+      "start": 16.0,
+      "end": 28.5,
+      "motion": {
+        "scale": [
+          1.03,
+          1.13
+        ],
+        "focus": [
+          [
+            0.5,
+            0.48
+          ],
+          [
+            0.5,
+            0.5
+          ]
+        ],
+        "wobble": "handheld"
+      },
+      "transition_in": {
+        "type": "dissolve",
+        "dur": 0.3
+      },
+      "shakes": [
+        {
+          "at": 22.6,
+          "amp": 22
+        }
+      ]
+    },
+    {
+      "id": "s4_vo_mat_na_ai_climax",
+      "image": "assets/scene4.jpg",
+      "start": 28.5,
+      "end": 41.8,
+      "motion": {
+        "scale": [
+          1.18,
+          1.03
+        ],
+        "focus": [
+          [
+            0.5,
+            0.62
+          ],
+          [
+            0.5,
+            0.5
+          ]
+        ],
+        "wobble": "tense"
+      },
+      "transition_in": {
+        "type": "flash_white",
+        "dur": 0.25
+      },
+      "shakes": [
+        {
+          "at": 28.6,
+          "amp": 24
+        },
+        {
+          "at": 30.8,
+          "amp": 36
+        },
+        {
+          "at": 32.3,
+          "amp": 34
+        },
+        {
+          "at": 34.1,
+          "amp": 28
+        }
+      ]
+    },
+    {
+      "id": "s5_boc_tran",
+      "image": "assets/scene5.jpg",
+      "start": 41.8,
+      "end": 49.5,
+      "motion": {
+        "scale": [
+          1.03,
+          1.1
+        ],
+        "focus": [
+          [
+            0.5,
+            0.5
+          ],
+          [
+            0.5,
+            0.45
+          ]
+        ],
+        "wobble": "calm"
+      },
+      "transition_in": {
+        "type": "glitch",
+        "dur": 0.3
+      }
+    },
+    {
+      "id": "s6_ket_luan",
+      "image": "assets/scene6.jpg",
+      "start": 49.5,
+      "end": 56.0,
+      "motion": {
+        "scale": [
+          1.02,
+          1.06
+        ],
+        "focus": [
+          [
+            0.5,
+            0.48
+          ],
+          [
+            0.5,
+            0.48
+          ]
+        ],
+        "wobble": "none"
+      },
+      "transition_in": {
+        "type": "fade_black",
+        "dur": 0.3
+      }
+    }
+  ],
+  "dialogue": [
+    {
+      "id": "l1",
+      "speaker": "ke_ngot_ngao_nam",
+      "start": 0.2,
+      "window": 5.1,
+      "text": "Anh thương em mới chỉ mối chốt đơn sàn thương mại, mình kiếm tiền lo đám cưới nha em yêu!"
+    },
+    {
+      "id": "l2",
+      "speaker": "be_na",
+      "start": 5.6,
+      "window": 5.4,
+      "text": "Mấy đơn đầu rút lãi dễ ợt, sao em vừa nạp ba mươi triệu lại bị khóa tài khoản anh?!"
+    },
+    {
+      "id": "l3",
+      "speaker": "ke_ngot_ngao_nam",
+      "start": 11.2,
+      "window": 4.7,
+      "text": "Em bấm sai cú pháp rồi! Nạp gấp năm mươi triệu gỡ lệnh đi, không là mất sạch tiền đó!"
+    },
+    {
+      "id": "l4",
+      "speaker": "be_na",
+      "start": 16.1,
+      "window": 6.4,
+      "text": "Chị Ba ơi cho em mượn tiền gỡ đơn với! Không nạp là mất sạch, ảnh cũng bỏ em luôn!"
+    },
+    {
+      "id": "l5",
+      "speaker": "chi_ba",
+      "start": 22.6,
+      "window": 5.8,
+      "text": "Đưa máy đây! Em gái tôi gom đủ năm mươi triệu rồi, anh bật camera vẫy tay tôi chuyển liền!"
+    },
+    {
+      "id": "l6",
+      "speaker": "ke_ngot_ngao_nam",
+      "start": 28.6,
+      "window": 5.6,
+      "text": "Thấy anh chưa, chuyển lẹ... Ủa?! Tắt máy, tắt máy lẹ!"
+    },
+    {
+      "id": "l7",
+      "speaker": "be_na",
+      "start": 35.2,
+      "window": 6.5,
+      "text": "Trời đất ơi... Lộ mặt thật ngồi giữa ổ lừa đảo, vậy mà em tưởng chồng sắp cưới!"
+    },
+    {
+      "id": "l8",
+      "speaker": "nguoi_boc_tran",
+      "start": 42.0,
+      "window": 7.45,
+      "text": "Chúng dùng lời yêu thương làm mồi nhử, thả chút hoa hồng đầu rồi khóa tài khoản vét cạn tiền!"
+    },
+    {
+      "id": "l9",
+      "speaker": "chi_ba",
+      "start": 49.65,
+      "window": 6.25,
+      "text": "Ngừng chuyển tiền ngay lập tức! Lưu hết tin nhắn lại đi trình báo, tuyệt đối đừng nạp thêm nữa!"
+    }
+  ],
+  "chat_bubbles": [],
+  "callouts": [
+    {
+      "text": "VẪY TAY NGANG MẶT: LỖI FILTER GHÉP MẶT AI!",
+      "style": "danger",
+      "start": 30.8,
+      "end": 35.0,
+      "y": 190
+    }
+  ],
+  "red_flags": {
+    "start": 51.0,
+    "end": 53.5,
+    "stagger_sec": 0.4,
+    "title": "NHỚ KỸ",
+    "items": [
+      "Người yêu qua mạng dùng ảnh cắp, ghép mặt AI, rủ làm nhiệm vụ chốt đơn kiếm tiền",
+      "Cho rút lãi dễ ở vài đơn nhỏ đầu, khi nạp số tiền lớn liền báo sai cú pháp và khóa tài khoản",
+      "Thao túng tâm lý ép vay mượn nạp thêm tiền để gỡ lệnh đóng băng"
+    ],
+    "action": "Ngừng chuyển tiền ngay lập tức, lưu giữ toàn bộ lịch sử tin nhắn và biên lai để trình báo cơ quan chức năng!"
+  },
+  "disclaimer": {
+    "start": 53.5,
+    "end": 56.0
+  },
+  "audio": {
+    "ambience": [
+      {
+        "preset": "office",
+        "start": 0.0,
+        "end": 56.0,
+        "gain_db": -3.5
+      }
+    ],
+    "foley": [
+      {
+        "preset": "notification",
+        "at": 0.2,
+        "gain_db": 0.0
+      },
+      {
+        "preset": "glitch",
+        "at": 5.5,
+        "gain_db": 1.0
+      },
+      {
+        "preset": "heartbeat",
+        "at": 11.2,
+        "dur": 23.8,
+        "gain_db": 1.0
+      },
+      {
+        "preset": "impact",
+        "at": 22.6,
+        "dur": 1.8,
+        "gain_db": 2.0
+      },
+      {
+        "preset": "riser",
+        "at": 27.5,
+        "dur": 3.2,
+        "gain_db": 2.0
+      },
+      {
+        "preset": "glitch",
+        "at": 30.7,
+        "dur": 1.5,
+        "gain_db": 4.0
+      },
+      {
+        "preset": "impact",
+        "at": 30.9,
+        "dur": 2.2,
+        "gain_db": 4.5
+      },
+      {
+        "preset": "glitch",
+        "at": 32.3,
+        "dur": 1.2,
+        "gain_db": 3.5
+      },
+      {
+        "preset": "call_end",
+        "at": 34.1,
+        "dur": 1.2,
+        "gain_db": 4.0
+      },
+      {
+        "preset": "glitch",
+        "at": 41.8,
+        "gain_db": 1.0
+      }
+    ],
+    "bgm": [
+      {
+        "preset": "suspense_pulse",
+        "start": 0.0,
+        "end": 16.0
+      },
+      {
+        "preset": "tension_drone",
+        "start": 16.0,
+        "end": 28.5,
+        "gain_db": 2.5
+      },
+      {
+        "preset": "action_climax",
+        "start": 28.5,
+        "end": 49.5,
+        "gain_db": 2.5
+      },
+      {
+        "preset": "warm_outro",
+        "start": 49.5,
+        "end": 56.0
+      }
+    ],
+    "duck_extra": [
+      {
+        "start": 30.7,
+        "end": 34.8,
+        "bgm_db": -12.0,
+        "amb_db": -12.0
+      }
+    ]
+  },
+  "forbidden_terms": [],
+  "publish": {
+    "titles": [
+      "Bẫy tình ái rủ chốt đơn: Quơ tay ngang mặt, vỡ mặt nạ AI ngay trên sóng! #shorts #bẫytìnhái",
+      "Người yêu qua mạng rủ làm nhiệm vụ chốt đơn: Đừng nạp thêm tiền gỡ lệnh! #shorts #lừađảochốtđơn",
+      "Cú lật cao trào khi bắt bạn trai qua mạng bật camera vẫy tay ngang mặt! #shorts #cảnhgiáclừađảo"
+    ],
+    "description": "Tình huống tái dựng từ cảnh báo thực tế của cơ quan chức năng: Kẻ gian sử dụng hình ảnh trai xinh, gái đẹp thành đạt lấy cắp trên mạng kết hợp công nghệ ghép mặt AI để kết bạn, tán tỉnh ngọt ngào mỗi ngày ('bẫy tình ái'). Khi nạn nhân sập bẫy tình cảm, chúng dẫn dụ tham gia làm nhiệm vụ chốt đơn trên sàn thương mại điện tử giả mạo với lý do 'kiếm tiền lo tương lai chung'. Sau vài đơn nhỏ đầu tiên cho rút gốc và hoa hồng dễ dàng, ngay khi nạn nhân nạp số tiền lớn, hệ thống lập tức báo lỗi 'sai cú pháp' và ép nạp thêm hàng chục triệu đồng để gỡ lệnh!\n\n✅ Nguyên tắc phòng tránh:\n- Tuyệt đối không chuyển tiền, không tham gia làm nhiệm vụ chốt đơn hay đầu tư qua các đường link lạ theo lời rủ rê của người quen qua mạng.\n- Nếu phát hiện bị lừa, phải NGỪNG NGAY mọi giao dịch nạp thêm tiền, lưu giữ toàn bộ tin nhắn và biên lai chuyển khoản để trình báo cơ quan chức năng!",
+    "hashtags": [
+      "#shorts",
+      "#bẫytìnhái",
+      "#lừađảochốtđơn"
+    ],
+    "pinned_comment": "📌 Nhớ kỹ: Người yêu qua mạng chưa từng gặp mặt, dùng filter ghép mặt AI và nhiệt tình hướng dẫn nạp tiền làm nhiệm vụ chốt đơn trên đường link lạ 100% là bẫy lừa đảo! Tuyệt đối không nạp thêm tiền để 'gỡ lệnh đóng băng'!",
+    "tags": [
+      "bóc trần lừa đảo",
+      "bẫy tình ái",
+      "lừa đảo chốt đơn",
+      "nhiệm vụ sàn thương mại điện tử",
+      "cảnh giác mạng xã hội",
+      "shorts"
+    ],
+    "category": "Education (Giáo dục)",
+    "playlist": "Bóc Trần Lừa Đảo – Kỹ Năng Cảnh Giác & An Toàn Đời Thực",
+    "thumbnail_sec": 31.0
+  }
+}

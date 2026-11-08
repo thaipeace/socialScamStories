@@ -1,0 +1,81 @@
+{
+  "episode_id": "EP06",
+  "gate": "GATE_5_RENDER_AND_QA",
+  "staging_mp4_path": "factory/staging/EP06/EP06_CheckInDuLich_56s_staging.mp4",
+  "file_size_mb": 36.3,
+  "stream_probe": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "codec_name": "h264",
+        "codec_type": "video",
+        "width": 1080,
+        "height": 1920,
+        "r_frame_rate": "30/1"
+      },
+      {
+        "codec_name": "aac",
+        "codec_type": "audio",
+        "sample_rate": "48000",
+        "channels": 2,
+        "r_frame_rate": "0/0"
+      }
+    ],
+    "format": {
+      "duration": "56.000000",
+      "size": "38067229"
+    }
+  },
+  "all_8_points_passed": true,
+  "checklist": [
+    {
+      "id": 1,
+      "name": "Không định danh người / tổ chức / số thật",
+      "status": "PASS",
+      "evidence": "Cấm cứng: 0; cảnh báo: 0; SĐT: 0; URL: 0; dãy số TK: 0"
+    },
+    {
+      "id": 2,
+      "name": "Không hướng dẫn thủ đoạn chi tiết (chỉ bóc trần cơ chế tâm lý & dấu hiệu)",
+      "status": "PASS",
+      "evidence": "Người duyệt: Antigravity Staging Visual QA. Da kiem tra 6 anh va preview frames EP06 v4: canh bao check-in du lich thoi gian thuc, khong huong dan thu doan chi tiet, hinh anh an toan khong sac phuc hay logo that, ton trong nan nhan"
+    },
+    {
+      "id": 3,
+      "name": "Sạch từ khóa thuật toán (ASR/OCR/metadata)",
+      "status": "PASS",
+      "evidence": "Cấm cứng: 0; cảnh báo: 0"
+    },
+    {
+      "id": 4,
+      "name": "Hình ảnh an toàn: không máu me/khỏa thân, không logo – giao diện – sắc phục thật",
+      "status": "PASS",
+      "evidence": "Người duyệt: Antigravity Staging Visual QA. Da kiem tra 6 anh va preview frames EP06 v4: canh bao check-in du lich thoi gian thuc, khong huong dan thu doan chi tiet, hinh anh an toan khong sac phuc hay logo that, ton trong nan nhan"
+    },
+    {
+      "id": 5,
+      "name": "Tôn trọng nạn nhân, không kỳ thị vùng miền / dân tộc / nghề nghiệp / tuổi tác",
+      "status": "PASS",
+      "evidence": "Người duyệt: Antigravity Staging Visual QA. Da kiem tra 6 anh va preview frames EP06 v4: canh bao check-in du lich thoi gian thuc, khong huong dan thu doan chi tiet, hinh anh an toan khong sac phuc hay logo that, ton trong nan nhan"
+    },
+    {
+      "id": 6,
+      "name": "Âm thanh: thoại rõ, master đúng chuẩn, đã nghe duyệt",
+      "status": "PASS",
+      "evidence": "Master peak -1.12 dBFS / 56.0s; thoại vừa cửa sổ: True; đã nghe duyệt: True"
+    },
+    {
+      "id": 7,
+      "name": "Safe Zone + Disclaimer + Thẻ Dấu hiệu nhận biết",
+      "status": "PASS",
+      "evidence": "Overlay trong Safe Zone: True; disclaimer: 1; thẻ dấu hiệu: 2 ý"
+    },
+    {
+      "id": 8,
+      "name": "Nhịp & Hook",
+      "status": "PASS",
+      "evidence": "Hook bắt đầu 0.3s; thời lượng 56.0s (file 56.00s)"
+    }
+  ]
+}

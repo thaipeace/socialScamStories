@@ -1,0 +1,23 @@
+Đang lúc thất nghiệp rất cần việc làm, một lập trình viên nhận được cuộc gọi phỏng vấn ban ngày với mức đãi ngộ cực hời: 90 đô một giờ! Nhà tuyển dụng (HR) gửi thư mục bài kiểm tra về máy. Chủ động quét phần mềm diệt virus thấy báo sạch bóng, lại bị HR liên tục hối thúc chia sẻ màn hình và bấm chạy ngay kẻo mất cơ hội, ngón tay anh đã đặt lên chuột chực bấm...
+
+Đúng khoảnh khắc đắn đo đó, một ý nghĩ chợt lóe lên khi anh nhìn lại con số 90 đô/giờ quá bất thường: phải nhờ AI đọc kiểm tra kỹ mã nguồn một lần nữa, vì nhờ AI chỉ đọc code chứ không chạy code thì hoàn toàn an toàn! Khi anh dừng tay lại, HR lập tức lộ mặt cáu gắt. Nhờ AI quét đọc thư mục cấu hình ẩn, anh phát hiện dòng lệnh ngầm chờ sẵn để cướp sạch mật khẩu và tiền tiết kiệm ngay khi bấm chạy!
+
+⏱️ Bố cục tình huống:
+00:00 Lời mời phỏng vấn ban ngày với mức lương 90 đô/giờ
+00:05 Đang cần việc gấp, tự quét virus báo sạch & sự nao núng khi bị HR hối thúc
+00:18 Đắn đo trước cú click chuột & ý nghĩ lóe lên: nhờ AI chỉ đọc code chứ không chạy code
+00:34 Nhờ AI đọc thư mục ẩn phát hiện lệnh ngầm cướp sạch mật khẩu máy tính!
+00:51 2 dấu hiệu nhận biết & nguyên tắc tự bảo vệ khi phỏng vấn online
+
+⚠️ 2 dấu hiệu cảnh giác:
+1. Hứa hẹn mức thù lao cao bất thường (90 đô/giờ) đánh trúng tâm lý đang cần việc gấp
+2. Dù quét ngoài báo sạch nhưng HR liên tục hối chia sẻ màn hình, ép bấm chạy ngay và cáu gắt khi bạn xin kiểm tra kỹ
+
+✅ Quy tắc vàng: Thấy mức lương cao bất thường kèm hối mở tệp ngay trong cuộc gọi phải dừng tay lại, nhờ AI chỉ đọc kiểm tra mã nguồn (không chạy code) để phát hiện lệnh ngầm an toàn!
+
+🎬 ĐÂY LÀ PHIM HOẠT HÌNH DỰNG LẠI TÌNH HUỐNG ĐỂ CẢNH BÁO
+Nhân vật, tên gọi, số điện thoại, số tiền trong phim đều là hư cấu nhằm mục đích cảnh báo.
+
+🤖 Hình ảnh và âm thanh được hỗ trợ sản xuất bởi công cụ AI.
+
+#shorts #bẫyphỏngvấnonline #cảnhgiáclừađảo

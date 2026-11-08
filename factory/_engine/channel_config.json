@@ -54,6 +54,7 @@
   },
   "tts": {
     "model": "gemini-3.8-flash-tts",
+    "fallback_model": "gemini-3.8-flash-lite-tts",
     "endpoint": "https://generativelanguage.googleapis.com/v1beta/interactions",
     "keys_file": "C:/projects/HaizFlow-main/runtime/data/gemini-api-keys.json",
     "env_var": "GEMINI_API_KEY"
@@ -61,6 +62,7 @@
   "publish": {
     "ai_label": "🤖 Hình ảnh và âm thanh được hỗ trợ sản xuất bởi công cụ AI.",
     "dramatized_label": "🎬 ĐÂY LÀ PHIM HOẠT HÌNH DỰNG LẠI TÌNH HUỐNG ĐỂ CẢNH BÁO",
-    "default_hashtags": ["#BocTranLuaDao", "#CanhGiacLuaDao", "#VanChuyen", "#Shorts"]
+    "default_hashtags": ["#shorts", "#bóctrầnlừađảo"]
   }
 }
+
