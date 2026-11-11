@@ -1,0 +1,940 @@
+{
+  "episode_id": "EP01",
+  "factory": "factory196",
+  "gate": "GATE_2_TTS_VOICE",
+  "engine": "gemini-3.8-flash-tts",
+  "placeholder_mode": false,
+  "partial": false,
+  "target_peak_dbfs": -3.0,
+  "lines": [
+    {
+      "line_id": "line01_tun",
+      "speaker": "thang_tun",
+      "speaker_label": "Tùng – nam thanh niên 18–24 tuổi",
+      "label_short": "TÙNG",
+      "voice": "Puck",
+      "style": "Giọng nam thanh niên miền Nam 20 tuổi, sôi nổi, nhanh nhảu, hay quét mã thanh toán vội.",
+      "af": "highpass=f=80,acompressor=threshold=-18dB:ratio=2.5:attack=8:release=100:makeup=2dB",
+      "engine": "gemini-3.8-flash-tts",
+      "text": "Trời đất ơi Anh Hai ơi! Chỗ dịch vụ đáo hạn thẻ rút sạch tám mươi triệu trong thẻ tín dụng của em rồi!",
+      "subtitle": [
+        "Trời đất ơi Anh Hai ơi! Chỗ dịch vụ đáo hạn thẻ",
+        "rút sạch 80 triệu trong thẻ tín dụng của em rồi!"
+      ],
+      "timeline_start_sec": 0.4,
+      "timeline_end_sec": 6.34,
+      "timeline_window_sec": 6.1,
+      "fits_timeline_window": true,
+      "wav_path": "factory196/materialAndDraft/EP01/audio/tts/line01_tun.wav",
+      "metrics": {
+        "sample_rate": 48000,
+        "channels": 1,
+        "duration_sec": 5.94,
+        "peak_dbfs": -3.0,
+        "rms_dbfs": -17.27
+      },
+      "qa_status": "PASS",
+      "human_listen_check": "PASS"
+    },
+    {
+      "line_id": "line02_anhhai",
+      "speaker": "anh_hai",
+      "speaker_label": "Anh Hai – lao động/nhân viên/chồng Chị Ba 35 tuổi",
+      "label_short": "ANH HAI",
+      "voice": "Orus",
+      "style": "Giọng nam miền Nam 35 tuổi, thẳng tính, tỉnh táo, chăm làm, luôn bình tĩnh giữ nhịp cho gia đình.",
+      "af": "highpass=f=80,acompressor=threshold=-18dB:ratio=2.5:attack=8:release=100:makeup=2dB",
+      "engine": "gemini-3.8-flash-tts",
+      "text": "Trời ơi, tối qua may mà vợ anh kéo về kịp, chứ không là thẻ của anh cũng bay sạch như em rồi Tùng!",
+      "subtitle": [
+        "Trời ơi, tối qua may mà vợ anh kéo về kịp,",
+        "chứ không là thẻ của anh cũng bay sạch như em rồi Tùng!"
+      ],
+      "timeline_start_sec": 6.7,
+      "timeline_end_sec": 12.24,
+      "timeline_window_sec": 5.8,
+      "fits_timeline_window": true,
+      "wav_path": "factory196/materialAndDraft/EP01/audio/tts/line02_anhhai.wav",
+      "metrics": {
+        "sample_rate": 48000,
+        "channels": 1,
+        "duration_sec": 5.54,
+        "peak_dbfs": -3.0,
+        "rms_dbfs": -20.1
+      },
+      "qa_status": "PASS",
+      "human_listen_check": "PENDING"
+    },
+    {
+      "line_id": "line03a_narr",
+      "speaker": "nguoi_boc_tran",
+      "speaker_label": "Người Bóc Trần (dẫn chuyện của kênh)",
+      "label_short": "BÓC TRẦN",
+      "voice": "Charon",
+      "style": "Giọng nam trung niên miền Nam, điềm tĩnh, rõ ràng, ấm và đáng tin như một người anh lớn đang nhắc nhở người nhà; nhịp vừa phải, nhấn chữ quan trọng.",
+      "af": "highpass=f=70,equalizer=f=150:width_type=o:width=1.2:g=2.5,acompressor=threshold=-18dB:ratio=2.5:attack=10:release=120:makeup=2dB",
+      "engine": "gemini-3.8-flash-tts",
+      "text": "Thời gian qua, cơ quan chức năng đã khởi tố nhiều đường dây dùng máy POS quẹt khống để rút tiền và đáo hạn thẻ.",
+      "subtitle": [
+        "Thời gian qua, cơ quan chức năng đã khởi tố nhiều đường dây",
+        "dùng máy POS quẹt khống để rút tiền và đáo hạn thẻ."
+      ],
+      "timeline_start_sec": 12.9,
+      "timeline_end_sec": 20.72,
+      "timeline_window_sec": 8.0,
+      "fits_timeline_window": true,
+      "wav_path": "factory196/materialAndDraft/EP01/audio/tts/line03a_narr.wav",
+      "metrics": {
+        "sample_rate": 48000,
+        "channels": 1,
+        "duration_sec": 7.82,
+        "peak_dbfs": -3.0,
+        "rms_dbfs": -19.99
+      },
+      "qa_status": "PASS",
+      "human_listen_check": "PENDING"
+    },
+    {
+      "line_id": "line03b_narr",
+      "speaker": "nguoi_boc_tran",
+      "speaker_label": "Người Bóc Trần (dẫn chuyện của kênh)",
+      "label_short": "BÓC TRẦN",
+      "voice": "Charon",
+      "style": "Giọng nam trung niên miền Nam, điềm tĩnh, rõ ràng, ấm và đáng tin như một người anh lớn đang nhắc nhở người nhà; nhịp vừa phải, nhấn chữ quan trọng.",
+      "af": "highpass=f=70,equalizer=f=150:width_type=o:width=1.2:g=2.5,acompressor=threshold=-18dB:ratio=2.5:attack=10:release=120:makeup=2dB",
+      "engine": "gemini-3.8-flash-tts",
+      "text": "Đằng sau lời mời phí rẻ là cái bẫy mất trắng tài sản lẫn nguy cơ vi phạm pháp luật.",
+      "subtitle": [
+        "Đằng sau lời mời phí rẻ là cái bẫy mất trắng tài sản",
+        "lẫn nguy cơ vi phạm pháp luật."
+      ],
+      "timeline_start_sec": 21.1,
+      "timeline_end_sec": 27.2,
+      "timeline_window_sec": 6.3,
+      "fits_timeline_window": true,
+      "wav_path": "factory196/materialAndDraft/EP01/audio/tts/line03b_narr.wav",
+      "metrics": {
+        "sample_rate": 48000,
+        "channels": 1,
+        "duration_sec": 6.1,
+        "peak_dbfs": -3.0,
+        "rms_dbfs": -21.41
+      },
+      "qa_status": "PASS",
+      "human_listen_check": "PASS"
+    },
+    {
+      "line_id": "line04_anhhai",
+      "speaker": "anh_hai",
+      "speaker_label": "Anh Hai – lao động/nhân viên/chồng Chị Ba 35 tuổi",
+      "label_short": "ANH HAI",
+      "voice": "Orus",
+      "style": "Giọng nam miền Nam 35 tuổi, thẳng tính, tỉnh táo, chăm làm, luôn bình tĩnh giữ nhịp cho gia đình.",
+      "af": "highpass=f=80,acompressor=threshold=-18dB:ratio=2.5:attack=8:release=100:makeup=2dB",
+      "engine": "gemini-3.8-flash-tts",
+      "text": "Kẹt quá mình ơi, tiền hàng chưa kịp về mà mai tới hạn thanh toán sao kê thẻ tín dụng ba mươi triệu rồi.",
+      "subtitle": [
+        "Kẹt quá mình ơi, tiền hàng chưa kịp về",
+        "mà mai tới hạn thanh toán sao kê thẻ 30 triệu rồi."
+      ],
+      "timeline_start_sec": 28.0,
+      "timeline_end_sec": 34.66,
+      "timeline_window_sec": 6.9,
+      "fits_timeline_window": true,
+      "wav_path": "factory196/materialAndDraft/EP01/audio/tts/line04_anhhai.wav",
+      "metrics": {
+        "sample_rate": 48000,
+        "channels": 1,
+        "duration_sec": 6.66,
+        "peak_dbfs": -3.0,
+        "rms_dbfs": -18.13
+      },
+      "qa_status": "PASS",
+      "human_listen_check": "PASS"
+    },
+    {
+      "line_id": "line05_chiba",
+      "speaker": "chi_ba",
+      "speaker_label": "Chị Ba – nhân viên văn phòng/mẹ bé Tom 35 tuổi",
+      "label_short": "CHỊ BA",
+      "voice": "Kore",
+      "style": "Giọng phụ nữ miền Nam Sài Gòn 35 tuổi, phát âm chuẩn phương ngữ miền Nam xuyên suốt mọi câu, giữ cố định một âm sắc rõ chữ; thương con nên dễ hoảng hốt khi nghe tin dữ.",
+      "af": "highpass=f=80,acompressor=threshold=-18dB:ratio=2.5:attack=8:release=100:makeup=2dB",
+      "engine": "gemini-3.8-flash-tts",
+      "text": "Anh bình tĩnh nghen, mai mình đóng mức tối thiểu hoặc ra ngân hàng xin trả góp hợp lệ, đừng nghe dịch vụ trôi nổi.",
+      "subtitle": [
+        "Anh bình tĩnh nghen, mai mình đóng mức tối thiểu hoặc ra ngân hàng",
+        "xin trả góp hợp lệ, đừng nghe dịch vụ trôi nổi."
+      ],
+      "timeline_start_sec": 35.1,
+      "timeline_end_sec": 42.56,
+      "timeline_window_sec": 7.7,
+      "fits_timeline_window": true,
+      "wav_path": "factory196/materialAndDraft/EP01/audio/tts/line05_chiba.wav",
+      "metrics": {
+        "sample_rate": 48000,
+        "channels": 1,
+        "duration_sec": 7.46,
+        "peak_dbfs": -3.0,
+        "rms_dbfs": -19.09
+      },
+      "qa_status": "PASS",
+      "human_listen_check": "PENDING"
+    },
+    {
+      "line_id": "line06_tun",
+      "speaker": "thang_tun",
+      "speaker_label": "Tùng – nam thanh niên 18–24 tuổi",
+      "label_short": "TÙNG",
+      "voice": "Puck",
+      "style": "Giọng nam thanh niên miền Nam 20 tuổi, sôi nổi, nhanh nhảu, hay quét mã thanh toán vội.",
+      "af": "highpass=f=80,acompressor=threshold=-18dB:ratio=2.5:attack=8:release=100:makeup=2dB",
+      "engine": "gemini-3.8-flash-tts",
+      "text": "Anh Hai lo gì! Trong hẻm có chỗ quẹt máy POS rút tiền thẻ tín dụng, phí chỉ một phẩy năm phần trăm mà miễn lãi bốn mươi lăm ngày!",
+      "subtitle": [
+        "Anh Hai lo gì! Trong hẻm có chỗ quẹt máy POS rút tiền thẻ,",
+        "phí 1,5% mà được miễn lãi tới 45 ngày lận!"
+      ],
+      "timeline_start_sec": 43.4,
+      "timeline_end_sec": 50.46,
+      "timeline_window_sec": 7.3,
+      "fits_timeline_window": true,
+      "wav_path": "factory196/materialAndDraft/EP01/audio/tts/line06_tun.wav",
+      "metrics": {
+        "sample_rate": 48000,
+        "channels": 1,
+        "duration_sec": 7.06,
+        "peak_dbfs": -3.0,
+        "rms_dbfs": -19.03
+      },
+      "qa_status": "PASS",
+      "human_listen_check": "PASS"
+    },
+    {
+      "line_id": "line07_anhhai",
+      "speaker": "anh_hai",
+      "speaker_label": "Anh Hai – lao động/nhân viên/chồng Chị Ba 35 tuổi",
+      "label_short": "ANH HAI",
+      "voice": "Orus",
+      "style": "Giọng nam miền Nam 35 tuổi, thẳng tính, tỉnh táo, chăm làm, luôn bình tĩnh giữ nhịp cho gia đình.",
+      "af": "highpass=f=80,acompressor=threshold=-18dB:ratio=2.5:attack=8:release=100:makeup=2dB",
+      "engine": "gemini-3.8-flash-tts",
+      "text": "Ủa, không mua bán hàng hóa gì hết mà người ta cũng quẹt máy POS lấy tiền mặt ra cho mình được hả Tùng?",
+      "subtitle": [
+        "Ủa, không mua bán hàng hóa gì hết mà người ta cũng",
+        "quẹt máy POS lấy tiền mặt ra cho mình được hả Tùng?"
+      ],
+      "timeline_start_sec": 50.8,
+      "timeline_end_sec": 57.22,
+      "timeline_window_sec": 6.6,
+      "fits_timeline_window": true,
+      "wav_path": "factory196/materialAndDraft/EP01/audio/tts/line07_anhhai.wav",
+      "metrics": {
+        "sample_rate": 48000,
+        "channels": 1,
+        "duration_sec": 6.42,
+        "peak_dbfs": -3.0,
+        "rms_dbfs": -19.53
+      },
+      "qa_status": "PASS",
+      "human_listen_check": "PASS"
+    },
+    {
+      "line_id": "line08_narr",
+      "speaker": "nguoi_boc_tran",
+      "speaker_label": "Người Bóc Trần (dẫn chuyện của kênh)",
+      "label_short": "BÓC TRẦN",
+      "voice": "Charon",
+      "style": "Giọng nam trung niên miền Nam, điềm tĩnh, rõ ràng, ấm và đáng tin như một người anh lớn đang nhắc nhở người nhà; nhịp vừa phải, nhấn chữ quan trọng.",
+      "af": "highpass=f=70,equalizer=f=150:width_type=o:width=1.2:g=2.5,acompressor=threshold=-18dB:ratio=2.5:attack=10:release=120:makeup=2dB",
+      "engine": "gemini-3.8-flash-tts",
+      "text": "Hãy nhìn rõ trên sơ đồ này: rút tiền mặt hợp lệ chỉ thực hiện tại cây tự động hoặc quầy ngân hàng, chịu phí và lãi ngay.",
+      "subtitle": [
+        "Hãy nhìn rõ trên sơ đồ này: Rút tiền mặt hợp lệ chỉ thực hiện",
+        "tại cây tự động hoặc quầy ngân hàng, chịu phí và lãi ngay."
+      ],
+      "timeline_start_sec": 58.0,
+      "timeline_end_sec": 66.58,
+      "timeline_window_sec": 8.8,
+      "fits_timeline_window": true,
+      "wav_path": "factory196/materialAndDraft/EP01/audio/tts/line08_narr.wav",
+      "metrics": {
+        "sample_rate": 48000,
+        "channels": 1,
+        "duration_sec": 8.58,
+        "peak_dbfs": -3.0,
+        "rms_dbfs": -20.51
+      },
+      "qa_status": "PASS",
+      "human_listen_check": "PENDING"
+    },
+    {
+      "line_id": "line09_narr",
+      "speaker": "nguoi_boc_tran",
+      "speaker_label": "Người Bóc Trần (dẫn chuyện của kênh)",
+      "label_short": "BÓC TRẦN",
+      "voice": "Charon",
+      "style": "Giọng nam trung niên miền Nam, điềm tĩnh, rõ ràng, ấm và đáng tin như một người anh lớn đang nhắc nhở người nhà; nhịp vừa phải, nhấn chữ quan trọng.",
+      "af": "highpass=f=70,equalizer=f=150:width_type=o:width=1.2:g=2.5,acompressor=threshold=-18dB:ratio=2.5:attack=10:release=120:makeup=2dB",
+      "engine": "gemini-3.8-flash-tts",
+      "text": "Kẻ xấu liền lập khống hộ kinh doanh để quẹt hóa đơn mua bán ảo qua máy POS, rút tiền mặt trái phép rồi giăng bẫy người cầm thẻ.",
+      "subtitle": [
+        "Kẻ xấu lập khống hộ kinh doanh để quẹt hóa đơn mua bán ảo,",
+        "rút tiền mặt trái phép qua máy POS rồi giăng bẫy người cầm thẻ."
+      ],
+      "timeline_start_sec": 67.0,
+      "timeline_end_sec": 76.5,
+      "timeline_window_sec": 9.7,
+      "fits_timeline_window": true,
+      "wav_path": "factory196/materialAndDraft/EP01/audio/tts/line09_narr.wav",
+      "metrics": {
+        "sample_rate": 48000,
+        "channels": 1,
+        "duration_sec": 9.5,
+        "peak_dbfs": -3.0,
+        "rms_dbfs": -19.81
+      },
+      "qa_status": "PASS",
+      "human_listen_check": "PASS"
+    },
+    {
+      "line_id": "line10_anhhai",
+      "speaker": "anh_hai",
+      "speaker_label": "Anh Hai – lao động/nhân viên/chồng Chị Ba 35 tuổi",
+      "label_short": "ANH HAI",
+      "voice": "Orus",
+      "style": "Giọng nam miền Nam 35 tuổi, thẳng tính, tỉnh táo, chăm làm, luôn bình tĩnh giữ nhịp cho gia đình.",
+      "af": "highpass=f=80,acompressor=threshold=-18dB:ratio=2.5:attack=8:release=100:makeup=2dB",
+      "engine": "gemini-3.8-flash-tts",
+      "text": "Tùng nè, sao văn phòng dịch vụ gì mà kệ tủ trống trơn không có món hàng nào, trên bàn lại bày cả chục cái máy POS vậy em?",
+      "subtitle": [
+        "Tùng nè, sao văn phòng dịch vụ gì mà kệ tủ trống trơn,",
+        "trên bàn lại bày cả chục cái máy POS vậy em?"
+      ],
+      "timeline_start_sec": 77.2,
+      "timeline_end_sec": 85.22,
+      "timeline_window_sec": 8.3,
+      "fits_timeline_window": true,
+      "wav_path": "factory196/materialAndDraft/EP01/audio/tts/line10_anhhai.wav",
+      "metrics": {
+        "sample_rate": 48000,
+        "channels": 1,
+        "duration_sec": 8.02,
+        "peak_dbfs": -3.0,
+        "rms_dbfs": -19.54
+      },
+      "qa_status": "PASS",
+      "human_listen_check": "PASS"
+    },
+    {
+      "line_id": "line11_tun",
+      "speaker": "thang_tun",
+      "speaker_label": "Tùng – nam thanh niên 18–24 tuổi",
+      "label_short": "TÙNG",
+      "voice": "Puck",
+      "style": "Giọng nam thanh niên miền Nam 20 tuổi, sôi nổi, nhanh nhảu, hay quét mã thanh toán vội.",
+      "af": "highpass=f=80,acompressor=threshold=-18dB:ratio=2.5:attack=8:release=100:makeup=2dB",
+      "engine": "gemini-3.8-flash-tts",
+      "text": "Người ta làm dịch vụ lâu năm mà anh, quẹt một phút là có tiền mặt ngay, bạn bè em ai kẹt vốn cũng ghé đây hết đó!",
+      "subtitle": [
+        "Người ta làm dịch vụ lâu năm mà anh, quẹt 1 phút là có tiền ngay,",
+        "bạn bè em ai kẹt vốn cũng ghé đây hết đó!"
+      ],
+      "timeline_start_sec": 85.6,
+      "timeline_end_sec": 91.62,
+      "timeline_window_sec": 6.3,
+      "fits_timeline_window": true,
+      "wav_path": "factory196/materialAndDraft/EP01/audio/tts/line11_tun.wav",
+      "metrics": {
+        "sample_rate": 48000,
+        "channels": 1,
+        "duration_sec": 6.02,
+        "peak_dbfs": -3.0,
+        "rms_dbfs": -20.24
+      },
+      "qa_status": "PASS",
+      "human_listen_check": "PENDING"
+    },
+    {
+      "line_id": "line12_pos",
+      "speaker": "ke_ngot_ngao_nam",
+      "speaker_label": "Kẻ lừa ngọt ngào (nam) – bạn trai ảo qua mạng dụ làm nhiệm vụ chốt đơn",
+      "label_short": "DỊCH VỤ POS",
+      "voice": "Achird",
+      "style": "Giọng nam thanh niên miền Nam Sài Gòn 28 tuổi, phát âm chuẩn phương ngữ miền Nam xuyên suốt mọi câu, giữ cố định một âm sắc; lúc đầu ngọt ngào tình cảm, lúc sau dồn dập thúc ép nạn nhân nạp thêm tiền.",
+      "af": "highpass=f=80,acompressor=threshold=-18dB:ratio=2.5:attack=8:release=100:makeup=2dB",
+      "engine": "gemini-3.8-flash-tts",
+      "text": "Dạ mời hai anh ngồi! Bên em hỗ trợ rút tiền và đáo hạn thẻ tín dụng nhanh gọn, quẹt máy POS một phút là nhận tiền mặt ngay.",
+      "subtitle": [
+        "Dạ mời hai anh ngồi! Bên em hỗ trợ rút tiền và đáo hạn",
+        "thẻ tín dụng nhanh gọn, quẹt máy POS 1 phút là nhận tiền ngay."
+      ],
+      "timeline_start_sec": 92.4,
+      "timeline_end_sec": 99.34,
+      "timeline_window_sec": 7.2,
+      "fits_timeline_window": true,
+      "wav_path": "factory196/materialAndDraft/EP01/audio/tts/line12_pos.wav",
+      "metrics": {
+        "sample_rate": 48000,
+        "channels": 1,
+        "duration_sec": 6.94,
+        "peak_dbfs": -3.0,
+        "rms_dbfs": -20.62
+      },
+      "qa_status": "PASS",
+      "human_listen_check": "PASS"
+    },
+    {
+      "line_id": "line13_pos",
+      "speaker": "ke_ngot_ngao_nam",
+      "speaker_label": "Kẻ lừa ngọt ngào (nam) – bạn trai ảo qua mạng dụ làm nhiệm vụ chốt đơn",
+      "label_short": "DỊCH VỤ POS",
+      "voice": "Achird",
+      "style": "Giọng nam thanh niên miền Nam Sài Gòn 28 tuổi, phát âm chuẩn phương ngữ miền Nam xuyên suốt mọi câu, giữ cố định một âm sắc; lúc đầu ngọt ngào tình cảm, lúc sau dồn dập thúc ép nạn nhân nạp thêm tiền.",
+      "af": "highpass=f=80,acompressor=threshold=-18dB:ratio=2.5:attack=8:release=100:makeup=2dB",
+      "engine": "gemini-3.8-flash-tts",
+      "text": "Cuối tháng tới kỳ sao kê, hai anh cứ để thông tin thẻ lại rồi đọc mã xác nhận qua điện thoại là tụi em đáo hạn tại nhà luôn!",
+      "subtitle": [
+        "Cuối tháng tới kỳ sao kê, hai anh cứ để thông tin thẻ lại rồi",
+        "đọc mã xác nhận qua điện thoại là tụi em đáo hạn tại nhà luôn!"
+      ],
+      "timeline_start_sec": 99.7,
+      "timeline_end_sec": 105.8,
+      "timeline_window_sec": 6.3,
+      "fits_timeline_window": true,
+      "wav_path": "factory196/materialAndDraft/EP01/audio/tts/line13_pos.wav",
+      "metrics": {
+        "sample_rate": 48000,
+        "channels": 1,
+        "duration_sec": 6.1,
+        "peak_dbfs": -3.0,
+        "rms_dbfs": -20.47
+      },
+      "qa_status": "PASS",
+      "human_listen_check": "PASS"
+    },
+    {
+      "line_id": "line14_narr",
+      "speaker": "nguoi_boc_tran",
+      "speaker_label": "Người Bóc Trần (dẫn chuyện của kênh)",
+      "label_short": "BÓC TRẦN",
+      "voice": "Charon",
+      "style": "Giọng nam trung niên miền Nam, điềm tĩnh, rõ ràng, ấm và đáng tin như một người anh lớn đang nhắc nhở người nhà; nhịp vừa phải, nhấn chữ quan trọng.",
+      "af": "highpass=f=70,equalizer=f=150:width_type=o:width=1.2:g=2.5,acompressor=threshold=-18dB:ratio=2.5:attack=10:release=120:makeup=2dB",
+      "engine": "gemini-3.8-flash-tts",
+      "text": "Nhưng đây mới là khoảnh khắc nguy hiểm nhất! Lúc cầm thẻ của Tùng, kẻ gian đã lén quay lại mặt sau thẻ bằng điện thoại giấu dưới gầm bàn.",
+      "subtitle": [
+        "Nhưng đây mới là khoảnh khắc nguy hiểm nhất: Khi cầm thẻ của Tùng,",
+        "kẻ gian đã lén quay lại mặt sau thẻ bằng điện thoại giấu dưới gầm bàn."
+      ],
+      "timeline_start_sec": 106.6,
+      "timeline_end_sec": 115.74,
+      "timeline_window_sec": 9.4,
+      "fits_timeline_window": true,
+      "wav_path": "factory196/materialAndDraft/EP01/audio/tts/line14_narr.wav",
+      "metrics": {
+        "sample_rate": 48000,
+        "channels": 1,
+        "duration_sec": 9.14,
+        "peak_dbfs": -3.0,
+        "rms_dbfs": -19.75
+      },
+      "qa_status": "PASS",
+      "human_listen_check": "PASS"
+    },
+    {
+      "line_id": "line15_narr",
+      "speaker": "nguoi_boc_tran",
+      "speaker_label": "Người Bóc Trần (dẫn chuyện của kênh)",
+      "label_short": "BÓC TRẦN",
+      "voice": "Charon",
+      "style": "Giọng nam trung niên miền Nam, điềm tĩnh, rõ ràng, ấm và đáng tin như một người anh lớn đang nhắc nhở người nhà; nhịp vừa phải, nhấn chữ quan trọng.",
+      "af": "highpass=f=70,equalizer=f=150:width_type=o:width=1.2:g=2.5,acompressor=threshold=-18dB:ratio=2.5:attack=10:release=120:makeup=2dB",
+      "engine": "gemini-3.8-flash-tts",
+      "text": "Chỉ cần nắm được dãy số mặt trước và ba chữ số bảo mật CVV ở mặt sau, chiếc thẻ của nạn nhân đã nằm gọn trong tay kẻ xấu.",
+      "subtitle": [
+        "Chỉ cần nắm được dãy số mặt trước và 3 số bảo mật CVV mặt sau,",
+        "chiếc thẻ tín dụng của nạn nhân đã nằm gọn trong tay kẻ xấu."
+      ],
+      "timeline_start_sec": 116.1,
+      "timeline_end_sec": 125.2,
+      "timeline_window_sec": 9.3,
+      "fits_timeline_window": true,
+      "wav_path": "factory196/materialAndDraft/EP01/audio/tts/line15_narr.wav",
+      "metrics": {
+        "sample_rate": 48000,
+        "channels": 1,
+        "duration_sec": 9.1,
+        "peak_dbfs": -3.0,
+        "rms_dbfs": -19.74
+      },
+      "qa_status": "PASS",
+      "human_listen_check": "PASS"
+    },
+    {
+      "line_id": "line16_pos_phone",
+      "speaker": "ke_gia_danh",
+      "speaker_label": "Kẻ giả danh qua điện thoại (bác sĩ/thầy giáo/cán bộ/ngân hàng giả)",
+      "label_short": "ĐỒNG BỌN POS",
+      "voice": "Fenrir",
+      "style": "Giọng nam miền Nam Sài Gòn 40 tuổi, phát âm chuẩn phương ngữ miền Nam xuyên suốt mọi câu, giữ cố định một âm sắc duy nhất; nghiêm giọng, lạnh, dồn dập, tạo áp lực khẩn cấp.",
+      "af": "highpass=f=320,lowpass=f=3400,equalizer=f=1800:width_type=o:width=1.0:g=4,acompressor=threshold=-20dB:ratio=4:attack=5:release=80:makeup=3dB,aecho=0.8:0.6:12:0.15",
+      "engine": "gemini-3.8-flash-tts",
+      "text": "Alo Tùng hả! Bên bộ phận xử lý thẻ đây, đọc gấp mã OTP vừa gửi về máy để tụi anh tất toán kỳ sao kê hai mươi triệu kịp giờ nghen!",
+      "subtitle": [
+        "Alo Tùng hả! Bên bộ phận xử lý thẻ đây, đọc gấp mã OTP vừa gửi về",
+        "để tụi anh tất toán kỳ sao kê 20 triệu kịp giờ nghen!"
+      ],
+      "timeline_start_sec": 126.0,
+      "timeline_end_sec": 133.483,
+      "timeline_window_sec": 7.7,
+      "fits_timeline_window": true,
+      "wav_path": "factory196/materialAndDraft/EP01/audio/tts/line16_pos_phone.wav",
+      "metrics": {
+        "sample_rate": 48000,
+        "channels": 1,
+        "duration_sec": 7.483,
+        "peak_dbfs": -3.0,
+        "rms_dbfs": -21.49
+      },
+      "qa_status": "PASS",
+      "human_listen_check": "PENDING"
+    },
+    {
+      "line_id": "line17_tun",
+      "speaker": "thang_tun",
+      "speaker_label": "Tùng – nam thanh niên 18–24 tuổi",
+      "label_short": "TÙNG",
+      "voice": "Puck",
+      "style": "Giọng nam thanh niên miền Nam 20 tuổi, sôi nổi, nhanh nhảu, hay quét mã thanh toán vội.",
+      "af": "highpass=f=80,acompressor=threshold=-18dB:ratio=2.5:attack=8:release=100:makeup=2dB",
+      "engine": "gemini-3.8-flash-tts",
+      "text": "Dạ dạ để em đọc liền anh ơi, sợ trễ giờ bị phạt quá! Mã xác nhận mới nhắn về máy em đây rồi, anh làm lẹ giùm em nghen!",
+      "subtitle": [
+        "Dạ dạ để em đọc liền anh ơi, sợ trễ giờ bị phạt quá!",
+        "Mã xác nhận mới nhắn về máy em đây rồi, anh làm lẹ giùm em nghen!"
+      ],
+      "timeline_start_sec": 133.9,
+      "timeline_end_sec": 140.4,
+      "timeline_window_sec": 6.7,
+      "fits_timeline_window": true,
+      "wav_path": "factory196/materialAndDraft/EP01/audio/tts/line17_tun.wav",
+      "metrics": {
+        "sample_rate": 48000,
+        "channels": 1,
+        "duration_sec": 6.5,
+        "peak_dbfs": -3.0,
+        "rms_dbfs": -18.5
+      },
+      "qa_status": "PASS",
+      "human_listen_check": "PASS"
+    },
+    {
+      "line_id": "line18_pos_phone",
+      "speaker": "ke_gia_danh",
+      "speaker_label": "Kẻ giả danh qua điện thoại (bác sĩ/thầy giáo/cán bộ/ngân hàng giả)",
+      "label_short": "ĐỒNG BỌN POS",
+      "voice": "Fenrir",
+      "style": "Giọng nam miền Nam Sài Gòn 40 tuổi, phát âm chuẩn phương ngữ miền Nam xuyên suốt mọi câu, giữ cố định một âm sắc duy nhất; nghiêm giọng, lạnh, dồn dập, tạo áp lực khẩn cấp.",
+      "af": "highpass=f=320,lowpass=f=3400,equalizer=f=1800:width_type=o:width=1.0:g=4,acompressor=threshold=-20dB:ratio=4:attack=5:release=80:makeup=3dB,aecho=0.8:0.6:12:0.15",
+      "engine": "gemini-3.8-flash-tts",
+      "text": "Rồi anh nhận được mã thứ nhất rồi, còn một mã xác nhận hoàn tất hạn mức nữa, đọc nốt trong mười giây để khỏi bị treo giao dịch nha!",
+      "subtitle": [
+        "Rồi anh nhận được mã thứ nhất rồi, còn một mã hoàn tất hạn mức nữa,",
+        "đọc nốt trong 10 giây để khỏi bị treo giao dịch nha!"
+      ],
+      "timeline_start_sec": 140.7,
+      "timeline_end_sec": 147.335,
+      "timeline_window_sec": 6.8,
+      "fits_timeline_window": true,
+      "wav_path": "factory196/materialAndDraft/EP01/audio/tts/line18_pos_phone.wav",
+      "metrics": {
+        "sample_rate": 48000,
+        "channels": 1,
+        "duration_sec": 6.635,
+        "peak_dbfs": -3.0,
+        "rms_dbfs": -20.88
+      },
+      "qa_status": "PASS",
+      "human_listen_check": "PENDING"
+    },
+    {
+      "line_id": "line19_narr",
+      "speaker": "nguoi_boc_tran",
+      "speaker_label": "Người Bóc Trần (dẫn chuyện của kênh)",
+      "label_short": "BÓC TRẦN",
+      "voice": "Charon",
+      "style": "Giọng nam trung niên miền Nam, điềm tĩnh, rõ ràng, ấm và đáng tin như một người anh lớn đang nhắc nhở người nhà; nhịp vừa phải, nhấn chữ quan trọng.",
+      "af": "highpass=f=70,equalizer=f=150:width_type=o:width=1.2:g=2.5,acompressor=threshold=-18dB:ratio=2.5:attack=10:release=120:makeup=2dB",
+      "engine": "gemini-3.8-flash-tts",
+      "text": "Tin nhắn ghi rõ là thanh toán tám mươi triệu chứ không phải nạp tiền trả nợ! Số thẻ cộng mã CVV và mã OTP chính là lệnh rút tiền tối cao.",
+      "subtitle": [
+        "Tin nhắn ghi rõ là thanh toán 80 triệu chứ không phải nạp tiền trả nợ!",
+        "Số thẻ + mã CVV + mã OTP chính là lệnh rút tiền tối cao."
+      ],
+      "timeline_start_sec": 148.0,
+      "timeline_end_sec": 159.1,
+      "timeline_window_sec": 11.3,
+      "fits_timeline_window": true,
+      "wav_path": "factory196/materialAndDraft/EP01/audio/tts/line19_narr.wav",
+      "metrics": {
+        "sample_rate": 48000,
+        "channels": 1,
+        "duration_sec": 11.1,
+        "peak_dbfs": -3.0,
+        "rms_dbfs": -20.3
+      },
+      "qa_status": "PASS",
+      "human_listen_check": "PENDING"
+    },
+    {
+      "line_id": "line20_narr",
+      "speaker": "nguoi_boc_tran",
+      "speaker_label": "Người Bóc Trần (dẫn chuyện của kênh)",
+      "label_short": "BÓC TRẦN",
+      "voice": "Charon",
+      "style": "Giọng nam trung niên miền Nam, điềm tĩnh, rõ ràng, ấm và đáng tin như một người anh lớn đang nhắc nhở người nhà; nhịp vừa phải, nhấn chữ quan trọng.",
+      "af": "highpass=f=70,equalizer=f=150:width_type=o:width=1.2:g=2.5,acompressor=threshold=-18dB:ratio=2.5:attack=10:release=120:makeup=2dB",
+      "engine": "gemini-3.8-flash-tts",
+      "text": "Thẻ của Tùng hạn mức một trăm triệu, mới nợ sao kê hai mươi triệu, kẻ gian liền quẹt khống rút sạch tám mươi triệu còn lại.",
+      "subtitle": [
+        "Thẻ của Tùng hạn mức 100 triệu, mới nợ sao kê 20 triệu,",
+        "kẻ gian liền quẹt khống rút sạch 80 triệu hạn mức còn lại."
+      ],
+      "timeline_start_sec": 159.5,
+      "timeline_end_sec": 167.76,
+      "timeline_window_sec": 8.4,
+      "fits_timeline_window": true,
+      "wav_path": "factory196/materialAndDraft/EP01/audio/tts/line20_narr.wav",
+      "metrics": {
+        "sample_rate": 48000,
+        "channels": 1,
+        "duration_sec": 8.26,
+        "peak_dbfs": -3.0,
+        "rms_dbfs": -20.07
+      },
+      "qa_status": "PASS",
+      "human_listen_check": "PENDING"
+    },
+    {
+      "line_id": "line21_tun",
+      "speaker": "thang_tun",
+      "speaker_label": "Tùng – nam thanh niên 18–24 tuổi",
+      "label_short": "TÙNG",
+      "voice": "Puck",
+      "style": "Giọng nam thanh niên miền Nam 20 tuổi, sôi nổi, nhanh nhảu, hay quét mã thanh toán vội.",
+      "af": "highpass=f=80,acompressor=threshold=-18dB:ratio=2.5:attack=8:release=100:makeup=2dB",
+      "engine": "gemini-3.8-flash-tts",
+      "text": "Ủa sao tin nhắn báo trừ âm sạch tám mươi triệu hạn mức mà không có đồng nào nạp vô? Alo anh ơi! Sao thuê bao tắt máy mất tiêu rồi?!",
+      "subtitle": [
+        "Ủa sao tin nhắn báo trừ âm sạch 80 triệu hạn mức",
+        "mà không có đồng nào nạp vô? Alo anh ơi! Sao tắt máy rồi?!"
+      ],
+      "timeline_start_sec": 168.3,
+      "timeline_end_sec": 177.52,
+      "timeline_window_sec": 9.4,
+      "fits_timeline_window": true,
+      "wav_path": "factory196/materialAndDraft/EP01/audio/tts/line21_tun.wav",
+      "metrics": {
+        "sample_rate": 48000,
+        "channels": 1,
+        "duration_sec": 9.22,
+        "peak_dbfs": -3.0,
+        "rms_dbfs": -19.41
+      },
+      "qa_status": "PASS",
+      "human_listen_check": "PASS"
+    },
+    {
+      "line_id": "line22_pos",
+      "speaker": "ke_ngot_ngao_nam",
+      "speaker_label": "Kẻ lừa ngọt ngào (nam) – bạn trai ảo qua mạng dụ làm nhiệm vụ chốt đơn",
+      "label_short": "DỊCH VỤ POS",
+      "voice": "Achird",
+      "style": "Giọng nam thanh niên miền Nam Sài Gòn 28 tuổi, phát âm chuẩn phương ngữ miền Nam xuyên suốt mọi câu, giữ cố định một âm sắc; lúc đầu ngọt ngào tình cảm, lúc sau dồn dập thúc ép nạn nhân nạp thêm tiền.",
+      "af": "highpass=f=80,acompressor=threshold=-18dB:ratio=2.5:attack=8:release=100:makeup=2dB",
+      "engine": "gemini-3.8-flash-tts",
+      "text": "Còn của Anh Hai ba mươi triệu phải không? Anh đưa thẻ với căn cước đây em chụp lưu hồ sơ rồi quẹt máy POS lấy tiền mặt liền!",
+      "subtitle": [
+        "Còn của Anh Hai 30 triệu phải không? Anh đưa thẻ với căn cước đây",
+        "em chụp lưu hồ sơ rồi quẹt máy POS lấy tiền mặt cho anh liền!"
+      ],
+      "timeline_start_sec": 177.9,
+      "timeline_end_sec": 184.0,
+      "timeline_window_sec": 6.3,
+      "fits_timeline_window": true,
+      "wav_path": "factory196/materialAndDraft/EP01/audio/tts/line22_pos.wav",
+      "metrics": {
+        "sample_rate": 48000,
+        "channels": 1,
+        "duration_sec": 6.1,
+        "peak_dbfs": -3.0,
+        "rms_dbfs": -19.64
+      },
+      "qa_status": "PASS",
+      "human_listen_check": "PASS"
+    },
+    {
+      "line_id": "line23_chiba",
+      "speaker": "chi_ba",
+      "speaker_label": "Chị Ba – nhân viên văn phòng/mẹ bé Tom 35 tuổi",
+      "label_short": "CHỊ BA",
+      "voice": "Kore",
+      "style": "Giọng phụ nữ miền Nam Sài Gòn 35 tuổi, phát âm chuẩn phương ngữ miền Nam xuyên suốt mọi câu, giữ cố định một âm sắc rõ chữ; thương con nên dễ hoảng hốt khi nghe tin dữ.",
+      "af": "highpass=f=80,acompressor=threshold=-18dB:ratio=2.5:attack=8:release=100:makeup=2dB",
+      "engine": "gemini-3.8-flash-tts",
+      "text": "Dừng lại liền Anh Hai! Em thấy anh đi lâu nên chạy theo, vừa hay Tùng gọi báo bị chỗ này rút sạch tám mươi triệu rồi kìa!",
+      "subtitle": [
+        "Dừng lại liền Anh Hai! Em thấy anh đi lâu nên chạy theo,",
+        "vừa hay Tùng gọi báo bị chỗ này rút sạch 80 triệu rồi kìa!"
+      ],
+      "timeline_start_sec": 184.8,
+      "timeline_end_sec": 191.74,
+      "timeline_window_sec": 7.2,
+      "fits_timeline_window": true,
+      "wav_path": "factory196/materialAndDraft/EP01/audio/tts/line23_chiba.wav",
+      "metrics": {
+        "sample_rate": 48000,
+        "channels": 1,
+        "duration_sec": 6.94,
+        "peak_dbfs": -3.0,
+        "rms_dbfs": -16.74
+      },
+      "qa_status": "PASS",
+      "human_listen_check": "PENDING"
+    },
+    {
+      "line_id": "line24_chiba",
+      "speaker": "chi_ba",
+      "speaker_label": "Chị Ba – nhân viên văn phòng/mẹ bé Tom 35 tuổi",
+      "label_short": "CHỊ BA",
+      "voice": "Kore",
+      "style": "Giọng phụ nữ miền Nam Sài Gòn 35 tuổi, phát âm chuẩn phương ngữ miền Nam xuyên suốt mọi câu, giữ cố định một âm sắc rõ chữ; thương con nên dễ hoảng hốt khi nghe tin dữ.",
+      "af": "highpass=f=80,acompressor=threshold=-18dB:ratio=2.5:attack=8:release=100:makeup=2dB",
+      "engine": "gemini-3.8-flash-tts",
+      "text": "Ở đây không bán món hàng nào mà bày máy POS quẹt hóa đơn giả, lại còn đòi chụp mặt sau thẻ của khách! Vợ chồng mình về ngay!",
+      "subtitle": [
+        "Ở đây không bán món hàng nào mà bày máy POS quẹt hóa đơn giả,",
+        "lại còn đòi chụp mặt sau thẻ của khách! Mình về ngay lập tức!"
+      ],
+      "timeline_start_sec": 192.1,
+      "timeline_end_sec": 200.04,
+      "timeline_window_sec": 8.1,
+      "fits_timeline_window": true,
+      "wav_path": "factory196/materialAndDraft/EP01/audio/tts/line24_chiba.wav",
+      "metrics": {
+        "sample_rate": 48000,
+        "channels": 1,
+        "duration_sec": 7.94,
+        "peak_dbfs": -3.0,
+        "rms_dbfs": -17.48
+      },
+      "qa_status": "PASS",
+      "human_listen_check": "PASS"
+    },
+    {
+      "line_id": "line25_ongbay",
+      "speaker": "ong_bay",
+      "speaker_label": "Ông Bảy – người hưu trí 65+",
+      "label_short": "ÔNG BẢY",
+      "voice": "Algenib",
+      "style": "Giọng ông cụ miền Nam ngoài 65 tuổi, chậm, hơi khàn, cẩn thận nhưng ấm áp, hay nhắc nhở bà con lối xóm.",
+      "af": "highpass=f=80,acompressor=threshold=-18dB:ratio=2.5:attack=8:release=100:makeup=2dB",
+      "engine": "gemini-3.8-flash-tts",
+      "text": "May mà con Ba kéo về kịp đó! Báo chí đã nhiều lần cảnh báo các đường dây dùng máy POS quẹt khống để rút tiền và đáo hạn thẻ bị khởi tố.",
+      "subtitle": [
+        "May mà con Ba kéo về kịp đó! Báo chí đã nhiều lần cảnh báo",
+        "các đường dây dùng máy POS quẹt khống để rút tiền, đáo hạn thẻ."
+      ],
+      "timeline_start_sec": 200.7,
+      "timeline_end_sec": 214.48,
+      "timeline_window_sec": 14.0,
+      "fits_timeline_window": true,
+      "wav_path": "factory196/materialAndDraft/EP01/audio/tts/line25_ongbay.wav",
+      "metrics": {
+        "sample_rate": 48000,
+        "channels": 1,
+        "duration_sec": 13.78,
+        "peak_dbfs": -3.0,
+        "rms_dbfs": -20.04
+      },
+      "qa_status": "PASS",
+      "human_listen_check": "PENDING"
+    },
+    {
+      "line_id": "line26_ongbay",
+      "speaker": "ong_bay",
+      "speaker_label": "Ông Bảy – người hưu trí 65+",
+      "label_short": "ÔNG BẢY",
+      "voice": "Algenib",
+      "style": "Giọng ông cụ miền Nam ngoài 65 tuổi, chậm, hơi khàn, cẩn thận nhưng ấm áp, hay nhắc nhở bà con lối xóm.",
+      "af": "highpass=f=80,acompressor=threshold=-18dB:ratio=2.5:attack=8:release=100:makeup=2dB",
+      "engine": "gemini-3.8-flash-tts",
+      "text": "Tưởng chỉ đi rút tiền phí rẻ, đâu ngờ tiếp tay tạo giao dịch khống là vi phạm quy định; lỡ bị lừa thì vẫn phải trình báo trung thực ngay!",
+      "subtitle": [
+        "Tưởng chỉ đi rút tiền phí rẻ, đâu ngờ tạo giao dịch khống là vi phạm;",
+        "nhưng lỡ bị lừa chiếm đoạt thì vẫn phải trình báo trung thực ngay!"
+      ],
+      "timeline_start_sec": 214.9,
+      "timeline_end_sec": 227.64,
+      "timeline_window_sec": 12.9,
+      "fits_timeline_window": true,
+      "wav_path": "factory196/materialAndDraft/EP01/audio/tts/line26_ongbay.wav",
+      "metrics": {
+        "sample_rate": 48000,
+        "channels": 1,
+        "duration_sec": 12.74,
+        "peak_dbfs": -3.0,
+        "rms_dbfs": -18.12
+      },
+      "qa_status": "PASS",
+      "human_listen_check": "PENDING"
+    },
+    {
+      "line_id": "line27_narr",
+      "speaker": "nguoi_boc_tran",
+      "speaker_label": "Người Bóc Trần (dẫn chuyện của kênh)",
+      "label_short": "BÓC TRẦN",
+      "voice": "Charon",
+      "style": "Giọng nam trung niên miền Nam, điềm tĩnh, rõ ràng, ấm và đáng tin như một người anh lớn đang nhắc nhở người nhà; nhịp vừa phải, nhấn chữ quan trọng.",
+      "af": "highpass=f=70,equalizer=f=150:width_type=o:width=1.2:g=2.5,acompressor=threshold=-18dB:ratio=2.5:attack=10:release=120:makeup=2dB",
+      "engine": "gemini-3.8-flash-tts",
+      "text": "Bà con lưu ý hai rủi ro trên cán cân này: Thứ nhất là mất sạch hạn mức, nếu tự đọc mã OTP thì nguy cơ rất cao chủ thẻ vẫn phải gánh nợ.",
+      "subtitle": [
+        "Bà con lưu ý 2 rủi ro song song: Thứ nhất là mất sạch hạn mức,",
+        "nếu tự đọc mã OTP thì nguy cơ rất cao chủ thẻ vẫn phải gánh nợ."
+      ],
+      "timeline_start_sec": 228.3,
+      "timeline_end_sec": 239.52,
+      "timeline_window_sec": 11.5,
+      "fits_timeline_window": true,
+      "wav_path": "factory196/materialAndDraft/EP01/audio/tts/line27_narr.wav",
+      "metrics": {
+        "sample_rate": 48000,
+        "channels": 1,
+        "duration_sec": 11.22,
+        "peak_dbfs": -3.0,
+        "rms_dbfs": -19.06
+      },
+      "qa_status": "PASS",
+      "human_listen_check": "PENDING"
+    },
+    {
+      "line_id": "line28_narr",
+      "speaker": "nguoi_boc_tran",
+      "speaker_label": "Người Bóc Trần (dẫn chuyện của kênh)",
+      "label_short": "BÓC TRẦN",
+      "voice": "Charon",
+      "style": "Giọng nam trung niên miền Nam, điềm tĩnh, rõ ràng, ấm và đáng tin như một người anh lớn đang nhắc nhở người nhà; nhịp vừa phải, nhấn chữ quan trọng.",
+      "af": "highpass=f=70,equalizer=f=150:width_type=o:width=1.2:g=2.5,acompressor=threshold=-18dB:ratio=2.5:attack=10:release=120:makeup=2dB",
+      "engine": "gemini-3.8-flash-tts",
+      "text": "Thứ hai, quẹt máy POS khống là hành vi bị cấm: thẻ sẽ bị khóa, có thể bị xử phạt, và nếu mất tiền không trả nổi sẽ rơi vào nợ xấu.",
+      "subtitle": [
+        "Thứ hai: Quẹt máy POS khống là hành vi bị cấm, bị khóa thẻ, xử phạt,",
+        "và nếu mất tiền không trả nổi sẽ rơi vào nợ xấu."
+      ],
+      "timeline_start_sec": 240.0,
+      "timeline_end_sec": 250.62,
+      "timeline_window_sec": 10.8,
+      "fits_timeline_window": true,
+      "wav_path": "factory196/materialAndDraft/EP01/audio/tts/line28_narr.wav",
+      "metrics": {
+        "sample_rate": 48000,
+        "channels": 1,
+        "duration_sec": 10.62,
+        "peak_dbfs": -3.0,
+        "rms_dbfs": -20.08
+      },
+      "qa_status": "PASS",
+      "human_listen_check": "PENDING"
+    },
+    {
+      "line_id": "line29a_narr",
+      "speaker": "nguoi_boc_tran",
+      "speaker_label": "Người Bóc Trần (dẫn chuyện của kênh)",
+      "label_short": "BÓC TRẦN",
+      "voice": "Charon",
+      "style": "Giọng nam trung niên miền Nam, điềm tĩnh, rõ ràng, ấm và đáng tin như một người anh lớn đang nhắc nhở người nhà; nhịp vừa phải, nhấn chữ quan trọng.",
+      "af": "highpass=f=70,equalizer=f=150:width_type=o:width=1.2:g=2.5,acompressor=threshold=-18dB:ratio=2.5:attack=10:release=120:makeup=2dB",
+      "engine": "gemini-3.8-flash-tts",
+      "text": "Giao thẻ tín dụng, mã CVV và mã OTP cho dịch vụ POS khống chẳng khác nào trao chìa khóa két sắt rồi ký nhận nợ thay kẻ gian.",
+      "subtitle": [
+        "Giao thẻ tín dụng, 3 số CVV và mã OTP cho dịch vụ POS khống",
+        "chẳng khác nào trao chìa khóa két sắt rồi ký nhận nợ thay kẻ gian."
+      ],
+      "timeline_start_sec": 251.3,
+      "timeline_end_sec": 261.76,
+      "timeline_window_sec": 10.7,
+      "fits_timeline_window": true,
+      "wav_path": "factory196/materialAndDraft/EP01/audio/tts/line29a_narr.wav",
+      "metrics": {
+        "sample_rate": 48000,
+        "channels": 1,
+        "duration_sec": 10.46,
+        "peak_dbfs": -3.0,
+        "rms_dbfs": -19.79
+      },
+      "qa_status": "PASS",
+      "human_listen_check": "PASS"
+    },
+    {
+      "line_id": "line29b_narr",
+      "speaker": "nguoi_boc_tran",
+      "speaker_label": "Người Bóc Trần (dẫn chuyện của kênh)",
+      "label_short": "BÓC TRẦN",
+      "voice": "Charon",
+      "style": "Giọng nam trung niên miền Nam, điềm tĩnh, rõ ràng, ấm và đáng tin như một người anh lớn đang nhắc nhở người nhà; nhịp vừa phải, nhấn chữ quan trọng.",
+      "af": "highpass=f=70,equalizer=f=150:width_type=o:width=1.2:g=2.5,acompressor=threshold=-18dB:ratio=2.5:attack=10:release=120:makeup=2dB",
+      "engine": "gemini-3.8-flash-tts",
+      "text": "Tuyệt đối đừng vì lời mời phí rẻ một, hai phần trăm mà đánh đổi cả tài sản lẫn sự an toàn pháp lý của chính mình.",
+      "subtitle": [
+        "Tuyệt đối đừng vì lời mời phí rẻ 1–2% mà đánh đổi",
+        "cả tài sản lẫn sự an toàn pháp lý của chính mình."
+      ],
+      "timeline_start_sec": 262.1,
+      "timeline_end_sec": 269.96,
+      "timeline_window_sec": 8.1,
+      "fits_timeline_window": true,
+      "wav_path": "factory196/materialAndDraft/EP01/audio/tts/line29b_narr.wav",
+      "metrics": {
+        "sample_rate": 48000,
+        "channels": 1,
+        "duration_sec": 7.86,
+        "peak_dbfs": -3.0,
+        "rms_dbfs": -17.94
+      },
+      "qa_status": "PASS",
+      "human_listen_check": "PASS"
+    },
+    {
+      "line_id": "line30_anhhai",
+      "speaker": "anh_hai",
+      "speaker_label": "Anh Hai – lao động/nhân viên/chồng Chị Ba 35 tuổi",
+      "label_short": "ANH HAI",
+      "voice": "Orus",
+      "style": "Giọng nam miền Nam 35 tuổi, thẳng tính, tỉnh táo, chăm làm, luôn bình tĩnh giữ nhịp cho gia đình.",
+      "af": "highpass=f=80,acompressor=threshold=-18dB:ratio=2.5:attack=8:release=100:makeup=2dB",
+      "engine": "gemini-3.8-flash-tts",
+      "text": "Tối qua em đã gọi tổng đài khóa thẻ khẩn cấp cho Tùng liền rồi, giờ mình ra ngân hàng yêu cầu tra soát và trình báo cơ quan chức năng.",
+      "subtitle": [
+        "Tối qua em đã gọi tổng đài khóa thẻ khẩn cấp cho Tùng liền rồi,",
+        "giờ mình ra ngân hàng yêu cầu tra soát và trình báo cơ quan chức năng."
+      ],
+      "timeline_start_sec": 270.8,
+      "timeline_end_sec": 278.9,
+      "timeline_window_sec": 8.8,
+      "fits_timeline_window": true,
+      "wav_path": "factory196/materialAndDraft/EP01/audio/tts/line30_anhhai.wav",
+      "metrics": {
+        "sample_rate": 48000,
+        "channels": 1,
+        "duration_sec": 8.1,
+        "peak_dbfs": -3.0,
+        "rms_dbfs": -21.13
+      },
+      "qa_status": "PASS",
+      "human_listen_check": "PENDING"
+    }
+  ],
+  "note": "Bắt buộc nghe lại từng câu (dấu thanh, cảm xúc). Đặt human_listen_check = PASS sau khi duyệt."
+}

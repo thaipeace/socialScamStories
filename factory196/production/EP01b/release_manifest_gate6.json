@@ -1,0 +1,72 @@
+{
+  "episode_id": "EP01b",
+  "factory": "factory196",
+  "aspect_ratio": "16:9",
+  "title": "Đáo hạn thẻ – Một buổi chiều mất xe",
+  "gate": "GATE_6_PRODUCTION_RELEASE",
+  "status": "PRODUCED_READY_FOR_PUBLISH",
+  "released_at": "2026-11-11T19:58:47.579773+07:00",
+  "master_video": {
+    "path": "factory196/production/EP01b/EP01b_DaoHanTheMotBuoiChieuMatXe_309s.mp4",
+    "mirror": "06_RENDERED_VIDEOS/EP01b_DaoHanTheMotBuoiChieuMatXe_309s.mp4",
+    "srt": "factory196/production/EP01b/EP01b_DaoHanTheMotBuoiChieuMatXe_309s.srt",
+    "thumbnail_9x16": "factory196/production/EP01b/EP01b_Thumbnail_9x16.jpg",
+    "thumbnail_16x9": "factory196/production/EP01b/EP01b_Thumbnail_16x9.jpg",
+    "thumbnail_sec": 194.3,
+    "size_mb": 142.06,
+    "sha256": "149c3b735fd658e58a41fb0fb57b182e18eca6d52d9a5b1a15f0f8dcbb4b067b"
+  },
+  "youtube_upload": {
+    "primary_title": "Đáo Hạn Thẻ Tín Dụng Qua Máy POS: Một Buổi Chiều Mất Xe, Mất Luôn Tiền Của Mẹ | Bóc Trần Lừa Đảo",
+    "primary_title_length": 96,
+    "alternative_titles": [
+      "Tiết Kiệm Triệu Rưỡi Phí Đáo Hạn – Trả Giá Bằng 80 Triệu Tiền Mặt | Bóc Trần Lừa Đảo",
+      "Thẻ Bị Khóa Giữa Lúc Đáo Hạn: Chuyện Gì Xảy Ra Với 80 Triệu? | Bóc Trần Lừa Đảo"
+    ],
+    "description": "Tùng, 27 tuổi, cháy tài khoản tiền ảo, sống bằng thẻ tín dụng rồi dùng dịch vụ 'đáo hạn thẻ' qua máy POS suốt 3 tháng. Đến buổi chiều chủ tiệm vừa chuyển 80 triệu trả nợ giùm thì ngân hàng chặn giao dịch và khóa thẻ – món nợ ngân hàng lập tức biến thành nợ tiền mặt phải trả ngay.\n\n⏱️ Các hồi trong phim:\n00:00 Mở đầu – 80 triệu vô thẻ, không rút ra được\n00:20 Hồi 1 – Lương đổ vào coin, sinh hoạt đổ vào thẻ\n01:18 Hồi 2 – Lời rủ rê từ người nhà\n02:09 Hồi 3 – Căn phòng không có hàng hóa\n03:05 Hồi 4 – Thế kẹt: nợ ngân hàng hóa nợ tiền mặt\n04:11 Hồi 5 – Bóc trần & việc nên làm\n04:49 Dấu hiệu nhận biết\n\n🎬 ĐÂY LÀ PHIM HOẠT HÌNH DỰNG LẠI TÌNH HUỐNG ĐỂ CẢNH BÁO\nNhân vật, tên gọi, số điện thoại, số tiền trong phim đều là hư cấu nhằm mục đích cảnh báo.\n\n🤖 Hình ảnh và âm thanh được hỗ trợ sản xuất bởi công cụ AI.\n\n#bóctrầnlừađảo #cảnhgiáclừađảo #vạnchuyện",
+    "tags_csv": "đáo hạn thẻ tín dụng, máy POS khống, thẻ tín dụng bị khóa, bóc trần lừa đảo, vạn chuyện, cảnh giác lừa đảo, kỹ năng thoát hiểm, an toàn đời thực, phim hoạt hình cảnh báo, hồ sơ lừa đảo",
+    "tags_list": [
+      "đáo hạn thẻ tín dụng",
+      "máy POS khống",
+      "thẻ tín dụng bị khóa",
+      "bóc trần lừa đảo",
+      "vạn chuyện",
+      "cảnh giác lừa đảo",
+      "kỹ năng thoát hiểm",
+      "an toàn đời thực",
+      "phim hoạt hình cảnh báo",
+      "hồ sơ lừa đảo"
+    ],
+    "hashtags": [
+      "#bóctrầnlừađảo",
+      "#cảnhgiáclừađảo",
+      "#vạnchuyện"
+    ],
+    "pinned_comment": "📌 Đáo hạn không phải trả nợ – chỉ là dời nợ có tính phí. Kẹt nợ thẻ, hãy gọi thẳng ngân hàng hỏi trả góp hoặc mức đóng tối thiểu. Không quẹt khống, không giao thẻ/CVV/OTP cho bất kỳ ai.",
+    "studio_settings": {
+      "playlist": "Hồ Sơ Bóc Trần Lừa Đảo – Phim Dài Chuyên Sâu",
+      "made_for_kids": false,
+      "age_restricted": false,
+      "altered_or_synthetic_content": true,
+      "category": "Education (Giáo dục)",
+      "video_language": "vi",
+      "subtitles_file": "factory196/production/EP01b/EP01b_DaoHanTheMotBuoiChieuMatXe_309s.srt",
+      "comments": "ON_MODERATION_BASIC"
+    },
+    "copy_paste_files": {
+      "title_txt": "factory196/production/EP01b/youtube_upload/1_TITLE.txt",
+      "description_txt": "factory196/production/EP01b/youtube_upload/2_DESCRIPTION.txt",
+      "tags_txt": "factory196/production/EP01b/youtube_upload/3_TAGS.txt",
+      "pinned_comment_txt": "factory196/production/EP01b/youtube_upload/4_PINNED_COMMENT.txt",
+      "studio_settings_md": "factory196/production/EP01b/youtube_upload/5_YOUTUBE_STUDIO_SETTINGS.md"
+    }
+  },
+  "gate5_reference": "factory196/staging/EP01b/qa_audit_report_gate5.json",
+  "compliance_flags": {
+    "no_real_identity": true,
+    "no_how_to_detail": true,
+    "red_flags_card": true,
+    "dramatized_disclaimer": true,
+    "ai_disclosure_required": true
+  }
+}

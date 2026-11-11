@@ -16,18 +16,23 @@ Bộ tiêu chí ngắn gọn, tổng quát dùng để kiểm tra bắt buộc c
 4. **Sự nao núng thật, phân hóa phản ứng & kết cục có điểm tựa phòng vệ gốc:**
    - Đặt song song **người vì quá hoảng loạn trước đòn công nghệ cao đã lỡ chuyển tiền** bên cạnh **người kịp nhận ra dấu hiệu bất thường và gọi kiểm chứng xác thực**.
    - Kết thúc vừa có sự sẻ chia đời thường (*"con bình an không sao là may rồi"*), vừa xoáy thẳng vào **nguyên nhân gốc và nguyên tắc bất di bất dịch** (không đăng thông tin cá nhân/trường lớp của con lên mạng; chưa kiểm chứng xác thực thì tuyệt đối không chuyển tiền).
-5. **Điểm bẻ lái / Ý nghĩ cứu cánh hợp lý (Saving Hook):** Khoảnh khắc thoát bẫy hoặc phát hiện sự thật phải xuất phát từ một chi tiết thực tế hợp lý, dẫn đến hành động kiểm chứng an toàn (không làm lố, không tự đi "bắt cướp" phi thực tế hoặc dễ bị tố ngược).
-6. **Giải thích cơ chế bằng ẩn dụ bình dân:** Mọi thủ đoạn phức tạp phải được chuyển thành hình ảnh biểu tượng trực quan và lời thoại đời thường để khán giả phổ thông hiểu ngay trong 1 lần nghe.
+5. **Điểm bẻ lái / Ý nghĩ cứu cánh hợp lý (Saving Hook):** Khoảnh khắc thoát bẫy hoặc phát hiện sự thật phải xuất phát từ một chi tiết thực tế hợp lý, dẫn đến hành động kiểm chứng an toàn (không làm lố, không tự đi "bắt cướp" phi thực tế, không dùng việc dọa báo công an làm đòn mặc cả khi bản thân nhân vật cũng vi phạm).
+6. **Giải thích cơ chế bằng ẩn dụ bình dân & tỷ lệ 80/20 cho phim dài (`factory196`):**
+   - Mọi thủ đoạn phức tạp phải chuyển thành hình ảnh trực quan và lời thoại đời thường, ngắn gọn, không giảng bài nghiệp vụ.
+   - Với **phim dài 16:9 (`4 – 5+ phút`, `≥ 240s`)**: giữ **`~80%` thời lượng cho câu chuyện đời thực của 1 nhân vật trung tâm** (đầu tư chiều sâu đời tư, tính cách, sĩ diện, hoàn cảnh gia đình) và **`~20%` cho sơ đồ minh họa + đúc kết của Người Bóc Trần ở cuối phim**. Không cưỡng ép tình tiết "lừa giật một lần" vào tiệm quen có địa chỉ cố định; phải phản biện đa chiều cả logic đời sống lẫn độ chính xác pháp lý/tài chính trước khi dựng.
 
 ---
 
 ## II. HARNESS KỸ THUẬT & KIỂM DUYỆT (TECHNICAL & QA HARNESS)
 
-1. **Hình ảnh (`Gate 1`):** Chuẩn khung dọc `9:16`, ánh sáng đúng thời gian bối cảnh, nhân vật đồng nhất ngoại hình với `02_CAST/cast.json`, tuyệt đối không có chữ/số/logo/giao diện thật/máu me, dành trống 25% đáy khung hình cho phụ đề.
-2. **Giọng đọc TTS (`Gate 2`):**
+1. **Hình ảnh (`Gate 1`) & Khớp chuyển cảnh:**
+   - Chuẩn khung dọc `9:16` (`factory619`) hoặc khung ngang `16:9` không viền đen letterbox (`factory196`), nhân vật đồng nhất ngoại hình, tuyệt đối không có chữ/số/logo/giao diện thật/máu me.
+   - **Cảnh phải lên hình trước tiếng (`0.25–0.4s`):** Khi đổi bối cảnh sang nhân vật mới, cảnh mới phải cắt vào trước khi giọng nhân vật đó cất lên, tránh tiếng đi trước hình.
+2. **Giọng đọc TTS (`Gate 2`) & Phân tách âm sắc:**
    - Bắt buộc dùng model đầy đủ (`gemini-3.8-flash-tts`), cấm dùng filter bẻ cao độ/tốc độ (`asetrate`, `atempo`).
-   - Từ vựng trong lời thoại phải đồng nhất phương ngữ miền Nam với `style` của nhân vật để AI không bị lệch giọng giữa các câu.
-   - Bắt buộc **nghe kiểm tra từng file `.mp3`** (đúng giọng, đúng cảm xúc, không bị cắt mất chữ cuối, vừa khít `window`) trước khi qua `Gate 3`.
+   - **Phân biệt rõ giọng nhân vật cùng giới:** Khi có 2–3 nhân vật nam (hoặc nữ) trong cùng tập, phải chọn `voice` và `style` khác hẳn nhau về độ trầm/sáng và tốc độ nói để nghe phân biệt được ngay.
+   - Từ vựng trong lời thoại phải đồng nhất phương ngữ miền Nam; câu thoại gọn, súc tích (`≤ 26 từ/câu`, mật độ phim dài `~120–140 từ/phút`).
+   - Bắt buộc **nghe kiểm tra từng file `.mp3`** và dàn lại timeline theo thời lượng WAV thực tế sau `Gate 2`.
 3. **Nhịp dựng & Kỷ luật xuất bản (`Gate 3 → Gate 5`):**
-   - Tổng từ thoại `≤ 115 từ / 56s`, mỗi câu vừa cửa sổ thời gian, có khoảng thở và điểm nhấn âm thanh ở cú lật (`34.0s`).
-   - Luôn dừng ở **Staging (`Gate 5`)**, kiểm tra đủ 8 điểm QA và các khung hình `preview_frames` trước khi trình duyệt.
+   - Short `9:16`: `≤ 115 từ / 56s`. Phim dài `16:9`: linh hoạt **`4 – 5+ phút` (`240s – 330s`)**, không kéo dài câu chữ lê thê cho đủ phút.
+   - Luôn dừng ở **Staging (`Gate 5`)**, kiểm tra đủ 8 điểm QA và các khung hình `preview_frames`, chờ chủ kênh duyệt mới chạy `Gate 6`.

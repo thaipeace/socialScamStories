@@ -1,0 +1,73 @@
+{
+  "channel": {
+    "name": "VẠN CHUYỆN",
+    "logo_text": "VCH",
+    "logo_color_rgb": [214, 30, 38],
+    "logo_opacity": 0.88,
+    "watermark_text": "VẠN CHUYỆN",
+    "watermark_opacity": 0.24,
+    "series_name": "BÓC TRẦN LỪA ĐẢO · HỒ SƠ CHUYÊN SÂU",
+    "series_tagline": "Xem để không bị lừa"
+  },
+  "canvas": {
+    "width": 1920,
+    "height": 1080,
+    "fps": 30,
+    "aspect_ratio": "16:9"
+  },
+  "format": {
+    "default_duration_sec": 270.0,
+    "min_duration_sec": 240.0,
+    "max_duration_sec": 1800.0,
+    "hook_must_start_before_sec": 2.0,
+    "red_flags_min_items": 3,
+    "red_flags_max_items": 6,
+    "disclaimer_min_sec": 3.0,
+    "max_words_per_line": 35,
+    "max_words_per_min": 185,
+    "recommended_words_per_line": 26,
+    "recommended_words_per_min": 135,
+    "subtitle_merge_chars": 44,
+    "rendered_dir": "06_RENDERED_VIDEOS"
+  },
+  "safe_zone": {
+    "left_x": 120,
+    "right_x": 1800,
+    "max_y": 980,
+    "top_hook_y": 96,
+    "platform_ui_bottom_y": 980
+  },
+  "palette": {
+    "accent_rgb": [255, 196, 0],
+    "danger_rgb": [230, 40, 45],
+    "safe_rgb": [40, 200, 120],
+    "panel_rgba": [10, 14, 22, 220],
+    "subtitle_rgb": [255, 236, 130]
+  },
+  "disclaimer": {
+    "header": "LƯU Ý",
+    "lines": [
+      "Tình huống trong phim được dựng lại nhằm mục đích cảnh báo cộng đồng.",
+      "Nhân vật, tên gọi, số điện thoại, tài khoản và số liệu đều là hư cấu."
+    ]
+  },
+  "audio": {
+    "sample_rate": 48000,
+    "dialogue_peak_dbfs": -3.0,
+    "master_peak_range_dbfs": [-6.0, -0.8],
+    "duck_bgm_db": -10.0,
+    "duck_ambience_db": -7.0
+  },
+  "tts": {
+    "model": "gemini-3.8-flash-tts",
+    "fallback_model": "gemini-3.8-flash-lite-tts",
+    "endpoint": "https://generativelanguage.googleapis.com/v1beta/interactions",
+    "keys_file": "C:/projects/HaizFlow-main/runtime/data/gemini-api-keys.json",
+    "env_var": "GEMINI_API_KEY"
+  },
+  "publish": {
+    "ai_label": "🤖 Hình ảnh và âm thanh được hỗ trợ sản xuất bởi công cụ AI.",
+    "dramatized_label": "🎬 ĐÂY LÀ PHIM HOẠT HÌNH DỰNG LẠI TÌNH HUỐNG ĐỂ CẢNH BÁO",
+    "default_hashtags": ["#bóctrầnlừađảo", "#cảnhgiáclừađảo", "#vạnchuyện"]
+  }
+}

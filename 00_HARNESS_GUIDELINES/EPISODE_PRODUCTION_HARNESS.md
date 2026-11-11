@@ -62,6 +62,13 @@ factory/production/<EP>/         ── Gate 6 (đóng gói phát hành) → b�
 >
 > 7. **Cao trào âm nhạc & SFX đúng điểm bùng nổ (Climax Punch):**
 >    - Điểm lật tình huống (twist/climax) phải có combo `riser` dẫn nhịp -> `impact` + `flash_white` + `shakes` -> nhạc nền `action_climax` đẩy gain rõ rệt và tiếng động hiện trường (`whistle`, `footsteps`).
+>
+> 8. **Chuẩn riêng bắt buộc cho Phim dài 16:9 `factory196` (Đúc kết từ `EP01` → `EP01b`, chi tiết tại [LONG_FORMAT_196_SPEC.md](LONG_FORMAT_196_SPEC.md)):**
+>    - **Thời lượng linh hoạt `4 – 5+ phút` (`min_duration_sec = 240s`)**: Không gò ép kéo dài cho đủ 5 phút bằng lời thoại giải thích lê thê; câu thoại phải ngắn gọn, đủ ý (`≤ 26 từ/câu`, mật độ `~120–140 từ/phút`).
+>    - **Kể chuyện đời sống (`~80%` kịch nhân vật / `~20%` sơ đồ & Người Bóc Trần)**: Chọn 1 nhân vật chính để khắc họa sâu đời tư, tính cách, hoàn cảnh gia đình; không biến nhân vật thành cái máy giảng nghiệp vụ/pháp luật.
+>    - **Phản biện đa chiều Pháp lý & Logic trước khi dựng**: Không ép tình tiết "lừa giật một lần" vào điểm giao dịch quen cố định; không nói sai cơ chế tài chính/pháp luật (như CIC, giữ căn cước, hứa duyệt trả góp); xưng hô đúng vai vế gia đình (vợ của Anh Hai là **Chị Hai**).
+>    - **Tách biệt rõ rệt giọng các nhân vật cùng giới**: Có từ 2–3 nhân vật nam/nữ trở lên thì phải gán `voice` + `style` khác hẳn nhau về âm sắc (cao sáng vs. trầm khàn vs. mượt chậm) để người nghe phân biệt được ngay.
+>    - **Cảnh vào trước tiếng & Dàn timeline theo TTS thật**: Cảnh mới phải lên hình trước ít nhất `0.25–0.4s` rồi nhân vật mới cất tiếng; sau Gate 2 bắt buộc căn lại toàn bộ timeline và mốc YouTube chapters theo thời lượng WAV thật.
 
 ### GATE 0 – ĐẦU VÀO (`run.py gate0 <EP>`)
 Tự kiểm: thời lượng hợp lệ · cảnh phủ kín timeline & đủ ảnh · speaker có trong cast · độ dài thoại · thẻ dấu hiệu 2–4 ý + việc nên làm · có hook · có kịch bản · `clearance/CLEARANCE.md` ghi `TRẠNG THÁI TỔNG: ĐẠT`.

@@ -1,0 +1,138 @@
+{
+  "episode_id": "EPXX",
+  "slug": "TenTapPhimDaiKhongDau",
+  "title": "<Tên tập phim dài 16:9>",
+  "version": "v1",
+  "scam_family": "<mã nhóm trong 01_SCAM_MAP, ví dụ ON-01>",
+  "duration_sec": 300.0,
+
+  "hook": {
+    "kicker": "HỒ SƠ BÓC TRẦN LỪA ĐẢO",
+    "title": "<Câu hook mở màn kịch tính ≤ 14 từ>",
+    "start": 0.4,
+    "end": 5.5
+  },
+
+  "chapters": [
+    {"kicker": "HỒI 1 · MỒI NHỬ ĐỜI THƯỜNG", "title": "<Hoàn cảnh nạn nhân & điểm tiếp cận đầu tiên>", "start": 25.0, "end": 30.0},
+    {"kicker": "HỒI 2 · CHIẾC BẪY TÂM LÝ", "title": "<Kịch bản tạo lòng tin & dẫn dụ từng bước>", "start": 90.0, "end": 95.0},
+    {"kicker": "HỒI 3 · CÔ LẬP & DỒN ÉP", "title": "<Đòn tâm lý thời gian & cao trào trước cú chốt>", "start": 165.0, "end": 170.0},
+    {"kicker": "HỒI 4 · LẬT MẶT ĐƯỜNG DÂY", "title": "<Khoảnh khắc tỉnh táo & giải phẫu cơ chế lừa đảo>", "start": 225.0, "end": 230.0}
+  ],
+
+  "scenes": [
+    {"id": "s01_hook",        "image": "assets/scene01.jpg", "start": 0.0,   "end": 25.0,
+     "motion": {"scale": [1.06, 1.14], "focus": [[0.5, 0.5], [0.5, 0.46]], "wobble": "tense"},
+     "shakes": [{"at": 0.8, "amp": 24}]},
+    {"id": "s02_boi_canh",    "image": "assets/scene02.jpg", "start": 25.0,  "end": 55.0,
+     "motion": {"scale": [1.02, 1.09], "focus": [[0.48, 0.5], [0.52, 0.48]], "wobble": "calm"},
+     "transition_in": {"type": "dissolve", "dur": 0.4}},
+    {"id": "s03_tiep_can",    "image": "assets/scene03.jpg", "start": 55.0,  "end": 90.0,
+     "motion": {"scale": [1.03, 1.10], "focus": [[0.5, 0.5], [0.48, 0.46]], "wobble": "calm"},
+     "transition_in": {"type": "dissolve", "dur": 0.4}},
+    {"id": "s04_tha_moi",     "image": "assets/scene04.jpg", "start": 90.0,  "end": 125.0,
+     "motion": {"scale": [1.03, 1.11], "focus": [[0.52, 0.5], [0.48, 0.48]], "wobble": "calm"},
+     "transition_in": {"type": "dissolve", "dur": 0.4}},
+    {"id": "s05_thao_tung",   "image": "assets/scene05.jpg", "start": 125.0, "end": 165.0,
+     "motion": {"scale": [1.04, 1.13], "focus": [[0.5, 0.48], [0.5, 0.44]], "wobble": "handheld"},
+     "transition_in": {"type": "dissolve", "dur": 0.4}},
+    {"id": "s06_co_lap",      "image": "assets/scene06.jpg", "start": 165.0, "end": 195.0,
+     "motion": {"scale": [1.05, 1.15], "focus": [[0.5, 0.5], [0.46, 0.44]], "wobble": "handheld"},
+     "transition_in": {"type": "dissolve", "dur": 0.35}},
+    {"id": "s07_cao_trao",    "image": "assets/scene07.jpg", "start": 195.0, "end": 225.0,
+     "motion": {"scale": [1.14, 1.04], "focus": [[0.52, 0.46], [0.5, 0.5]], "wobble": "tense"},
+     "transition_in": {"type": "flash_red", "dur": 0.3},
+     "shakes": [{"at": 195.4, "amp": 30}]},
+    {"id": "s08_cu_lat",      "image": "assets/scene08.jpg", "start": 225.0, "end": 250.0,
+     "motion": {"scale": [1.08, 1.02], "focus": [[0.48, 0.48], [0.5, 0.5]], "wobble": "handheld"},
+     "transition_in": {"type": "flash_white", "dur": 0.3},
+     "shakes": [{"at": 225.3, "amp": 28}]},
+    {"id": "s09_boc_tran",    "image": "assets/scene09.jpg", "start": 250.0, "end": 280.0,
+     "motion": {"scale": [1.02, 1.09], "focus": [[0.5, 0.5], [0.5, 0.46]], "wobble": "calm"},
+     "transition_in": {"type": "glitch", "dur": 0.4}},
+    {"id": "s10_dau_hieu",    "image": "assets/scene10.jpg", "start": 280.0, "end": 300.0,
+     "motion": {"scale": [1.02, 1.06], "focus": [[0.5, 0.5], [0.5, 0.5]], "wobble": "none"},
+     "transition_in": {"type": "fade_black", "dur": 0.45}}
+  ],
+
+  "dialogue": [
+    {"id": "l01", "speaker": "ke_gia_danh",    "start": 1.2,   "window": 6.0, "text": "<Câu mở đầu gây sốc ở Hook>"},
+    {"id": "l02", "speaker": "nguoi_boc_tran", "start": 10.0,  "window": 10.0, "text": "<Lời dẫn mở hồ sơ vụ việc>"},
+    {"id": "l03", "speaker": "co_tu",          "start": 32.0,  "window": 8.0, "text": "<Thoại bối cảnh đời thường của nạn nhân>"},
+    {"id": "l04", "speaker": "ke_ngot_ngao_nu","start": 60.0,  "window": 8.0, "text": "<Kẻ lừa tiếp cận ngọt ngào ở Hồi 1>"},
+    {"id": "l05", "speaker": "co_tu",          "start": 98.0,  "window": 8.0, "text": "<Nạn nhân bắt đầu tin tưởng ở Hồi 2>"},
+    {"id": "l06", "speaker": "ke_gia_danh",    "start": 132.0, "window": 9.0, "text": "<Kẻ lừa tung đòn thao túng ở Hồi 2>"},
+    {"id": "l07", "speaker": "ke_gia_danh",    "start": 172.0, "window": 9.0, "text": "<Kẻ lừa cô lập và ép thời gian ở Hồi 3>"},
+    {"id": "l08", "speaker": "co_tu",          "start": 200.0, "window": 8.0, "text": "<Nạn nhân hoảng loạn trước cú chốt>"},
+    {"id": "l09", "speaker": "anh_hai",        "start": 227.0, "window": 9.0, "text": "<Người thân/nhân vật tỉnh táo can thiệp lật tình thế ở Hồi 4>"},
+    {"id": "l10", "speaker": "nguoi_boc_tran", "start": 252.0, "window": 18.0, "text": "<Người Bóc Trần phân tích cơ chế tâm lý và nguyên tắc phòng vệ gốc>"}
+  ],
+
+  "chat_bubbles": [],
+  "callouts": [],
+
+  "red_flags": {
+    "start": 280.0,
+    "end": 295.0,
+    "stagger_sec": 1.2,
+    "title": "NHỚ KỸ – DẤU HIỆU NHẬN BIẾT",
+    "items": [
+      "<Dấu hiệu nhận biết 1>",
+      "<Dấu hiệu nhận biết 2>",
+      "<Dấu hiệu nhận biết 3>"
+    ],
+    "action": "<Việc nên làm ngay: dừng thao tác, kiểm chứng qua kênh độc lập và báo người thân>"
+  },
+
+  "disclaimer": {"start": 295.0, "end": 300.0},
+
+  "audio": {
+    "ambience": [
+      {"preset": "room_tone",  "start": 0.0,   "end": 165.0},
+      {"preset": "night_room", "start": 165.0, "end": 250.0},
+      {"preset": "room_tone",  "start": 250.0, "end": 300.0, "gain_db": -4.0}
+    ],
+    "foley": [
+      {"preset": "phone_ring",    "at": 0.3,   "dur": 2.5},
+      {"preset": "chapter_sting", "at": 25.0},
+      {"preset": "notification",  "at": 58.0},
+      {"preset": "chapter_sting", "at": 90.0},
+      {"preset": "chapter_sting", "at": 165.0},
+      {"preset": "heartbeat",     "at": 196.0, "dur": 12.0},
+      {"preset": "riser",         "at": 222.0, "dur": 3.0},
+      {"preset": "impact",        "at": 225.0, "dur": 2.2},
+      {"preset": "glitch",        "at": 250.0},
+      {"preset": "bank_ting",     "at": 280.0}
+    ],
+    "bgm": [
+      {"preset": "suspense_pulse",      "start": 0.0,   "end": 25.0},
+      {"preset": "investigative_story", "start": 25.0,  "end": 125.0},
+      {"preset": "suspense_pulse",      "start": 125.0, "end": 195.0},
+      {"preset": "tension_drone",       "start": 195.0, "end": 225.0, "gain_db": 2.0},
+      {"preset": "action_climax",       "start": 225.0, "end": 250.0, "gain_db": 2.5},
+      {"preset": "investigative_story", "start": 250.0, "end": 280.0},
+      {"preset": "warm_outro",          "start": 280.0, "end": 300.0}
+    ],
+    "duck_extra": [
+      {"start": 224.5, "end": 226.5, "bgm_db": -14, "amb_db": -10}
+    ]
+  },
+
+  "forbidden_terms": [],
+
+  "publish": {
+    "titles": [
+      "<Tiêu đề chính 16:9 (≤100 ký tự) | Bóc Trần Lừa Đảo>",
+      "<Tiêu đề dự phòng A/B Test 1>",
+      "<Tiêu đề dự phòng A/B Test 2>"
+    ],
+    "description": "<Tóm tắt câu chuyện 3–4 câu>\n\n⏱️ Các hồi trong phim:\n00:00 Mở đầu – Khoảnh khắc đối mặt\n00:25 Hồi 1 – Mồi nhử đời thường\n01:30 Hồi 2 – Chiếc bẫy tâm lý\n02:45 Hồi 3 – Cô lập & dồn ép\n03:45 Hồi 4 – Lật mặt đường dây & Bóc trần cơ chế\n04:40 Hệ thống dấu hiệu nhận biết & Việc nên làm",
+    "pinned_comment": "📌 Gia đình bạn đã bao giờ gặp tình huống tương tự chưa? Hãy chia sẻ kinh nghiệm cảnh giác ở phần bình luận nhé (lưu ý không đăng số điện thoại, số tài khoản hay tên cá nhân/tổ chức thật).",
+    "hashtags": ["#bóctrầnlừađảo", "#cảnhgiáclừađảo", "#vạnchuyện"],
+    "tags": ["bóc trần lừa đảo", "cảnh giác lừa đảo", "hồ sơ lừa đảo", "kỹ năng thoát hiểm", "vạn chuyện"],
+    "category": "Education (Giáo dục)",
+    "playlist": "Hồ Sơ Bóc Trần Lừa Đảo – Phim Dài Chuyên Sâu",
+    "thumbnail_sec": 198.0
+  }
+}
+

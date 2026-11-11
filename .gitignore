@@ -2,18 +2,26 @@
 *.mp4
 06_RENDERED_SHORTS/*
 !06_RENDERED_SHORTS/.gitkeep
+06_RENDERED_VIDEOS/*
+!06_RENDERED_VIDEOS/.gitkeep
 
 # WAV trung gian tái tạo được bằng engine (giữ MP3 và WAV giọng TTS gốc)
-factory/materialAndDraft/*/audio/mix/*.wav
-factory/materialAndDraft/*/audio/sfx/*.wav
-factory/materialAndDraft/*/audio/bgm/*.wav
+factory619/materialAndDraft/*/audio/mix/*.wav
+factory619/materialAndDraft/*/audio/sfx/*.wav
+factory619/materialAndDraft/*/audio/bgm/*.wav
+factory196/materialAndDraft/*/audio/mix/*.wav
+factory196/materialAndDraft/*/audio/sfx/*.wav
+factory196/materialAndDraft/*/audio/bgm/*.wav
 
 # Tập chạy thử engine
-factory/*/EP00_SMOKE/
+factory619/*/EP00_SMOKE/
+factory196/*/EP00_SMOKE/
 
 # Backup / tạm
-factory/materialAndDraft/*/assets/originals_backup/
-factory/materialAndDraft/*/_archive_*/
+factory619/materialAndDraft/*/assets/originals_backup/
+factory619/materialAndDraft/*/_archive_*/
+factory196/materialAndDraft/*/assets/originals_backup/
+factory196/materialAndDraft/*/_archive_*/
 __pycache__/
 *.py[cod]
 .DS_Store
@@ -22,4 +30,3 @@ Thumbs.db
 # Không bao giờ commit khóa API
 *api-keys*.json
 .env
-
