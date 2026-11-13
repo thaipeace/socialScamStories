@@ -1,0 +1,20 @@
+{
+  "2": {
+    "status": "PASS",
+    "by": "Chủ kênh",
+    "note": "Chủ kênh duyệt staging lên production",
+    "at": "2026-11-13T21:36:31+07:00"
+  },
+  "4": {
+    "status": "PASS",
+    "by": "Chủ kênh",
+    "note": "Chủ kênh duyệt staging lên production",
+    "at": "2026-11-13T21:36:31+07:00"
+  },
+  "5": {
+    "status": "PASS",
+    "by": "Chủ kênh",
+    "note": "Chủ kênh duyệt staging lên production",
+    "at": "2026-11-13T21:36:31+07:00"
+  }
+}

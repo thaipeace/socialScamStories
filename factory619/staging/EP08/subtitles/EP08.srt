@@ -1,0 +1,43 @@
+1
+00:00:00,380 --> 00:00:01,501
+Bài đạt rồi nha!
+
+2
+00:00:01,501 --> 00:00:04,652
+Chị mới chuyển ba triệu rưỡi, biên lai đó em.
+
+3
+00:00:04,890 --> 00:00:07,990
+Ủa sao máy em chưa báo tiền vô chị?
+
+4
+00:00:08,660 --> 00:00:10,192
+Cuối năm nghẽn liên ngân hàng.
+
+5
+00:00:10,192 --> 00:00:13,052
+Bấm link xác nhận nhận tiền đi, quá giờ nó hoàn lệnh đó.
+
+6
+00:00:14,520 --> 00:00:17,680
+Mã giải ngân về máy rồi kìa, nhập lẹ đi em, sắp hết giờ!
+
+7
+00:00:17,880 --> 00:00:19,900
+Dạ có mã rồi, em bấm liền!
+
+8
+00:00:26,430 --> 00:00:29,870
+Ủa, sao lại trừ sạch tiền của em?!
+
+9
+00:00:29,870 --> 00:00:31,994
+Alo, chặn số mất rồi!
+
+10
+00:00:33,140 --> 00:00:37,400
+Biên lai báo nghẽn chỉ là mồi nhử để dẫn bạn vào trang giả.
+
+11
+00:00:37,660 --> 00:00:44,000
+Link và mã OTP nhận lương đó thực chất trao quyền cho kẻ gian rút cạn tài khoản.

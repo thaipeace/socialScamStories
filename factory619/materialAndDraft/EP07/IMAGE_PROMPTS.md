@@ -1,32 +1,32 @@
-# IMAGE PROMPTS — EP07 (`CamHoDoSanBay` · 6 SCENES · VERTICAL 9:16 · V4)
+# IMAGE PROMPTS — EP07 (`BayMuaLeHoi` · 6 SCENES · VERTICAL 9:16 · V1)
 
 > **Quy tắc bất biến (Global Style Lock):**
-> - Khung hình dọc **9:16 (`1080x1920`)**, phong cách **2D/2.5D semi-realistic illustrated drama Vietsub animation** đồng bộ `00_HARNESS_GUIDELINES/CAST_AND_VISUAL_STYLE.md`.
-> - **TUYỆT ĐỐI KHÔNG CÓ CHỮ** (`no text, no Vietnamese characters, no subtitles, no UI banners, no numbers, no logos`) bên trong ảnh sinh ra.
-> - Giữ vùng an toàn phía trên 25% và phía dưới 28% thoáng để FFmpeg đóng bảng chữ.
+> - Khung hình dọc **9:16 (`1080x1920`)**, phong cách **semi-realistic cinematic 2D anime illustration** đồng bộ `00_HARNESS_GUIDELINES/CAST_AND_VISUAL_STYLE.md`.
+> - **TUYỆT ĐỐI KHÔNG CÓ CHỮ / BIỂU TRƯNG NHÀ NƯỚC** (`no text, no letters, no numbers, no logos, no national emblems, no official banners, no red seals, no uniforms or insignia`).
+> - Giữ vùng an toàn phía trên 25% và phía dưới 28% thoáng để engine chèn chữ.
 
 ---
 
-## Scene 1 — `assets/scene1.jpg` (`s1_hook`: `0.0s – 5.0s`)
+## Scene 1 — `assets/scene1.jpg` (`s1_hook`)
 **Visual Prompt:**
-Vertical 9:16 semi-realistic 2D illustrated animation. Bustling airport security queue just before the security checkpoint ropes. A polite middle-aged woman around 42 years old (`ke_ngot_ngao_nu`, soft wavy hair in a low bun, cream blouse, thin gold necklace) pats her pocket with a sudden look of panic as if she forgot her ID card at the waiting chairs, holding out a neatly wrapped hometown gift box toward a kind 21-year-old Vietnamese female student (`be_na`, ponytail with bangs, oversized pastel pink hoodie, canvas tote bag). Dramatic lighting, clean top 25% and bottom 28% composition, no text, no letters, no logos.
+Vertical 9:16 semi-realistic cinematic 2D anime illustration. Morning at a cozy Southern Vietnamese neighborhood tea stall porch decorated with plain colorful triangular festival pennants and warm paper lanterns overhead (strictly blank pennants, no text, no national flags or emblems). In the upper-left dark inset corner, a shadowy faceless phone scammer in a dark hoodie (`ke_gia_danh`) speaks into a phone in a dim room lit by blue monitor glow. In the main foreground, `co_tu` (52-year-old kind Vietnamese woman, neat bun hair, modest floral-patterned pastel ao ba ba blouse) looks flustered holding her glowing smartphone on speakerphone. Clean top 25% and bottom 28% margins, no text, no letters, no numbers, no logos.
 
-## Scene 2 — `assets/scene2.jpg` (`s2_moi_nhu`: `5.0s – 18.0s`)
+## Scene 2 — `assets/scene2.jpg` (`s2_moi_nhu`)
 **Visual Prompt:**
-Vertical 9:16 semi-realistic 2D illustrated animation. At the entrance of the airport security checkpoint, the kind 21-year-old student (`be_na`, ponytail, pastel pink hoodie) innocently reaches both hands out with a warm sympathetic smile to hold the gift box for the woman (`ke_ngot_ngao_nu`). Standing right beside her, a sharp-eyed 35-year-old Vietnamese man (`anh_hai`, rectangular glasses, neat short hair, white rolled-sleeve shirt) gently places his hand on `be_na`'s wrist to pause her while pointing calmly toward an airport staff assistance desk nearby. Clean top and bottom margins, no text, no letters, no watermark.
+Vertical 9:16 semi-realistic cinematic 2D anime illustration. Daytime at the cozy Vietnamese neighborhood porch with plain colorful triangular pennants. `co_tu` (52yo woman, neat bun hair, pastel floral ao ba ba blouse) holds her smartphone ready to tap transfer with a warm willing smile, while right beside her `be_na` (21-year-old Vietnamese female college student, long hair tied low, light cream hoodie with a backpack) excitedly holds up her own smartphone showing an abstract colorful stage icon screen (no text, no letters). Warm lively neighborhood mood, clean top 25% and bottom 28% margins, no text, no letters, no numbers, no logos.
 
-## Scene 3 — `assets/scene3.jpg` (`s3_leo_thang`: `18.0s – 34.0s`)
+## Scene 3 — `assets/scene3.jpg` (`s3_ong_bay_chan`)
 **Visual Prompt:**
-Vertical 9:16 semi-realistic 2D illustrated animation. Just outside the airport security X-ray lane, the middle-aged woman (`ke_ngot_ngao_nu`, cream blouse) rushes back anxiously waving her hands to stop them from leaving the gift box at the staff desk, urging them to carry it through the gate instead. `anh_hai` (35yo man in glasses and white shirt) and `be_na` (21yo girl in pastel pink hoodie) politely decline with a calm hand gesture, leaving the box with the woman as they step forward into the security lane with only their own backpacks. Clean top and bottom margins, no text, no letters.
+Vertical 9:16 semi-realistic cinematic 2D anime illustration. Daytime at the neighborhood tea stall porch. Just as `co_tu` (52yo woman, bun hair, pastel ao ba ba) and `be_na` (21yo female student, low ponytail, light cream hoodie) are about to tap their phone screens, `ong_bay` (66-year-old respected Vietnamese grandfatherly neighborhood head, silver hair, reading glasses resting on forehead, crisp white short-sleeve tucked shirt and beige khaki vest, holding a stack of plain blank cream invitation cards with no writing) steps forward raising one open palm urgently to stop them both. Expressive surprised faces on Co Tu and Be Na, clean top 25% and bottom 28% margins, no text, no letters, no numbers, no logos, no seals.
 
-## Scene 4 — `assets/scene4.jpg` (`s4_cu_chot`: `34.0s – 44.0s`)
+## Scene 4 — `assets/scene4.jpg` (`s4_cu_chot`)
 **Visual Prompt:**
-Vertical 9:16 semi-realistic 2D illustrated animation, dramatic over-the-shoulder / left-right spatial composition just past the security checkpoint. On the LEFT side in the foreground, `be_na` (21yo girl in pastel pink hoodie) covers her mouth in pale-faced shock beside `anh_hai` (35yo man in glasses and white shirt) as they look back. On the RIGHT side at the X-ray conveyor belt, a red alarm light flashes while a 52-year-old security officer (`chu_bao_ve`, security uniform with shoulder epistemes, stern expression) firmly stops `ke_ngot_ngao_nu` (42yo woman in cream blouse) right next to the opened gift box on the inspection table. Clean top and bottom margins, no text, no letters.
+Vertical 9:16 semi-realistic cinematic 2D anime illustration, dramatic close-up composition. `co_tu` (52yo woman, bun hair), `be_na` (21yo student, cream hoodie), and `ong_bay` (66yo silver-haired man in white shirt and beige vest) lean in together looking down in shock at the two smartphones held side by side, both screens glowing red with abstract warning icons and generic silhouette user avatars (strictly no text, no letters, no numbers on screens). Dramatic rim lighting, relieved yet startled expressions, clean top 25% and bottom 28% margins, no text, no letters, no logos.
 
-## Scene 5 — `assets/scene5.jpg` (`s5_boc_tran`: `44.0s – 51.0s`)
+## Scene 5 — `assets/scene5.jpg` (`s5_boc_tran`)
 **Visual Prompt:**
-Vertical 9:16 semi-realistic 2D illustrated animation. A large glowing red-rimmed magnifying glass hovers over the gift box on the airport X-ray conveyor belt, revealing an X-ray cross-section of dark concealed contraband bricks hidden inside innocent-looking snack boxes. In the upper corner, the silhouette of `nguoi_boc_tran` (trench coat, dark fedora hat, glowing rim light) points at the X-ray reveal. Clean top and bottom margins, no text, no letters.
+Vertical 9:16 semi-realistic cinematic 2D anime illustration, dark cyber-investigative graphic background. A large glowing red-rimmed magnifying glass in the center reveals two bright bait icons—a gift heart box and a stage ticket icon—both funneling golden coins down red arrows into the pocket of a shadowy faceless hooded scammer holding a smartphone in darkness. Dramatic cyan and crimson contrast lighting, clean top 25% and bottom 28% margins, strictly no text, no letters, no numbers, no logos.
 
-## Scene 6 — `assets/scene6.jpg` (`s6_dau_hieu`: `51.0s – 56.0s`)
+## Scene 6 — `assets/scene6.jpg` (`s6_dau_hieu`)
 **Visual Prompt:**
-Vertical 9:16 semi-realistic 2D illustrated animation. Warm, bright airport departure hall bathed in golden daylight. `be_na` (pastel pink hoodie) and `anh_hai` (white shirt, glasses) walk safely toward their boarding gate holding only their own small backpacks, breathing a sigh of relief. Soft depth of field in the center area to allow overlay cards, no text, no letters, no logos.
+Vertical 9:16 semi-realistic cinematic 2D anime illustration. Warm golden late-afternoon light in a peaceful, cheerful Vietnamese residential courtyard decorated with plain colorful triangular pennants and warm string lights (no text, no banners, no national emblems). Neighbors, `co_tu`, `be_na`, and `ong_bay` smile warmly together in the background with soft depth-of-field blur in the middle area so overlay warning cards read clearly. Clean composition, no text, no letters, no numbers, no logos.

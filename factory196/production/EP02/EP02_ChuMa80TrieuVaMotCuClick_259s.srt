@@ -1,0 +1,239 @@
+1
+00:00:00,600 --> 00:00:04,020
+Không… Anh đâu có chuyển! 80 triệu!
+
+2
+00:00:04,370 --> 00:00:06,990
+Anh! Tiền mổ của mẹ đó!
+
+3
+00:00:07,690 --> 00:00:12,430
+Minh vừa tự tay xác thực một giao dịch mà anh không hề thực hiện.
+
+4
+00:00:12,780 --> 00:00:16,080
+Và mọi chuyện bắt đầu từ một chữ cái.
+
+5
+00:00:17,680 --> 00:00:20,572
+Thôi con, mổ chi cho tốn.
+
+6
+00:00:20,572 --> 00:00:23,580
+Mẹ về uống thuốc được rồi.
+
+7
+00:00:23,930 --> 00:00:26,670
+Mẹ đừng lo. Con để dành đủ rồi.
+
+8
+00:00:27,020 --> 00:00:29,720
+Tối nay con chuyển, sáng mai mẹ mổ.
+
+9
+00:00:35,270 --> 00:00:39,410
+Bệnh viện nhắn rồi anh. 9 giờ sáng chưa có tạm ứng là dời ca mổ.
+
+10
+00:00:39,760 --> 00:00:41,220
+Anh đang chuyển đây.
+
+11
+00:00:43,520 --> 00:00:45,620
+Trời đất, đúng lúc này.
+
+12
+00:00:46,970 --> 00:00:49,310
+Ngân hàng X. Đúng rồi.
+
+13
+00:00:53,810 --> 00:00:55,870
+Sao lâu vậy trời…
+
+14
+00:01:00,320 --> 00:01:01,845
+Dạ, anh Minh phải không ạ?
+
+15
+00:01:01,845 --> 00:01:04,192
+Em là Tuấn, bộ phận an ninh Ngân hàng X.
+
+16
+00:01:04,540 --> 00:01:07,612
+Hệ thống thấy có người đang đăng nhập tài khoản anh từ một thiết bị lạ.
+
+17
+00:01:08,310 --> 00:01:10,570
+Anh vừa xác minh rồi mà em?
+
+18
+00:01:10,920 --> 00:01:13,472
+Dạ đúng, nên tụi em mới chặn kịp một phần.
+
+19
+00:01:13,830 --> 00:01:16,329
+Giờ anh cần xác thực khuôn mặt để em khóa thiết bị kia.
+
+20
+00:01:16,329 --> 00:01:17,102
+Em gửi link liền.
+
+21
+00:01:17,800 --> 00:01:20,800
+Ngân hàng gì mà bắt quay mặt qua đường link?
+
+22
+00:01:20,800 --> 00:01:22,300
+Anh mở app ra coi thử.
+
+23
+00:01:23,850 --> 00:01:25,510
+App văng ra rồi nè em!
+
+24
+00:01:26,210 --> 00:01:29,442
+Đó anh thấy chưa, tụi nó đang chiếm quyền đó. Còn 2 phút thôi.
+
+25
+00:01:29,790 --> 00:01:31,822
+Anh làm theo hướng dẫn trên màn hình giùm em.
+
+26
+00:01:32,520 --> 00:01:35,340
+Anh, để em gọi tổng đài trước đã…
+
+27
+00:01:35,690 --> 00:01:37,150
+Không kịp đâu em!
+
+28
+00:01:38,900 --> 00:01:40,880
+Anh! Dừng lại!
+
+29
+00:01:46,830 --> 00:01:50,970
+Thứ đánh lừa Minh đầu tiên là một chữ cái.
+
+30
+00:01:51,670 --> 00:01:58,250
+Bên trái là chữ a Latin. Bên phải là chữ а hệ Kirin (Cyrillic), nhìn giống hệt nhau.
+
+31
+00:01:58,600 --> 00:02:00,830
+Mắt bạn nhìn thấy một chữ.
+
+32
+00:02:00,830 --> 00:02:03,060
+Máy tính đọc một chữ khác.
+
+33
+00:02:03,410 --> 00:02:05,788
+Có khi chẳng cần chữ ngoại.
+
+34
+00:02:05,788 --> 00:02:09,750
+Hai chữ r và n đứng sát nhau trông như chữ m.
+
+35
+00:02:10,100 --> 00:02:14,920
+Hoặc gắn thêm đuôi giả, hay giấu cả địa chỉ sau một đường link rút gọn.
+
+36
+00:02:15,620 --> 00:02:22,040
+Hiện nay, đăng nhập máy lạ hay chuyển tiền vượt hạn mức cài đặt đều phải quét khuôn mặt.
+
+37
+00:02:22,390 --> 00:02:25,961
+Có mật khẩu và mã OTP vẫn chưa qua được chốt này.
+
+38
+00:02:25,961 --> 00:02:29,970
+Nên chúng gọi điện, dụ nạn nhân tự quét mặt giúp chúng.
+
+39
+00:02:30,670 --> 00:02:32,742
+Mật khẩu thì đổi được.
+
+40
+00:02:32,742 --> 00:02:35,850
+Nhưng khuôn mặt của bạn… là thật.
+
+41
+00:02:38,350 --> 00:02:44,411
+Kể cả tin nhắn hiện tên Ngân hàng X, chúng tôi cũng không bao giờ gửi đường link đăng nhập.
+
+42
+00:02:44,760 --> 00:02:49,112
+Ngân hàng cũng không yêu cầu xác thực khuôn mặt qua đường link hay điện thoại.
+
+43
+00:02:49,460 --> 00:02:52,587
+Tôi đã tạm khóa ngân hàng điện tử và thẻ của anh.
+
+44
+00:02:53,290 --> 00:02:55,590
+Còn 80 triệu thì sao chị?
+
+45
+00:02:55,940 --> 00:02:59,612
+Tôi đã ghi nhận giao dịch bất thường để phối hợp kiểm tra.
+
+46
+00:02:59,960 --> 00:03:06,319
+Anh đừng xóa tin nhắn hay lịch sử cuộc gọi, trình báo công an ngay và mang căn cước ra chi nhánh sớm nhất.
+
+47
+00:03:09,520 --> 00:03:13,420
+Tiền mổ của mẹ… có lấy lại được không anh?
+
+48
+00:03:14,570 --> 00:03:18,590
+Anh không biết. Mai anh đi hỏi mượn.
+
+49
+00:03:20,190 --> 00:03:25,450
+Ba dấu hiệu: khẩn cấp, link bất ngờ, và xác minh lạ.
+
+50
+00:03:25,800 --> 00:03:27,903
+Ngân hàng không gửi link.
+
+51
+00:03:27,903 --> 00:03:31,940
+Muốn kiểm tra, tự mở app hoặc gọi số in sau thẻ.
+
+52
+00:03:32,290 --> 00:03:36,350
+Lỡ nhập rồi thì gọi ngân hàng khóa ngay, đừng chờ.
+
+53
+00:03:38,150 --> 00:03:39,755
+Anh gọi dặn mẹ liền đi.
+
+54
+00:03:39,755 --> 00:03:41,570
+Mẹ hay bấm mấy tin đó lắm.
+
+55
+00:03:41,920 --> 00:03:45,500
+Giờ này mẹ ngủ rồi. Nhắn thôi, sáng mẹ đọc.
+
+56
+00:03:45,850 --> 00:03:49,820
+Mẹ ơi, tin nhắn ngân hàng có link thì đừng bấm nha.
+
+57
+00:03:49,820 --> 00:03:50,910
+Có gì gọi con.
+
+58
+00:03:54,610 --> 00:03:58,790
+Ủa… ngân hàng nhắn gì đây ta…
+
+59
+00:04:02,340 --> 00:04:05,420
+Một ký tự giả. Một website giả.
+
+60
+00:04:05,420 --> 00:04:08,400
+Nhưng số tiền mất đi… là thật.

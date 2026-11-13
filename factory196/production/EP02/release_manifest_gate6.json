@@ -1,0 +1,74 @@
+{
+  "episode_id": "EP02",
+  "factory": "factory196",
+  "aspect_ratio": "16:9",
+  "title": "Chữ ma – 80 triệu và một cú click",
+  "gate": "GATE_6_PRODUCTION_RELEASE",
+  "status": "PRODUCED_READY_FOR_PUBLISH",
+  "released_at": "2026-11-12T20:47:17.769494+07:00",
+  "master_video": {
+    "path": "factory196/production/EP02/EP02_ChuMa80TrieuVaMotCuClick_259s.mp4",
+    "mirror": "06_RENDERED_VIDEOS/EP02_ChuMa80TrieuVaMotCuClick_259s.mp4",
+    "srt": "factory196/production/EP02/EP02_ChuMa80TrieuVaMotCuClick_259s.srt",
+    "thumbnail_9x16": "factory196/production/EP02/EP02_Thumbnail_9x16.jpg",
+    "thumbnail_16x9": "factory196/production/EP02/EP02_Thumbnail_16x9.jpg",
+    "thumbnail_sec": 102.18,
+    "size_mb": 102.35,
+    "sha256": "ac47681d06de494281f1939e0a546e108b4a14958d1217712f9298ecb04bd89f"
+  },
+  "youtube_upload": {
+    "primary_title": "Chữ Ma: Một Chữ Cái Giả, 80 Triệu Tiền Mổ Của Mẹ Bay Mất | Bóc Trần Lừa Đảo",
+    "primary_title_length": 75,
+    "alternative_titles": [
+      "Link Ngân Hàng Giả Giống Hệt Thật – Mắt Thấy Một Chữ, Máy Đọc Một Chữ Khác | Bóc Trần Lừa Đảo",
+      "Vì Sao Đã Cài Sinh Trắc Học Mà 80 Triệu Vẫn Bốc Hơi? | Bóc Trần Lừa Đảo"
+    ],
+    "description": "Minh, 30 tuổi, đang chuyển tiền tạm ứng mổ cho mẹ thì nhận tin nhắn hiện tên \"ngân hàng\" báo tài khoản sắp bị khóa. Một đường link giống hệt thật – chỉ khác một chữ cái – và một cuộc gọi \"hỗ trợ\" dụ tự quét khuôn mặt qua đường link đã khiến 80 triệu biến mất. Phim bóc trần thủ đoạn \"chữ ma\" (tên miền giả mạo bằng ký tự giống nhau) và lý do dù đã có sinh trắc học, kẻ gian vẫn dụ chính nạn nhân mở nốt chốt khóa cuối.\n\n⏱️ Các hồi trong phim:\n00:00 Mở đầu – 80 triệu biến mất\n00:17 Hồi 1 – Tiền mổ của mẹ\n00:57 Hồi 2 – Cuộc gọi “hỗ trợ”\n01:46 Hồi 3 – Chữ ma: mắt thấy một chữ, máy đọc một chữ khác\n02:36 Hồi 4 – Ngân hàng không gửi link\n03:19 Dấu hiệu nhận biết & việc nên làm\n03:37 Hồi 5 – Tin nhắn chưa đọc\n\n🎬 ĐÂY LÀ PHIM HOẠT HÌNH DỰNG LẠI TÌNH HUỐNG ĐỂ CẢNH BÁO\nNhân vật, tên gọi, số điện thoại, số tiền trong phim đều là hư cấu nhằm mục đích cảnh báo.\n\n🤖 Hình ảnh và âm thanh được hỗ trợ sản xuất bởi công cụ AI.\n\n#bóctrầnlừađảo #cảnhgiáclừađảo #vạnchuyện",
+    "tags_csv": "link giả mạo ngân hàng, tên miền giả, chữ ma, lừa đảo OTP, xác thực khuôn mặt, bóc trần lừa đảo, vạn chuyện, cảnh giác lừa đảo, kỹ năng thoát hiểm, an toàn đời thực, phim hoạt hình cảnh báo, hồ sơ lừa đảo",
+    "tags_list": [
+      "link giả mạo ngân hàng",
+      "tên miền giả",
+      "chữ ma",
+      "lừa đảo OTP",
+      "xác thực khuôn mặt",
+      "bóc trần lừa đảo",
+      "vạn chuyện",
+      "cảnh giác lừa đảo",
+      "kỹ năng thoát hiểm",
+      "an toàn đời thực",
+      "phim hoạt hình cảnh báo",
+      "hồ sơ lừa đảo"
+    ],
+    "hashtags": [
+      "#bóctrầnlừađảo",
+      "#cảnhgiáclừađảo",
+      "#vạnchuyện"
+    ],
+    "pinned_comment": "📌 Kể cả tin nhắn hiện đúng tên ngân hàng, ngân hàng cũng KHÔNG gửi link yêu cầu đăng nhập, không xin OTP và không yêu cầu xác thực khuôn mặt qua link hay điện thoại. Nghi ngờ: tự mở app chính thức hoặc gọi số in sau thẻ. Nếu lỡ bị trừ tiền: khóa tài khoản ngay, giữ nguyên tin nhắn/lịch sử cuộc gọi và trình báo công an sớm nhất. Chuyện gấp với người thân lớn tuổi – hãy gọi, đừng chỉ nhắn.",
+    "studio_settings": {
+      "playlist": "Hồ Sơ Bóc Trần Lừa Đảo – Phim Dài Chuyên Sâu",
+      "made_for_kids": false,
+      "age_restricted": false,
+      "altered_or_synthetic_content": true,
+      "category": "Education (Giáo dục)",
+      "video_language": "vi",
+      "subtitles_file": "factory196/production/EP02/EP02_ChuMa80TrieuVaMotCuClick_259s.srt",
+      "comments": "ON_MODERATION_BASIC"
+    },
+    "copy_paste_files": {
+      "title_txt": "factory196/production/EP02/youtube_upload/1_TITLE.txt",
+      "description_txt": "factory196/production/EP02/youtube_upload/2_DESCRIPTION.txt",
+      "tags_txt": "factory196/production/EP02/youtube_upload/3_TAGS.txt",
+      "pinned_comment_txt": "factory196/production/EP02/youtube_upload/4_PINNED_COMMENT.txt",
+      "studio_settings_md": "factory196/production/EP02/youtube_upload/5_YOUTUBE_STUDIO_SETTINGS.md"
+    }
+  },
+  "gate5_reference": "factory196/staging/EP02/qa_audit_report_gate5.json",
+  "compliance_flags": {
+    "no_real_identity": true,
+    "no_how_to_detail": true,
+    "red_flags_card": true,
+    "dramatized_disclaimer": true,
+    "ai_disclosure_required": true
+  }
+}

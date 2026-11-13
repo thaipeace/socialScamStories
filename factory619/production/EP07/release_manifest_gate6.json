@@ -1,0 +1,74 @@
+{
+  "episode_id": "EP07",
+  "factory": "factory619",
+  "aspect_ratio": "9:16",
+  "title": "Mạo danh Ngày hội & Đêm văn hóa – Lộ tẩy ở tên tài khoản nhận",
+  "gate": "GATE_6_PRODUCTION_RELEASE",
+  "status": "PRODUCED_READY_FOR_PUBLISH",
+  "released_at": "2026-11-13T21:36:32.386791+07:00",
+  "master_video": {
+    "path": "factory619/production/EP07/EP07_BayMuaLeHoi_52s.mp4",
+    "mirror": "06_RENDERED_SHORTS/EP07_BayMuaLeHoi_52s.mp4",
+    "srt": "factory619/production/EP07/EP07_BayMuaLeHoi_52s.srt",
+    "thumbnail_9x16": "factory619/production/EP07/EP07_Thumbnail_9x16.jpg",
+    "thumbnail_16x9": "factory619/production/EP07/EP07_Thumbnail_16x9.jpg",
+    "thumbnail_sec": 26.91,
+    "size_mb": 30.25,
+    "sha256": "77487cb339620193f861a868b17bd502a8faa511dd1d5965cda4ce84b692b8fb"
+  },
+  "youtube_upload": {
+    "primary_title": "Giục đóng quỹ ngày hội & cọc tình nguyện viên: Chú Bảy chỉ 1 chỗ lộ ngay! #shorts #bóctrầnlừađảo",
+    "primary_title_length": 96,
+    "alternative_titles": [
+      "Suýt mất tiền oan vì cuộc gọi thu quỹ ngày hội và trang Đêm Văn Hóa giả! #shorts #cảnhgiáclừađảo",
+      "2 chiêu mạo danh mùa lễ hội cuối năm: Đừng chuyển vào tài khoản cá nhân! #shorts #vạnchuyện"
+    ],
+    "description": "Cuối năm rộn ràng ngày hội khu phố và các đêm giao lưu văn hóa, kẻ gian lập tức tung 2 cái bẫy đánh thẳng vào lòng tốt của người lớn tuổi và sự nhiệt tình của giới trẻ:\n1️⃣ Gọi điện, nhắn tin giục đóng góp \"quỹ ngày hội, quỹ khuyến học\" gấp trước giờ khóa sổ.\n2️⃣ Lập trang mạng giả mạo chương trình văn hóa để bán vé ảo hoặc tuyển tình nguyện viên rồi thu \"tiền đặt cọc thẻ, phí bảo hiểm\".\n\nMay nhờ Chú Bảy tổ trưởng bước tới chỉ thẳng vào TÊN NGƯỜI NHẬN trên cả hai máy: Cả hai đều là TÀI KHOẢN CÁ NHÂN LẠ! Trong khi hoạt động vận động tự nguyện ở khu dân cư thật luôn công khai, minh bạch và tình nguyện viên sự kiện cộng đồng không bao giờ phải đóng tiền cọc cá nhân.\n\n✅ Nhớ kỹ: Kiểm tra kỹ tên người nhận và hỏi trực tiếp tổ dân phố trước khi chuyển bất kỳ khoản tiền ủng hộ hay phí sự kiện nào!\n\n🎬 ĐÂY LÀ PHIM HOẠT HÌNH DỰNG LẠI TÌNH HUỐNG ĐỂ CẢNH BÁO\nNhân vật, tên gọi, số điện thoại, số tiền trong phim đều là hư cấu nhằm mục đích cảnh báo.\n\n🤖 Hình ảnh và âm thanh được hỗ trợ sản xuất bởi công cụ AI.\n\n#shorts #bóctrầnlừađảo #cảnhgiáclừađảo",
+    "tags_csv": "mạo danh quỹ từ thiện, lừa đảo sự kiện văn hóa, tuyển tình nguyện viên lừa đảo, vé sự kiện giả, tài khoản cá nhân lừa đảo, bóc trần lừa đảo, vạn chuyện, shorts, cảnh giác lừa đảo, kỹ năng thoát hiểm, an toàn đời thực, phim hoạt hình cảnh báo",
+    "tags_list": [
+      "mạo danh quỹ từ thiện",
+      "lừa đảo sự kiện văn hóa",
+      "tuyển tình nguyện viên lừa đảo",
+      "vé sự kiện giả",
+      "tài khoản cá nhân lừa đảo",
+      "bóc trần lừa đảo",
+      "vạn chuyện",
+      "shorts",
+      "cảnh giác lừa đảo",
+      "kỹ năng thoát hiểm",
+      "an toàn đời thực",
+      "phim hoạt hình cảnh báo"
+    ],
+    "hashtags": [
+      "#shorts",
+      "#bóctrầnlừađảo",
+      "#cảnhgiáclừađảo"
+    ],
+    "pinned_comment": "📌 Quỹ khu phố thật luôn công khai minh bạch; tình nguyện viên sự kiện thật không thu tiền cọc vào tài khoản cá nhân! Cả nhà nhớ dặn ba mẹ và các bạn sinh viên dịp lễ hội cuối năm nhé!",
+    "studio_settings": {
+      "playlist": "Bóc Trần Lừa Đảo – Kỹ Năng Cảnh Giác & An Toàn Đời Thực",
+      "made_for_kids": false,
+      "age_restricted": false,
+      "altered_or_synthetic_content": true,
+      "category": "Education (Giáo dục)",
+      "video_language": "vi",
+      "subtitles_file": "factory619/production/EP07/EP07_BayMuaLeHoi_52s.srt",
+      "comments": "ON_MODERATION_BASIC"
+    },
+    "copy_paste_files": {
+      "title_txt": "factory619/production/EP07/youtube_upload/1_TITLE.txt",
+      "description_txt": "factory619/production/EP07/youtube_upload/2_DESCRIPTION.txt",
+      "tags_txt": "factory619/production/EP07/youtube_upload/3_TAGS.txt",
+      "pinned_comment_txt": "factory619/production/EP07/youtube_upload/4_PINNED_COMMENT.txt",
+      "studio_settings_md": "factory619/production/EP07/youtube_upload/5_YOUTUBE_STUDIO_SETTINGS.md"
+    }
+  },
+  "gate5_reference": "factory619/staging/EP07/qa_audit_report_gate5.json",
+  "compliance_flags": {
+    "no_real_identity": true,
+    "no_how_to_detail": true,
+    "red_flags_card": true,
+    "dramatized_disclaimer": true,
+    "ai_disclosure_required": true
+  }
+}

@@ -1,13 +1,13 @@
 {
   "episode_id": "EP07",
-  "slug": "CamHoDoSanBay",
-  "title": "Người lạ giả quên giấy tờ nhờ giữ hộ đồ ở sân bay",
-  "version": "v4",
-  "scam_family": "OFF-13",
-  "duration_sec": 56.0,
+  "slug": "BayMuaLeHoi",
+  "title": "Mạo danh Ngày hội & Đêm văn hóa – Lộ tẩy ở tên tài khoản nhận",
+  "version": "v2",
+  "scam_family": "ON-09",
+  "duration_sec": 52.31,
   "hook": {
-    "kicker": "CỬA KIỂM TRA AN NINH SÂN BAY",
-    "title": "\"Chị quên căn cước ở ghế chờ, giữ giùm hộp quà 2 phút\"? Cẩn thận gánh tội thay!",
+    "kicker": "BẪY MẠO DANH MÙA LỄ HỘI",
+    "title": "Giục đóng quỹ ngày hội & cọc tình nguyện viên: Chú Bảy chỉ 1 chỗ lộ ngay!",
     "start": 0.3,
     "end": 4.2
   },
@@ -16,11 +16,11 @@
       "id": "s1_hook",
       "image": "assets/scene1.jpg",
       "start": 0.0,
-      "end": 5.0,
+      "end": 5.21,
       "motion": {
         "scale": [
-          1.06,
-          1.15
+          1.05,
+          1.14
         ],
         "focus": [
           [
@@ -38,12 +38,12 @@
     {
       "id": "s2_moi_nhu",
       "image": "assets/scene2.jpg",
-      "start": 5.0,
-      "end": 18.0,
+      "start": 5.21,
+      "end": 14.6,
       "motion": {
         "scale": [
           1.03,
-          1.12
+          1.11
         ],
         "focus": [
           [
@@ -51,8 +51,8 @@
             0.5
           ],
           [
-            0.46,
-            0.44
+            0.48,
+            0.45
           ]
         ],
         "wobble": "calm"
@@ -63,14 +63,14 @@
       }
     },
     {
-      "id": "s3_leo_thang",
+      "id": "s3_ong_bay_chan",
       "image": "assets/scene3.jpg",
-      "start": 18.0,
-      "end": 34.0,
+      "start": 14.6,
+      "end": 25.71,
       "motion": {
         "scale": [
           1.04,
-          1.15
+          1.14
         ],
         "focus": [
           [
@@ -79,29 +79,29 @@
           ],
           [
             0.5,
-            0.42
+            0.44
           ]
         ],
         "wobble": "handheld"
       },
       "transition_in": {
         "type": "dissolve",
-        "dur": 0.35
+        "dur": 0.28
       }
     },
     {
       "id": "s4_cu_chot",
       "image": "assets/scene4.jpg",
-      "start": 34.0,
-      "end": 44.0,
+      "start": 25.71,
+      "end": 40.72,
       "motion": {
         "scale": [
-          1.14,
-          1.04
+          1.13,
+          1.03
         ],
         "focus": [
           [
-            0.52,
+            0.5,
             0.46
           ],
           [
@@ -117,16 +117,16 @@
       },
       "shakes": [
         {
-          "at": 34.2,
-          "amp": 32
+          "at": 25.89,
+          "amp": 28
         }
       ]
     },
     {
       "id": "s5_boc_tran",
       "image": "assets/scene5.jpg",
-      "start": 44.0,
-      "end": 51.0,
+      "start": 40.72,
+      "end": 46.21,
       "motion": {
         "scale": [
           1.02,
@@ -139,25 +139,25 @@
           ],
           [
             0.5,
-            0.45
+            0.46
           ]
         ],
         "wobble": "calm"
       },
       "transition_in": {
         "type": "glitch",
-        "dur": 0.35
+        "dur": 0.3
       }
     },
     {
       "id": "s6_dau_hieu",
       "image": "assets/scene6.jpg",
-      "start": 51.0,
-      "end": 56.0,
+      "start": 46.21,
+      "end": 52.31,
       "motion": {
         "scale": [
-          1.03,
-          1.07
+          1.02,
+          1.06
         ],
         "focus": [
           [
@@ -180,136 +180,150 @@
   "dialogue": [
     {
       "id": "l1",
-      "speaker": "ke_ngot_ngao_nu",
-      "start": 0.7,
-      "window": 4.2,
-      "text": "Ối, chị quên căn cước ở ghế chờ! Em giữ giùm hộp quà nha!"
+      "speaker": "ke_gia_danh",
+      "start": 0.4,
+      "window": 6.01,
+      "text": "Cô Tư ơi, chuyển liền tiền quỹ ngày hội vô số em gửi nha, sắp khóa sổ rồi!"
     },
     {
       "id": "l2",
-      "speaker": "be_na",
-      "start": 5.6,
-      "window": 4.8,
-      "text": "Dạ đưa em giữ giùm cho, chị chạy lẹ lấy căn cước đi!"
+      "speaker": "co_tu",
+      "start": 5.51,
+      "window": 5.8,
+      "text": "Ờ để cô chuyển liền năm trăm ngàn ủng hộ xóm mình!"
     },
     {
       "id": "l3",
-      "speaker": "anh_hai",
-      "start": 11.4,
-      "window": 5.4,
-      "text": "Khoan Na! Sắp qua cửa soi chiếu rồi, gửi lại bàn nhân viên kia!"
+      "speaker": "be_na",
+      "start": 10.03,
+      "window": 5.72,
+      "text": "Con cũng đang đóng tiền cọc với bảo hiểm tình nguyện viên đêm văn hóa!"
     },
     {
       "id": "l4",
-      "speaker": "ke_ngot_ngao_nu",
-      "start": 18.6,
-      "window": 5.2,
-      "text": "Ơ đừng gửi nhân viên! Em cứ xách qua cổng, qua bển chị lấy!"
+      "speaker": "ong_bay",
+      "start": 14.9,
+      "window": 6.8,
+      "text": "Khoan bấm! Khu phố thu quỹ công khai, tình nguyện viên cũng không ai thu cọc!",
+      "style": "Giọng nam miền Nam Sài Gòn 55 tuổi, chú tổ trưởng khu phố lanh lẹ, nhịp nói nhanh gọn, dứt khoát, sắc bén, rõ chữ, tuyệt đối không kéo dài hay ngân giọng."
     },
     {
       "id": "l5",
-      "speaker": "anh_hai",
-      "start": 25.0,
-      "window": 5.0,
-      "text": "Đồ của ai người đó tự mang qua máy soi chị ơi!"
+      "speaker": "be_na",
+      "start": 20.42,
+      "window": 6.44,
+      "text": "Ủa chú Bảy, vậy trang sự kiện với người đang gọi cô Tư là ai?!"
     },
     {
       "id": "l6",
-      "speaker": "chu_bao_ve",
-      "start": 34.8,
-      "window": 4.3,
-      "text": "Báo động đỏ! Hộp quà này giấu hàng cấm, mời chị ở lại!"
+      "speaker": "ong_bay",
+      "start": 26.06,
+      "window": 5.92,
+      "text": "Nhìn kỹ tên người nhận trên hai máy kìa! Toàn tài khoản cá nhân lạ hoắc!",
+      "style": "Giọng nam miền Nam Sài Gòn 55 tuổi, chú tổ trưởng khu phố lanh lẹ, nhịp nói nhanh gọn, dứt khoát, sắc bén, rõ chữ, tuyệt đối không kéo dài hay ngân giọng."
     },
     {
       "id": "l7",
       "speaker": "be_na",
-      "start": 39.5,
-      "window": 4.2,
-      "text": "Hú hồn, nãy em mà cầm giùm là giờ tiêu đời rồi!"
+      "start": 30.7,
+      "window": 6.08,
+      "text": "Trời ơi thiệt luôn! Trang mới lập hôm qua mà bắt chuyển cho cá nhân!"
     },
     {
       "id": "l8",
+      "speaker": "co_tu",
+      "start": 35.5,
+      "window": 6.32,
+      "text": "Máy cô cũng tên cá nhân, nghe chú Bảy khui ra là nó cúp máy liền!"
+    },
+    {
+      "id": "l9",
       "speaker": "nguoi_boc_tran",
-      "start": 44.5,
-      "window": 6.3,
-      "text": "Kẻ xấu hay giả quên giấy tờ nhờ giữ đồ; tuyệt đối đừng cầm hộ!",
-      "subtitle": [
-        "Kẻ xấu hay giả quên giấy tờ nhờ giữ đồ ngay cửa an ninh;",
-        "tuyệt đối không cầm hộ đồ của người lạ!"
-      ]
+      "start": 41.07,
+      "window": 6.24,
+      "text": "Mùa lễ hội, đừng chuyển tiền quỹ hay phí sự kiện vô tài khoản cá nhân!"
     }
   ],
   "chat_bubbles": [],
-  "callouts": [],
+  "callouts": [
+    {
+      "text": "TRANG SỰ KIỆN LẠ: ĐÒI TIỀN CỌC & PHÍ BẢO HIỂM TNV",
+      "style": "warn",
+      "start": 9.99,
+      "end": 14.42,
+      "y": 190
+    },
+    {
+      "text": "CHÚ BẢY VẠCH MẶT: CẢ HAI ĐỀU LÀ TÀI KHOẢN CÁ NHÂN LẠ!",
+      "style": "danger",
+      "start": 25.96,
+      "end": 40.52,
+      "y": 190
+    }
+  ],
   "red_flags": {
-    "start": 51.0,
-    "end": 53.5,
+    "start": 46.21,
+    "end": 49.51,
     "stagger_sec": 0.4,
     "title": "NHỚ KỸ",
     "items": [
-      "Giả vờ quên căn cước/đi vệ sinh nhờ giữ hộ đồ ngay lúc dòng người vào cửa soi chiếu",
-      "Ngăn cản khi bạn định gửi đồ lại quầy nhân viên sân bay và năn nỉ xách qua cổng"
+      "Gọi điện, nhắn tin giục đóng quỹ ngày hội, khuyến học vào tài khoản cá nhân",
+      "Trang giả sự kiện văn hóa bán vé ảo, thu \"tiền cọc / phí bảo hiểm\" tình nguyện viên"
     ],
-    "action": "Hành lý của ai người nấy giữ, chỉ hướng dẫn họ gửi tại quầy nhân viên sân bay!"
+    "action": "Quỹ khu phố luôn công khai · Sự kiện thật không thu cọc cá nhân · Hỏi tổ dân phố trước khi chuyển!"
   },
   "disclaimer": {
-    "start": 53.5,
-    "end": 56.0
+    "start": 49.51,
+    "end": 52.31
   },
   "audio": {
     "ambience": [
       {
-        "preset": "crowd",
+        "preset": "street",
         "start": 0.0,
-        "end": 44.0,
-        "gain_db": -2.5
-      },
-      {
-        "preset": "office",
-        "start": 0.0,
-        "end": 56.0,
+        "end": 52.31,
         "gain_db": -3.0
       }
     ],
     "foley": [
       {
-        "preset": "footsteps",
-        "at": 0.5,
-        "dur": 1.8,
-        "gain_db": -3.0
+        "preset": "phone_ring",
+        "at": 0.05,
+        "dur": 1.1,
+        "gain_db": -1.0
+      },
+      {
+        "preset": "notification",
+        "at": 9.93,
+        "gain_db": -1.5
       },
       {
         "preset": "heartbeat",
-        "at": 19.5,
-        "dur": 11.0,
-        "gain_db": 0.0
+        "at": 14.9,
+        "dur": 10.61,
+        "gain_db": -1.5
       },
       {
         "preset": "riser",
-        "at": 31.2,
-        "dur": 2.9,
-        "gain_db": 2.5
+        "at": 24.31,
+        "dur": 1.4,
+        "gain_db": 1.5
       },
       {
         "preset": "impact",
-        "at": 34.1,
-        "dur": 2.2,
-        "gain_db": 3.5
+        "at": 25.81,
+        "dur": 1.6,
+        "gain_db": 2.5
       },
       {
-        "preset": "whistle",
-        "at": 34.4,
-        "gain_db": 2.0
-      },
-      {
-        "preset": "footsteps",
-        "at": 41.0,
-        "dur": 2.0,
-        "gain_db": 1.0
+        "preset": "call_end",
+        "at": 35.36,
+        "dur": 1.1,
+        "gain_db": 0.8
       },
       {
         "preset": "glitch",
-        "at": 44.0,
+        "at": 40.72,
         "gain_db": 0.0
       }
     ],
@@ -317,30 +331,30 @@
       {
         "preset": "suspense_pulse",
         "start": 0.0,
-        "end": 18.0
+        "end": 14.6
       },
       {
         "preset": "tension_drone",
-        "start": 18.0,
-        "end": 34.0,
-        "gain_db": 2.0
+        "start": 14.6,
+        "end": 25.71,
+        "gain_db": 1.5
       },
       {
         "preset": "action_climax",
-        "start": 34.0,
-        "end": 48.0,
-        "gain_db": 3.0
+        "start": 25.71,
+        "end": 46.21,
+        "gain_db": 2.0
       },
       {
         "preset": "warm_outro",
-        "start": 48.0,
-        "end": 56.0
+        "start": 46.21,
+        "end": 52.31
       }
     ],
     "duck_extra": [
       {
-        "start": 33.7,
-        "end": 34.1,
+        "start": 25.51,
+        "end": 25.96,
         "bgm_db": -14,
         "amb_db": -10
       }
@@ -349,31 +363,29 @@
   "forbidden_terms": [],
   "publish": {
     "titles": [
-      "\"Chị để quên căn cước ở ghế chờ, giữ giùm hộp quà 2 phút nha\"… và tiếng còi báo động đỏ ở máy soi! #Shorts",
-      "Suýt gánh tội thay ở sân bay chỉ vì thương người lạ \"để quên căn cước nhờ giữ giùm túi đồ\"! #Shorts",
-      "Tại sao người lạ nhờ giữ đồ 2 phút ngay trước vạch kiểm tra an ninh lại nguy hiểm đến vậy? #Shorts"
+      "Giục đóng quỹ ngày hội & cọc tình nguyện viên: Chú Bảy chỉ 1 chỗ lộ ngay! #shorts #bóctrầnlừađảo",
+      "Suýt mất tiền oan vì cuộc gọi thu quỹ ngày hội và trang Đêm Văn Hóa giả! #shorts #cảnhgiáclừađảo",
+      "2 chiêu mạo danh mùa lễ hội cuối năm: Đừng chuyển vào tài khoản cá nhân! #shorts #vạnchuyện"
     ],
-    "description": "Đang xếp hàng chuẩn bị bước vào cổng kiểm tra an ninh sân bay, một người phụ nữ nói chuyện rất thân thiện bỗng hốt hoảng vỗ túi báo để quên căn cước ở ghế chờ và nhờ Bé Na đứng giữ giùm hộp quà quê 2 phút... Vì lòng tốt, Na đưa tay định nhận ngay mà không hề biết dòng người đang đẩy thẳng vào máy soi!\n\nXem ngay phản ứng tỉnh táo, đời thường của Anh Hai khi từ chối mang đồ qua cổng và khoảnh khắc rùng mình khi máy soi chiếu báo động đỏ ngay phía sau lưng!\n\n⏱️ Bố cục tình huống:\n00:00 Màn kịch \"quên căn cước ở ghế chờ, giữ giùm hộp quà 2 phút\"\n00:05 Bé Na suýt nhận lời vì thương người & Anh Hai nhắc gửi lại bàn nhân viên\n00:18 Kẻ lạ lộ ý đồ thật khi ngăn gửi nhân viên và ép xách qua cổng\n00:34 Máy soi báo động đỏ phía sau lưng – Na bủn rủn vì suýt gánh tội thay\n00:51 2 dấu hiệu nhận diện & quy tắc an toàn khi đi sân bay, bến xe\n\n⚠️ 2 dấu hiệu cảnh giác:\n1. Giả vờ quên giấy tờ / đi vệ sinh gấp nhờ giữ hộ đồ đúng lúc dòng người bước vào cửa soi chiếu\n2. Hốt hoảng ngăn cản khi bạn định gửi đồ lại quầy nhân viên hỗ trợ và năn nỉ xách qua cổng\n\n✅ Quy tắc vàng: Hành lý của ai người nấy giữ, tuyệt đối không cầm hộ đồ của người lạ dưới mọi hình thức!",
-    "pinned_comment": "📌 Kẻ xấu ngoài đời không bao giờ nói toẹt ra là cầm hộ hàng cấm đâu, mà hay giả vờ \"quên căn cước/đau bụng gấp\" nhờ bạn giữ giùm 2 phút ngay sát vạch soi chiếu! Hãy chia sẻ để người thân luôn cảnh giác nhé!",
+    "description": "Cuối năm rộn ràng ngày hội khu phố và các đêm giao lưu văn hóa, kẻ gian lập tức tung 2 cái bẫy đánh thẳng vào lòng tốt của người lớn tuổi và sự nhiệt tình của giới trẻ:\n1️⃣ Gọi điện, nhắn tin giục đóng góp \"quỹ ngày hội, quỹ khuyến học\" gấp trước giờ khóa sổ.\n2️⃣ Lập trang mạng giả mạo chương trình văn hóa để bán vé ảo hoặc tuyển tình nguyện viên rồi thu \"tiền đặt cọc thẻ, phí bảo hiểm\".\n\nMay nhờ Chú Bảy tổ trưởng bước tới chỉ thẳng vào TÊN NGƯỜI NHẬN trên cả hai máy: Cả hai đều là TÀI KHOẢN CÁ NHÂN LẠ! Trong khi hoạt động vận động tự nguyện ở khu dân cư thật luôn công khai, minh bạch và tình nguyện viên sự kiện cộng đồng không bao giờ phải đóng tiền cọc cá nhân.\n\n✅ Nhớ kỹ: Kiểm tra kỹ tên người nhận và hỏi trực tiếp tổ dân phố trước khi chuyển bất kỳ khoản tiền ủng hộ hay phí sự kiện nào!",
+    "pinned_comment": "📌 Quỹ khu phố thật luôn công khai minh bạch; tình nguyện viên sự kiện thật không thu tiền cọc vào tài khoản cá nhân! Cả nhà nhớ dặn ba mẹ và các bạn sinh viên dịp lễ hội cuối năm nhé!",
     "hashtags": [
-      "#AnToanDuLich",
-      "#KyNangSong",
-      "#CanhGiac",
-      "#BocTranLuaDao"
+      "#shorts",
+      "#bóctrầnlừađảo",
+      "#cảnhgiáclừađảo"
     ],
     "tags": [
+      "mạo danh quỹ từ thiện",
+      "lừa đảo sự kiện văn hóa",
+      "tuyển tình nguyện viên lừa đảo",
+      "vé sự kiện giả",
+      "tài khoản cá nhân lừa đảo",
       "bóc trần lừa đảo",
-      "cầm hộ đồ ở sân bay",
-      "an toàn du lịch",
-      "kỹ năng sống",
-      "cảnh giác",
-      "nhờ cầm hộ hành lý",
       "vạn chuyện",
       "shorts"
     ],
     "category": "Education (Giáo dục)",
     "playlist": "Bóc Trần Lừa Đảo – Kỹ Năng Cảnh Giác & An Toàn Đời Thực",
-    "thumbnail_sec": 36.0
-  },
-  "_status_note": "KỊCH BẢN TỆ / CHƯA ĐẠT — Tạm xếp cuối (EP07), chờ phương án thay thế sau"
+    "thumbnail_sec": 26.91
+  }
 }

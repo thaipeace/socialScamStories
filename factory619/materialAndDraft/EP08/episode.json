@@ -1,0 +1,431 @@
+{
+  "episode_id": "EP08",
+  "slug": "BayBienLaiNghienMang",
+  "title": "Biên lai báo nghẽn mạng – Chỉ bấm nhận lương mà trắng tay",
+  "version": "v4",
+  "scam_family": "ON-03",
+  "duration_sec": 51.02,
+  "hook": {
+    "kicker": "BẪY BIÊN LAI BÁO NGHẼN MẠNG",
+    "title": "Làm xong việc thật, chỉ bấm \"nhận lương\" mà bay sạch 18 triệu trong 5 giây!",
+    "start": 0.25,
+    "end": 4.2
+  },
+  "scenes": [
+    {
+      "id": "s1_viec_that_bien_lai",
+      "image": "assets/scene1.jpg",
+      "start": 0.0,
+      "end": 8.34,
+      "motion": {
+        "scale": [
+          1.04,
+          1.12
+        ],
+        "focus": [
+          [
+            0.5,
+            0.48
+          ],
+          [
+            0.5,
+            0.45
+          ]
+        ],
+        "wobble": "calm"
+      }
+    },
+    {
+      "id": "s2_cao_trao_nho_link",
+      "image": "assets/scene2.jpg",
+      "start": 8.34,
+      "end": 14.2,
+      "motion": {
+        "scale": [
+          1.04,
+          1.14
+        ],
+        "focus": [
+          [
+            0.5,
+            0.5
+          ],
+          [
+            0.5,
+            0.46
+          ]
+        ],
+        "wobble": "handheld"
+      },
+      "transition_in": {
+        "type": "dissolve",
+        "dur": 0.28
+      }
+    },
+    {
+      "id": "s3_ep_ma_otp",
+      "image": "assets/scene3.jpg",
+      "start": 14.2,
+      "end": 20.18,
+      "motion": {
+        "scale": [
+          1.05,
+          1.15
+        ],
+        "focus": [
+          [
+            0.5,
+            0.48
+          ],
+          [
+            0.5,
+            0.43
+          ]
+        ],
+        "wobble": "tense"
+      },
+      "transition_in": {
+        "type": "dissolve",
+        "dur": 0.24
+      }
+    },
+    {
+      "id": "s4_cao_trao_lon_cam_lang",
+      "image": "assets/scene4.jpg",
+      "start": 20.18,
+      "end": 25.98,
+      "motion": {
+        "scale": [
+          1.06,
+          1.18
+        ],
+        "focus": [
+          [
+            0.5,
+            0.44
+          ],
+          [
+            0.5,
+            0.4
+          ]
+        ],
+        "wobble": "tense"
+      },
+      "transition_in": {
+        "type": "flash_white",
+        "dur": 0.22
+      },
+      "shakes": [
+        {
+          "at": 20.96,
+          "amp": 26
+        },
+        {
+          "at": 22.43,
+          "amp": 32
+        }
+      ]
+    },
+    {
+      "id": "s5_du_chan_chan_so",
+      "image": "assets/scene5.jpg",
+      "start": 25.98,
+      "end": 32.74,
+      "motion": {
+        "scale": [
+          1.11,
+          1.03
+        ],
+        "focus": [
+          [
+            0.5,
+            0.46
+          ],
+          [
+            0.5,
+            0.5
+          ]
+        ],
+        "wobble": "handheld"
+      },
+      "transition_in": {
+        "type": "dissolve",
+        "dur": 0.3
+      }
+    },
+    {
+      "id": "s6_boc_tran_cuoi",
+      "image": "assets/scene6.jpg",
+      "start": 32.74,
+      "end": 51.02,
+      "motion": {
+        "scale": [
+          1.03,
+          1.1
+        ],
+        "focus": [
+          [
+            0.5,
+            0.46
+          ],
+          [
+            0.5,
+            0.42
+          ]
+        ],
+        "wobble": "calm"
+      },
+      "transition_in": {
+        "type": "glitch",
+        "dur": 0.3
+      }
+    }
+  ],
+  "dialogue": [
+    {
+      "id": "l1",
+      "speaker": "ke_ngot_ngao_nu",
+      "start": 0.38,
+      "window": 5.77,
+      "text": "Bài đạt rồi nha! Chị mới chuyển ba triệu rưỡi, biên lai đó em.",
+      "style": "Giọng nữ miền Nam Sài Gòn 30 tuổi, giữ cố định một âm sắc tự nhiên, lịch sự chuyên nghiệp như người thuê việc vừa duyệt bài xong, nhịp nói gọn gàng, rõ chữ.",
+      "af": "phone"
+    },
+    {
+      "id": "l2",
+      "speaker": "thang_tun",
+      "start": 4.89,
+      "window": 4.6,
+      "text": "Ủa sao máy em chưa báo tiền vô chị?",
+      "style": "Giọng nam thanh niên miền Nam Sài Gòn 20 tuổi, giữ cố định một âm sắc trẻ trung tự nhiên, hơi mệt sau ca làm khuya, thắc mắc ngắn gọn, rõ chữ."
+    },
+    {
+      "id": "l3",
+      "speaker": "ke_ngot_ngao_nu",
+      "start": 8.66,
+      "window": 6.4,
+      "text": "Cuối năm nghẽn liên ngân hàng. Bấm link xác nhận nhận tiền đi, quá giờ nó hoàn lệnh đó.",
+      "style": "Giọng nữ miền Nam Sài Gòn 30 tuổi, giữ cố định âm sắc, điềm nhiên chuyên nghiệp khi hướng dẫn nhưng giục khéo tạo áp lực thời gian, nhịp nhanh gọn, rõ chữ.",
+      "af": "phone"
+    },
+    {
+      "id": "l4",
+      "speaker": "ke_ngot_ngao_nu",
+      "start": 14.52,
+      "window": 5.2,
+      "text": "Mã giải ngân về máy rồi kìa, nhập lẹ đi em, sắp hết giờ!",
+      "style": "Giọng nữ miền Nam Sài Gòn 30 tuổi, giữ cố định âm sắc, chuyển sang gấp gáp thúc giục dồn dập vì sắp hết giờ giải ngân, nhịp nhanh, sắc, rõ chữ.",
+      "af": "phone"
+    },
+    {
+      "id": "l5",
+      "speaker": "thang_tun",
+      "start": 17.88,
+      "window": 3.6,
+      "text": "Dạ có mã rồi, em bấm liền!",
+      "style": "Giọng nam thanh niên miền Nam Sài Gòn 20 tuổi, giữ cố định âm sắc, luống cuống vội vàng bấm xác nhận cho kịp giờ, nhịp nhanh gọn, rõ chữ."
+    },
+    {
+      "id": "l6",
+      "speaker": "thang_tun",
+      "start": 26.43,
+      "window": 7.06,
+      "text": "Ủa, sao lại trừ sạch tiền của em?! Alo, chặn số mất rồi!",
+      "style": "Giọng nam thanh niên miền Nam Sài Gòn 20 tuổi, giữ cố định âm sắc nhưng bàng hoàng sững sờ, thảng thốt nghẹn giọng khi thấy tài khoản bị trừ sạch tiền và gọi lại bị chặn số, rõ chữ."
+    },
+    {
+      "id": "l7",
+      "speaker": "nguoi_boc_tran",
+      "start": 33.14,
+      "window": 5.76,
+      "text": "Biên lai báo nghẽn chỉ là mồi nhử để dẫn bạn vào trang giả.",
+      "style": "Giọng nam trung niên miền Nam Sài Gòn, trầm tĩnh, khách quan, sắc lạnh vạch trần bản chất cơ chế, nhịp gọn dứt khoát, rõ chữ, tuyệt đối không kéo dài giọng hay rao giảng dạy đời."
+    },
+    {
+      "id": "l8",
+      "speaker": "nguoi_boc_tran",
+      "start": 37.66,
+      "window": 7.84,
+      "text": "Link và mã OTP nhận lương đó thực chất trao quyền cho kẻ gian rút cạn tài khoản.",
+      "style": "Giọng nam trung niên miền Nam Sài Gòn, trầm tĩnh, khách quan, sắc lạnh vạch trần bản chất cơ chế, nhịp gọn dứt khoát, rõ chữ, tuyệt đối không kéo dài giọng hay rao giảng dạy đời."
+    }
+  ],
+  "chat_bubbles": [],
+  "callouts": [
+    {
+      "text": "CHỦ QUAN \"CHỈ NHẬN LƯƠNG\": ĐĂNG NHẬP VÀO LINK LẠ",
+      "style": "warn",
+      "start": 8.69,
+      "end": 14.05,
+      "y": 190
+    },
+    {
+      "text": "VĂNG TÀI KHOẢN · 2 LỆNH RÚT SẠCH 18 TRIỆU TRONG TÍCH TẮC!",
+      "style": "danger",
+      "start": 21.0,
+      "end": 25.78,
+      "y": 190
+    }
+  ],
+  "red_flags": {
+    "start": 44.42,
+    "end": 48.22,
+    "stagger_sec": 0.4,
+    "title": "NHỚ KỸ",
+    "items": [
+      "Mua hàng hoặc thuê việc thật, gửi ảnh biên lai rồi báo \"nghẽn liên ngân hàng\"",
+      "Gửi link xác nhận nhận tiền để lấy mật khẩu & mã OTP kích hoạt thiết bị lạ"
+    ],
+    "action": "Tiền chuyển thật tự vào tài khoản, không cần link hay OTP · Lỡ bấm: gọi ngân hàng khóa khẩn cấp ngay!"
+  },
+  "disclaimer": {
+    "start": 48.22,
+    "end": 51.02
+  },
+  "audio": {
+    "ambience": [
+      {
+        "preset": "night_room",
+        "start": 0.0,
+        "end": 51.02,
+        "gain_db": -3.5
+      }
+    ],
+    "foley": [
+      {
+        "preset": "notification",
+        "at": 0.08,
+        "gain_db": -0.5
+      },
+      {
+        "preset": "typing",
+        "at": 12.7,
+        "dur": 1.15,
+        "gain_db": 0.5
+      },
+      {
+        "preset": "glitch",
+        "at": 13.82,
+        "dur": 0.45,
+        "gain_db": 0.0
+      },
+      {
+        "preset": "notification",
+        "at": 14.32,
+        "gain_db": 0.5
+      },
+      {
+        "preset": "riser",
+        "at": 18.38,
+        "dur": 1.8,
+        "gain_db": 1.5
+      },
+      {
+        "preset": "message_send",
+        "at": 20.23,
+        "gain_db": 1.0
+      },
+      {
+        "preset": "bank_ting",
+        "at": 20.96,
+        "gain_db": 2.5
+      },
+      {
+        "preset": "impact",
+        "at": 20.98,
+        "dur": 1.5,
+        "gain_db": 2.2
+      },
+      {
+        "preset": "bank_ting",
+        "at": 22.43,
+        "gain_db": 2.8
+      },
+      {
+        "preset": "glitch",
+        "at": 22.46,
+        "dur": 0.85,
+        "gain_db": 1.8
+      },
+      {
+        "preset": "heartbeat",
+        "at": 22.73,
+        "dur": 3.1,
+        "gain_db": 2.2
+      },
+      {
+        "preset": "call_end",
+        "at": 30.64,
+        "dur": 1.45,
+        "gain_db": 1.8
+      },
+      {
+        "preset": "glitch",
+        "at": 32.74,
+        "dur": 0.65,
+        "gain_db": 0.5
+      }
+    ],
+    "bgm": [
+      {
+        "preset": "suspense_pulse",
+        "start": 0.0,
+        "end": 14.2
+      },
+      {
+        "preset": "tension_drone",
+        "start": 14.2,
+        "end": 32.74,
+        "gain_db": 1.2
+      },
+      {
+        "preset": "action_climax",
+        "start": 32.74,
+        "end": 44.42,
+        "gain_db": 1.2
+      },
+      {
+        "preset": "warm_outro",
+        "start": 44.42,
+        "end": 51.02
+      }
+    ],
+    "duck_extra": [
+      {
+        "start": 20.13,
+        "end": 25.98,
+        "bgm_db": -16.5,
+        "amb_db": -8.0
+      }
+    ]
+  },
+  "forbidden_terms": [],
+  "publish": {
+    "titles": [
+      "Làm xong việc thật, chỉ bấm nhận lương mà bay sạch 18 triệu trong 5 giây! #shorts #bóctrầnlừađảo",
+      "Bẫy biên lai báo nghẽn liên ngân hàng: Link nhận tiền hay chìa khóa rút cạn ví? #shorts #cảnhgiáclừađảo",
+      "Thức khuya làm thêm cuối năm, trắng tay vì 1 đường link xác nhận nhận lương! #shorts #vạnchuyện"
+    ],
+    "description": "Thức trắng đêm hoàn thành công việc làm thêm cuối năm (hoặc đóng xong đơn hàng online), bên kia gửi ngay ảnh biên lai đã chuyển khoản nhưng báo \"cuối năm nghẽn liên ngân hàng, lệnh đang treo\".\n\nĐánh trúng tâm lý chủ quan \"mình chỉ bấm nhận lương chứ đâu có chuyển tiền đi\", kẻ gian đẩy nạn nhân vào một đường link xác nhận nhận tiền. Thực chất, mật khẩu và mã OTP bạn nhập vào trang giả đó chính là chìa khóa kích hoạt thiết bị lạ để kẻ gian rút sạch tài khoản chỉ trong vài giây!\n\n✅ Nhớ kỹ: Tiền chuyển khoản thật sẽ tự động vào tài khoản, ngân hàng không bao giờ yêu cầu người nhận bấm link hay nhập mã OTP. Nếu lỡ bấm và nhập mã, hãy gọi ngay tổng đài chính thức của ngân hàng để khóa khẩn cấp và trình báo cơ quan chức năng nơi gần nhất!",
+    "pinned_comment": "📌 Nhiều người rất cảnh giác chuyện chuyển tiền đi, nhưng lại sập bẫy vì nghĩ \"chỉ bấm link nhận tiền công của mình\". Nhận tiền thật không bao giờ cần bấm link hay nhập mã OTP — cả nhà chia sẻ cho người bán hàng online và các bạn sinh viên làm thêm cuối năm nhé!",
+    "hashtags": [
+      "#shorts",
+      "#bóctrầnlừađảo",
+      "#cảnhgiáclừađảo"
+    ],
+    "tags": [
+      "biên lai chuyển khoản giả",
+      "lừa đảo nghẽn mạng ngân hàng",
+      "link xác nhận nhận tiền giả",
+      "việc làm thêm cuối năm lừa đảo",
+      "shop online biên lai giả",
+      "mã otp kích hoạt thiết bị lạ",
+      "bóc trần lừa đảo",
+      "vạn chuyện",
+      "shorts"
+    ],
+    "category": "Education (Giáo dục)",
+    "playlist": "Bóc Trần Lừa Đảo – Kỹ Năng Cảnh Giác & An Toàn Đời Thực",
+    "thumbnail_sec": 22.58
+  }
+}

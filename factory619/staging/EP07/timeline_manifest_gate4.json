@@ -1,0 +1,599 @@
+{
+  "episode_id": "EP07",
+  "factory": "factory619",
+  "gate": "GATE_4_TIMELINE_SAFE_ZONE",
+  "preview_only": false,
+  "canvas": {
+    "width": 1080,
+    "height": 1920,
+    "fps": 30,
+    "aspect_ratio": "9:16",
+    "total_frames": 1569,
+    "total_duration_sec": 52.31
+  },
+  "safe_zone_rules": {
+    "left_x": 80,
+    "right_x": 920,
+    "max_y": 1420,
+    "top_hook_y": 170,
+    "platform_ui_bottom_y": 1440,
+    "all_overlays_compliant": true
+  },
+  "scenes": [
+    {
+      "id": "s1_hook",
+      "image": "assets/scene1.jpg",
+      "start": 0.0,
+      "end": 5.21,
+      "motion": {
+        "scale": [
+          1.05,
+          1.14
+        ],
+        "focus": [
+          [
+            0.5,
+            0.5
+          ],
+          [
+            0.5,
+            0.46
+          ]
+        ],
+        "wobble": "tense"
+      }
+    },
+    {
+      "id": "s2_moi_nhu",
+      "image": "assets/scene2.jpg",
+      "start": 5.21,
+      "end": 14.6,
+      "motion": {
+        "scale": [
+          1.03,
+          1.11
+        ],
+        "focus": [
+          [
+            0.5,
+            0.5
+          ],
+          [
+            0.48,
+            0.45
+          ]
+        ],
+        "wobble": "calm"
+      },
+      "transition_in": {
+        "type": "dissolve",
+        "dur": 0.3
+      }
+    },
+    {
+      "id": "s3_ong_bay_chan",
+      "image": "assets/scene3.jpg",
+      "start": 14.6,
+      "end": 25.71,
+      "motion": {
+        "scale": [
+          1.04,
+          1.14
+        ],
+        "focus": [
+          [
+            0.5,
+            0.48
+          ],
+          [
+            0.5,
+            0.44
+          ]
+        ],
+        "wobble": "handheld"
+      },
+      "transition_in": {
+        "type": "dissolve",
+        "dur": 0.28
+      }
+    },
+    {
+      "id": "s4_cu_chot",
+      "image": "assets/scene4.jpg",
+      "start": 25.71,
+      "end": 40.72,
+      "motion": {
+        "scale": [
+          1.13,
+          1.03
+        ],
+        "focus": [
+          [
+            0.5,
+            0.46
+          ],
+          [
+            0.5,
+            0.5
+          ]
+        ],
+        "wobble": "handheld"
+      },
+      "transition_in": {
+        "type": "flash_white",
+        "dur": 0.25
+      },
+      "shakes": [
+        {
+          "at": 25.89,
+          "amp": 28
+        }
+      ]
+    },
+    {
+      "id": "s5_boc_tran",
+      "image": "assets/scene5.jpg",
+      "start": 40.72,
+      "end": 46.21,
+      "motion": {
+        "scale": [
+          1.02,
+          1.09
+        ],
+        "focus": [
+          [
+            0.5,
+            0.5
+          ],
+          [
+            0.5,
+            0.46
+          ]
+        ],
+        "wobble": "calm"
+      },
+      "transition_in": {
+        "type": "glitch",
+        "dur": 0.3
+      }
+    },
+    {
+      "id": "s6_dau_hieu",
+      "image": "assets/scene6.jpg",
+      "start": 46.21,
+      "end": 52.31,
+      "motion": {
+        "scale": [
+          1.02,
+          1.06
+        ],
+        "focus": [
+          [
+            0.5,
+            0.5
+          ],
+          [
+            0.5,
+            0.5
+          ]
+        ],
+        "wobble": "none"
+      },
+      "transition_in": {
+        "type": "fade_black",
+        "dur": 0.35
+      }
+    }
+  ],
+  "subtitle_srt": "factory619/staging/EP07/subtitles/EP07.srt",
+  "video_track_noaudio": "factory619/staging/EP07/timeline_video_gate4.mp4",
+  "channel_branding": {
+    "type": "channel_branding",
+    "logo_text": "VCH",
+    "watermark_text": "VẠN CHUYỆN",
+    "safe_zone_compliant": true
+  },
+  "overlays": [
+    {
+      "id": "000_hook",
+      "start_sec": 0.3,
+      "end_sec": 4.2,
+      "fade_sec": 0.3,
+      "png_path": "factory619/staging/EP07/overlays/000_hook.png",
+      "type": "text_hook",
+      "text": "BẪY MẠO DANH MÙA LỄ HỘI — Giục đóng quỹ ngày hội & cọc tình nguyện viên: Chú Bảy chỉ 1 chỗ lộ ngay!",
+      "bbox_px": [
+        89,
+        170,
+        911,
+        416
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "001_sub_l1",
+      "start_sec": 0.4,
+      "end_sec": 4.912,
+      "fade_sec": 0.1,
+      "png_path": "factory619/staging/EP07/overlays/001_sub_l1.png",
+      "type": "subtitle",
+      "lines": [
+        "Cô Tư ơi, chuyển liền tiền quỹ ngày",
+        "hội vô số em gửi nha, sắp khóa sổ rồi!"
+      ],
+      "bbox_px": [
+        92,
+        1268,
+        909,
+        1380
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "002_sub_l2",
+      "start_sec": 5.51,
+      "end_sec": 9.81,
+      "fade_sec": 0.1,
+      "png_path": "factory619/staging/EP07/overlays/002_sub_l2.png",
+      "type": "subtitle",
+      "lines": [
+        "Ờ để cô chuyển liền năm trăm ngàn",
+        "ủng hộ xóm mình!"
+      ],
+      "bbox_px": [
+        114,
+        1268,
+        887,
+        1380
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "003_sub_l3",
+      "start_sec": 10.03,
+      "end_sec": 14.25,
+      "fade_sec": 0.1,
+      "png_path": "factory619/staging/EP07/overlays/003_sub_l3.png",
+      "type": "subtitle",
+      "lines": [
+        "Con cũng đang đóng tiền cọc với bảo",
+        "hiểm tình nguyện viên đêm văn hóa!"
+      ],
+      "bbox_px": [
+        96,
+        1268,
+        905,
+        1380
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "004_sub_l4",
+      "start_sec": 14.9,
+      "end_sec": 15.597,
+      "fade_sec": 0.1,
+      "png_path": "factory619/staging/EP07/overlays/004_sub_l4.png",
+      "type": "subtitle",
+      "lines": [
+        "Khoan bấm!"
+      ],
+      "bbox_px": [
+        358,
+        1324,
+        642,
+        1380
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "005_sub_l4",
+      "start_sec": 15.597,
+      "end_sec": 20.2,
+      "fade_sec": 0.1,
+      "png_path": "factory619/staging/EP07/overlays/005_sub_l4.png",
+      "type": "subtitle",
+      "lines": [
+        "Khu phố thu quỹ công khai, tình",
+        "nguyện viên cũng không ai thu cọc!"
+      ],
+      "bbox_px": [
+        113,
+        1268,
+        887,
+        1380
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "006_sub_l5",
+      "start_sec": 20.42,
+      "end_sec": 25.36,
+      "fade_sec": 0.1,
+      "png_path": "factory619/staging/EP07/overlays/006_sub_l5.png",
+      "type": "subtitle",
+      "lines": [
+        "Ủa chú Bảy, vậy trang sự kiện với",
+        "người đang gọi cô Tư là ai?!"
+      ],
+      "bbox_px": [
+        139,
+        1268,
+        862,
+        1380
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "007_sub_l6",
+      "start_sec": 26.06,
+      "end_sec": 28.55,
+      "fade_sec": 0.1,
+      "png_path": "factory619/staging/EP07/overlays/007_sub_l6.png",
+      "type": "subtitle",
+      "lines": [
+        "Nhìn kỹ tên người nhận trên hai máy",
+        "kìa!"
+      ],
+      "bbox_px": [
+        100,
+        1268,
+        901,
+        1380
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "008_sub_l6",
+      "start_sec": 28.55,
+      "end_sec": 30.48,
+      "fade_sec": 0.1,
+      "png_path": "factory619/staging/EP07/overlays/008_sub_l6.png",
+      "type": "subtitle",
+      "lines": [
+        "Toàn tài khoản cá nhân lạ hoắc!"
+      ],
+      "bbox_px": [
+        155,
+        1324,
+        846,
+        1380
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "009_sub_l7",
+      "start_sec": 30.7,
+      "end_sec": 31.999,
+      "fade_sec": 0.1,
+      "png_path": "factory619/staging/EP07/overlays/009_sub_l7.png",
+      "type": "subtitle",
+      "lines": [
+        "Trời ơi thiệt luôn!"
+      ],
+      "bbox_px": [
+        300,
+        1324,
+        701,
+        1380
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "010_sub_l7",
+      "start_sec": 31.999,
+      "end_sec": 35.28,
+      "fade_sec": 0.1,
+      "png_path": "factory619/staging/EP07/overlays/010_sub_l7.png",
+      "type": "subtitle",
+      "lines": [
+        "Trang mới lập hôm qua mà bắt",
+        "chuyển cho cá nhân!"
+      ],
+      "bbox_px": [
+        162,
+        1268,
+        838,
+        1380
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "011_sub_l8",
+      "start_sec": 35.5,
+      "end_sec": 40.32,
+      "fade_sec": 0.1,
+      "png_path": "factory619/staging/EP07/overlays/011_sub_l8.png",
+      "type": "subtitle",
+      "lines": [
+        "Máy cô cũng tên cá nhân, nghe chú",
+        "Bảy khui ra là nó cúp máy liền!"
+      ],
+      "bbox_px": [
+        118,
+        1268,
+        883,
+        1380
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "012_sub_l9",
+      "start_sec": 41.07,
+      "end_sec": 45.81,
+      "fade_sec": 0.1,
+      "png_path": "factory619/staging/EP07/overlays/012_sub_l9.png",
+      "type": "subtitle",
+      "lines": [
+        "Mùa lễ hội, đừng chuyển tiền quỹ hay",
+        "phí sự kiện vô tài khoản cá nhân!"
+      ],
+      "bbox_px": [
+        91,
+        1268,
+        910,
+        1380
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "013_callout1",
+      "start_sec": 9.99,
+      "end_sec": 14.42,
+      "fade_sec": 0.2,
+      "png_path": "factory619/staging/EP07/overlays/013_callout1.png",
+      "type": "callout",
+      "style": "warn",
+      "text": "TRANG SỰ KIỆN LẠ: ĐÒI TIỀN CỌC & PHÍ BẢO HIỂM TNV",
+      "bbox_px": [
+        100,
+        137,
+        901,
+        243
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "014_callout2",
+      "start_sec": 25.96,
+      "end_sec": 40.52,
+      "fade_sec": 0.2,
+      "png_path": "factory619/staging/EP07/overlays/014_callout2.png",
+      "type": "callout",
+      "style": "danger",
+      "text": "CHÚ BẢY VẠCH MẶT: CẢ HAI ĐỀU LÀ TÀI KHOẢN CÁ NHÂN LẠ!",
+      "bbox_px": [
+        134,
+        137,
+        866,
+        243
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "015_redflags_0",
+      "start_sec": 46.21,
+      "end_sec": 46.61,
+      "fade_sec": 0.25,
+      "png_path": "factory619/staging/EP07/overlays/015_redflags_0.png",
+      "type": "red_flags",
+      "title": "NHỚ KỸ",
+      "lines": [
+        "Gọi điện, nhắn tin giục đóng quỹ ngày hội, khuyến học vào tài khoản cá nhân",
+        "Trang giả sự kiện văn hóa bán vé ảo, thu \"tiền cọc / phí bảo hiểm\" tình nguyện viên",
+        "Quỹ khu phố luôn công khai · Sự kiện thật không thu cọc cá nhân · Hỏi tổ dân phố trước khi chuyển!"
+      ],
+      "bbox_px": [
+        80,
+        420,
+        920,
+        944
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "016_redflags_1",
+      "start_sec": 46.61,
+      "end_sec": 47.01,
+      "fade_sec": 0.0,
+      "png_path": "factory619/staging/EP07/overlays/016_redflags_1.png",
+      "type": "red_flags",
+      "title": "NHỚ KỸ",
+      "lines": [
+        "Gọi điện, nhắn tin giục đóng quỹ ngày hội, khuyến học vào tài khoản cá nhân",
+        "Trang giả sự kiện văn hóa bán vé ảo, thu \"tiền cọc / phí bảo hiểm\" tình nguyện viên",
+        "Quỹ khu phố luôn công khai · Sự kiện thật không thu cọc cá nhân · Hỏi tổ dân phố trước khi chuyển!"
+      ],
+      "bbox_px": [
+        80,
+        420,
+        920,
+        944
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "017_redflags_2",
+      "start_sec": 47.01,
+      "end_sec": 49.51,
+      "fade_sec": 0.0,
+      "png_path": "factory619/staging/EP07/overlays/017_redflags_2.png",
+      "type": "red_flags",
+      "title": "NHỚ KỸ",
+      "lines": [
+        "Gọi điện, nhắn tin giục đóng quỹ ngày hội, khuyến học vào tài khoản cá nhân",
+        "Trang giả sự kiện văn hóa bán vé ảo, thu \"tiền cọc / phí bảo hiểm\" tình nguyện viên",
+        "Quỹ khu phố luôn công khai · Sự kiện thật không thu cọc cá nhân · Hỏi tổ dân phố trước khi chuyển!"
+      ],
+      "bbox_px": [
+        80,
+        420,
+        920,
+        944
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "018_disclaimer",
+      "start_sec": 49.51,
+      "end_sec": 52.31,
+      "fade_sec": 0.25,
+      "png_path": "factory619/staging/EP07/overlays/018_disclaimer.png",
+      "type": "disclaimer",
+      "text": "Tình huống được dựng lại để cảnh báo. Nhân vật, tên, số liệu đều là hư cấu.",
+      "bbox_px": [
+        80,
+        210,
+        920,
+        340
+      ],
+      "safe_zone_compliant": true
+    }
+  ],
+  "qa_preview_frames": [
+    {
+      "timestamp_sec": 1.3,
+      "clean": "factory619/staging/EP07/preview_frames/qa_01_30s_clean.jpg",
+      "safezone": "factory619/staging/EP07/preview_frames/qa_01_30s_safezone.jpg"
+    },
+    {
+      "timestamp_sec": 2.6,
+      "clean": "factory619/staging/EP07/preview_frames/qa_02_60s_clean.jpg",
+      "safezone": "factory619/staging/EP07/preview_frames/qa_02_60s_safezone.jpg"
+    },
+    {
+      "timestamp_sec": 9.9,
+      "clean": "factory619/staging/EP07/preview_frames/qa_09_90s_clean.jpg",
+      "safezone": "factory619/staging/EP07/preview_frames/qa_09_90s_safezone.jpg"
+    },
+    {
+      "timestamp_sec": 20.16,
+      "clean": "factory619/staging/EP07/preview_frames/qa_20_16s_clean.jpg",
+      "safezone": "factory619/staging/EP07/preview_frames/qa_20_16s_safezone.jpg"
+    },
+    {
+      "timestamp_sec": 33.22,
+      "clean": "factory619/staging/EP07/preview_frames/qa_33_22s_clean.jpg",
+      "safezone": "factory619/staging/EP07/preview_frames/qa_33_22s_safezone.jpg"
+    },
+    {
+      "timestamp_sec": 43.47,
+      "clean": "factory619/staging/EP07/preview_frames/qa_43_47s_clean.jpg",
+      "safezone": "factory619/staging/EP07/preview_frames/qa_43_47s_safezone.jpg"
+    },
+    {
+      "timestamp_sec": 49.01,
+      "clean": "factory619/staging/EP07/preview_frames/qa_49_01s_clean.jpg",
+      "safezone": "factory619/staging/EP07/preview_frames/qa_49_01s_safezone.jpg"
+    },
+    {
+      "timestamp_sec": 49.26,
+      "clean": "factory619/staging/EP07/preview_frames/qa_49_26s_clean.jpg",
+      "safezone": "factory619/staging/EP07/preview_frames/qa_49_26s_safezone.jpg"
+    },
+    {
+      "timestamp_sec": 50.91,
+      "clean": "factory619/staging/EP07/preview_frames/qa_50_91s_clean.jpg",
+      "safezone": "factory619/staging/EP07/preview_frames/qa_50_91s_safezone.jpg"
+    }
+  ]
+}

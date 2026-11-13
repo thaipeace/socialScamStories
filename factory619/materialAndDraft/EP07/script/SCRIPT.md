@@ -1,29 +1,33 @@
-# KỊCH BẢN EP07 — NGƯỜI LẠ GIẢ QUÊN GIẤY TỜ NHỜ GIỮ ĐỒ Ở SÂN BAY (56 GIÂY)
+# KỊCH BẢN EP07 — MẠO DANH NGÀY HỘI & ĐÊM VĂN HÓA: LỘ TẨY Ở TÊN TÀI KHOẢN NHẬN! (56 GIÂY · V1)
 
-> [!WARNING]
-> **GHI CHÚ TRẠNG THÁI: KỊCH BẢN TỆ / CHƯA ĐẠT — TẠM XẾP CUỐI ĐỂ CÓ PHƯƠNG ÁN THAY THẾ SAU**
-> Tập này (chuyển từ `EP04` cũ xuống vị trí `EP07` cuối danh sách) hiện được đánh dấu là **kịch bản tệ, chưa thuyết phục**, tạm giữ hồ sơ để chủ kênh lên phương án kịch bản khác thay thế sau.
-
-- **Mã tập:** `EP07` (`CamHoDoSanBay` — *chuyển từ `EP04` cũ*)
-- **Họ kịch bản:** `OFF-13` (Bẫy nhờ cầm hộ / giữ hộ hành lý tại sân bay, bến xe)
-- **Trạng thái:** ⚠️ **Kịch bản tệ — Chờ phương án thay thế sau**
-- **Hashtag chuẩn:** `#AnToanDuLich #KyNangSong #CanhGiac #BocTranLuaDao`
-- **Dàn nhân vật (`02_CAST/cast.json`):**
-  - `be_na` (Bé Na)
-  - `ke_ngot_ngao_nu` (Người phụ nữ trung niên giả quên căn cước nhờ giữ hộ đồ)
-  - `anh_hai` (Anh Hai)
-  - `chu_bao_ve` (Nhân viên kiểm tra an ninh)
-  - `nguoi_boc_tran` (Người Bóc Trần)
+- **Mã tập:** `EP07` (`BayMuaLeHoi`)
+- **Họ kịch bản:** `ON-09` (Mạo danh vận động quỹ mùa lễ hội & trang giả sự kiện văn hóa thu tiền cọc/bảo hiểm vào tài khoản cá nhân)
+- **Thời lượng mục tiêu:** `~56.0s` (`9:16` dọc `1080x1920`)
+- **Hashtag chuẩn:** `#shorts #bóctrầnlừađảo #cảnhgiáclừađảo #vạnchuyện`
+- **Dàn nhân vật (`02_CAST/cast.json` – 5 giọng tách biệt âm sắc):**
+  - `ke_gia_danh` (`Fenrir` + `af: phone` – Số lạ mạo danh gọi điện hối chuyển gấp quỹ ngày hội)
+  - `co_tu` (`Kore` – Cô Tư chủ quán nước ngoài 50 tuổi, tốt bụng, hay đóng góp phong trào khu phố)
+  - `be_na` (`Leda` – Bé Na sinh viên 20–22 tuổi, háo hức đăng ký tình nguyện viên đêm văn hóa)
+  - `ong_bay` (`Algenib` – Ông Bảy tổ trưởng khu phố thật 65+, đi phát thiệp mời Ngày hội)
+  - `nguoi_boc_tran` (`Charon` – Người Bóc Trần tổng kết bài học)
 
 ---
 
-## BẢNG PHÂN CẢNH & LỜI THOẠI CHI TIẾT (6 NHỊP · 56s — BẢN LƯU TẠM CHỜ THAY THẾ)
+## BẢNG PHÂN CẢNH & LỜI THOẠI CHI TIẾT (6 NHỊP · ~56s · 116 TỪ)
 
-| Nhịp | Thời gian | Bối cảnh & Chuyển động | Lời thoại (`speaker`) | Số từ | Âm thanh / Foley |
+| Nhịp | Thời gian | Bối cảnh & Đồ họa (`9:16`) | Lời thoại (`speaker`) | Số từ | Âm thanh / Foley |
 | :--- | :---: | :--- | :--- | :---: | :--- |
-| **1. HOOK** | `00.0 – 05.0s` | Đang xếp hàng sát vạch kiểm tra an ninh sân bay, người phụ nữ nói chuyện thân thiện bỗng vỗ túi hốt hoảng báo quên căn cước ở ghế chờ và nhờ Na giữ giùm hộp quà | **l1 (`ke_ngot_ngao_nu`):** *"Ối, chị quên căn cước ở ghế chờ! Em giữ giùm hộp quà nha!"* | 14 | `crowd` + `footsteps` + `suspense_pulse` |
-| **2. SUÝT SẬP BẪY VÌ LÒNG TỐT** | `05.0 – 18.0s` | Vì thương người và không hề nghi ngờ, Na liền đưa tay định nhận hộp quà; nhưng dòng người đang nhích thẳng vào cửa soi chiếu nên Anh Hai kéo nhẹ tay Na lại, chỉ sang bàn nhân viên hỗ trợ | **l2 (`be_na`):** *"Dạ đưa em giữ giùm cho, chị chạy lẹ lấy căn cước đi!"*<br>**l3 (`anh_hai`):** *"Khoan Na! Sắp qua cửa soi chiếu rồi, gửi lại bàn nhân viên kia!"* | 12<br>14 | `office` + `suspense_pulse` |
-| **3. LỘ Ý ĐỒ & TỪ CHỐI LỊCH SỰ** | `18.0 – 34.0s` | Thấy hai anh em định gửi cho nhân viên sân bay chứ không xách qua cổng, người phụ nữ vội chạy tới lộ rõ ý đồ muốn Na mang qua máy soi; Anh Hai và Na lịch sự từ chối rồi tự bước vào cổng trước | **l4 (`ke_ngot_ngao_nu`):** *"Ơ đừng gửi nhân viên! Em cứ xách qua cổng, qua bển chị lấy!"*<br>**l5 (`anh_hai`):** *"Đồ của ai người đó tự mang qua máy soi chị ơi!"* | 14<br>12 | `heartbeat` + `riser` + `tension_drone` |
-| **4. CÚ CHỐT RÙNG MÌNH SAU CỔNG** | `34.0 – 44.0s` | **Cắt ngang Trái – Phải:** Vừa bước qua phía bên kia cổng an ninh, tiếng còi báo động máy soi hú vang sau lưng! Bên trái Na bủn rủn bụm miệng nhìn lại cạnh Anh Hai; bên phải nhân viên an ninh (`chu_bao_ve`) giữ chặt người phụ nữ cùng hộp quà báo động đỏ trên màn hình X-quang | **l6 (`chu_bao_ve`):** *"Báo động đỏ! Hộp quà này giấu hàng cấm, mời chị ở lại!"*<br>**l7 (`be_na`):** *"Hú hồn, nãy em mà cầm giùm là giờ tiêu đời rồi!"* | 13<br>13 | `flash_white` + `impact` + `whistle` + `action_climax` |
-| **5. BÓC TRẦN** | `44.0 – 51.0s` | Kính lúp đỏ soi xuyên qua hộp quà trên băng chuyền X-quang lộ rõ khối hàng cấm ngụy trang tinh vi bên trong | **l8 (`nguoi_boc_tran`):** *"Kẻ xấu hay giả quên giấy tờ nhờ giữ đồ; tuyệt đối đừng cầm hộ!"* | 15 | `glitch` + `action_climax` |
-| **6. DẤU HIỆU** | `51.0 – 56.0s` | Sảnh sân bay sáng sủa + Thẻ `NHỚ KỸ` + `Disclaimer` | **Thẻ `NHỚ KỸ`:**<br>1. Giả vờ quên căn cước/đi vệ sinh nhờ giữ hộ đồ ngay lúc dòng người vào cửa soi chiếu<br>2. Ngăn cản khi bạn định gửi đồ lại quầy nhân viên sân bay và năn nỉ xách qua cổng<br>👉 *Hành lý của ai người nấy giữ, chỉ hướng dẫn họ gửi tại quầy nhân viên sân bay!* | — | `warm_outro` |
+| **1. HOOK** | `00.0 – 05.5s` | Trước hiên quán nước Cô Tư treo cờ dây nhiều màu chuẩn bị ngày hội khu phố (không chữ/biểu trưng). Cô Tư nghe điện thoại bật loa ngoài.<br>• Hook: `BẪY MẠO DANH MÙA LỄ HỘI` – `Giục đóng quỹ ngày hội & cọc tình nguyện viên: Nhìn tên người nhận lộ ngay!` | **l1 (`ke_gia_danh`):** *"Cô Tư ơi, chuyển liền tiền quỹ ngày hội vô số em gửi nha, sắp khóa sổ rồi!"* | 18 | `phone_ring` + `street` + `suspense_pulse` |
+| **2. HAI MỒI NHỬ CÙNG LÚC** | `05.5 – 18.0s` | Cô Tư mở điện thoại định bấm chuyển tiền ủng hộ; sát bên cạnh, Bé Na hào hứng giơ điện thoại khoe đang đăng ký tình nguyện viên trên trang sự kiện.<br>• Callout vàng: `TRANG SỰ KIỆN LẠ: Đòi cọc thẻ & phí bảo hiểm TNV` | **l2 (`co_tu`):** *"Ờ để cô chuyển liền năm trăm ngàn ủng hộ xóm mình!"*<br>**l3 (`be_na`):** *"Con cũng đang đóng tiền cọc với bảo hiểm tình nguyện viên đêm văn hóa!"* | 12<br>15 | `notification` + `suspense_pulse` |
+| **3. CHÚ BẢY CHẶN ĐỨNG** | `15.5 – 24.5s` | Ngay lúc hai cô cháu sắp chạm nút chuyển tiền, Chú Bảy cầm xấp thiệp mời trơn bước vào quán khoát tay ngăn dứt khoát; Bé Na ngơ ngác hỏi lại. | **l4 (`ong_bay`):** *"Khoan bấm! Khu phố thu quỹ công khai, tình nguyện viên cũng không ai thu cọc!"*<br>**l5 (`be_na`):** *"Ủa chú Bảy, vậy trang sự kiện với người đang gọi cô Tư là ai?!"* | 16<br>15 | `heartbeat` + `riser` + `tension_drone` |
+| **4. CHÚ BẢY KHUI TÊN CÁ NHÂN** | `24.5 – 39.5s` | **Cận Chú Bảy chỉ thẳng vào hai màn hình điện thoại đặt cạnh nhau** (`flash_white` + `shakes` + `impact` + `call_end`), hai cô cháu bật ngửa khi thấy cả hai đều mang tên cá nhân lạ:<br>• Callout đỏ: `CHÚ BẢY VẠCH MẶT: CẢ HAI ĐỀU LÀ TÀI KHOẢN CÁ NHÂN LẠ!` | **l6 (`ong_bay`):** *"Nhìn kỹ tên người nhận trên hai máy kìa! Toàn tài khoản cá nhân lạ hoắc!"*<br>**l7 (`be_na`):** *"Trời ơi thiệt luôn! Trang mới lập hôm qua mà bắt chuyển cho cá nhân!"*<br>**l8 (`co_tu`):** *"Máy cô cũng tên cá nhân, nghe chú Bảy khui ra là nó cúp máy liền!"* | 16<br>15<br>16 | `flash_white` + `impact` + `call_end` + `action_climax` |
+| **5. BÓC TRẦN** | `39.5 – 45.5s` | Kính lúp đỏ soi 2 chiêu mồi nhử mùa lễ hội (*quỹ từ thiện/ngày hội* & *vé/cọc tình nguyện viên sự kiện*) cùng chảy về phễu đỏ tài khoản cá nhân của kẻ gian giấu mặt. | **l9 (`nguoi_boc_tran`):** *"Mùa lễ hội, đừng chuyển tiền quỹ hay phí sự kiện vô tài khoản cá nhân!"* | 16 | `glitch` + `action_climax` |
+| **6. DẤU HIỆU & LƯU Ý** | `45.5 – 51.5s` | Sân khu phố sáng sủa ấm cúng, bà con vui vẻ dự ngày hội thật + **Thẻ `NHỚ KỸ`** + **`Disclaimer`**. | **Thẻ `NHỚ KỸ`:**<br>1. Gọi điện, nhắn tin giục đóng quỹ ngày hội, khuyến học vào tài khoản cá nhân<br>2. Trang giả sự kiện văn hóa bán vé ảo, thu "tiền cọc / phí bảo hiểm" tình nguyện viên<br>👉 *Quỹ khu phố luôn công khai · Sự kiện thật không thu cọc cá nhân · Hỏi tổ dân phố trước khi chuyển!* | — | `warm_outro` |
+
+---
+
+## KIỂM SOÁT PHÁP LÝ & CÂU CHỮ CƠ QUAN NHÀ NƯỚC
+1. **Không chạm tên tổ chức hiến định / cơ quan nhà nước:** Tuyệt đối không dùng tên *"Mặt trận Tổ quốc"*, *"UBND"*, *"chính quyền"*, *"Bộ Công an"* hay tên tỉnh/thành phố thật trong lời thoại, chữ trên hình và tiêu đề.
+2. **Tôn vinh phong trào thật ở khu dân cư:** Đặt nhân vật Ông Bảy (tổ trưởng khu phố thật) làm điểm tựa khẳng định hoạt động vận động ở khu phố luôn công khai, minh bạch, tự nguyện; tách bạch hoàn toàn với kẻ mạo danh qua mạng/điện thoại.
+3. **Không định danh người hoặc sự kiện thật:** Không đặt họ tên cá nhân cụ thể cho tài khoản nhận tiền lừa đảo; không nhại tên bất kỳ chương trình nghệ thuật có thật nào.
+4. **Không giả mạo biểu trưng (`Gate 1`):** Hình ảnh không có chữ, không Quốc huy, không băng rôn khẩu hiệu nhà nước, không con dấu đỏ, không sắc phục/phù hiệu.

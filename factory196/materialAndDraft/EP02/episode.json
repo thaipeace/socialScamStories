@@ -1,0 +1,1741 @@
+{
+  "episode_id": "EP02",
+  "slug": "ChuMa80TrieuVaMotCuClick",
+  "title": "Chữ ma – 80 triệu và một cú click",
+  "version": "v1",
+  "scam_family": "ON-03",
+  "duration_sec": 259.0,
+  "visual_style_lock": "Horizontal 16:9 widescreen (1920x1080), semi-realistic cinematic 2D anime illustration, contemporary Southern Vietnam urban setting, moody dramatic lighting, clean bottom 15% for subtitles, no text, no letters, no numbers, no logos, no real uniforms",
+  "hook": {
+    "kicker": "22 GIỜ 30 · MỘT TIN NHẮN NGÂN HÀNG",
+    "title": "TÁM CHỤC TRIỆU BIẾN MẤT – CHỈ VÌ MỘT CHỮ CÁI",
+    "start": 0.4,
+    "end": 5.4
+  },
+  "chapters": [
+    {
+      "kicker": "HỒI 1 · CHIỀU CÙNG NGÀY",
+      "title": "TIỀN MỔ CỦA MẸ",
+      "start": 17.23,
+      "end": 21.83
+    },
+    {
+      "kicker": "HỒI 2 · 22 GIỜ 20",
+      "title": "CUỘC GỌI “HỖ TRỢ”",
+      "start": 57.22,
+      "end": 61.82
+    },
+    {
+      "kicker": "HỒI 3 · BÓC TRẦN",
+      "title": "CHỮ MA: MẮT THẤY MỘT CHỮ, MÁY ĐỌC MỘT CHỮ KHÁC",
+      "start": 106.38,
+      "end": 110.98
+    },
+    {
+      "kicker": "HỒI 4 · CUỘC GỌI THẬT",
+      "title": "NGÂN HÀNG KHÔNG GỬI LINK",
+      "start": 156.8,
+      "end": 161.4
+    },
+    {
+      "kicker": "HỒI 5 · 22 GIỜ 40",
+      "title": "TIN NHẮN CHƯA ĐỌC",
+      "start": 217.7,
+      "end": 222.3
+    }
+  ],
+  "scenes": [
+    {
+      "id": "s01_hook_ting",
+      "image": "assets/c01.jpg",
+      "start": 0.0,
+      "end": 7.34,
+      "motion": {
+        "scale": [
+          1.04,
+          1.14
+        ],
+        "focus": [
+          [
+            0.5,
+            0.5
+          ],
+          [
+            0.47,
+            0.45
+          ]
+        ],
+        "wobble": "tense"
+      },
+      "shakes": [
+        {
+          "at": 0.35,
+          "dur": 0.4,
+          "amp": 16
+        }
+      ]
+    },
+    {
+      "id": "s02_hook_phone",
+      "image": "assets/c02.jpg",
+      "start": 7.34,
+      "end": 17.03,
+      "motion": {
+        "scale": [
+          1.0,
+          1.16
+        ],
+        "focus": [
+          [
+            0.5,
+            0.5
+          ],
+          [
+            0.5,
+            0.45
+          ]
+        ],
+        "wobble": "tense"
+      },
+      "transition_in": {
+        "type": "flash_white",
+        "dur": 0.28
+      }
+    },
+    {
+      "id": "s03_hospital",
+      "image": "assets/c03.jpg",
+      "start": 17.03,
+      "end": 30.47,
+      "motion": {
+        "scale": [
+          1.02,
+          1.09
+        ],
+        "focus": [
+          [
+            0.5,
+            0.5
+          ],
+          [
+            0.5,
+            0.47
+          ]
+        ],
+        "wobble": "calm"
+      },
+      "transition_in": {
+        "type": "fade_black",
+        "dur": 0.45
+      }
+    },
+    {
+      "id": "s04_hands",
+      "image": "assets/c04.jpg",
+      "start": 30.47,
+      "end": 34.02,
+      "motion": {
+        "scale": [
+          1.0,
+          1.05
+        ],
+        "focus": [
+          [
+            0.5,
+            0.5
+          ],
+          [
+            0.5,
+            0.5
+          ]
+        ],
+        "wobble": "none"
+      },
+      "transition_in": {
+        "type": "dissolve",
+        "dur": 0.4
+      }
+    },
+    {
+      "id": "s05_cafe_call",
+      "image": "assets/c05.jpg",
+      "start": 34.02,
+      "end": 41.57,
+      "motion": {
+        "scale": [
+          1.02,
+          1.09
+        ],
+        "focus": [
+          [
+            0.5,
+            0.5
+          ],
+          [
+            0.5,
+            0.47
+          ]
+        ],
+        "wobble": "calm"
+      },
+      "transition_in": {
+        "type": "fade_black",
+        "dur": 0.4
+      }
+    },
+    {
+      "id": "s06_cafe_sms",
+      "image": "assets/c06.jpg",
+      "start": 41.57,
+      "end": 49.86,
+      "motion": {
+        "scale": [
+          1.0,
+          1.16
+        ],
+        "focus": [
+          [
+            0.5,
+            0.5
+          ],
+          [
+            0.5,
+            0.45
+          ]
+        ],
+        "wobble": "tense"
+      },
+      "transition_in": {
+        "type": "dissolve",
+        "dur": 0.3
+      }
+    },
+    {
+      "id": "s07_fake_site",
+      "image": "assets/c07.jpg",
+      "start": 49.86,
+      "end": 57.02,
+      "motion": {
+        "scale": [
+          1.0,
+          1.16
+        ],
+        "focus": [
+          [
+            0.5,
+            0.5
+          ],
+          [
+            0.5,
+            0.45
+          ]
+        ],
+        "wobble": "tense"
+      },
+      "transition_in": {
+        "type": "dissolve",
+        "dur": 0.3
+      }
+    },
+    {
+      "id": "s08_home_ring",
+      "image": "assets/c08.jpg",
+      "start": 57.02,
+      "end": 59.97,
+      "motion": {
+        "scale": [
+          1.02,
+          1.09
+        ],
+        "focus": [
+          [
+            0.5,
+            0.5
+          ],
+          [
+            0.5,
+            0.47
+          ]
+        ],
+        "wobble": "calm"
+      },
+      "transition_in": {
+        "type": "fade_black",
+        "dur": 0.4
+      }
+    },
+    {
+      "id": "s09_scammer",
+      "image": "assets/c09.jpg",
+      "start": 59.97,
+      "end": 67.96,
+      "motion": {
+        "scale": [
+          1.02,
+          1.09
+        ],
+        "focus": [
+          [
+            0.5,
+            0.5
+          ],
+          [
+            0.5,
+            0.47
+          ]
+        ],
+        "wobble": "calm"
+      },
+      "transition_in": {
+        "type": "dissolve",
+        "dur": 0.3
+      }
+    },
+    {
+      "id": "s10_home_talk",
+      "image": "assets/c08.jpg",
+      "start": 67.96,
+      "end": 77.45,
+      "motion": {
+        "scale": [
+          1.02,
+          1.1
+        ],
+        "focus": [
+          [
+            0.46,
+            0.48
+          ],
+          [
+            0.54,
+            0.46
+          ]
+        ],
+        "wobble": "handheld"
+      },
+      "transition_in": {
+        "type": "dissolve",
+        "dur": 0.3
+      }
+    },
+    {
+      "id": "s11_huong_doubt",
+      "image": "assets/c10.jpg",
+      "start": 77.45,
+      "end": 85.86,
+      "motion": {
+        "scale": [
+          1.02,
+          1.1
+        ],
+        "focus": [
+          [
+            0.46,
+            0.48
+          ],
+          [
+            0.54,
+            0.46
+          ]
+        ],
+        "wobble": "handheld"
+      },
+      "transition_in": {
+        "type": "dissolve",
+        "dur": 0.3
+      }
+    },
+    {
+      "id": "s12_scammer_push",
+      "image": "assets/c09.jpg",
+      "start": 85.86,
+      "end": 92.17,
+      "motion": {
+        "scale": [
+          1.0,
+          1.16
+        ],
+        "focus": [
+          [
+            0.5,
+            0.5
+          ],
+          [
+            0.5,
+            0.45
+          ]
+        ],
+        "wobble": "tense"
+      },
+      "transition_in": {
+        "type": "dissolve",
+        "dur": 0.3
+      }
+    },
+    {
+      "id": "s13_face_scan",
+      "image": "assets/c11.jpg",
+      "start": 92.17,
+      "end": 101.23,
+      "motion": {
+        "scale": [
+          1.04,
+          1.14
+        ],
+        "focus": [
+          [
+            0.5,
+            0.5
+          ],
+          [
+            0.47,
+            0.45
+          ]
+        ],
+        "wobble": "tense"
+      },
+      "transition_in": {
+        "type": "flash_red",
+        "dur": 0.3
+      }
+    },
+    {
+      "id": "s14_too_late",
+      "image": "assets/c12.jpg",
+      "start": 101.23,
+      "end": 106.18,
+      "motion": {
+        "scale": [
+          1.0,
+          1.16
+        ],
+        "focus": [
+          [
+            0.5,
+            0.5
+          ],
+          [
+            0.5,
+            0.45
+          ]
+        ],
+        "wobble": "tense"
+      },
+      "transition_in": {
+        "type": "flash_white",
+        "dur": 0.28
+      },
+      "shakes": [
+        {
+          "at": 101.38,
+          "dur": 0.4,
+          "amp": 16
+        }
+      ]
+    },
+    {
+      "id": "s15_narrator",
+      "image": "factory196/materialAndDraft/EP01b/assets/scene15.jpg",
+      "start": 106.18,
+      "end": 111.32,
+      "motion": {
+        "scale": [
+          1.02,
+          1.09
+        ],
+        "focus": [
+          [
+            0.5,
+            0.5
+          ],
+          [
+            0.5,
+            0.47
+          ]
+        ],
+        "wobble": "calm"
+      },
+      "transition_in": {
+        "type": "glitch",
+        "dur": 0.35
+      }
+    },
+    {
+      "id": "s16_letters",
+      "image": "assets/c13.jpg",
+      "start": 111.32,
+      "end": 135.27,
+      "motion": {
+        "scale": [
+          1.0,
+          1.05
+        ],
+        "focus": [
+          [
+            0.5,
+            0.5
+          ],
+          [
+            0.5,
+            0.5
+          ]
+        ],
+        "wobble": "none"
+      },
+      "transition_in": {
+        "type": "dissolve",
+        "dur": 0.3
+      }
+    },
+    {
+      "id": "s17_flow",
+      "image": "assets/c14.jpg",
+      "start": 135.27,
+      "end": 150.32,
+      "motion": {
+        "scale": [
+          1.0,
+          1.05
+        ],
+        "focus": [
+          [
+            0.5,
+            0.5
+          ],
+          [
+            0.5,
+            0.5
+          ]
+        ],
+        "wobble": "none"
+      },
+      "transition_in": {
+        "type": "dissolve",
+        "dur": 0.3
+      }
+    },
+    {
+      "id": "s18_narrator_face",
+      "image": "factory196/materialAndDraft/EP01b/assets/scene15.jpg",
+      "start": 150.32,
+      "end": 156.6,
+      "motion": {
+        "scale": [
+          1.12,
+          1.02
+        ],
+        "focus": [
+          [
+            0.5,
+            0.46
+          ],
+          [
+            0.5,
+            0.5
+          ]
+        ],
+        "wobble": "calm"
+      },
+      "transition_in": {
+        "type": "dissolve",
+        "dur": 0.3
+      }
+    },
+    {
+      "id": "s19_hotline",
+      "image": "assets/c15.jpg",
+      "start": 156.6,
+      "end": 172.94,
+      "motion": {
+        "scale": [
+          1.02,
+          1.09
+        ],
+        "focus": [
+          [
+            0.5,
+            0.5
+          ],
+          [
+            0.5,
+            0.47
+          ]
+        ],
+        "wobble": "calm"
+      },
+      "transition_in": {
+        "type": "fade_black",
+        "dur": 0.4
+      }
+    },
+    {
+      "id": "s19b_hotline_close",
+      "image": "assets/c15.jpg",
+      "start": 172.94,
+      "end": 186.97,
+      "motion": {
+        "scale": [
+          1.0,
+          1.16
+        ],
+        "focus": [
+          [
+            0.5,
+            0.5
+          ],
+          [
+            0.5,
+            0.45
+          ]
+        ],
+        "wobble": "tense"
+      },
+      "transition_in": {
+        "type": "dissolve",
+        "dur": 0.3
+      }
+    },
+    {
+      "id": "s20_silence",
+      "image": "assets/c16.jpg",
+      "start": 186.97,
+      "end": 199.54,
+      "motion": {
+        "scale": [
+          1.0,
+          1.05
+        ],
+        "focus": [
+          [
+            0.5,
+            0.5
+          ],
+          [
+            0.5,
+            0.5
+          ]
+        ],
+        "wobble": "none"
+      },
+      "transition_in": {
+        "type": "dissolve",
+        "dur": 0.5
+      }
+    },
+    {
+      "id": "s21_red_flags",
+      "image": "factory196/materialAndDraft/EP01b/assets/scene18.jpg",
+      "start": 199.54,
+      "end": 217.5,
+      "motion": {
+        "scale": [
+          1.0,
+          1.05
+        ],
+        "focus": [
+          [
+            0.5,
+            0.5
+          ],
+          [
+            0.5,
+            0.5
+          ]
+        ],
+        "wobble": "none"
+      },
+      "transition_in": {
+        "type": "fade_black",
+        "dur": 0.4
+      }
+    },
+    {
+      "id": "s22_texting",
+      "image": "assets/c17.jpg",
+      "start": 217.5,
+      "end": 231.86,
+      "motion": {
+        "scale": [
+          1.02,
+          1.09
+        ],
+        "focus": [
+          [
+            0.5,
+            0.5
+          ],
+          [
+            0.5,
+            0.47
+          ]
+        ],
+        "wobble": "calm"
+      },
+      "transition_in": {
+        "type": "fade_black",
+        "dur": 0.4
+      }
+    },
+    {
+      "id": "s23_mom_night",
+      "image": "assets/c18.jpg",
+      "start": 231.86,
+      "end": 239.44,
+      "motion": {
+        "scale": [
+          1.0,
+          1.16
+        ],
+        "focus": [
+          [
+            0.5,
+            0.5
+          ],
+          [
+            0.5,
+            0.45
+          ]
+        ],
+        "wobble": "tense"
+      },
+      "transition_in": {
+        "type": "dissolve",
+        "dur": 0.45
+      }
+    },
+    {
+      "id": "s24_finger",
+      "image": "assets/c19.jpg",
+      "start": 239.44,
+      "end": 241.39,
+      "motion": {
+        "scale": [
+          1.0,
+          1.16
+        ],
+        "focus": [
+          [
+            0.5,
+            0.5
+          ],
+          [
+            0.5,
+            0.45
+          ]
+        ],
+        "wobble": "tense"
+      },
+      "transition_in": {
+        "type": "dissolve",
+        "dur": 0.25
+      }
+    },
+    {
+      "id": "s25_black",
+      "image": "assets/c20.jpg",
+      "start": 241.39,
+      "end": 251.65,
+      "motion": {
+        "scale": [
+          1.0,
+          1.05
+        ],
+        "focus": [
+          [
+            0.5,
+            0.5
+          ],
+          [
+            0.5,
+            0.5
+          ]
+        ],
+        "wobble": "none"
+      },
+      "transition_in": {
+        "type": "fade_black",
+        "dur": 0.15
+      }
+    },
+    {
+      "id": "s26_outro",
+      "image": "factory196/materialAndDraft/EP01b/assets/scene18.jpg",
+      "start": 251.65,
+      "end": 259.0,
+      "motion": {
+        "scale": [
+          1.0,
+          1.05
+        ],
+        "focus": [
+          [
+            0.5,
+            0.5
+          ],
+          [
+            0.5,
+            0.5
+          ]
+        ],
+        "wobble": "none"
+      },
+      "transition_in": {
+        "type": "fade_black",
+        "dur": 0.4
+      }
+    }
+  ],
+  "dialogue": [
+    {
+      "id": "l01_minh",
+      "speaker": "thang_tun",
+      "voice": "Puck",
+      "label_short": "MINH",
+      "speaker_label": "Minh",
+      "style": "Giọng nam miền Nam 30 tuổi, tông sáng, hiền, nhịp hơi nhanh, phát âm chuẩn phương ngữ miền Nam, sững sờ rồi hoảng loạn, run giọng.",
+      "start": 0.6,
+      "window": 5.02,
+      "text": "Không… Anh đâu có chuyển! Tám chục triệu!",
+      "subtitle": [
+        "Không… Anh đâu có chuyển! 80 triệu!"
+      ]
+    },
+    {
+      "id": "l02_huong",
+      "speaker": "chi_ba",
+      "voice": "Kore",
+      "label_short": "HƯƠNG",
+      "speaker_label": "Hương – vợ Minh",
+      "style": "Giọng phụ nữ miền Nam 28 tuổi, sắc sảo, dứt khoát, tự nhiên như đời thực, thất thanh, hoảng hốt.",
+      "start": 4.37,
+      "window": 4.22,
+      "text": "Anh! Tiền mổ của mẹ đó!"
+    },
+    {
+      "id": "l03_narr",
+      "speaker": "nguoi_boc_tran",
+      "start": 7.69,
+      "window": 7.45,
+      "text": "Minh vừa tự tay xác thực một giao dịch mà anh không hề thực hiện."
+    },
+    {
+      "id": "l04_narr",
+      "speaker": "nguoi_boc_tran",
+      "start": 12.78,
+      "window": 5.29,
+      "text": "Và mọi chuyện bắt đầu từ một chữ cái."
+    },
+    {
+      "id": "l05_me",
+      "speaker": "co_tu",
+      "voice": "Gacrux",
+      "label_short": "MẸ MINH",
+      "speaker_label": "Mẹ Minh",
+      "style": "Giọng phụ nữ miền Nam 60 tuổi, hiền, chậm rãi, hơi yếu vì đang nằm viện, thương con, ngại ngùng, xót tiền của con.",
+      "start": 17.68,
+      "window": 7.5,
+      "text": "Thôi con, mổ chi cho tốn. Mẹ về uống thuốc được rồi."
+    },
+    {
+      "id": "l06_minh",
+      "speaker": "thang_tun",
+      "voice": "Puck",
+      "label_short": "MINH",
+      "speaker_label": "Minh",
+      "style": "Giọng nam miền Nam 30 tuổi, tông sáng, hiền, nhịp hơi nhanh, phát âm chuẩn phương ngữ miền Nam, dịu dàng, trấn an.",
+      "start": 23.93,
+      "window": 4.93,
+      "text": "Mẹ đừng lo. Con để dành đủ rồi."
+    },
+    {
+      "id": "l07_minh",
+      "speaker": "thang_tun",
+      "voice": "Puck",
+      "label_short": "MINH",
+      "speaker_label": "Minh",
+      "style": "Giọng nam miền Nam 30 tuổi, tông sáng, hiền, nhịp hơi nhanh, phát âm chuẩn phương ngữ miền Nam, chắc chắn, ấm áp.",
+      "start": 27.02,
+      "window": 4.93,
+      "text": "Tối nay con chuyển, sáng mai mẹ mổ."
+    },
+    {
+      "id": "l08_huong",
+      "speaker": "chi_ba",
+      "voice": "Kore",
+      "label_short": "HƯƠNG",
+      "speaker_label": "Hương – vợ Minh",
+      "style": "Giọng phụ nữ miền Nam 28 tuổi, sắc sảo, dứt khoát, tự nhiên như đời thực, qua điện thoại, sốt ruột, nói nhanh.",
+      "start": 35.27,
+      "window": 7.81,
+      "text": "Bệnh viện nhắn rồi anh. Chín giờ sáng chưa có tạm ứng là dời ca mổ.",
+      "subtitle": [
+        "Bệnh viện nhắn rồi anh. 9 giờ sáng chưa có tạm ứng là dời ca mổ."
+      ]
+    },
+    {
+      "id": "l09_minh",
+      "speaker": "thang_tun",
+      "voice": "Puck",
+      "label_short": "MINH",
+      "speaker_label": "Minh",
+      "style": "Giọng nam miền Nam 30 tuổi, tông sáng, hiền, nhịp hơi nhanh, phát âm chuẩn phương ngữ miền Nam, vội, bận tay.",
+      "start": 39.76,
+      "window": 3.49,
+      "text": "Anh đang chuyển đây."
+    },
+    {
+      "id": "l10_minh",
+      "speaker": "thang_tun",
+      "voice": "Puck",
+      "label_short": "MINH",
+      "speaker_label": "Minh",
+      "style": "Giọng nam miền Nam 30 tuổi, tông sáng, hiền, nhịp hơi nhanh, phát âm chuẩn phương ngữ miền Nam, bực bội, cuống.",
+      "start": 43.52,
+      "window": 3.85,
+      "text": "Trời đất, đúng lúc này."
+    },
+    {
+      "id": "l11_minh",
+      "speaker": "thang_tun",
+      "voice": "Puck",
+      "label_short": "MINH",
+      "speaker_label": "Minh",
+      "style": "Giọng nam miền Nam 30 tuổi, tông sáng, hiền, nhịp hơi nhanh, phát âm chuẩn phương ngữ miền Nam, lẩm bẩm, yên tâm.",
+      "start": 46.97,
+      "window": 3.94,
+      "text": "Ngân hàng X. Đúng rồi."
+    },
+    {
+      "id": "l12_minh",
+      "speaker": "thang_tun",
+      "voice": "Puck",
+      "label_short": "MINH",
+      "speaker_label": "Minh",
+      "style": "Giọng nam miền Nam 30 tuổi, tông sáng, hiền, nhịp hơi nhanh, phát âm chuẩn phương ngữ miền Nam, sốt ruột, thở dài.",
+      "start": 53.81,
+      "window": 3.66,
+      "text": "Sao lâu vậy trời…"
+    },
+    {
+      "id": "l13_kg",
+      "speaker": "ke_ngot_ngao_nam",
+      "label_short": "SỐ LẠ",
+      "speaker_label": "Số lạ – xưng an ninh Ngân hàng X",
+      "af": "phone",
+      "style": "Giọng nam miền Nam 30 tuổi, mượt, lễ phép, nói nhanh, chuyên nghiệp như nhân viên ngân hàng, niềm nở, lễ phép.",
+      "start": 60.32,
+      "window": 7.81,
+      "text": "Dạ, anh Minh phải không ạ? Em là Tuấn, bộ phận an ninh Ngân hàng X."
+    },
+    {
+      "id": "l14_kg",
+      "speaker": "ke_ngot_ngao_nam",
+      "label_short": "SỐ LẠ",
+      "speaker_label": "Số lạ – xưng an ninh Ngân hàng X",
+      "af": "phone",
+      "style": "Giọng nam miền Nam 30 tuổi, mượt, lễ phép, nói nhanh, chuyên nghiệp như nhân viên ngân hàng, nghiêm giọng, hơi gấp.",
+      "start": 64.54,
+      "window": 7.81,
+      "text": "Hệ thống thấy có người đang đăng nhập tài khoản anh từ một thiết bị lạ."
+    },
+    {
+      "id": "l15_minh",
+      "speaker": "thang_tun",
+      "voice": "Puck",
+      "label_short": "MINH",
+      "speaker_label": "Minh",
+      "style": "Giọng nam miền Nam 30 tuổi, tông sáng, hiền, nhịp hơi nhanh, phát âm chuẩn phương ngữ miền Nam, ngơ ngác, lo.",
+      "start": 68.31,
+      "window": 4.57,
+      "text": "Anh vừa xác minh rồi mà em?"
+    },
+    {
+      "id": "l16_kg",
+      "speaker": "ke_ngot_ngao_nam",
+      "label_short": "SỐ LẠ",
+      "speaker_label": "Số lạ – xưng an ninh Ngân hàng X",
+      "af": "phone",
+      "style": "Giọng nam miền Nam 30 tuổi, mượt, lễ phép, nói nhanh, chuyên nghiệp như nhân viên ngân hàng, trấn an, mượt.",
+      "start": 70.92,
+      "window": 5.65,
+      "text": "Dạ đúng, nên tụi em mới chặn kịp một phần."
+    },
+    {
+      "id": "l17_kg",
+      "speaker": "ke_ngot_ngao_nam",
+      "label_short": "SỐ LẠ",
+      "speaker_label": "Số lạ – xưng an ninh Ngân hàng X",
+      "af": "phone",
+      "style": "Giọng nam miền Nam 30 tuổi, mượt, lễ phép, nói nhanh, chuyên nghiệp như nhân viên ngân hàng, nhanh, chuyên nghiệp.",
+      "start": 73.83,
+      "window": 8.17,
+      "text": "Giờ anh cần xác thực khuôn mặt để em khóa thiết bị kia. Em gửi link liền."
+    },
+    {
+      "id": "l18_huong",
+      "speaker": "chi_ba",
+      "voice": "Kore",
+      "label_short": "HƯƠNG",
+      "speaker_label": "Hương – vợ Minh",
+      "style": "Giọng phụ nữ miền Nam 28 tuổi, sắc sảo, dứt khoát, tự nhiên như đời thực, nghi ngờ, cau mày.",
+      "start": 77.8,
+      "window": 7.81,
+      "text": "Ngân hàng gì mà bắt quay mặt qua đường link? Anh mở app ra coi thử."
+    },
+    {
+      "id": "l19_minh",
+      "speaker": "thang_tun",
+      "voice": "Puck",
+      "label_short": "MINH",
+      "speaker_label": "Minh",
+      "style": "Giọng nam miền Nam 30 tuổi, tông sáng, hiền, nhịp hơi nhanh, phát âm chuẩn phương ngữ miền Nam, hoảng, giọng cao.",
+      "start": 83.85,
+      "window": 4.21,
+      "text": "App văng ra rồi nè em!"
+    },
+    {
+      "id": "l20_kg",
+      "speaker": "ke_ngot_ngao_nam",
+      "label_short": "SỐ LẠ",
+      "speaker_label": "Số lạ – xưng an ninh Ngân hàng X",
+      "af": "phone",
+      "style": "Giọng nam miền Nam 30 tuổi, mượt, lễ phép, nói nhanh, chuyên nghiệp như nhân viên ngân hàng, dồn dập, thúc ép.",
+      "start": 86.21,
+      "window": 7.09,
+      "text": "Đó anh thấy chưa, tụi nó đang chiếm quyền đó. Còn hai phút thôi.",
+      "subtitle": [
+        "Đó anh thấy chưa, tụi nó đang chiếm quyền đó. Còn 2 phút thôi."
+      ]
+    },
+    {
+      "id": "l21_kg",
+      "speaker": "ke_ngot_ngao_nam",
+      "label_short": "SỐ LẠ",
+      "speaker_label": "Số lạ – xưng an ninh Ngân hàng X",
+      "af": "phone",
+      "style": "Giọng nam miền Nam 30 tuổi, mượt, lễ phép, nói nhanh, chuyên nghiệp như nhân viên ngân hàng, gấp gáp nhưng vẫn lễ phép.",
+      "start": 89.79,
+      "window": 5.65,
+      "text": "Anh làm theo hướng dẫn trên màn hình giùm em."
+    },
+    {
+      "id": "l22_huong",
+      "speaker": "chi_ba",
+      "voice": "Kore",
+      "label_short": "HƯƠNG",
+      "speaker_label": "Hương – vợ Minh",
+      "style": "Giọng phụ nữ miền Nam 28 tuổi, sắc sảo, dứt khoát, tự nhiên như đời thực, lo lắng, níu lại.",
+      "start": 92.52,
+      "window": 4.93,
+      "text": "Anh, để em gọi tổng đài trước đã…"
+    },
+    {
+      "id": "l23_minh",
+      "speaker": "thang_tun",
+      "voice": "Puck",
+      "label_short": "MINH",
+      "speaker_label": "Minh",
+      "style": "Giọng nam miền Nam 30 tuổi, tông sáng, hiền, nhịp hơi nhanh, phát âm chuẩn phương ngữ miền Nam, cuống cuồng, gắt.",
+      "start": 95.69,
+      "window": 3.49,
+      "text": "Không kịp đâu em!"
+    },
+    {
+      "id": "l24_huong",
+      "speaker": "chi_ba",
+      "voice": "Kore",
+      "label_short": "HƯƠNG",
+      "speaker_label": "Hương – vợ Minh",
+      "style": "Giọng phụ nữ miền Nam 28 tuổi, sắc sảo, dứt khoát, tự nhiên như đời thực, hét lên, lao tới giật điện thoại.",
+      "start": 98.9,
+      "window": 3.58,
+      "text": "Anh! Dừng lại!"
+    },
+    {
+      "id": "l25_narr",
+      "speaker": "nguoi_boc_tran",
+      "start": 106.83,
+      "window": 5.74,
+      "text": "Thứ đánh lừa Minh đầu tiên là một chữ cái."
+    },
+    {
+      "id": "l26_narr",
+      "speaker": "nguoi_boc_tran",
+      "start": 111.67,
+      "window": 8.53,
+      "text": "Bên trái là chữ a La tinh. Bên phải là chữ a hệ Kirin, nhìn giống hệt nhau.",
+      "subtitle": [
+        "Bên trái là chữ a Latin. Bên phải là chữ а hệ Kirin (Cyrillic), nhìn giống hệt nhau."
+      ]
+    },
+    {
+      "id": "l27_narr",
+      "speaker": "nguoi_boc_tran",
+      "start": 118.6,
+      "window": 6.37,
+      "text": "Mắt bạn nhìn thấy một chữ. Máy tính đọc một chữ khác."
+    },
+    {
+      "id": "l28_narr",
+      "speaker": "nguoi_boc_tran",
+      "start": 123.41,
+      "window": 8.53,
+      "text": "Có khi chẳng cần chữ ngoại. Hai chữ r và n đứng sát nhau trông như chữ m."
+    },
+    {
+      "id": "l29_narr",
+      "speaker": "nguoi_boc_tran",
+      "start": 130.1,
+      "window": 7.81,
+      "text": "Hoặc gắn thêm đuôi giả, hay giấu cả địa chỉ sau một đường link rút gọn."
+    },
+    {
+      "id": "l30_narr",
+      "speaker": "nguoi_boc_tran",
+      "start": 135.62,
+      "window": 8.89,
+      "text": "Hiện nay, đăng nhập máy lạ hay chuyển tiền vượt hạn mức cài đặt đều phải quét khuôn mặt."
+    },
+    {
+      "id": "l31_narr",
+      "speaker": "nguoi_boc_tran",
+      "start": 142.39,
+      "window": 10.69,
+      "text": "Có mật khẩu và mã OTP vẫn chưa qua được chốt này. Nên chúng gọi điện, dụ nạn nhân tự quét mặt giúp chúng."
+    },
+    {
+      "id": "l32_narr",
+      "speaker": "nguoi_boc_tran",
+      "start": 150.67,
+      "window": 6.78,
+      "text": "Mật khẩu thì đổi được. Nhưng khuôn mặt của bạn… là thật."
+    },
+    {
+      "id": "l33_td",
+      "speaker": "chi_tu",
+      "voice": "Zephyr",
+      "label_short": "TỔNG ĐÀI NGÂN HÀNG X",
+      "speaker_label": "Tổng đài Ngân hàng X",
+      "af": "phone",
+      "style": "Giọng nữ miền Nam 30 tuổi, nhân viên tổng đài ngân hàng, lịch sự, chuẩn mực, bình tĩnh, đều giọng.",
+      "start": 158.35,
+      "window": 9.25,
+      "text": "Kể cả tin nhắn hiện tên Ngân hàng X, chúng tôi cũng không bao giờ gửi đường link đăng nhập."
+    },
+    {
+      "id": "l34_td",
+      "speaker": "chi_tu",
+      "voice": "Zephyr",
+      "label_short": "TỔNG ĐÀI NGÂN HÀNG X",
+      "speaker_label": "Tổng đài Ngân hàng X",
+      "af": "phone",
+      "style": "Giọng nữ miền Nam 30 tuổi, nhân viên tổng đài ngân hàng, lịch sự, chuẩn mực, bình tĩnh, đều giọng.",
+      "start": 164.76,
+      "window": 7.81,
+      "text": "Ngân hàng cũng không yêu cầu xác thực khuôn mặt qua đường link hay điện thoại."
+    },
+    {
+      "id": "l35_td",
+      "speaker": "chi_tu",
+      "voice": "Zephyr",
+      "label_short": "TỔNG ĐÀI NGÂN HÀNG X",
+      "speaker_label": "Tổng đài Ngân hàng X",
+      "af": "phone",
+      "style": "Giọng nữ miền Nam 30 tuổi, nhân viên tổng đài ngân hàng, lịch sự, chuẩn mực, bình tĩnh, đều giọng.",
+      "start": 169.46,
+      "window": 6.37,
+      "text": "Tôi đã tạm khóa ngân hàng điện tử và thẻ của anh."
+    },
+    {
+      "id": "l36_minh",
+      "speaker": "thang_tun",
+      "voice": "Puck",
+      "label_short": "MINH",
+      "speaker_label": "Minh",
+      "style": "Giọng nam miền Nam 30 tuổi, tông sáng, hiền, nhịp hơi nhanh, phát âm chuẩn phương ngữ miền Nam, nghẹn, run.",
+      "start": 173.29,
+      "window": 4.57,
+      "text": "Còn tám chục triệu thì sao chị?",
+      "subtitle": [
+        "Còn 80 triệu thì sao chị?"
+      ]
+    },
+    {
+      "id": "l37_td",
+      "speaker": "chi_tu",
+      "voice": "Zephyr",
+      "label_short": "TỔNG ĐÀI NGÂN HÀNG X",
+      "speaker_label": "Tổng đài Ngân hàng X",
+      "af": "phone",
+      "style": "Giọng nữ miền Nam 30 tuổi, nhân viên tổng đài ngân hàng, lịch sự, chuẩn mực, bình tĩnh, đều giọng.",
+      "start": 175.94,
+      "window": 6.73,
+      "text": "Tôi đã ghi nhận giao dịch bất thường để phối hợp kiểm tra."
+    },
+    {
+      "id": "l38_td",
+      "speaker": "chi_tu",
+      "voice": "Zephyr",
+      "label_short": "TỔNG ĐÀI NGÂN HÀNG X",
+      "speaker_label": "Tổng đài Ngân hàng X",
+      "af": "phone",
+      "style": "Giọng nữ miền Nam 30 tuổi, nhân viên tổng đài ngân hàng, lịch sự, chuẩn mực, bình tĩnh, đều giọng.",
+      "start": 179.96,
+      "window": 10.69,
+      "text": "Anh đừng xóa tin nhắn hay lịch sử cuộc gọi, trình báo công an ngay và mang căn cước ra chi nhánh sớm nhất."
+    },
+    {
+      "id": "l39_huong",
+      "speaker": "chi_ba",
+      "voice": "Kore",
+      "label_short": "HƯƠNG",
+      "speaker_label": "Hương – vợ Minh",
+      "style": "Giọng phụ nữ miền Nam 28 tuổi, sắc sảo, dứt khoát, tự nhiên như đời thực, nhỏ, nghẹn ngào.",
+      "start": 189.52,
+      "window": 5.65,
+      "text": "Tiền mổ của mẹ… có lấy lại được không anh?"
+    },
+    {
+      "id": "l40_minh",
+      "speaker": "thang_tun",
+      "voice": "Puck",
+      "label_short": "MINH",
+      "speaker_label": "Minh",
+      "style": "Giọng nam miền Nam 30 tuổi, tông sáng, hiền, nhịp hơi nhanh, phát âm chuẩn phương ngữ miền Nam, mệt mỏi, cay đắng, nói chậm.",
+      "start": 194.57,
+      "window": 5.62,
+      "text": "Anh không biết. Mai anh đi hỏi mượn."
+    },
+    {
+      "id": "l41_narr",
+      "speaker": "nguoi_boc_tran",
+      "start": 200.19,
+      "window": 6.86,
+      "text": "Ba dấu hiệu: khẩn cấp, link bất ngờ, và xác minh lạ."
+    },
+    {
+      "id": "l42_narr",
+      "speaker": "nguoi_boc_tran",
+      "start": 205.8,
+      "window": 8.17,
+      "text": "Ngân hàng không gửi link. Muốn kiểm tra, tự mở app hoặc gọi số in sau thẻ."
+    },
+    {
+      "id": "l43_narr",
+      "speaker": "nguoi_boc_tran",
+      "start": 212.29,
+      "window": 6.01,
+      "text": "Lỡ nhập rồi thì gọi ngân hàng khóa ngay, đừng chờ."
+    },
+    {
+      "id": "l44_huong",
+      "speaker": "chi_ba",
+      "voice": "Kore",
+      "label_short": "HƯƠNG",
+      "speaker_label": "Hương – vợ Minh",
+      "style": "Giọng phụ nữ miền Nam 28 tuổi, sắc sảo, dứt khoát, tự nhiên như đời thực, lo lắng, thúc giục.",
+      "start": 218.15,
+      "window": 6.73,
+      "text": "Anh gọi dặn mẹ liền đi. Mẹ hay bấm mấy tin đó lắm."
+    },
+    {
+      "id": "l45_minh",
+      "speaker": "thang_tun",
+      "voice": "Puck",
+      "label_short": "MINH",
+      "speaker_label": "Minh",
+      "style": "Giọng nam miền Nam 30 tuổi, tông sáng, hiền, nhịp hơi nhanh, phát âm chuẩn phương ngữ miền Nam, mệt, nhẹ giọng.",
+      "start": 221.92,
+      "window": 5.65,
+      "text": "Giờ này mẹ ngủ rồi. Nhắn thôi, sáng mẹ đọc."
+    },
+    {
+      "id": "l46_minh",
+      "speaker": "thang_tun",
+      "voice": "Puck",
+      "label_short": "MINH",
+      "speaker_label": "Minh",
+      "style": "Giọng nam miền Nam 30 tuổi, tông sáng, hiền, nhịp hơi nhanh, phát âm chuẩn phương ngữ miền Nam, vừa gõ vừa đọc, nhỏ nhẹ.",
+      "start": 225.85,
+      "window": 7.81,
+      "text": "Mẹ ơi, tin nhắn ngân hàng có link thì đừng bấm nha. Có gì gọi con."
+    },
+    {
+      "id": "l47_me",
+      "speaker": "co_tu",
+      "voice": "Gacrux",
+      "label_short": "MẸ MINH",
+      "speaker_label": "Mẹ Minh",
+      "style": "Giọng phụ nữ miền Nam 60 tuổi, hiền, chậm rãi, hơi yếu vì đang nằm viện, thương con, nheo mắt đọc, tò mò, ngây thơ.",
+      "start": 234.61,
+      "window": 5.78,
+      "text": "Ủa… ngân hàng nhắn gì đây ta…"
+    },
+    {
+      "id": "l48_narr",
+      "speaker": "nguoi_boc_tran",
+      "start": 242.34,
+      "window": 7.66,
+      "text": "Một ký tự giả. Một website giả. Nhưng số tiền mất đi… là thật."
+    }
+  ],
+  "chat_bubbles": [
+    {
+      "sender": "NGÂN HÀNG X",
+      "text": "TK …8826  −80.000.000 VND",
+      "side": "right",
+      "y": 380,
+      "stamp": "ĐÃ TRỪ TIỀN",
+      "start": 0.45,
+      "end": 4.65
+    },
+    {
+      "sender": "NGÂN HÀNG X",
+      "text": "Phát hiện đăng nhập trên thiết bị lạ. Tài khoản sẽ tạm khóa sau 15 phút. Xác minh ngay tại đường link.",
+      "side": "left",
+      "y": 380,
+      "stamp": "SMS",
+      "start": 42.02,
+      "end": 48.02
+    },
+    {
+      "sender": "TRANG XÁC MINH",
+      "text": "Phát hiện thiết bị mới. Nhập OTP để xác minh.",
+      "side": "left",
+      "y": 380,
+      "stamp": "WEB",
+      "start": 50.41,
+      "end": 52.71
+    },
+    {
+      "sender": "TRANG XÁC MINH",
+      "text": "Đang xử lý… Vui lòng không tắt màn hình.",
+      "side": "left",
+      "y": 380,
+      "stamp": "WEB",
+      "start": 52.91,
+      "end": 56.81
+    },
+    {
+      "sender": "APP NGÂN HÀNG X",
+      "text": "Phiên đăng nhập đã hết hạn.",
+      "side": "left",
+      "y": 380,
+      "stamp": "LỖI",
+      "start": 82.85,
+      "end": 85.75
+    },
+    {
+      "sender": "TRANG XÁC MINH",
+      "text": "Đưa khuôn mặt vào khung.",
+      "side": "left",
+      "y": 380,
+      "stamp": "WEB",
+      "start": 97.6,
+      "end": 101.0
+    },
+    {
+      "sender": "NGÂN HÀNG X",
+      "text": "TK …8826  −80.000.000 VND",
+      "side": "right",
+      "y": 380,
+      "stamp": "ĐÃ TRỪ TIỀN",
+      "start": 101.58,
+      "end": 105.98
+    },
+    {
+      "sender": "NGÂN HÀNG X",
+      "text": "Tài khoản quý khách sắp bị tạm khóa. Xác minh ngay tại đường link.",
+      "side": "left",
+      "y": 300,
+      "stamp": "MỚI",
+      "start": 232.61,
+      "end": 240.21
+    },
+    {
+      "sender": "MINH",
+      "text": "Mẹ ơi, tin nhắn ngân hàng có link thì đừng b…",
+      "side": "left",
+      "y": 470,
+      "stamp": "CHƯA ĐỌC",
+      "start": 233.21,
+      "end": 240.21
+    }
+  ],
+  "callouts": [
+    {
+      "text": "ĐƯỜNG LINK TRONG TIN NHẮN:  nganhаngx",
+      "style": "warning",
+      "y": 130,
+      "start": 46.17,
+      "end": 49.67
+    },
+    {
+      "text": "THẬT: nganhangx      GIẢ: nganhаngx",
+      "style": "danger",
+      "y": 130,
+      "start": 111.77,
+      "end": 122.77
+    },
+    {
+      "text": "a (Latin)  ≠  а (Cyrillic)",
+      "style": "warning",
+      "y": 250,
+      "start": 112.17,
+      "end": 122.77
+    },
+    {
+      "text": "rn ≈ m   ·   thêm đuôi giả   ·   link rút gọn",
+      "style": "warning",
+      "y": 130,
+      "start": 123.51,
+      "end": 134.01
+    },
+    {
+      "text": "CÓ MẬT KHẨU + OTP VẪN VƯỚNG SINH TRẮC HỌC  →  DỤ NẠN NHÂN TỰ QUÉT MẶT",
+      "style": "danger",
+      "y": 130,
+      "start": 135.72,
+      "end": 149.72
+    },
+    {
+      "text": "GỌI SỐ IN SAU THẺ NGÂN HÀNG",
+      "style": "safe",
+      "y": 130,
+      "start": 161.95,
+      "end": 167.45
+    },
+    {
+      "text": "ĐỪNG BẤM LINK. HÃY TỰ MỞ APP.",
+      "style": "danger",
+      "y": 420,
+      "start": 245.85,
+      "end": 251.45
+    },
+    {
+      "text": "Chuyện gấp thì gọi, đừng chỉ nhắn.",
+      "style": "safe",
+      "y": 560,
+      "start": 246.85,
+      "end": 251.45
+    }
+  ],
+  "red_flags": {
+    "title": "NHỚ KỸ – 3 DẤU HIỆU LINK GIẢ NGÂN HÀNG",
+    "start": 199.89,
+    "end": 217.5,
+    "stagger_sec": 1.3,
+    "items": [
+      "KHẨN CẤP: \"Tài khoản sẽ bị khóa sau 15 phút!\"",
+      "LINK BẤT NGỜ qua SMS hoặc mạng xã hội, kể cả hiện đúng tên ngân hàng",
+      "XÁC MINH LẠ: đòi OTP, mật khẩu hay quét khuôn mặt qua link, điện thoại"
+    ],
+    "action": "Ngân hàng không gửi link · Tự mở app hoặc gọi số in sau thẻ · Lỡ nhập: gọi ngân hàng khóa ngay!"
+  },
+  "disclaimer": {
+    "header": "LƯU Ý",
+    "start": 252.0,
+    "end": 259.0,
+    "lines": [
+      "Tình huống được dựng lại nhằm cảnh báo cộng đồng; nhân vật, ngân hàng, tên miền và số liệu đều là hư cấu.",
+      "Không cung cấp OTP, mật khẩu hay khuôn mặt qua link. Nghi ngờ: gọi số in sau thẻ ngân hàng."
+    ]
+  },
+  "audio": {
+    "ambience": [
+      {
+        "preset": "night_room",
+        "start": 0.0,
+        "end": 17.03,
+        "gain_db": -1.5
+      },
+      {
+        "preset": "room_tone",
+        "start": 17.03,
+        "end": 34.02,
+        "gain_db": -1.5
+      },
+      {
+        "preset": "street",
+        "start": 34.02,
+        "end": 57.02,
+        "gain_db": -2.5
+      },
+      {
+        "preset": "night_room",
+        "start": 57.02,
+        "end": 106.18,
+        "gain_db": -1.5
+      },
+      {
+        "preset": "room_tone",
+        "start": 106.18,
+        "end": 156.6,
+        "gain_db": -3.0
+      },
+      {
+        "preset": "night_room",
+        "start": 156.6,
+        "end": 199.54,
+        "gain_db": -1.5
+      },
+      {
+        "preset": "room_tone",
+        "start": 199.54,
+        "end": 217.5,
+        "gain_db": -4.0
+      },
+      {
+        "preset": "night_room",
+        "start": 217.5,
+        "end": 231.86,
+        "gain_db": -1.5
+      },
+      {
+        "preset": "room_tone",
+        "start": 231.86,
+        "end": 251.65,
+        "gain_db": -3.0
+      },
+      {
+        "preset": "room_tone",
+        "start": 251.65,
+        "end": 259.0,
+        "gain_db": -5.0
+      }
+    ],
+    "foley": [
+      {
+        "preset": "bank_ting",
+        "at": 0.45,
+        "gain_db": -3
+      },
+      {
+        "preset": "impact",
+        "at": 7.34,
+        "gain_db": -4
+      },
+      {
+        "preset": "riser",
+        "at": 15.03,
+        "gain_db": -5,
+        "dur": 1.2
+      },
+      {
+        "preset": "chapter_sting",
+        "at": 17.28,
+        "gain_db": -4
+      },
+      {
+        "preset": "phone_vibrate",
+        "at": 34.37,
+        "gain_db": -5,
+        "dur": 1.2
+      },
+      {
+        "preset": "notification",
+        "at": 42.02,
+        "gain_db": -4
+      },
+      {
+        "preset": "message_send",
+        "at": 46.07,
+        "gain_db": -6
+      },
+      {
+        "preset": "typing",
+        "at": 50.61,
+        "gain_db": -6,
+        "dur": 1.8
+      },
+      {
+        "preset": "chapter_sting",
+        "at": 57.27,
+        "gain_db": -4
+      },
+      {
+        "preset": "phone_ring",
+        "at": 57.67,
+        "gain_db": -4,
+        "dur": 1.6
+      },
+      {
+        "preset": "glitch",
+        "at": 82.85,
+        "gain_db": -4
+      },
+      {
+        "preset": "heartbeat",
+        "at": 92.52,
+        "gain_db": -5,
+        "dur": 9.0
+      },
+      {
+        "preset": "riser",
+        "at": 100.03,
+        "gain_db": -5,
+        "dur": 1.2
+      },
+      {
+        "preset": "bank_ting",
+        "at": 101.58,
+        "gain_db": -3
+      },
+      {
+        "preset": "impact",
+        "at": 101.63,
+        "gain_db": -3
+      },
+      {
+        "preset": "call_end",
+        "at": 103.18,
+        "gain_db": -5
+      },
+      {
+        "preset": "chapter_sting",
+        "at": 106.43,
+        "gain_db": -4
+      },
+      {
+        "preset": "chapter_sting",
+        "at": 156.85,
+        "gain_db": -4
+      },
+      {
+        "preset": "phone_ring",
+        "at": 157.35,
+        "gain_db": -6,
+        "dur": 1.0
+      },
+      {
+        "preset": "call_end",
+        "at": 186.77,
+        "gain_db": -6
+      },
+      {
+        "preset": "notification",
+        "at": 199.99,
+        "gain_db": -4
+      },
+      {
+        "preset": "chapter_sting",
+        "at": 217.75,
+        "gain_db": -4
+      },
+      {
+        "preset": "typing",
+        "at": 226.05,
+        "gain_db": -6,
+        "dur": 2.0
+      },
+      {
+        "preset": "message_send",
+        "at": 231.26,
+        "gain_db": -5
+      },
+      {
+        "preset": "phone_vibrate",
+        "at": 232.41,
+        "gain_db": -5,
+        "dur": 1.0
+      },
+      {
+        "preset": "heartbeat",
+        "at": 239.79,
+        "gain_db": -6,
+        "dur": 2.0
+      }
+    ],
+    "bgm": [
+      {
+        "preset": "suspense_pulse",
+        "start": 0.0,
+        "end": 17.03,
+        "gain_db": -1.0
+      },
+      {
+        "preset": "investigative_story",
+        "start": 17.03,
+        "end": 57.02,
+        "gain_db": -1.5
+      },
+      {
+        "preset": "tension_drone",
+        "start": 57.02,
+        "end": 106.18,
+        "gain_db": -1.0
+      },
+      {
+        "preset": "investigative_story",
+        "start": 106.18,
+        "end": 156.6,
+        "gain_db": -1.5
+      },
+      {
+        "preset": "tension_drone",
+        "start": 156.6,
+        "end": 199.54,
+        "gain_db": -3.0
+      },
+      {
+        "preset": "warm_outro",
+        "start": 199.54,
+        "end": 217.5,
+        "gain_db": -2.0
+      },
+      {
+        "preset": "tension_drone",
+        "start": 217.5,
+        "end": 251.65,
+        "gain_db": -2.5
+      },
+      {
+        "preset": "warm_outro",
+        "start": 251.65,
+        "end": 259.0,
+        "gain_db": -3.0
+      }
+    ],
+    "duck_extra": [
+      {
+        "start": 101.38,
+        "end": 103.38,
+        "bgm_db": -14,
+        "amb_db": -10
+      },
+      {
+        "start": 252.0,
+        "end": 258.95
+      }
+    ]
+  },
+  "forbidden_terms": [],
+  "publish": {
+    "titles": [
+      "Chữ Ma: Một Chữ Cái Giả, 80 Triệu Tiền Mổ Của Mẹ Bay Mất | Bóc Trần Lừa Đảo",
+      "Link Ngân Hàng Giả Giống Hệt Thật – Mắt Thấy Một Chữ, Máy Đọc Một Chữ Khác | Bóc Trần Lừa Đảo",
+      "Vì Sao Đã Cài Sinh Trắc Học Mà 80 Triệu Vẫn Bốc Hơi? | Bóc Trần Lừa Đảo"
+    ],
+    "description": "Minh, 30 tuổi, đang chuyển tiền tạm ứng mổ cho mẹ thì nhận tin nhắn hiện tên \"ngân hàng\" báo tài khoản sắp bị khóa. Một đường link giống hệt thật – chỉ khác một chữ cái – và một cuộc gọi \"hỗ trợ\" dụ tự quét khuôn mặt qua đường link đã khiến 80 triệu biến mất. Phim bóc trần thủ đoạn \"chữ ma\" (tên miền giả mạo bằng ký tự giống nhau) và lý do dù đã có sinh trắc học, kẻ gian vẫn dụ chính nạn nhân mở nốt chốt khóa cuối.\n\n⏱️ Các hồi trong phim:\n00:00 Mở đầu – 80 triệu biến mất\n00:17 Hồi 1 – Tiền mổ của mẹ\n00:57 Hồi 2 – Cuộc gọi “hỗ trợ”\n01:46 Hồi 3 – Chữ ma: mắt thấy một chữ, máy đọc một chữ khác\n02:36 Hồi 4 – Ngân hàng không gửi link\n03:19 Dấu hiệu nhận biết & việc nên làm\n03:37 Hồi 5 – Tin nhắn chưa đọc",
+    "pinned_comment": "📌 Kể cả tin nhắn hiện đúng tên ngân hàng, ngân hàng cũng KHÔNG gửi link yêu cầu đăng nhập, không xin OTP và không yêu cầu xác thực khuôn mặt qua link hay điện thoại. Nghi ngờ: tự mở app chính thức hoặc gọi số in sau thẻ. Nếu lỡ bị trừ tiền: khóa tài khoản ngay, giữ nguyên tin nhắn/lịch sử cuộc gọi và trình báo công an sớm nhất. Chuyện gấp với người thân lớn tuổi – hãy gọi, đừng chỉ nhắn.",
+    "hashtags": [
+      "#bóctrầnlừađảo",
+      "#cảnhgiáclừađảo",
+      "#vạnchuyện",
+      "#linkgiả",
+      "#chữma"
+    ],
+    "tags": [
+      "link giả mạo ngân hàng",
+      "tên miền giả",
+      "chữ ma",
+      "lừa đảo OTP",
+      "xác thực khuôn mặt",
+      "bóc trần lừa đảo",
+      "vạn chuyện"
+    ],
+    "category": "Education (Giáo dục)",
+    "playlist": "Hồ Sơ Bóc Trần Lừa Đảo – Phim Dài Chuyên Sâu",
+    "thumbnail_sec": 102.18
+  }
+}

@@ -1,0 +1,82 @@
+{
+  "episode_id": "EP02",
+  "factory": "factory196",
+  "gate": "GATE_5_RENDER_AND_QA",
+  "staging_mp4_path": "factory196/staging/EP02/EP02_ChuMa80TrieuVaMotCuClick_259s_staging.mp4",
+  "file_size_mb": 102.35,
+  "stream_probe": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "codec_name": "h264",
+        "codec_type": "video",
+        "width": 1920,
+        "height": 1080,
+        "r_frame_rate": "30/1"
+      },
+      {
+        "codec_name": "aac",
+        "codec_type": "audio",
+        "sample_rate": "48000",
+        "channels": 2,
+        "r_frame_rate": "0/0"
+      }
+    ],
+    "format": {
+      "duration": "259.000000",
+      "size": "107318270"
+    }
+  },
+  "all_8_points_passed": true,
+  "checklist": [
+    {
+      "id": 1,
+      "name": "Không định danh người / tổ chức / số thật",
+      "status": "PASS",
+      "evidence": "Cấm cứng: 0; cảnh báo: ['bệnh viện']; SĐT: 0; URL: 0; dãy số TK: 0"
+    },
+    {
+      "id": 2,
+      "name": "Không hướng dẫn thủ đoạn chi tiết (chỉ bóc trần cơ chế tâm lý & dấu hiệu)",
+      "status": "PASS",
+      "evidence": "Người duyệt: Chủ kênh. Chủ kênh duyệt staging lên production"
+    },
+    {
+      "id": 3,
+      "name": "Sạch từ khóa thuật toán (ASR/OCR/metadata)",
+      "status": "PASS",
+      "evidence": "Cấm cứng: 0; cảnh báo: 0"
+    },
+    {
+      "id": 4,
+      "name": "Hình ảnh an toàn: không máu me/khỏa thân, không logo – giao diện – sắc phục thật",
+      "status": "PASS",
+      "evidence": "Người duyệt: Chủ kênh. Chủ kênh duyệt staging lên production"
+    },
+    {
+      "id": 5,
+      "name": "Tôn trọng nạn nhân, không kỳ thị vùng miền / dân tộc / nghề nghiệp / tuổi tác",
+      "status": "PASS",
+      "evidence": "Người duyệt: Chủ kênh. Chủ kênh duyệt staging lên production"
+    },
+    {
+      "id": 6,
+      "name": "Âm thanh: thoại rõ, master đúng chuẩn, đã nghe duyệt",
+      "status": "PASS",
+      "evidence": "Master peak -1.75 dBFS / 259.0s; thoại vừa cửa sổ: True; đã nghe duyệt: True"
+    },
+    {
+      "id": 7,
+      "name": "Safe Zone (16:9) + Disclaimer + Thẻ Dấu hiệu nhận biết",
+      "status": "PASS",
+      "evidence": "Overlay trong Safe Zone: True; disclaimer: 1; thẻ dấu hiệu: 3 ý"
+    },
+    {
+      "id": 8,
+      "name": "Nhịp & Hook",
+      "status": "PASS",
+      "evidence": "Hook bắt đầu 0.4s; thời lượng 259.0s (file 259.00s)"
+    }
+  ]
+}
