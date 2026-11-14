@@ -1,0 +1,1647 @@
+{
+  "episode_id": "EP03",
+  "slug": "120NganPhutThu89",
+  "title": "120 ngàn – Phút thứ 89",
+  "version": "v1",
+  "scam_family": "ON-11",
+  "duration_sec": 290.15,
+  "visual_style_lock": "Horizontal 16:9 widescreen (1920x1080), semi-realistic cinematic 2D anime illustration, contemporary Southern Vietnam urban setting, moody dramatic lighting, clean bottom 15% for subtitles, no text, no letters, no numbers, no logos, no real uniforms",
+  "hook": {
+    "kicker": "PHÚT THỨ 89 · PHỎNG VẤN TUYỂN DỤNG ONLINE",
+    "title": "NHẬN 120 NGÀN TIỀN THẬT – ĐÒI CHUYỂN NGƯỢC 200 NGÀN ĐỂ NHẬN VIỆC",
+    "start": 0.4,
+    "end": 5.4
+  },
+  "chapters": [
+    {
+      "kicker": "HỒI 1 · SÁNG GIÁNG SINH 25/12",
+      "title": "PHÒNG PHỎNG VẤN ĐÔNG NGƯỜI & MÀN “ĐỔI SẾP”",
+      "start": 31.31,
+      "end": 35.91
+    },
+    {
+      "kicker": "HỒI 2 · PHÚT THỨ 85",
+      "title": "120 NGÀN TIỀN THẬT & LỆNH CHUYỂN NGƯỢC 200 NGÀN",
+      "start": 109.25,
+      "end": 113.85
+    },
+    {
+      "kicker": "HỒI 3 · 10 GIỜ SÁNG GIÁNG SINH",
+      "title": "LY NƯỚC 120 NGÀN & LỆNH CHUYỂN 7 TRIỆU BÀN BÊN",
+      "start": 224.55,
+      "end": 229.15
+    }
+  ],
+  "scenes": [
+    {
+      "id": "s01_hook_ting",
+      "image": "assets/c01.jpg",
+      "start": 0.0,
+      "end": 8.99,
+      "motion": {
+        "scale": [
+          1.04,
+          1.14
+        ],
+        "focus": [
+          [
+            0.5,
+            0.5
+          ],
+          [
+            0.47,
+            0.45
+          ]
+        ],
+        "wobble": "tense"
+      },
+      "shakes": [
+        {
+          "at": 0.3,
+          "dur": 0.4,
+          "amp": 16
+        }
+      ]
+    },
+    {
+      "id": "s02_hook_finger",
+      "image": "assets/c02.jpg",
+      "start": 8.99,
+      "end": 31.11,
+      "motion": {
+        "scale": [
+          1.0,
+          1.16
+        ],
+        "focus": [
+          [
+            0.5,
+            0.5
+          ],
+          [
+            0.5,
+            0.45
+          ]
+        ],
+        "wobble": "tense"
+      },
+      "transition_in": {
+        "type": "flash_white",
+        "dur": 0.25
+      }
+    },
+    {
+      "id": "s03_christmas_morning",
+      "image": "assets/c03.jpg",
+      "start": 31.11,
+      "end": 45.09,
+      "motion": {
+        "scale": [
+          1.02,
+          1.09
+        ],
+        "focus": [
+          [
+            0.5,
+            0.5
+          ],
+          [
+            0.5,
+            0.47
+          ]
+        ],
+        "wobble": "calm"
+      },
+      "transition_in": {
+        "type": "fade_black",
+        "dur": 0.4
+      }
+    },
+    {
+      "id": "s04_meeting_grid",
+      "image": "assets/c04.jpg",
+      "start": 45.09,
+      "end": 50.88,
+      "motion": {
+        "scale": [
+          1.02,
+          1.1
+        ],
+        "focus": [
+          [
+            0.46,
+            0.48
+          ],
+          [
+            0.54,
+            0.46
+          ]
+        ],
+        "wobble": "handheld"
+      },
+      "transition_in": {
+        "type": "dissolve",
+        "dur": 0.35
+      }
+    },
+    {
+      "id": "s05_ai_helper",
+      "image": "assets/c06.jpg",
+      "start": 50.88,
+      "end": 61.48,
+      "motion": {
+        "scale": [
+          1.02,
+          1.09
+        ],
+        "focus": [
+          [
+            0.5,
+            0.5
+          ],
+          [
+            0.5,
+            0.47
+          ]
+        ],
+        "wobble": "calm"
+      },
+      "transition_in": {
+        "type": "dissolve",
+        "dur": 0.3
+      }
+    },
+    {
+      "id": "s06_stolen_mic",
+      "image": "assets/c05.jpg",
+      "start": 61.48,
+      "end": 69.47,
+      "motion": {
+        "scale": [
+          1.04,
+          1.14
+        ],
+        "focus": [
+          [
+            0.5,
+            0.5
+          ],
+          [
+            0.47,
+            0.45
+          ]
+        ],
+        "wobble": "tense"
+      },
+      "transition_in": {
+        "type": "dissolve",
+        "dur": 0.25
+      }
+    },
+    {
+      "id": "s07_manager_khai",
+      "image": "assets/c07.jpg",
+      "start": 69.47,
+      "end": 92.09,
+      "motion": {
+        "scale": [
+          1.0,
+          1.16
+        ],
+        "focus": [
+          [
+            0.5,
+            0.5
+          ],
+          [
+            0.5,
+            0.45
+          ]
+        ],
+        "wobble": "tense"
+      },
+      "transition_in": {
+        "type": "dissolve",
+        "dur": 0.35
+      }
+    },
+    {
+      "id": "s08_broken_subpage",
+      "image": "assets/c08.jpg",
+      "start": 92.09,
+      "end": 109.05,
+      "motion": {
+        "scale": [
+          1.02,
+          1.1
+        ],
+        "focus": [
+          [
+            0.46,
+            0.48
+          ],
+          [
+            0.54,
+            0.46
+          ]
+        ],
+        "wobble": "handheld"
+      },
+      "transition_in": {
+        "type": "dissolve",
+        "dur": 0.3
+      }
+    },
+    {
+      "id": "s09_real_120k",
+      "image": "assets/c09.jpg",
+      "start": 109.05,
+      "end": 119.6,
+      "motion": {
+        "scale": [
+          1.0,
+          1.16
+        ],
+        "focus": [
+          [
+            0.5,
+            0.5
+          ],
+          [
+            0.5,
+            0.45
+          ]
+        ],
+        "wobble": "tense"
+      },
+      "transition_in": {
+        "type": "fade_black",
+        "dur": 0.35
+      },
+      "shakes": [
+        {
+          "at": 109.3,
+          "dur": 0.4,
+          "amp": 16
+        }
+      ]
+    },
+    {
+      "id": "s10_khai_200k_trap",
+      "image": "assets/c07.jpg",
+      "start": 119.6,
+      "end": 137.9,
+      "motion": {
+        "scale": [
+          1.0,
+          1.16
+        ],
+        "focus": [
+          [
+            0.5,
+            0.5
+          ],
+          [
+            0.5,
+            0.45
+          ]
+        ],
+        "wobble": "tense"
+      },
+      "transition_in": {
+        "type": "dissolve",
+        "dur": 0.3
+      }
+    },
+    {
+      "id": "s11_hoang_hesitate",
+      "image": "assets/c01.jpg",
+      "start": 137.9,
+      "end": 145.96,
+      "motion": {
+        "scale": [
+          1.04,
+          1.14
+        ],
+        "focus": [
+          [
+            0.5,
+            0.5
+          ],
+          [
+            0.47,
+            0.45
+          ]
+        ],
+        "wobble": "tense"
+      },
+      "transition_in": {
+        "type": "dissolve",
+        "dur": 0.3
+      }
+    },
+    {
+      "id": "s12_ai_warning",
+      "image": "assets/c10.jpg",
+      "start": 145.96,
+      "end": 176.63,
+      "motion": {
+        "scale": [
+          1.04,
+          1.14
+        ],
+        "focus": [
+          [
+            0.5,
+            0.5
+          ],
+          [
+            0.47,
+            0.45
+          ]
+        ],
+        "wobble": "tense"
+      },
+      "transition_in": {
+        "type": "flash_red",
+        "dur": 0.3
+      }
+    },
+    {
+      "id": "s13_leave_meeting",
+      "image": "assets/c11.jpg",
+      "start": 176.63,
+      "end": 178.35,
+      "motion": {
+        "scale": [
+          1.0,
+          1.16
+        ],
+        "focus": [
+          [
+            0.5,
+            0.5
+          ],
+          [
+            0.5,
+            0.45
+          ]
+        ],
+        "wobble": "tense"
+      },
+      "transition_in": {
+        "type": "flash_white",
+        "dur": 0.25
+      },
+      "shakes": [
+        {
+          "at": 176.78,
+          "dur": 0.4,
+          "amp": 16
+        }
+      ]
+    },
+    {
+      "id": "s14a_spam_ha",
+      "image": "assets/c12b.jpg",
+      "start": 178.35,
+      "end": 186.13,
+      "motion": {
+        "scale": [
+          1.02,
+          1.1
+        ],
+        "focus": [
+          [
+            0.46,
+            0.48
+          ],
+          [
+            0.54,
+            0.46
+          ]
+        ],
+        "wobble": "handheld"
+      },
+      "transition_in": {
+        "type": "dissolve",
+        "dur": 0.3
+      }
+    },
+    {
+      "id": "s14b_spam_duc",
+      "image": "assets/c12b.jpg",
+      "start": 186.13,
+      "end": 194.56,
+      "motion": {
+        "scale": [
+          1.0,
+          1.16
+        ],
+        "focus": [
+          [
+            0.5,
+            0.5
+          ],
+          [
+            0.5,
+            0.45
+          ]
+        ],
+        "wobble": "tense"
+      },
+      "transition_in": {
+        "type": "dissolve",
+        "dur": 0.25
+      }
+    },
+    {
+      "id": "s14c_spam_khai",
+      "image": "assets/c12.jpg",
+      "start": 194.56,
+      "end": 215.53,
+      "motion": {
+        "scale": [
+          1.02,
+          1.09
+        ],
+        "focus": [
+          [
+            0.5,
+            0.5
+          ],
+          [
+            0.5,
+            0.47
+          ]
+        ],
+        "wobble": "calm"
+      },
+      "transition_in": {
+        "type": "dissolve",
+        "dur": 0.3
+      }
+    },
+    {
+      "id": "s18_red_flags",
+      "image": "factory196/materialAndDraft/EP01b/assets/scene18.jpg",
+      "start": 215.53,
+      "end": 224.35,
+      "motion": {
+        "scale": [
+          1.0,
+          1.05
+        ],
+        "focus": [
+          [
+            0.5,
+            0.5
+          ],
+          [
+            0.5,
+            0.5
+          ]
+        ],
+        "wobble": "none"
+      },
+      "transition_in": {
+        "type": "fade_black",
+        "dur": 0.35
+      }
+    },
+    {
+      "id": "s19_christmas_cafe",
+      "image": "assets/c15.jpg",
+      "start": 224.35,
+      "end": 254.09,
+      "motion": {
+        "scale": [
+          1.02,
+          1.09
+        ],
+        "focus": [
+          [
+            0.5,
+            0.5
+          ],
+          [
+            0.5,
+            0.47
+          ]
+        ],
+        "wobble": "calm"
+      },
+      "transition_in": {
+        "type": "fade_black",
+        "dur": 0.4
+      }
+    },
+    {
+      "id": "s20_next_table_turn",
+      "image": "assets/c16.jpg",
+      "start": 254.09,
+      "end": 265.61,
+      "motion": {
+        "scale": [
+          1.02,
+          1.1
+        ],
+        "focus": [
+          [
+            0.46,
+            0.48
+          ],
+          [
+            0.54,
+            0.46
+          ]
+        ],
+        "wobble": "handheld"
+      },
+      "transition_in": {
+        "type": "dissolve",
+        "dur": 0.35
+      }
+    },
+    {
+      "id": "s21_next_table_7m",
+      "image": "assets/c17.jpg",
+      "start": 265.61,
+      "end": 268.73,
+      "motion": {
+        "scale": [
+          1.0,
+          1.16
+        ],
+        "focus": [
+          [
+            0.5,
+            0.5
+          ],
+          [
+            0.5,
+            0.45
+          ]
+        ],
+        "wobble": "tense"
+      },
+      "transition_in": {
+        "type": "dissolve",
+        "dur": 0.3
+      }
+    },
+    {
+      "id": "s22_black_cut",
+      "image": "assets/c18.jpg",
+      "start": 268.73,
+      "end": 283.33,
+      "motion": {
+        "scale": [
+          1.0,
+          1.05
+        ],
+        "focus": [
+          [
+            0.5,
+            0.5
+          ],
+          [
+            0.5,
+            0.5
+          ]
+        ],
+        "wobble": "none"
+      },
+      "transition_in": {
+        "type": "fade_black",
+        "dur": 0.15
+      }
+    },
+    {
+      "id": "s23_outro",
+      "image": "factory196/materialAndDraft/EP01b/assets/scene18.jpg",
+      "start": 283.33,
+      "end": 290.15,
+      "motion": {
+        "scale": [
+          1.0,
+          1.05
+        ],
+        "focus": [
+          [
+            0.5,
+            0.5
+          ],
+          [
+            0.5,
+            0.5
+          ]
+        ],
+        "wobble": "none"
+      },
+      "transition_in": {
+        "type": "fade_black",
+        "dur": 0.4
+      }
+    }
+  ],
+  "dialogue": [
+    {
+      "id": "l01_khai",
+      "speaker": "ke_gia_danh",
+      "voice": "Fenrir",
+      "label_short": "QUẢN LÝ KHẢI",
+      "speaker_label": "Khải – Quản lý dự án Bảo an xã hội",
+      "af": "phone",
+      "style": "Giọng nam miền Nam Sài Gòn 40 tuổi, trầm, đĩnh đạc, uy quyền kiểu quản lý dự án, thúc ép, dồn dập.",
+      "start": 0.57,
+      "window": 6.92,
+      "text": "Còn anh Hoàng thôi! Hết một phút hệ thống tự hủy hồ sơ nha!"
+    },
+    {
+      "id": "l02_duc",
+      "speaker": "ke_ngot_ngao_nam",
+      "voice": "Achird",
+      "label_short": "ỨNG VIÊN 04",
+      "speaker_label": "Đức – Ứng viên số 04 (quân xanh)",
+      "af": "phone",
+      "style": "Giọng nam thanh niên miền Nam 25 tuổi, tông cao, nhanh nhảu, hào hứng tạo hiệu ứng đám đông, khoe khoang, hào hứng.",
+      "start": 5.12,
+      "window": 6.57,
+      "text": "Em chuyển hai trăm ngàn xong rồi anh ơi! Lên điểm liền luôn!",
+      "subtitle": [
+        "Em chuyển 200.000đ xong rồi anh ơi! Lên điểm liền luôn!"
+      ]
+    },
+    {
+      "id": "l03_hoang",
+      "speaker": "anh_hai",
+      "voice": "Orus",
+      "label_short": "HOÀNG",
+      "speaker_label": "Hoàng – lập trình viên 32 tuổi",
+      "style": "Giọng nam miền Nam Sài Gòn 32 tuổi, dân kỹ thuật điềm tĩnh, rõ chữ, tự nhiên đời thường, ngập ngừng, tự nhủ.",
+      "start": 9.31,
+      "window": 8.06,
+      "text": "Nhận trăm hai rồi… chuyển lại hai trăm thì cùng lắm lỗ tám chục ngàn.",
+      "subtitle": [
+        "Nhận 120 ngàn rồi… chuyển lại 200 ngàn thì cùng lắm lỗ 80 ngàn."
+      ]
+    },
+    {
+      "id": "l03b_hoang",
+      "speaker": "anh_hai",
+      "voice": "Orus",
+      "label_short": "HOÀNG",
+      "speaker_label": "Hoàng – lập trình viên 32 tuổi",
+      "style": "Giọng nam miền Nam Sài Gòn 32 tuổi, dân kỹ thuật điềm tĩnh, rõ chữ, tự nhiên đời thường, tò mò, chần chừ.",
+      "start": 16.09,
+      "window": 5.17,
+      "text": "Hay cứ thử coi tụi nó diễn trò gì?"
+    },
+    {
+      "id": "l04_narr",
+      "speaker": "nguoi_boc_tran",
+      "start": 19.07,
+      "window": 5.87,
+      "text": "Đi phỏng vấn được chuyển nóng một trăm hai mươi ngàn.",
+      "subtitle": [
+        "Đi phỏng vấn được chuyển nóng 120.000đ."
+      ]
+    },
+    {
+      "id": "l04b_narr",
+      "speaker": "nguoi_boc_tran",
+      "start": 22.81,
+      "window": 10.77,
+      "text": "Nhưng nếu tặc lưỡi bỏ ra hai trăm ngàn chỉ để xem kịch, cái giá ở phút thứ chín mươi sẽ không dừng ở đó.",
+      "subtitle": [
+        "Nhưng nếu tặc lưỡi bỏ 200.000đ để 'xem kịch', cái giá ở phút thứ 90 sẽ không dừng ở đó."
+      ]
+    },
+    {
+      "id": "l05_tom",
+      "speaker": "be_tom",
+      "voice": "Puck",
+      "label_short": "BÉ TOM",
+      "speaker_label": "Bé Tom – con trai 7 tuổi",
+      "style": "Giọng cậu bé trai 7 tuổi người miền Nam, trong sáng, lễ phép, háo hức, nhõng nhẽo, háo hức.",
+      "start": 31.63,
+      "window": 6.26,
+      "text": "Ba ơi, sáng Giáng Sinh ba hứa chở con đi chơi mà!"
+    },
+    {
+      "id": "l06_lan",
+      "speaker": "chi_ba",
+      "voice": "Kore",
+      "label_short": "LAN",
+      "speaker_label": "Lan – vợ Hoàng",
+      "style": "Giọng phụ nữ miền Nam Sài Gòn 30 tuổi, ấm áp, thực tế, tự nhiên như đời thực, dịu dàng nhắc chồng.",
+      "start": 36.61,
+      "window": 4.12,
+      "text": "Chín rưỡi mình đi nha anh.",
+      "subtitle": [
+        "9 rưỡi mình đi nha anh."
+      ]
+    },
+    {
+      "id": "l07_hoang",
+      "speaker": "anh_hai",
+      "voice": "Orus",
+      "label_short": "HOÀNG",
+      "speaker_label": "Hoàng – lập trình viên 32 tuổi",
+      "style": "Giọng nam miền Nam Sài Gòn 32 tuổi, dân kỹ thuật điềm tĩnh, rõ chữ, tự nhiên đời thường, ấm áp, tự tin.",
+      "start": 38.91,
+      "window": 8.32,
+      "text": "Cho ba đúng một tiếng. Bên Tập đoàn Viễn thông X hẹn phỏng vấn lập trình viên rồi."
+    },
+    {
+      "id": "l08_ha",
+      "speaker": "ke_ngot_ngao_nu",
+      "voice": "Aoede",
+      "label_short": "NHÂN SỰ HÀ",
+      "speaker_label": "Hà – Nhân sự vòng 1 Tập đoàn X",
+      "af": "phone",
+      "style": "Giọng nữ miền Nam Sài Gòn 28 tuổi, nhân sự tuyển dụng online, ngọt ngào, chuyên nghiệp, nhịp nhanh, nhanh, chuyên nghiệp.",
+      "start": 45.41,
+      "window": 9.72,
+      "text": "Vòng một: đọc tài liệu trong mười phút và trả lời câu hỏi chung. Ai nhanh nhất được cộng điểm ưu tiên!"
+    },
+    {
+      "id": "l09_hoang",
+      "speaker": "anh_hai",
+      "voice": "Orus",
+      "label_short": "HOÀNG",
+      "speaker_label": "Hoàng – lập trình viên 32 tuổi",
+      "style": "Giọng nam miền Nam Sài Gòn 32 tuổi, dân kỹ thuật điềm tĩnh, rõ chữ, tự nhiên đời thường, tập trung, nhanh nhạy.",
+      "start": 51.2,
+      "window": 6.22,
+      "text": "Nhờ Trợ lý AI tóm tắt nhanh bộ tài liệu này coi."
+    },
+    {
+      "id": "l09b_ai",
+      "speaker": "chi_tu",
+      "voice": "Zephyr",
+      "label_short": "TRỢ LÝ AI",
+      "speaker_label": "Trợ lý AI",
+      "style": "Giọng nữ miền Nam Sài Gòn 30 tuổi, trợ lý AI điềm tĩnh, trung tính, phân tích rõ ràng, mạch lạc, tốc độ vừa phải, điềm tĩnh, rõ ràng.",
+      "start": 54.58,
+      "window": 9.37,
+      "text": "Đã phân tích xong tài liệu. Đây là ba ý cốt lõi và đáp án để bạn trả lời vòng một."
+    },
+    {
+      "id": "l10_duc",
+      "speaker": "ke_ngot_ngao_nam",
+      "voice": "Achird",
+      "label_short": "ỨNG VIÊN 04",
+      "speaker_label": "Đức – Ứng viên số 04 (quân xanh)",
+      "af": "phone",
+      "style": "Giọng nam thanh niên miền Nam 25 tuổi, tông cao, nhanh nhảu, hào hứng tạo hiệu ứng đám đông, nói cực nhanh, cướp lời.",
+      "start": 61.8,
+      "window": 8.32,
+      "text": "Em xin trả lời câu hỏi vòng một theo đúng ba mục trong tài liệu tập đoàn ạ!"
+    },
+    {
+      "id": "l11_ha",
+      "speaker": "ke_ngot_ngao_nu",
+      "voice": "Aoede",
+      "label_short": "NHÂN SỰ HÀ",
+      "speaker_label": "Hà – Nhân sự vòng 1 Tập đoàn X",
+      "af": "phone",
+      "style": "Giọng nữ miền Nam Sài Gòn 28 tuổi, nhân sự tuyển dụng online, ngọt ngào, chuyên nghiệp, nhịp nhanh, khen ngợi hồ hởi.",
+      "start": 65.8,
+      "window": 6.57,
+      "text": "Xuất sắc! Ứng viên số bốn và anh Hoàng vượt qua vòng một!"
+    },
+    {
+      "id": "l12_ha",
+      "speaker": "ke_ngot_ngao_nu",
+      "voice": "Aoede",
+      "label_short": "NHÂN SỰ HÀ",
+      "speaker_label": "Hà – Nhân sự vòng 1 Tập đoàn X",
+      "af": "phone",
+      "style": "Giọng nữ miền Nam Sài Gòn 28 tuổi, nhân sự tuyển dụng online, ngọt ngào, chuyên nghiệp, nhịp nhanh, trang trọng giới thiệu.",
+      "start": 69.79,
+      "window": 9.02,
+      "text": "Vòng hai sẽ do anh Khải, Quản lý dự án Hệ thống Xã hội Bảo an trực tiếp đánh giá."
+    },
+    {
+      "id": "l13_khai",
+      "speaker": "ke_gia_danh",
+      "voice": "Fenrir",
+      "label_short": "QUẢN LÝ KHẢI",
+      "speaker_label": "Khải – Quản lý dự án Bảo an xã hội",
+      "af": "phone",
+      "style": "Giọng nam miền Nam Sài Gòn 40 tuổi, trầm, đĩnh đạc, uy quyền kiểu quản lý dự án, trầm, uy quyền, chuyên nghiệp.",
+      "start": 75.06,
+      "window": 11.82,
+      "text": "Chào các bạn. Vòng hai có tương tác tài chính thật nhằm đánh giá khả năng quản trị ứng biến và kiến thức tài chính của ứng viên."
+    },
+    {
+      "id": "l13b_khai",
+      "speaker": "ke_gia_danh",
+      "voice": "Fenrir",
+      "label_short": "QUẢN LÝ KHẢI",
+      "speaker_label": "Khải – Quản lý dự án Bảo an xã hội",
+      "af": "phone",
+      "style": "Giọng nam miền Nam Sài Gòn 40 tuổi, trầm, đĩnh đạc, uy quyền kiểu quản lý dự án, đĩnh đạc, dẫn dụ.",
+      "start": 83.69,
+      "window": 11.12,
+      "text": "Mời các bạn vào nền tảng dự án. Hệ thống sẽ chuyển hỗ trợ mỗi bạn một trăm hai mươi ngàn để thực hiện thao tác.",
+      "subtitle": [
+        "Mời vào nền tảng dự án. Hệ thống sẽ chuyển hỗ trợ mỗi bạn 120.000đ để thực hiện thao tác."
+      ]
+    },
+    {
+      "id": "l14_hoang",
+      "speaker": "anh_hai",
+      "voice": "Orus",
+      "label_short": "HOÀNG",
+      "speaker_label": "Hoàng – lập trình viên 32 tuổi",
+      "style": "Giọng nam miền Nam Sài Gòn 32 tuổi, dân kỹ thuật điềm tĩnh, rõ chữ, tự nhiên đời thường, nhíu mày, gõ hỏi AI.",
+      "start": 92.41,
+      "window": 11.12,
+      "text": "Ủa, tuyển lập trình viên mà qua vòng hai lại kêu vào web dự án Bảo an xã hội? Trang con còn sai chính tả nữa…"
+    },
+    {
+      "id": "l14b_ai",
+      "speaker": "chi_tu",
+      "voice": "Zephyr",
+      "label_short": "TRỢ LÝ AI",
+      "speaker_label": "Trợ lý AI",
+      "style": "Giọng nữ miền Nam Sài Gòn 30 tuổi, trợ lý AI điềm tĩnh, trung tính, phân tích rõ ràng, mạch lạc, tốc độ vừa phải, cảnh báo điềm tĩnh.",
+      "start": 100.79,
+      "window": 12.17,
+      "text": "Hãy cẩn thận. Tuyển vị trí kỹ thuật nhưng lại dẫn sang trang web lỗi chính tả và lồng ghép thao tác tiền bạc là dấu hiệu bất thường."
+    },
+    {
+      "id": "l15_hoang",
+      "speaker": "anh_hai",
+      "voice": "Orus",
+      "label_short": "HOÀNG",
+      "speaker_label": "Hoàng – lập trình viên 32 tuổi",
+      "style": "Giọng nam miền Nam Sài Gòn 32 tuổi, dân kỹ thuật điềm tĩnh, rõ chữ, tự nhiên đời thường, bất ngờ, hết nghi ngờ.",
+      "start": 109.67,
+      "window": 6.92,
+      "text": "Ủa… họ chuyển một trăm hai mươi ngàn hỗ trợ vòng hai thật luôn?",
+      "subtitle": [
+        "Ủa… họ chuyển 120.000đ hỗ trợ vòng 2 thật luôn?"
+      ]
+    },
+    {
+      "id": "l16_duc",
+      "speaker": "ke_ngot_ngao_nam",
+      "voice": "Achird",
+      "label_short": "ỨNG VIÊN 04",
+      "speaker_label": "Đức – Ứng viên số 04 (quân xanh)",
+      "af": "phone",
+      "style": "Giọng nam thanh niên miền Nam 25 tuổi, tông cao, nhanh nhảu, hào hứng tạo hiệu ứng đám đông, reo lên phấn khích.",
+      "start": 114.57,
+      "window": 7.97,
+      "text": "Em nhận được trăm hai rồi anh Khải ơi! Dự án lớn có khác, uy tín quá!"
+    },
+    {
+      "id": "l17_khai",
+      "speaker": "ke_gia_danh",
+      "voice": "Fenrir",
+      "label_short": "QUẢN LÝ KHẢI",
+      "speaker_label": "Khải – Quản lý dự án Bảo an xã hội",
+      "af": "phone",
+      "style": "Giọng nam miền Nam Sài Gòn 40 tuổi, trầm, đĩnh đạc, uy quyền kiểu quản lý dự án, nghiêm giọng, dứt khoát.",
+      "start": 119.92,
+      "window": 10.07,
+      "text": "Giờ để chứng minh khả năng quản lý và giao tiếp, mỗi bạn chuyển ngược hai trăm ngàn vào tài khoản chỉ định.",
+      "subtitle": [
+        "Để chứng minh khả năng quản lý và giao tiếp, mỗi bạn chuyển ngược 200.000đ vào tài khoản chỉ định."
+      ]
+    },
+    {
+      "id": "l18_khai",
+      "speaker": "ke_gia_danh",
+      "voice": "Fenrir",
+      "label_short": "QUẢN LÝ KHẢI",
+      "speaker_label": "Khải – Quản lý dự án Bảo an xã hội",
+      "af": "phone",
+      "style": "Giọng nam miền Nam Sài Gòn 40 tuổi, trầm, đĩnh đạc, uy quyền kiểu quản lý dự án, trấn an mượt mà.",
+      "start": 127.72,
+      "window": 9.02,
+      "text": "Tiền này được ghi nhận thành điểm trên hệ thống xã hội bảo an, rút ra bất cứ lúc nào."
+    },
+    {
+      "id": "l19_duc",
+      "speaker": "ke_ngot_ngao_nam",
+      "voice": "Achird",
+      "label_short": "ỨNG VIÊN 04",
+      "speaker_label": "Đức – Ứng viên số 04 (quân xanh)",
+      "af": "phone",
+      "style": "Giọng nam thanh niên miền Nam 25 tuổi, tông cao, nhanh nhảu, hào hứng tạo hiệu ứng đám đông, nhanh nhảu thúc đám đông.",
+      "start": 134.31,
+      "window": 7.27,
+      "text": "Em chuyển hai trăm ngàn xong rồi nha anh! Hệ thống cộng điểm liền luôn!",
+      "subtitle": [
+        "Em chuyển 200.000đ xong rồi nha anh! Hệ thống cộng điểm liền luôn!"
+      ]
+    },
+    {
+      "id": "l20_hoang",
+      "speaker": "anh_hai",
+      "voice": "Orus",
+      "label_short": "HOÀNG",
+      "speaker_label": "Hoàng – lập trình viên 32 tuổi",
+      "style": "Giọng nam miền Nam Sài Gòn 32 tuổi, dân kỹ thuật điềm tĩnh, rõ chữ, tự nhiên đời thường, chần chừ, suýt bấm.",
+      "start": 138.22,
+      "window": 9.37,
+      "text": "Trừ đi trăm hai mới nhận thì lỗ có tám chục ngàn. Coi như mua vé xem kịch cũng được mà…",
+      "subtitle": [
+        "Trừ đi 120 ngàn mới nhận thì lỗ có 80 ngàn. Coi như mua vé xem kịch cũng được mà…"
+      ]
+    },
+    {
+      "id": "l20b_hoang",
+      "speaker": "anh_hai",
+      "voice": "Orus",
+      "label_short": "HOÀNG",
+      "speaker_label": "Hoàng – lập trình viên 32 tuổi",
+      "style": "Giọng nam miền Nam Sài Gòn 32 tuổi, dân kỹ thuật điềm tĩnh, rõ chữ, tự nhiên đời thường, gõ hỏi AI, còn phân vân.",
+      "start": 146.28,
+      "window": 10.77,
+      "text": "Nhưng người ta chuyển cho mình một trăm hai mươi ngàn thật rồi, giờ chuyển lại hai trăm ngàn tích điểm bảo an thì sao?",
+      "subtitle": [
+        "Nhưng người ta chuyển cho mình 120.000đ thật rồi, giờ chuyển lại 200.000đ tích điểm bảo an thì sao?"
+      ]
+    },
+    {
+      "id": "l20c_ai",
+      "speaker": "chi_tu",
+      "voice": "Zephyr",
+      "label_short": "TRỢ LÝ AI",
+      "speaker_label": "Trợ lý AI",
+      "style": "Giọng nữ miền Nam Sài Gòn 30 tuổi, trợ lý AI điềm tĩnh, trung tính, phân tích rõ ràng, mạch lạc, tốc độ vừa phải, đanh thép, dứt khoát.",
+      "start": 153.22,
+      "window": 10.07,
+      "text": "Việc họ chuyển trước một trăm hai mươi ngàn không làm nó hợp pháp, mà càng khẳng định là kịch bản dẫn dụ.",
+      "subtitle": [
+        "Việc họ chuyển trước 120.000đ không làm nó hợp pháp – mà càng khẳng định là kịch bản dẫn dụ."
+      ]
+    },
+    {
+      "id": "l20d_ai",
+      "speaker": "chi_tu",
+      "voice": "Zephyr",
+      "label_short": "TRỢ LÝ AI",
+      "speaker_label": "Trợ lý AI",
+      "style": "Giọng nữ miền Nam Sài Gòn 30 tuổi, trợ lý AI điềm tĩnh, trung tính, phân tích rõ ràng, mạch lạc, tốc độ vừa phải, nghiêm nghị cảnh báo.",
+      "start": 160.0,
+      "window": 9.02,
+      "text": "Tuyệt đối không chuyển hai trăm ngàn, không làm nhiệm vụ tiếp theo và không cung cấp mã xác thực.",
+      "subtitle": [
+        "Tuyệt đối không chuyển 200.000đ, không làm nhiệm vụ tiếp theo và không cung cấp mã xác thực."
+      ]
+    },
+    {
+      "id": "l21_hoang",
+      "speaker": "anh_hai",
+      "voice": "Orus",
+      "label_short": "HOÀNG",
+      "speaker_label": "Hoàng – lập trình viên 32 tuổi",
+      "style": "Giọng nam miền Nam Sài Gòn 32 tuổi, dân kỹ thuật điềm tĩnh, rõ chữ, tự nhiên đời thường, bừng tỉnh, đanh giọng.",
+      "start": 166.62,
+      "window": 9.02,
+      "text": "Khoan… Mình đi ứng tuyển lập trình viên. Tại sao phải chuyển tiền để chứng minh khả năng giao tiếp?"
+    },
+    {
+      "id": "l23_khai",
+      "speaker": "ke_gia_danh",
+      "voice": "Fenrir",
+      "label_short": "QUẢN LÝ KHẢI",
+      "speaker_label": "Khải – Quản lý dự án Bảo an xã hội",
+      "af": "phone",
+      "style": "Giọng nam miền Nam Sài Gòn 40 tuổi, trầm, đĩnh đạc, uy quyền kiểu quản lý dự án, gằn giọng, hối thúc.",
+      "start": 173.0,
+      "window": 5.17,
+      "text": "Anh Hoàng! Còn mười giây cuối, anh chuyển chưa?!"
+    },
+    {
+      "id": "l24a_ha",
+      "speaker": "ke_ngot_ngao_nu",
+      "voice": "Aoede",
+      "label_short": "NHÂN SỰ HÀ",
+      "speaker_label": "Hà – Nhân sự vòng 1 Tập đoàn X",
+      "af": "phone",
+      "style": "Giọng nữ miền Nam Sài Gòn 28 tuổi, nhân sự tuyển dụng online, ngọt ngào, chuyên nghiệp, nhịp nhanh, hốt hoảng, ngọt ngào níu kéo.",
+      "start": 178.67,
+      "window": 10.77,
+      "text": "Anh Hoàng ơi sao thoát vậy, mạng bên anh bị lỗi hả? Hồ sơ anh điểm cao nhất, cả nhóm đang đợi mình anh đó!"
+    },
+    {
+      "id": "l24b_duc",
+      "speaker": "ke_ngot_ngao_nam",
+      "voice": "Achird",
+      "label_short": "ỨNG VIÊN 04",
+      "speaker_label": "Đức – Ứng viên số 04 (quân xanh)",
+      "af": "phone",
+      "style": "Giọng nam thanh niên miền Nam 25 tuổi, tông cao, nhanh nhảu, hào hứng tạo hiệu ứng đám đông, hào hứng khoe tiền, thúc giục.",
+      "start": 186.45,
+      "window": 12.87,
+      "text": "Anh Hoàng ơi sao thoát uổng vậy?! Em vừa chuyển hai trăm ngàn xong, rút về được luôn ba trăm tám mươi ngàn tiền thưởng nè! Vô lại lẹ đi anh!",
+      "subtitle": [
+        "Anh Hoàng ơi sao thoát uổng vậy?! Em vừa chuyển 200.000đ xong, rút về được luôn 380.000đ tiền thưởng nè!"
+      ]
+    },
+    {
+      "id": "l24c_khai",
+      "speaker": "ke_gia_danh",
+      "voice": "Fenrir",
+      "label_short": "QUẢN LÝ KHẢI",
+      "speaker_label": "Khải – Quản lý dự án Bảo an xã hội",
+      "af": "phone",
+      "style": "Giọng nam miền Nam Sài Gòn 40 tuổi, trầm, đĩnh đạc, uy quyền kiểu quản lý dự án, uy quyền, dọa nạt xen lẫn dụ dỗ.",
+      "start": 194.88,
+      "window": 11.12,
+      "text": "Anh Hoàng quay lại phòng họp gấp! Anh vừa được duyệt suất hợp đồng ba triệu đồng, bỏ ngang là hủy toàn bộ quyền lợi nhé!",
+      "subtitle": [
+        "Quay lại phòng họp gấp! Anh vừa được duyệt suất hợp đồng 3.000.000đ, bỏ ngang là hủy toàn bộ quyền lợi!"
+      ]
+    },
+    {
+      "id": "l24d_hoang",
+      "speaker": "anh_hai",
+      "voice": "Orus",
+      "label_short": "HOÀNG",
+      "speaker_label": "Hoàng – lập trình viên 32 tuổi",
+      "style": "Giọng nam miền Nam Sài Gòn 32 tuổi, dân kỹ thuật điềm tĩnh, rõ chữ, tự nhiên đời thường, tỉnh táo, cười nhẹ.",
+      "start": 202.79,
+      "window": 13.57,
+      "text": "Người hỏi thăm rớt mạng, người chỉ cách làm, người khoe rút được tiền, người hứa hợp đồng lớn… Cả một phòng họp chia vai diễn kịch chỉ để kéo mình quay lại."
+    },
+    {
+      "id": "l24_hoang",
+      "speaker": "anh_hai",
+      "voice": "Orus",
+      "label_short": "HOÀNG",
+      "speaker_label": "Hoàng – lập trình viên 32 tuổi",
+      "style": "Giọng nam miền Nam Sài Gòn 32 tuổi, dân kỹ thuật điềm tĩnh, rõ chữ, tự nhiên đời thường, cười khẩy, dứt khoát.",
+      "start": 213.53,
+      "window": 2.98,
+      "text": "Nghỉ khỏe."
+    },
+    {
+      "id": "l29_narr",
+      "speaker": "nguoi_boc_tran",
+      "start": 216.05,
+      "window": 9.72,
+      "text": "Nhà tuyển dụng thật trả lương cho bạn, không bắt bạn nạp tiền. Thấy yêu cầu chuyển khoản: thoát phòng họp ngay."
+    },
+    {
+      "id": "l30_tom",
+      "speaker": "be_tom",
+      "voice": "Puck",
+      "label_short": "BÉ TOM",
+      "speaker_label": "Bé Tom – con trai 7 tuổi",
+      "style": "Giọng cậu bé trai 7 tuổi người miền Nam, trong sáng, lễ phép, háo hức, vui sướng, reo lên.",
+      "start": 224.87,
+      "window": 7.14,
+      "text": "Woa, nay ba khao con ly bự luôn! Giáng Sinh vui quá ba ơi!"
+    },
+    {
+      "id": "l31_lan",
+      "speaker": "chi_ba",
+      "voice": "Kore",
+      "label_short": "LAN",
+      "speaker_label": "Lan – vợ Hoàng",
+      "style": "Giọng phụ nữ miền Nam Sài Gòn 30 tuổi, ấm áp, thực tế, tự nhiên như đời thực, vui vẻ trêu chồng.",
+      "start": 230.73,
+      "window": 5.87,
+      "text": "Phỏng vấn sao rồi mà nay hào phóng dữ vậy anh?"
+    },
+    {
+      "id": "l32_hoang",
+      "speaker": "anh_hai",
+      "voice": "Orus",
+      "label_short": "HOÀNG",
+      "speaker_label": "Hoàng – lập trình viên 32 tuổi",
+      "style": "Giọng nam miền Nam Sài Gòn 32 tuổi, dân kỹ thuật điềm tĩnh, rõ chữ, tự nhiên đời thường, cười hóm hỉnh, nhẹ nhõm.",
+      "start": 234.91,
+      "window": 5.87,
+      "text": "Ba tự đánh rớt ở phút thứ tám mươi chín rồi.",
+      "subtitle": [
+        "Ba tự đánh rớt ở phút thứ 89 rồi."
+      ]
+    },
+    {
+      "id": "l32b_hoang",
+      "speaker": "anh_hai",
+      "voice": "Orus",
+      "label_short": "HOÀNG",
+      "speaker_label": "Hoàng – lập trình viên 32 tuổi",
+      "style": "Giọng nam miền Nam Sài Gòn 32 tuổi, dân kỹ thuật điềm tĩnh, rõ chữ, tự nhiên đời thường, vui vẻ khoe vợ.",
+      "start": 239.13,
+      "window": 7.97,
+      "text": "Mà bên đó… tài trợ nhà mình một trăm hai mươi ngàn uống nước Giáng Sinh nè.",
+      "subtitle": [
+        "Mà bên đó… tài trợ nhà mình 120.000đ uống nước Giáng Sinh nè."
+      ]
+    },
+    {
+      "id": "l33_lan",
+      "speaker": "chi_ba",
+      "voice": "Kore",
+      "label_short": "LAN",
+      "speaker_label": "Lan – vợ Hoàng",
+      "style": "Giọng phụ nữ miền Nam Sài Gòn 30 tuổi, ấm áp, thực tế, tự nhiên như đời thực, ngạc nhiên, bật cười.",
+      "start": 244.35,
+      "window": 5.52,
+      "text": "Hả? Đi xin việc mà rớt vẫn được khao nước?"
+    },
+    {
+      "id": "l34_hoang",
+      "speaker": "anh_hai",
+      "voice": "Orus",
+      "label_short": "HOÀNG",
+      "speaker_label": "Hoàng – lập trình viên 32 tuổi",
+      "style": "Giọng nam miền Nam Sài Gòn 32 tuổi, dân kỹ thuật điềm tĩnh, rõ chữ, tự nhiên đời thường, vui vẻ nhưng thấm thía.",
+      "start": 247.89,
+      "window": 9.37,
+      "text": "Tiền mồi đó em. Hên là anh không bỏ thêm hai trăm ngàn để coi tiếp vở kịch của tụi nó."
+    },
+    {
+      "id": "l35_tn",
+      "speaker": "thang_tun",
+      "voice": "Puck",
+      "label_short": "THANH NIÊN BÀN BÊN",
+      "speaker_label": "Thanh niên bàn bên ở quán nước",
+      "style": "Giọng nam thanh niên miền Nam 23 tuổi, lo âu, run rẩy vì đang bị kẹt tiền, lo lắng, sốt ruột, giọng run.",
+      "start": 254.41,
+      "window": 9.72,
+      "text": "Anh ơi… từ nãy hai trăm ngàn em chuyển thêm mấy đợt rồi mà sao vẫn chưa rút về được vậy anh?",
+      "subtitle": [
+        "Anh ơi… từ nãy 200 ngàn em chuyển thêm mấy đợt rồi mà sao vẫn chưa rút về được vậy anh?"
+      ]
+    },
+    {
+      "id": "l36_khai_cafe",
+      "speaker": "ke_gia_danh",
+      "voice": "Fenrir",
+      "label_short": "QUẢN LÝ KHẢI",
+      "speaker_label": "Khải – Quản lý dự án Bảo an xã hội",
+      "af": "phone",
+      "style": "Giọng nam miền Nam Sài Gòn 40 tuổi, trầm, đĩnh đạc, uy quyền kiểu quản lý dự án, ngọt xớt, thúc giục qua loa tai nghe.",
+      "start": 260.39,
+      "window": 8.67,
+      "text": "Chuyển thêm bảy triệu để hoàn tất hồ sơ đổi điểm bảo an thành tiền rút về em nhé!",
+      "subtitle": [
+        "Chuyển thêm 7 triệu để hoàn tất hồ sơ đổi điểm bảo an thành tiền rút về em nhé!"
+      ]
+    },
+    {
+      "id": "l37_narr",
+      "speaker": "nguoi_boc_tran",
+      "start": 269.45,
+      "window": 6.22,
+      "text": "Bắt đầu từ hai trăm ngàn tưởng như chẳng đáng bao nhiêu.",
+      "subtitle": [
+        "Bắt đầu từ 200.000đ tưởng như chẳng đáng bao nhiêu."
+      ]
+    },
+    {
+      "id": "l37b_narr",
+      "speaker": "nguoi_boc_tran",
+      "start": 273.95,
+      "window": 9.37,
+      "text": "Nhưng khi đã bước vào vòng xoáy tiếc tiền, không ai biết mình sẽ dừng lại ở con số mấy triệu."
+    }
+  ],
+  "chat_bubbles": [
+    {
+      "sender": "NGÂN HÀNG X",
+      "text": "TK …4910  +120.000 VND",
+      "side": "right",
+      "y": 280,
+      "stamp": "TIỀN VÀO",
+      "start": 0.42,
+      "end": 4.62
+    },
+    {
+      "sender": "HỆ THỐNG BẢO AN",
+      "text": "Nhiệm vụ cuối: Chuyển 200.000 VND để kích hoạt điểm trên hệ thống xã hội bảo an (Còn 01:00).",
+      "side": "left",
+      "y": 440,
+      "stamp": "PHÚT 89",
+      "start": 1.22,
+      "end": 7.02
+    },
+    {
+      "sender": "NGÂN HÀNG X",
+      "text": "TK …4910  +120.000 VND (Hỗ trợ vòng 2)",
+      "side": "right",
+      "y": 340,
+      "stamp": "TIỀN THẬT",
+      "start": 109.62,
+      "end": 114.42
+    },
+    {
+      "sender": "HOÀNG → TRỢ LÝ AI",
+      "text": "Nhưng người ta đã chuyển cho mình 120 ngàn thật rồi, giờ chuyển lại 200 ngàn để tích điểm bảo an thì sao?",
+      "side": "right",
+      "y": 280,
+      "stamp": "HỎI AI",
+      "start": 146.38,
+      "end": 151.88
+    },
+    {
+      "sender": "TRỢ LÝ AI",
+      "text": "Chuyển trước 120k không làm nó hợp pháp – mà khẳng định là kịch bản dẫn dụ. Tuyệt đối không chuyển 200k, không làm nhiệm vụ tiếp theo.",
+      "side": "left",
+      "y": 450,
+      "stamp": "CẢNH BÁO",
+      "start": 153.32,
+      "end": 161.82
+    },
+    {
+      "sender": "NHÂN SỰ HÀ",
+      "text": "Anh Hoàng ơi sao thoát vậy, mạng bên anh bị lỗi hả? Hồ sơ anh điểm cao nhất, cả nhóm đang đợi mình anh đó!",
+      "side": "left",
+      "y": 260,
+      "stamp": "HỎI THĂM",
+      "start": 178.82,
+      "end": 185.62
+    },
+    {
+      "sender": "ỨNG VIÊN 07",
+      "text": "Ông ơi sao thoát ngang vậy? Bên ông bị vướng chỗ điền thông tin bảo an hả, cần tui chỉ cách làm không?",
+      "side": "right",
+      "y": 240,
+      "stamp": "NHẮN RIÊNG",
+      "start": 186.55,
+      "end": 194.05
+    },
+    {
+      "sender": "ỨNG VIÊN 04 (ĐỨC)",
+      "text": "Em vừa chuyển 200.000đ xong, rút về được luôn 380.000đ tiền thưởng nè! Vô lại lẹ đi anh!",
+      "side": "left",
+      "y": 430,
+      "stamp": "KHOE TIỀN VỀ",
+      "start": 187.05,
+      "end": 194.25
+    },
+    {
+      "sender": "QUẢN LÝ KHẢI",
+      "text": "Quay lại phòng họp gấp! Anh vừa được duyệt suất hợp đồng 3.000.000 VND, bỏ ngang là hủy toàn bộ quyền lợi!",
+      "side": "left",
+      "y": 320,
+      "stamp": "MỒI HỢP ĐỒNG",
+      "start": 195.08,
+      "end": 201.88
+    },
+    {
+      "sender": "CHUYỂN KHOẢN",
+      "text": "Số tiền chuyển: 7.000.000 VND  ·  Nội dung: Đổi điểm bảo an rút gốc",
+      "side": "left",
+      "y": 340,
+      "stamp": "ĐANG BẤM",
+      "start": 266.03,
+      "end": 269.63
+    }
+  ],
+  "callouts": [
+    {
+      "text": "ĐỔI SANG “QUẢN LÝ DỰ ÁN”  ·  LÝ GIẢI “TEST TƯƠNG TÁC TÀI CHÍNH THẬT”",
+      "style": "warning",
+      "y": 130,
+      "start": 92.61,
+      "end": 100.11
+    },
+    {
+      "text": "TÔI ĐI XIN VIỆC. TẠI SAO TÔI PHẢI CHUYỂN TIỀN?",
+      "style": "danger",
+      "y": 130,
+      "start": 166.72,
+      "end": 174.22
+    },
+    {
+      "text": "PHÚT THỨ 89  ·  BẤM “RỜI CUỘC HỌP”",
+      "style": "safe",
+      "y": 130,
+      "start": 177.05,
+      "end": 180.25
+    },
+    {
+      "text": "HỎI THĂM MẠNG  ·  CHỈ CÁCH LÀM  ·  KHOE TIỀN THƯỞNG  ·  HỨA HỢP ĐỒNG LỚN",
+      "style": "warning",
+      "y": 130,
+      "start": 202.89,
+      "end": 211.69
+    },
+    {
+      "text": "TÔI ĐI XIN VIỆC. TẠI SAO TÔI PHẢI CHUYỂN TIỀN?",
+      "style": "danger",
+      "y": 400,
+      "start": 276.83,
+      "end": 282.83
+    },
+    {
+      "text": "120.000 đồng – Một khoản tiền nhỏ. Một bài học không nhỏ.",
+      "style": "safe",
+      "y": 540,
+      "start": 277.83,
+      "end": 282.83
+    }
+  ],
+  "red_flags": {
+    "title": "NHỚ KỸ – 3 DẤU HIỆU BẪY TUYỂN DỤNG ONLINE",
+    "start": 215.85,
+    "end": 224.35,
+    "stagger_sec": 0.9,
+    "items": [
+      "ĐỔI NGƯỜI, LÁI CHỦ ĐỀ: Tuyển chuyên môn nhưng đẩy sang \"Quản lý dự án\" và phòng họp toàn quân xanh",
+      "THẢ TIỀN MỒI THẬT: Chuyển trước vài chục đến vài trăm ngàn để xóa nghi ngờ, kích tâm lý \"thử xem sao\"",
+      "ĐÒI NỘP TIỀN ĐỔI ĐIỂM: Bắt chuyển khoản để \"chứng minh năng lực\", \"tích điểm bảo an\" rồi nâng dần số tiền để rút gốc"
+    ],
+    "action": "Nhà tuyển dụng thật trả lương cho bạn, không bắt bạn nạp tiền · Thấy yêu cầu chuyển khoản: Rời cuộc họp & Chặn ngay!"
+  },
+  "disclaimer": {
+    "header": "LƯU Ý",
+    "start": 283.65,
+    "end": 290.15,
+    "lines": [
+      "Tình huống được dựng lại từ chất liệu có thật nhằm cảnh báo cộng đồng; nhân vật, tổ chức và giao diện đều là hư cấu.",
+      "Nhà tuyển dụng chân chính không bao giờ yêu cầu ứng viên chuyển tiền để làm nhiệm vụ hay kích hoạt điểm hệ thống."
+    ]
+  },
+  "audio": {
+    "ambience": [
+      {
+        "preset": "office",
+        "start": 0.0,
+        "end": 31.11,
+        "gain_db": -2.0
+      },
+      {
+        "preset": "room_tone",
+        "start": 31.11,
+        "end": 45.09,
+        "gain_db": -1.5
+      },
+      {
+        "preset": "office",
+        "start": 45.09,
+        "end": 109.05,
+        "gain_db": -2.0
+      },
+      {
+        "preset": "office",
+        "start": 109.05,
+        "end": 215.53,
+        "gain_db": -1.5
+      },
+      {
+        "preset": "room_tone",
+        "start": 215.53,
+        "end": 224.35,
+        "gain_db": -4.0
+      },
+      {
+        "preset": "street",
+        "start": 224.35,
+        "end": 283.33,
+        "gain_db": -2.5
+      },
+      {
+        "preset": "room_tone",
+        "start": 283.33,
+        "end": 290.15,
+        "gain_db": -5.0
+      }
+    ],
+    "foley": [
+      {
+        "preset": "bank_ting",
+        "at": 0.42,
+        "gain_db": -3
+      },
+      {
+        "preset": "notification",
+        "at": 1.22,
+        "gain_db": -4
+      },
+      {
+        "preset": "impact",
+        "at": 8.99,
+        "gain_db": -4
+      },
+      {
+        "preset": "riser",
+        "at": 29.51,
+        "gain_db": -5,
+        "dur": 1.2
+      },
+      {
+        "preset": "chapter_sting",
+        "at": 31.33,
+        "gain_db": -4
+      },
+      {
+        "preset": "notification",
+        "at": 45.51,
+        "gain_db": -5
+      },
+      {
+        "preset": "typing",
+        "at": 51.3,
+        "gain_db": -6,
+        "dur": 1.6
+      },
+      {
+        "preset": "glitch",
+        "at": 69.89,
+        "gain_db": -5
+      },
+      {
+        "preset": "chapter_sting",
+        "at": 109.27,
+        "gain_db": -4
+      },
+      {
+        "preset": "bank_ting",
+        "at": 109.62,
+        "gain_db": -3
+      },
+      {
+        "preset": "heartbeat",
+        "at": 146.28,
+        "gain_db": -5,
+        "dur": 10.0
+      },
+      {
+        "preset": "typing",
+        "at": 146.38,
+        "gain_db": -5,
+        "dur": 1.5
+      },
+      {
+        "preset": "notification",
+        "at": 153.32,
+        "gain_db": -4
+      },
+      {
+        "preset": "riser",
+        "at": 175.63,
+        "gain_db": -5,
+        "dur": 1.0
+      },
+      {
+        "preset": "impact",
+        "at": 176.95,
+        "gain_db": -3
+      },
+      {
+        "preset": "call_end",
+        "at": 177.15,
+        "gain_db": -4
+      },
+      {
+        "preset": "phone_vibrate",
+        "at": 178.72,
+        "gain_db": -4,
+        "dur": 1.6
+      },
+      {
+        "preset": "notification",
+        "at": 178.82,
+        "gain_db": -4
+      },
+      {
+        "preset": "notification",
+        "at": 186.55,
+        "gain_db": -4
+      },
+      {
+        "preset": "bank_ting",
+        "at": 187.05,
+        "gain_db": -4
+      },
+      {
+        "preset": "phone_vibrate",
+        "at": 194.93,
+        "gain_db": -4,
+        "dur": 1.5
+      },
+      {
+        "preset": "notification",
+        "at": 195.08,
+        "gain_db": -4
+      },
+      {
+        "preset": "notification",
+        "at": 215.95,
+        "gain_db": -4
+      },
+      {
+        "preset": "chapter_sting",
+        "at": 224.57,
+        "gain_db": -4
+      },
+      {
+        "preset": "heartbeat",
+        "at": 265.93,
+        "gain_db": -5,
+        "dur": 3.5
+      }
+    ],
+    "bgm": [
+      {
+        "preset": "suspense_pulse",
+        "start": 0.0,
+        "end": 31.11,
+        "gain_db": -1.0
+      },
+      {
+        "preset": "investigative_story",
+        "start": 31.11,
+        "end": 109.05,
+        "gain_db": -1.5
+      },
+      {
+        "preset": "tension_drone",
+        "start": 109.05,
+        "end": 145.96,
+        "gain_db": -1.0
+      },
+      {
+        "preset": "action_climax",
+        "start": 145.96,
+        "end": 178.35,
+        "gain_db": -1.5
+      },
+      {
+        "preset": "tension_drone",
+        "start": 178.35,
+        "end": 215.53,
+        "gain_db": -1.2
+      },
+      {
+        "preset": "warm_outro",
+        "start": 215.53,
+        "end": 224.35,
+        "gain_db": -2.0
+      },
+      {
+        "preset": "warm_outro",
+        "start": 224.35,
+        "end": 254.09,
+        "gain_db": -1.5
+      },
+      {
+        "preset": "tension_drone",
+        "start": 254.09,
+        "end": 283.33,
+        "gain_db": -1.5
+      },
+      {
+        "preset": "warm_outro",
+        "start": 283.33,
+        "end": 290.15,
+        "gain_db": -3.0
+      }
+    ],
+    "duck_extra": [
+      {
+        "start": 176.75,
+        "end": 178.75,
+        "bgm_db": -14,
+        "amb_db": -10
+      },
+      {
+        "start": 283.65,
+        "end": 290.09999999999997
+      }
+    ]
+  },
+  "forbidden_terms": [],
+  "publish": {
+    "titles": [
+      "120 Ngàn – Phút Thứ 89: Tôi Đi Xin Việc, Tại Sao Tôi Phải Chuyển Tiền? | Bóc Trần Lừa Đảo",
+      "Đi Phỏng Vấn Được Chuyển Nóng 120 Ngàn, Rồi Đòi Ngược 200 Ngàn Đổi Điểm Bảo An | Bóc Trần Lừa Đảo",
+      "Đừng Tặc Lưỡi Bỏ 200 Ngàn “Xem Kịch” Trong Phòng Phỏng Vấn Online | Bóc Trần Lừa Đảo"
+    ],
+    "description": "Sáng Giáng Sinh 25/12, Hoàng – một lập trình viên có kinh nghiệm – bước vào buổi phỏng vấn trực tuyến cho vị trí kỹ thuật của một \"tập đoàn lớn\". Sau vòng 1 có trợ lý AI hỗ trợ và hàng loạt ứng viên trả lời siêu tốc, buổi phỏng vấn bất ngờ đổi sang \"Quản lý dự án Hệ thống Xã hội Bảo an\". Hoàng nhận được 120.000 đồng tiền thật vào tài khoản, trước khi nhận yêu cầu chuyển ngược 200.000 đồng để \"kích hoạt điểm bảo an\". Phim bóc trần vì sao không bao giờ được tặc lưỡi bỏ 200.000 đồng để \"xem kịch\".\n\n⏱️ Các hồi trong phim:\n00:00 Mở đầu – 120 ngàn tiền thật & lệnh chuyển ngược 200 ngàn\n00:31 Hồi 1 – Phòng phỏng vấn đông người & màn “đổi sếp”\n01:49 Hồi 2 – 120 ngàn tiền thật & lệnh chuyển ngược 200 ngàn\n03:35 Dấu hiệu nhận biết & việc nên làm\n03:44 Hồi 3 – Ly nước 120 ngàn & lệnh chuyển 7 triệu bàn bên",
+    "pinned_comment": "📌 Nhà tuyển dụng thật trả lương cho bạn – không bao giờ bắt bạn chuyển tiền để \"chứng minh khả năng quản lý, giao tiếp\" hay \"kích hoạt điểm hệ thống bảo an\". Khoản 120.000đ chuyển thật ban đầu chỉ là tiền mồi để đánh vào tâm lý \"thử 200.000đ cùng lắm lỗ 80.000đ xem kịch\", từ đó kéo nạn nhân vào vòng xoáy tiếc tiền nạp tiếp hàng triệu đồng.",
+    "hashtags": [
+      "#bóctrầnlừađảo",
+      "#cảnhgiáclừađảo",
+      "#vạnchuyện",
+      "#lừađảotuyểndụng",
+      "#phútthứ89"
+    ],
+    "tags": [
+      "lừa đảo tuyển dụng online",
+      "hệ thống xã hội bảo an",
+      "tiền mồi 120 ngàn",
+      "phỏng vấn online lừa đảo",
+      "bóc trần lừa đảo",
+      "vạn chuyện"
+    ],
+    "category": "Education (Giáo dục)",
+    "playlist": "Hồ Sơ Bóc Trần Lừa Đảo – Phim Dài Chuyên Sâu",
+    "thumbnail_sec": 177.45
+  }
+}

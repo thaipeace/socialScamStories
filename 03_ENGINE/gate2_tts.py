@@ -26,7 +26,7 @@ from pathlib import Path
 
 import numpy as np
 
-from core import FFMPEG, Episode, GateError, load_json, rel, save_json
+from core import FFMPEG, PROJECT_ROOT, Episode, GateError, load_json, rel, save_json
 
 DEFAULT_AF = "highpass=f=80,acompressor=threshold=-18dB:ratio=2.5:attack=8:release=100:makeup=2dB"
 AF_ALIASES = {
@@ -85,6 +85,8 @@ def load_api_keys(ep: Episode) -> list[str]:
     except Exception as exc:
         print(f"    [warn load_api_keys]: {exc}")
     for env_path in (
+        PROJECT_ROOT / ".env.local",
+        PROJECT_ROOT / ".env",
         Path("C:/projects/vfc/vfc-ai-diagnose/.env"),
         Path("C:/projects/optisign/kb-delta-indexer/.env"),
         Path("C:/projects/vfc/vfc-fs/.env.local"),
@@ -93,7 +95,8 @@ def load_api_keys(ep: Episode) -> list[str]:
     ):
         if env_path.is_file():
             try:
-                for m in re.findall(r'(AIzaSy[A-Za-z0-9_\-]{33})', env_path.read_text(encoding="utf-8", errors="ignore")):
+                text = env_path.read_text(encoding="utf-8", errors="ignore")
+                for m in re.findall(r'((?:AIzaSy[A-Za-z0-9_\-]{33})|(?:AQ\.[A-Za-z0-9_\-]{30,}))', text):
                     if m and m not in keys:
                         keys.append(m)
             except Exception:
@@ -119,72 +122,91 @@ def _extract_audio_b64(resp: dict) -> tuple[str, str]:
     return found
 
 
+_EXHAUSTED_MODELS: set[str] = set()
+
+
 def synthesize(ep: Episode, text: str, voice: str, style: str, keys: list[str], out_raw: Path,
                preferred_model: str | None = None) -> tuple[str, str]:
     tts_cfg = ep.channel["tts"]
-    model_name = preferred_model or tts_cfg["model"]
+    primary_model = preferred_model or tts_cfg["model"]
+    candidate_models = []
+    for m in (
+        "gemini-3.8-flash-lite-tts",
+        primary_model,
+        "gemini-3.1-flash-tts-preview",
+        "gemini-2.5-pro-preview-tts",
+        "gemini-2.5-flash-preview-tts",
+    ):
+        if m and m not in candidate_models and m not in _EXHAUSTED_MODELS:
+            candidate_models.append(m)
     content: dict = {"type": "text", "text": text}
     if style:
         content["annotations"] = [{"type": "speech_metadata", "style": style}]
     last_err: Exception | None = None
-    payload = {
-        "model": model_name,
-        "input": [{"type": "user_input", "content": [content]}],
-        "response_format": {"type": "audio"},
-        "generation_config": {"speech_config": [{"voice": voice}]},
-    }
-    body = json.dumps(payload, ensure_ascii=False).encode("utf-8")
-    for key in keys:
-        attempt = 0
-        while attempt < 5:
-            attempt += 1
-            req = urllib.request.Request(tts_cfg["endpoint"], data=body,
-                                         headers={"Content-Type": "application/json", "x-goog-api-key": key})
-            try:
-                with urllib.request.urlopen(req, timeout=90) as r:
-                    resp = json.loads(r.read().decode("utf-8"))
-                data_b64, mime = _extract_audio_b64(resp)
-                raw = base64.b64decode(data_b64)
-                if "l16" in mime.lower() or "pcm" in mime.lower():
-                    rate = 24000
-                    for part in mime.split(";"):
-                        if part.strip().startswith("rate="):
-                            rate = int(part.split("=")[1])
-                    with wave.open(str(out_raw), "wb") as wf:
-                        wf.setnchannels(1)
-                        wf.setsampwidth(2)
-                        wf.setframerate(rate)
-                        wf.writeframes(raw)
-                else:
-                    out_raw.write_bytes(raw)
-                return mime, model_name
-            except urllib.error.HTTPError as exc:
-                msg = exc.read().decode("utf-8", "replace")
-                last_err = RuntimeError(f"HTTP {exc.code} ({model_name}): {msg[:300]}")
-                if exc.code == 429:
-                    if "per day" in msg.lower() or "requests per day" in msg.lower():
-                        print(f"    (Key hiện tại chạm giới hạn ngày cho {model_name} – chuyển key tiếp theo...)")
+    for model_name in candidate_models:
+        daily_exhausted_count = 0
+        payload = {
+            "model": model_name,
+            "input": [{"type": "user_input", "content": [content]}],
+            "response_format": {"type": "audio"},
+            "generation_config": {"speech_config": [{"voice": voice}]},
+        }
+        body = json.dumps(payload, ensure_ascii=False).encode("utf-8")
+        for key in keys:
+            attempt = 0
+            while attempt < 5:
+                attempt += 1
+                req = urllib.request.Request(tts_cfg["endpoint"], data=body,
+                                             headers={"Content-Type": "application/json", "x-goog-api-key": key})
+                try:
+                    with urllib.request.urlopen(req, timeout=90) as r:
+                        resp = json.loads(r.read().decode("utf-8"))
+                    data_b64, mime = _extract_audio_b64(resp)
+                    raw = base64.b64decode(data_b64)
+                    if "l16" in mime.lower() or "pcm" in mime.lower():
+                        rate = 24000
+                        for part in mime.split(";"):
+                            if part.strip().startswith("rate="):
+                                rate = int(part.split("=")[1])
+                        with wave.open(str(out_raw), "wb") as wf:
+                            wf.setnchannels(1)
+                            wf.setsampwidth(2)
+                            wf.setframerate(rate)
+                            wf.writeframes(raw)
+                    else:
+                        out_raw.write_bytes(raw)
+                    return mime, model_name
+                except urllib.error.HTTPError as exc:
+                    msg = exc.read().decode("utf-8", "replace")
+                    last_err = RuntimeError(f"HTTP {exc.code} ({model_name}): {msg[:300]}")
+                    if exc.code == 429:
+                        if "per day" in msg.lower() or "requests per day" in msg.lower():
+                            daily_exhausted_count += 1
+                            print(f"    (Key hiện tại chạm giới hạn ngày cho {model_name} – chuyển key tiếp theo...)")
+                            break
+                        m = re.search(r"retry in (\d+(?:\.\d+)?)s", msg)
+                        wait = float(m.group(1)) + 2.0 if m else 25.0
+                        if wait > 90.0:
+                            print("    (Thời gian chờ quá dài – chuyển sang API key tiếp theo...)")
+                            break
+                        print(f"    (giới hạn tốc độ API – chờ {wait:.0f}s rồi thử lại)")
+                        time.sleep(wait)
+                        continue
+                    if exc.code in {400, 401, 403} and ("api_key_invalid" in msg.lower() or "key not valid" in msg.lower()):
+                        daily_exhausted_count += 1
+                        print("    (Key không hợp lệ – chuyển sang API key tiếp theo...)")
                         break
-                    m = re.search(r"retry in (\d+(?:\.\d+)?)s", msg)
-                    wait = float(m.group(1)) + 2.0 if m else 25.0
-                    if wait > 90.0:
-                        print("    (Thời gian chờ quá dài – chuyển sang API key tiếp theo...)")
+                    if attempt >= 2:
                         break
-                    print(f"    (giới hạn tốc độ API – chờ {wait:.0f}s rồi thử lại)")
-                    time.sleep(wait)
-                    continue
-                if exc.code in {400, 401, 403} and ("api_key_invalid" in msg.lower() or "key not valid" in msg.lower()):
-                    print("    (Key không hợp lệ – chuyển sang API key tiếp theo...)")
-                    break
-                if attempt >= 2:
-                    break
-                time.sleep(1.5)
-            except Exception as exc:  # noqa: BLE001
-                last_err = exc
-                if attempt >= 2:
-                    break
-                time.sleep(1.5)
-    raise GateError(f"TTS thất bại trên mọi API key cho model {model_name}: {last_err}")
+                    time.sleep(1.5)
+                except Exception as exc:  # noqa: BLE001
+                    last_err = exc
+                    if attempt >= 2:
+                        break
+                    time.sleep(1.5)
+        if daily_exhausted_count >= len(keys):
+            _EXHAUSTED_MODELS.add(model_name)
+    raise GateError(f"TTS thất bại trên mọi API key cho {candidate_models}: {last_err}")
 
 
 def placeholder_voice(text: str, out_raw: Path) -> str:
@@ -281,8 +303,12 @@ def run(ep: Episode, placeholder: bool = False, force: bool = False, only: list[
                 or old.get("style") != style
                 or old.get("af") != af
             )
-            mode_changed = old.get("engine") != line_mode
+            mode_changed = (old.get("engine") == "placeholder") != placeholder
+            if not must_synth if False else True:
+                pass
             must_synth = force or item.get("force") or not final_wav.is_file() or text_changed or mode_changed
+            if not must_synth and old.get("engine"):
+                line_mode = old["engine"]
             if only and lid not in only:
                 must_synth = False
             if must_synth:

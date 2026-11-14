@@ -33,13 +33,29 @@ def utf8_stdout() -> None:
 
 
 def find_bin(name: str) -> str:
-    """Locate ffmpeg/ffprobe: HaizFlow runtime first, then system PATH."""
+    """Locate ffmpeg/ffprobe: HaizFlow runtime first, then common macOS/Homebrew/static_ffmpeg paths, then system PATH."""
     candidate = HAIZFLOW_ROOT / "runtime" / "bin" / f"{name}.exe"
     if candidate.is_file():
         return str(candidate)
+    for mac_dir in (
+        Path("/opt/homebrew/bin"),
+        Path("/usr/local/bin"),
+        Path.home() / "Library/Python/3.9/lib/python/site-packages/static_ffmpeg/bin/darwin_arm64",
+    ):
+        mac_bin = mac_dir / name
+        if mac_bin.is_file():
+            return str(mac_bin)
     found = shutil.which(name)
     if found:
         return found
+    try:
+        import static_ffmpeg  # type: ignore
+        static_ffmpeg.add_paths()
+        found = shutil.which(name)
+        if found:
+            return found
+    except Exception:
+        pass
     raise FileNotFoundError(f"Không tìm thấy '{name}'. Cài FFmpeg hoặc đặt biến HAIZFLOW_ROOT.")
 
 

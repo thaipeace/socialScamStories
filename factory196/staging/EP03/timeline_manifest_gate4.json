@@ -1,0 +1,2346 @@
+{
+  "episode_id": "EP03",
+  "factory": "factory196",
+  "gate": "GATE_4_TIMELINE_SAFE_ZONE",
+  "preview_only": false,
+  "canvas": {
+    "width": 1920,
+    "height": 1080,
+    "fps": 30,
+    "aspect_ratio": "16:9",
+    "total_frames": 8704,
+    "total_duration_sec": 290.15
+  },
+  "safe_zone_rules": {
+    "left_x": 120,
+    "right_x": 1800,
+    "max_y": 980,
+    "top_hook_y": 96,
+    "platform_ui_bottom_y": 980,
+    "all_overlays_compliant": true
+  },
+  "scenes": [
+    {
+      "id": "s01_hook_ting",
+      "image": "assets/c01.jpg",
+      "start": 0.0,
+      "end": 8.99,
+      "motion": {
+        "scale": [
+          1.04,
+          1.14
+        ],
+        "focus": [
+          [
+            0.5,
+            0.5
+          ],
+          [
+            0.47,
+            0.45
+          ]
+        ],
+        "wobble": "tense"
+      },
+      "shakes": [
+        {
+          "at": 0.3,
+          "dur": 0.4,
+          "amp": 16
+        }
+      ]
+    },
+    {
+      "id": "s02_hook_finger",
+      "image": "assets/c02.jpg",
+      "start": 8.99,
+      "end": 31.11,
+      "motion": {
+        "scale": [
+          1.0,
+          1.16
+        ],
+        "focus": [
+          [
+            0.5,
+            0.5
+          ],
+          [
+            0.5,
+            0.45
+          ]
+        ],
+        "wobble": "tense"
+      },
+      "transition_in": {
+        "type": "flash_white",
+        "dur": 0.25
+      }
+    },
+    {
+      "id": "s03_christmas_morning",
+      "image": "assets/c03.jpg",
+      "start": 31.11,
+      "end": 45.09,
+      "motion": {
+        "scale": [
+          1.02,
+          1.09
+        ],
+        "focus": [
+          [
+            0.5,
+            0.5
+          ],
+          [
+            0.5,
+            0.47
+          ]
+        ],
+        "wobble": "calm"
+      },
+      "transition_in": {
+        "type": "fade_black",
+        "dur": 0.4
+      }
+    },
+    {
+      "id": "s04_meeting_grid",
+      "image": "assets/c04.jpg",
+      "start": 45.09,
+      "end": 50.88,
+      "motion": {
+        "scale": [
+          1.02,
+          1.1
+        ],
+        "focus": [
+          [
+            0.46,
+            0.48
+          ],
+          [
+            0.54,
+            0.46
+          ]
+        ],
+        "wobble": "handheld"
+      },
+      "transition_in": {
+        "type": "dissolve",
+        "dur": 0.35
+      }
+    },
+    {
+      "id": "s05_ai_helper",
+      "image": "assets/c06.jpg",
+      "start": 50.88,
+      "end": 61.48,
+      "motion": {
+        "scale": [
+          1.02,
+          1.09
+        ],
+        "focus": [
+          [
+            0.5,
+            0.5
+          ],
+          [
+            0.5,
+            0.47
+          ]
+        ],
+        "wobble": "calm"
+      },
+      "transition_in": {
+        "type": "dissolve",
+        "dur": 0.3
+      }
+    },
+    {
+      "id": "s06_stolen_mic",
+      "image": "assets/c05.jpg",
+      "start": 61.48,
+      "end": 69.47,
+      "motion": {
+        "scale": [
+          1.04,
+          1.14
+        ],
+        "focus": [
+          [
+            0.5,
+            0.5
+          ],
+          [
+            0.47,
+            0.45
+          ]
+        ],
+        "wobble": "tense"
+      },
+      "transition_in": {
+        "type": "dissolve",
+        "dur": 0.25
+      }
+    },
+    {
+      "id": "s07_manager_khai",
+      "image": "assets/c07.jpg",
+      "start": 69.47,
+      "end": 92.09,
+      "motion": {
+        "scale": [
+          1.0,
+          1.16
+        ],
+        "focus": [
+          [
+            0.5,
+            0.5
+          ],
+          [
+            0.5,
+            0.45
+          ]
+        ],
+        "wobble": "tense"
+      },
+      "transition_in": {
+        "type": "dissolve",
+        "dur": 0.35
+      }
+    },
+    {
+      "id": "s08_broken_subpage",
+      "image": "assets/c08.jpg",
+      "start": 92.09,
+      "end": 109.05,
+      "motion": {
+        "scale": [
+          1.02,
+          1.1
+        ],
+        "focus": [
+          [
+            0.46,
+            0.48
+          ],
+          [
+            0.54,
+            0.46
+          ]
+        ],
+        "wobble": "handheld"
+      },
+      "transition_in": {
+        "type": "dissolve",
+        "dur": 0.3
+      }
+    },
+    {
+      "id": "s09_real_120k",
+      "image": "assets/c09.jpg",
+      "start": 109.05,
+      "end": 119.6,
+      "motion": {
+        "scale": [
+          1.0,
+          1.16
+        ],
+        "focus": [
+          [
+            0.5,
+            0.5
+          ],
+          [
+            0.5,
+            0.45
+          ]
+        ],
+        "wobble": "tense"
+      },
+      "transition_in": {
+        "type": "fade_black",
+        "dur": 0.35
+      },
+      "shakes": [
+        {
+          "at": 109.3,
+          "dur": 0.4,
+          "amp": 16
+        }
+      ]
+    },
+    {
+      "id": "s10_khai_200k_trap",
+      "image": "assets/c07.jpg",
+      "start": 119.6,
+      "end": 137.9,
+      "motion": {
+        "scale": [
+          1.0,
+          1.16
+        ],
+        "focus": [
+          [
+            0.5,
+            0.5
+          ],
+          [
+            0.5,
+            0.45
+          ]
+        ],
+        "wobble": "tense"
+      },
+      "transition_in": {
+        "type": "dissolve",
+        "dur": 0.3
+      }
+    },
+    {
+      "id": "s11_hoang_hesitate",
+      "image": "assets/c01.jpg",
+      "start": 137.9,
+      "end": 145.96,
+      "motion": {
+        "scale": [
+          1.04,
+          1.14
+        ],
+        "focus": [
+          [
+            0.5,
+            0.5
+          ],
+          [
+            0.47,
+            0.45
+          ]
+        ],
+        "wobble": "tense"
+      },
+      "transition_in": {
+        "type": "dissolve",
+        "dur": 0.3
+      }
+    },
+    {
+      "id": "s12_ai_warning",
+      "image": "assets/c10.jpg",
+      "start": 145.96,
+      "end": 176.63,
+      "motion": {
+        "scale": [
+          1.04,
+          1.14
+        ],
+        "focus": [
+          [
+            0.5,
+            0.5
+          ],
+          [
+            0.47,
+            0.45
+          ]
+        ],
+        "wobble": "tense"
+      },
+      "transition_in": {
+        "type": "flash_red",
+        "dur": 0.3
+      }
+    },
+    {
+      "id": "s13_leave_meeting",
+      "image": "assets/c11.jpg",
+      "start": 176.63,
+      "end": 178.35,
+      "motion": {
+        "scale": [
+          1.0,
+          1.16
+        ],
+        "focus": [
+          [
+            0.5,
+            0.5
+          ],
+          [
+            0.5,
+            0.45
+          ]
+        ],
+        "wobble": "tense"
+      },
+      "transition_in": {
+        "type": "flash_white",
+        "dur": 0.25
+      },
+      "shakes": [
+        {
+          "at": 176.78,
+          "dur": 0.4,
+          "amp": 16
+        }
+      ]
+    },
+    {
+      "id": "s14a_spam_ha",
+      "image": "assets/c12b.jpg",
+      "start": 178.35,
+      "end": 186.13,
+      "motion": {
+        "scale": [
+          1.02,
+          1.1
+        ],
+        "focus": [
+          [
+            0.46,
+            0.48
+          ],
+          [
+            0.54,
+            0.46
+          ]
+        ],
+        "wobble": "handheld"
+      },
+      "transition_in": {
+        "type": "dissolve",
+        "dur": 0.3
+      }
+    },
+    {
+      "id": "s14b_spam_duc",
+      "image": "assets/c12b.jpg",
+      "start": 186.13,
+      "end": 194.56,
+      "motion": {
+        "scale": [
+          1.0,
+          1.16
+        ],
+        "focus": [
+          [
+            0.5,
+            0.5
+          ],
+          [
+            0.5,
+            0.45
+          ]
+        ],
+        "wobble": "tense"
+      },
+      "transition_in": {
+        "type": "dissolve",
+        "dur": 0.25
+      }
+    },
+    {
+      "id": "s14c_spam_khai",
+      "image": "assets/c12.jpg",
+      "start": 194.56,
+      "end": 215.53,
+      "motion": {
+        "scale": [
+          1.02,
+          1.09
+        ],
+        "focus": [
+          [
+            0.5,
+            0.5
+          ],
+          [
+            0.5,
+            0.47
+          ]
+        ],
+        "wobble": "calm"
+      },
+      "transition_in": {
+        "type": "dissolve",
+        "dur": 0.3
+      }
+    },
+    {
+      "id": "s18_red_flags",
+      "image": "factory196/materialAndDraft/EP01b/assets/scene18.jpg",
+      "start": 215.53,
+      "end": 224.35,
+      "motion": {
+        "scale": [
+          1.0,
+          1.05
+        ],
+        "focus": [
+          [
+            0.5,
+            0.5
+          ],
+          [
+            0.5,
+            0.5
+          ]
+        ],
+        "wobble": "none"
+      },
+      "transition_in": {
+        "type": "fade_black",
+        "dur": 0.35
+      }
+    },
+    {
+      "id": "s19_christmas_cafe",
+      "image": "assets/c15.jpg",
+      "start": 224.35,
+      "end": 254.09,
+      "motion": {
+        "scale": [
+          1.02,
+          1.09
+        ],
+        "focus": [
+          [
+            0.5,
+            0.5
+          ],
+          [
+            0.5,
+            0.47
+          ]
+        ],
+        "wobble": "calm"
+      },
+      "transition_in": {
+        "type": "fade_black",
+        "dur": 0.4
+      }
+    },
+    {
+      "id": "s20_next_table_turn",
+      "image": "assets/c16.jpg",
+      "start": 254.09,
+      "end": 265.61,
+      "motion": {
+        "scale": [
+          1.02,
+          1.1
+        ],
+        "focus": [
+          [
+            0.46,
+            0.48
+          ],
+          [
+            0.54,
+            0.46
+          ]
+        ],
+        "wobble": "handheld"
+      },
+      "transition_in": {
+        "type": "dissolve",
+        "dur": 0.35
+      }
+    },
+    {
+      "id": "s21_next_table_7m",
+      "image": "assets/c17.jpg",
+      "start": 265.61,
+      "end": 268.73,
+      "motion": {
+        "scale": [
+          1.0,
+          1.16
+        ],
+        "focus": [
+          [
+            0.5,
+            0.5
+          ],
+          [
+            0.5,
+            0.45
+          ]
+        ],
+        "wobble": "tense"
+      },
+      "transition_in": {
+        "type": "dissolve",
+        "dur": 0.3
+      }
+    },
+    {
+      "id": "s22_black_cut",
+      "image": "assets/c18.jpg",
+      "start": 268.73,
+      "end": 283.33,
+      "motion": {
+        "scale": [
+          1.0,
+          1.05
+        ],
+        "focus": [
+          [
+            0.5,
+            0.5
+          ],
+          [
+            0.5,
+            0.5
+          ]
+        ],
+        "wobble": "none"
+      },
+      "transition_in": {
+        "type": "fade_black",
+        "dur": 0.15
+      }
+    },
+    {
+      "id": "s23_outro",
+      "image": "factory196/materialAndDraft/EP01b/assets/scene18.jpg",
+      "start": 283.33,
+      "end": 290.15,
+      "motion": {
+        "scale": [
+          1.0,
+          1.05
+        ],
+        "focus": [
+          [
+            0.5,
+            0.5
+          ],
+          [
+            0.5,
+            0.5
+          ]
+        ],
+        "wobble": "none"
+      },
+      "transition_in": {
+        "type": "fade_black",
+        "dur": 0.4
+      }
+    }
+  ],
+  "subtitle_srt": "factory196/staging/EP03/subtitles/EP03.srt",
+  "video_track_noaudio": "factory196/staging/EP03/timeline_video_gate4.mp4",
+  "channel_branding": {
+    "type": "channel_branding",
+    "logo_text": "VCH",
+    "watermark_text": "VẠN CHUYỆN",
+    "safe_zone_compliant": true
+  },
+  "overlays": [
+    {
+      "id": "000_hook",
+      "start_sec": 0.4,
+      "end_sec": 5.4,
+      "fade_sec": 0.3,
+      "png_path": "factory196/staging/EP03/overlays/000_hook.png",
+      "type": "text_hook",
+      "text": "PHÚT THỨ 89 · PHỎNG VẤN TUYỂN DỤNG ONLINE — NHẬN 120 NGÀN TIỀN THẬT – ĐÒI CHUYỂN NGƯỢC 200 NGÀN ĐỂ NHẬN VIỆC",
+      "bbox_px": [
+        256,
+        96,
+        1664,
+        278
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "001_chapter1",
+      "start_sec": 31.31,
+      "end_sec": 35.91,
+      "fade_sec": 0.3,
+      "png_path": "factory196/staging/EP03/overlays/001_chapter1.png",
+      "type": "chapter_card",
+      "text": "HỒI 1 · SÁNG GIÁNG SINH 25/12 — PHÒNG PHỎNG VẤN ĐÔNG NGƯỜI & MÀN “ĐỔI SẾP”",
+      "bbox_px": [
+        459,
+        96,
+        1462,
+        208
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "002_chapter2",
+      "start_sec": 109.25,
+      "end_sec": 113.85,
+      "fade_sec": 0.3,
+      "png_path": "factory196/staging/EP03/overlays/002_chapter2.png",
+      "type": "chapter_card",
+      "text": "HỒI 2 · PHÚT THỨ 85 — 120 NGÀN TIỀN THẬT & LỆNH CHUYỂN NGƯỢC 200 NGÀN",
+      "bbox_px": [
+        417,
+        96,
+        1504,
+        208
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "003_chapter3",
+      "start_sec": 224.55,
+      "end_sec": 229.15,
+      "fade_sec": 0.3,
+      "png_path": "factory196/staging/EP03/overlays/003_chapter3.png",
+      "type": "chapter_card",
+      "text": "HỒI 3 · 10 GIỜ SÁNG GIÁNG SINH — LY NƯỚC 120 NGÀN & LỆNH CHUYỂN 7 TRIỆU BÀN BÊN",
+      "bbox_px": [
+        434,
+        96,
+        1487,
+        208
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "004_sub_l01_khai",
+      "start_sec": 0.57,
+      "end_sec": 1.956,
+      "fade_sec": 0.1,
+      "png_path": "factory196/staging/EP03/overlays/004_sub_l01_khai.png",
+      "type": "subtitle",
+      "lines": [
+        "Còn anh Hoàng thôi!"
+      ],
+      "bbox_px": [
+        749,
+        906,
+        1171,
+        958
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "005_sub_l01_khai",
+      "start_sec": 1.956,
+      "end_sec": 4.802,
+      "fade_sec": 0.1,
+      "png_path": "factory196/staging/EP03/overlays/005_sub_l01_khai.png",
+      "type": "subtitle",
+      "lines": [
+        "Hết một phút hệ thống tự hủy hồ sơ nha!"
+      ],
+      "bbox_px": [
+        559,
+        906,
+        1362,
+        958
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "006_sub_l02_duc",
+      "start_sec": 5.12,
+      "end_sec": 8.672,
+      "fade_sec": 0.1,
+      "png_path": "factory196/staging/EP03/overlays/006_sub_l02_duc.png",
+      "type": "subtitle",
+      "lines": [
+        "Em chuyển 200.000đ xong rồi anh ơi! Lên điểm liền luôn!"
+      ],
+      "bbox_px": [
+        407,
+        906,
+        1513,
+        958
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "007_sub_l03_hoang",
+      "start_sec": 9.31,
+      "end_sec": 15.77,
+      "fade_sec": 0.1,
+      "png_path": "factory196/staging/EP03/overlays/007_sub_l03_hoang.png",
+      "type": "subtitle",
+      "lines": [
+        "Nhận 120 ngàn rồi… chuyển lại 200 ngàn thì cùng lắm lỗ 80 ngàn."
+      ],
+      "bbox_px": [
+        328,
+        906,
+        1592,
+        958
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "008_sub_l03b_hoang",
+      "start_sec": 16.09,
+      "end_sec": 18.75,
+      "fade_sec": 0.1,
+      "png_path": "factory196/staging/EP03/overlays/008_sub_l03b_hoang.png",
+      "type": "subtitle",
+      "lines": [
+        "Hay cứ thử coi tụi nó diễn trò gì?"
+      ],
+      "bbox_px": [
+        631,
+        906,
+        1289,
+        958
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "009_sub_l04_narr",
+      "start_sec": 19.07,
+      "end_sec": 22.49,
+      "fade_sec": 0.1,
+      "png_path": "factory196/staging/EP03/overlays/009_sub_l04_narr.png",
+      "type": "subtitle",
+      "lines": [
+        "Đi phỏng vấn được chuyển nóng 120.000đ."
+      ],
+      "bbox_px": [
+        538,
+        906,
+        1382,
+        958
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "010_sub_l04b_narr",
+      "start_sec": 22.81,
+      "end_sec": 30.39,
+      "fade_sec": 0.1,
+      "png_path": "factory196/staging/EP03/overlays/010_sub_l04b_narr.png",
+      "type": "subtitle",
+      "lines": [
+        "Nhưng nếu tặc lưỡi bỏ 200.000đ để 'xem kịch', cái giá ở phút thứ 90 sẽ",
+        "không dừng ở đó."
+      ],
+      "bbox_px": [
+        278,
+        854,
+        1643,
+        958
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "011_sub_l05_tom",
+      "start_sec": 31.63,
+      "end_sec": 36.29,
+      "fade_sec": 0.1,
+      "png_path": "factory196/staging/EP03/overlays/011_sub_l05_tom.png",
+      "type": "subtitle",
+      "lines": [
+        "Ba ơi, sáng Giáng Sinh ba hứa chở con đi chơi mà!"
+      ],
+      "bbox_px": [
+        459,
+        906,
+        1461,
+        958
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "012_sub_l06_lan",
+      "start_sec": 36.61,
+      "end_sec": 38.59,
+      "fade_sec": 0.1,
+      "png_path": "factory196/staging/EP03/overlays/012_sub_l06_lan.png",
+      "type": "subtitle",
+      "lines": [
+        "9 rưỡi mình đi nha anh."
+      ],
+      "bbox_px": [
+        722,
+        906,
+        1198,
+        958
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "013_sub_l07_hoang",
+      "start_sec": 38.91,
+      "end_sec": 40.502,
+      "fade_sec": 0.1,
+      "png_path": "factory196/staging/EP03/overlays/013_sub_l07_hoang.png",
+      "type": "subtitle",
+      "lines": [
+        "Cho ba đúng một tiếng."
+      ],
+      "bbox_px": [
+        723,
+        906,
+        1198,
+        958
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "014_sub_l07_hoang",
+      "start_sec": 40.502,
+      "end_sec": 44.77,
+      "fade_sec": 0.1,
+      "png_path": "factory196/staging/EP03/overlays/014_sub_l07_hoang.png",
+      "type": "subtitle",
+      "lines": [
+        "Bên Tập đoàn Viễn thông X hẹn phỏng vấn lập trình viên rồi."
+      ],
+      "bbox_px": [
+        376,
+        906,
+        1545,
+        958
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "015_sub_l08_ha",
+      "start_sec": 45.41,
+      "end_sec": 48.673,
+      "fade_sec": 0.1,
+      "png_path": "factory196/staging/EP03/overlays/015_sub_l08_ha.png",
+      "type": "subtitle",
+      "lines": [
+        "Vòng một: đọc tài liệu trong mười phút và trả lời câu hỏi chung."
+      ],
+      "bbox_px": [
+        341,
+        906,
+        1579,
+        958
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "016_sub_l08_ha",
+      "start_sec": 48.673,
+      "end_sec": 50.56,
+      "fade_sec": 0.1,
+      "png_path": "factory196/staging/EP03/overlays/016_sub_l08_ha.png",
+      "type": "subtitle",
+      "lines": [
+        "Ai nhanh nhất được cộng điểm ưu tiên!"
+      ],
+      "bbox_px": [
+        571,
+        906,
+        1349,
+        958
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "017_sub_l09_hoang",
+      "start_sec": 51.2,
+      "end_sec": 54.26,
+      "fade_sec": 0.1,
+      "png_path": "factory196/staging/EP03/overlays/017_sub_l09_hoang.png",
+      "type": "subtitle",
+      "lines": [
+        "Nhờ Trợ lý AI tóm tắt nhanh bộ tài liệu này coi."
+      ],
+      "bbox_px": [
+        503,
+        906,
+        1417,
+        958
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "018_sub_l09b_ai",
+      "start_sec": 54.58,
+      "end_sec": 56.773,
+      "fade_sec": 0.1,
+      "png_path": "factory196/staging/EP03/overlays/018_sub_l09b_ai.png",
+      "type": "subtitle",
+      "lines": [
+        "Đã phân tích xong tài liệu."
+      ],
+      "bbox_px": [
+        698,
+        906,
+        1222,
+        958
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "019_sub_l09b_ai",
+      "start_sec": 56.773,
+      "end_sec": 61.16,
+      "fade_sec": 0.1,
+      "png_path": "factory196/staging/EP03/overlays/019_sub_l09b_ai.png",
+      "type": "subtitle",
+      "lines": [
+        "Đây là ba ý cốt lõi và đáp án để bạn trả lời vòng một."
+      ],
+      "bbox_px": [
+        449,
+        906,
+        1472,
+        958
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "020_sub_l10_duc",
+      "start_sec": 61.8,
+      "end_sec": 65.472,
+      "fade_sec": 0.1,
+      "png_path": "factory196/staging/EP03/overlays/020_sub_l10_duc.png",
+      "type": "subtitle",
+      "lines": [
+        "Em xin trả lời câu hỏi vòng một theo đúng ba mục trong tài liệu tập đoàn ạ!"
+      ],
+      "bbox_px": [
+        237,
+        906,
+        1683,
+        958
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "021_sub_l11_ha",
+      "start_sec": 65.8,
+      "end_sec": 66.339,
+      "fade_sec": 0.1,
+      "png_path": "factory196/staging/EP03/overlays/021_sub_l11_ha.png",
+      "type": "subtitle",
+      "lines": [
+        "Xuất sắc!"
+      ],
+      "bbox_px": [
+        855,
+        906,
+        1065,
+        958
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "022_sub_l11_ha",
+      "start_sec": 66.339,
+      "end_sec": 69.155,
+      "fade_sec": 0.1,
+      "png_path": "factory196/staging/EP03/overlays/022_sub_l11_ha.png",
+      "type": "subtitle",
+      "lines": [
+        "Ứng viên số bốn và anh Hoàng vượt qua vòng một!"
+      ],
+      "bbox_px": [
+        460,
+        906,
+        1461,
+        958
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "023_sub_l12_ha",
+      "start_sec": 69.79,
+      "end_sec": 74.742,
+      "fade_sec": 0.1,
+      "png_path": "factory196/staging/EP03/overlays/023_sub_l12_ha.png",
+      "type": "subtitle",
+      "lines": [
+        "Vòng hai sẽ do anh Khải, Quản lý dự án Hệ thống Xã hội Bảo an trực tiếp",
+        "đánh giá."
+      ],
+      "bbox_px": [
+        256,
+        854,
+        1665,
+        958
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "024_sub_l13_khai",
+      "start_sec": 75.06,
+      "end_sec": 75.911,
+      "fade_sec": 0.1,
+      "png_path": "factory196/staging/EP03/overlays/024_sub_l13_khai.png",
+      "type": "subtitle",
+      "lines": [
+        "Chào các bạn."
+      ],
+      "bbox_px": [
+        809,
+        906,
+        1111,
+        958
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "025_sub_l13_khai",
+      "start_sec": 75.911,
+      "end_sec": 83.372,
+      "fade_sec": 0.1,
+      "png_path": "factory196/staging/EP03/overlays/025_sub_l13_khai.png",
+      "type": "subtitle",
+      "lines": [
+        "Vòng hai có tương tác tài chính thật nhằm đánh giá khả năng quản trị ứng",
+        "biến và kiến thức tài chính của ứng viên."
+      ],
+      "bbox_px": [
+        245,
+        854,
+        1675,
+        958
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "026_sub_l13b_khai",
+      "start_sec": 83.69,
+      "end_sec": 91.762,
+      "fade_sec": 0.1,
+      "png_path": "factory196/staging/EP03/overlays/026_sub_l13b_khai.png",
+      "type": "subtitle",
+      "lines": [
+        "Mời vào nền tảng dự án. Hệ thống sẽ chuyển hỗ trợ mỗi bạn 120.000đ để",
+        "thực hiện thao tác."
+      ],
+      "bbox_px": [
+        259,
+        854,
+        1662,
+        958
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "027_sub_l14_hoang",
+      "start_sec": 92.41,
+      "end_sec": 98.156,
+      "fade_sec": 0.1,
+      "png_path": "factory196/staging/EP03/overlays/027_sub_l14_hoang.png",
+      "type": "subtitle",
+      "lines": [
+        "Ủa, tuyển lập trình viên mà qua vòng hai lại kêu vào web dự án Bảo an xã",
+        "hội?"
+      ],
+      "bbox_px": [
+        254,
+        854,
+        1666,
+        958
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "028_sub_l14_hoang",
+      "start_sec": 98.156,
+      "end_sec": 100.47,
+      "fade_sec": 0.1,
+      "png_path": "factory196/staging/EP03/overlays/028_sub_l14_hoang.png",
+      "type": "subtitle",
+      "lines": [
+        "Trang con còn sai chính tả nữa…"
+      ],
+      "bbox_px": [
+        630,
+        906,
+        1290,
+        958
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "029_sub_l14b_ai",
+      "start_sec": 100.79,
+      "end_sec": 101.578,
+      "fade_sec": 0.1,
+      "png_path": "factory196/staging/EP03/overlays/029_sub_l14b_ai.png",
+      "type": "subtitle",
+      "lines": [
+        "Hãy cẩn thận."
+      ],
+      "bbox_px": [
+        815,
+        906,
+        1106,
+        958
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "030_sub_l14b_ai",
+      "start_sec": 101.578,
+      "end_sec": 108.73,
+      "fade_sec": 0.1,
+      "png_path": "factory196/staging/EP03/overlays/030_sub_l14b_ai.png",
+      "type": "subtitle",
+      "lines": [
+        "Tuyển vị trí kỹ thuật nhưng lại dẫn sang trang web lỗi chính tả và lồng ghép",
+        "thao tác tiền bạc là dấu hiệu bất thường."
+      ],
+      "bbox_px": [
+        234,
+        854,
+        1687,
+        958
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "031_sub_l15_hoang",
+      "start_sec": 109.67,
+      "end_sec": 114.25,
+      "fade_sec": 0.1,
+      "png_path": "factory196/staging/EP03/overlays/031_sub_l15_hoang.png",
+      "type": "subtitle",
+      "lines": [
+        "Ủa… họ chuyển 120.000đ hỗ trợ vòng 2 thật luôn?"
+      ],
+      "bbox_px": [
+        472,
+        906,
+        1449,
+        958
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "032_sub_l16_duc",
+      "start_sec": 114.57,
+      "end_sec": 117.206,
+      "fade_sec": 0.1,
+      "png_path": "factory196/staging/EP03/overlays/032_sub_l16_duc.png",
+      "type": "subtitle",
+      "lines": [
+        "Em nhận được trăm hai rồi anh Khải ơi!"
+      ],
+      "bbox_px": [
+        568,
+        906,
+        1353,
+        958
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "033_sub_l16_duc",
+      "start_sec": 117.206,
+      "end_sec": 119.287,
+      "fade_sec": 0.1,
+      "png_path": "factory196/staging/EP03/overlays/033_sub_l16_duc.png",
+      "type": "subtitle",
+      "lines": [
+        "Dự án lớn có khác, uy tín quá!"
+      ],
+      "bbox_px": [
+        659,
+        906,
+        1261,
+        958
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "034_sub_l17_khai",
+      "start_sec": 119.92,
+      "end_sec": 127.392,
+      "fade_sec": 0.1,
+      "png_path": "factory196/staging/EP03/overlays/034_sub_l17_khai.png",
+      "type": "subtitle",
+      "lines": [
+        "Để chứng minh khả năng quản lý và giao tiếp, mỗi bạn chuyển ngược",
+        "200.000đ vào tài khoản chỉ định."
+      ],
+      "bbox_px": [
+        286,
+        854,
+        1634,
+        958
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "035_sub_l18_khai",
+      "start_sec": 127.72,
+      "end_sec": 133.992,
+      "fade_sec": 0.1,
+      "png_path": "factory196/staging/EP03/overlays/035_sub_l18_khai.png",
+      "type": "subtitle",
+      "lines": [
+        "Tiền này được ghi nhận thành điểm trên hệ thống xã hội bảo an, rút ra bất",
+        "cứ lúc nào."
+      ],
+      "bbox_px": [
+        248,
+        854,
+        1673,
+        958
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "036_sub_l19_duc",
+      "start_sec": 134.31,
+      "end_sec": 137.579,
+      "fade_sec": 0.1,
+      "png_path": "factory196/staging/EP03/overlays/036_sub_l19_duc.png",
+      "type": "subtitle",
+      "lines": [
+        "Em chuyển 200.000đ xong rồi nha anh! Hệ thống cộng điểm liền luôn!"
+      ],
+      "bbox_px": [
+        289,
+        906,
+        1632,
+        958
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "037_sub_l20_hoang",
+      "start_sec": 138.22,
+      "end_sec": 145.64,
+      "fade_sec": 0.1,
+      "png_path": "factory196/staging/EP03/overlays/037_sub_l20_hoang.png",
+      "type": "subtitle",
+      "lines": [
+        "Trừ đi 120 ngàn mới nhận thì lỗ có 80 ngàn. Coi như mua vé xem kịch cũng",
+        "được mà…"
+      ],
+      "bbox_px": [
+        234,
+        854,
+        1686,
+        958
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "038_sub_l20b_hoang",
+      "start_sec": 146.28,
+      "end_sec": 152.9,
+      "fade_sec": 0.1,
+      "png_path": "factory196/staging/EP03/overlays/038_sub_l20b_hoang.png",
+      "type": "subtitle",
+      "lines": [
+        "Nhưng người ta chuyển cho mình 120.000đ thật rồi, giờ chuyển lại 200.000đ",
+        "tích điểm bảo an thì sao?"
+      ],
+      "bbox_px": [
+        228,
+        854,
+        1692,
+        958
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "039_sub_l20c_ai",
+      "start_sec": 153.22,
+      "end_sec": 159.68,
+      "fade_sec": 0.1,
+      "png_path": "factory196/staging/EP03/overlays/039_sub_l20c_ai.png",
+      "type": "subtitle",
+      "lines": [
+        "Việc họ chuyển trước 120.000đ không làm nó hợp pháp – mà càng khẳng",
+        "định là kịch bản dẫn dụ."
+      ],
+      "bbox_px": [
+        253,
+        854,
+        1667,
+        958
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "040_sub_l20d_ai",
+      "start_sec": 160.0,
+      "end_sec": 166.3,
+      "fade_sec": 0.1,
+      "png_path": "factory196/staging/EP03/overlays/040_sub_l20d_ai.png",
+      "type": "subtitle",
+      "lines": [
+        "Tuyệt đối không chuyển 200.000đ, không làm nhiệm vụ tiếp theo và không",
+        "cung cấp mã xác thực."
+      ],
+      "bbox_px": [
+        246,
+        854,
+        1675,
+        958
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "041_sub_l21_hoang",
+      "start_sec": 166.62,
+      "end_sec": 169.093,
+      "fade_sec": 0.1,
+      "png_path": "factory196/staging/EP03/overlays/041_sub_l21_hoang.png",
+      "type": "subtitle",
+      "lines": [
+        "Khoan… Mình đi ứng tuyển lập trình viên."
+      ],
+      "bbox_px": [
+        551,
+        906,
+        1369,
+        958
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "042_sub_l21_hoang",
+      "start_sec": 169.093,
+      "end_sec": 172.68,
+      "fade_sec": 0.1,
+      "png_path": "factory196/staging/EP03/overlays/042_sub_l21_hoang.png",
+      "type": "subtitle",
+      "lines": [
+        "Tại sao phải chuyển tiền để chứng minh khả năng giao tiếp?"
+      ],
+      "bbox_px": [
+        375,
+        906,
+        1545,
+        958
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "043_sub_l23_khai",
+      "start_sec": 173.0,
+      "end_sec": 173.705,
+      "fade_sec": 0.1,
+      "png_path": "factory196/staging/EP03/overlays/043_sub_l23_khai.png",
+      "type": "subtitle",
+      "lines": [
+        "Anh Hoàng!"
+      ],
+      "bbox_px": [
+        831,
+        906,
+        1089,
+        958
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "044_sub_l23_khai",
+      "start_sec": 173.705,
+      "end_sec": 176.312,
+      "fade_sec": 0.1,
+      "png_path": "factory196/staging/EP03/overlays/044_sub_l23_khai.png",
+      "type": "subtitle",
+      "lines": [
+        "Còn mười giây cuối, anh chuyển chưa?!"
+      ],
+      "bbox_px": [
+        563,
+        906,
+        1357,
+        958
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "045_sub_l24a_ha",
+      "start_sec": 178.67,
+      "end_sec": 182.138,
+      "fade_sec": 0.1,
+      "png_path": "factory196/staging/EP03/overlays/045_sub_l24a_ha.png",
+      "type": "subtitle",
+      "lines": [
+        "Anh Hoàng ơi sao thoát vậy, mạng bên anh bị lỗi hả?"
+      ],
+      "bbox_px": [
+        444,
+        906,
+        1476,
+        958
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "046_sub_l24a_ha",
+      "start_sec": 182.138,
+      "end_sec": 185.809,
+      "fade_sec": 0.1,
+      "png_path": "factory196/staging/EP03/overlays/046_sub_l24a_ha.png",
+      "type": "subtitle",
+      "lines": [
+        "Hồ sơ anh điểm cao nhất, cả nhóm đang đợi mình anh đó!"
+      ],
+      "bbox_px": [
+        396,
+        906,
+        1525,
+        958
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "047_sub_l24b_duc",
+      "start_sec": 186.45,
+      "end_sec": 194.242,
+      "fade_sec": 0.1,
+      "png_path": "factory196/staging/EP03/overlays/047_sub_l24b_duc.png",
+      "type": "subtitle",
+      "lines": [
+        "Anh Hoàng ơi sao thoát uổng vậy?! Em vừa chuyển 200.000đ xong, rút về",
+        "được luôn 380.000đ tiền thưởng nè!"
+      ],
+      "bbox_px": [
+        249,
+        854,
+        1671,
+        958
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "048_sub_l24c_khai",
+      "start_sec": 194.88,
+      "end_sec": 202.472,
+      "fade_sec": 0.1,
+      "png_path": "factory196/staging/EP03/overlays/048_sub_l24c_khai.png",
+      "type": "subtitle",
+      "lines": [
+        "Quay lại phòng họp gấp! Anh vừa được duyệt suất hợp đồng 3.000.000đ,",
+        "bỏ ngang là hủy toàn bộ quyền lợi!"
+      ],
+      "bbox_px": [
+        257,
+        854,
+        1663,
+        958
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "049_sub_l24d_hoang",
+      "start_sec": 202.79,
+      "end_sec": 209.109,
+      "fade_sec": 0.1,
+      "png_path": "factory196/staging/EP03/overlays/049_sub_l24d_hoang.png",
+      "type": "subtitle",
+      "lines": [
+        "Người hỏi thăm rớt mạng, người chỉ cách làm, người khoe rút được tiền,",
+        "người hứa hợp đồng lớn…"
+      ],
+      "bbox_px": [
+        253,
+        854,
+        1667,
+        958
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "050_sub_l24d_hoang",
+      "start_sec": 209.109,
+      "end_sec": 213.21,
+      "fade_sec": 0.1,
+      "png_path": "factory196/staging/EP03/overlays/050_sub_l24d_hoang.png",
+      "type": "subtitle",
+      "lines": [
+        "Cả một phòng họp chia vai diễn kịch chỉ để kéo mình quay lại."
+      ],
+      "bbox_px": [
+        360,
+        906,
+        1560,
+        958
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "051_sub_l24_hoang",
+      "start_sec": 213.53,
+      "end_sec": 214.91,
+      "fade_sec": 0.1,
+      "png_path": "factory196/staging/EP03/overlays/051_sub_l24_hoang.png",
+      "type": "subtitle",
+      "lines": [
+        "Nghỉ khỏe."
+      ],
+      "bbox_px": [
+        842,
+        906,
+        1078,
+        958
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "052_sub_l29_narr",
+      "start_sec": 216.05,
+      "end_sec": 220.322,
+      "fade_sec": 0.1,
+      "png_path": "factory196/staging/EP03/overlays/052_sub_l29_narr.png",
+      "type": "subtitle",
+      "lines": [
+        "Nhà tuyển dụng thật trả lương cho bạn, không bắt bạn nạp tiền."
+      ],
+      "bbox_px": [
+        345,
+        906,
+        1575,
+        958
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "053_sub_l29_narr",
+      "start_sec": 220.322,
+      "end_sec": 223.63,
+      "fade_sec": 0.1,
+      "png_path": "factory196/staging/EP03/overlays/053_sub_l29_narr.png",
+      "type": "subtitle",
+      "lines": [
+        "Thấy yêu cầu chuyển khoản: thoát phòng họp ngay."
+      ],
+      "bbox_px": [
+        456,
+        906,
+        1464,
+        958
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "054_sub_l30_tom",
+      "start_sec": 224.87,
+      "end_sec": 227.98,
+      "fade_sec": 0.1,
+      "png_path": "factory196/staging/EP03/overlays/054_sub_l30_tom.png",
+      "type": "subtitle",
+      "lines": [
+        "Woa, nay ba khao con ly bự luôn!"
+      ],
+      "bbox_px": [
+        628,
+        906,
+        1292,
+        958
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "055_sub_l30_tom",
+      "start_sec": 227.98,
+      "end_sec": 230.41,
+      "fade_sec": 0.1,
+      "png_path": "factory196/staging/EP03/overlays/055_sub_l30_tom.png",
+      "type": "subtitle",
+      "lines": [
+        "Giáng Sinh vui quá ba ơi!"
+      ],
+      "bbox_px": [
+        704,
+        906,
+        1216,
+        958
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "056_sub_l31_lan",
+      "start_sec": 230.73,
+      "end_sec": 234.59,
+      "fade_sec": 0.1,
+      "png_path": "factory196/staging/EP03/overlays/056_sub_l31_lan.png",
+      "type": "subtitle",
+      "lines": [
+        "Phỏng vấn sao rồi mà nay hào phóng dữ vậy anh?"
+      ],
+      "bbox_px": [
+        469,
+        906,
+        1452,
+        958
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "057_sub_l32_hoang",
+      "start_sec": 234.91,
+      "end_sec": 238.81,
+      "fade_sec": 0.1,
+      "png_path": "factory196/staging/EP03/overlays/057_sub_l32_hoang.png",
+      "type": "subtitle",
+      "lines": [
+        "Ba tự đánh rớt ở phút thứ 89 rồi."
+      ],
+      "bbox_px": [
+        635,
+        906,
+        1286,
+        958
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "058_sub_l32b_hoang",
+      "start_sec": 239.13,
+      "end_sec": 244.03,
+      "fade_sec": 0.1,
+      "png_path": "factory196/staging/EP03/overlays/058_sub_l32b_hoang.png",
+      "type": "subtitle",
+      "lines": [
+        "Mà bên đó… tài trợ nhà mình 120.000đ uống nước Giáng Sinh nè."
+      ],
+      "bbox_px": [
+        326,
+        906,
+        1594,
+        958
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "059_sub_l33_lan",
+      "start_sec": 244.35,
+      "end_sec": 247.57,
+      "fade_sec": 0.1,
+      "png_path": "factory196/staging/EP03/overlays/059_sub_l33_lan.png",
+      "type": "subtitle",
+      "lines": [
+        "Hả? Đi xin việc mà rớt vẫn được khao nước?"
+      ],
+      "bbox_px": [
+        517,
+        906,
+        1404,
+        958
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "060_sub_l34_hoang",
+      "start_sec": 247.89,
+      "end_sec": 248.875,
+      "fade_sec": 0.1,
+      "png_path": "factory196/staging/EP03/overlays/060_sub_l34_hoang.png",
+      "type": "subtitle",
+      "lines": [
+        "Tiền mồi đó em."
+      ],
+      "bbox_px": [
+        792,
+        906,
+        1128,
+        958
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "061_sub_l34_hoang",
+      "start_sec": 248.875,
+      "end_sec": 253.47,
+      "fade_sec": 0.1,
+      "png_path": "factory196/staging/EP03/overlays/061_sub_l34_hoang.png",
+      "type": "subtitle",
+      "lines": [
+        "Hên là anh không bỏ thêm hai trăm ngàn để coi tiếp vở kịch của tụi nó."
+      ],
+      "bbox_px": [
+        278,
+        906,
+        1642,
+        958
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "062_sub_l35_tn",
+      "start_sec": 254.41,
+      "end_sec": 260.07,
+      "fade_sec": 0.1,
+      "png_path": "factory196/staging/EP03/overlays/062_sub_l35_tn.png",
+      "type": "subtitle",
+      "lines": [
+        "Anh ơi… từ nãy 200 ngàn em chuyển thêm mấy đợt rồi mà sao vẫn chưa",
+        "rút về được vậy anh?"
+      ],
+      "bbox_px": [
+        259,
+        854,
+        1662,
+        958
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "063_sub_l36_khai_cafe",
+      "start_sec": 260.39,
+      "end_sec": 265.284,
+      "fade_sec": 0.1,
+      "png_path": "factory196/staging/EP03/overlays/063_sub_l36_khai_cafe.png",
+      "type": "subtitle",
+      "lines": [
+        "Chuyển thêm 7 triệu để hoàn tất hồ sơ đổi điểm bảo an thành tiền rút về em",
+        "nhé!"
+      ],
+      "bbox_px": [
+        233,
+        854,
+        1688,
+        958
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "064_sub_l37_narr",
+      "start_sec": 269.45,
+      "end_sec": 273.63,
+      "fade_sec": 0.1,
+      "png_path": "factory196/staging/EP03/overlays/064_sub_l37_narr.png",
+      "type": "subtitle",
+      "lines": [
+        "Bắt đầu từ 200.000đ tưởng như chẳng đáng bao nhiêu."
+      ],
+      "bbox_px": [
+        427,
+        906,
+        1494,
+        958
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "065_sub_l37b_narr",
+      "start_sec": 273.95,
+      "end_sec": 280.61,
+      "fade_sec": 0.1,
+      "png_path": "factory196/staging/EP03/overlays/065_sub_l37b_narr.png",
+      "type": "subtitle",
+      "lines": [
+        "Nhưng khi đã bước vào vòng xoáy tiếc tiền, không ai biết mình sẽ dừng lại",
+        "ở con số mấy triệu."
+      ],
+      "bbox_px": [
+        240,
+        854,
+        1681,
+        958
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "066_chat1",
+      "start_sec": 0.42,
+      "end_sec": 4.62,
+      "fade_sec": 0.15,
+      "png_path": "factory196/staging/EP03/overlays/066_chat1.png",
+      "type": "chat_bubble",
+      "text": "TK …4910  +120.000 VND",
+      "sender": "NGÂN HÀNG X",
+      "bbox_px": [
+        1309,
+        280,
+        1744,
+        422
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "067_chat2",
+      "start_sec": 1.22,
+      "end_sec": 7.02,
+      "fade_sec": 0.15,
+      "png_path": "factory196/staging/EP03/overlays/067_chat2.png",
+      "type": "chat_bubble",
+      "text": "Nhiệm vụ cuối: Chuyển 200.000 VND để kích hoạt điểm trên hệ thống xã hội bảo an (Còn 01:00).",
+      "sender": "HỆ THỐNG BẢO AN",
+      "bbox_px": [
+        180,
+        440,
+        888,
+        670
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "068_chat3",
+      "start_sec": 109.62,
+      "end_sec": 114.42,
+      "fade_sec": 0.15,
+      "png_path": "factory196/staging/EP03/overlays/068_chat3.png",
+      "type": "chat_bubble",
+      "text": "TK …4910  +120.000 VND (Hỗ trợ vòng 2)",
+      "sender": "NGÂN HÀNG X",
+      "bbox_px": [
+        1081,
+        340,
+        1744,
+        482
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "069_chat4",
+      "start_sec": 146.38,
+      "end_sec": 151.88,
+      "fade_sec": 0.15,
+      "png_path": "factory196/staging/EP03/overlays/069_chat4.png",
+      "type": "chat_bubble",
+      "text": "Nhưng người ta đã chuyển cho mình 120 ngàn thật rồi, giờ chuyển lại 200 ngàn để tích điểm bảo an thì sao?",
+      "sender": "HOÀNG → TRỢ LÝ AI",
+      "bbox_px": [
+        1036,
+        280,
+        1744,
+        510
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "070_chat5",
+      "start_sec": 153.32,
+      "end_sec": 161.82,
+      "fade_sec": 0.15,
+      "png_path": "factory196/staging/EP03/overlays/070_chat5.png",
+      "type": "chat_bubble",
+      "text": "Chuyển trước 120k không làm nó hợp pháp – mà khẳng định là kịch bản dẫn dụ. Tuyệt đối không chuyển 200k, không làm nhiệm vụ tiếp theo.",
+      "sender": "TRỢ LÝ AI",
+      "bbox_px": [
+        180,
+        450,
+        894,
+        724
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "071_chat6",
+      "start_sec": 178.82,
+      "end_sec": 185.62,
+      "fade_sec": 0.15,
+      "png_path": "factory196/staging/EP03/overlays/071_chat6.png",
+      "type": "chat_bubble",
+      "text": "Anh Hoàng ơi sao thoát vậy, mạng bên anh bị lỗi hả? Hồ sơ anh điểm cao nhất, cả nhóm đang đợi mình anh đó!",
+      "sender": "NHÂN SỰ HÀ",
+      "bbox_px": [
+        180,
+        260,
+        899,
+        490
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "072_chat7",
+      "start_sec": 186.55,
+      "end_sec": 194.05,
+      "fade_sec": 0.15,
+      "png_path": "factory196/staging/EP03/overlays/072_chat7.png",
+      "type": "chat_bubble",
+      "text": "Ông ơi sao thoát ngang vậy? Bên ông bị vướng chỗ điền thông tin bảo an hả, cần tui chỉ cách làm không?",
+      "sender": "ỨNG VIÊN 07",
+      "bbox_px": [
+        1060,
+        240,
+        1744,
+        470
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "073_chat8",
+      "start_sec": 187.05,
+      "end_sec": 194.25,
+      "fade_sec": 0.15,
+      "png_path": "factory196/staging/EP03/overlays/073_chat8.png",
+      "type": "chat_bubble",
+      "text": "Em vừa chuyển 200.000đ xong, rút về được luôn 380.000đ tiền thưởng nè! Vô lại lẹ đi anh!",
+      "sender": "ỨNG VIÊN 04 (ĐỨC)",
+      "bbox_px": [
+        180,
+        430,
+        903,
+        616
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "074_chat9",
+      "start_sec": 195.08,
+      "end_sec": 201.88,
+      "fade_sec": 0.15,
+      "png_path": "factory196/staging/EP03/overlays/074_chat9.png",
+      "type": "chat_bubble",
+      "text": "Quay lại phòng họp gấp! Anh vừa được duyệt suất hợp đồng 3.000.000 VND, bỏ ngang là hủy toàn bộ quyền lợi!",
+      "sender": "QUẢN LÝ KHẢI",
+      "bbox_px": [
+        180,
+        320,
+        895,
+        550
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "075_chat10",
+      "start_sec": 266.03,
+      "end_sec": 269.63,
+      "fade_sec": 0.15,
+      "png_path": "factory196/staging/EP03/overlays/075_chat10.png",
+      "type": "chat_bubble",
+      "text": "Số tiền chuyển: 7.000.000 VND  ·  Nội dung: Đổi điểm bảo an rút gốc",
+      "sender": "CHUYỂN KHOẢN",
+      "bbox_px": [
+        180,
+        340,
+        858,
+        526
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "076_callout1",
+      "start_sec": 92.61,
+      "end_sec": 100.11,
+      "fade_sec": 0.2,
+      "png_path": "factory196/staging/EP03/overlays/076_callout1.png",
+      "type": "callout",
+      "style": "warning",
+      "text": "ĐỔI SANG “QUẢN LÝ DỰ ÁN”  ·  LÝ GIẢI “TEST TƯƠNG TÁC TÀI CHÍNH THẬT”",
+      "bbox_px": [
+        351,
+        99,
+        1569,
+        161
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "077_callout2",
+      "start_sec": 166.72,
+      "end_sec": 174.22,
+      "fade_sec": 0.2,
+      "png_path": "factory196/staging/EP03/overlays/077_callout2.png",
+      "type": "callout",
+      "style": "danger",
+      "text": "TÔI ĐI XIN VIỆC. TẠI SAO TÔI PHẢI CHUYỂN TIỀN?",
+      "bbox_px": [
+        546,
+        99,
+        1375,
+        161
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "078_callout3",
+      "start_sec": 177.05,
+      "end_sec": 180.25,
+      "fade_sec": 0.2,
+      "png_path": "factory196/staging/EP03/overlays/078_callout3.png",
+      "type": "callout",
+      "style": "safe",
+      "text": "PHÚT THỨ 89  ·  BẤM “RỜI CUỘC HỌP”",
+      "bbox_px": [
+        631,
+        99,
+        1289,
+        161
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "079_callout4",
+      "start_sec": 202.89,
+      "end_sec": 211.69,
+      "fade_sec": 0.2,
+      "png_path": "factory196/staging/EP03/overlays/079_callout4.png",
+      "type": "callout",
+      "style": "warning",
+      "text": "HỎI THĂM MẠNG  ·  CHỈ CÁCH LÀM  ·  KHOE TIỀN THƯỞNG  ·  HỨA HỢP ĐỒNG LỚN",
+      "bbox_px": [
+        324,
+        99,
+        1597,
+        161
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "080_callout5",
+      "start_sec": 276.83,
+      "end_sec": 282.83,
+      "fade_sec": 0.2,
+      "png_path": "factory196/staging/EP03/overlays/080_callout5.png",
+      "type": "callout",
+      "style": "danger",
+      "text": "TÔI ĐI XIN VIỆC. TẠI SAO TÔI PHẢI CHUYỂN TIỀN?",
+      "bbox_px": [
+        546,
+        369,
+        1375,
+        431
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "081_callout6",
+      "start_sec": 277.83,
+      "end_sec": 282.83,
+      "fade_sec": 0.2,
+      "png_path": "factory196/staging/EP03/overlays/081_callout6.png",
+      "type": "callout",
+      "style": "safe",
+      "text": "120.000 đồng – Một khoản tiền nhỏ. Một bài học không nhỏ.",
+      "bbox_px": [
+        488,
+        509,
+        1433,
+        571
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "082_redflags_0",
+      "start_sec": 215.85,
+      "end_sec": 216.75,
+      "fade_sec": 0.25,
+      "png_path": "factory196/staging/EP03/overlays/082_redflags_0.png",
+      "type": "red_flags",
+      "title": "NHỚ KỸ – 3 DẤU HIỆU BẪY TUYỂN DỤNG ONLINE",
+      "lines": [
+        "ĐỔI NGƯỜI, LÁI CHỦ ĐỀ: Tuyển chuyên môn nhưng đẩy sang \"Quản lý dự án\" và phòng họp toàn quân xanh",
+        "THẢ TIỀN MỒI THẬT: Chuyển trước vài chục đến vài trăm ngàn để xóa nghi ngờ, kích tâm lý \"thử xem sao\"",
+        "ĐÒI NỘP TIỀN ĐỔI ĐIỂM: Bắt chuyển khoản để \"chứng minh năng lực\", \"tích điểm bảo an\" rồi nâng dần số tiền để rút gốc",
+        "Nhà tuyển dụng thật trả lương cho bạn, không bắt bạn nạp tiền · Thấy yêu cầu chuyển khoản: Rời cuộc họp & Chặn ngay!"
+      ],
+      "bbox_px": [
+        270,
+        268,
+        1650,
+        808
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "083_redflags_1",
+      "start_sec": 216.75,
+      "end_sec": 217.65,
+      "fade_sec": 0.0,
+      "png_path": "factory196/staging/EP03/overlays/083_redflags_1.png",
+      "type": "red_flags",
+      "title": "NHỚ KỸ – 3 DẤU HIỆU BẪY TUYỂN DỤNG ONLINE",
+      "lines": [
+        "ĐỔI NGƯỜI, LÁI CHỦ ĐỀ: Tuyển chuyên môn nhưng đẩy sang \"Quản lý dự án\" và phòng họp toàn quân xanh",
+        "THẢ TIỀN MỒI THẬT: Chuyển trước vài chục đến vài trăm ngàn để xóa nghi ngờ, kích tâm lý \"thử xem sao\"",
+        "ĐÒI NỘP TIỀN ĐỔI ĐIỂM: Bắt chuyển khoản để \"chứng minh năng lực\", \"tích điểm bảo an\" rồi nâng dần số tiền để rút gốc",
+        "Nhà tuyển dụng thật trả lương cho bạn, không bắt bạn nạp tiền · Thấy yêu cầu chuyển khoản: Rời cuộc họp & Chặn ngay!"
+      ],
+      "bbox_px": [
+        270,
+        268,
+        1650,
+        808
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "084_redflags_2",
+      "start_sec": 217.65,
+      "end_sec": 218.55,
+      "fade_sec": 0.0,
+      "png_path": "factory196/staging/EP03/overlays/084_redflags_2.png",
+      "type": "red_flags",
+      "title": "NHỚ KỸ – 3 DẤU HIỆU BẪY TUYỂN DỤNG ONLINE",
+      "lines": [
+        "ĐỔI NGƯỜI, LÁI CHỦ ĐỀ: Tuyển chuyên môn nhưng đẩy sang \"Quản lý dự án\" và phòng họp toàn quân xanh",
+        "THẢ TIỀN MỒI THẬT: Chuyển trước vài chục đến vài trăm ngàn để xóa nghi ngờ, kích tâm lý \"thử xem sao\"",
+        "ĐÒI NỘP TIỀN ĐỔI ĐIỂM: Bắt chuyển khoản để \"chứng minh năng lực\", \"tích điểm bảo an\" rồi nâng dần số tiền để rút gốc",
+        "Nhà tuyển dụng thật trả lương cho bạn, không bắt bạn nạp tiền · Thấy yêu cầu chuyển khoản: Rời cuộc họp & Chặn ngay!"
+      ],
+      "bbox_px": [
+        270,
+        268,
+        1650,
+        808
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "085_redflags_3",
+      "start_sec": 218.55,
+      "end_sec": 224.35,
+      "fade_sec": 0.0,
+      "png_path": "factory196/staging/EP03/overlays/085_redflags_3.png",
+      "type": "red_flags",
+      "title": "NHỚ KỸ – 3 DẤU HIỆU BẪY TUYỂN DỤNG ONLINE",
+      "lines": [
+        "ĐỔI NGƯỜI, LÁI CHỦ ĐỀ: Tuyển chuyên môn nhưng đẩy sang \"Quản lý dự án\" và phòng họp toàn quân xanh",
+        "THẢ TIỀN MỒI THẬT: Chuyển trước vài chục đến vài trăm ngàn để xóa nghi ngờ, kích tâm lý \"thử xem sao\"",
+        "ĐÒI NỘP TIỀN ĐỔI ĐIỂM: Bắt chuyển khoản để \"chứng minh năng lực\", \"tích điểm bảo an\" rồi nâng dần số tiền để rút gốc",
+        "Nhà tuyển dụng thật trả lương cho bạn, không bắt bạn nạp tiền · Thấy yêu cầu chuyển khoản: Rời cuộc họp & Chặn ngay!"
+      ],
+      "bbox_px": [
+        270,
+        268,
+        1650,
+        808
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "086_disclaimer",
+      "start_sec": 283.65,
+      "end_sec": 290.15,
+      "fade_sec": 0.25,
+      "png_path": "factory196/staging/EP03/overlays/086_disclaimer.png",
+      "type": "disclaimer",
+      "text": "Tình huống được dựng lại từ chất liệu có thật nhằm cảnh báo cộng đồng; nhân vật, tổ chức và giao diện đều là hư cấu. Nhà tuyển dụng chân chính không bao giờ yêu cầu ứng viên chuyển tiền để làm nhiệm vụ hay kích hoạt điểm hệ thống.",
+      "bbox_px": [
+        380,
+        758,
+        1540,
+        964
+      ],
+      "safe_zone_compliant": true
+    }
+  ],
+  "qa_preview_frames": [
+    {
+      "timestamp_sec": 1.4,
+      "clean": "factory196/staging/EP03/preview_frames/qa_01_40s_clean.jpg",
+      "safezone": "factory196/staging/EP03/preview_frames/qa_01_40s_safezone.jpg"
+    },
+    {
+      "timestamp_sec": 4.5,
+      "clean": "factory196/staging/EP03/preview_frames/qa_04_50s_clean.jpg",
+      "safezone": "factory196/staging/EP03/preview_frames/qa_04_50s_safezone.jpg"
+    },
+    {
+      "timestamp_sec": 20.05,
+      "clean": "factory196/staging/EP03/preview_frames/qa_20_05s_clean.jpg",
+      "safezone": "factory196/staging/EP03/preview_frames/qa_20_05s_safezone.jpg"
+    },
+    {
+      "timestamp_sec": 38.1,
+      "clean": "factory196/staging/EP03/preview_frames/qa_38_10s_clean.jpg",
+      "safezone": "factory196/staging/EP03/preview_frames/qa_38_10s_safezone.jpg"
+    },
+    {
+      "timestamp_sec": 47.98,
+      "clean": "factory196/staging/EP03/preview_frames/qa_47_98s_clean.jpg",
+      "safezone": "factory196/staging/EP03/preview_frames/qa_47_98s_safezone.jpg"
+    },
+    {
+      "timestamp_sec": 56.18,
+      "clean": "factory196/staging/EP03/preview_frames/qa_56_18s_clean.jpg",
+      "safezone": "factory196/staging/EP03/preview_frames/qa_56_18s_safezone.jpg"
+    },
+    {
+      "timestamp_sec": 65.47,
+      "clean": "factory196/staging/EP03/preview_frames/qa_65_47s_clean.jpg",
+      "safezone": "factory196/staging/EP03/preview_frames/qa_65_47s_safezone.jpg"
+    },
+    {
+      "timestamp_sec": 80.78,
+      "clean": "factory196/staging/EP03/preview_frames/qa_80_78s_clean.jpg",
+      "safezone": "factory196/staging/EP03/preview_frames/qa_80_78s_safezone.jpg"
+    },
+    {
+      "timestamp_sec": 100.57,
+      "clean": "factory196/staging/EP03/preview_frames/qa_100_57s_clean.jpg",
+      "safezone": "factory196/staging/EP03/preview_frames/qa_100_57s_safezone.jpg"
+    },
+    {
+      "timestamp_sec": 114.32,
+      "clean": "factory196/staging/EP03/preview_frames/qa_114_32s_clean.jpg",
+      "safezone": "factory196/staging/EP03/preview_frames/qa_114_32s_safezone.jpg"
+    },
+    {
+      "timestamp_sec": 128.75,
+      "clean": "factory196/staging/EP03/preview_frames/qa_128_75s_clean.jpg",
+      "safezone": "factory196/staging/EP03/preview_frames/qa_128_75s_safezone.jpg"
+    },
+    {
+      "timestamp_sec": 141.93,
+      "clean": "factory196/staging/EP03/preview_frames/qa_141_93s_clean.jpg",
+      "safezone": "factory196/staging/EP03/preview_frames/qa_141_93s_safezone.jpg"
+    },
+    {
+      "timestamp_sec": 161.3,
+      "clean": "factory196/staging/EP03/preview_frames/qa_161_30s_clean.jpg",
+      "safezone": "factory196/staging/EP03/preview_frames/qa_161_30s_safezone.jpg"
+    },
+    {
+      "timestamp_sec": 177.49,
+      "clean": "factory196/staging/EP03/preview_frames/qa_177_49s_clean.jpg",
+      "safezone": "factory196/staging/EP03/preview_frames/qa_177_49s_safezone.jpg"
+    },
+    {
+      "timestamp_sec": 182.24,
+      "clean": "factory196/staging/EP03/preview_frames/qa_182_24s_clean.jpg",
+      "safezone": "factory196/staging/EP03/preview_frames/qa_182_24s_safezone.jpg"
+    },
+    {
+      "timestamp_sec": 190.34,
+      "clean": "factory196/staging/EP03/preview_frames/qa_190_34s_clean.jpg",
+      "safezone": "factory196/staging/EP03/preview_frames/qa_190_34s_safezone.jpg"
+    },
+    {
+      "timestamp_sec": 205.05,
+      "clean": "factory196/staging/EP03/preview_frames/qa_205_05s_clean.jpg",
+      "safezone": "factory196/staging/EP03/preview_frames/qa_205_05s_safezone.jpg"
+    },
+    {
+      "timestamp_sec": 219.94,
+      "clean": "factory196/staging/EP03/preview_frames/qa_219_94s_clean.jpg",
+      "safezone": "factory196/staging/EP03/preview_frames/qa_219_94s_safezone.jpg"
+    },
+    {
+      "timestamp_sec": 223.85,
+      "clean": "factory196/staging/EP03/preview_frames/qa_223_85s_clean.jpg",
+      "safezone": "factory196/staging/EP03/preview_frames/qa_223_85s_safezone.jpg"
+    },
+    {
+      "timestamp_sec": 239.22,
+      "clean": "factory196/staging/EP03/preview_frames/qa_239_22s_clean.jpg",
+      "safezone": "factory196/staging/EP03/preview_frames/qa_239_22s_safezone.jpg"
+    },
+    {
+      "timestamp_sec": 259.85,
+      "clean": "factory196/staging/EP03/preview_frames/qa_259_85s_clean.jpg",
+      "safezone": "factory196/staging/EP03/preview_frames/qa_259_85s_safezone.jpg"
+    },
+    {
+      "timestamp_sec": 267.17,
+      "clean": "factory196/staging/EP03/preview_frames/qa_267_17s_clean.jpg",
+      "safezone": "factory196/staging/EP03/preview_frames/qa_267_17s_safezone.jpg"
+    },
+    {
+      "timestamp_sec": 276.03,
+      "clean": "factory196/staging/EP03/preview_frames/qa_276_03s_clean.jpg",
+      "safezone": "factory196/staging/EP03/preview_frames/qa_276_03s_safezone.jpg"
+    },
+    {
+      "timestamp_sec": 286.74,
+      "clean": "factory196/staging/EP03/preview_frames/qa_286_74s_clean.jpg",
+      "safezone": "factory196/staging/EP03/preview_frames/qa_286_74s_safezone.jpg"
+    },
+    {
+      "timestamp_sec": 286.9,
+      "clean": "factory196/staging/EP03/preview_frames/qa_286_90s_clean.jpg",
+      "safezone": "factory196/staging/EP03/preview_frames/qa_286_90s_safezone.jpg"
+    }
+  ]
+}
