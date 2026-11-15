@@ -1,598 +1,592 @@
 # -*- coding: utf-8 -*-
 """
-Script dựng & tự động kiểm tra bản nháp `factory196/materialAndDraft/EP04/episode.json`.
-Khi quay lại sản xuất thật:
-  1. Sinh 16 ảnh `assets/c01.jpg .. c16.jpg` theo `IMAGE_PROMPTS.md`.
-  2. Chạy `python factory196/_engine/run.py gate0 EP04` -> `gate EP04 2` (TTS thật).
-  3. Cập nhật lại mốc thời gian theo độ dài WAV thật rồi chạy Gate 3 -> Gate 5 (Staging).
+Trình biên dịch `factory196/materialAndDraft/EP04/episode.json` – Tập EP04:
+"300 triệu gom vé hộ & Bí mật của Chị Hai" (16:9 Long-form).
+
+Tự động đọc độ dài WAV thật trong `audio/tts/` (nếu đã chạy Gate 2) để căn khớp
+100% thời lượng từng câu và từng cảnh (không dùng atempo/asetrate).
 """
 from __future__ import annotations
 
 import json
-import re
-import sys
+import wave
 from pathlib import Path
 
-EP_DIR = Path(__file__).resolve().parents[1]
-ROOT = EP_DIR.parents[2]
-sys.path.insert(0, str(ROOT / "03_ENGINE"))
+HERE = Path(__file__).resolve().parent
+EP = HERE.parent
+TTS = EP / "audio" / "tts"
+OUT = EP / "episode.json"
 
-from core import Episode, save_json  # noqa: E402
-from cli import gate0  # noqa: E402
-from gate5_render_audit import ACCOUNT_RE, PHONE_RE, URL_RE, _contains  # noqa: E402
+SEC_PER_WORD = 0.34
+LINE_BASE = 0.90
+GAP = 0.34
+SCENE_LEAD = 0.35
+WINDOW_MARGIN = 1.6
 
-STYLES = {
-    "na": (
-        "Giọng cô gái trẻ miền Nam Sài Gòn 23 tuổi, phát âm chuẩn phương ngữ miền Nam xuyên suốt mọi câu, "
-        "giữ cố định một âm sắc trong trẻo tự nhiên đời thực, rõ chữ, nhiệt tình chân thật ở đầu phim "
-        "và nghẹn giọng lo lắng khi gặp biến cố, tuyệt đối không gào khóc cải lương."
+
+def wav_dur(lid: str) -> float | None:
+    p = TTS / f"{lid}.wav"
+    if not p.is_file():
+        return None
+    with wave.open(str(p), "rb") as wf:
+        return round(wf.getnframes() / wf.getframerate(), 3)
+
+
+real = {p.stem: wav_dur(p.stem) for p in TTS.glob("*.wav")} if TTS.is_dir() else {}
+real = {k: v for k, v in real.items() if v}
+
+SPK = {
+    "NA": dict(
+        speaker="be_na",
+        voice="Leda",
+        label_short="NA",
+        speaker_label="Na – trưởng nhóm fan 23 tuổi",
+        base=(
+            "Giọng cô gái trẻ miền Nam Sài Gòn 23 tuổi, phát âm chuẩn phương ngữ miền Nam xuyên suốt mọi câu, "
+            "giữ cố định một âm sắc trong trẻo tự nhiên đời thực, rõ chữ, tuyệt đối không gào khóc cải lương"
+        ),
     ),
-    "chi_hai": (
-        "Giọng phụ nữ miền Nam Sài Gòn 35 tuổi, phát âm chuẩn phương ngữ miền Nam xuyên suốt mọi câu, "
-        "giữ cố định một âm sắc sắc sảo, điềm tĩnh, dứt khoát và ấm áp khi bảo vệ em trong nhà."
+    "CH": dict(
+        speaker="chi_ba",
+        voice="Kore",
+        label_short="CHỊ HAI",
+        speaker_label="Chị Hai – chị ruột của Na, 35 tuổi",
+        base=(
+            "Giọng phụ nữ miền Nam Sài Gòn 35 tuổi, phát âm chuẩn phương ngữ miền Nam xuyên suốt mọi câu, "
+            "giữ cố định một âm sắc sắc sảo, điềm tĩnh, dứt khoát và lạnh lùng"
+        ),
     ),
-    "anh_hai": (
-        "Giọng nam miền Nam Sài Gòn 35 tuổi, phát âm chuẩn phương ngữ miền Nam xuyên suốt mọi câu, "
-        "giữ cố định một âm sắc trầm ấm, điềm tĩnh, thẳng gọn, chững chạc."
+    "TR": dict(
+        speaker="ke_ngot_ngao_nu",
+        voice="Aoede",
+        label_short="TRANG",
+        speaker_label="Trang – giả danh quản lý Kênh Hậu Trường",
+        base=(
+            "Giọng nữ miền Nam Sài Gòn 30 tuổi, phát âm chuẩn phương ngữ miền Nam xuyên suốt mọi câu, "
+            "giữ cố định một âm sắc êm mượt, lịch thiệp, thân tình kiểu dân sự kiện chuyên nghiệp"
+        ),
     ),
-    "tung": (
-        "Giọng nam thanh niên miền Nam Sài Gòn 22 tuổi, phát âm chuẩn phương ngữ miền Nam xuyên suốt mọi câu, "
-        "giữ cố định một âm sắc trẻ trung tông sáng, nhịp nhanh gọn, rõ chữ."
+    "TR_P": dict(
+        speaker="ke_ngot_ngao_nu",
+        voice="Aoede",
+        af="phone",
+        label_short="TRANG",
+        speaker_label="Trang – giả danh quản lý Kênh Hậu Trường (qua điện thoại)",
+        base=(
+            "Giọng nữ miền Nam Sài Gòn 30 tuổi, phát âm chuẩn phương ngữ miền Nam xuyên suốt mọi câu, "
+            "êm mượt, chuyên nghiệp, dẫn dụ khéo léo qua điện thoại"
+        ),
     ),
-    "trang": (
-        "Giọng nữ miền Nam Sài Gòn 30 tuổi, phát âm chuẩn phương ngữ miền Nam xuyên suốt mọi câu, "
-        "giữ cố định một âm sắc êm mượt, lịch thiệp, thân tình như người làm truyền thông sự kiện chuyên nghiệp."
+    "FNU": dict(
+        speaker="chi_tu",
+        voice="Zephyr",
+        af="phone",
+        label_short="FAN NỮ",
+        speaker_label="Thành viên nữ trong nhóm fan",
+        base=(
+            "Giọng cô gái trẻ miền Nam Sài Gòn 21 tuổi, phát âm chuẩn phương ngữ miền Nam, "
+            "tự nhiên đời thực, nói qua tin nhắn thoại"
+        ),
     ),
-    "boc_tran": (
-        "Giọng nam trung niên miền Nam Sài Gòn, điềm tĩnh, trầm ấm, rõ chữ, khách quan và sắc bén "
-        "khi giải phẫu cơ chế tâm lý, nhịp vừa phải, nhấn từ khóa quan trọng."
+    "FNAM": dict(
+        speaker="thang_tun",
+        voice="Puck",
+        label_short="FAN NAM",
+        speaker_label="Thành viên nam trong nhóm fan",
+        base=(
+            "Giọng nam thanh niên miền Nam Sài Gòn 22 tuổi, phát âm chuẩn phương ngữ miền Nam, "
+            "tông sáng, nhịp nhanh, rõ chữ"
+        ),
     ),
+    "FNAM_P": dict(
+        speaker="thang_tun",
+        voice="Puck",
+        af="phone",
+        label_short="FAN NAM",
+        speaker_label="Thành viên nam trong nhóm fan (qua tin nhắn thoại)",
+        base=(
+            "Giọng nam thanh niên miền Nam Sài Gòn 22 tuổi, phát âm chuẩn phương ngữ miền Nam, "
+            "tông sáng, nhịp nhanh, rõ chữ"
+        ),
+    ),
+    "KENH": dict(
+        speaker="anh_hai",
+        voice="Orus",
+        af="phone",
+        label_short="KÊNH HẬU TRƯỜNG",
+        speaker_label="Đại diện Kênh Hậu Trường thật",
+        base=(
+            "Giọng nam miền Nam Sài Gòn 35 tuổi, phát âm chuẩn phương ngữ miền Nam, "
+            "trầm tĩnh, rõ chữ, dứt khoát và nghiêm túc qua điện thoại"
+        ),
+    ),
+    "SEC": dict(
+        speaker="ke_gia_danh",
+        voice="Fenrir",
+        af="phone",
+        label_short="ĐẦU DÂY BÍ ẨN",
+        speaker_label="Giọng nam bí ẩn gọi cho Chị Hai",
+        base=(
+            "Giọng nam miền Nam Sài Gòn 40 tuổi, phát âm chuẩn phương ngữ miền Nam, "
+            "trầm thấp, kín kẽ, bí ẩn qua điện thoại"
+        ),
+    ),
+    "N": dict(speaker="nguoi_boc_tran"),
 }
 
 
-def line(
-    lid: str,
-    role: str,
-    start: float,
-    window: float,
-    text: str,
-    *,
-    phone: bool = False,
-) -> dict:
-    mapping = {
-        "na": ("be_na", "Leda", "NA", "Na", STYLES["na"]),
-        "chi_hai": ("chi_ba", "Kore", "CHỊ HAI", "Chị Hai", STYLES["chi_hai"]),
-        "anh_hai": ("anh_hai", "Orus", "ANH HAI", "Anh Hai", STYLES["anh_hai"]),
-        "tung": ("thang_tun", "Puck", "TÙNG", "Tùng", STYLES["tung"]),
-        "trang": ("ke_ngot_ngao_nu", "Aoede", "TRANG", "Chị Trang", STYLES["trang"]),
-        "boc_tran": ("nguoi_boc_tran", "Charon", "BÓC TRẦN", "Người Bóc Trần", STYLES["boc_tran"]),
-    }
-    spk, voice, short, label, style = mapping[role]
-    d = {
-        "id": lid,
-        "speaker": spk,
-        "model": "gemini-3.8-flash-tts",
-        "voice": voice,
-        "label_short": short,
-        "speaker_label": label,
-        "style": style,
-        "start": round(start, 2),
-        "window": round(window, 2),
-        "text": text,
-    }
-    if phone:
-        d["af"] = "phone"
-    return d
+def mo(kind: str) -> dict:
+    return {
+        "tense": {"scale": [1.04, 1.14], "focus": [[0.5, 0.5], [0.48, 0.45]], "wobble": "tense"},
+        "calm": {"scale": [1.02, 1.09], "focus": [[0.5, 0.5], [0.5, 0.47]], "wobble": "calm"},
+        "hand": {"scale": [1.02, 1.10], "focus": [[0.46, 0.48], [0.54, 0.46]], "wobble": "handheld"},
+        "push": {"scale": [1.0, 1.16], "focus": [[0.5, 0.5], [0.5, 0.45]], "wobble": "tense"},
+        "pull": {"scale": [1.12, 1.02], "focus": [[0.5, 0.46], [0.5, 0.5]], "wobble": "calm"},
+        "still": {"scale": [1.0, 1.05], "focus": [[0.5, 0.5], [0.5, 0.5]], "wobble": "none"},
+    }[kind]
 
 
-def build() -> dict:
-    duration = 285.0
-    scenes = [
-        {
-            "id": "s01_hook_panic",
-            "image": "assets/c01.jpg",
-            "start": 0.0,
-            "end": 9.0,
-            "motion": {"scale": [1.04, 1.14], "focus": [[0.5, 0.5], [0.52, 0.46]], "wobble": "tense"},
-            "shakes": [{"at": 0.45, "dur": 0.4, "amp": 18}],
-        },
-        {
-            "id": "s02_hook_accused",
-            "image": "assets/c02.jpg",
-            "start": 9.0,
-            "end": 20.0,
-            "motion": {"scale": [1.02, 1.12], "focus": [[0.48, 0.5], [0.52, 0.46]], "wobble": "tense"},
-            "transition_in": {"type": "flash_white", "dur": 0.28},
-        },
-        {
-            "id": "s03_booth_heat",
-            "image": "assets/c03.jpg",
-            "start": 20.0,
-            "end": 33.0,
-            "motion": {"scale": [1.02, 1.09], "focus": [[0.5, 0.5], [0.5, 0.47]], "wobble": "calm"},
-            "transition_in": {"type": "fade_black", "dur": 0.45},
-        },
-        {
-            "id": "s04_trang_arrival",
-            "image": "assets/c04.jpg",
-            "start": 33.0,
-            "end": 55.5,
-            "motion": {"scale": [1.02, 1.10], "focus": [[0.52, 0.5], [0.48, 0.47]], "wobble": "calm"},
-            "transition_in": {"type": "dissolve", "dur": 0.4},
-        },
-        {
-            "id": "s05_sold_out_bait",
-            "image": "assets/c05.jpg",
-            "start": 55.5,
-            "end": 74.0,
-            "motion": {"scale": [1.03, 1.11], "focus": [[0.48, 0.5], [0.52, 0.46]], "wobble": "handheld"},
-            "transition_in": {"type": "fade_black", "dur": 0.4},
-        },
-        {
-            "id": "s06_collecting_orders",
-            "image": "assets/c06.jpg",
-            "start": 74.0,
-            "end": 93.0,
-            "motion": {"scale": [1.02, 1.09], "focus": [[0.5, 0.5], [0.5, 0.46]], "wobble": "calm"},
-            "transition_in": {"type": "fade_black", "dur": 0.4},
-        },
-        {
-            "id": "s07_chi_hai_warning",
-            "image": "assets/c07.jpg",
-            "start": 93.0,
-            "end": 117.5,
-            "motion": {"scale": [1.02, 1.10], "focus": [[0.46, 0.48], [0.54, 0.46]], "wobble": "handheld"},
-            "transition_in": {"type": "dissolve", "dur": 0.35},
-        },
-        {
-            "id": "s08_transfer_sent",
-            "image": "assets/c08.jpg",
-            "start": 117.5,
-            "end": 128.0,
-            "motion": {"scale": [1.0, 1.14], "focus": [[0.5, 0.5], [0.5, 0.45]], "wobble": "tense"},
-            "transition_in": {"type": "dissolve", "dur": 0.3},
-        },
-        {
-            "id": "s09_delay_excuse",
-            "image": "assets/c09.jpg",
-            "start": 128.0,
-            "end": 141.5,
-            "motion": {"scale": [1.02, 1.10], "focus": [[0.5, 0.5], [0.48, 0.46]], "wobble": "calm"},
-            "transition_in": {"type": "fade_black", "dur": 0.4},
-        },
-        {
-            "id": "s10_blocked_shock",
-            "image": "assets/c10.jpg",
-            "start": 141.5,
-            "end": 152.5,
-            "motion": {"scale": [1.04, 1.15], "focus": [[0.5, 0.5], [0.5, 0.44]], "wobble": "tense"},
-            "transition_in": {"type": "flash_red", "dur": 0.28},
-            "shakes": [{"at": 141.8, "dur": 0.4, "amp": 20}],
-        },
-        {
-            "id": "s11_double_denial_tung",
-            "image": "assets/c11.jpg",
-            "start": 152.5,
-            "end": 173.5,
-            "motion": {"scale": [1.03, 1.12], "focus": [[0.52, 0.48], [0.48, 0.46]], "wobble": "handheld"},
-            "transition_in": {"type": "dissolve", "dur": 0.35},
-        },
-        {
-            "id": "s12_chi_hai_stops_lock",
-            "image": "assets/c12.jpg",
-            "start": 173.5,
-            "end": 186.0,
-            "motion": {"scale": [1.12, 1.03], "focus": [[0.5, 0.46], [0.5, 0.5]], "wobble": "tense"},
-            "transition_in": {"type": "flash_white", "dur": 0.28},
-            "shakes": [{"at": 179.6, "dur": 0.38, "amp": 22}],
-        },
-        {
-            "id": "s13_compile_files",
-            "image": "assets/c13.jpg",
-            "start": 186.0,
-            "end": 210.0,
-            "motion": {"scale": [1.02, 1.08], "focus": [[0.5, 0.5], [0.5, 0.47]], "wobble": "calm"},
-            "transition_in": {"type": "fade_black", "dur": 0.4},
-        },
-        {
-            "id": "s14_outside_station",
-            "image": "assets/c14.jpg",
-            "start": 210.0,
-            "end": 234.0,
-            "motion": {"scale": [1.02, 1.08], "focus": [[0.5, 0.48], [0.5, 0.5]], "wobble": "calm"},
-            "transition_in": {"type": "dissolve", "dur": 0.4},
-        },
-        {
-            "id": "s15_narrator",
-            "image": "factory196/materialAndDraft/EP01b/assets/scene15.jpg",
-            "start": 234.0,
-            "end": 241.5,
-            "motion": {"scale": [1.02, 1.09], "focus": [[0.5, 0.5], [0.5, 0.47]], "wobble": "calm"},
-            "transition_in": {"type": "glitch", "dur": 0.35},
-        },
-        {
-            "id": "s16_diagram_3steps",
-            "image": "assets/c15.jpg",
-            "start": 241.5,
-            "end": 256.5,
-            "motion": {"scale": [1.0, 1.05], "focus": [[0.5, 0.5], [0.5, 0.5]], "wobble": "none"},
-            "transition_in": {"type": "dissolve", "dur": 0.3},
-        },
-        {
-            "id": "s17_diagram_middleman",
-            "image": "assets/c16.jpg",
-            "start": 256.5,
-            "end": 264.5,
-            "motion": {"scale": [1.0, 1.05], "focus": [[0.5, 0.5], [0.5, 0.5]], "wobble": "none"},
-            "transition_in": {"type": "dissolve", "dur": 0.3},
-        },
-        {
-            "id": "s18_red_flags",
-            "image": "factory196/materialAndDraft/EP01b/assets/scene18.jpg",
-            "start": 264.5,
-            "end": 279.0,
-            "motion": {"scale": [1.0, 1.04], "focus": [[0.5, 0.5], [0.5, 0.5]], "wobble": "none"},
-            "transition_in": {"type": "fade_black", "dur": 0.4},
-        },
-        {
-            "id": "s19_disclaimer",
-            "image": "factory196/materialAndDraft/EP01b/assets/scene18.jpg",
-            "start": 279.0,
-            "end": 285.0,
-            "motion": {"scale": [1.04, 1.0], "focus": [[0.5, 0.5], [0.5, 0.5]], "wobble": "none"},
-            "transition_in": {"type": "dissolve", "dur": 0.3},
-        },
-    ]
+E = []
 
-    dialogue = [
-        # HOOK (0–20s)
-        line("l01_na", "na", 1.0, 7.6, "Em chuyển đủ ba trăm triệu cho chị Trang rồi… Sao giờ gọi khóa máy, nhắn tin chặn hết vậy?!"),
-        line("l02_chihai", "chi_hai", 9.4, 5.0, "Ba trăm triệu tiền vé của trăm rưỡi người… đều chuyển vô tài khoản em hả Na?!"),
-        line("l03_boctran", "boc_tran", 14.7, 5.0, "Không lấy lời một đồng, nhưng chỉ sau một đêm, Na bị cả trăm người tố lừa đảo."),
-        # HỒI 1 (20–74s)
-        line("l04_boctran", "boc_tran", 22.0, 5.2, "Mọi chuyện bắt đầu từ sáu tháng trước, giữa trưa nắng gắt trước cổng nhà thi đấu."),
-        line("l05_tung", "tung", 27.6, 5.1, "Chị Na ơi, nắng gắt quá mà loa kéo hư, quạt cũng hết sạch pin rồi!"),
-        line("l06_trang", "trang", 33.4, 7.4, "Chị Trang bên Kênh Hậu Trường nè Na. Đợt trước tặng áo, nay chị mang loa quạt qua phụ tụi em."),
-        line("l07_na", "na", 41.2, 6.6, "Trời ơi chị Trang chu đáo quá! Hai đợt liền chị toàn bỏ tiền túi phụ không công, ngại ghê."),
-        line("l08_trang", "trang", 48.2, 6.9, "Chỗ chị em quý ca sĩ cả mà, tính toán chi mấy chuyện nhỏ. Cần gì cứ nhắn chị."),
-        line("l09_tung", "tung", 55.9, 5.5, "Mới mở bán năm phút đã cháy sạch vé khu sát sân khấu rồi chị Na ơi!"),
-        line("l10_trang", "trang", 61.8, 6.0, "Na ơi, bên chị là đối tác truyền thông đêm nhạc nên có suất vé nội bộ giá gốc.", phone=True),
-        line("l11_trang", "trang", 68.1, 5.6, "Em đứng ra gom đơn cho nhóm đi, chị giữ riêng suất đẹp cho tụi em.", phone=True),
-        # HỒI 2 (74–128s)
-        line("l12_tung", "tung", 76.0, 8.0, "Em gom luôn mười vé hai chục triệu cho đám bạn ngoài tỉnh bay vô nha! Tụi nó tin chị Na lắm!", phone=True),
-        line("l13_na", "na", 84.4, 8.2, "Yên tâm nha Tùng, đúng giá gốc hai triệu một vé. Tuần sau đối tác xuất mã đoàn là chị gửi liền!"),
-        line("l14_chihai", "chi_hai", 93.4, 7.6, "Khoan đã Na. Vé suất của kênh truyền thông, sao lại chuyển ba trăm triệu vô tài khoản cá nhân tên Trang?"),
-        line("l15_na", "na", 101.4, 7.6, "Vé nội bộ đâu bán lẻ nên phải chuyển qua người phụ trách chị Hai. Bả giúp nhóm em nửa năm rồi!"),
-        line("l16_chihai", "chi_hai", 109.4, 7.7, "Giúp cái quạt khác chuyện cầm ba trăm triệu không giấy tờ! Lỡ bả quỵt, trăm rưỡi người kia chỉ nắm đầu em thôi!"),
-        line("l17_na", "na", 118.0, 6.4, "Chị Hai lo xa quá, kênh bả hơn trăm ngàn người theo dõi, ai đi lừa mấy đồng vé."),
-        # HỒI 3 (128–186s)
-        line("l18_trang", "trang", 133.2, 7.9, "Đối tác đang rà lại danh sách, thứ Tư chị gửi đủ một lượt nha. Đừng gọi giục chị rối.", phone=True),
-        line("l19_na", "na", 142.0, 7.8, "Thứ Tư rồi… Sao số điện thoại khóa máy, tin nhắn chị Trang cũng chặn em luôn vậy nè?!"),
-        line("l20_tung", "tung", 153.0, 8.2, "Chị Na ơi, Kênh Hậu Trường vừa báo bị mạo danh! Trên mạng đang tố trang chị lừa ba trăm triệu kìa!"),
-        line("l21_tung", "tung", 161.6, 8.4, "Mười đứa bạn em đặt vé máy bay hết rồi! Giờ mất vé, tụi nó tưởng em ăn chặn hai chục triệu!"),
-        line("l22_na", "na", 173.9, 5.5, "Người ta rủa xả em khắp nơi… Hay em tạm khóa trang lại nha chị Hai?!"),
-        line("l23_chihai", "chi_hai", 179.8, 5.8, "Đừng dại! Giờ khóa trang im lặng là người ta tin em ôm tiền trốn thiệt đó!"),
-        # HỒI 4 (186–234s)
-        line("l24_anhhai", "anh_hai", 191.2, 8.2, "Em bị lợi dụng lòng tin, nhưng tiền trăm rưỡi bạn đều vô tài khoản em nên phải ra mặt đàng hoàng."),
-        line("l25_chihai", "chi_hai", 199.8, 8.8, "Giữ nguyên tin nhắn gốc, in sao kê từng khoản nhận và chuyển. Đăng thông báo rõ ràng rồi đi trình báo công an ngay."),
-        line("l26_anhhai", "anh_hai", 210.4, 8.2, "Kênh bị mạo danh không mất tiền trực tiếp, nên chính những người chuyển tiền như tụi em phải đi nộp đơn."),
-        line("l27_na", "na", 219.0, 7.6, "Hồ sơ được tiếp nhận rồi… Nhưng tiền tiết kiệm hai năm đi làm, em phải rút ra trả dần cho các bạn."),
-        line("l28_tung", "tung", 227.0, 6.6, "Em cũng phải gom tiền đền trước cho đám bạn. Chừa tới già chuyện gom đơn truyền miệng."),
-        # HỒI 5 (234–285s)
-        line("l29_boctran", "boc_tran", 235.0, 6.2, "Kẻ gian không đánh vào lòng tham của Na. Chúng đánh vào sự nhiệt tình và lòng tin người quen."),
-        line("l30_boctran", "boc_tran", 242.0, 7.0, "Đầu tiên, chúng bỏ vài triệu tặng quà, mang loa quạt hỗ trợ ngoài đời nhiều tháng để tạo vỏ bọc tử tế."),
-        line("l31_boctran", "boc_tran", 249.3, 6.9, "Khi đêm nhạc cháy vé, chúng mượn danh đối tác rao vé nội bộ, hẹn sát ngày xuất mã để gom trọn một cục."),
-        line("l32_boctran", "boc_tran", 257.0, 7.0, "Độc hiểm nhất, chúng đẩy trưởng nhóm đứng ra gom tiền, biến người nhiệt tình thành tấm bia hứng trọn trách nhiệm."),
-    ]
 
-    cfg = {
-        "episode_id": "EP04",
-        "slug": "BayVeNoiBo300Trieu",
-        "title": "Bẫy vé nội bộ – 300 triệu gom hộ và người đứng mũi chịu sào",
-        "version": "v1-draft",
-        "scam_family": "MIX-06",
-        "duration_sec": duration,
-        "visual_style_lock": (
-            "Horizontal 16:9 widescreen (1920x1080), semi-realistic cinematic 2D anime illustration, "
-            "contemporary Southern Vietnam urban setting, moody dramatic lighting, clean bottom 15% for subtitles, "
-            "no text, no letters, no numbers, no logos, no real uniforms"
+def scene(sid, image, motion="calm", tr=None, trd=0.35, shake=None):
+    E.append(("scene", dict(id=sid, image=image, motion=mo(motion), tr=tr, trd=trd, shake=shake)))
+
+
+def line(lid, spk, text, emo="", sub=None, pause=0.0):
+    E.append(("line", dict(id=lid, spk=spk, text=text, emo=emo, sub=sub, pause=pause)))
+
+
+def beat(sec):
+    E.append(("beat", sec))
+
+
+def chapter(kicker, title):
+    E.append(("chapter", dict(kicker=kicker, title=title)))
+
+
+def bubble(sender, text, side="left", y=340, stamp="", dur=5.0, offset=0.0):
+    E.append(("bubble", dict(sender=sender, text=text, side=side, y=y, stamp=stamp, dur=dur, offset=offset)))
+
+
+def callout(text, style="warning", y=130, dur=5.0, offset=0.0):
+    E.append(("callout", dict(text=text, style=style, y=y, dur=dur, offset=offset)))
+
+
+def sfx(preset, offset=0.0, gain=-4, dur=None):
+    E.append(("sfx", dict(preset=preset, offset=offset, gain=gain, dur=dur)))
+
+
+def amb(preset, gain=-2.0):
+    E.append(("amb", dict(preset=preset, gain=gain)))
+
+
+def bgm(preset, gain=-1.5):
+    E.append(("bgm", dict(preset=preset, gain=gain)))
+
+
+def mark(name):
+    E.append(("mark", name))
+
+
+EP01B = "factory196/materialAndDraft/EP01b/assets/"
+
+# ================================================================ STORY
+# ---- CẢNH 1: HOOK – CƠN CUỒNG NHIỆT ĐU IDOL & LỜI THÚ NHẬN 300 TRIỆU (00:00 – 00:30) ----
+amb("crowd", 0.5); bgm("action_climax", -0.5)
+scene("s00_idol_frenzy", "assets/c00.jpg", "tense", shake=0.2)
+sfx("impact", 0.05, -2)
+beat(0.15)
+line("l00_fannam", "FNAM", "Đêm chung kết tháng Sáu có nhịn ăn nhịn mặc tụi em cũng phải săn bằng được vé! Sống chết gì cũng phải đu theo thần tượng tới cùng nha chị Na!",
+     "gào thét khản giọng vì phấn khích giữa biển người cuồng nhiệt")
+
+amb("night_room", -1.5); bgm("suspense_pulse", -1.0)
+scene("s01_hook_panic", "assets/c01.jpg", "tense", tr="flash_white", trd=0.25, shake=0.2)
+sfx("impact", 0.0, -2)
+sfx("phone_vibrate", 0.15, -3, dur=1.8)
+sfx("notification", 0.25, -4)
+bubble("NHÓM FAN ÁNH SAO", "Thứ Bảy diễn rồi! Vé đâu hay chị định ôm tiền của tụi em trốn hả?!",
+       side="left", y=260, stamp="ĐÒI VÉ", dur=5.8, offset=0.2)
+beat(0.2)
+line("l01_fannu", "FNU", "Tụi em chuyển tiền vé thẳng vô tài khoản tên chị! Thứ Bảy diễn rồi, vé đâu hay chị định ôm tiền của tụi em trốn hả?!",
+     "gay gắt, bức xúc đòi vé")
+line("l02_na", "NA", "Em thề em không ăn lời một đồng nào! Toàn bộ ba trăm triệu của một trăm rưỡi vé em đã chuyển hết cho chị Trang bên Kênh Hậu Trường rồi mà!",
+     "hoảng loạn, thật thà thú nhận",
+     sub="Em thề không ăn lời 1 đồng nào! Toàn bộ 300 triệu của 150 vé em đã chuyển hết cho chị Trang rồi mà!")
+sfx("impact", 0.0, -3)
+scene("s02_hook_freeze", "assets/c02.jpg", "push", tr="flash_white", trd=0.25)
+bubble("FAN TRONG NHÓM", "Cái gì?! 300.000.000 VND mà chuyển không giấy tờ?! Chị phải đền cho tụi này!",
+       side="right", y=300, stamp="PHẪN NỘ", dur=5.5, offset=0.1)
+line("l03_fannam", "FNAM_P", "Cái gì?! Ba trăm triệu tiền mặt mà chị chuyển không giấy tờ cho người ta?! Giờ mất trắng thì chị phải đền!",
+     "sốc, giận dữ quát lên",
+     sub="Cái gì?! 300 triệu tiền mặt mà chị chuyển không giấy tờ?! Giờ mất trắng thì chị phải đền!")
+mark("freeze")
+line("l04_narr", "N", "Từ cơn cuồng nhiệt sống chết vì thần tượng đến vực thẳm chỉ cách nhau một cú bấm chuyển khoản ba trăm triệu.",
+     sub="Từ cơn cuồng nhiệt sống chết vì thần tượng đến vực thẳm chỉ cách nhau một cú bấm chuyển khoản 300 triệu.")
+sfx("riser", -1.2, -4, dur=1.2)
+beat(0.5)
+
+# ---- HỒI 1: 6 THÁNG NUÔI MỒI & CƠN SAY "QUYỀN LỰC TRƯỞNG NHÓM" ----
+amb("crowd", -3.0); bgm("investigative_story", -1.5)
+scene("s03_booth_heat", "assets/c03.jpg", "calm", tr="fade_black", trd=0.4)
+chapter("HỒI 1 · SÁU THÁNG TRƯỚC", "MÓN QUÀ MIỄN PHÍ NGOÀI ĐỜI & CÁI BẪY “VÉ NỘI BỘ”")
+sfx("chapter_sting", -0.1, -4)
+beat(0.3)
+line("l05_fannam", "FNAM", "Chị Na ơi, nắng gắt quá mà loa kéo hư, quạt cầm tay cũng hết sạch pin rồi!",
+     "mệt mỏi, than thở giữa trời nắng")
+
+scene("s04_trang_arrival", "assets/c04.jpg", "calm", tr="dissolve", trd=0.35)
+line("l06_trang", "TR", "Chị Trang bên Kênh Hậu Trường nè Na. Đợt trước tặng áo, nay chị mang loa với quạt qua tiếp sức tụi em.",
+     "thân thiện, hiền hậu, nhiệt tình")
+line("l07_na", "NA", "Trời ơi chị Trang chu đáo quá! Mấy đợt liền chị toàn bỏ tiền túi phụ tụi em không công, ngại ghê luôn.",
+     "cảm kích, tin tưởng tuyệt đối")
+line("l08_trang", "TR", "Chỗ chị em quý nghệ sĩ cả mà, tính toán chi mấy chuyện nhỏ. Nhóm cần gì cứ nhắn chị.",
+     "xởi lởi, tạo lòng tin", pause=0.4)
+
+# Nhịp 2: Đêm cháy vé & Hào quang "Người hùng của cả nhóm"
+amb("room_tone", -2.0)
+scene("s05_sold_out_bait", "assets/c05.jpg", "hand", tr="fade_black", trd=0.35)
+sfx("notification", 0.1, -4)
+bubble("NHÓM FAN ÁNH SAO", "Mới mở bán 5 phút đã HẾT SẠCH VÉ rồi chị Na ơi! Cứu tụi em với!",
+       side="left", y=260, stamp="CHÁY VÉ", dur=5.2, offset=0.1)
+line("l09_fannu", "FNU", "Mới mở bán năm phút đã cháy sạch vé rồi chị Na ơi! Cứu tụi em với!",
+     "tiếc nuối, cầu cứu")
+sfx("phone_ring", 0.0, -4, dur=1.2)
+beat(0.6)
+line("l10_trang", "TR_P", "Na ơi, bên chị là đối tác truyền thông đêm nhạc nên có suất vé nội bộ giá gốc hai triệu.",
+     "hào hứng, rỉ tai cơ hội hiếm",
+     sub="Na ơi, bên chị là đối tác truyền thông đêm nhạc nên có suất vé nội bộ giá gốc 2 triệu.")
+line("l11_trang", "TR_P", "Bên chị không xuất lẻ từng người. Em đứng ra gom tiền của nhóm về một mối rồi chuyển qua tài khoản chị giữ suất đoàn nha.",
+     "dẫn dụ mượt mà", pause=0.4)
+
+# ---- HỒI 2: 300 TRIỆU BẤM CHUYỂN & ÁNH MẮT LẠNH CỦA CHỊ HAI ----
+amb("room_tone", -2.0); bgm("suspense_pulse", -1.5)
+scene("s06_euphoria_collecting", "assets/c06.jpg", "calm", tr="fade_black", trd=0.4)
+chapter("HỒI 2 · MƯỜI NGÀY TRƯỚC ĐÊM DIỄN", "HÀO QUANG TRƯỞNG NHÓM & ÁNH MẮT LẠNH CỦA CHỊ HAI")
+sfx("chapter_sting", -0.1, -4)
+sfx("bank_ting", 0.3, -4)
+bubble("NGÂN HÀNG X", "+4.000.000 VND · +6.000.000 VND (150 vé gom về TK của Na)",
+       side="left", y=340, stamp="TIỀN VỀ DỒN DẬP", dur=6.5, offset=4.6)
+beat(0.3)
+line("l12_fannu", "FNU", "Em vừa chuyển bốn triệu hai vé vô tài khoản chị Na nha! Chỉ có chị Na mới xin được suất nội bộ của đối tác lớn thôi!",
+     "hào hứng, tâng bốc",
+     sub="Em vừa chuyển 4 triệu 2 vé vô tài khoản chị Na nha! Chỉ có chị Na mới xin được suất nội bộ thôi!")
+line("l13_fannam", "FNAM_P", "Em cũng chuyển sáu triệu ba vé rồi đó! Chị Na đúng là cứu tinh của cả nhóm!",
+     "phấn khích, tung hô",
+     sub="Em cũng chuyển 6 triệu 3 vé rồi đó! Chị Na đúng là cứu tinh của cả nhóm!")
+line("l14_na", "NA", "Mọi người cứ yên tâm! Đúng giá gốc hai triệu một vé, tuần sau đối tác xuất mã đoàn là chị phát liền!",
+     "say sưa trong hào quang, tự hào, hưng phấn",
+     sub="Mọi người cứ yên tâm! Đúng giá gốc 2 triệu 1 vé, tuần sau đối tác xuất mã đoàn là chị phát liền!")
+
+scene("s07_transfer_300m", "assets/c07.jpg", "push", tr="dissolve", trd=0.3)
+sfx("notification", 0.1, -4)
+bubble("CHỊ TRANG", "Chốt đủ 300.000.000 VND trong tối nay kẻo ban tổ chức thu hồi suất vé đoàn nha Na.",
+       side="left", y=240, stamp="HỐI CHỐT TIỀN", dur=4.8, offset=0.1)
+beat(1.2)
+sfx("bank_ting", 0.1, -3)
+bubble("NGÂN HÀNG X", "TK …4512 (NGUYỄN THỊ TRANG): -300.000.000 VND (Chuyển khoản thành công)",
+       side="right", y=420, stamp="ĐÃ CHUYỂN 300TR", dur=4.5, offset=0.1)
+beat(2.8)
+
+scene("s08_chihai_secret_photo", "assets/c08.jpg", "push", tr="dissolve", trd=0.35)
+sfx("notification", 0.4, -5)
+callout("CHỊ HAI LẶNG LẼ QUAN SÁT  ·  ÂM THẦM CHỤP LẠI THÔNG TIN TÀI KHOẢN", "warning", y=130, dur=6.5, offset=0.2)
+beat(0.8)
+line("l15_chihai", "CH", "Suất vé của đối tác truyền thông lớn… mà lại thu ba trăm triệu qua tài khoản cá nhân?",
+     "trầm thấp, đanh mặt lại, sắc lạnh",
+     sub="Suất vé của đối tác truyền thông lớn… mà lại thu 300 triệu qua tài khoản cá nhân?", pause=0.6)
+
+# ---- HỒI 3: CAO TRÀO – RƠI XUỐNG VỰC THẲM & CÔ ĐƠN CÙNG CỰC ----
+amb("night_room", -1.5); bgm("tension_drone", -0.8)
+scene("s09_blocked_shock", "assets/c09.jpg", "tense", tr="fade_black", trd=0.4, shake=0.3)
+chapter("HỒI 3 · BA NGÀY TRƯỚC ĐÊM DIỄN", "CUỘC GỌI RƠI XUỐNG VỰC THẲM & SỰ CÔ ĐƠN CÙNG CỰC")
+sfx("chapter_sting", -0.1, -4)
+sfx("call_end", 0.2, -3)
+beat(0.4)
+line("l16_na", "NA", "Thứ Tư rồi… Sao số chị Trang thuê bao, tin nhắn cũng chặn em luôn vậy nè?!",
+     "hơi thở gấp gáp, tay run bần bật", pause=0.4)
+
+bgm("action_climax", -0.5)
+scene("s10_call_channel_abyss", "assets/c10.jpg", "push", tr="flash_red", trd=0.3, shake=0.2)
+sfx("heartbeat", 0.0, -4, dur=12.0)
+sfx("phone_ring", 0.1, -4, dur=1.2)
+beat(0.6)
+line("l17_na", "NA", "Dạ… anh ơi cho em gặp chị Trang quản lý đối tác… Chị Trang nhận ba trăm triệu tiền vé nội bộ của nhóm em mà giờ khóa máy rồi anh ơi…",
+     "lắp bắp, lạc giọng vì sợ hãi, cầu cứu",
+     sub="Dạ… cho em gặp chị Trang… Chị Trang nhận 300 triệu tiền vé nội bộ của nhóm em mà giờ khóa máy rồi anh ơi…")
+line("l18_kenh", "KENH", "Em nghe rõ này. Bên anh không có nhân sự nào tên Trang, và Kênh Hậu Trường tuyệt đối không bán vé nội bộ.",
+     "điềm tĩnh nhưng đanh thép như búa giáng")
+sfx("impact", 0.0, -3)
+mark("climax")
+callout("KÊNH HẬU TRƯỜNG: KHÔNG CÓ NHÂN SỰ TÊN TRANG · KHÔNG BÁN VÉ NỘI BỘ", "danger", y=130, dur=8.0, offset=0.1)
+line("l19_na", "NA", "Không… không thể nào đâu anh! Bả đeo thẻ kênh mình, mang loa quạt ra nhà thi đấu phụ tụi em suốt sáu tháng nay mà!",
+     "bật khóc nấc, hoảng loạn sững sờ",
+     sub="Không… không thể nào đâu anh! Bả đeo thẻ kênh mình, mang loa quạt phụ tụi em suốt 6 tháng nay mà!")
+line("l19b_na", "NA", "Anh kiểm tra lại giùm em đi, ba trăm triệu của một trăm rưỡi bạn trong nhóm em đó anh ơi…",
+     "nghẹn ngào níu kéo trong tuyệt vọng",
+     sub="Anh kiểm tra lại giùm em đi, 300 triệu của 150 bạn trong nhóm em đó anh ơi…")
+line("l20_kenh", "KENH", "Bên anh vừa đăng cảnh báo bị mạo danh rồi. Kênh không nhận tiền nên công an không lập hồ sơ theo đơn của kênh được.",
+     "dứt khoát, thực tế")
+line("l20b_kenh", "KENH", "Chính em là người chuyển ba trăm triệu cho bả, nên em phải tự đi trình báo ngay đi.",
+     "nghiêm túc, dứt khoát",
+     sub="Chính em là người chuyển 300 triệu cho bả, nên em phải tự đi trình báo ngay đi.")
+sfx("call_end", 0.1, -3)
+beat(0.8)
+
+# Nhịp 4: Bị đám đông quay lưng & Cô đơn cùng cực
+scene("s11_begging_group_backlash", "assets/c11.jpg", "hand", tr="dissolve", trd=0.3)
+sfx("phone_vibrate", 0.1, -3, dur=2.0)
+line("l21_na", "NA", "Mọi người ơi… chị Trang lừa em rồi… Em thề em không giữ của mọi người một đồng nào hết, cho em thêm thời gian tìm bả nha mọi người…",
+     "quỳ dưới sàn, nghẹn ngào van xin trong tuyệt vọng")
+bubble("FAN TRONG NHÓM", "Đừng diễn nước mắt cá sấu! Chuyển 300 triệu không giấy tờ, chắc chắn chị ăn chia với bả!",
+       side="left", y=260, stamp="QUAY LƯNG", dur=6.5, offset=0.1)
+line("l22_fannu", "FNU", "Đừng có diễn nước mắt cá sấu! Làm gì có ai ngu tới mức chuyển ba trăm triệu không giấy tờ! Chắc chắn chị ăn chia với bả!",
+     "lạnh lùng, cay nghiệt, tàn nhẫn",
+     sub="Đừng có diễn nước mắt cá sấu! Làm gì có ai chuyển 300 triệu không giấy tờ! Chắc chắn chị ăn chia với bả!")
+
+scene("s12_utter_isolation", "assets/c12.jpg", "pull", tr="dissolve", trd=0.35)
+sfx("notification", 0.2, -4)
+bubble("NHÓM FAN ÁNH SAO", "Sáng mai không ói đủ tiền ra, tụi này kéo tới tận nhà, cho chị khỏi nhìn mặt ai luôn!",
+       side="right", y=300, stamp="DỌA KÉO TỚI NHÀ", dur=6.5, offset=0.2)
+line("l23_fannam", "FNAM_P", "Tụi này chỉ biết tiền chuyển vô tài khoản tên chị! Sáng mai không ói đủ tiền ra, tụi này kéo tới tận nhà, cho chị khỏi nhìn mặt ai luôn!",
+     "đanh giọng đe dọa", pause=1.2)
+
+# ---- HỒI 4: SỰ CAO TAY CỦA CHỊ HAI & THUYẾT ÂM MƯU Ở CỔNG ĐỒN ----
+amb("room_tone", -2.5); bgm("tension_drone", -1.2)
+scene("s13_chihai_dossier", "assets/c13.jpg", "push", tr="fade_black", trd=0.4)
+chapter("HỒI 4 · XẤP HỒ SƠ MẬT", "SỰ CAO TAY CỦA CHỊ HAI & CUỘC GỌI SAU LƯNG")
+sfx("chapter_sting", -0.1, -4)
+beat(0.4)
+line("l24_chihai", "CH", "Lau mặt đi. Sáng mai cầm xấp hồ sơ này lên công an.",
+     "bình thản, kiệm lời, lạnh lùng", pause=0.3)
+line("l25_na", "NA", "Ủa chị Hai… sao chị có ảnh chụp màn hình lúc em chuyển khoản từ tuần trước vậy?",
+     "ngước lên sững sờ, ngơ ngác", pause=0.5)
+callout("TÀI KHOẢN ĐÃ ĐƯỢC CHỊ HAI ÂM THẦM GỬI ĐIỀU TRA TỪ MỘT TUẦN TRƯỚC", "warning", y=130, dur=6.5, offset=0.1)
+line("l26_chihai", "CH", "Tài khoản đó chị đã gửi người bên điều tra từ đêm hôm ấy rồi. Cứ trình báo đúng như trong này… đừng hỏi thêm.",
+     "trầm thấp, bí ẩn, sắc lạnh, dứt khoát", pause=0.6)
+
+# ---- NHỚ KỸ TRONG 7 GIÂY (CÔ ĐỌNG, KHÔNG DẠY ĐỜI) ----
+amb("room_tone", -4.0); bgm("warm_outro", -2.0)
+scene("s17_red_flags", EP01B + "scene18.jpg", "still", tr="fade_black", trd=0.3)
+mark("rf_start")
+sfx("notification", 0.1, -4)
+beat(0.2)
+line("l27_narr", "N", "Hào quang đám đông và lòng tin người quen ngoài đời — đó là cái bẫy biến người gom hộ thành kẻ đứng mũi chịu sào.",
+     pause=0.3)
+mark("rf_end")
+
+# ---- KẾT MỞ: CUỘC GỌI BÍ ẨN CỦA CHỊ HAI ("CỨ ĐỂ ĐÓ!") ----
+amb("street", -3.0); bgm("tension_drone", -1.0)
+scene("s14_leaving_station", "assets/c14.jpg", "calm", tr="fade_black", trd=0.4)
+beat(0.3)
+line("l28_na", "NA", "May mà chị Hai âm thầm báo trước một tuần nên bên điều tra đã kịp khoanh vùng dòng tiền… Không có chị Hai chắc em chết mất.",
+     "thở phào nhẹ nhõm, biết ơn", pause=0.5)
+
+scene("s15_chihai_conspiracy_call", "assets/c15.jpg", "push", tr="dissolve", trd=0.35)
+sfx("phone_vibrate", 0.1, -3, dur=1.2)
+beat(0.8)
+callout("CUỘC GỌI MẬT VÀO MÁY PHỤ CỦA CHỊ HAI", "danger", y=120, dur=6.2, offset=0.1)
+line("l29_secret", "SEC", "Con bé nộp đơn đúng như kịch bản rồi hả? Còn khoản ba trăm triệu bên nhánh con Trang, giờ tính sao?",
+     "trầm thấp, bí ẩn qua điện thoại",
+     sub="Con bé nộp đơn đúng như kịch bản rồi hả? Còn khoản 300 triệu bên nhánh con Trang, giờ tính sao?",
+     pause=0.4)
+sfx("heartbeat", 0.0, -4, dur=2.5)
+line("l30_chihai", "CH", "Cứ để đó!", "lạnh băng, sắc lẹm, dứt khoát", pause=0.2)
+
+sfx("impact", 0.0, -2)
+scene("s16_black_cut", "assets/c16.jpg", "still", tr="fade_black", trd=0.1)
+callout("CHỊ HAI ĐANG GIĂNG LƯỚI BẮT KẺ GIAN… HAY CÒN MỘT KỊCH BẢN NÀO KHÁC?", "danger", y=440, dur=3.2, offset=0.2)
+beat(3.5)
+
+# ---- DISCLAIMER ----
+amb("room_tone", -5.0); bgm("warm_outro", -3.0)
+scene("s18_disclaimer", EP01B + "scene18.jpg", "still", tr="fade_black", trd=0.35)
+mark("disc_start")
+beat(4.5)
+mark("end")
+
+# ================================================================ COMPILE
+t = 0.0
+scenes, dialogue, bubbles, callouts, foley, chapters = [], [], [], [], [], []
+amb_runs, bgm_runs, marks = [], [], {}
+
+
+def est(text):
+    return len(text.split()) * SEC_PER_WORD + LINE_BASE
+
+
+for kind, d in E:
+    if kind == "scene":
+        if scenes:
+            scenes[-1]["end"] = round(t, 2)
+        sc = {"id": d["id"], "image": d["image"], "start": round(t, 2), "end": None, "motion": d["motion"]}
+        if d["tr"]:
+            sc["transition_in"] = {"type": d["tr"], "dur": d["trd"]}
+        if d["shake"] is not None:
+            sc["shakes"] = [{"at": round(t + d["shake"], 2), "dur": 0.4, "amp": 18}]
+        scenes.append(sc)
+        t += SCENE_LEAD
+    elif kind == "line":
+        p = SPK[d["spk"]]
+        dur = real.get(d["id"], est(d["text"]))
+        ln = {"id": d["id"], "speaker": p["speaker"]}
+        for k in ("voice", "label_short", "speaker_label", "af"):
+            if k in p:
+                ln[k] = p[k]
+        if "base" in p:
+            ln["style"] = p["base"] + (", " + d["emo"] if d["emo"] else "") + "."
+        ln["start"] = round(t, 2)
+        ln["window"] = round(max(dur, est(d["text"])) + WINDOW_MARGIN, 2)
+        ln["text"] = d["text"]
+        if d["sub"]:
+            ln["subtitle"] = [d["sub"]]
+        dialogue.append(ln)
+        t += dur
+        t += GAP + d["pause"]
+    elif kind == "beat":
+        t += d
+    elif kind == "chapter":
+        start = scenes[-1]["start"]
+        chapters.append({"kicker": d["kicker"], "title": d["title"], "start": round(start + 0.2, 2),
+                         "end": round(start + 4.8, 2)})
+    elif kind == "bubble":
+        s = t + d["offset"]
+        bubbles.append({"sender": d["sender"], "text": d["text"], "side": d["side"], "y": d["y"],
+                        "stamp": d["stamp"], "start": round(s, 2), "end": round(s + d["dur"], 2)})
+    elif kind == "callout":
+        s = t + d["offset"]
+        callouts.append({"text": d["text"], "style": d["style"], "y": d["y"],
+                         "start": round(s, 2), "end": round(s + d["dur"], 2)})
+    elif kind == "sfx":
+        f = {"preset": d["preset"], "at": round(max(0.0, t + d["offset"]), 2), "gain_db": d["gain"]}
+        if d["dur"]:
+            f["dur"] = d["dur"]
+        foley.append(f)
+    elif kind == "amb":
+        if amb_runs:
+            amb_runs[-1]["end"] = round(t, 2)
+        amb_runs.append({"preset": d["preset"], "start": round(t, 2), "end": None, "gain_db": d["gain"]})
+    elif kind == "bgm":
+        if bgm_runs:
+            bgm_runs[-1]["end"] = round(t, 2)
+        bgm_runs.append({"preset": d["preset"], "start": round(t, 2), "end": None, "gain_db": d["gain"]})
+    elif kind == "mark":
+        marks[d] = round(t, 2)
+
+total = round(t, 2)
+scenes[-1]["end"] = total
+amb_runs[-1]["end"] = total
+bgm_runs[-1]["end"] = total
+
+
+def mmss(x):
+    return f"{int(x // 60):02d}:{int(x % 60):02d}"
+
+
+_desc = [(0.0, "Mở đầu – Lời thú nhận 300 triệu & cơn giận của cả nhóm")]
+_desc += [(c["start"], f"{c['kicker'].split('·')[0].strip().title()} – {c['title'].capitalize()}") for c in chapters]
+_desc += [(marks["rf_start"], "Dấu hiệu nhận biết & cuộc gọi bí ẩn của Chị Hai")]
+desc_chapters = "\n".join(f"{mmss(s)} {label}" for s, label in sorted(_desc))
+
+episode = {
+    "episode_id": "EP04",
+    "slug": "BayVeNoiBo300Trieu",
+    "title": "300 triệu gom vé hộ & Bí mật của Chị Hai",
+    "version": "v2",
+    "scam_family": "MIX-06",
+    "duration_sec": total,
+    "visual_style_lock": (
+        "Horizontal 16:9 widescreen (1920x1080), semi-realistic cinematic 2D anime illustration, "
+        "contemporary Southern Vietnam urban setting, moody dramatic lighting, clean bottom 15% for subtitles, "
+        "no text, no letters, no numbers, no logos, no real uniforms"
+    ),
+    "hook": {
+        "kicker": "CƠN SỐT SĂN VÉ ĐU THẦN TƯỢNG · ĐÊM CHUNG KẾT",
+        "title": "SỐNG CHẾT GÀO THÉT VÌ THẦN TƯỢNG – CÚ RƠI 300 TRIỆU CỦA CÔ TRƯỞNG NHÓM",
+        "start": 0.4,
+        "end": 5.6,
+    },
+    "chapters": chapters,
+    "scenes": scenes,
+    "dialogue": dialogue,
+    "chat_bubbles": bubbles,
+    "callouts": callouts,
+    "red_flags": {
+        "title": "NHỚ KỸ – 3 DẤU HIỆU BẪY GOM VÉ NỘI BỘ",
+        "start": marks["rf_start"],
+        "end": marks["rf_end"],
+        "stagger_sec": 0.8,
+        "items": [
+            "NUÔI LÒNG TIN NGOÀI ĐỜI: Tặng quà, hỗ trợ loa quạt nhiều tháng dưới mác \"người của kênh truyền thông\"",
+            "MỒI VÉ ĐOÀN GIÁ GỐC: Đẩy trưởng nhóm đứng ra gom một cục hàng trăm triệu chuyển vào tài khoản cá nhân",
+            "ĐỨNG MŨI CHỊU SÀO: Kênh thật không nhận tiền nên không thể đứng đơn; người gom hộ phải tự gánh cả hai đầu",
+        ],
+        "action": "Chỉ mua trên kênh chính thức · Tuyệt đối không dùng tài khoản cá nhân gom tiền hộ nguồn vé truyền miệng!",
+    },
+    "disclaimer": {
+        "header": "LƯU Ý",
+        "start": marks["disc_start"],
+        "end": total,
+        "lines": [
+            "Tình huống trong phim được dựng lại nhằm mục đích cảnh báo cộng đồng; nhân vật, đêm nhạc, trang cộng đồng và số liệu đều là hư cấu.",
+            "Chỉ giao dịch vé qua kênh phân phối chính thức của ban tổ chức; không chuyển khoản lớn cho nguồn vé truyền miệng.",
+        ],
+    },
+    "audio": {
+        "ambience": amb_runs,
+        "foley": foley,
+        "bgm": bgm_runs,
+        "duck_extra": [
+            {"start": marks["climax"] - 0.2, "end": marks["climax"] + 1.5, "bgm_db": -14, "amb_db": -10},
+            {"start": marks["disc_start"], "end": total - 0.05},
+        ],
+    },
+    "forbidden_terms": [],
+    "publish": {
+        "titles": [
+            "300 Triệu Gom Vé Hộ & Cuộc Gọi Bí Ẩn Sau Lưng Của Chị Hai | Bóc Trần Lừa Đảo",
+            "Bẫy \"Vé Nội Bộ\": Nuôi Lòng Tin 6 Tháng Để Biến Trưởng Nhóm Fan Thành Kẻ Đứng Mũi Chịu Sào | Bóc Trần Lừa Đảo",
+            "Thú Nhận Đã Chuyển 300 Triệu Cho Người Quen – Cú Rơi Xuống Vực Thẳm Trước Giờ Diễn | Bóc Trần Lừa Đảo",
+        ],
+        "description": (
+            "Na, 23 tuổi – trưởng một nhóm cộng đồng người hâm mộ – không ăn chênh lệch một đồng khi đứng ra "
+            "gom giúp 150 vé đêm nhạc qua lời giới thiệu \"suất vé nội bộ đối tác truyền thông\" của người chị quen biết "
+            "từng mang loa, quạt hỗ trợ nhóm suốt nửa năm. Trong cơn say hào quang trưởng nhóm, Na bấm chuyển 300 triệu "
+            "mà không biết Chị Hai đã đứng sau cánh cửa lặng lẽ quan sát tất cả. Khi nguồn vé khóa máy và kênh truyền thông "
+            "thật lên tiếng báo bị mạo danh, Na rơi xuống vực thẳm cô đơn — trước khi phát hiện bộ hồ sơ mật của Chị Hai "
+            "và cuộc gọi lạnh gáy ở cổng cơ quan chức năng.\n\n"
+            "⏱️ Các hồi trong phim:\n" + desc_chapters
         ),
-        "hook": {
-            "kicker": "23 GIỜ 15 · BA NGÀY TRƯỚC ĐÊM DIỄN",
-            "title": "GOM GIÙM TRĂM RƯỠI VÉ – CÔ TRƯỞNG NHÓM THÀNH BỊ CÁO",
-            "start": 0.4,
-            "end": 5.4,
-        },
-        "chapters": [
-            {
-                "kicker": "HỒI 1 · SÁU THÁNG TRƯỚC",
-                "title": "MÓN QUÀ MIỄN PHÍ TỪ “ĐỐI TÁC TRUYỀN THÔNG”",
-                "start": 20.2,
-                "end": 24.8,
-            },
-            {
-                "kicker": "HỒI 2 · MƯỜI NGÀY TRƯỚC ĐÊM DIỄN",
-                "title": "TRĂM RƯỠI VÉ CHẢY QUA TÀI KHOẢN CÁ NHÂN",
-                "start": 74.2,
-                "end": 78.8,
-            },
-            {
-                "kicker": "HỒI 3 · BA NGÀY TRƯỚC ĐÊM DIỄN",
-                "title": "KHÓA MÁY, CHẶN TIN & CƠN BÃO ĐẤU TỐ",
-                "start": 128.2,
-                "end": 132.8,
-            },
-            {
-                "kicker": "HỒI 4 · SÁNG HÔM SAU",
-                "title": "ĐỨNG MŨI CHỊU SÀO & HỒ SƠ TRÌNH BÁO",
-                "start": 186.2,
-                "end": 190.8,
-            },
-            {
-                "kicker": "HỒI 5 · BÓC TRẦN CƠ CHẾ",
-                "title": "THẢ CON TÉP NGOÀI ĐỜI, BẮT CON TÔM TRĂM TRIỆU",
-                "start": 234.2,
-                "end": 238.8,
-            },
+        "pinned_comment": (
+            "📌 Theo bạn, câu \"Cứ để đó!\" ở giây cuối cùng của Chị Hai là đang phối hợp ngầm để giăng lưới bắt trọn đường dây của Trang, "
+            "hay còn một kịch bản nào khác đằng sau khoản 300 triệu? Và nhớ kỹ: tuyệt đối đừng bao giờ dùng tài khoản cá nhân đứng ra gom tiền hộ "
+            "cho nguồn vé truyền miệng nhé!"
+        ),
+        "hashtags": [
+            "#bóctrầnlừađảo",
+            "#cảnhgiáclừađảo",
+            "#vạnchuyện",
+            "#lừađảovéconcert",
+            "#vénộibộ",
         ],
-        "scenes": scenes,
-        "dialogue": dialogue,
-        "chat_bubbles": [
-            {
-                "sender": "NHÓM FAN ÁNH SAO",
-                "text": "Thứ Bảy diễn rồi vé đâu admin ơi?! Định ôm ba trăm triệu trốn hả?!",
-                "side": "left",
-                "y": 240,
-                "stamp": "99+ TIN MỚI",
-                "start": 5.8,
-                "end": 8.8,
-            },
-            {
-                "sender": "CHỊ TRANG",
-                "text": "Chốt tiền tối nay kẻo ban tổ chức thu hồi suất nha Na.",
-                "side": "left",
-                "y": 220,
-                "stamp": "GẤP",
-                "start": 117.9,
-                "end": 124.2,
-            },
-            {
-                "sender": "NGÂN HÀNG X",
-                "text": "TK …4512: −300.000.000 VND (Chuyển khoản thành công)",
-                "side": "right",
-                "y": 420,
-                "stamp": "21:42",
-                "start": 124.6,
-                "end": 127.7,
-            },
+        "tags": [
+            "lừa đảo vé đêm nhạc",
+            "bẫy vé nội bộ",
+            "gom đơn hộ",
+            "mạo danh đối tác truyền thông",
+            "bóc trần lừa đảo",
+            "cảnh giác lừa đảo",
+            "vạn chuyện",
         ],
-        "callouts": [
-            {
-                "text": "CÒN 3 NGÀY TRƯỚC ĐÊM DIỄN: KHÓA MÁY · CHẶN TIN NHẮN",
-                "style": "danger",
-                "y": 135,
-                "start": 142.0,
-                "end": 151.8,
-            },
-            {
-                "text": "KÊNH HẬU TRƯỜNG ĐÍNH CHÍNH: BỊ CÁ NHÂN MẠO DANH GIAO DỊCH VÉ TRÁI PHÉP",
-                "style": "warn",
-                "y": 135,
-                "start": 153.0,
-                "end": 162.5,
-            },
-            {
-                "text": "1. NUÔI TIN NGOÀI ĐỜI   →   2. MƯỢN DANH ĐỐI TÁC   →   3. HẸN SÁT NGÀY XUẤT MÃ",
-                "style": "warn",
-                "y": 135,
-                "start": 242.0,
-                "end": 256.0,
-            },
-            {
-                "text": "NHẬN TIỀN QUA TÀI KHOẢN CÁ NHÂN = TỰ ĐỨNG MŨI CHỊU SÀO VỀ UY TÍN & DÂN SỰ",
-                "style": "danger",
-                "y": 135,
-                "start": 257.0,
-                "end": 264.1,
-            },
-        ],
-        "red_flags": {
-            "title": "NHỚ KỸ – 4 DẤU HIỆU BẪY GOM VÉ NỘI BỘ",
-            "start": 264.8,
-            "end": 279.0,
-            "stagger_sec": 1.2,
-            "items": [
-                "Rao \"vé nội bộ, suất đối tác\" số lượng lớn ngay khi kênh chính thức vừa hết vé",
-                "Mượn danh kênh truyền thông, công ty nhưng bảo chuyển vào tài khoản cá nhân",
-                "Hứa \"sát ngày diễn mới xuất mã đoàn\" rồi liên tục viện cớ dời lịch giao",
-                "Nhờ trưởng nhóm fan hoặc bạn bè đứng ra gom tiền hộ để thu một cục lớn",
-            ],
-            "action": "Chỉ mua trên kênh chính thức · Không lấy tài khoản cá nhân gom tiền hộ nguồn truyền miệng · Mất tiền: giữ sao kê, tin nhắn, trình báo công an ngay!",
-        },
-        "disclaimer": {
-            "header": "LƯU Ý",
-            "start": 279.0,
-            "end": 285.0,
-            "lines": [
-                "Tình huống trong phim được dựng lại nhằm cảnh báo cộng đồng; nhân vật, đêm nhạc, trang cộng đồng và số liệu đều là hư cấu.",
-                "Chỉ giao dịch vé qua kênh phân phối chính thức của ban tổ chức; không chuyển khoản lớn cho nguồn vé truyền miệng.",
-            ],
-        },
-        "audio": {
-            "ambience": [
-                {"preset": "night_room", "start": 0.0, "end": 20.0, "gain_db": -1.5},
-                {"preset": "crowd", "start": 20.0, "end": 55.5, "gain_db": -3.5},
-                {"preset": "room_tone", "start": 55.5, "end": 128.0, "gain_db": -2.0},
-                {"preset": "night_room", "start": 128.0, "end": 152.5, "gain_db": -1.5},
-                {"preset": "street", "start": 152.5, "end": 173.5, "gain_db": -2.5},
-                {"preset": "night_room", "start": 173.5, "end": 186.0, "gain_db": -1.5},
-                {"preset": "room_tone", "start": 186.0, "end": 210.0, "gain_db": -2.5},
-                {"preset": "street", "start": 210.0, "end": 234.0, "gain_db": -3.5},
-                {"preset": "room_tone", "start": 234.0, "end": 285.0, "gain_db": -3.5},
-            ],
-            "foley": [
-                {"preset": "phone_vibrate", "at": 0.35, "dur": 1.6, "gain_db": -3.0},
-                {"preset": "notification", "at": 5.8, "gain_db": -4.0},
-                {"preset": "impact", "at": 9.0, "gain_db": -3.5},
-                {"preset": "riser", "at": 13.4, "dur": 1.2, "gain_db": -4.5},
-                {"preset": "chapter_sting", "at": 20.25, "gain_db": -4.0},
-                {"preset": "phone_ring", "at": 60.4, "dur": 1.2, "gain_db": -4.5},
-                {"preset": "chapter_sting", "at": 74.25, "gain_db": -4.0},
-                {"preset": "notification", "at": 75.3, "gain_db": -5.0},
-                {"preset": "notification", "at": 117.85, "gain_db": -4.0},
-                {"preset": "bank_ting", "at": 124.6, "gain_db": -3.0},
-                {"preset": "chapter_sting", "at": 128.25, "gain_db": -4.0},
-                {"preset": "call_end", "at": 141.65, "gain_db": -3.0},
-                {"preset": "impact", "at": 141.8, "gain_db": -3.0},
-                {"preset": "heartbeat", "at": 142.2, "dur": 9.5, "gain_db": -5.0},
-                {"preset": "riser", "at": 172.2, "dur": 1.2, "gain_db": -4.5},
-                {"preset": "impact", "at": 179.55, "gain_db": -3.0},
-                {"preset": "chapter_sting", "at": 186.25, "gain_db": -4.0},
-                {"preset": "typing", "at": 188.5, "dur": 2.0, "gain_db": -6.0},
-                {"preset": "chapter_sting", "at": 234.25, "gain_db": -4.0},
-                {"preset": "glitch", "at": 234.1, "gain_db": -4.0},
-                {"preset": "bank_ting", "at": 264.8, "gain_db": -4.0},
-            ],
-            "bgm": [
-                {"preset": "suspense_pulse", "start": 0.0, "end": 20.0, "gain_db": -1.0},
-                {"preset": "investigative_story", "start": 20.0, "end": 93.0, "gain_db": -1.5},
-                {"preset": "suspense_pulse", "start": 93.0, "end": 141.5, "gain_db": -1.5},
-                {"preset": "tension_drone", "start": 141.5, "end": 173.5, "gain_db": -0.5},
-                {"preset": "action_climax", "start": 173.5, "end": 186.0, "gain_db": 0.5},
-                {"preset": "investigative_story", "start": 186.0, "end": 264.5, "gain_db": -1.5},
-                {"preset": "warm_outro", "start": 264.5, "end": 285.0, "gain_db": -2.0},
-            ],
-            "duck_extra": [
-                {"start": 141.5, "end": 143.2, "bgm_db": -14, "amb_db": -10},
-                {"start": 279.0, "end": 284.9},
-            ],
-        },
-        "forbidden_terms": [],
-        "publish": {
-            "titles": [
-                "Bẫy \"Vé Nội Bộ\": Gom Hộ 300 Triệu, Trưởng Nhóm Fan Thành Bị Cáo Bất Đắc Dĩ | Bóc Trần Lừa Đảo",
-                "Nuôi Lòng Tin 6 Tháng Để Ôm 300 Triệu Tiền Vé: Cái Giá Đắt Của Việc \"Gom Đơn Hộ\" | Bóc Trần Lừa Đảo",
-                "300 Triệu Tiền Vé Bốc Hơi Trước Giờ Diễn – Vì Sao Người Gom Hộ Đứng Mũi Chịu Sào? | Bóc Trần Lừa Đảo",
-            ],
-            "description": (
-                "Na, 23 tuổi – trưởng một nhóm cộng đồng người hâm mộ – không ăn chênh lệch một đồng khi đứng ra "
-                "gom giúp 150 vé đêm nhạc qua lời giới thiệu \"suất vé nội bộ đối tác truyền thông\" của người chị quen biết "
-                "từng mang loa, quạt hỗ trợ nhóm suốt nửa năm. Ba ngày trước giờ diễn, nguồn vé khóa máy chặn liên lạc, "
-                "kênh truyền thông lên tiếng báo bị mạo danh, còn Na trở thành tâm điểm bị cả trăm người mua réo tên đòi 300 triệu.\n\n"
-                "⏱️ Các hồi trong phim:\n"
-                "00:00 Mở đầu – Gom giùm trăm rưỡi vé, cô trưởng nhóm thành bị cáo\n"
-                "00:20 Hồi 1 – Sáu tháng trước: Món quà miễn phí từ \"đối tác truyền thông\"\n"
-                "01:14 Hồi 2 – Điểm mù khi chuyển 300 triệu vào tài khoản cá nhân\n"
-                "02:08 Hồi 3 – Ba ngày trước đêm diễn: Khóa máy, đính chính & bão đấu tố\n"
-                "03:06 Hồi 4 – Đứng mũi chịu sào & quy trình trình báo công an\n"
-                "03:54 Hồi 5 – Bóc trần 3 mắt xích bẫy \"vé nội bộ\" & 4 dấu hiệu nhận biết"
-            ),
-            "pinned_comment": (
-                "📌 Cảnh báo mùa sự kiện & đêm nhạc: Không có \"suất vé nội bộ công ty\" nào lại thu hàng trăm triệu "
-                "qua tài khoản cá nhân không hợp đồng. Đặc biệt, các bạn trưởng nhóm fan, lớp trưởng hay bạn bè nhiệt tình "
-                "tuyệt đối đừng dùng tài khoản cá nhân đứng ra gom tiền hộ cho nguồn vé truyền miệng — khi kẻ gian cắt liên lạc, "
-                "chính người gom hộ sẽ phải gánh khủng hoảng uy tín và trách nhiệm trực tiếp với người mua! "
-                "(Chia sẻ kinh nghiệm cảnh giác bên dưới nhưng lưu ý không đăng tên thật, SĐT hay số tài khoản cá nhân nhé)."
-            ),
-            "hashtags": [
-                "#bóctrầnlừađảo",
-                "#cảnhgiáclừađảo",
-                "#vạnchuyện",
-                "#lừađảovéconcert",
-                "#vénộibộ",
-            ],
-            "tags": [
-                "lừa đảo vé đêm nhạc",
-                "bẫy vé nội bộ",
-                "gom đơn hộ",
-                "mạo danh đối tác truyền thông",
-                "bóc trần lừa đảo",
-                "cảnh giác lừa đảo",
-                "vạn chuyện",
-            ],
-            "category": "Education (Giáo dục)",
-            "playlist": "Hồ Sơ Bóc Trần Lừa Đảo – Phim Dài Chuyên Sâu",
-            "thumbnail_sec": 175.0,
-        },
-    }
-    return cfg
+        "category": "Education (Giáo dục)",
+        "playlist": "Hồ Sơ Bóc Trần Lừa Đảo – Phim Dài Chuyên Sâu",
+        "thumbnail_sec": round(marks["climax"] + 0.5, 2),
+    },
+}
 
-
-def audit_draft(cfg: dict) -> None:
-    save_json(EP_DIR / "episode.json", cfg)
-    ep = Episode("EP04", "196")
-
-    # 1. Word count & per-line limit check (target <= 26 words/line, 120-140 wpm)
-    max_line = 0
-    total_words = 0
-    over_26 = []
-    for ln in cfg["dialogue"]:
-        w = len(ln["text"].split())
-        total_words += w
-        max_line = max(max_line, w)
-        if w > 26:
-            over_26.append((ln["id"], w, ln["text"]))
-    wpm = total_words / (cfg["duration_sec"] / 60.0)
-    print(f"[THỐNG KÊ THOẠI] {len(cfg['dialogue'])} câu | {total_words} từ | max {max_line} từ/câu | mật độ {wpm:.1f} từ/phút")
-    if over_26:
-        raise SystemExit(f"Có câu vượt 26 từ: {over_26}")
-
-    # 2. Scene cut before voice (>= 0.25s) & non-overlapping dialogue windows
-    scenes = cfg["scenes"]
-    for i, ln in enumerate(cfg["dialogue"]):
-        st, end = ln["start"], ln["start"] + ln["window"]
-        if i + 1 < len(cfg["dialogue"]):
-            nxt = cfg["dialogue"][i + 1]["start"]
-            if end > nxt + 1e-6:
-                raise SystemExit(f"Chồng cửa sổ thoại: {ln['id']} kết thúc {end} > {cfg['dialogue'][i+1]['id']} bắt đầu {nxt}")
-        # Find scene active at ln["start"]
-        sc = next((s for s in scenes if s["start"] <= st < s["end"]), None)
-        if not sc:
-            raise SystemExit(f"Câu {ln['id']} tại {st}s không nằm trong cảnh nào")
-        if sc["start"] > 0 and (st - sc["start"]) < 0.25:
-            # Check if previous line wasn't already in this scene
-            prev_in_same = i > 0 and scenes and (sc["start"] <= cfg["dialogue"][i - 1]["start"] < sc["end"])
-            if not prev_in_same:
-                raise SystemExit(f"Câu {ln['id']} vào quá sát đầu cảnh {sc['id']} ({st - sc['start']:.2f}s < 0.25s)")
-
-    # 3. Gate 5 text & policy wordlist scan across spoken + on_screen + metadata
-    chunks = [ln["text"] for ln in cfg["dialogue"]]
-    chunks += [b["text"] + " " + b.get("sender", "") for b in cfg["chat_bubbles"]]
-    chunks += [c["text"] for c in cfg["callouts"]]
-    chunks += [cfg["hook"]["kicker"], cfg["hook"]["title"]]
-    chunks += [ch["kicker"] + " " + ch["title"] for ch in cfg["chapters"]]
-    chunks += cfg["red_flags"]["items"] + [cfg["red_flags"]["title"], cfg["red_flags"]["action"]]
-    chunks += cfg["disclaimer"]["lines"]
-    pub = cfg["publish"]
-    chunks += pub["titles"] + [pub["description"], pub["pinned_comment"]] + pub["hashtags"] + pub["tags"]
-    all_text = "\n".join(chunks).lower()
-
-    pol = ep.policy
-    id_hard = [t for t in pol.get("identity_hard_block", []) if _contains(all_text, t)]
-    id_soft = [t for t in pol.get("identity_soft_warn", []) if _contains(all_text, t)]
-    asr_hard = [t for t in pol.get("asr_ocr_hard_block", []) if _contains(all_text, t)]
-    asr_soft = [t for t in pol.get("asr_ocr_soft_warn", []) if _contains(all_text, t)]
-    phones = PHONE_RE.findall(all_text)
-    urls = URL_RE.findall(all_text)
-    accts = [a for a in ACCOUNT_RE.findall(all_text) if not PHONE_RE.fullmatch(a)]
-
-    # Also ensure zero real-case names leaked anywhere
-    real_case_terms = ["chông gai", "cây bàng non", "duy nhất", "dustin", "dotg", "hưng yên", "144"]
-    leaked = [t for t in real_case_terms if t in all_text]
-
-    print(f"[QUÉT TỪ KHÓA GATE 5] id_hard={id_hard} | id_soft={id_soft} | asr_hard={asr_hard} | asr_soft={asr_soft}")
-    print(f"[QUÉT REGEX & ẨN DANH] phones={phones} | urls={urls} | accts={accts} | real_case_leaks={leaked}")
-    if any([id_hard, id_soft, asr_hard, asr_soft, phones, urls, accts, leaked]):
-        raise SystemExit("Phát hiện vi phạm từ khóa hoặc định danh!")
-
-    # 4. Run Gate 0 check (expect ONLY missing assets/c01..c16.jpg)
-    errs = gate0(ep)
-    non_asset_errs = [e for e in errs if not e.startswith("Thiếu ảnh/video assets/c")]
-    print(f"[KIỂM TRA GATE 0] Tổng lỗi hiện tại: {len(errs)} (trong đó lỗi ngoài ảnh chưa sinh: {len(non_asset_errs)})")
-    if non_asset_errs:
-        raise SystemExit(f"Lỗi cấu trúc Gate 0: {non_asset_errs}")
-    print("=> BẢN NHÁP EP04 ĐẠT 100% CHUẨN KỊCH BẢN, CẤU TRÚC, TỪ KHÓA & PHÁP LÝ! (Chỉ chờ sinh 16 ảnh assets/c01..c16.jpg).")
-
-
-if __name__ == "__main__":
-     audit_draft(build())
+OUT.write_text(json.dumps(episode, ensure_ascii=False, indent=2), encoding="utf-8")
+words = sum(len(l["text"].split()) for l in dialogue)
+narr = sum(len(l["text"].split()) for l in dialogue if l["speaker"] == "nguoi_boc_tran")
+print(f"episode.json: {total:.1f}s · {len(scenes)} cảnh · {len(dialogue)} câu · {words} từ "
+      f"({words / (total / 60):.0f} từ/phút) · Người Bóc Trần {narr / words:.0%} lời thoại · "
+      f"{'TTS thật' if real else 'ước tính'} ({len(real)} câu thật)")

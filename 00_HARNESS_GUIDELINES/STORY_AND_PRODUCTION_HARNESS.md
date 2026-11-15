@@ -17,17 +17,25 @@ Bộ tiêu chí ngắn gọn, tổng quát dùng để kiểm tra bắt buộc c
    - Đặt song song **người vì quá hoảng loạn trước đòn công nghệ cao đã lỡ chuyển tiền** bên cạnh **người kịp nhận ra dấu hiệu bất thường và gọi kiểm chứng xác thực**.
    - Kết thúc vừa có sự sẻ chia đời thường (*"con bình an không sao là may rồi"*), vừa xoáy thẳng vào **nguyên nhân gốc và nguyên tắc bất di bất dịch** (không đăng thông tin cá nhân/trường lớp của con lên mạng; chưa kiểm chứng xác thực thì tuyệt đối không chuyển tiền).
 5. **Điểm bẻ lái / Ý nghĩ cứu cánh hợp lý (Saving Hook):** Khoảnh khắc thoát bẫy hoặc phát hiện sự thật phải xuất phát từ một chi tiết thực tế hợp lý, dẫn đến hành động kiểm chứng an toàn (không làm lố, không tự đi "bắt cướp" phi thực tế, không dùng việc dọa báo công an làm đòn mặc cả khi bản thân nhân vật cũng vi phạm).
-6. **Giải thích cơ chế bằng ẩn dụ bình dân & tỷ lệ 80/20 cho phim dài (`factory196`):**
-   - Mọi thủ đoạn phức tạp phải chuyển thành hình ảnh trực quan và lời thoại đời thường, ngắn gọn, không giảng bài nghiệp vụ.
-   - Với **phim dài 16:9 (`4 – 5+ phút`, `≥ 240s`)**: giữ **`~80%` thời lượng cho câu chuyện đời thực của 1 nhân vật trung tâm** (đầu tư chiều sâu đời tư, tính cách, sĩ diện, hoàn cảnh gia đình) và **`~20%` cho sơ đồ minh họa + đúc kết của Người Bóc Trần ở cuối phim**. Không cưỡng ép tình tiết "lừa giật một lần" vào tiệm quen có địa chỉ cố định; phải phản biện đa chiều cả logic đời sống lẫn độ chính xác pháp lý/tài chính trước khi dựng.
+6. **Cấm dạy đời – Tỷ lệ 97% Kịch / 3% Bóc trần (`5–10 giây`) cho phim dài (`factory196`):**
+   - **Người xem sẽ thoát video ngay lập tức nếu phần thuyết minh bóc trần dài dòng, lê thê hoặc mang tính dạy bảo.** Khán giả không quan tâm lời giảng giải — họ chỉ cảm nhận qua biến cố và tâm lý nhân vật. Video có thể ngắn hơn nhưng tuyệt đối không bắt người xem nghe cái họ không thích.
+   - Giữ **`~97%` thời lượng cho câu chuyện kịch tính của nhân vật** và **chỉ `5 – 10 giây` (đúng 1 câu sắc bén)** cho `Người Bóc Trần` ở thẻ `red_flags`.
+7. **Kinh nghiệm kịch bản & tâm lý thực chiến (Đúc kết từ `EP03` & `EP04`):**
+   - **Hook thị giác & cảm xúc cực mạnh ngay giây `00:00`:** Mở đầu bằng khoảnh khắc bùng nổ cảm xúc (như biển người gào thét sống chết đu thần tượng rồi cắt chớp trắng sang bi kịch đòi nợ 300 triệu, hoặc giây thứ 89 trước khi mất tiền). Logic thông tin của nhân vật trong Hook phải chuẩn xác (cá nhân chỉ biết phần tiền của mình trước khi trưởng nhóm thú nhận tổng số tiền).
+   - **Độ tinh vi của cái bẫy & Chim mồi chia vai hoàn hảo:** Kẻ lừa đảo không nói năng ngô nghê; chúng dùng lý do nghe cực kỳ hợp lý (như chuyển 120K để "kiểm tra thực chiến khả năng quản trị ứng biến tài chính"). Khi nạn nhân định thoát nhóm, dàn chim mồi chia vai hoàn hảo nhắn tin níu kéo (người hỏi thăm, người khoe vừa nhận thưởng, người báo cả đội đang chờ). Nếu nhân vật dùng AI hỏi ý kiến, phải diễn tả quá trình hỏi AI từng bước (vượt vòng 1, hỏi về 120K, hỏi về 200K), tránh câu thoại máy móc vô lý như *"AI giúp mình 70% còn 30%..."*.
+   - **Không làm lộ nút thắt sớm – Để tuổi trẻ đi qua cơn say ảo tưởng quyền lực:** Khi nhân vật trẻ đang say trong hào quang đám đông tung hô, họ sẽ không nghe ai khuyên can. Nhân vật người thân tỉnh táo/cao tay (như Chị Hai ở `EP04`) **không đứng khuyên ngăn dài dòng làm lộ nút thắt**, mà chỉ lặng lẽ quan sát, đanh mặt lại và âm thầm hành động (chụp màn hình giao dịch, gửi cơ quan chức năng rà soát ngầm trước 1 tuần).
+   - **Khắc họa sâu vực thẳm tâm lý & Sự cô đơn cùng cực:** Khoảnh khắc sụp đổ (khi liên hệ kênh chính chủ phát hiện bị mạo danh, kênh không thể đứng đơn thay) phải khắc họa sâu sự run rẩy, níu kéo tuyệt vọng, bị đám đông quay lưng chửi rủa và nỗi cô đơn cùng cực.
+   - **Nhân vật bí ẩn kiệm lời & Kết mở ("Thuyết âm mưu"):** Nhân vật thông minh, sắc sảo và bí ẩn **nói cực ít, không vỗ về hay giải thích tâm lý cải lương** — chỉ nói câu ngắn, lạnh, ẩn ý (như *"Cứ trình báo đúng như trong này… đừng hỏi thêm"*, và chốt cuối phim đúng 3 chữ **"Cứ để đó!"** rồi cắt đen đột ngột) để khán giả tự suy ngẫm và tranh luận.
 
 ---
 
 ## II. HARNESS KỸ THUẬT & KIỂM DUYỆT (TECHNICAL & QA HARNESS)
 
-1. **Hình ảnh (`Gate 1`) & Khớp chuyển cảnh:**
-   - Chuẩn khung dọc `9:16` (`factory619`) hoặc khung ngang `16:9` không viền đen letterbox (`factory196`), nhân vật đồng nhất ngoại hình, tuyệt đối không có chữ/số/logo/giao diện thật/máu me.
-   - **Cảnh phải lên hình trước tiếng (`0.25–0.4s`):** Khi đổi bối cảnh sang nhân vật mới, cảnh mới phải cắt vào trước khi giọng nhân vật đó cất lên, tránh tiếng đi trước hình.
+1. **Hình ảnh (`Gate 1`), Đồng nhất nhân vật – đạo cụ – thời gian & Không che mặt:**
+   - Chuẩn khung dọc `9:16` (`factory619`) hoặc khung ngang `16:9` full-frame `1920x1080` (`factory196`). Tự động kiểm tra và cắt sạch mọi viền trắng/đen (`letterbox`) ở cạnh đáy do AI sinh ra.
+   - **Khóa đồng nhất 100% ngoại hình, đạo cụ và buổi trong ngày:** Trong mọi prompt ảnh của cùng một tập, phải khóa cố định gương mặt, kiểu tóc, **có râu hay cạo nhẵn (`clean-shaven`)**, trang phục, **loại đồ uống/đạo cụ trên bàn** (ví dụ: ly cà phê đá thì xuyên suốt mọi cảnh phải là ly cà phê đá, không lúc nước ngọt lúc cà phê), và **ánh sáng theo đúng buổi trong kịch bản** (buổi sáng phải có nắng sáng xuyên suốt, không lẫn cảnh tối).
+   - **Không để UI che mặt nhân vật:** Các nhãn `callout` / `chat_bubble` không được đặt đè lên gương mặt nhân vật chính hoặc chồng lên banner `hook` / `chapter`.
+   - **Cảnh phải lên hình trước tiếng (`0.25–0.4s`):** Khi đổi bối cảnh sang nhân vật mới, cảnh mới phải cắt vào trước khi giọng nhân vật đó cất lên.
 2. **Giọng đọc TTS (`Gate 2`) & Phân tách âm sắc:**
    - Bắt buộc dùng model đầy đủ (`gemini-3.8-flash-tts`), cấm dùng filter bẻ cao độ/tốc độ (`asetrate`, `atempo`).
    - **Phân biệt rõ giọng nhân vật cùng giới:** Khi có 2–3 nhân vật nam (hoặc nữ) trong cùng tập, phải chọn `voice` và `style` khác hẳn nhau về độ trầm/sáng và tốc độ nói để nghe phân biệt được ngay.

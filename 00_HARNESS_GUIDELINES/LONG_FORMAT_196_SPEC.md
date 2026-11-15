@@ -14,7 +14,7 @@
 | **Safe Zone ngang (`X`)** | `120 px → 1800 px` (rộng `1680 px`) | `80 px → 920 px` |
 | **Safe Zone dọc (`Y`)** | `96 px → 980 px` (chừa `100 px` đáy cho thanh tua YouTube) | `170 px → 1420 px` |
 | **Mật độ lời thoại mục tiêu** | **`≤ 26 từ/câu` · `120 – 140 từ/phút` (`~500 – 650 từ` cho tập 4–5 phút)** *(trần cứng Gate 0: `35 từ/câu`, `185 từ/phút`)* | `≤ 22 từ/câu` · `≤ 115 từ/56s` |
-| **Tỷ lệ Kịch / Đồ họa** | **`~80%` hành động & đối thoại nhân vật (`≥ 10–16` ảnh có người) · `~20%` sơ đồ & Người Bóc Trần** | `~90%` tình huống · `~10%` kết |
+| **Tỷ lệ Kịch / Bóc trần** | **`~97%` hành động & tâm lý nhân vật (`≥ 15–19` cảnh) · `~3%` (`5–10 giây`) Người Bóc Trần đúc kết ý chính** | `~90%` tình huống · `~10%` kết |
 | **Thẻ Dấu Hiệu (`red_flags`)** | `3 – 6 dấu hiệu` + `1 hành động phòng vệ gốc` | `2 – 4 dấu hiệu` + `1 việc nên làm` |
 | **Thư mục xuất bản Master** | `06_RENDERED_VIDEOS/` | `06_RENDERED_SHORTS/` |
 

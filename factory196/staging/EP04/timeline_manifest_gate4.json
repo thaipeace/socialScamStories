@@ -1,0 +1,2009 @@
+{
+  "episode_id": "EP04",
+  "factory": "factory196",
+  "gate": "GATE_4_TIMELINE_SAFE_ZONE",
+  "preview_only": false,
+  "canvas": {
+    "width": 1920,
+    "height": 1080,
+    "fps": 30,
+    "aspect_ratio": "16:9",
+    "total_frames": 7943,
+    "total_duration_sec": 264.78
+  },
+  "safe_zone_rules": {
+    "left_x": 120,
+    "right_x": 1800,
+    "max_y": 980,
+    "top_hook_y": 96,
+    "platform_ui_bottom_y": 980,
+    "all_overlays_compliant": true
+  },
+  "scenes": [
+    {
+      "id": "s00_idol_frenzy",
+      "image": "assets/c00.jpg",
+      "start": 0.0,
+      "end": 7.94,
+      "motion": {
+        "scale": [
+          1.04,
+          1.14
+        ],
+        "focus": [
+          [
+            0.5,
+            0.5
+          ],
+          [
+            0.48,
+            0.45
+          ]
+        ],
+        "wobble": "tense"
+      },
+      "shakes": [
+        {
+          "at": 0.2,
+          "dur": 0.4,
+          "amp": 18
+        }
+      ]
+    },
+    {
+      "id": "s01_hook_panic",
+      "image": "assets/c01.jpg",
+      "start": 7.94,
+      "end": 26.14,
+      "motion": {
+        "scale": [
+          1.04,
+          1.14
+        ],
+        "focus": [
+          [
+            0.5,
+            0.5
+          ],
+          [
+            0.48,
+            0.45
+          ]
+        ],
+        "wobble": "tense"
+      },
+      "transition_in": {
+        "type": "flash_white",
+        "dur": 0.25
+      },
+      "shakes": [
+        {
+          "at": 8.14,
+          "dur": 0.4,
+          "amp": 18
+        }
+      ]
+    },
+    {
+      "id": "s02_hook_freeze",
+      "image": "assets/c02.jpg",
+      "start": 26.14,
+      "end": 42.41,
+      "motion": {
+        "scale": [
+          1.0,
+          1.16
+        ],
+        "focus": [
+          [
+            0.5,
+            0.5
+          ],
+          [
+            0.5,
+            0.45
+          ]
+        ],
+        "wobble": "tense"
+      },
+      "transition_in": {
+        "type": "flash_white",
+        "dur": 0.25
+      }
+    },
+    {
+      "id": "s03_booth_heat",
+      "image": "assets/c03.jpg",
+      "start": 42.41,
+      "end": 50.3,
+      "motion": {
+        "scale": [
+          1.02,
+          1.09
+        ],
+        "focus": [
+          [
+            0.5,
+            0.5
+          ],
+          [
+            0.5,
+            0.47
+          ]
+        ],
+        "wobble": "calm"
+      },
+      "transition_in": {
+        "type": "fade_black",
+        "dur": 0.4
+      }
+    },
+    {
+      "id": "s04_trang_arrival",
+      "image": "assets/c04.jpg",
+      "start": 50.3,
+      "end": 71.69,
+      "motion": {
+        "scale": [
+          1.02,
+          1.09
+        ],
+        "focus": [
+          [
+            0.5,
+            0.5
+          ],
+          [
+            0.5,
+            0.47
+          ]
+        ],
+        "wobble": "calm"
+      },
+      "transition_in": {
+        "type": "dissolve",
+        "dur": 0.35
+      }
+    },
+    {
+      "id": "s05_sold_out_bait",
+      "image": "assets/c05.jpg",
+      "start": 71.69,
+      "end": 93.16,
+      "motion": {
+        "scale": [
+          1.02,
+          1.1
+        ],
+        "focus": [
+          [
+            0.46,
+            0.48
+          ],
+          [
+            0.54,
+            0.46
+          ]
+        ],
+        "wobble": "handheld"
+      },
+      "transition_in": {
+        "type": "fade_black",
+        "dur": 0.35
+      }
+    },
+    {
+      "id": "s06_euphoria_collecting",
+      "image": "assets/c06.jpg",
+      "start": 93.16,
+      "end": 113.82,
+      "motion": {
+        "scale": [
+          1.02,
+          1.09
+        ],
+        "focus": [
+          [
+            0.5,
+            0.5
+          ],
+          [
+            0.5,
+            0.47
+          ]
+        ],
+        "wobble": "calm"
+      },
+      "transition_in": {
+        "type": "fade_black",
+        "dur": 0.4
+      }
+    },
+    {
+      "id": "s07_transfer_300m",
+      "image": "assets/c07.jpg",
+      "start": 113.82,
+      "end": 118.17,
+      "motion": {
+        "scale": [
+          1.0,
+          1.16
+        ],
+        "focus": [
+          [
+            0.5,
+            0.5
+          ],
+          [
+            0.5,
+            0.45
+          ]
+        ],
+        "wobble": "tense"
+      },
+      "transition_in": {
+        "type": "dissolve",
+        "dur": 0.3
+      }
+    },
+    {
+      "id": "s08_chihai_secret_photo",
+      "image": "assets/c08.jpg",
+      "start": 118.17,
+      "end": 125.92,
+      "motion": {
+        "scale": [
+          1.0,
+          1.16
+        ],
+        "focus": [
+          [
+            0.5,
+            0.5
+          ],
+          [
+            0.5,
+            0.45
+          ]
+        ],
+        "wobble": "tense"
+      },
+      "transition_in": {
+        "type": "dissolve",
+        "dur": 0.35
+      }
+    },
+    {
+      "id": "s09_blocked_shock",
+      "image": "assets/c09.jpg",
+      "start": 125.92,
+      "end": 132.87,
+      "motion": {
+        "scale": [
+          1.04,
+          1.14
+        ],
+        "focus": [
+          [
+            0.5,
+            0.5
+          ],
+          [
+            0.48,
+            0.45
+          ]
+        ],
+        "wobble": "tense"
+      },
+      "transition_in": {
+        "type": "fade_black",
+        "dur": 0.4
+      },
+      "shakes": [
+        {
+          "at": 126.22,
+          "dur": 0.4,
+          "amp": 18
+        }
+      ]
+    },
+    {
+      "id": "s10_call_channel_abyss",
+      "image": "assets/c10.jpg",
+      "start": 132.87,
+      "end": 176.05,
+      "motion": {
+        "scale": [
+          1.0,
+          1.16
+        ],
+        "focus": [
+          [
+            0.5,
+            0.5
+          ],
+          [
+            0.5,
+            0.45
+          ]
+        ],
+        "wobble": "tense"
+      },
+      "transition_in": {
+        "type": "flash_red",
+        "dur": 0.3
+      },
+      "shakes": [
+        {
+          "at": 133.07,
+          "dur": 0.4,
+          "amp": 18
+        }
+      ]
+    },
+    {
+      "id": "s11_begging_group_backlash",
+      "image": "assets/c11.jpg",
+      "start": 176.05,
+      "end": 194.61,
+      "motion": {
+        "scale": [
+          1.02,
+          1.1
+        ],
+        "focus": [
+          [
+            0.46,
+            0.48
+          ],
+          [
+            0.54,
+            0.46
+          ]
+        ],
+        "wobble": "handheld"
+      },
+      "transition_in": {
+        "type": "dissolve",
+        "dur": 0.3
+      }
+    },
+    {
+      "id": "s12_utter_isolation",
+      "image": "assets/c12.jpg",
+      "start": 194.61,
+      "end": 205.72,
+      "motion": {
+        "scale": [
+          1.12,
+          1.02
+        ],
+        "focus": [
+          [
+            0.5,
+            0.46
+          ],
+          [
+            0.5,
+            0.5
+          ]
+        ],
+        "wobble": "calm"
+      },
+      "transition_in": {
+        "type": "dissolve",
+        "dur": 0.35
+      }
+    },
+    {
+      "id": "s13_chihai_dossier",
+      "image": "assets/c13.jpg",
+      "start": 205.72,
+      "end": 226.03,
+      "motion": {
+        "scale": [
+          1.0,
+          1.16
+        ],
+        "focus": [
+          [
+            0.5,
+            0.5
+          ],
+          [
+            0.5,
+            0.45
+          ]
+        ],
+        "wobble": "tense"
+      },
+      "transition_in": {
+        "type": "fade_black",
+        "dur": 0.4
+      }
+    },
+    {
+      "id": "s17_red_flags",
+      "image": "factory196/materialAndDraft/EP01b/assets/scene18.jpg",
+      "start": 226.03,
+      "end": 236.36,
+      "motion": {
+        "scale": [
+          1.0,
+          1.05
+        ],
+        "focus": [
+          [
+            0.5,
+            0.5
+          ],
+          [
+            0.5,
+            0.5
+          ]
+        ],
+        "wobble": "none"
+      },
+      "transition_in": {
+        "type": "fade_black",
+        "dur": 0.3
+      }
+    },
+    {
+      "id": "s14_leaving_station",
+      "image": "assets/c14.jpg",
+      "start": 236.36,
+      "end": 245.59,
+      "motion": {
+        "scale": [
+          1.02,
+          1.09
+        ],
+        "focus": [
+          [
+            0.5,
+            0.5
+          ],
+          [
+            0.5,
+            0.47
+          ]
+        ],
+        "wobble": "calm"
+      },
+      "transition_in": {
+        "type": "fade_black",
+        "dur": 0.4
+      }
+    },
+    {
+      "id": "s15_chihai_conspiracy_call",
+      "image": "assets/c15.jpg",
+      "start": 245.59,
+      "end": 256.08,
+      "motion": {
+        "scale": [
+          1.0,
+          1.16
+        ],
+        "focus": [
+          [
+            0.5,
+            0.5
+          ],
+          [
+            0.5,
+            0.45
+          ]
+        ],
+        "wobble": "tense"
+      },
+      "transition_in": {
+        "type": "dissolve",
+        "dur": 0.35
+      }
+    },
+    {
+      "id": "s16_black_cut",
+      "image": "assets/c16.jpg",
+      "start": 256.08,
+      "end": 259.93,
+      "motion": {
+        "scale": [
+          1.0,
+          1.05
+        ],
+        "focus": [
+          [
+            0.5,
+            0.5
+          ],
+          [
+            0.5,
+            0.5
+          ]
+        ],
+        "wobble": "none"
+      },
+      "transition_in": {
+        "type": "fade_black",
+        "dur": 0.1
+      }
+    },
+    {
+      "id": "s18_disclaimer",
+      "image": "factory196/materialAndDraft/EP01b/assets/scene18.jpg",
+      "start": 259.93,
+      "end": 264.78,
+      "motion": {
+        "scale": [
+          1.0,
+          1.05
+        ],
+        "focus": [
+          [
+            0.5,
+            0.5
+          ],
+          [
+            0.5,
+            0.5
+          ]
+        ],
+        "wobble": "none"
+      },
+      "transition_in": {
+        "type": "fade_black",
+        "dur": 0.35
+      }
+    }
+  ],
+  "subtitle_srt": "factory196/staging/EP04/subtitles/EP04.srt",
+  "video_track_noaudio": "factory196/staging/EP04/timeline_video_gate4.mp4",
+  "channel_branding": {
+    "type": "channel_branding",
+    "logo_text": "VCH",
+    "watermark_text": "VẠN CHUYỆN",
+    "safe_zone_compliant": true
+  },
+  "overlays": [
+    {
+      "id": "000_hook",
+      "start_sec": 0.4,
+      "end_sec": 5.6,
+      "fade_sec": 0.3,
+      "png_path": "factory196/staging/EP04/overlays/000_hook.png",
+      "type": "text_hook",
+      "text": "CƠN SỐT SĂN VÉ ĐU THẦN TƯỢNG · ĐÊM CHUNG KẾT — SỐNG CHẾT GÀO THÉT VÌ THẦN TƯỢNG – CÚ RƠI 300 TRIỆU CỦA CÔ TRƯỞNG NHÓM",
+      "bbox_px": [
+        251,
+        96,
+        1670,
+        278
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "001_chapter1",
+      "start_sec": 42.61,
+      "end_sec": 47.21,
+      "fade_sec": 0.3,
+      "png_path": "factory196/staging/EP04/overlays/001_chapter1.png",
+      "type": "chapter_card",
+      "text": "HỒI 1 · SÁU THÁNG TRƯỚC — MÓN QUÀ MIỄN PHÍ NGOÀI ĐỜI & CÁI BẪY “VÉ NỘI BỘ”",
+      "bbox_px": [
+        438,
+        96,
+        1483,
+        208
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "002_chapter2",
+      "start_sec": 93.36,
+      "end_sec": 97.96,
+      "fade_sec": 0.3,
+      "png_path": "factory196/staging/EP04/overlays/002_chapter2.png",
+      "type": "chapter_card",
+      "text": "HỒI 2 · MƯỜI NGÀY TRƯỚC ĐÊM DIỄN — HÀO QUANG TRƯỞNG NHÓM & ÁNH MẮT LẠNH CỦA CHỊ HAI",
+      "bbox_px": [
+        390,
+        96,
+        1531,
+        208
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "003_chapter3",
+      "start_sec": 126.12,
+      "end_sec": 130.72,
+      "fade_sec": 0.3,
+      "png_path": "factory196/staging/EP04/overlays/003_chapter3.png",
+      "type": "chapter_card",
+      "text": "HỒI 3 · BA NGÀY TRƯỚC ĐÊM DIỄN — CUỘC GỌI RƠI XUỐNG VỰC THẲM & SỰ CÔ ĐƠN CÙNG CỰC",
+      "bbox_px": [
+        390,
+        96,
+        1530,
+        208
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "004_chapter4",
+      "start_sec": 205.92,
+      "end_sec": 210.52,
+      "fade_sec": 0.3,
+      "png_path": "factory196/staging/EP04/overlays/004_chapter4.png",
+      "type": "chapter_card",
+      "text": "HỒI 4 · XẤP HỒ SƠ MẬT — SỰ CAO TAY CỦA CHỊ HAI & CUỘC GỌI SAU LƯNG",
+      "bbox_px": [
+        481,
+        96,
+        1439,
+        208
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "005_sub_l00_fannam",
+      "start_sec": 0.5,
+      "end_sec": 4.456,
+      "fade_sec": 0.1,
+      "png_path": "factory196/staging/EP04/overlays/005_sub_l00_fannam.png",
+      "type": "subtitle",
+      "lines": [
+        "Đêm chung kết tháng Sáu có nhịn ăn nhịn mặc tụi em cũng phải săn bằng",
+        "được vé!"
+      ],
+      "bbox_px": [
+        249,
+        854,
+        1672,
+        958
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "006_sub_l00_fannam",
+      "start_sec": 4.456,
+      "end_sec": 7.6,
+      "fade_sec": 0.1,
+      "png_path": "factory196/staging/EP04/overlays/006_sub_l00_fannam.png",
+      "type": "subtitle",
+      "lines": [
+        "Sống chết gì cũng phải đu theo thần tượng tới cùng nha chị Na!"
+      ],
+      "bbox_px": [
+        342,
+        906,
+        1578,
+        958
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "007_sub_l01_fannu",
+      "start_sec": 8.49,
+      "end_sec": 11.657,
+      "fade_sec": 0.1,
+      "png_path": "factory196/staging/EP04/overlays/007_sub_l01_fannu.png",
+      "type": "subtitle",
+      "lines": [
+        "Tụi em chuyển tiền vé thẳng vô tài khoản tên chị!"
+      ],
+      "bbox_px": [
+        482,
+        906,
+        1439,
+        958
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "008_sub_l01_fannu",
+      "start_sec": 11.657,
+      "end_sec": 15.922,
+      "fade_sec": 0.1,
+      "png_path": "factory196/staging/EP04/overlays/008_sub_l01_fannu.png",
+      "type": "subtitle",
+      "lines": [
+        "Thứ Bảy diễn rồi, vé đâu hay chị định ôm tiền của tụi em trốn hả?!"
+      ],
+      "bbox_px": [
+        321,
+        906,
+        1599,
+        958
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "009_sub_l02_na",
+      "start_sec": 16.26,
+      "end_sec": 25.8,
+      "fade_sec": 0.1,
+      "png_path": "factory196/staging/EP04/overlays/009_sub_l02_na.png",
+      "type": "subtitle",
+      "lines": [
+        "Em thề không ăn lời 1 đồng nào! Toàn bộ 300 triệu của 150 vé em đã",
+        "chuyển hết cho chị Trang rồi mà!"
+      ],
+      "bbox_px": [
+        299,
+        854,
+        1622,
+        958
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "010_sub_l03_fannam",
+      "start_sec": 26.49,
+      "end_sec": 32.771,
+      "fade_sec": 0.1,
+      "png_path": "factory196/staging/EP04/overlays/010_sub_l03_fannam.png",
+      "type": "subtitle",
+      "lines": [
+        "Cái gì?! 300 triệu tiền mặt mà chị chuyển không giấy tờ?! Giờ mất trắng thì",
+        "chị phải đền!"
+      ],
+      "bbox_px": [
+        239,
+        854,
+        1681,
+        958
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "011_sub_l04_narr",
+      "start_sec": 33.11,
+      "end_sec": 41.57,
+      "fade_sec": 0.1,
+      "png_path": "factory196/staging/EP04/overlays/011_sub_l04_narr.png",
+      "type": "subtitle",
+      "lines": [
+        "Từ cơn cuồng nhiệt sống chết vì thần tượng đến vực thẳm chỉ cách nhau",
+        "một cú bấm chuyển khoản 300 triệu."
+      ],
+      "bbox_px": [
+        253,
+        854,
+        1668,
+        958
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "012_sub_l05_fannam",
+      "start_sec": 43.06,
+      "end_sec": 49.96,
+      "fade_sec": 0.1,
+      "png_path": "factory196/staging/EP04/overlays/012_sub_l05_fannam.png",
+      "type": "subtitle",
+      "lines": [
+        "Chị Na ơi, nắng gắt quá mà loa kéo hư, quạt cầm tay cũng hết sạch pin rồi!"
+      ],
+      "bbox_px": [
+        239,
+        906,
+        1681,
+        958
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "013_sub_l06_trang",
+      "start_sec": 50.65,
+      "end_sec": 52.824,
+      "fade_sec": 0.1,
+      "png_path": "factory196/staging/EP04/overlays/013_sub_l06_trang.png",
+      "type": "subtitle",
+      "lines": [
+        "Chị Trang bên Kênh Hậu Trường nè Na."
+      ],
+      "bbox_px": [
+        569,
+        906,
+        1351,
+        958
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "014_sub_l06_trang",
+      "start_sec": 52.824,
+      "end_sec": 56.75,
+      "fade_sec": 0.1,
+      "png_path": "factory196/staging/EP04/overlays/014_sub_l06_trang.png",
+      "type": "subtitle",
+      "lines": [
+        "Đợt trước tặng áo, nay chị mang loa với quạt qua tiếp sức tụi em."
+      ],
+      "bbox_px": [
+        326,
+        906,
+        1595,
+        958
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "015_sub_l07_na",
+      "start_sec": 57.09,
+      "end_sec": 59.092,
+      "fade_sec": 0.1,
+      "png_path": "factory196/staging/EP04/overlays/015_sub_l07_na.png",
+      "type": "subtitle",
+      "lines": [
+        "Trời ơi chị Trang chu đáo quá!"
+      ],
+      "bbox_px": [
+        656,
+        906,
+        1264,
+        958
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "016_sub_l07_na",
+      "start_sec": 59.092,
+      "end_sec": 63.83,
+      "fade_sec": 0.1,
+      "png_path": "factory196/staging/EP04/overlays/016_sub_l07_na.png",
+      "type": "subtitle",
+      "lines": [
+        "Mấy đợt liền chị toàn bỏ tiền túi phụ tụi em không công, ngại ghê luôn."
+      ],
+      "bbox_px": [
+        280,
+        906,
+        1641,
+        958
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "017_sub_l08_trang",
+      "start_sec": 64.17,
+      "end_sec": 68.99,
+      "fade_sec": 0.1,
+      "png_path": "factory196/staging/EP04/overlays/017_sub_l08_trang.png",
+      "type": "subtitle",
+      "lines": [
+        "Chỗ chị em quý nghệ sĩ cả mà, tính toán chi mấy chuyện nhỏ."
+      ],
+      "bbox_px": [
+        364,
+        906,
+        1556,
+        958
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "018_sub_l08_trang",
+      "start_sec": 68.99,
+      "end_sec": 70.95,
+      "fade_sec": 0.1,
+      "png_path": "factory196/staging/EP04/overlays/018_sub_l08_trang.png",
+      "type": "subtitle",
+      "lines": [
+        "Nhóm cần gì cứ nhắn chị."
+      ],
+      "bbox_px": [
+        701,
+        906,
+        1219,
+        958
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "019_sub_l09_fannu",
+      "start_sec": 72.04,
+      "end_sec": 76.175,
+      "fade_sec": 0.1,
+      "png_path": "factory196/staging/EP04/overlays/019_sub_l09_fannu.png",
+      "type": "subtitle",
+      "lines": [
+        "Mới mở bán năm phút đã cháy sạch vé rồi chị Na ơi!"
+      ],
+      "bbox_px": [
+        450,
+        906,
+        1470,
+        958
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "020_sub_l09_fannu",
+      "start_sec": 76.175,
+      "end_sec": 77.415,
+      "fade_sec": 0.1,
+      "png_path": "factory196/staging/EP04/overlays/020_sub_l09_fannu.png",
+      "type": "subtitle",
+      "lines": [
+        "Cứu tụi em với!"
+      ],
+      "bbox_px": [
+        796,
+        906,
+        1125,
+        958
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "021_sub_l10_trang",
+      "start_sec": 78.36,
+      "end_sec": 84.689,
+      "fade_sec": 0.1,
+      "png_path": "factory196/staging/EP04/overlays/021_sub_l10_trang.png",
+      "type": "subtitle",
+      "lines": [
+        "Na ơi, bên chị là đối tác truyền thông đêm nhạc nên có suất vé nội bộ giá",
+        "gốc 2 triệu."
+      ],
+      "bbox_px": [
+        257,
+        854,
+        1664,
+        958
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "022_sub_l11_trang",
+      "start_sec": 85.03,
+      "end_sec": 87.063,
+      "fade_sec": 0.1,
+      "png_path": "factory196/staging/EP04/overlays/022_sub_l11_trang.png",
+      "type": "subtitle",
+      "lines": [
+        "Bên chị không xuất lẻ từng người."
+      ],
+      "bbox_px": [
+        620,
+        906,
+        1301,
+        958
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "023_sub_l11_trang",
+      "start_sec": 87.063,
+      "end_sec": 92.422,
+      "fade_sec": 0.1,
+      "png_path": "factory196/staging/EP04/overlays/023_sub_l11_trang.png",
+      "type": "subtitle",
+      "lines": [
+        "Em đứng ra gom tiền của nhóm về một mối rồi chuyển qua tài khoản chị",
+        "giữ suất đoàn nha."
+      ],
+      "bbox_px": [
+        262,
+        854,
+        1659,
+        958
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "024_sub_l12_fannu",
+      "start_sec": 93.81,
+      "end_sec": 100.922,
+      "fade_sec": 0.1,
+      "png_path": "factory196/staging/EP04/overlays/024_sub_l12_fannu.png",
+      "type": "subtitle",
+      "lines": [
+        "Em vừa chuyển 4 triệu 2 vé vô tài khoản chị Na nha! Chỉ có chị Na mới xin",
+        "được suất nội bộ thôi!"
+      ],
+      "bbox_px": [
+        246,
+        854,
+        1675,
+        958
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "025_sub_l13_fannam",
+      "start_sec": 101.26,
+      "end_sec": 106.196,
+      "fade_sec": 0.1,
+      "png_path": "factory196/staging/EP04/overlays/025_sub_l13_fannam.png",
+      "type": "subtitle",
+      "lines": [
+        "Em cũng chuyển 6 triệu 3 vé rồi đó! Chị Na đúng là cứu tinh của cả nhóm!"
+      ],
+      "bbox_px": [
+        247,
+        906,
+        1673,
+        958
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "026_sub_l14_na",
+      "start_sec": 106.54,
+      "end_sec": 113.48,
+      "fade_sec": 0.1,
+      "png_path": "factory196/staging/EP04/overlays/026_sub_l14_na.png",
+      "type": "subtitle",
+      "lines": [
+        "Mọi người cứ yên tâm! Đúng giá gốc 2 triệu 1 vé, tuần sau đối tác xuất mã",
+        "đoàn là chị phát liền!"
+      ],
+      "bbox_px": [
+        247,
+        854,
+        1674,
+        958
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "027_sub_l15_chihai",
+      "start_sec": 119.32,
+      "end_sec": 124.98,
+      "fade_sec": 0.1,
+      "png_path": "factory196/staging/EP04/overlays/027_sub_l15_chihai.png",
+      "type": "subtitle",
+      "lines": [
+        "Suất vé của đối tác truyền thông lớn… mà lại thu 300 triệu qua tài khoản cá",
+        "nhân?"
+      ],
+      "bbox_px": [
+        236,
+        854,
+        1684,
+        958
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "028_sub_l16_na",
+      "start_sec": 126.67,
+      "end_sec": 127.493,
+      "fade_sec": 0.1,
+      "png_path": "factory196/staging/EP04/overlays/028_sub_l16_na.png",
+      "type": "subtitle",
+      "lines": [
+        "Thứ Tư rồi…"
+      ],
+      "bbox_px": [
+        822,
+        906,
+        1099,
+        958
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "029_sub_l16_na",
+      "start_sec": 127.493,
+      "end_sec": 132.13,
+      "fade_sec": 0.1,
+      "png_path": "factory196/staging/EP04/overlays/029_sub_l16_na.png",
+      "type": "subtitle",
+      "lines": [
+        "Sao số chị Trang thuê bao, tin nhắn cũng chặn em luôn vậy nè?!"
+      ],
+      "bbox_px": [
+        338,
+        906,
+        1583,
+        958
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "030_sub_l17_na",
+      "start_sec": 133.82,
+      "end_sec": 141.88,
+      "fade_sec": 0.1,
+      "png_path": "factory196/staging/EP04/overlays/030_sub_l17_na.png",
+      "type": "subtitle",
+      "lines": [
+        "Dạ… cho em gặp chị Trang… Chị Trang nhận 300 triệu tiền vé nội bộ của",
+        "nhóm em mà giờ khóa máy rồi anh ơi…"
+      ],
+      "bbox_px": [
+        258,
+        854,
+        1662,
+        958
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "031_sub_l18_kenh",
+      "start_sec": 142.22,
+      "end_sec": 143.292,
+      "fade_sec": 0.1,
+      "png_path": "factory196/staging/EP04/overlays/031_sub_l18_kenh.png",
+      "type": "subtitle",
+      "lines": [
+        "Em nghe rõ này."
+      ],
+      "bbox_px": [
+        789,
+        906,
+        1132,
+        958
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "032_sub_l18_kenh",
+      "start_sec": 143.292,
+      "end_sec": 149.652,
+      "fade_sec": 0.1,
+      "png_path": "factory196/staging/EP04/overlays/032_sub_l18_kenh.png",
+      "type": "subtitle",
+      "lines": [
+        "Bên anh không có nhân sự nào tên Trang, và Kênh Hậu Trường tuyệt đối",
+        "không bán vé nội bộ."
+      ],
+      "bbox_px": [
+        256,
+        854,
+        1664,
+        958
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "033_sub_l19_na",
+      "start_sec": 149.99,
+      "end_sec": 157.53,
+      "fade_sec": 0.1,
+      "png_path": "factory196/staging/EP04/overlays/033_sub_l19_na.png",
+      "type": "subtitle",
+      "lines": [
+        "Không… không thể nào đâu anh! Bả đeo thẻ kênh mình, mang loa quạt phụ",
+        "tụi em suốt 6 tháng nay mà!"
+      ],
+      "bbox_px": [
+        236,
+        854,
+        1685,
+        958
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "034_sub_l19b_na",
+      "start_sec": 157.87,
+      "end_sec": 163.77,
+      "fade_sec": 0.1,
+      "png_path": "factory196/staging/EP04/overlays/034_sub_l19b_na.png",
+      "type": "subtitle",
+      "lines": [
+        "Anh kiểm tra lại giùm em đi, 300 triệu của 150 bạn trong nhóm em đó anh",
+        "ơi…"
+      ],
+      "bbox_px": [
+        254,
+        854,
+        1667,
+        958
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "035_sub_l20_kenh",
+      "start_sec": 164.11,
+      "end_sec": 166.48,
+      "fade_sec": 0.1,
+      "png_path": "factory196/staging/EP04/overlays/035_sub_l20_kenh.png",
+      "type": "subtitle",
+      "lines": [
+        "Bên anh vừa đăng cảnh báo bị mạo danh rồi."
+      ],
+      "bbox_px": [
+        520,
+        906,
+        1400,
+        958
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "036_sub_l20_kenh",
+      "start_sec": 166.48,
+      "end_sec": 170.542,
+      "fade_sec": 0.1,
+      "png_path": "factory196/staging/EP04/overlays/036_sub_l20_kenh.png",
+      "type": "subtitle",
+      "lines": [
+        "Kênh không nhận tiền nên công an không lập hồ sơ theo đơn của kênh",
+        "được."
+      ],
+      "bbox_px": [
+        275,
+        854,
+        1646,
+        958
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "037_sub_l20b_kenh",
+      "start_sec": 170.88,
+      "end_sec": 174.912,
+      "fade_sec": 0.1,
+      "png_path": "factory196/staging/EP04/overlays/037_sub_l20b_kenh.png",
+      "type": "subtitle",
+      "lines": [
+        "Chính em là người chuyển 300 triệu cho bả, nên em phải tự đi trình báo",
+        "ngay đi."
+      ],
+      "bbox_px": [
+        271,
+        854,
+        1650,
+        958
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "038_sub_l21_na",
+      "start_sec": 176.4,
+      "end_sec": 179.076,
+      "fade_sec": 0.1,
+      "png_path": "factory196/staging/EP04/overlays/038_sub_l21_na.png",
+      "type": "subtitle",
+      "lines": [
+        "Mọi người ơi… chị Trang lừa em rồi…"
+      ],
+      "bbox_px": [
+        584,
+        906,
+        1336,
+        958
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "039_sub_l21_na",
+      "start_sec": 179.076,
+      "end_sec": 186.34,
+      "fade_sec": 0.1,
+      "png_path": "factory196/staging/EP04/overlays/039_sub_l21_na.png",
+      "type": "subtitle",
+      "lines": [
+        "Em thề em không giữ của mọi người một đồng nào hết, cho em thêm thời",
+        "gian tìm bả nha mọi người…"
+      ],
+      "bbox_px": [
+        248,
+        854,
+        1672,
+        958
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "040_sub_l22_fannu",
+      "start_sec": 186.68,
+      "end_sec": 194.272,
+      "fade_sec": 0.1,
+      "png_path": "factory196/staging/EP04/overlays/040_sub_l22_fannu.png",
+      "type": "subtitle",
+      "lines": [
+        "Đừng có diễn nước mắt cá sấu! Làm gì có ai chuyển 300 triệu không giấy",
+        "tờ! Chắc chắn chị ăn chia với bả!"
+      ],
+      "bbox_px": [
+        253,
+        854,
+        1668,
+        958
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "041_sub_l23_fannam",
+      "start_sec": 194.96,
+      "end_sec": 198.374,
+      "fade_sec": 0.1,
+      "png_path": "factory196/staging/EP04/overlays/041_sub_l23_fannam.png",
+      "type": "subtitle",
+      "lines": [
+        "Tụi này chỉ biết tiền chuyển vô tài khoản tên chị!"
+      ],
+      "bbox_px": [
+        489,
+        906,
+        1432,
+        958
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "042_sub_l23_fannam",
+      "start_sec": 198.374,
+      "end_sec": 204.179,
+      "fade_sec": 0.1,
+      "png_path": "factory196/staging/EP04/overlays/042_sub_l23_fannam.png",
+      "type": "subtitle",
+      "lines": [
+        "Sáng mai không ói đủ tiền ra, tụi này kéo tới tận nhà, cho chị khỏi nhìn mặt",
+        "ai luôn!"
+      ],
+      "bbox_px": [
+        238,
+        854,
+        1683,
+        958
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "043_sub_l24_chihai",
+      "start_sec": 206.47,
+      "end_sec": 207.39,
+      "fade_sec": 0.1,
+      "png_path": "factory196/staging/EP04/overlays/043_sub_l24_chihai.png",
+      "type": "subtitle",
+      "lines": [
+        "Lau mặt đi."
+      ],
+      "bbox_px": [
+        839,
+        906,
+        1082,
+        958
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "044_sub_l24_chihai",
+      "start_sec": 207.39,
+      "end_sec": 210.65,
+      "fade_sec": 0.1,
+      "png_path": "factory196/staging/EP04/overlays/044_sub_l24_chihai.png",
+      "type": "subtitle",
+      "lines": [
+        "Sáng mai cầm xấp hồ sơ này lên công an."
+      ],
+      "bbox_px": [
+        550,
+        906,
+        1371,
+        958
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "045_sub_l25_na",
+      "start_sec": 211.29,
+      "end_sec": 212.139,
+      "fade_sec": 0.1,
+      "png_path": "factory196/staging/EP04/overlays/045_sub_l25_na.png",
+      "type": "subtitle",
+      "lines": [
+        "Ủa chị Hai…"
+      ],
+      "bbox_px": [
+        827,
+        906,
+        1093,
+        958
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "046_sub_l25_na",
+      "start_sec": 212.139,
+      "end_sec": 217.31,
+      "fade_sec": 0.1,
+      "png_path": "factory196/staging/EP04/overlays/046_sub_l25_na.png",
+      "type": "subtitle",
+      "lines": [
+        "sao chị có ảnh chụp màn hình lúc em chuyển khoản từ tuần trước vậy?"
+      ],
+      "bbox_px": [
+        270,
+        906,
+        1650,
+        958
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "047_sub_l26_chihai",
+      "start_sec": 218.15,
+      "end_sec": 222.106,
+      "fade_sec": 0.1,
+      "png_path": "factory196/staging/EP04/overlays/047_sub_l26_chihai.png",
+      "type": "subtitle",
+      "lines": [
+        "Tài khoản đó chị đã gửi người bên điều tra từ đêm hôm ấy rồi."
+      ],
+      "bbox_px": [
+        356,
+        906,
+        1564,
+        958
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "048_sub_l26_chihai",
+      "start_sec": 222.106,
+      "end_sec": 224.182,
+      "fade_sec": 0.1,
+      "png_path": "factory196/staging/EP04/overlays/048_sub_l26_chihai.png",
+      "type": "subtitle",
+      "lines": [
+        "Cứ trình báo đúng như trong này…"
+      ],
+      "bbox_px": [
+        611,
+        906,
+        1309,
+        958
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "049_sub_l26_chihai",
+      "start_sec": 224.182,
+      "end_sec": 225.09,
+      "fade_sec": 0.1,
+      "png_path": "factory196/staging/EP04/overlays/049_sub_l26_chihai.png",
+      "type": "subtitle",
+      "lines": [
+        "đừng hỏi thêm."
+      ],
+      "bbox_px": [
+        799,
+        906,
+        1121,
+        958
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "050_sub_l27_narr",
+      "start_sec": 226.58,
+      "end_sec": 235.72,
+      "fade_sec": 0.1,
+      "png_path": "factory196/staging/EP04/overlays/050_sub_l27_narr.png",
+      "type": "subtitle",
+      "lines": [
+        "Hào quang đám đông và lòng tin người quen ngoài đời — đó là cái bẫy biến",
+        "người gom hộ thành kẻ đứng mũi chịu sào."
+      ],
+      "bbox_px": [
+        231,
+        854,
+        1690,
+        958
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "051_sub_l28_na",
+      "start_sec": 237.01,
+      "end_sec": 242.593,
+      "fade_sec": 0.1,
+      "png_path": "factory196/staging/EP04/overlays/051_sub_l28_na.png",
+      "type": "subtitle",
+      "lines": [
+        "May mà chị Hai âm thầm báo trước một tuần nên bên điều tra đã kịp",
+        "khoanh vùng dòng tiền…"
+      ],
+      "bbox_px": [
+        303,
+        854,
+        1618,
+        958
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "052_sub_l28_na",
+      "start_sec": 242.593,
+      "end_sec": 244.75,
+      "fade_sec": 0.1,
+      "png_path": "factory196/staging/EP04/overlays/052_sub_l28_na.png",
+      "type": "subtitle",
+      "lines": [
+        "Không có chị Hai chắc em chết mất."
+      ],
+      "bbox_px": [
+        604,
+        906,
+        1316,
+        958
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "053_sub_l29_secret",
+      "start_sec": 246.74,
+      "end_sec": 253.452,
+      "fade_sec": 0.1,
+      "png_path": "factory196/staging/EP04/overlays/053_sub_l29_secret.png",
+      "type": "subtitle",
+      "lines": [
+        "Con bé nộp đơn đúng như kịch bản rồi hả? Còn khoản 300 triệu bên nhánh",
+        "con Trang, giờ tính sao?"
+      ],
+      "bbox_px": [
+        237,
+        854,
+        1683,
+        958
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "054_sub_l30_chihai",
+      "start_sec": 254.2,
+      "end_sec": 255.54,
+      "fade_sec": 0.1,
+      "png_path": "factory196/staging/EP04/overlays/054_sub_l30_chihai.png",
+      "type": "subtitle",
+      "lines": [
+        "Cứ để đó!"
+      ],
+      "bbox_px": [
+        850,
+        906,
+        1071,
+        958
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "055_chat1",
+      "start_sec": 8.49,
+      "end_sec": 14.29,
+      "fade_sec": 0.15,
+      "png_path": "factory196/staging/EP04/overlays/055_chat1.png",
+      "type": "chat_bubble",
+      "text": "Thứ Bảy diễn rồi! Vé đâu hay chị định ôm tiền của tụi em trốn hả?!",
+      "sender": "NHÓM FAN ÁNH SAO",
+      "bbox_px": [
+        180,
+        260,
+        894,
+        446
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "056_chat2",
+      "start_sec": 26.59,
+      "end_sec": 32.09,
+      "fade_sec": 0.15,
+      "png_path": "factory196/staging/EP04/overlays/056_chat2.png",
+      "type": "chat_bubble",
+      "text": "Cái gì?! 300.000.000 VND mà chuyển không giấy tờ?! Chị phải đền cho tụi này!",
+      "sender": "FAN TRONG NHÓM",
+      "bbox_px": [
+        1044,
+        300,
+        1744,
+        486
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "057_chat3",
+      "start_sec": 72.14,
+      "end_sec": 77.34,
+      "fade_sec": 0.15,
+      "png_path": "factory196/staging/EP04/overlays/057_chat3.png",
+      "type": "chat_bubble",
+      "text": "Mới mở bán 5 phút đã HẾT SẠCH VÉ rồi chị Na ơi! Cứu tụi em với!",
+      "sender": "NHÓM FAN ÁNH SAO",
+      "bbox_px": [
+        180,
+        260,
+        875,
+        446
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "058_chat4",
+      "start_sec": 98.11,
+      "end_sec": 104.61,
+      "fade_sec": 0.15,
+      "png_path": "factory196/staging/EP04/overlays/058_chat4.png",
+      "type": "chat_bubble",
+      "text": "+4.000.000 VND · +6.000.000 VND (150 vé gom về TK của Na)",
+      "sender": "NGÂN HÀNG X",
+      "bbox_px": [
+        180,
+        340,
+        864,
+        526
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "059_chat5",
+      "start_sec": 114.27,
+      "end_sec": 119.07,
+      "fade_sec": 0.15,
+      "png_path": "factory196/staging/EP04/overlays/059_chat5.png",
+      "type": "chat_bubble",
+      "text": "Chốt đủ 300.000.000 VND trong tối nay kẻo ban tổ chức thu hồi suất vé đoàn nha Na.",
+      "sender": "CHỊ TRANG",
+      "bbox_px": [
+        180,
+        240,
+        866,
+        426
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "060_chat6",
+      "start_sec": 115.47,
+      "end_sec": 119.97,
+      "fade_sec": 0.15,
+      "png_path": "factory196/staging/EP04/overlays/060_chat6.png",
+      "type": "chat_bubble",
+      "text": "TK …4512 (NGUYỄN THỊ TRANG): -300.000.000 VND (Chuyển khoản thành công)",
+      "sender": "NGÂN HÀNG X",
+      "bbox_px": [
+        1099,
+        420,
+        1744,
+        650
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "061_chat7",
+      "start_sec": 186.78,
+      "end_sec": 193.28,
+      "fade_sec": 0.15,
+      "png_path": "factory196/staging/EP04/overlays/061_chat7.png",
+      "type": "chat_bubble",
+      "text": "Đừng diễn nước mắt cá sấu! Chuyển 300 triệu không giấy tờ, chắc chắn chị ăn chia với bả!",
+      "sender": "FAN TRONG NHÓM",
+      "bbox_px": [
+        180,
+        260,
+        888,
+        490
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "062_chat8",
+      "start_sec": 195.16,
+      "end_sec": 201.66,
+      "fade_sec": 0.15,
+      "png_path": "factory196/staging/EP04/overlays/062_chat8.png",
+      "type": "chat_bubble",
+      "text": "Sáng mai không ói đủ tiền ra, tụi này kéo tới tận nhà, cho chị khỏi nhìn mặt ai luôn!",
+      "sender": "NHÓM FAN ÁNH SAO",
+      "bbox_px": [
+        1053,
+        300,
+        1744,
+        486
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "063_callout1",
+      "start_sec": 118.72,
+      "end_sec": 125.22,
+      "fade_sec": 0.2,
+      "png_path": "factory196/staging/EP04/overlays/063_callout1.png",
+      "type": "callout",
+      "style": "warning",
+      "text": "CHỊ HAI LẶNG LẼ QUAN SÁT  ·  ÂM THẦM CHỤP LẠI THÔNG TIN TÀI KHOẢN",
+      "bbox_px": [
+        369,
+        99,
+        1552,
+        161
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "064_callout2",
+      "start_sec": 150.09,
+      "end_sec": 158.09,
+      "fade_sec": 0.2,
+      "png_path": "factory196/staging/EP04/overlays/064_callout2.png",
+      "type": "callout",
+      "style": "danger",
+      "text": "KÊNH HẬU TRƯỜNG: KHÔNG CÓ NHÂN SỰ TÊN TRANG · KHÔNG BÁN VÉ NỘI BỘ",
+      "bbox_px": [
+        313,
+        99,
+        1608,
+        161
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "065_callout3",
+      "start_sec": 218.25,
+      "end_sec": 224.75,
+      "fade_sec": 0.2,
+      "png_path": "factory196/staging/EP04/overlays/065_callout3.png",
+      "type": "callout",
+      "style": "warning",
+      "text": "TÀI KHOẢN ĐÃ ĐƯỢC CHỊ HAI ÂM THẦM GỬI ĐIỀU TRA TỪ MỘT TUẦN TRƯỚC",
+      "bbox_px": [
+        337,
+        99,
+        1583,
+        161
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "066_callout4",
+      "start_sec": 246.84,
+      "end_sec": 253.04,
+      "fade_sec": 0.2,
+      "png_path": "factory196/staging/EP04/overlays/066_callout4.png",
+      "type": "callout",
+      "style": "danger",
+      "text": "CUỘC GỌI MẬT VÀO MÁY PHỤ CỦA CHỊ HAI",
+      "bbox_px": [
+        590,
+        96,
+        1330,
+        158
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "067_callout5",
+      "start_sec": 256.63,
+      "end_sec": 259.83,
+      "fade_sec": 0.2,
+      "png_path": "factory196/staging/EP04/overlays/067_callout5.png",
+      "type": "callout",
+      "style": "danger",
+      "text": "CHỊ HAI ĐANG GIĂNG LƯỚI BẮT KẺ GIAN… HAY CÒN MỘT KỊCH BẢN NÀO KHÁC?",
+      "bbox_px": [
+        310,
+        409,
+        1611,
+        471
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "068_redflags_0",
+      "start_sec": 226.38,
+      "end_sec": 227.18,
+      "fade_sec": 0.25,
+      "png_path": "factory196/staging/EP04/overlays/068_redflags_0.png",
+      "type": "red_flags",
+      "title": "NHỚ KỸ – 3 DẤU HIỆU BẪY GOM VÉ NỘI BỘ",
+      "lines": [
+        "NUÔI LÒNG TIN NGOÀI ĐỜI: Tặng quà, hỗ trợ loa quạt nhiều tháng dưới mác \"người của kênh truyền thông\"",
+        "MỒI VÉ ĐOÀN GIÁ GỐC: Đẩy trưởng nhóm đứng ra gom một cục hàng trăm triệu chuyển vào tài khoản cá nhân",
+        "ĐỨNG MŨI CHỊU SÀO: Kênh thật không nhận tiền nên không thể đứng đơn; người gom hộ phải tự gánh cả hai đầu",
+        "Chỉ mua trên kênh chính thức · Tuyệt đối không dùng tài khoản cá nhân gom tiền hộ nguồn vé truyền miệng!"
+      ],
+      "bbox_px": [
+        270,
+        268,
+        1650,
+        808
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "069_redflags_1",
+      "start_sec": 227.18,
+      "end_sec": 227.98,
+      "fade_sec": 0.0,
+      "png_path": "factory196/staging/EP04/overlays/069_redflags_1.png",
+      "type": "red_flags",
+      "title": "NHỚ KỸ – 3 DẤU HIỆU BẪY GOM VÉ NỘI BỘ",
+      "lines": [
+        "NUÔI LÒNG TIN NGOÀI ĐỜI: Tặng quà, hỗ trợ loa quạt nhiều tháng dưới mác \"người của kênh truyền thông\"",
+        "MỒI VÉ ĐOÀN GIÁ GỐC: Đẩy trưởng nhóm đứng ra gom một cục hàng trăm triệu chuyển vào tài khoản cá nhân",
+        "ĐỨNG MŨI CHỊU SÀO: Kênh thật không nhận tiền nên không thể đứng đơn; người gom hộ phải tự gánh cả hai đầu",
+        "Chỉ mua trên kênh chính thức · Tuyệt đối không dùng tài khoản cá nhân gom tiền hộ nguồn vé truyền miệng!"
+      ],
+      "bbox_px": [
+        270,
+        268,
+        1650,
+        808
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "070_redflags_2",
+      "start_sec": 227.98,
+      "end_sec": 228.78,
+      "fade_sec": 0.0,
+      "png_path": "factory196/staging/EP04/overlays/070_redflags_2.png",
+      "type": "red_flags",
+      "title": "NHỚ KỸ – 3 DẤU HIỆU BẪY GOM VÉ NỘI BỘ",
+      "lines": [
+        "NUÔI LÒNG TIN NGOÀI ĐỜI: Tặng quà, hỗ trợ loa quạt nhiều tháng dưới mác \"người của kênh truyền thông\"",
+        "MỒI VÉ ĐOÀN GIÁ GỐC: Đẩy trưởng nhóm đứng ra gom một cục hàng trăm triệu chuyển vào tài khoản cá nhân",
+        "ĐỨNG MŨI CHỊU SÀO: Kênh thật không nhận tiền nên không thể đứng đơn; người gom hộ phải tự gánh cả hai đầu",
+        "Chỉ mua trên kênh chính thức · Tuyệt đối không dùng tài khoản cá nhân gom tiền hộ nguồn vé truyền miệng!"
+      ],
+      "bbox_px": [
+        270,
+        268,
+        1650,
+        808
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "071_redflags_3",
+      "start_sec": 228.78,
+      "end_sec": 236.36,
+      "fade_sec": 0.0,
+      "png_path": "factory196/staging/EP04/overlays/071_redflags_3.png",
+      "type": "red_flags",
+      "title": "NHỚ KỸ – 3 DẤU HIỆU BẪY GOM VÉ NỘI BỘ",
+      "lines": [
+        "NUÔI LÒNG TIN NGOÀI ĐỜI: Tặng quà, hỗ trợ loa quạt nhiều tháng dưới mác \"người của kênh truyền thông\"",
+        "MỒI VÉ ĐOÀN GIÁ GỐC: Đẩy trưởng nhóm đứng ra gom một cục hàng trăm triệu chuyển vào tài khoản cá nhân",
+        "ĐỨNG MŨI CHỊU SÀO: Kênh thật không nhận tiền nên không thể đứng đơn; người gom hộ phải tự gánh cả hai đầu",
+        "Chỉ mua trên kênh chính thức · Tuyệt đối không dùng tài khoản cá nhân gom tiền hộ nguồn vé truyền miệng!"
+      ],
+      "bbox_px": [
+        270,
+        268,
+        1650,
+        808
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "072_disclaimer",
+      "start_sec": 260.28,
+      "end_sec": 264.78,
+      "fade_sec": 0.25,
+      "png_path": "factory196/staging/EP04/overlays/072_disclaimer.png",
+      "type": "disclaimer",
+      "text": "Tình huống trong phim được dựng lại nhằm mục đích cảnh báo cộng đồng; nhân vật, đêm nhạc, trang cộng đồng và số liệu đều là hư cấu. Chỉ giao dịch vé qua kênh phân phối chính thức của ban tổ chức; không chuyển khoản lớn cho nguồn vé truyền miệng.",
+      "bbox_px": [
+        380,
+        758,
+        1540,
+        964
+      ],
+      "safe_zone_compliant": true
+    }
+  ],
+  "qa_preview_frames": [
+    {
+      "timestamp_sec": 1.4,
+      "clean": "factory196/staging/EP04/preview_frames/qa_01_40s_clean.jpg",
+      "safezone": "factory196/staging/EP04/preview_frames/qa_01_40s_safezone.jpg"
+    },
+    {
+      "timestamp_sec": 3.97,
+      "clean": "factory196/staging/EP04/preview_frames/qa_03_97s_clean.jpg",
+      "safezone": "factory196/staging/EP04/preview_frames/qa_03_97s_safezone.jpg"
+    },
+    {
+      "timestamp_sec": 17.04,
+      "clean": "factory196/staging/EP04/preview_frames/qa_17_04s_clean.jpg",
+      "safezone": "factory196/staging/EP04/preview_frames/qa_17_04s_safezone.jpg"
+    },
+    {
+      "timestamp_sec": 34.27,
+      "clean": "factory196/staging/EP04/preview_frames/qa_34_27s_clean.jpg",
+      "safezone": "factory196/staging/EP04/preview_frames/qa_34_27s_safezone.jpg"
+    },
+    {
+      "timestamp_sec": 46.35,
+      "clean": "factory196/staging/EP04/preview_frames/qa_46_35s_clean.jpg",
+      "safezone": "factory196/staging/EP04/preview_frames/qa_46_35s_safezone.jpg"
+    },
+    {
+      "timestamp_sec": 60.99,
+      "clean": "factory196/staging/EP04/preview_frames/qa_60_99s_clean.jpg",
+      "safezone": "factory196/staging/EP04/preview_frames/qa_60_99s_safezone.jpg"
+    },
+    {
+      "timestamp_sec": 82.42,
+      "clean": "factory196/staging/EP04/preview_frames/qa_82_42s_clean.jpg",
+      "safezone": "factory196/staging/EP04/preview_frames/qa_82_42s_safezone.jpg"
+    },
+    {
+      "timestamp_sec": 103.49,
+      "clean": "factory196/staging/EP04/preview_frames/qa_103_49s_clean.jpg",
+      "safezone": "factory196/staging/EP04/preview_frames/qa_103_49s_safezone.jpg"
+    },
+    {
+      "timestamp_sec": 116.0,
+      "clean": "factory196/staging/EP04/preview_frames/qa_116_00s_clean.jpg",
+      "safezone": "factory196/staging/EP04/preview_frames/qa_116_00s_safezone.jpg"
+    },
+    {
+      "timestamp_sec": 122.05,
+      "clean": "factory196/staging/EP04/preview_frames/qa_122_05s_clean.jpg",
+      "safezone": "factory196/staging/EP04/preview_frames/qa_122_05s_safezone.jpg"
+    },
+    {
+      "timestamp_sec": 129.4,
+      "clean": "factory196/staging/EP04/preview_frames/qa_129_40s_clean.jpg",
+      "safezone": "factory196/staging/EP04/preview_frames/qa_129_40s_safezone.jpg"
+    },
+    {
+      "timestamp_sec": 154.46,
+      "clean": "factory196/staging/EP04/preview_frames/qa_154_46s_clean.jpg",
+      "safezone": "factory196/staging/EP04/preview_frames/qa_154_46s_safezone.jpg"
+    },
+    {
+      "timestamp_sec": 185.33,
+      "clean": "factory196/staging/EP04/preview_frames/qa_185_33s_clean.jpg",
+      "safezone": "factory196/staging/EP04/preview_frames/qa_185_33s_safezone.jpg"
+    },
+    {
+      "timestamp_sec": 200.17,
+      "clean": "factory196/staging/EP04/preview_frames/qa_200_17s_clean.jpg",
+      "safezone": "factory196/staging/EP04/preview_frames/qa_200_17s_safezone.jpg"
+    },
+    {
+      "timestamp_sec": 215.88,
+      "clean": "factory196/staging/EP04/preview_frames/qa_215_88s_clean.jpg",
+      "safezone": "factory196/staging/EP04/preview_frames/qa_215_88s_safezone.jpg"
+    },
+    {
+      "timestamp_sec": 231.19,
+      "clean": "factory196/staging/EP04/preview_frames/qa_231_19s_clean.jpg",
+      "safezone": "factory196/staging/EP04/preview_frames/qa_231_19s_safezone.jpg"
+    },
+    {
+      "timestamp_sec": 235.86,
+      "clean": "factory196/staging/EP04/preview_frames/qa_235_86s_clean.jpg",
+      "safezone": "factory196/staging/EP04/preview_frames/qa_235_86s_safezone.jpg"
+    },
+    {
+      "timestamp_sec": 240.98,
+      "clean": "factory196/staging/EP04/preview_frames/qa_240_98s_clean.jpg",
+      "safezone": "factory196/staging/EP04/preview_frames/qa_240_98s_safezone.jpg"
+    },
+    {
+      "timestamp_sec": 250.83,
+      "clean": "factory196/staging/EP04/preview_frames/qa_250_83s_clean.jpg",
+      "safezone": "factory196/staging/EP04/preview_frames/qa_250_83s_safezone.jpg"
+    },
+    {
+      "timestamp_sec": 258.0,
+      "clean": "factory196/staging/EP04/preview_frames/qa_258_00s_clean.jpg",
+      "safezone": "factory196/staging/EP04/preview_frames/qa_258_00s_safezone.jpg"
+    },
+    {
+      "timestamp_sec": 262.36,
+      "clean": "factory196/staging/EP04/preview_frames/qa_262_36s_clean.jpg",
+      "safezone": "factory196/staging/EP04/preview_frames/qa_262_36s_safezone.jpg"
+    },
+    {
+      "timestamp_sec": 262.53,
+      "clean": "factory196/staging/EP04/preview_frames/qa_262_53s_clean.jpg",
+      "safezone": "factory196/staging/EP04/preview_frames/qa_262_53s_safezone.jpg"
+    }
+  ]
+}

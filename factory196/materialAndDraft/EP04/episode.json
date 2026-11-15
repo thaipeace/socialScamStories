@@ -1,55 +1,49 @@
 {
   "episode_id": "EP04",
   "slug": "BayVeNoiBo300Trieu",
-  "title": "Bẫy vé nội bộ – 300 triệu gom hộ và người đứng mũi chịu sào",
-  "version": "v1-draft",
+  "title": "300 triệu gom vé hộ & Bí mật của Chị Hai",
+  "version": "v2",
   "scam_family": "MIX-06",
-  "duration_sec": 285.0,
+  "duration_sec": 264.78,
   "visual_style_lock": "Horizontal 16:9 widescreen (1920x1080), semi-realistic cinematic 2D anime illustration, contemporary Southern Vietnam urban setting, moody dramatic lighting, clean bottom 15% for subtitles, no text, no letters, no numbers, no logos, no real uniforms",
   "hook": {
-    "kicker": "23 GIỜ 15 · BA NGÀY TRƯỚC ĐÊM DIỄN",
-    "title": "GOM GIÙM TRĂM RƯỠI VÉ – CÔ TRƯỞNG NHÓM THÀNH BỊ CÁO",
+    "kicker": "CƠN SỐT SĂN VÉ ĐU THẦN TƯỢNG · ĐÊM CHUNG KẾT",
+    "title": "SỐNG CHẾT GÀO THÉT VÌ THẦN TƯỢNG – CÚ RƠI 300 TRIỆU CỦA CÔ TRƯỞNG NHÓM",
     "start": 0.4,
-    "end": 5.4
+    "end": 5.6
   },
   "chapters": [
     {
       "kicker": "HỒI 1 · SÁU THÁNG TRƯỚC",
-      "title": "MÓN QUÀ MIỄN PHÍ TỪ “ĐỐI TÁC TRUYỀN THÔNG”",
-      "start": 20.2,
-      "end": 24.8
+      "title": "MÓN QUÀ MIỄN PHÍ NGOÀI ĐỜI & CÁI BẪY “VÉ NỘI BỘ”",
+      "start": 42.61,
+      "end": 47.21
     },
     {
       "kicker": "HỒI 2 · MƯỜI NGÀY TRƯỚC ĐÊM DIỄN",
-      "title": "TRĂM RƯỠI VÉ CHẢY QUA TÀI KHOẢN CÁ NHÂN",
-      "start": 74.2,
-      "end": 78.8
+      "title": "HÀO QUANG TRƯỞNG NHÓM & ÁNH MẮT LẠNH CỦA CHỊ HAI",
+      "start": 93.36,
+      "end": 97.96
     },
     {
       "kicker": "HỒI 3 · BA NGÀY TRƯỚC ĐÊM DIỄN",
-      "title": "KHÓA MÁY, CHẶN TIN & CƠN BÃO ĐẤU TỐ",
-      "start": 128.2,
-      "end": 132.8
+      "title": "CUỘC GỌI RƠI XUỐNG VỰC THẲM & SỰ CÔ ĐƠN CÙNG CỰC",
+      "start": 126.12,
+      "end": 130.72
     },
     {
-      "kicker": "HỒI 4 · SÁNG HÔM SAU",
-      "title": "ĐỨNG MŨI CHỊU SÀO & HỒ SƠ TRÌNH BÁO",
-      "start": 186.2,
-      "end": 190.8
-    },
-    {
-      "kicker": "HỒI 5 · BÓC TRẦN CƠ CHẾ",
-      "title": "THẢ CON TÉP NGOÀI ĐỜI, BẮT CON TÔM TRĂM TRIỆU",
-      "start": 234.2,
-      "end": 238.8
+      "kicker": "HỒI 4 · XẤP HỒ SƠ MẬT",
+      "title": "SỰ CAO TAY CỦA CHỊ HAI & CUỘC GỌI SAU LƯNG",
+      "start": 205.92,
+      "end": 210.52
     }
   ],
   "scenes": [
     {
-      "id": "s01_hook_panic",
-      "image": "assets/c01.jpg",
+      "id": "s00_idol_frenzy",
+      "image": "assets/c00.jpg",
       "start": 0.0,
-      "end": 9.0,
+      "end": 7.94,
       "motion": {
         "scale": [
           1.04,
@@ -61,52 +55,86 @@
             0.5
           ],
           [
-            0.52,
-            0.46
+            0.48,
+            0.45
           ]
         ],
         "wobble": "tense"
       },
       "shakes": [
         {
-          "at": 0.45,
+          "at": 0.2,
           "dur": 0.4,
           "amp": 18
         }
       ]
     },
     {
-      "id": "s02_hook_accused",
-      "image": "assets/c02.jpg",
-      "start": 9.0,
-      "end": 20.0,
+      "id": "s01_hook_panic",
+      "image": "assets/c01.jpg",
+      "start": 7.94,
+      "end": 26.14,
       "motion": {
         "scale": [
-          1.02,
-          1.12
+          1.04,
+          1.14
         ],
         "focus": [
           [
-            0.48,
+            0.5,
             0.5
           ],
           [
-            0.52,
-            0.46
+            0.48,
+            0.45
           ]
         ],
         "wobble": "tense"
       },
       "transition_in": {
         "type": "flash_white",
-        "dur": 0.28
+        "dur": 0.25
+      },
+      "shakes": [
+        {
+          "at": 8.14,
+          "dur": 0.4,
+          "amp": 18
+        }
+      ]
+    },
+    {
+      "id": "s02_hook_freeze",
+      "image": "assets/c02.jpg",
+      "start": 26.14,
+      "end": 42.41,
+      "motion": {
+        "scale": [
+          1.0,
+          1.16
+        ],
+        "focus": [
+          [
+            0.5,
+            0.5
+          ],
+          [
+            0.5,
+            0.45
+          ]
+        ],
+        "wobble": "tense"
+      },
+      "transition_in": {
+        "type": "flash_white",
+        "dur": 0.25
       }
     },
     {
       "id": "s03_booth_heat",
       "image": "assets/c03.jpg",
-      "start": 20.0,
-      "end": 33.0,
+      "start": 42.41,
+      "end": 50.3,
       "motion": {
         "scale": [
           1.02,
@@ -126,26 +154,26 @@
       },
       "transition_in": {
         "type": "fade_black",
-        "dur": 0.45
+        "dur": 0.4
       }
     },
     {
       "id": "s04_trang_arrival",
       "image": "assets/c04.jpg",
-      "start": 33.0,
-      "end": 55.5,
+      "start": 50.3,
+      "end": 71.69,
       "motion": {
         "scale": [
           1.02,
-          1.1
+          1.09
         ],
         "focus": [
           [
-            0.52,
+            0.5,
             0.5
           ],
           [
-            0.48,
+            0.5,
             0.47
           ]
         ],
@@ -153,68 +181,14 @@
       },
       "transition_in": {
         "type": "dissolve",
-        "dur": 0.4
+        "dur": 0.35
       }
     },
     {
       "id": "s05_sold_out_bait",
       "image": "assets/c05.jpg",
-      "start": 55.5,
-      "end": 74.0,
-      "motion": {
-        "scale": [
-          1.03,
-          1.11
-        ],
-        "focus": [
-          [
-            0.48,
-            0.5
-          ],
-          [
-            0.52,
-            0.46
-          ]
-        ],
-        "wobble": "handheld"
-      },
-      "transition_in": {
-        "type": "fade_black",
-        "dur": 0.4
-      }
-    },
-    {
-      "id": "s06_collecting_orders",
-      "image": "assets/c06.jpg",
-      "start": 74.0,
-      "end": 93.0,
-      "motion": {
-        "scale": [
-          1.02,
-          1.09
-        ],
-        "focus": [
-          [
-            0.5,
-            0.5
-          ],
-          [
-            0.5,
-            0.46
-          ]
-        ],
-        "wobble": "calm"
-      },
-      "transition_in": {
-        "type": "fade_black",
-        "dur": 0.4
-      }
-    },
-    {
-      "id": "s07_chi_hai_warning",
-      "image": "assets/c07.jpg",
-      "start": 93.0,
-      "end": 117.5,
+      "start": 71.69,
+      "end": 93.16,
       "motion": {
         "scale": [
           1.02,
@@ -233,19 +207,46 @@
         "wobble": "handheld"
       },
       "transition_in": {
-        "type": "dissolve",
+        "type": "fade_black",
         "dur": 0.35
       }
     },
     {
-      "id": "s08_transfer_sent",
-      "image": "assets/c08.jpg",
-      "start": 117.5,
-      "end": 128.0,
+      "id": "s06_euphoria_collecting",
+      "image": "assets/c06.jpg",
+      "start": 93.16,
+      "end": 113.82,
+      "motion": {
+        "scale": [
+          1.02,
+          1.09
+        ],
+        "focus": [
+          [
+            0.5,
+            0.5
+          ],
+          [
+            0.5,
+            0.47
+          ]
+        ],
+        "wobble": "calm"
+      },
+      "transition_in": {
+        "type": "fade_black",
+        "dur": 0.4
+      }
+    },
+    {
+      "id": "s07_transfer_300m",
+      "image": "assets/c07.jpg",
+      "start": 113.82,
+      "end": 118.17,
       "motion": {
         "scale": [
           1.0,
-          1.14
+          1.16
         ],
         "focus": [
           [
@@ -265,41 +266,14 @@
       }
     },
     {
-      "id": "s09_delay_excuse",
-      "image": "assets/c09.jpg",
-      "start": 128.0,
-      "end": 141.5,
+      "id": "s08_chihai_secret_photo",
+      "image": "assets/c08.jpg",
+      "start": 118.17,
+      "end": 125.92,
       "motion": {
         "scale": [
-          1.02,
-          1.1
-        ],
-        "focus": [
-          [
-            0.5,
-            0.5
-          ],
-          [
-            0.48,
-            0.46
-          ]
-        ],
-        "wobble": "calm"
-      },
-      "transition_in": {
-        "type": "fade_black",
-        "dur": 0.4
-      }
-    },
-    {
-      "id": "s10_blocked_shock",
-      "image": "assets/c10.jpg",
-      "start": 141.5,
-      "end": 152.5,
-      "motion": {
-        "scale": [
-          1.04,
-          1.15
+          1.0,
+          1.16
         ],
         "focus": [
           [
@@ -308,44 +282,10 @@
           ],
           [
             0.5,
-            0.44
+            0.45
           ]
         ],
         "wobble": "tense"
-      },
-      "transition_in": {
-        "type": "flash_red",
-        "dur": 0.28
-      },
-      "shakes": [
-        {
-          "at": 141.8,
-          "dur": 0.4,
-          "amp": 20
-        }
-      ]
-    },
-    {
-      "id": "s11_double_denial_tung",
-      "image": "assets/c11.jpg",
-      "start": 152.5,
-      "end": 173.5,
-      "motion": {
-        "scale": [
-          1.03,
-          1.12
-        ],
-        "focus": [
-          [
-            0.52,
-            0.48
-          ],
-          [
-            0.48,
-            0.46
-          ]
-        ],
-        "wobble": "handheld"
       },
       "transition_in": {
         "type": "dissolve",
@@ -353,14 +293,109 @@
       }
     },
     {
-      "id": "s12_chi_hai_stops_lock",
+      "id": "s09_blocked_shock",
+      "image": "assets/c09.jpg",
+      "start": 125.92,
+      "end": 132.87,
+      "motion": {
+        "scale": [
+          1.04,
+          1.14
+        ],
+        "focus": [
+          [
+            0.5,
+            0.5
+          ],
+          [
+            0.48,
+            0.45
+          ]
+        ],
+        "wobble": "tense"
+      },
+      "transition_in": {
+        "type": "fade_black",
+        "dur": 0.4
+      },
+      "shakes": [
+        {
+          "at": 126.22,
+          "dur": 0.4,
+          "amp": 18
+        }
+      ]
+    },
+    {
+      "id": "s10_call_channel_abyss",
+      "image": "assets/c10.jpg",
+      "start": 132.87,
+      "end": 176.05,
+      "motion": {
+        "scale": [
+          1.0,
+          1.16
+        ],
+        "focus": [
+          [
+            0.5,
+            0.5
+          ],
+          [
+            0.5,
+            0.45
+          ]
+        ],
+        "wobble": "tense"
+      },
+      "transition_in": {
+        "type": "flash_red",
+        "dur": 0.3
+      },
+      "shakes": [
+        {
+          "at": 133.07,
+          "dur": 0.4,
+          "amp": 18
+        }
+      ]
+    },
+    {
+      "id": "s11_begging_group_backlash",
+      "image": "assets/c11.jpg",
+      "start": 176.05,
+      "end": 194.61,
+      "motion": {
+        "scale": [
+          1.02,
+          1.1
+        ],
+        "focus": [
+          [
+            0.46,
+            0.48
+          ],
+          [
+            0.54,
+            0.46
+          ]
+        ],
+        "wobble": "handheld"
+      },
+      "transition_in": {
+        "type": "dissolve",
+        "dur": 0.3
+      }
+    },
+    {
+      "id": "s12_utter_isolation",
       "image": "assets/c12.jpg",
-      "start": 173.5,
-      "end": 186.0,
+      "start": 194.61,
+      "end": 205.72,
       "motion": {
         "scale": [
           1.12,
-          1.03
+          1.02
         ],
         "focus": [
           [
@@ -372,29 +407,22 @@
             0.5
           ]
         ],
-        "wobble": "tense"
+        "wobble": "calm"
       },
       "transition_in": {
-        "type": "flash_white",
-        "dur": 0.28
-      },
-      "shakes": [
-        {
-          "at": 179.6,
-          "dur": 0.38,
-          "amp": 22
-        }
-      ]
+        "type": "dissolve",
+        "dur": 0.35
+      }
     },
     {
-      "id": "s13_compile_files",
+      "id": "s13_chihai_dossier",
       "image": "assets/c13.jpg",
-      "start": 186.0,
-      "end": 210.0,
+      "start": 205.72,
+      "end": 226.03,
       "motion": {
         "scale": [
-          1.02,
-          1.08
+          1.0,
+          1.16
         ],
         "focus": [
           [
@@ -403,10 +431,10 @@
           ],
           [
             0.5,
-            0.47
+            0.45
           ]
         ],
-        "wobble": "calm"
+        "wobble": "tense"
       },
       "transition_in": {
         "type": "fade_black",
@@ -414,37 +442,37 @@
       }
     },
     {
-      "id": "s14_outside_station",
-      "image": "assets/c14.jpg",
-      "start": 210.0,
-      "end": 234.0,
+      "id": "s17_red_flags",
+      "image": "factory196/materialAndDraft/EP01b/assets/scene18.jpg",
+      "start": 226.03,
+      "end": 236.36,
       "motion": {
         "scale": [
-          1.02,
-          1.08
+          1.0,
+          1.05
         ],
         "focus": [
           [
             0.5,
-            0.48
+            0.5
           ],
           [
             0.5,
             0.5
           ]
         ],
-        "wobble": "calm"
+        "wobble": "none"
       },
       "transition_in": {
-        "type": "dissolve",
-        "dur": 0.4
+        "type": "fade_black",
+        "dur": 0.3
       }
     },
     {
-      "id": "s15_narrator",
-      "image": "factory196/materialAndDraft/EP01b/assets/scene15.jpg",
-      "start": 234.0,
-      "end": 241.5,
+      "id": "s14_leaving_station",
+      "image": "assets/c14.jpg",
+      "start": 236.36,
+      "end": 245.59,
       "motion": {
         "scale": [
           1.02,
@@ -463,73 +491,46 @@
         "wobble": "calm"
       },
       "transition_in": {
-        "type": "glitch",
+        "type": "fade_black",
+        "dur": 0.4
+      }
+    },
+    {
+      "id": "s15_chihai_conspiracy_call",
+      "image": "assets/c15.jpg",
+      "start": 245.59,
+      "end": 256.08,
+      "motion": {
+        "scale": [
+          1.0,
+          1.16
+        ],
+        "focus": [
+          [
+            0.5,
+            0.5
+          ],
+          [
+            0.5,
+            0.45
+          ]
+        ],
+        "wobble": "tense"
+      },
+      "transition_in": {
+        "type": "dissolve",
         "dur": 0.35
       }
     },
     {
-      "id": "s16_diagram_3steps",
-      "image": "assets/c15.jpg",
-      "start": 241.5,
-      "end": 256.5,
-      "motion": {
-        "scale": [
-          1.0,
-          1.05
-        ],
-        "focus": [
-          [
-            0.5,
-            0.5
-          ],
-          [
-            0.5,
-            0.5
-          ]
-        ],
-        "wobble": "none"
-      },
-      "transition_in": {
-        "type": "dissolve",
-        "dur": 0.3
-      }
-    },
-    {
-      "id": "s17_diagram_middleman",
+      "id": "s16_black_cut",
       "image": "assets/c16.jpg",
-      "start": 256.5,
-      "end": 264.5,
+      "start": 256.08,
+      "end": 259.93,
       "motion": {
         "scale": [
           1.0,
           1.05
-        ],
-        "focus": [
-          [
-            0.5,
-            0.5
-          ],
-          [
-            0.5,
-            0.5
-          ]
-        ],
-        "wobble": "none"
-      },
-      "transition_in": {
-        "type": "dissolve",
-        "dur": 0.3
-      }
-    },
-    {
-      "id": "s18_red_flags",
-      "image": "factory196/materialAndDraft/EP01b/assets/scene18.jpg",
-      "start": 264.5,
-      "end": 279.0,
-      "motion": {
-        "scale": [
-          1.0,
-          1.04
         ],
         "focus": [
           [
@@ -545,18 +546,18 @@
       },
       "transition_in": {
         "type": "fade_black",
-        "dur": 0.4
+        "dur": 0.1
       }
     },
     {
-      "id": "s19_disclaimer",
+      "id": "s18_disclaimer",
       "image": "factory196/materialAndDraft/EP01b/assets/scene18.jpg",
-      "start": 279.0,
-      "end": 285.0,
+      "start": 259.93,
+      "end": 264.78,
       "motion": {
         "scale": [
-          1.04,
-          1.0
+          1.0,
+          1.05
         ],
         "focus": [
           [
@@ -571,718 +572,847 @@
         "wobble": "none"
       },
       "transition_in": {
-        "type": "dissolve",
-        "dur": 0.3
+        "type": "fade_black",
+        "dur": 0.35
       }
     }
   ],
   "dialogue": [
     {
-      "id": "l01_na",
+      "id": "l00_fannam",
+      "speaker": "thang_tun",
+      "voice": "Puck",
+      "label_short": "FAN NAM",
+      "speaker_label": "Thành viên nam trong nhóm fan",
+      "style": "Giọng nam thanh niên miền Nam Sài Gòn 22 tuổi, phát âm chuẩn phương ngữ miền Nam, tông sáng, nhịp nhanh, rõ chữ, gào thét khản giọng vì phấn khích giữa biển người cuồng nhiệt.",
+      "start": 0.5,
+      "window": 13.38,
+      "text": "Đêm chung kết tháng Sáu có nhịn ăn nhịn mặc tụi em cũng phải săn bằng được vé! Sống chết gì cũng phải đu theo thần tượng tới cùng nha chị Na!"
+    },
+    {
+      "id": "l01_fannu",
+      "speaker": "chi_tu",
+      "voice": "Zephyr",
+      "label_short": "FAN NỮ",
+      "speaker_label": "Thành viên nữ trong nhóm fan",
+      "af": "phone",
+      "style": "Giọng cô gái trẻ miền Nam Sài Gòn 21 tuổi, phát âm chuẩn phương ngữ miền Nam, tự nhiên đời thực, nói qua tin nhắn thoại, gay gắt, bức xúc đòi vé.",
+      "start": 8.49,
+      "window": 11.68,
+      "text": "Tụi em chuyển tiền vé thẳng vô tài khoản tên chị! Thứ Bảy diễn rồi, vé đâu hay chị định ôm tiền của tụi em trốn hả?!"
+    },
+    {
+      "id": "l02_na",
       "speaker": "be_na",
-      "model": "gemini-3.8-flash-tts",
       "voice": "Leda",
       "label_short": "NA",
-      "speaker_label": "Na",
-      "style": "Giọng cô gái trẻ miền Nam Sài Gòn 23 tuổi, phát âm chuẩn phương ngữ miền Nam xuyên suốt mọi câu, giữ cố định một âm sắc trong trẻo tự nhiên đời thực, rõ chữ, nhiệt tình chân thật ở đầu phim và nghẹn giọng lo lắng khi gặp biến cố, tuyệt đối không gào khóc cải lương.",
-      "start": 1.0,
-      "window": 7.6,
-      "text": "Em chuyển đủ ba trăm triệu cho chị Trang rồi… Sao giờ gọi khóa máy, nhắn tin chặn hết vậy?!"
+      "speaker_label": "Na – trưởng nhóm fan 23 tuổi",
+      "style": "Giọng cô gái trẻ miền Nam Sài Gòn 23 tuổi, phát âm chuẩn phương ngữ miền Nam xuyên suốt mọi câu, giữ cố định một âm sắc trong trẻo tự nhiên đời thực, rõ chữ, tuyệt đối không gào khóc cải lương, hoảng loạn, thật thà thú nhận.",
+      "start": 16.26,
+      "window": 13.38,
+      "text": "Em thề em không ăn lời một đồng nào! Toàn bộ ba trăm triệu của một trăm rưỡi vé em đã chuyển hết cho chị Trang bên Kênh Hậu Trường rồi mà!",
+      "subtitle": [
+        "Em thề không ăn lời 1 đồng nào! Toàn bộ 300 triệu của 150 vé em đã chuyển hết cho chị Trang rồi mà!"
+      ]
     },
     {
-      "id": "l02_chihai",
-      "speaker": "chi_ba",
-      "model": "gemini-3.8-flash-tts",
-      "voice": "Kore",
-      "label_short": "CHỊ HAI",
-      "speaker_label": "Chị Hai",
-      "style": "Giọng phụ nữ miền Nam Sài Gòn 35 tuổi, phát âm chuẩn phương ngữ miền Nam xuyên suốt mọi câu, giữ cố định một âm sắc sắc sảo, điềm tĩnh, dứt khoát và ấm áp khi bảo vệ em trong nhà.",
-      "start": 9.4,
-      "window": 5.0,
-      "text": "Ba trăm triệu tiền vé của trăm rưỡi người… đều chuyển vô tài khoản em hả Na?!"
-    },
-    {
-      "id": "l03_boctran",
-      "speaker": "nguoi_boc_tran",
-      "model": "gemini-3.8-flash-tts",
-      "voice": "Charon",
-      "label_short": "BÓC TRẦN",
-      "speaker_label": "Người Bóc Trần",
-      "style": "Giọng nam trung niên miền Nam Sài Gòn, điềm tĩnh, trầm ấm, rõ chữ, khách quan và sắc bén khi giải phẫu cơ chế tâm lý, nhịp vừa phải, nhấn từ khóa quan trọng.",
-      "start": 14.7,
-      "window": 5.0,
-      "text": "Không lấy lời một đồng, nhưng chỉ sau một đêm, Na bị cả trăm người tố lừa đảo."
-    },
-    {
-      "id": "l04_boctran",
-      "speaker": "nguoi_boc_tran",
-      "model": "gemini-3.8-flash-tts",
-      "voice": "Charon",
-      "label_short": "BÓC TRẦN",
-      "speaker_label": "Người Bóc Trần",
-      "style": "Giọng nam trung niên miền Nam Sài Gòn, điềm tĩnh, trầm ấm, rõ chữ, khách quan và sắc bén khi giải phẫu cơ chế tâm lý, nhịp vừa phải, nhấn từ khóa quan trọng.",
-      "start": 22.0,
-      "window": 5.2,
-      "text": "Mọi chuyện bắt đầu từ sáu tháng trước, giữa trưa nắng gắt trước cổng nhà thi đấu."
-    },
-    {
-      "id": "l05_tung",
+      "id": "l03_fannam",
       "speaker": "thang_tun",
-      "model": "gemini-3.8-flash-tts",
       "voice": "Puck",
-      "label_short": "TÙNG",
-      "speaker_label": "Tùng",
-      "style": "Giọng nam thanh niên miền Nam Sài Gòn 22 tuổi, phát âm chuẩn phương ngữ miền Nam xuyên suốt mọi câu, giữ cố định một âm sắc trẻ trung tông sáng, nhịp nhanh gọn, rõ chữ.",
-      "start": 27.6,
-      "window": 5.1,
-      "text": "Chị Na ơi, nắng gắt quá mà loa kéo hư, quạt cũng hết sạch pin rồi!"
+      "label_short": "FAN NAM",
+      "speaker_label": "Thành viên nam trong nhóm fan (qua tin nhắn thoại)",
+      "af": "phone",
+      "style": "Giọng nam thanh niên miền Nam Sài Gòn 22 tuổi, phát âm chuẩn phương ngữ miền Nam, tông sáng, nhịp nhanh, rõ chữ, sốc, giận dữ quát lên.",
+      "start": 26.49,
+      "window": 10.32,
+      "text": "Cái gì?! Ba trăm triệu tiền mặt mà chị chuyển không giấy tờ cho người ta?! Giờ mất trắng thì chị phải đền!",
+      "subtitle": [
+        "Cái gì?! 300 triệu tiền mặt mà chị chuyển không giấy tờ?! Giờ mất trắng thì chị phải đền!"
+      ]
+    },
+    {
+      "id": "l04_narr",
+      "speaker": "nguoi_boc_tran",
+      "start": 33.11,
+      "window": 10.32,
+      "text": "Từ cơn cuồng nhiệt sống chết vì thần tượng đến vực thẳm chỉ cách nhau một cú bấm chuyển khoản ba trăm triệu.",
+      "subtitle": [
+        "Từ cơn cuồng nhiệt sống chết vì thần tượng đến vực thẳm chỉ cách nhau một cú bấm chuyển khoản 300 triệu."
+      ]
+    },
+    {
+      "id": "l05_fannam",
+      "speaker": "thang_tun",
+      "voice": "Puck",
+      "label_short": "FAN NAM",
+      "speaker_label": "Thành viên nam trong nhóm fan",
+      "style": "Giọng nam thanh niên miền Nam Sài Gòn 22 tuổi, phát âm chuẩn phương ngữ miền Nam, tông sáng, nhịp nhanh, rõ chữ, mệt mỏi, than thở giữa trời nắng.",
+      "start": 43.06,
+      "window": 8.62,
+      "text": "Chị Na ơi, nắng gắt quá mà loa kéo hư, quạt cầm tay cũng hết sạch pin rồi!"
     },
     {
       "id": "l06_trang",
       "speaker": "ke_ngot_ngao_nu",
-      "model": "gemini-3.8-flash-tts",
       "voice": "Aoede",
       "label_short": "TRANG",
-      "speaker_label": "Chị Trang",
-      "style": "Giọng nữ miền Nam Sài Gòn 30 tuổi, phát âm chuẩn phương ngữ miền Nam xuyên suốt mọi câu, giữ cố định một âm sắc êm mượt, lịch thiệp, thân tình như người làm truyền thông sự kiện chuyên nghiệp.",
-      "start": 33.4,
-      "window": 7.4,
-      "text": "Chị Trang bên Kênh Hậu Trường nè Na. Đợt trước tặng áo, nay chị mang loa quạt qua phụ tụi em."
+      "speaker_label": "Trang – giả danh quản lý Kênh Hậu Trường",
+      "style": "Giọng nữ miền Nam Sài Gòn 30 tuổi, phát âm chuẩn phương ngữ miền Nam xuyên suốt mọi câu, giữ cố định một âm sắc êm mượt, lịch thiệp, thân tình kiểu dân sự kiện chuyên nghiệp, thân thiện, hiền hậu, nhiệt tình.",
+      "start": 50.65,
+      "window": 10.32,
+      "text": "Chị Trang bên Kênh Hậu Trường nè Na. Đợt trước tặng áo, nay chị mang loa với quạt qua tiếp sức tụi em."
     },
     {
       "id": "l07_na",
       "speaker": "be_na",
-      "model": "gemini-3.8-flash-tts",
       "voice": "Leda",
       "label_short": "NA",
-      "speaker_label": "Na",
-      "style": "Giọng cô gái trẻ miền Nam Sài Gòn 23 tuổi, phát âm chuẩn phương ngữ miền Nam xuyên suốt mọi câu, giữ cố định một âm sắc trong trẻo tự nhiên đời thực, rõ chữ, nhiệt tình chân thật ở đầu phim và nghẹn giọng lo lắng khi gặp biến cố, tuyệt đối không gào khóc cải lương.",
-      "start": 41.2,
-      "window": 6.6,
-      "text": "Trời ơi chị Trang chu đáo quá! Hai đợt liền chị toàn bỏ tiền túi phụ không công, ngại ghê."
+      "speaker_label": "Na – trưởng nhóm fan 23 tuổi",
+      "style": "Giọng cô gái trẻ miền Nam Sài Gòn 23 tuổi, phát âm chuẩn phương ngữ miền Nam xuyên suốt mọi câu, giữ cố định một âm sắc trong trẻo tự nhiên đời thực, rõ chữ, tuyệt đối không gào khóc cải lương, cảm kích, tin tưởng tuyệt đối.",
+      "start": 57.09,
+      "window": 10.32,
+      "text": "Trời ơi chị Trang chu đáo quá! Mấy đợt liền chị toàn bỏ tiền túi phụ tụi em không công, ngại ghê luôn."
     },
     {
       "id": "l08_trang",
       "speaker": "ke_ngot_ngao_nu",
-      "model": "gemini-3.8-flash-tts",
       "voice": "Aoede",
       "label_short": "TRANG",
-      "speaker_label": "Chị Trang",
-      "style": "Giọng nữ miền Nam Sài Gòn 30 tuổi, phát âm chuẩn phương ngữ miền Nam xuyên suốt mọi câu, giữ cố định một âm sắc êm mượt, lịch thiệp, thân tình như người làm truyền thông sự kiện chuyên nghiệp.",
-      "start": 48.2,
-      "window": 6.9,
-      "text": "Chỗ chị em quý ca sĩ cả mà, tính toán chi mấy chuyện nhỏ. Cần gì cứ nhắn chị."
+      "speaker_label": "Trang – giả danh quản lý Kênh Hậu Trường",
+      "style": "Giọng nữ miền Nam Sài Gòn 30 tuổi, phát âm chuẩn phương ngữ miền Nam xuyên suốt mọi câu, giữ cố định một âm sắc êm mượt, lịch thiệp, thân tình kiểu dân sự kiện chuyên nghiệp, xởi lởi, tạo lòng tin.",
+      "start": 64.17,
+      "window": 9.3,
+      "text": "Chỗ chị em quý nghệ sĩ cả mà, tính toán chi mấy chuyện nhỏ. Nhóm cần gì cứ nhắn chị."
     },
     {
-      "id": "l09_tung",
-      "speaker": "thang_tun",
-      "model": "gemini-3.8-flash-tts",
-      "voice": "Puck",
-      "label_short": "TÙNG",
-      "speaker_label": "Tùng",
-      "style": "Giọng nam thanh niên miền Nam Sài Gòn 22 tuổi, phát âm chuẩn phương ngữ miền Nam xuyên suốt mọi câu, giữ cố định một âm sắc trẻ trung tông sáng, nhịp nhanh gọn, rõ chữ.",
-      "start": 55.9,
-      "window": 5.5,
-      "text": "Mới mở bán năm phút đã cháy sạch vé khu sát sân khấu rồi chị Na ơi!"
+      "id": "l09_fannu",
+      "speaker": "chi_tu",
+      "voice": "Zephyr",
+      "label_short": "FAN NỮ",
+      "speaker_label": "Thành viên nữ trong nhóm fan",
+      "af": "phone",
+      "style": "Giọng cô gái trẻ miền Nam Sài Gòn 21 tuổi, phát âm chuẩn phương ngữ miền Nam, tự nhiên đời thực, nói qua tin nhắn thoại, tiếc nuối, cầu cứu.",
+      "start": 72.04,
+      "window": 8.28,
+      "text": "Mới mở bán năm phút đã cháy sạch vé rồi chị Na ơi! Cứu tụi em với!"
     },
     {
       "id": "l10_trang",
       "speaker": "ke_ngot_ngao_nu",
-      "model": "gemini-3.8-flash-tts",
       "voice": "Aoede",
       "label_short": "TRANG",
-      "speaker_label": "Chị Trang",
-      "style": "Giọng nữ miền Nam Sài Gòn 30 tuổi, phát âm chuẩn phương ngữ miền Nam xuyên suốt mọi câu, giữ cố định một âm sắc êm mượt, lịch thiệp, thân tình như người làm truyền thông sự kiện chuyên nghiệp.",
-      "start": 61.8,
-      "window": 6.0,
-      "text": "Na ơi, bên chị là đối tác truyền thông đêm nhạc nên có suất vé nội bộ giá gốc.",
-      "af": "phone"
+      "speaker_label": "Trang – giả danh quản lý Kênh Hậu Trường (qua điện thoại)",
+      "af": "phone",
+      "style": "Giọng nữ miền Nam Sài Gòn 30 tuổi, phát âm chuẩn phương ngữ miền Nam xuyên suốt mọi câu, êm mượt, chuyên nghiệp, dẫn dụ khéo léo qua điện thoại, hào hứng, rỉ tai cơ hội hiếm.",
+      "start": 78.36,
+      "window": 9.64,
+      "text": "Na ơi, bên chị là đối tác truyền thông đêm nhạc nên có suất vé nội bộ giá gốc hai triệu.",
+      "subtitle": [
+        "Na ơi, bên chị là đối tác truyền thông đêm nhạc nên có suất vé nội bộ giá gốc 2 triệu."
+      ]
     },
     {
       "id": "l11_trang",
       "speaker": "ke_ngot_ngao_nu",
-      "model": "gemini-3.8-flash-tts",
       "voice": "Aoede",
       "label_short": "TRANG",
-      "speaker_label": "Chị Trang",
-      "style": "Giọng nữ miền Nam Sài Gòn 30 tuổi, phát âm chuẩn phương ngữ miền Nam xuyên suốt mọi câu, giữ cố định một âm sắc êm mượt, lịch thiệp, thân tình như người làm truyền thông sự kiện chuyên nghiệp.",
-      "start": 68.1,
-      "window": 5.6,
-      "text": "Em đứng ra gom đơn cho nhóm đi, chị giữ riêng suất đẹp cho tụi em.",
-      "af": "phone"
+      "speaker_label": "Trang – giả danh quản lý Kênh Hậu Trường (qua điện thoại)",
+      "af": "phone",
+      "style": "Giọng nữ miền Nam Sài Gòn 30 tuổi, phát âm chuẩn phương ngữ miền Nam xuyên suốt mọi câu, êm mượt, chuyên nghiệp, dẫn dụ khéo léo qua điện thoại, dẫn dụ mượt mà.",
+      "start": 85.03,
+      "window": 11.68,
+      "text": "Bên chị không xuất lẻ từng người. Em đứng ra gom tiền của nhóm về một mối rồi chuyển qua tài khoản chị giữ suất đoàn nha."
     },
     {
-      "id": "l12_tung",
+      "id": "l12_fannu",
+      "speaker": "chi_tu",
+      "voice": "Zephyr",
+      "label_short": "FAN NỮ",
+      "speaker_label": "Thành viên nữ trong nhóm fan",
+      "af": "phone",
+      "style": "Giọng cô gái trẻ miền Nam Sài Gòn 21 tuổi, phát âm chuẩn phương ngữ miền Nam, tự nhiên đời thực, nói qua tin nhắn thoại, hào hứng, tâng bốc.",
+      "start": 93.81,
+      "window": 12.02,
+      "text": "Em vừa chuyển bốn triệu hai vé vô tài khoản chị Na nha! Chỉ có chị Na mới xin được suất nội bộ của đối tác lớn thôi!",
+      "subtitle": [
+        "Em vừa chuyển 4 triệu 2 vé vô tài khoản chị Na nha! Chỉ có chị Na mới xin được suất nội bộ thôi!"
+      ]
+    },
+    {
+      "id": "l13_fannam",
       "speaker": "thang_tun",
-      "model": "gemini-3.8-flash-tts",
       "voice": "Puck",
-      "label_short": "TÙNG",
-      "speaker_label": "Tùng",
-      "style": "Giọng nam thanh niên miền Nam Sài Gòn 22 tuổi, phát âm chuẩn phương ngữ miền Nam xuyên suốt mọi câu, giữ cố định một âm sắc trẻ trung tông sáng, nhịp nhanh gọn, rõ chữ.",
-      "start": 76.0,
-      "window": 8.0,
-      "text": "Em gom luôn mười vé hai chục triệu cho đám bạn ngoài tỉnh bay vô nha! Tụi nó tin chị Na lắm!",
-      "af": "phone"
+      "label_short": "FAN NAM",
+      "speaker_label": "Thành viên nam trong nhóm fan (qua tin nhắn thoại)",
+      "af": "phone",
+      "style": "Giọng nam thanh niên miền Nam Sài Gòn 22 tuổi, phát âm chuẩn phương ngữ miền Nam, tông sáng, nhịp nhanh, rõ chữ, phấn khích, tung hô.",
+      "start": 101.26,
+      "window": 8.62,
+      "text": "Em cũng chuyển sáu triệu ba vé rồi đó! Chị Na đúng là cứu tinh của cả nhóm!",
+      "subtitle": [
+        "Em cũng chuyển 6 triệu 3 vé rồi đó! Chị Na đúng là cứu tinh của cả nhóm!"
+      ]
     },
     {
-      "id": "l13_na",
+      "id": "l14_na",
       "speaker": "be_na",
-      "model": "gemini-3.8-flash-tts",
       "voice": "Leda",
       "label_short": "NA",
-      "speaker_label": "Na",
-      "style": "Giọng cô gái trẻ miền Nam Sài Gòn 23 tuổi, phát âm chuẩn phương ngữ miền Nam xuyên suốt mọi câu, giữ cố định một âm sắc trong trẻo tự nhiên đời thực, rõ chữ, nhiệt tình chân thật ở đầu phim và nghẹn giọng lo lắng khi gặp biến cố, tuyệt đối không gào khóc cải lương.",
-      "start": 84.4,
-      "window": 8.2,
-      "text": "Yên tâm nha Tùng, đúng giá gốc hai triệu một vé. Tuần sau đối tác xuất mã đoàn là chị gửi liền!"
+      "speaker_label": "Na – trưởng nhóm fan 23 tuổi",
+      "style": "Giọng cô gái trẻ miền Nam Sài Gòn 23 tuổi, phát âm chuẩn phương ngữ miền Nam xuyên suốt mọi câu, giữ cố định một âm sắc trong trẻo tự nhiên đời thực, rõ chữ, tuyệt đối không gào khóc cải lương, say sưa trong hào quang, tự hào, hưng phấn.",
+      "start": 106.54,
+      "window": 10.32,
+      "text": "Mọi người cứ yên tâm! Đúng giá gốc hai triệu một vé, tuần sau đối tác xuất mã đoàn là chị phát liền!",
+      "subtitle": [
+        "Mọi người cứ yên tâm! Đúng giá gốc 2 triệu 1 vé, tuần sau đối tác xuất mã đoàn là chị phát liền!"
+      ]
     },
     {
-      "id": "l14_chihai",
+      "id": "l15_chihai",
       "speaker": "chi_ba",
-      "model": "gemini-3.8-flash-tts",
       "voice": "Kore",
       "label_short": "CHỊ HAI",
-      "speaker_label": "Chị Hai",
-      "style": "Giọng phụ nữ miền Nam Sài Gòn 35 tuổi, phát âm chuẩn phương ngữ miền Nam xuyên suốt mọi câu, giữ cố định một âm sắc sắc sảo, điềm tĩnh, dứt khoát và ấm áp khi bảo vệ em trong nhà.",
-      "start": 93.4,
-      "window": 7.6,
-      "text": "Khoan đã Na. Vé suất của kênh truyền thông, sao lại chuyển ba trăm triệu vô tài khoản cá nhân tên Trang?"
+      "speaker_label": "Chị Hai – chị ruột của Na, 35 tuổi",
+      "style": "Giọng phụ nữ miền Nam Sài Gòn 35 tuổi, phát âm chuẩn phương ngữ miền Nam xuyên suốt mọi câu, giữ cố định một âm sắc sắc sảo, điềm tĩnh, dứt khoát và lạnh lùng, trầm thấp, đanh mặt lại, sắc lạnh.",
+      "start": 119.32,
+      "window": 8.96,
+      "text": "Suất vé của đối tác truyền thông lớn… mà lại thu ba trăm triệu qua tài khoản cá nhân?",
+      "subtitle": [
+        "Suất vé của đối tác truyền thông lớn… mà lại thu 300 triệu qua tài khoản cá nhân?"
+      ]
     },
     {
-      "id": "l15_na",
+      "id": "l16_na",
       "speaker": "be_na",
-      "model": "gemini-3.8-flash-tts",
       "voice": "Leda",
       "label_short": "NA",
-      "speaker_label": "Na",
-      "style": "Giọng cô gái trẻ miền Nam Sài Gòn 23 tuổi, phát âm chuẩn phương ngữ miền Nam xuyên suốt mọi câu, giữ cố định một âm sắc trong trẻo tự nhiên đời thực, rõ chữ, nhiệt tình chân thật ở đầu phim và nghẹn giọng lo lắng khi gặp biến cố, tuyệt đối không gào khóc cải lương.",
-      "start": 101.4,
-      "window": 7.6,
-      "text": "Vé nội bộ đâu bán lẻ nên phải chuyển qua người phụ trách chị Hai. Bả giúp nhóm em nửa năm rồi!"
-    },
-    {
-      "id": "l16_chihai",
-      "speaker": "chi_ba",
-      "model": "gemini-3.8-flash-tts",
-      "voice": "Kore",
-      "label_short": "CHỊ HAI",
-      "speaker_label": "Chị Hai",
-      "style": "Giọng phụ nữ miền Nam Sài Gòn 35 tuổi, phát âm chuẩn phương ngữ miền Nam xuyên suốt mọi câu, giữ cố định một âm sắc sắc sảo, điềm tĩnh, dứt khoát và ấm áp khi bảo vệ em trong nhà.",
-      "start": 109.4,
-      "window": 7.7,
-      "text": "Giúp cái quạt khác chuyện cầm ba trăm triệu không giấy tờ! Lỡ bả quỵt, trăm rưỡi người kia chỉ nắm đầu em thôi!"
+      "speaker_label": "Na – trưởng nhóm fan 23 tuổi",
+      "style": "Giọng cô gái trẻ miền Nam Sài Gòn 23 tuổi, phát âm chuẩn phương ngữ miền Nam xuyên suốt mọi câu, giữ cố định một âm sắc trong trẻo tự nhiên đời thực, rõ chữ, tuyệt đối không gào khóc cải lương, hơi thở gấp gáp, tay run bần bật.",
+      "start": 126.67,
+      "window": 8.28,
+      "text": "Thứ Tư rồi… Sao số chị Trang thuê bao, tin nhắn cũng chặn em luôn vậy nè?!"
     },
     {
       "id": "l17_na",
       "speaker": "be_na",
-      "model": "gemini-3.8-flash-tts",
       "voice": "Leda",
       "label_short": "NA",
-      "speaker_label": "Na",
-      "style": "Giọng cô gái trẻ miền Nam Sài Gòn 23 tuổi, phát âm chuẩn phương ngữ miền Nam xuyên suốt mọi câu, giữ cố định một âm sắc trong trẻo tự nhiên đời thực, rõ chữ, nhiệt tình chân thật ở đầu phim và nghẹn giọng lo lắng khi gặp biến cố, tuyệt đối không gào khóc cải lương.",
-      "start": 118.0,
-      "window": 6.4,
-      "text": "Chị Hai lo xa quá, kênh bả hơn trăm ngàn người theo dõi, ai đi lừa mấy đồng vé."
+      "speaker_label": "Na – trưởng nhóm fan 23 tuổi",
+      "style": "Giọng cô gái trẻ miền Nam Sài Gòn 23 tuổi, phát âm chuẩn phương ngữ miền Nam xuyên suốt mọi câu, giữ cố định một âm sắc trong trẻo tự nhiên đời thực, rõ chữ, tuyệt đối không gào khóc cải lương, lắp bắp, lạc giọng vì sợ hãi, cầu cứu.",
+      "start": 133.82,
+      "window": 13.38,
+      "text": "Dạ… anh ơi cho em gặp chị Trang quản lý đối tác… Chị Trang nhận ba trăm triệu tiền vé nội bộ của nhóm em mà giờ khóa máy rồi anh ơi…",
+      "subtitle": [
+        "Dạ… cho em gặp chị Trang… Chị Trang nhận 300 triệu tiền vé nội bộ của nhóm em mà giờ khóa máy rồi anh ơi…"
+      ]
     },
     {
-      "id": "l18_trang",
-      "speaker": "ke_ngot_ngao_nu",
-      "model": "gemini-3.8-flash-tts",
-      "voice": "Aoede",
-      "label_short": "TRANG",
-      "speaker_label": "Chị Trang",
-      "style": "Giọng nữ miền Nam Sài Gòn 30 tuổi, phát âm chuẩn phương ngữ miền Nam xuyên suốt mọi câu, giữ cố định một âm sắc êm mượt, lịch thiệp, thân tình như người làm truyền thông sự kiện chuyên nghiệp.",
-      "start": 133.2,
-      "window": 7.9,
-      "text": "Đối tác đang rà lại danh sách, thứ Tư chị gửi đủ một lượt nha. Đừng gọi giục chị rối.",
-      "af": "phone"
+      "id": "l18_kenh",
+      "speaker": "anh_hai",
+      "voice": "Orus",
+      "label_short": "KÊNH HẬU TRƯỜNG",
+      "speaker_label": "Đại diện Kênh Hậu Trường thật",
+      "af": "phone",
+      "style": "Giọng nam miền Nam Sài Gòn 35 tuổi, phát âm chuẩn phương ngữ miền Nam, trầm tĩnh, rõ chữ, dứt khoát và nghiêm túc qua điện thoại, điềm tĩnh nhưng đanh thép như búa giáng.",
+      "start": 142.22,
+      "window": 10.66,
+      "text": "Em nghe rõ này. Bên anh không có nhân sự nào tên Trang, và Kênh Hậu Trường tuyệt đối không bán vé nội bộ."
     },
     {
       "id": "l19_na",
       "speaker": "be_na",
-      "model": "gemini-3.8-flash-tts",
       "voice": "Leda",
       "label_short": "NA",
-      "speaker_label": "Na",
-      "style": "Giọng cô gái trẻ miền Nam Sài Gòn 23 tuổi, phát âm chuẩn phương ngữ miền Nam xuyên suốt mọi câu, giữ cố định một âm sắc trong trẻo tự nhiên đời thực, rõ chữ, nhiệt tình chân thật ở đầu phim và nghẹn giọng lo lắng khi gặp biến cố, tuyệt đối không gào khóc cải lương.",
-      "start": 142.0,
-      "window": 7.8,
-      "text": "Thứ Tư rồi… Sao số điện thoại khóa máy, tin nhắn chị Trang cũng chặn em luôn vậy nè?!"
+      "speaker_label": "Na – trưởng nhóm fan 23 tuổi",
+      "style": "Giọng cô gái trẻ miền Nam Sài Gòn 23 tuổi, phát âm chuẩn phương ngữ miền Nam xuyên suốt mọi câu, giữ cố định một âm sắc trong trẻo tự nhiên đời thực, rõ chữ, tuyệt đối không gào khóc cải lương, bật khóc nấc, hoảng loạn sững sờ.",
+      "start": 149.99,
+      "window": 11.34,
+      "text": "Không… không thể nào đâu anh! Bả đeo thẻ kênh mình, mang loa quạt ra nhà thi đấu phụ tụi em suốt sáu tháng nay mà!",
+      "subtitle": [
+        "Không… không thể nào đâu anh! Bả đeo thẻ kênh mình, mang loa quạt phụ tụi em suốt 6 tháng nay mà!"
+      ]
     },
     {
-      "id": "l20_tung",
-      "speaker": "thang_tun",
-      "model": "gemini-3.8-flash-tts",
-      "voice": "Puck",
-      "label_short": "TÙNG",
-      "speaker_label": "Tùng",
-      "style": "Giọng nam thanh niên miền Nam Sài Gòn 22 tuổi, phát âm chuẩn phương ngữ miền Nam xuyên suốt mọi câu, giữ cố định một âm sắc trẻ trung tông sáng, nhịp nhanh gọn, rõ chữ.",
-      "start": 153.0,
-      "window": 8.2,
-      "text": "Chị Na ơi, Kênh Hậu Trường vừa báo bị mạo danh! Trên mạng đang tố trang chị lừa ba trăm triệu kìa!"
-    },
-    {
-      "id": "l21_tung",
-      "speaker": "thang_tun",
-      "model": "gemini-3.8-flash-tts",
-      "voice": "Puck",
-      "label_short": "TÙNG",
-      "speaker_label": "Tùng",
-      "style": "Giọng nam thanh niên miền Nam Sài Gòn 22 tuổi, phát âm chuẩn phương ngữ miền Nam xuyên suốt mọi câu, giữ cố định một âm sắc trẻ trung tông sáng, nhịp nhanh gọn, rõ chữ.",
-      "start": 161.6,
-      "window": 8.4,
-      "text": "Mười đứa bạn em đặt vé máy bay hết rồi! Giờ mất vé, tụi nó tưởng em ăn chặn hai chục triệu!"
-    },
-    {
-      "id": "l22_na",
+      "id": "l19b_na",
       "speaker": "be_na",
-      "model": "gemini-3.8-flash-tts",
       "voice": "Leda",
       "label_short": "NA",
-      "speaker_label": "Na",
-      "style": "Giọng cô gái trẻ miền Nam Sài Gòn 23 tuổi, phát âm chuẩn phương ngữ miền Nam xuyên suốt mọi câu, giữ cố định một âm sắc trong trẻo tự nhiên đời thực, rõ chữ, nhiệt tình chân thật ở đầu phim và nghẹn giọng lo lắng khi gặp biến cố, tuyệt đối không gào khóc cải lương.",
-      "start": 173.9,
-      "window": 5.5,
-      "text": "Người ta rủa xả em khắp nơi… Hay em tạm khóa trang lại nha chị Hai?!"
+      "speaker_label": "Na – trưởng nhóm fan 23 tuổi",
+      "style": "Giọng cô gái trẻ miền Nam Sài Gòn 23 tuổi, phát âm chuẩn phương ngữ miền Nam xuyên suốt mọi câu, giữ cố định một âm sắc trong trẻo tự nhiên đời thực, rõ chữ, tuyệt đối không gào khóc cải lương, nghẹn ngào níu kéo trong tuyệt vọng.",
+      "start": 157.87,
+      "window": 9.64,
+      "text": "Anh kiểm tra lại giùm em đi, ba trăm triệu của một trăm rưỡi bạn trong nhóm em đó anh ơi…",
+      "subtitle": [
+        "Anh kiểm tra lại giùm em đi, 300 triệu của 150 bạn trong nhóm em đó anh ơi…"
+      ]
     },
     {
-      "id": "l23_chihai",
+      "id": "l20_kenh",
+      "speaker": "anh_hai",
+      "voice": "Orus",
+      "label_short": "KÊNH HẬU TRƯỜNG",
+      "speaker_label": "Đại diện Kênh Hậu Trường thật",
+      "af": "phone",
+      "style": "Giọng nam miền Nam Sài Gòn 35 tuổi, phát âm chuẩn phương ngữ miền Nam, trầm tĩnh, rõ chữ, dứt khoát và nghiêm túc qua điện thoại, dứt khoát, thực tế.",
+      "start": 164.11,
+      "window": 11.34,
+      "text": "Bên anh vừa đăng cảnh báo bị mạo danh rồi. Kênh không nhận tiền nên công an không lập hồ sơ theo đơn của kênh được."
+    },
+    {
+      "id": "l20b_kenh",
+      "speaker": "anh_hai",
+      "voice": "Orus",
+      "label_short": "KÊNH HẬU TRƯỜNG",
+      "speaker_label": "Đại diện Kênh Hậu Trường thật",
+      "af": "phone",
+      "style": "Giọng nam miền Nam Sài Gòn 35 tuổi, phát âm chuẩn phương ngữ miền Nam, trầm tĩnh, rõ chữ, dứt khoát và nghiêm túc qua điện thoại, nghiêm túc, dứt khoát.",
+      "start": 170.88,
+      "window": 8.96,
+      "text": "Chính em là người chuyển ba trăm triệu cho bả, nên em phải tự đi trình báo ngay đi.",
+      "subtitle": [
+        "Chính em là người chuyển 300 triệu cho bả, nên em phải tự đi trình báo ngay đi."
+      ]
+    },
+    {
+      "id": "l21_na",
+      "speaker": "be_na",
+      "voice": "Leda",
+      "label_short": "NA",
+      "speaker_label": "Na – trưởng nhóm fan 23 tuổi",
+      "style": "Giọng cô gái trẻ miền Nam Sài Gòn 23 tuổi, phát âm chuẩn phương ngữ miền Nam xuyên suốt mọi câu, giữ cố định một âm sắc trong trẻo tự nhiên đời thực, rõ chữ, tuyệt đối không gào khóc cải lương, quỳ dưới sàn, nghẹn ngào van xin trong tuyệt vọng.",
+      "start": 176.4,
+      "window": 12.7,
+      "text": "Mọi người ơi… chị Trang lừa em rồi… Em thề em không giữ của mọi người một đồng nào hết, cho em thêm thời gian tìm bả nha mọi người…"
+    },
+    {
+      "id": "l22_fannu",
+      "speaker": "chi_tu",
+      "voice": "Zephyr",
+      "label_short": "FAN NỮ",
+      "speaker_label": "Thành viên nữ trong nhóm fan",
+      "af": "phone",
+      "style": "Giọng cô gái trẻ miền Nam Sài Gòn 21 tuổi, phát âm chuẩn phương ngữ miền Nam, tự nhiên đời thực, nói qua tin nhắn thoại, lạnh lùng, cay nghiệt, tàn nhẫn.",
+      "start": 186.68,
+      "window": 12.02,
+      "text": "Đừng có diễn nước mắt cá sấu! Làm gì có ai ngu tới mức chuyển ba trăm triệu không giấy tờ! Chắc chắn chị ăn chia với bả!",
+      "subtitle": [
+        "Đừng có diễn nước mắt cá sấu! Làm gì có ai chuyển 300 triệu không giấy tờ! Chắc chắn chị ăn chia với bả!"
+      ]
+    },
+    {
+      "id": "l23_fannam",
+      "speaker": "thang_tun",
+      "voice": "Puck",
+      "label_short": "FAN NAM",
+      "speaker_label": "Thành viên nam trong nhóm fan (qua tin nhắn thoại)",
+      "af": "phone",
+      "style": "Giọng nam thanh niên miền Nam Sài Gòn 22 tuổi, phát âm chuẩn phương ngữ miền Nam, tông sáng, nhịp nhanh, rõ chữ, đanh giọng đe dọa.",
+      "start": 194.96,
+      "window": 13.04,
+      "text": "Tụi này chỉ biết tiền chuyển vô tài khoản tên chị! Sáng mai không ói đủ tiền ra, tụi này kéo tới tận nhà, cho chị khỏi nhìn mặt ai luôn!"
+    },
+    {
+      "id": "l24_chihai",
       "speaker": "chi_ba",
-      "model": "gemini-3.8-flash-tts",
       "voice": "Kore",
       "label_short": "CHỊ HAI",
-      "speaker_label": "Chị Hai",
-      "style": "Giọng phụ nữ miền Nam Sài Gòn 35 tuổi, phát âm chuẩn phương ngữ miền Nam xuyên suốt mọi câu, giữ cố định một âm sắc sắc sảo, điềm tĩnh, dứt khoát và ấm áp khi bảo vệ em trong nhà.",
-      "start": 179.8,
-      "window": 5.8,
-      "text": "Đừng dại! Giờ khóa trang im lặng là người ta tin em ôm tiền trốn thiệt đó!"
+      "speaker_label": "Chị Hai – chị ruột của Na, 35 tuổi",
+      "style": "Giọng phụ nữ miền Nam Sài Gòn 35 tuổi, phát âm chuẩn phương ngữ miền Nam xuyên suốt mọi câu, giữ cố định một âm sắc sắc sảo, điềm tĩnh, dứt khoát và lạnh lùng, bình thản, kiệm lời, lạnh lùng.",
+      "start": 206.47,
+      "window": 6.92,
+      "text": "Lau mặt đi. Sáng mai cầm xấp hồ sơ này lên công an."
     },
     {
-      "id": "l24_anhhai",
-      "speaker": "anh_hai",
-      "model": "gemini-3.8-flash-tts",
-      "voice": "Orus",
-      "label_short": "ANH HAI",
-      "speaker_label": "Anh Hai",
-      "style": "Giọng nam miền Nam Sài Gòn 35 tuổi, phát âm chuẩn phương ngữ miền Nam xuyên suốt mọi câu, giữ cố định một âm sắc trầm ấm, điềm tĩnh, thẳng gọn, chững chạc.",
-      "start": 191.2,
-      "window": 8.2,
-      "text": "Em bị lợi dụng lòng tin, nhưng tiền trăm rưỡi bạn đều vô tài khoản em nên phải ra mặt đàng hoàng."
-    },
-    {
-      "id": "l25_chihai",
-      "speaker": "chi_ba",
-      "model": "gemini-3.8-flash-tts",
-      "voice": "Kore",
-      "label_short": "CHỊ HAI",
-      "speaker_label": "Chị Hai",
-      "style": "Giọng phụ nữ miền Nam Sài Gòn 35 tuổi, phát âm chuẩn phương ngữ miền Nam xuyên suốt mọi câu, giữ cố định một âm sắc sắc sảo, điềm tĩnh, dứt khoát và ấm áp khi bảo vệ em trong nhà.",
-      "start": 199.8,
-      "window": 8.8,
-      "text": "Giữ nguyên tin nhắn gốc, in sao kê từng khoản nhận và chuyển. Đăng thông báo rõ ràng rồi đi trình báo công an ngay."
-    },
-    {
-      "id": "l26_anhhai",
-      "speaker": "anh_hai",
-      "model": "gemini-3.8-flash-tts",
-      "voice": "Orus",
-      "label_short": "ANH HAI",
-      "speaker_label": "Anh Hai",
-      "style": "Giọng nam miền Nam Sài Gòn 35 tuổi, phát âm chuẩn phương ngữ miền Nam xuyên suốt mọi câu, giữ cố định một âm sắc trầm ấm, điềm tĩnh, thẳng gọn, chững chạc.",
-      "start": 210.4,
-      "window": 8.2,
-      "text": "Kênh bị mạo danh không mất tiền trực tiếp, nên chính những người chuyển tiền như tụi em phải đi nộp đơn."
-    },
-    {
-      "id": "l27_na",
+      "id": "l25_na",
       "speaker": "be_na",
-      "model": "gemini-3.8-flash-tts",
       "voice": "Leda",
       "label_short": "NA",
-      "speaker_label": "Na",
-      "style": "Giọng cô gái trẻ miền Nam Sài Gòn 23 tuổi, phát âm chuẩn phương ngữ miền Nam xuyên suốt mọi câu, giữ cố định một âm sắc trong trẻo tự nhiên đời thực, rõ chữ, nhiệt tình chân thật ở đầu phim và nghẹn giọng lo lắng khi gặp biến cố, tuyệt đối không gào khóc cải lương.",
-      "start": 219.0,
-      "window": 7.6,
-      "text": "Hồ sơ được tiếp nhận rồi… Nhưng tiền tiết kiệm hai năm đi làm, em phải rút ra trả dần cho các bạn."
+      "speaker_label": "Na – trưởng nhóm fan 23 tuổi",
+      "style": "Giọng cô gái trẻ miền Nam Sài Gòn 23 tuổi, phát âm chuẩn phương ngữ miền Nam xuyên suốt mọi câu, giữ cố định một âm sắc trong trẻo tự nhiên đời thực, rõ chữ, tuyệt đối không gào khóc cải lương, ngước lên sững sờ, ngơ ngác.",
+      "start": 211.29,
+      "window": 8.62,
+      "text": "Ủa chị Hai… sao chị có ảnh chụp màn hình lúc em chuyển khoản từ tuần trước vậy?"
     },
     {
-      "id": "l28_tung",
-      "speaker": "thang_tun",
-      "model": "gemini-3.8-flash-tts",
-      "voice": "Puck",
-      "label_short": "TÙNG",
-      "speaker_label": "Tùng",
-      "style": "Giọng nam thanh niên miền Nam Sài Gòn 22 tuổi, phát âm chuẩn phương ngữ miền Nam xuyên suốt mọi câu, giữ cố định một âm sắc trẻ trung tông sáng, nhịp nhanh gọn, rõ chữ.",
-      "start": 227.0,
-      "window": 6.6,
-      "text": "Em cũng phải gom tiền đền trước cho đám bạn. Chừa tới già chuyện gom đơn truyền miệng."
+      "id": "l26_chihai",
+      "speaker": "chi_ba",
+      "voice": "Kore",
+      "label_short": "CHỊ HAI",
+      "speaker_label": "Chị Hai – chị ruột của Na, 35 tuổi",
+      "style": "Giọng phụ nữ miền Nam Sài Gòn 35 tuổi, phát âm chuẩn phương ngữ miền Nam xuyên suốt mọi câu, giữ cố định một âm sắc sắc sảo, điềm tĩnh, dứt khoát và lạnh lùng, trầm thấp, bí ẩn, sắc lạnh, dứt khoát.",
+      "start": 218.15,
+      "window": 11.0,
+      "text": "Tài khoản đó chị đã gửi người bên điều tra từ đêm hôm ấy rồi. Cứ trình báo đúng như trong này… đừng hỏi thêm."
     },
     {
-      "id": "l29_boctran",
+      "id": "l27_narr",
       "speaker": "nguoi_boc_tran",
-      "model": "gemini-3.8-flash-tts",
-      "voice": "Charon",
-      "label_short": "BÓC TRẦN",
-      "speaker_label": "Người Bóc Trần",
-      "style": "Giọng nam trung niên miền Nam Sài Gòn, điềm tĩnh, trầm ấm, rõ chữ, khách quan và sắc bén khi giải phẫu cơ chế tâm lý, nhịp vừa phải, nhấn từ khóa quan trọng.",
-      "start": 235.0,
-      "window": 6.2,
-      "text": "Kẻ gian không đánh vào lòng tham của Na. Chúng đánh vào sự nhiệt tình và lòng tin người quen."
+      "start": 226.58,
+      "window": 11.34,
+      "text": "Hào quang đám đông và lòng tin người quen ngoài đời — đó là cái bẫy biến người gom hộ thành kẻ đứng mũi chịu sào."
     },
     {
-      "id": "l30_boctran",
-      "speaker": "nguoi_boc_tran",
-      "model": "gemini-3.8-flash-tts",
-      "voice": "Charon",
-      "label_short": "BÓC TRẦN",
-      "speaker_label": "Người Bóc Trần",
-      "style": "Giọng nam trung niên miền Nam Sài Gòn, điềm tĩnh, trầm ấm, rõ chữ, khách quan và sắc bén khi giải phẫu cơ chế tâm lý, nhịp vừa phải, nhấn từ khóa quan trọng.",
-      "start": 242.0,
-      "window": 7.0,
-      "text": "Đầu tiên, chúng bỏ vài triệu tặng quà, mang loa quạt hỗ trợ ngoài đời nhiều tháng để tạo vỏ bọc tử tế."
+      "id": "l28_na",
+      "speaker": "be_na",
+      "voice": "Leda",
+      "label_short": "NA",
+      "speaker_label": "Na – trưởng nhóm fan 23 tuổi",
+      "style": "Giọng cô gái trẻ miền Nam Sài Gòn 23 tuổi, phát âm chuẩn phương ngữ miền Nam xuyên suốt mọi câu, giữ cố định một âm sắc trong trẻo tự nhiên đời thực, rõ chữ, tuyệt đối không gào khóc cải lương, thở phào nhẹ nhõm, biết ơn.",
+      "start": 237.01,
+      "window": 12.02,
+      "text": "May mà chị Hai âm thầm báo trước một tuần nên bên điều tra đã kịp khoanh vùng dòng tiền… Không có chị Hai chắc em chết mất."
     },
     {
-      "id": "l31_boctran",
-      "speaker": "nguoi_boc_tran",
-      "model": "gemini-3.8-flash-tts",
-      "voice": "Charon",
-      "label_short": "BÓC TRẦN",
-      "speaker_label": "Người Bóc Trần",
-      "style": "Giọng nam trung niên miền Nam Sài Gòn, điềm tĩnh, trầm ấm, rõ chữ, khách quan và sắc bén khi giải phẫu cơ chế tâm lý, nhịp vừa phải, nhấn từ khóa quan trọng.",
-      "start": 249.3,
-      "window": 6.9,
-      "text": "Khi đêm nhạc cháy vé, chúng mượn danh đối tác rao vé nội bộ, hẹn sát ngày xuất mã để gom trọn một cục."
+      "id": "l29_secret",
+      "speaker": "ke_gia_danh",
+      "voice": "Fenrir",
+      "label_short": "ĐẦU DÂY BÍ ẨN",
+      "speaker_label": "Giọng nam bí ẩn gọi cho Chị Hai",
+      "af": "phone",
+      "style": "Giọng nam miền Nam Sài Gòn 40 tuổi, phát âm chuẩn phương ngữ miền Nam, trầm thấp, kín kẽ, bí ẩn qua điện thoại, trầm thấp, bí ẩn qua điện thoại.",
+      "start": 246.74,
+      "window": 9.98,
+      "text": "Con bé nộp đơn đúng như kịch bản rồi hả? Còn khoản ba trăm triệu bên nhánh con Trang, giờ tính sao?",
+      "subtitle": [
+        "Con bé nộp đơn đúng như kịch bản rồi hả? Còn khoản 300 triệu bên nhánh con Trang, giờ tính sao?"
+      ]
     },
     {
-      "id": "l32_boctran",
-      "speaker": "nguoi_boc_tran",
-      "model": "gemini-3.8-flash-tts",
-      "voice": "Charon",
-      "label_short": "BÓC TRẦN",
-      "speaker_label": "Người Bóc Trần",
-      "style": "Giọng nam trung niên miền Nam Sài Gòn, điềm tĩnh, trầm ấm, rõ chữ, khách quan và sắc bén khi giải phẫu cơ chế tâm lý, nhịp vừa phải, nhấn từ khóa quan trọng.",
-      "start": 257.0,
-      "window": 7.0,
-      "text": "Độc hiểm nhất, chúng đẩy trưởng nhóm đứng ra gom tiền, biến người nhiệt tình thành tấm bia hứng trọn trách nhiệm."
+      "id": "l30_chihai",
+      "speaker": "chi_ba",
+      "voice": "Kore",
+      "label_short": "CHỊ HAI",
+      "speaker_label": "Chị Hai – chị ruột của Na, 35 tuổi",
+      "style": "Giọng phụ nữ miền Nam Sài Gòn 35 tuổi, phát âm chuẩn phương ngữ miền Nam xuyên suốt mọi câu, giữ cố định một âm sắc sắc sảo, điềm tĩnh, dứt khoát và lạnh lùng, lạnh băng, sắc lẹm, dứt khoát.",
+      "start": 254.2,
+      "window": 3.52,
+      "text": "Cứ để đó!"
     }
   ],
   "chat_bubbles": [
     {
       "sender": "NHÓM FAN ÁNH SAO",
-      "text": "Thứ Bảy diễn rồi vé đâu admin ơi?! Định ôm ba trăm triệu trốn hả?!",
+      "text": "Thứ Bảy diễn rồi! Vé đâu hay chị định ôm tiền của tụi em trốn hả?!",
       "side": "left",
-      "y": 240,
-      "stamp": "99+ TIN MỚI",
-      "start": 5.8,
-      "end": 8.8
+      "y": 260,
+      "stamp": "ĐÒI VÉ",
+      "start": 8.49,
+      "end": 14.29
     },
     {
-      "sender": "CHỊ TRANG",
-      "text": "Chốt tiền tối nay kẻo ban tổ chức thu hồi suất nha Na.",
+      "sender": "FAN TRONG NHÓM",
+      "text": "Cái gì?! 300.000.000 VND mà chuyển không giấy tờ?! Chị phải đền cho tụi này!",
+      "side": "right",
+      "y": 300,
+      "stamp": "PHẪN NỘ",
+      "start": 26.59,
+      "end": 32.09
+    },
+    {
+      "sender": "NHÓM FAN ÁNH SAO",
+      "text": "Mới mở bán 5 phút đã HẾT SẠCH VÉ rồi chị Na ơi! Cứu tụi em với!",
       "side": "left",
-      "y": 220,
-      "stamp": "GẤP",
-      "start": 117.9,
-      "end": 124.2
+      "y": 260,
+      "stamp": "CHÁY VÉ",
+      "start": 72.14,
+      "end": 77.34
     },
     {
       "sender": "NGÂN HÀNG X",
-      "text": "TK …4512: −300.000.000 VND (Chuyển khoản thành công)",
+      "text": "+4.000.000 VND · +6.000.000 VND (150 vé gom về TK của Na)",
+      "side": "left",
+      "y": 340,
+      "stamp": "TIỀN VỀ DỒN DẬP",
+      "start": 98.11,
+      "end": 104.61
+    },
+    {
+      "sender": "CHỊ TRANG",
+      "text": "Chốt đủ 300.000.000 VND trong tối nay kẻo ban tổ chức thu hồi suất vé đoàn nha Na.",
+      "side": "left",
+      "y": 240,
+      "stamp": "HỐI CHỐT TIỀN",
+      "start": 114.27,
+      "end": 119.07
+    },
+    {
+      "sender": "NGÂN HÀNG X",
+      "text": "TK …4512 (NGUYỄN THỊ TRANG): -300.000.000 VND (Chuyển khoản thành công)",
       "side": "right",
       "y": 420,
-      "stamp": "21:42",
-      "start": 124.6,
-      "end": 127.7
+      "stamp": "ĐÃ CHUYỂN 300TR",
+      "start": 115.47,
+      "end": 119.97
+    },
+    {
+      "sender": "FAN TRONG NHÓM",
+      "text": "Đừng diễn nước mắt cá sấu! Chuyển 300 triệu không giấy tờ, chắc chắn chị ăn chia với bả!",
+      "side": "left",
+      "y": 260,
+      "stamp": "QUAY LƯNG",
+      "start": 186.78,
+      "end": 193.28
+    },
+    {
+      "sender": "NHÓM FAN ÁNH SAO",
+      "text": "Sáng mai không ói đủ tiền ra, tụi này kéo tới tận nhà, cho chị khỏi nhìn mặt ai luôn!",
+      "side": "right",
+      "y": 300,
+      "stamp": "DỌA KÉO TỚI NHÀ",
+      "start": 195.16,
+      "end": 201.66
     }
   ],
   "callouts": [
     {
-      "text": "CÒN 3 NGÀY TRƯỚC ĐÊM DIỄN: KHÓA MÁY · CHẶN TIN NHẮN",
+      "text": "CHỊ HAI LẶNG LẼ QUAN SÁT  ·  ÂM THẦM CHỤP LẠI THÔNG TIN TÀI KHOẢN",
+      "style": "warning",
+      "y": 130,
+      "start": 118.72,
+      "end": 125.22
+    },
+    {
+      "text": "KÊNH HẬU TRƯỜNG: KHÔNG CÓ NHÂN SỰ TÊN TRANG · KHÔNG BÁN VÉ NỘI BỘ",
       "style": "danger",
-      "y": 135,
-      "start": 142.0,
-      "end": 151.8
+      "y": 130,
+      "start": 150.09,
+      "end": 158.09
     },
     {
-      "text": "KÊNH HẬU TRƯỜNG ĐÍNH CHÍNH: BỊ CÁ NHÂN MẠO DANH GIAO DỊCH VÉ TRÁI PHÉP",
-      "style": "warn",
-      "y": 135,
-      "start": 153.0,
-      "end": 162.5
+      "text": "TÀI KHOẢN ĐÃ ĐƯỢC CHỊ HAI ÂM THẦM GỬI ĐIỀU TRA TỪ MỘT TUẦN TRƯỚC",
+      "style": "warning",
+      "y": 130,
+      "start": 218.25,
+      "end": 224.75
     },
     {
-      "text": "1. NUÔI TIN NGOÀI ĐỜI   →   2. MƯỢN DANH ĐỐI TÁC   →   3. HẸN SÁT NGÀY XUẤT MÃ",
-      "style": "warn",
-      "y": 135,
-      "start": 242.0,
-      "end": 256.0
-    },
-    {
-      "text": "NHẬN TIỀN QUA TÀI KHOẢN CÁ NHÂN = TỰ ĐỨNG MŨI CHỊU SÀO VỀ UY TÍN & DÂN SỰ",
+      "text": "CUỘC GỌI MẬT VÀO MÁY PHỤ CỦA CHỊ HAI",
       "style": "danger",
-      "y": 135,
-      "start": 257.0,
-      "end": 264.1
+      "y": 120,
+      "start": 246.84,
+      "end": 253.04
+    },
+    {
+      "text": "CHỊ HAI ĐANG GIĂNG LƯỚI BẮT KẺ GIAN… HAY CÒN MỘT KỊCH BẢN NÀO KHÁC?",
+      "style": "danger",
+      "y": 440,
+      "start": 256.63,
+      "end": 259.83
     }
   ],
   "red_flags": {
-    "title": "NHỚ KỸ – 4 DẤU HIỆU BẪY GOM VÉ NỘI BỘ",
-    "start": 264.8,
-    "end": 279.0,
-    "stagger_sec": 1.2,
+    "title": "NHỚ KỸ – 3 DẤU HIỆU BẪY GOM VÉ NỘI BỘ",
+    "start": 226.38,
+    "end": 236.36,
+    "stagger_sec": 0.8,
     "items": [
-      "Rao \"vé nội bộ, suất đối tác\" số lượng lớn ngay khi kênh chính thức vừa hết vé",
-      "Mượn danh kênh truyền thông, công ty nhưng bảo chuyển vào tài khoản cá nhân",
-      "Hứa \"sát ngày diễn mới xuất mã đoàn\" rồi liên tục viện cớ dời lịch giao",
-      "Nhờ trưởng nhóm fan hoặc bạn bè đứng ra gom tiền hộ để thu một cục lớn"
+      "NUÔI LÒNG TIN NGOÀI ĐỜI: Tặng quà, hỗ trợ loa quạt nhiều tháng dưới mác \"người của kênh truyền thông\"",
+      "MỒI VÉ ĐOÀN GIÁ GỐC: Đẩy trưởng nhóm đứng ra gom một cục hàng trăm triệu chuyển vào tài khoản cá nhân",
+      "ĐỨNG MŨI CHỊU SÀO: Kênh thật không nhận tiền nên không thể đứng đơn; người gom hộ phải tự gánh cả hai đầu"
     ],
-    "action": "Chỉ mua trên kênh chính thức · Không lấy tài khoản cá nhân gom tiền hộ nguồn truyền miệng · Mất tiền: giữ sao kê, tin nhắn, trình báo công an ngay!"
+    "action": "Chỉ mua trên kênh chính thức · Tuyệt đối không dùng tài khoản cá nhân gom tiền hộ nguồn vé truyền miệng!"
   },
   "disclaimer": {
     "header": "LƯU Ý",
-    "start": 279.0,
-    "end": 285.0,
+    "start": 260.28,
+    "end": 264.78,
     "lines": [
-      "Tình huống trong phim được dựng lại nhằm cảnh báo cộng đồng; nhân vật, đêm nhạc, trang cộng đồng và số liệu đều là hư cấu.",
+      "Tình huống trong phim được dựng lại nhằm mục đích cảnh báo cộng đồng; nhân vật, đêm nhạc, trang cộng đồng và số liệu đều là hư cấu.",
       "Chỉ giao dịch vé qua kênh phân phối chính thức của ban tổ chức; không chuyển khoản lớn cho nguồn vé truyền miệng."
     ]
   },
   "audio": {
     "ambience": [
       {
-        "preset": "night_room",
+        "preset": "crowd",
         "start": 0.0,
-        "end": 20.0,
+        "end": 7.94,
+        "gain_db": 0.5
+      },
+      {
+        "preset": "night_room",
+        "start": 7.94,
+        "end": 42.41,
         "gain_db": -1.5
       },
       {
         "preset": "crowd",
-        "start": 20.0,
-        "end": 55.5,
-        "gain_db": -3.5
+        "start": 42.41,
+        "end": 71.69,
+        "gain_db": -3.0
       },
       {
         "preset": "room_tone",
-        "start": 55.5,
-        "end": 128.0,
+        "start": 71.69,
+        "end": 93.16,
+        "gain_db": -2.0
+      },
+      {
+        "preset": "room_tone",
+        "start": 93.16,
+        "end": 125.92,
         "gain_db": -2.0
       },
       {
         "preset": "night_room",
-        "start": 128.0,
-        "end": 152.5,
-        "gain_db": -1.5
-      },
-      {
-        "preset": "street",
-        "start": 152.5,
-        "end": 173.5,
-        "gain_db": -2.5
-      },
-      {
-        "preset": "night_room",
-        "start": 173.5,
-        "end": 186.0,
+        "start": 125.92,
+        "end": 205.72,
         "gain_db": -1.5
       },
       {
         "preset": "room_tone",
-        "start": 186.0,
-        "end": 210.0,
+        "start": 205.72,
+        "end": 226.03,
         "gain_db": -2.5
       },
       {
+        "preset": "room_tone",
+        "start": 226.03,
+        "end": 236.36,
+        "gain_db": -4.0
+      },
+      {
         "preset": "street",
-        "start": 210.0,
-        "end": 234.0,
-        "gain_db": -3.5
+        "start": 236.36,
+        "end": 259.93,
+        "gain_db": -3.0
       },
       {
         "preset": "room_tone",
-        "start": 234.0,
-        "end": 285.0,
-        "gain_db": -3.5
+        "start": 259.93,
+        "end": 264.78,
+        "gain_db": -5.0
       }
     ],
     "foley": [
       {
-        "preset": "phone_vibrate",
-        "at": 0.35,
-        "dur": 1.6,
-        "gain_db": -3.0
-      },
-      {
-        "preset": "notification",
-        "at": 5.8,
-        "gain_db": -4.0
+        "preset": "impact",
+        "at": 0.4,
+        "gain_db": -2
       },
       {
         "preset": "impact",
-        "at": 9.0,
-        "gain_db": -3.5
+        "at": 8.29,
+        "gain_db": -2
+      },
+      {
+        "preset": "phone_vibrate",
+        "at": 8.44,
+        "gain_db": -3,
+        "dur": 1.8
+      },
+      {
+        "preset": "notification",
+        "at": 8.54,
+        "gain_db": -4
+      },
+      {
+        "preset": "impact",
+        "at": 26.14,
+        "gain_db": -3
       },
       {
         "preset": "riser",
-        "at": 13.4,
-        "dur": 1.2,
-        "gain_db": -4.5
+        "at": 40.71,
+        "gain_db": -4,
+        "dur": 1.2
       },
       {
         "preset": "chapter_sting",
-        "at": 20.25,
-        "gain_db": -4.0
+        "at": 42.66,
+        "gain_db": -4
+      },
+      {
+        "preset": "notification",
+        "at": 72.14,
+        "gain_db": -4
       },
       {
         "preset": "phone_ring",
-        "at": 60.4,
-        "dur": 1.2,
-        "gain_db": -4.5
+        "at": 77.76,
+        "gain_db": -4,
+        "dur": 1.2
       },
       {
         "preset": "chapter_sting",
-        "at": 74.25,
-        "gain_db": -4.0
-      },
-      {
-        "preset": "notification",
-        "at": 75.3,
-        "gain_db": -5.0
-      },
-      {
-        "preset": "notification",
-        "at": 117.85,
-        "gain_db": -4.0
+        "at": 93.41,
+        "gain_db": -4
       },
       {
         "preset": "bank_ting",
-        "at": 124.6,
-        "gain_db": -3.0
+        "at": 93.81,
+        "gain_db": -4
+      },
+      {
+        "preset": "notification",
+        "at": 114.27,
+        "gain_db": -4
+      },
+      {
+        "preset": "bank_ting",
+        "at": 115.47,
+        "gain_db": -3
+      },
+      {
+        "preset": "notification",
+        "at": 118.92,
+        "gain_db": -5
       },
       {
         "preset": "chapter_sting",
-        "at": 128.25,
-        "gain_db": -4.0
+        "at": 126.17,
+        "gain_db": -4
       },
       {
         "preset": "call_end",
-        "at": 141.65,
-        "gain_db": -3.0
-      },
-      {
-        "preset": "impact",
-        "at": 141.8,
-        "gain_db": -3.0
+        "at": 126.47,
+        "gain_db": -3
       },
       {
         "preset": "heartbeat",
-        "at": 142.2,
-        "dur": 9.5,
-        "gain_db": -5.0
+        "at": 133.22,
+        "gain_db": -4,
+        "dur": 12.0
       },
       {
-        "preset": "riser",
-        "at": 172.2,
-        "dur": 1.2,
-        "gain_db": -4.5
+        "preset": "phone_ring",
+        "at": 133.32,
+        "gain_db": -4,
+        "dur": 1.2
       },
       {
         "preset": "impact",
-        "at": 179.55,
-        "gain_db": -3.0
+        "at": 149.99,
+        "gain_db": -3
+      },
+      {
+        "preset": "call_end",
+        "at": 175.35,
+        "gain_db": -3
+      },
+      {
+        "preset": "phone_vibrate",
+        "at": 176.5,
+        "gain_db": -3,
+        "dur": 2.0
+      },
+      {
+        "preset": "notification",
+        "at": 195.16,
+        "gain_db": -4
       },
       {
         "preset": "chapter_sting",
-        "at": 186.25,
-        "gain_db": -4.0
+        "at": 205.97,
+        "gain_db": -4
       },
       {
-        "preset": "typing",
-        "at": 188.5,
-        "dur": 2.0,
-        "gain_db": -6.0
+        "preset": "notification",
+        "at": 226.48,
+        "gain_db": -4
       },
       {
-        "preset": "chapter_sting",
-        "at": 234.25,
-        "gain_db": -4.0
+        "preset": "phone_vibrate",
+        "at": 246.04,
+        "gain_db": -3,
+        "dur": 1.2
       },
       {
-        "preset": "glitch",
-        "at": 234.1,
-        "gain_db": -4.0
+        "preset": "heartbeat",
+        "at": 254.2,
+        "gain_db": -4,
+        "dur": 2.5
       },
       {
-        "preset": "bank_ting",
-        "at": 264.8,
-        "gain_db": -4.0
+        "preset": "impact",
+        "at": 256.08,
+        "gain_db": -2
       }
     ],
     "bgm": [
       {
-        "preset": "suspense_pulse",
+        "preset": "action_climax",
         "start": 0.0,
-        "end": 20.0,
+        "end": 7.94,
+        "gain_db": -0.5
+      },
+      {
+        "preset": "suspense_pulse",
+        "start": 7.94,
+        "end": 42.41,
         "gain_db": -1.0
       },
       {
         "preset": "investigative_story",
-        "start": 20.0,
-        "end": 93.0,
+        "start": 42.41,
+        "end": 93.16,
         "gain_db": -1.5
       },
       {
         "preset": "suspense_pulse",
-        "start": 93.0,
-        "end": 141.5,
+        "start": 93.16,
+        "end": 125.92,
         "gain_db": -1.5
       },
       {
         "preset": "tension_drone",
-        "start": 141.5,
-        "end": 173.5,
-        "gain_db": -0.5
+        "start": 125.92,
+        "end": 132.87,
+        "gain_db": -0.8
       },
       {
         "preset": "action_climax",
-        "start": 173.5,
-        "end": 186.0,
-        "gain_db": 0.5
+        "start": 132.87,
+        "end": 205.72,
+        "gain_db": -0.5
       },
       {
-        "preset": "investigative_story",
-        "start": 186.0,
-        "end": 264.5,
-        "gain_db": -1.5
+        "preset": "tension_drone",
+        "start": 205.72,
+        "end": 226.03,
+        "gain_db": -1.2
       },
       {
         "preset": "warm_outro",
-        "start": 264.5,
-        "end": 285.0,
+        "start": 226.03,
+        "end": 236.36,
         "gain_db": -2.0
+      },
+      {
+        "preset": "tension_drone",
+        "start": 236.36,
+        "end": 259.93,
+        "gain_db": -1.0
+      },
+      {
+        "preset": "warm_outro",
+        "start": 259.93,
+        "end": 264.78,
+        "gain_db": -3.0
       }
     ],
     "duck_extra": [
       {
-        "start": 141.5,
-        "end": 143.2,
+        "start": 149.79000000000002,
+        "end": 151.49,
         "bgm_db": -14,
         "amb_db": -10
       },
       {
-        "start": 279.0,
-        "end": 284.9
+        "start": 260.28,
+        "end": 264.72999999999996
       }
     ]
   },
   "forbidden_terms": [],
   "publish": {
     "titles": [
-      "Bẫy \"Vé Nội Bộ\": Gom Hộ 300 Triệu, Trưởng Nhóm Fan Thành Bị Cáo Bất Đắc Dĩ | Bóc Trần Lừa Đảo",
-      "Nuôi Lòng Tin 6 Tháng Để Ôm 300 Triệu Tiền Vé: Cái Giá Đắt Của Việc \"Gom Đơn Hộ\" | Bóc Trần Lừa Đảo",
-      "300 Triệu Tiền Vé Bốc Hơi Trước Giờ Diễn – Vì Sao Người Gom Hộ Đứng Mũi Chịu Sào? | Bóc Trần Lừa Đảo"
+      "300 Triệu Gom Vé Hộ & Cuộc Gọi Bí Ẩn Sau Lưng Của Chị Hai | Bóc Trần Lừa Đảo",
+      "Bẫy \"Vé Nội Bộ\": Nuôi Lòng Tin 6 Tháng Để Biến Trưởng Nhóm Fan Thành Kẻ Đứng Mũi Chịu Sào | Bóc Trần Lừa Đảo",
+      "Thú Nhận Đã Chuyển 300 Triệu Cho Người Quen – Cú Rơi Xuống Vực Thẳm Trước Giờ Diễn | Bóc Trần Lừa Đảo"
     ],
-    "description": "Na, 23 tuổi – trưởng một nhóm cộng đồng người hâm mộ – không ăn chênh lệch một đồng khi đứng ra gom giúp 150 vé đêm nhạc qua lời giới thiệu \"suất vé nội bộ đối tác truyền thông\" của người chị quen biết từng mang loa, quạt hỗ trợ nhóm suốt nửa năm. Ba ngày trước giờ diễn, nguồn vé khóa máy chặn liên lạc, kênh truyền thông lên tiếng báo bị mạo danh, còn Na trở thành tâm điểm bị cả trăm người mua réo tên đòi 300 triệu.\n\n⏱️ Các hồi trong phim:\n00:00 Mở đầu – Gom giùm trăm rưỡi vé, cô trưởng nhóm thành bị cáo\n00:20 Hồi 1 – Sáu tháng trước: Món quà miễn phí từ \"đối tác truyền thông\"\n01:14 Hồi 2 – Điểm mù khi chuyển 300 triệu vào tài khoản cá nhân\n02:08 Hồi 3 – Ba ngày trước đêm diễn: Khóa máy, đính chính & bão đấu tố\n03:06 Hồi 4 – Đứng mũi chịu sào & quy trình trình báo công an\n03:54 Hồi 5 – Bóc trần 3 mắt xích bẫy \"vé nội bộ\" & 4 dấu hiệu nhận biết",
-    "pinned_comment": "📌 Cảnh báo mùa sự kiện & đêm nhạc: Không có \"suất vé nội bộ công ty\" nào lại thu hàng trăm triệu qua tài khoản cá nhân không hợp đồng. Đặc biệt, các bạn trưởng nhóm fan, lớp trưởng hay bạn bè nhiệt tình tuyệt đối đừng dùng tài khoản cá nhân đứng ra gom tiền hộ cho nguồn vé truyền miệng — khi kẻ gian cắt liên lạc, chính người gom hộ sẽ phải gánh khủng hoảng uy tín và trách nhiệm trực tiếp với người mua! (Chia sẻ kinh nghiệm cảnh giác bên dưới nhưng lưu ý không đăng tên thật, SĐT hay số tài khoản cá nhân nhé).",
+    "description": "Na, 23 tuổi – trưởng một nhóm cộng đồng người hâm mộ – không ăn chênh lệch một đồng khi đứng ra gom giúp 150 vé đêm nhạc qua lời giới thiệu \"suất vé nội bộ đối tác truyền thông\" của người chị quen biết từng mang loa, quạt hỗ trợ nhóm suốt nửa năm. Trong cơn say hào quang trưởng nhóm, Na bấm chuyển 300 triệu mà không biết Chị Hai đã đứng sau cánh cửa lặng lẽ quan sát tất cả. Khi nguồn vé khóa máy và kênh truyền thông thật lên tiếng báo bị mạo danh, Na rơi xuống vực thẳm cô đơn — trước khi phát hiện bộ hồ sơ mật của Chị Hai và cuộc gọi lạnh gáy ở cổng cơ quan chức năng.\n\n⏱️ Các hồi trong phim:\n00:00 Mở đầu – Lời thú nhận 300 triệu & cơn giận của cả nhóm\n00:42 Hồi 1 – Món quà miễn phí ngoài đời & cái bẫy “vé nội bộ”\n01:33 Hồi 2 – Hào quang trưởng nhóm & ánh mắt lạnh của chị hai\n02:06 Hồi 3 – Cuộc gọi rơi xuống vực thẳm & sự cô đơn cùng cực\n03:25 Hồi 4 – Sự cao tay của chị hai & cuộc gọi sau lưng\n03:46 Dấu hiệu nhận biết & cuộc gọi bí ẩn của Chị Hai",
+    "pinned_comment": "📌 Theo bạn, câu \"Cứ để đó!\" ở giây cuối cùng của Chị Hai là đang phối hợp ngầm để giăng lưới bắt trọn đường dây của Trang, hay còn một kịch bản nào khác đằng sau khoản 300 triệu? Và nhớ kỹ: tuyệt đối đừng bao giờ dùng tài khoản cá nhân đứng ra gom tiền hộ cho nguồn vé truyền miệng nhé!",
     "hashtags": [
       "#bóctrầnlừađảo",
       "#cảnhgiáclừađảo",
@@ -1301,6 +1431,6 @@
     ],
     "category": "Education (Giáo dục)",
     "playlist": "Hồ Sơ Bóc Trần Lừa Đảo – Phim Dài Chuyên Sâu",
-    "thumbnail_sec": 175.0
+    "thumbnail_sec": 150.49
   }
 }

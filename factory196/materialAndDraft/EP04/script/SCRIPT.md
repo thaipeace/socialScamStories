@@ -1,185 +1,107 @@
-# EP04 – BẪY VÉ NỘI BỘ: 300 TRIỆU GOM HỘ VÀ NGƯỜI ĐỨNG MŨI CHỊU SÀO (~285s · 16:9) – BẢN NHÁP v1
+# EP04 – 300 TRIỆU GOM VÉ HỘ & BÍ MẬT CỦA CHỊ HAI (Bản Kịch Hóa Điện Ảnh – v2)
 
-> **Bản nháp v1 (`factory196`).** Nhân vật trung tâm: **Na** (23 tuổi – trưởng nhóm cộng đồng fan). Tỷ lệ ~80% kịch đời sống / ~20% sơ đồ giải phẫu cơ chế & Người Bóc Trần theo [LONG_FORMAT_196_SPEC.md](../../../../00_HARNESS_GUIDELINES/LONG_FORMAT_196_SPEC.md).
-> Toàn bộ tên đêm nhạc (*"Ánh Sao"*), nhóm cộng đồng (*"Nhóm Fan Ánh Sao"*), kênh truyền thông bị mạo danh (*"Kênh Hậu Trường"*), nhân vật và số tài khoản (`TK …4512`) đều là **hư cấu**.
-> Mốc thời gian hiện là ước tính cho bản nháp; khi quay lại sản xuất sẽ căn lại chính xác 100% theo độ dài WAV thật sau Gate 2.
-
----
-
-## 0. Thẻ tập phim & Phân vai tách giọng (`Distinct Voice Separation`)
-
-| Nhân vật | Speaker (`cast.json`) | Voice & Tông giọng khóa cố định | Vai trò trong câu chuyện |
-| :--- | :--- | :--- | :--- |
-| **Na** (23t) | `be_na` (`NA`) | `Leda` – Nữ trẻ 23t, giọng trong sáng, nhiệt tình ở Hồi 1–2; nghẹn giọng, hoảng loạn ở Hồi 3–4 (không gào khóc cải lương) | Nhân viên thiết kế trẻ, lập *Nhóm Fan Ánh Sao* 2 năm không vụ lợi. Vì tin người quen ngoài đời nên đứng ra nhận gom 150 vé (300 triệu) qua tài khoản cá nhân. |
-| **Chị Hai** (35t) | `chi_ba` (`CHỊ HAI`) | `Kore` – Nữ 35t, sắc sảo, dứt khoát, tỉnh táo (tách biệt hoàn toàn với giọng trẻ `Leda` và giọng mượt `Aoede`) | Vợ của Anh Hai (chị dâu họ nơi Na ở cùng). Sớm cảnh báo chuyện chuyển tiền công ty vào tài khoản cá nhân; kịp ngăn Na khóa trang và dẫn Na đi trình báo đúng quy trình. |
-| **Trang** (30t) | `ke_ngot_ngao_nu` (`TRANG`) | `Aoede` – Nữ 30t, êm mượt, lịch thiệp kiểu dân sự kiện; lúc khất hẹn thì lạnh nhạt (`af: phone` khi gọi điện) | Mạo danh quản lý *Kênh Hậu Trường*. Bỏ vài triệu tặng áo, mang loa quạt hỗ trợ offline suốt 6 tháng để câu cú chót 300 triệu tiền "vé nội bộ". |
-| **Tùng** (22t) | `thang_tun` (`TÙNG`) | `Puck` – Nam trẻ 22t, tông cao sáng, nhịp nhanh, hốt hoảng khi bị nhóm bạn đòi tiền (`af: phone` ở Hồi 2) | Thành viên cốt cán trong nhóm fan; vì tin Na tuyệt đối nên đứng ra gom tiếp 10 vé (20 triệu) mua hộ nhóm bạn đại học ở tỉnh xa bay vào. |
-| **Anh Hai** (35t) | `anh_hai` (`ANH HAI`) | `Orus` – Nam 35t, trầm ấm, điềm tĩnh, chững chạc (tách biệt hẳn với `Puck` và `Charon`) | Anh họ của Na (chồng Chị Hai). Giữ cái đầu lạnh cho cả nhà, phân tích rõ trách nhiệm thực tế và đưa Na cùng các nạn nhân đi trình báo công an. |
-| **Người Bóc Trần** | `nguoi_boc_tran` (`BÓC TRẦN`) | `Charon` – Nam trung niên trầm tĩnh, khách quan, sắc bén | Dẫn 1 câu mở Hook, 1 câu chuyển hồi tưởng và giải phẫu 3 mắt xích bẫy "gom vé nội bộ" ở Hồi 5. |
+- **Mã tập:** `EP04`
+- **Slug:** `BayVeNoiBo300Trieu`
+- **Họ kịch bản:** `MIX-06` (Bẫy vé nội bộ / Nuôi lòng tin ngoài đời 6 tháng → Lợi dụng hào quang trưởng nhóm gom 300 triệu qua tài khoản cá nhân → Rơi xuống vực thẳm khi kênh thật báo bị mạo danh & đám đông fan quay lưng → Cú twist thuyết âm mưu của Chị Hai)
+- **Định dạng:** `16:9` (`1920x1080 @ 30fps`)
+- **Tỷ lệ Kịch / Bóc trần:** **97% Kịch tâm lý – điện ảnh / 3% Bóc trần (đúng 7 giây)**
+- **Nhân vật & Giọng (`02_CAST/cast.json`):**
+  1. **Na (`be_na` – voice `Leda`):** 23 tuổi, trưởng nhóm fan nhiệt tình, ngây thơ, say sưa trong hào quang được cả nhóm tung hô, gom 150 vé (300 triệu) không ăn lời một đồng.
+  2. **Chị Hai (`chi_ba` – voice `Kore`):** 35 tuổi, chị ruột của Na – kiệm lời, ánh mắt sắc lạnh, âm thầm chụp lại màn hình giao dịch trước 1 tuần và giữ cú twist thuyết âm mưu ở cuối phim.
+  3. **Trang (`ke_ngot_ngao_nu` – voice `Aoede`):** 30 tuổi, kẻ giả danh Quản lý *Kênh Hậu Trường* – bỏ vài triệu mang loa kéo, quạt, nước mát hỗ trợ offline suốt 6 tháng để câu cú chót 300 triệu.
+  4. **Fan Nữ (`chi_tu` – voice `Zephyr`, `af: phone`):** Thành viên trong nhóm chuyển tiền trực tiếp vào tài khoản của Na.
+  5. **Fan Nam (`thang_tun` – voice `Puck`):** Thành viên trong nhóm chuyển tiền trực tiếp vào tài khoản của Na.
+  6. **Đại diện Kênh Hậu Trường thật (`anh_hai` – voice `Orus`, `af: phone`):** Giọng nam điềm tĩnh, dứt khoát khi thông báo kênh bị mạo danh và không thể đứng đơn thay Na.
+  7. **Giọng mật ở đầu dây bên kia (`ke_gia_danh` – voice `Fenrir`, `af: phone`):** Giọng nam trầm thấp gọi vào máy phụ của Chị Hai ở cuối phim.
+  8. **Người Bóc Trần (`nguoi_boc_tran` – voice `Charon`):** Đúng 1 câu ở Hook + **1 câu 7 giây** ở thẻ Nhớ Kỹ.
 
 ---
 
-## HOOK – CÔ TRƯỞNG NHÓM THÀNH BỊ CÁO (00:00–00:20)
-**[PHÒNG NGỦ CỦA NA – 23:15 – ĐÊM]**
+## CẤU TRÚC NHỊP ĐỘ & KỊCH BẢN CHI TIẾT
 
-*Điện thoại trên bàn học rung bần bật bên cạnh cuốn sổ tay ghi danh sách vé. Hàng chục tin nhắn giận dữ dồn dập nhảy sáng trên màn hình.*
-
-**TIN NHẮN NHÓM:** *Thứ Bảy diễn rồi vé đâu admin ơi?! Định ôm ba trăm triệu trốn hả?!*
-
-**NA (`l01`):** Em chuyển đủ ba trăm triệu cho chị Trang rồi… Sao giờ gọi khóa máy, nhắn tin chặn hết vậy?!
-
-*Chị Hai đẩy cửa bước vào, nhìn màn hình điện thoại và cuốn sổ ghi tên người mua trên bàn, sững người.*
-
-**CHỊ HAI (`l02`):** Ba trăm triệu tiền vé của trăm rưỡi người… đều chuyển vô tài khoản em hả Na?!
-
-*Hình ảnh khựng lại trên gương mặt tái nhợt của Na. Nhạc ngắt đột ngột.*
-
-**NGƯỜI BÓC TRẦN (`l03`):** Không lấy lời một đồng, nhưng chỉ sau một đêm, Na bị cả trăm người tố lừa đảo.
+### CẢNH 1 – HOOK: CƠN CUỒNG NHIỆT "SỐNG CHẾT ĐU THẦN TƯỢNG" & LỜI THÚ NHẬN 300 TRIỆU (00:00 – 00:30)
+- **Nhịp mở màn bùng nổ (`s00_idol_frenzy` – `c00.jpg`, 00:00 – 00:08):**
+  - *Hình ảnh:* Đêm đại nhạc hội rực lửa trước sân vận động ngập ánh đèn laser tím hồng và pháo giấy; hàng trăm fan trẻ chen chúc sát rào chắn, tay vung gậy phát sáng (lightstick), vừa khóc vừa gào thét khản cổ như sống chết vì thần tượng. Ở chính giữa hàng đầu, **Na** (23 tuổi) mắt sáng rực, cầm loa tay dẫn nhịp hô vang giữa biển người sôi sục.
+  - **Fan Nam (`l00_fannam`, gào thét khản giọng vì phấn khích giữa biển người):** *"Đêm chung kết tháng Sáu có nhịn ăn nhịn mặc tụi em cũng phải săn bằng được vé! Sống chết gì cũng phải đu theo thần tượng tới cùng nha chị Na!"*
+- **Cú cắt đối lập cực gắt (`s01_hook_panic` – `c01.jpg`, `s02_hook_freeze` – `c02.jpg`, 00:08 – 00:30):**
+  - *(Chớp trắng `flash_white` + tiếng trống giáng mạnh — cắt phăng từ biển đèn rực rỡ sang căn phòng tối 23:15 đêm, 3 ngày trước đêm diễn. Điện thoại của Na rung bần bật, chính những giọng nói cuồng nhiệt năm nào giờ quay sang gào thét đòi vé)*
+  - **Fan Nữ (`l01_fannu`, qua tin nhắn thoại, gắt gỏng):** *"Tụi em chuyển tiền vé thẳng vô tài khoản tên chị! Thứ Bảy diễn rồi, vé đâu hay chị định ôm tiền của tụi em trốn hả?!"*
+  - **Na (`l02_na`, hoảng loạn bấm ghi âm trả lời nhóm, giọng run rẩy thật thà):** *"Em thề em không ăn lời một đồng nào! Toàn bộ ba trăm triệu của một trăm rưỡi vé em đã chuyển hết cho chị Trang bên Kênh Hậu Trường rồi mà!"*
+  - **Fan Nam (`l03_fannam`, gào lên trong nhóm):** *"Cái gì?! Ba trăm triệu tiền mặt mà chị chuyển không giấy tờ cho người ta?! Giờ mất trắng thì chị phải đền!"*
+  - *(Đứng hình trên gương mặt trắng bệch của Na, phía sau khe cửa là ánh mắt sắc lạnh của Chị Hai – Freeze frame)*
+  - **Người Bóc Trần (`l04_narr`):** *"Từ cơn cuồng nhiệt sống chết vì thần tượng đến vực thẳm chỉ cách nhau một cú bấm chuyển khoản — khi cô trưởng nhóm hai mươi ba tuổi gom ba trăm triệu vé hộ mà không ăn chênh lệch một đồng."*
 
 ---
 
-## HỒI 1 – SÁU THÁNG TRƯỚC: MÓN QUÀ MIỄN PHÍ TỪ "ĐỐI TÁC" (00:20–01:14)
-**[CỔNG NHÀ THI ĐẤU – BUỔI TRƯA NẮNG GẮT – 6 THÁNG TRƯỚC]**
+### HỒI 1: 6 THÁNG NUÔI MỒI & CƠN SAY "QUYỀN LỰC TRƯỞNG NHÓM" (00:22 – 01:30)
 
-*Nhóm bạn trẻ của Na đang dựng bàn phát quạt nhựa miễn phí tiếp sức người hâm mộ đêm nhạc Ánh Sao. Cái loa kéo tắt ngúm, mồ hôi ai nấy ướt đẫm.*
+#### Nhịp 1 – Màn tiếp cận "người thật, việc thật" ngoài đời (`s03_booth_heat` – `c03.jpg`, `s04_trang_arrival` – `c04.jpg`)
+- **Bối cảnh:** 6 tháng trước, trưa nắng gắt trước cổng nhà thi đấu. Nhóm fan của Na đang dựng bàn tiếp sức thì loa kéo tắt ngúm.
+- **Fan Nam (`l05_fannam`):** *"Chị Na ơi, nắng gắt quá mà loa kéo hư, quạt cầm tay cũng hết sạch pin rồi!"*
+- *Hình ảnh:* **Trang** (mặc blazer màu be sáng, đeo dây thẻ xanh trơn không chữ) tươi cười bước tới đặt thùng nước mát, chiếc loa kéo và túi quạt tích điện lên bàn.
+- **Trang (`l06_trang`):** *"Chị Trang bên Kênh Hậu Trường nè Na. Đợt trước tặng áo, nay chị mang loa với quạt qua tiếp sức tụi em."*
+- **Na (`l07_na`):** *"Trời ơi chị Trang chu đáo quá! Mấy đợt liền chị toàn bỏ tiền túi phụ tụi em không công, ngại ghê luôn."*
+- **Trang (`l08_trang`):** *"Chỗ chị em quý nghệ sĩ cả mà, tính toán chi mấy chuyện nhỏ. Nhóm cần gì cứ nhắn chị."*
 
-**NGƯỜI BÓC TRẦN (`l04`):** Mọi chuyện bắt đầu từ sáu tháng trước, giữa trưa nắng gắt trước cổng nhà thi đấu.
-
-**TÙNG (`l05`):** Chị Na ơi, nắng gắt quá mà loa kéo hư, quạt cũng hết sạch pin rồi!
-
-*Trang (30 tuổi, ăn mặc thanh lịch kiểu dân tổ chức sự kiện, đeo dây thẻ trơn không chữ) mỉm cười hiền hậu bước tới, đặt thùng nước mát, chiếc loa kéo và túi quạt cầm tay lên bàn.*
-
-**TRANG (`l06`):** Chị Trang bên Kênh Hậu Trường nè Na. Đợt trước tặng áo, nay chị mang loa quạt qua phụ tụi em.
-
-**NA (`l07`):** Trời ơi chị Trang chu đáo quá! Hai đợt liền chị toàn bỏ tiền túi phụ không công, ngại ghê.
-
-**TRANG (`l08`):** Chỗ chị em quý ca sĩ cả mà, tính toán chi mấy chuyện nhỏ. Cần gì cứ nhắn chị.
-
-**[PHÒNG LÀM VIỆC CỦA NA – TỐI MỞ BÁN VÉ – 4 THÁNG SAU]**
-
-*Màn hình laptop hiện thanh trạng thái đỏ báo hết sạch vé khu sát sân khấu chỉ sau vài phút mở bán. Tùng ngồi cạnh thở dài tiếc nuối. Điện thoại Na đổ chuông.*
-
-**TÙNG (`l09`):** Mới mở bán năm phút đã cháy sạch vé khu sát sân khấu rồi chị Na ơi!
-
-**TRANG (`l10`, qua điện thoại):** Na ơi, bên chị là đối tác truyền thông đêm nhạc nên có suất vé nội bộ giá gốc.
-
-**TRANG (`l11`, qua điện thoại):** Em đứng ra gom đơn cho nhóm đi, chị giữ riêng suất đẹp cho tụi em.
+#### Nhịp 2 – Đêm cháy vé & Hào quang "Người hùng của cả nhóm" (`s05_sold_out_bait` – `c05.jpg`)
+- **Bối cảnh:** Đêm mở bán vé đêm nhạc lớn. Màn hình máy tính báo hết sạch vé chỉ sau 5 phút.
+- **Fan Nữ (`l09_fannu`, qua chat nhóm):** *"Mới mở bán năm phút đã cháy sạch vé rồi chị Na ơi! Cứu tụi em với!"*
+- *Hình ảnh:* Điện thoại Na đổ chuông từ **Chị Trang**.
+- **Trang (`l10_trang`, qua điện thoại):** *"Na ơi, bên chị là đối tác truyền thông đêm nhạc nên có suất vé nội bộ giá gốc hai triệu."*
+- **Trang (`l11_trang`, qua điện thoại):** *"Bên chị không xuất lẻ từng người. Em đứng ra gom tiền của nhóm về một mối rồi chuyển qua tài khoản chị giữ suất đoàn nha."*
 
 ---
 
-## HỒI 2 – MƯỜI NGÀY TRƯỚC ĐÊM DIỄN: ĐIỂM MÙ CỦA NGƯỜI GOM ĐƠN (01:14–02:08)
-**[PHÒNG CỦA NA – 21:30 TỐI]**
-
-*Na cặm cụi đối chiếu bảng danh sách 150 vé trên máy tính. Điện thoại liên tục báo nhận tiền từ các thành viên gửi nhờ mua hộ.*
-
-**TÙNG (`l12`, qua điện thoại):** Em gom luôn mười vé hai chục triệu cho đám bạn ngoài tỉnh bay vô nha! Tụi nó tin chị Na lắm!
-
-**NA (`l13`):** Yên tâm nha Tùng, đúng giá gốc hai triệu một vé. Tuần sau đối tác xuất mã đoàn là chị gửi liền!
-
-*Chị Hai bưng ly sữa ấm bước vào, nhìn thấy màn hình chuyển khoản ba trăm triệu trên tay Na liền nhíu mày chỉ thẳng.*
-
-**CHỊ HAI (`l14`):** Khoan đã Na. Vé suất của kênh truyền thông, sao lại chuyển ba trăm triệu vô tài khoản cá nhân tên Trang?
-
-**NA (`l15`):** Vé nội bộ đâu bán lẻ nên phải chuyển qua người phụ trách chị Hai. Bả giúp nhóm em nửa năm rồi!
-
-**CHỊ HAI (`l16`):** Giúp cái quạt khác chuyện cầm ba trăm triệu không giấy tờ! Lỡ bả quỵt, trăm rưỡi người kia chỉ nắm đầu em thôi!
-
-*Một tin nhắn của Trang trượt xuống màn hình: "Chốt tiền tối nay kẻo ban tổ chức thu hồi suất nha Na."*
-
-**NA (`l17`):** Chị Hai lo xa quá, kênh bả hơn trăm ngàn người theo dõi, ai đi lừa mấy đồng vé.
-
-*Na bấm nút xác nhận. TING! `TK …4512: −300.000.000 VND`.*
+### HỒI 2: 300 TRIỆU BẤM CHUYỂN & ÁNH MẮT LẠNH CỦA CHỊ HAI (01:30 – 02:20)
+- **Bối cảnh (`s06_euphoria_collecting` – `c06.jpg`, `s07_transfer_300m` – `c07.jpg`, `s08_chihai_secret_photo` – `c08.jpg`):** Phòng của Na buổi tối 10 ngày trước đêm diễn. Điện thoại nổ *"Ting! Ting!"* liên hồi. Na cười rạng rỡ trong cơn say được hàng trăm thành viên tung hô. Ngoài khe cửa phòng, **Chị Hai** đứng khoanh tay lặng lẽ quan sát, không nói một lời.
+- **Fan Nữ (`l12_fannu`, tin nhắn thoại):** *"Em vừa chuyển bốn triệu hai vé vô tài khoản chị Na nha! Chỉ có chị Na mới xin được suất nội bộ của đối tác lớn thôi!"*
+- **Fan Nam (`l13_fannam`, tin nhắn thoại):** *"Em cũng chuyển sáu triệu ba vé rồi đó! Chị Na đúng là cứu tinh của cả nhóm!"*
+- **Na (`l14_na`, đầy hưng phấn và tự hào):** *"Mọi người cứ yên tâm! Đúng giá gốc hai triệu một vé, tuần sau đối tác xuất mã đoàn là chị phát liền!"*
+- *Hình ảnh (`s07_transfer_300m` – `c07.jpg`):* Tin nhắn của Trang hiện lên: `"Chốt đủ 300 triệu trong tối nay kẻo ban tổ chức thu hồi suất vé đoàn nha Na."` Na không chút đắn đo, bấm xác nhận chuyển **`300.000.000 VND`** vào tài khoản cá nhân `NGUYỄN THỊ TRANG (TK …4512)` rồi vui vẻ đứng dậy bước ra khỏi phòng.
+- *Hình ảnh (`s08_chihai_secret_photo` – `c08.jpg`):* Căn phòng vắng lặng. **Chị Hai** chậm rãi bước tới bàn làm việc của Na, nhìn chằm chằm vào biên lai chuyển khoản `300.000.000 VND` cho tài khoản cá nhân trên màn hình. Gương mặt Chị Hai **đanh lại**. Chị rút điện thoại của mình ra, âm thầm chụp lại toàn bộ màn hình giao dịch và thông tin tài khoản.
+- **Chị Hai (`l15_chihai`, giọng trầm thấp, sắc lạnh):** *"Suất vé của đối tác truyền thông lớn… mà lại thu ba trăm triệu qua tài khoản cá nhân?"*
 
 ---
 
-## HỒI 3 – BA NGÀY TRƯỚC ĐÊM DIỄN: KHÓA MÁY & BÃO ĐẤU TỐ (02:08–03:06)
-**[CĂN PHÒNG ĐÓNG RÈM CỦA KẺ GIAN – 7 NGÀY TRƯỚC ĐÊM DIỄN]**
+### HỒI 3: CAO TRÀO – RƠI XUỐNG VỰC THẲM & CÔ ĐƠN CÙNG CỰC (02:20 – 03:45)
 
-*Bóng tối căn phòng thuê ngắn hạn, chiếc vali đã kéo khóa dựng sát cửa. Trang cầm điện thoại trả lời nhát gừng.*
+#### Nhịp 3 – Cuộc gọi run rẩy tới Kênh Hậu Trường & Cú rơi xuống vực thẳm (`s09_blocked_shock` – `c09.jpg`, `s10_call_channel_abyss` – `c10.jpg`)
+- **Bối cảnh:** Đêm thứ Tư (còn 3 ngày trước giờ diễn). Căn phòng tối chỉ còn ánh đèn màn hình. Na gọi cho Trang hàng chục cuộc nhưng chỉ có tiếng tút khóa máy, tin nhắn báo đỏ `Đã bị chặn`.
+- **Na (`l16_na`, hơi thở gấp gáp, tay run bần bật):** *"Thứ Tư rồi… Sao số chị Trang thuê bao, tin nhắn cũng chặn em luôn vậy nè?!"*
+- *Hình ảnh (`s10_call_channel_abyss` – `c10.jpg`):* Bàn tay đẫm mồ hôi của Na run rẩy bấm gọi số đường dây nóng chính thức của **Kênh Hậu Trường**.
+- **Na (`l17_na`, giọng lắp bắp, lạc đi vì sợ):** *"Dạ… anh ơi cho em gặp chị Trang quản lý đối tác… Chị Trang nhận ba trăm triệu tiền vé nội bộ của nhóm em hẹn tối nay giao mã mà giờ khóa máy rồi anh ơi…"*
+- **Đại diện Kênh Hậu Trường (`l18_kenh`, qua điện thoại, điềm tĩnh nhưng như búa giáng):** *"Em nghe rõ này. Bên anh không có nhân sự nào tên Trang, và Kênh Hậu Trường tuyệt đối không bán vé nội bộ."*
+- *Hình ảnh:* Đồng tử Na giãn ra, cả người cứng đờ như rơi thẳng xuống vực sâu không đáy.
+- **Na (`l19_na`, bật khóc, níu kéo trong tuyệt vọng):** *"Không… không thể nào đâu anh! Bả đeo thẻ kênh mình, mang loa quạt ra nhà thi đấu phụ tụi em suốt sáu tháng nay mà! Anh kiểm tra lại giùm em đi, ba trăm triệu của một trăm rưỡi bạn trong nhóm em đó anh ơi…"*
+- **Đại diện Kênh Hậu Trường (`l20_kenh`, qua điện thoại):** *"Bên anh vừa đăng cảnh báo bị mạo danh rồi. Kênh không nhận tiền nên công an không lập hồ sơ theo đơn của kênh được. Chính em là người chuyển ba trăm triệu, em phải tự đi trình báo."*
 
-**TRANG (`l18`, qua điện thoại):** Đối tác đang rà lại danh sách, thứ Tư chị gửi đủ một lượt nha. Đừng gọi giục chị rối.
-
-**[PHÒNG CỦA NA – TỐI THỨ TƯ – CÒN 3 NGÀY TRƯỚC ĐÊM DIỄN]**
-
-*Na bấm gọi lại liên hồi. Tiếng tút ngắn báo khóa máy. Khung tin nhắn hiện biểu tượng đỏ không thể gửi.*
-
-**CALLOUT:** *CÒN 3 NGÀY TRƯỚC ĐÊM DIỄN: KHÓA MÁY · CHẶN TIN NHẮN*
-
-**NA (`l19`):** Thứ Tư rồi… Sao số điện thoại khóa máy, tin nhắn chị Trang cũng chặn em luôn vậy nè?!
-
-**[SẢNH DƯỚI KHU NHÀ – 22:45 ĐÊM]**
-
-*Tùng phóng xe tới, mặt cắt không còn giọt máu, giơ điện thoại trước mặt Na và vợ chồng Anh Hai – Chị Hai.*
-
-**CALLOUT:** *KÊNH HẬU TRƯỜNG ĐÍNH CHÍNH: BỊ CÁ NHÂN MẠO DANH GIAO DỊCH VÉ TRÁI PHÉP*
-
-**TÙNG (`l20`):** Chị Na ơi, Kênh Hậu Trường vừa báo bị mạo danh! Trên mạng đang tố trang chị lừa ba trăm triệu kìa!
-
-**TÙNG (`l21`):** Mười đứa bạn em đặt vé máy bay hết rồi! Giờ mất vé, tụi nó tưởng em ăn chặn hai chục triệu!
-
-**[PHÒNG KHÁCH – 23:20 ĐÊM]**
-
-*Nối lại khoảnh khắc mở màn. Điện thoại Na dồn dập thông báo chửi bới. Na bật khóc, tay run rẩy đưa lên mục "Tạm khóa trang cộng đồng". Chị Hai lao tới giữ chặt cổ tay Na lại!*
-
-**NA (`l22`):** Người ta rủa xả em khắp nơi… Hay em tạm khóa trang lại nha chị Hai?!
-
-**CHỊ HAI (`l23`):** Đừng dại! Giờ khóa trang im lặng là người ta tin em ôm tiền trốn thiệt đó!
+#### Nhịp 4 – Bị cả đám đông quay lưng & Cô đơn cùng cực (`s11_begging_group_backlash` – `c11.jpg`, `s12_utter_isolation` – `c12.jpg`)
+- *Hình ảnh (`c11.jpg`):* Chiếc điện thoại tuột khỏi tay Na rơi xuống sàn. Ngay lập tức, màn hình sáng rực lên với hàng trăm cuộc gọi nhỡ và tin nhắn thịnh nộ từ nhóm fan sau khi đọc được bài cảnh báo mạo danh của Kênh Hậu Trường.
+- **Na (`l21_na`, quỳ dưới sàn, vừa khóc vừa thu âm van xin):** *"Mọi người ơi… chị Trang lừa em rồi… Em thề em không giữ của mọi người một đồng nào hết, cho em thêm thời gian tìm bả nha mọi người…"*
+- **Fan Nữ (`l22_fannu`, lạnh lùng, tàn nhẫn):** *"Đừng có diễn nước mắt cá sấu! Làm gì có ai ngu tới mức chuyển ba trăm triệu không giấy tờ! Chắc chắn chị ăn chia với bả!"*
+- **Fan Nam (`l23_fannam`, đanh giọng đe dọa):** *"Tụi này chỉ biết tiền chuyển vô tài khoản tên chị! Sáng mai không ói đủ tiền ra, tụi này kéo tới tận nhà, cho chị khỏi nhìn mặt ai luôn!"*
+- *Hình ảnh (`c12.jpg`):* Na ngồi co rúm một mình trong góc phòng tối đen, hai tay ôm chặt lấy đầu giữa tiếng chuông báo tin nhắn chửi rủa dồn dập không ngớt — **tuyệt vọng và cô đơn cùng cực**.
 
 ---
 
-## HỒI 4 – SÁNG HÔM SAU: ĐỨNG MŨI CHỊU SÀO & TRÌNH BÁO (03:06–03:54)
-**[BÀN ĂN PHÒNG KHÁCH – 07:30 SÁNG]**
+### HỒI 4: SỰ CAO TAY CỦA CHỊ HAI & THUYẾT ÂM MƯU Ở CỔNG ĐỒN (03:45 – KẾT)
 
-*Anh Hai và Chị Hai đặt xấp giấy sao kê ngân hàng vừa in bên cạnh laptop của Na. Na gạt nước mắt gõ thông báo công khai toàn bộ chứng cứ lên trang.*
+#### Nhịp 5 – Xấp hồ sơ mật từ một tuần trước (`s13_chihai_dossier` – `c13.jpg`)
+- *Hình ảnh:* Cánh cửa phòng bật mở. Ánh đèn hành lang hắt vào. **Chị Hai** bước tới, bình thản đặt một tập hồ sơ đã in sẵn xuống trước mặt Na. Không một lời giáo điều hay vỗ về.
+- **Chị Hai (`l24_chihai`, bình thản, kiệm lời, lạnh lùng):** *"Lau mặt đi. Sáng mai cầm xấp hồ sơ này lên công an."*
+- **Na (`l25_na`, ngước lên sững sờ nhìn tờ giấy trên bàn):** *"Ủa chị Hai… sao chị có ảnh chụp màn hình lúc em chuyển khoản từ tuần trước vậy?"*
+- **Chị Hai (`l26_chihai`, giọng trầm thấp, bí ẩn, ánh mắt sâu khó đoán):** *"Tài khoản đó chị đã gửi người bên điều tra từ đêm hôm ấy rồi. Cứ trình báo đúng như trong này… đừng hỏi thêm."*
 
-**ANH HAI (`l24`):** Em bị lợi dụng lòng tin, nhưng tiền trăm rưỡi bạn đều vô tài khoản em nên phải ra mặt đàng hoàng.
+#### Nhịp 6 – Bóc trần 7 giây (`s17_red_flags`)
+- *Hình ảnh:* Thẻ Nhớ Kỹ hiện gọn trong 7 giây.
+- **Người Bóc Trần (`l27_narr` – đúng 7 giây):** *"Hào quang đám đông và lòng tin người quen ngoài đời — đó là cái bẫy biến người gom hộ thành kẻ đứng mũi chịu sào."*
 
-**CHỊ HAI (`l25`):** Giữ nguyên tin nhắn gốc, in sao kê từng khoản nhận và chuyển. Đăng thông báo rõ ràng rồi đi trình báo công an ngay.
-
-**[TRƯỚC CỔNG TRỤ SỞ CƠ QUAN CHỨC NĂNG – 15:30 CHIỀU]**
-
-*Tòa nhà hành chính trung tính (không biển hiệu/quốc huy/sắc phục thật). Anh Hai, Chị Hai đi cùng Na và Tùng bước ra, trên tay cầm tập hồ sơ biên nhận trình báo.*
-
-**ANH HAI (`l26`):** Kênh bị mạo danh không mất tiền trực tiếp, nên chính những người chuyển tiền như tụi em phải đi nộp đơn.
-
-**NA (`l27`):** Hồ sơ được tiếp nhận rồi… Nhưng tiền tiết kiệm hai năm đi làm, em phải rút ra trả dần cho các bạn.
-
-**TÙNG (`l28`):** Em cũng phải gom tiền đền trước cho đám bạn. Chừa tới già chuyện gom đơn truyền miệng.
-
----
-
-## HỒI 5 – BÓC TRẦN CƠ CHẾ & DẤU HIỆU PHÒNG VỆ (03:54–04:45)
-**[PHÒNG PHÂN TÍCH – NGƯỜI BÓC TRẦN & SƠ ĐỒ]**
-
-**NGƯỜI BÓC TRẦN (`l29`):** Kẻ gian không đánh vào lòng tham của Na. Chúng đánh vào sự nhiệt tình và lòng tin người quen.
-
-*Sơ đồ 1: 3 bước thao túng (Quà tặng & loa quạt ngoài đời → Mượn bóng đối tác rao "vé nội bộ" → Hẹn sát ngày xuất mã để gom cục lớn).*
-
-**NGƯỜI BÓC TRẦN (`l30`):** Đầu tiên, chúng bỏ vài triệu tặng quà, mang loa quạt hỗ trợ ngoài đời nhiều tháng để tạo vỏ bọc tử tế.
-
-**NGƯỜI BÓC TRẦN (`l31`):** Khi đêm nhạc cháy vé, chúng mượn danh đối tác rao vé nội bộ, hẹn sát ngày xuất mã để gom trọn một cục.
-
-*Sơ đồ 2: Dòng tiền 150 người mua → Tài khoản cá nhân của Na → Kẻ gian biến mất; mọi mũi dùi quay ngược về Na.*
-
-**NGƯỜI BÓC TRẦN (`l32`):** Độc hiểm nhất, chúng đẩy trưởng nhóm đứng ra gom tiền, biến người nhiệt tình thành tấm bia hứng trọn trách nhiệm.
-
-**[THẺ DẤU HIỆU NHẬN BIẾT – NHỚ KỸ (04:24–04:39)]**
-- **Rao "vé nội bộ, suất đối tác"** số lượng lớn ngay khi kênh chính thức vừa hết vé.
-- **Mượn danh kênh truyền thông, công ty** nhưng bảo chuyển vào **tài khoản cá nhân**.
-- **Hứa "sát ngày diễn mới xuất mã đoàn"** rồi liên tục viện cớ dời lịch giao.
-- **Nhờ trưởng nhóm fan hoặc bạn bè đứng ra gom tiền hộ** để thu một cục lớn.
-- **Việc nên làm:** *Chỉ mua trên kênh chính thức · Không lấy tài khoản cá nhân gom tiền hộ nguồn truyền miệng · Mất tiền: giữ sao kê, tin nhắn, trình báo công an ngay!*
-
-**[LƯU Ý / DISCLAIMER (04:39–04:45)]**
-*Tình huống trong phim được dựng lại nhằm cảnh báo cộng đồng; nhân vật, đêm nhạc, trang cộng đồng và số liệu đều là hư cấu.*
-
----
-
-## Tự kiểm "Không dạy lừa" & Kiểm soát Pháp lý / Logic
-- [x] **Không định danh / Không vu khống:** Đã hư cấu 100% tên đêm nhạc (*Ánh Sao*), nhóm fan, kênh truyền thông (*Kênh Hậu Trường*), nhân vật (*Na, Trang, Tùng, Anh Hai, Chị Hai*) và số lượng vé (*150 vé*). Không có bất kỳ chi tiết nào gợi nhận dạng cá nhân hay tổ chức có thật.
-- [x] **Không dạy lừa:** Chỉ giải phẫu 3 mắt xích tâm lý (nuôi lòng tin ngoài đời – mượn danh đối tác – đẩy rủi ro sang người gom hộ) để khán giả nhận diện phòng tránh; không mô tả thủ thuật tạo chứng từ giả hay tẩu tán dòng tiền.
-- [x] **Chuẩn xác pháp lý & thực tế đời sống:**
-  - Giải thích đúng thực tế tố tụng: đơn vị bị mạo danh chỉ bị ảnh hưởng uy tín (không thiệt hại tài sản trực tiếp) nên người trực tiếp chuyển tiền/mất tiền mới là chủ thể nộp đơn trình báo hành vi chiếm đoạt tài sản.
-  - Phản ánh đúng rủi ro kép của người đứng ra "gom đơn hộ" qua tài khoản cá nhân (dù không ăn chênh lệch vẫn đối mặt áp lực hoàn trả dân sự và sụp đổ uy tín), tuyệt đối không đổ lỗi hay miệt thị nạn nhân.
-  - Xưng hô gia đình chuẩn xác theo quy chuẩn `factory196`: vợ của **Anh Hai** gọi đúng là **Chị Hai** (`CHỊ HAI`).
-  - Sạch 100% `policy_wordlists.json` (0 hard block, 0 soft warn, 0 SĐT/URL/dãy số tài khoản thật).
+#### Nhịp 7 – KẾT MỞ: Cuộc gọi bí ẩn của Chị Hai (`s14_leaving_station` – `c14.jpg`, `s15_chihai_conspiracy_call` – `c15.jpg`, `s16_black_cut` – `c16.jpg`)
+- **Bối cảnh:** Chiều hôm sau, trước cổng trụ sở cơ quan chức năng. Na bước ra cùng Chị Hai, trên tay cầm tờ giấy biên nhận trình báo, gương mặt đã bớt hoảng loạn.
+- **Na (`l28_na`, thở phào nhẹ nhõm):** *"May mà chị Hai âm thầm báo trước một tuần nên bên điều tra đã kịp khoanh vùng dòng tiền… Không có chị Hai chắc em chết mất."*
+- *Hình ảnh (`c15.jpg`):* Na bước nhanh ra phía xe trước. **Chị Hai** cố tình đi chậm lại phía sau dưới bóng râm hàng cây.
+- Chiếc điện thoại thứ hai trong túi áo khoác của Chị Hai rung lên.
+- Chị Hai nhìn theo bóng lưng Na đã đi xa, gương mặt ấm áp vụt tắt, trở nên **lạnh băng, không chút cảm xúc**. Chị áp chiếc điện thoại lạ lên tai.
+- **Giọng người đàn ông lạ ở đầu dây bên kia (`l29_secret`, qua điện thoại, trầm thấp):** *"Con bé nộp đơn đúng như kịch bản rồi hả? Còn khoản ba trăm triệu bên nhánh con Trang, giờ tính sao?"*
+- **Chị Hai (`l30_chihai`, nhìn theo bóng lưng em gái, giọng sắc lạnh):** *"Cứ để đó!"*
+- **CẮT ĐEN ĐỘT NGỘT (`s16_black_cut` – `c16.jpg`)!**
