@@ -1,0 +1,705 @@
+{
+  "episode_id": "EP09",
+  "factory": "factory619",
+  "gate": "GATE_4_TIMELINE_SAFE_ZONE",
+  "preview_only": false,
+  "canvas": {
+    "width": 1080,
+    "height": 1920,
+    "fps": 30,
+    "aspect_ratio": "9:16",
+    "total_frames": 1656,
+    "total_duration_sec": 55.2
+  },
+  "safe_zone_rules": {
+    "left_x": 80,
+    "right_x": 920,
+    "max_y": 1420,
+    "top_hook_y": 170,
+    "platform_ui_bottom_y": 1440,
+    "all_overlays_compliant": true
+  },
+  "scenes": [
+    {
+      "id": "s1_nho_may_goi_lai",
+      "image": "assets/scene1.jpg",
+      "start": 0.0,
+      "end": 4.9,
+      "motion": {
+        "scale": [
+          1.05,
+          1.14
+        ],
+        "focus": [
+          [
+            0.5,
+            0.48
+          ],
+          [
+            0.5,
+            0.44
+          ]
+        ],
+        "wobble": "tense"
+      },
+      "shakes": [
+        {
+          "at": 0.78,
+          "amp": 22
+        }
+      ]
+    },
+    {
+      "id": "s2_giu_may_cau_gio",
+      "image": "assets/scene2.jpg",
+      "start": 4.9,
+      "end": 10.25,
+      "motion": {
+        "scale": [
+          1.04,
+          1.14
+        ],
+        "focus": [
+          [
+            0.5,
+            0.46
+          ],
+          [
+            0.5,
+            0.42
+          ]
+        ],
+        "wobble": "tense"
+      },
+      "transition_in": {
+        "type": "dissolve",
+        "dur": 0.26
+      }
+    },
+    {
+      "id": "s3_cao_trao_het_tien",
+      "image": "assets/scene3.jpg",
+      "start": 10.25,
+      "end": 16.35,
+      "motion": {
+        "scale": [
+          1.06,
+          1.18
+        ],
+        "focus": [
+          [
+            0.5,
+            0.44
+          ],
+          [
+            0.5,
+            0.4
+          ]
+        ],
+        "wobble": "tense"
+      },
+      "transition_in": {
+        "type": "flash_red",
+        "dur": 0.24
+      },
+      "shakes": [
+        {
+          "at": 10.35,
+          "amp": 26
+        },
+        {
+          "at": 11.25,
+          "amp": 32
+        }
+      ]
+    },
+    {
+      "id": "s4_giai_thich_tien_dien_thoai",
+      "image": "assets/scene4.jpg",
+      "image_note": "Anh Hai pointing at foreign plus globe & intact blue bank shield",
+      "start": 16.35,
+      "end": 22.05,
+      "motion": {
+        "scale": [
+          1.03,
+          1.11
+        ],
+        "focus": [
+          [
+            0.5,
+            0.48
+          ],
+          [
+            0.48,
+            0.45
+          ]
+        ],
+        "wobble": "calm"
+      },
+      "transition_in": {
+        "type": "dissolve",
+        "dur": 0.28
+      }
+    },
+    {
+      "id": "s5_giai_phap_tron_ven",
+      "image": "assets/scene5.jpg",
+      "start": 22.05,
+      "end": 41.95,
+      "motion": {
+        "scale": [
+          1.11,
+          1.03
+        ],
+        "focus": [
+          [
+            0.5,
+            0.46
+          ],
+          [
+            0.5,
+            0.5
+          ]
+        ],
+        "wobble": "handheld"
+      },
+      "transition_in": {
+        "type": "flash_white",
+        "dur": 0.24
+      }
+    },
+    {
+      "id": "s6_boc_tran_co_che",
+      "image": "assets/scene6.jpg",
+      "start": 41.95,
+      "end": 48.65,
+      "motion": {
+        "scale": [
+          1.03,
+          1.1
+        ],
+        "focus": [
+          [
+            0.5,
+            0.46
+          ],
+          [
+            0.5,
+            0.42
+          ]
+        ],
+        "wobble": "calm"
+      },
+      "transition_in": {
+        "type": "glitch",
+        "dur": 0.3
+      }
+    },
+    {
+      "id": "s7_the_nho_ky",
+      "image": "assets/scene7.jpg",
+      "start": 48.65,
+      "end": 55.2,
+      "motion": {
+        "scale": [
+          1.02,
+          1.06
+        ],
+        "focus": [
+          [
+            0.5,
+            0.48
+          ],
+          [
+            0.5,
+            0.48
+          ]
+        ],
+        "wobble": "none"
+      },
+      "transition_in": {
+        "type": "fade_black",
+        "dur": 0.32
+      }
+    }
+  ],
+  "subtitle_srt": "factory619/staging/EP09/subtitles/EP09.srt",
+  "video_track_noaudio": "factory619/staging/EP09/timeline_video_gate4.mp4",
+  "channel_branding": {
+    "type": "channel_branding",
+    "logo_text": "VCH",
+    "watermark_text": "VẠN CHUYỆN",
+    "safe_zone_compliant": true
+  },
+  "overlays": [
+    {
+      "id": "000_hook",
+      "start_sec": 0.25,
+      "end_sec": 4.3,
+      "fade_sec": 0.3,
+      "png_path": "factory619/staging/EP09/overlays/000_hook.png",
+      "type": "text_hook",
+      "text": "BẪY CUỘC GỌI NHỠ LÚC ĐANG CHỜ VIỆC — Đang đợi phỏng vấn, báo tin gấp: Đừng chạm gọi lại trước khi biết cách này!",
+      "bbox_px": [
+        101,
+        170,
+        899,
+        416
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "001_sub_l1",
+      "start_sec": 0.85,
+      "end_sec": 2.837,
+      "fade_sec": 0.1,
+      "png_path": "factory619/staging/EP09/overlays/001_sub_l1.png",
+      "type": "subtitle",
+      "lines": [
+        "Đang đợi gọi phỏng vấn mà nhỡ máy!"
+      ],
+      "bbox_px": [
+        90,
+        1324,
+        910,
+        1380
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "002_sub_l1",
+      "start_sec": 2.837,
+      "end_sec": 4.59,
+      "fade_sec": 0.1,
+      "png_path": "factory619/staging/EP09/overlays/002_sub_l1.png",
+      "type": "subtitle",
+      "lines": [
+        "Bấm gọi lại liền kẻo mất việc!"
+      ],
+      "bbox_px": [
+        178,
+        1324,
+        823,
+        1380
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "003_sub_l2",
+      "start_sec": 5.25,
+      "end_sec": 5.522,
+      "fade_sec": 0.1,
+      "png_path": "factory619/staging/EP09/overlays/003_sub_l2.png",
+      "type": "subtitle",
+      "lines": [
+        "Alo?"
+      ],
+      "bbox_px": [
+        438,
+        1324,
+        562,
+        1380
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "004_sub_l2",
+      "start_sec": 5.522,
+      "end_sec": 9.95,
+      "fade_sec": 0.1,
+      "png_path": "factory619/staging/EP09/overlays/004_sub_l2.png",
+      "type": "subtitle",
+      "lines": [
+        "Sao đồng hồ nhảy giây rồi mà bên kia",
+        "đổ chuông hoài không ai nói?"
+      ],
+      "bbox_px": [
+        91,
+        1268,
+        910,
+        1380
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "005_sub_l3",
+      "start_sec": 12.15,
+      "end_sec": 12.45,
+      "fade_sec": 0.1,
+      "png_path": "factory619/staging/EP09/overlays/005_sub_l3.png",
+      "type": "subtitle",
+      "lines": [
+        "Ủa?!"
+      ],
+      "bbox_px": [
+        439,
+        1324,
+        562,
+        1380
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "006_sub_l3",
+      "start_sec": 12.45,
+      "end_sec": 15.97,
+      "fade_sec": 0.1,
+      "png_path": "factory619/staging/EP09/overlays/006_sub_l3.png",
+      "type": "subtitle",
+      "lines": [
+        "Chưa ai nói câu nào mà máy hết sạch",
+        "tiền luôn?!"
+      ],
+      "bbox_px": [
+        101,
+        1268,
+        900,
+        1380
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "007_sub_l4",
+      "start_sec": 16.67,
+      "end_sec": 19.312,
+      "fade_sec": 0.1,
+      "png_path": "factory619/staging/EP09/overlays/007_sub_l4.png",
+      "type": "subtitle",
+      "lines": [
+        "Đầu dấu cộng lạ nhá máy trừ tiền",
+        "điện thoại đó!"
+      ],
+      "bbox_px": [
+        136,
+        1268,
+        864,
+        1380
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "008_sub_l4",
+      "start_sec": 19.312,
+      "end_sec": 21.73,
+      "fade_sec": 0.1,
+      "png_path": "factory619/staging/EP09/overlays/008_sub_l4.png",
+      "type": "subtitle",
+      "lines": [
+        "Chứ gọi thường không tự mất tiền",
+        "ngân hàng."
+      ],
+      "bbox_px": [
+        126,
+        1268,
+        875,
+        1380
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "009_sub_l5",
+      "start_sec": 22.38,
+      "end_sec": 27.52,
+      "fade_sec": 0.1,
+      "png_path": "factory619/staging/EP09/overlays/009_sub_l5.png",
+      "type": "subtitle",
+      "lines": [
+        "Nhưng lỡ bên phỏng vấn hay ai báo",
+        "tin gấp gọi bất ngờ, làm sao biết mà",
+        "gọi lại anh?"
+      ],
+      "bbox_px": [
+        107,
+        1212,
+        893,
+        1380
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "010_sub_l6",
+      "start_sec": 27.74,
+      "end_sec": 30.147,
+      "fade_sec": 0.1,
+      "png_path": "factory619/staging/EP09/overlays/010_sub_l6.png",
+      "type": "subtitle",
+      "lines": [
+        "Báo nhà mạng khóa gọi quốc tế",
+        "trước!"
+      ],
+      "bbox_px": [
+        152,
+        1268,
+        848,
+        1380
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "011_sub_l6",
+      "start_sec": 30.147,
+      "end_sec": 34.56,
+      "fade_sec": 0.1,
+      "png_path": "factory619/staging/EP09/overlays/011_sub_l6.png",
+      "type": "subtitle",
+      "lines": [
+        "Mở coi đúng số thường trong nước",
+        "thì tra nhanh, nhắn hoặc gọi lại."
+      ],
+      "bbox_px": [
+        117,
+        1268,
+        884,
+        1380
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "012_sub_l7",
+      "start_sec": 34.76,
+      "end_sec": 41.66,
+      "fade_sec": 0.1,
+      "png_path": "factory619/staging/EP09/overlays/012_sub_l7.png",
+      "type": "subtitle",
+      "lines": [
+        "Chỉ hỏi gọn nãy gọi việc gì, đừng tự",
+        "khai trước; nghe báo chuyện gấp thì",
+        "cúp máy kiểm chứng lại!"
+      ],
+      "bbox_px": [
+        108,
+        1212,
+        892,
+        1380
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "013_sub_l8",
+      "start_sec": 42.3,
+      "end_sec": 48.32,
+      "fade_sec": 0.1,
+      "png_path": "factory619/staging/EP09/overlays/013_sub_l8.png",
+      "type": "subtitle",
+      "lines": [
+        "Số di động mười số không tốn cước",
+        "cao; chỉ né dấu cộng khác tám tư, đầu",
+        "một chín không không!"
+      ],
+      "bbox_px": [
+        91,
+        1212,
+        910,
+        1380
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "014_callout1",
+      "start_sec": 5.2,
+      "end_sec": 10.1,
+      "fade_sec": 0.2,
+      "png_path": "factory619/staging/EP09/overlays/014_callout1.png",
+      "type": "callout",
+      "style": "warn",
+      "text": "ĐỒNG HỒ NHẢY GIÂY = ĐÃ TÍNH TIỀN (CHUÔNG CHỜ LÀ GIẢ!)",
+      "bbox_px": [
+        152,
+        137,
+        849,
+        243
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "015_callout2",
+      "start_sec": 10.4,
+      "end_sec": 16.1,
+      "fade_sec": 0.2,
+      "png_path": "factory619/staging/EP09/overlays/015_callout2.png",
+      "type": "callout",
+      "style": "danger",
+      "text": "NGẮT ĐƯỜNG DÂY · TRỪ SẠCH HẾT TIỀN ĐIỆN THOẠI!",
+      "bbox_px": [
+        90,
+        137,
+        910,
+        243
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "016_callout3",
+      "start_sec": 27.7,
+      "end_sec": 41.7,
+      "fade_sec": 0.2,
+      "png_path": "factory619/staging/EP09/overlays/016_callout3.png",
+      "type": "callout",
+      "style": "warn",
+      "text": "KHÓA GỌI QUỐC TẾ · SỐ THƯỜNG TRONG NƯỚC: TRA NHANH, NHẮN HOẶC HỎI GỌN!",
+      "bbox_px": [
+        107,
+        137,
+        893,
+        243
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "017_redflags_0",
+      "start_sec": 48.65,
+      "end_sec": 49.05,
+      "fade_sec": 0.25,
+      "png_path": "factory619/staging/EP09/overlays/017_redflags_0.png",
+      "type": "red_flags",
+      "title": "NHỚ KỸ",
+      "lines": [
+        "Số di động 10 số trong nước không trừ cước cao; chỉ mất tiền oan khi gọi dấu + khác 84 hoặc 1900",
+        "Cuộc nhỡ bất ngờ: mở chi tiết coi đầu số; đúng số thường trong nước thì tra nhanh, nhắn tin hoặc gọi lại",
+        "Khi gọi lại: đồng hồ nhảy giây mà im lặng thì tắt ngay; chỉ hỏi gọn việc gì, không tự khai trước",
+        "Báo nhà mạng khóa chiều gọi quốc tế nếu không dùng · Nghe báo tin khẩn cấp: cúp máy gọi người thân kiểm lại!"
+      ],
+      "bbox_px": [
+        80,
+        420,
+        920,
+        1188
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "018_redflags_1",
+      "start_sec": 49.05,
+      "end_sec": 49.45,
+      "fade_sec": 0.0,
+      "png_path": "factory619/staging/EP09/overlays/018_redflags_1.png",
+      "type": "red_flags",
+      "title": "NHỚ KỸ",
+      "lines": [
+        "Số di động 10 số trong nước không trừ cước cao; chỉ mất tiền oan khi gọi dấu + khác 84 hoặc 1900",
+        "Cuộc nhỡ bất ngờ: mở chi tiết coi đầu số; đúng số thường trong nước thì tra nhanh, nhắn tin hoặc gọi lại",
+        "Khi gọi lại: đồng hồ nhảy giây mà im lặng thì tắt ngay; chỉ hỏi gọn việc gì, không tự khai trước",
+        "Báo nhà mạng khóa chiều gọi quốc tế nếu không dùng · Nghe báo tin khẩn cấp: cúp máy gọi người thân kiểm lại!"
+      ],
+      "bbox_px": [
+        80,
+        420,
+        920,
+        1188
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "019_redflags_2",
+      "start_sec": 49.45,
+      "end_sec": 49.85,
+      "fade_sec": 0.0,
+      "png_path": "factory619/staging/EP09/overlays/019_redflags_2.png",
+      "type": "red_flags",
+      "title": "NHỚ KỸ",
+      "lines": [
+        "Số di động 10 số trong nước không trừ cước cao; chỉ mất tiền oan khi gọi dấu + khác 84 hoặc 1900",
+        "Cuộc nhỡ bất ngờ: mở chi tiết coi đầu số; đúng số thường trong nước thì tra nhanh, nhắn tin hoặc gọi lại",
+        "Khi gọi lại: đồng hồ nhảy giây mà im lặng thì tắt ngay; chỉ hỏi gọn việc gì, không tự khai trước",
+        "Báo nhà mạng khóa chiều gọi quốc tế nếu không dùng · Nghe báo tin khẩn cấp: cúp máy gọi người thân kiểm lại!"
+      ],
+      "bbox_px": [
+        80,
+        420,
+        920,
+        1188
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "020_redflags_3",
+      "start_sec": 49.85,
+      "end_sec": 52.4,
+      "fade_sec": 0.0,
+      "png_path": "factory619/staging/EP09/overlays/020_redflags_3.png",
+      "type": "red_flags",
+      "title": "NHỚ KỸ",
+      "lines": [
+        "Số di động 10 số trong nước không trừ cước cao; chỉ mất tiền oan khi gọi dấu + khác 84 hoặc 1900",
+        "Cuộc nhỡ bất ngờ: mở chi tiết coi đầu số; đúng số thường trong nước thì tra nhanh, nhắn tin hoặc gọi lại",
+        "Khi gọi lại: đồng hồ nhảy giây mà im lặng thì tắt ngay; chỉ hỏi gọn việc gì, không tự khai trước",
+        "Báo nhà mạng khóa chiều gọi quốc tế nếu không dùng · Nghe báo tin khẩn cấp: cúp máy gọi người thân kiểm lại!"
+      ],
+      "bbox_px": [
+        80,
+        420,
+        920,
+        1188
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "021_disclaimer",
+      "start_sec": 52.4,
+      "end_sec": 55.2,
+      "fade_sec": 0.25,
+      "png_path": "factory619/staging/EP09/overlays/021_disclaimer.png",
+      "type": "disclaimer",
+      "text": "Tình huống được dựng lại để cảnh báo. Nhân vật, tên, số liệu đều là hư cấu.",
+      "bbox_px": [
+        80,
+        210,
+        920,
+        340
+      ],
+      "safe_zone_compliant": true
+    }
+  ],
+  "qa_preview_frames": [
+    {
+      "timestamp_sec": 1.25,
+      "clean": "factory619/staging/EP09/preview_frames/qa_01_25s_clean.jpg",
+      "safezone": "factory619/staging/EP09/preview_frames/qa_01_25s_safezone.jpg"
+    },
+    {
+      "timestamp_sec": 2.45,
+      "clean": "factory619/staging/EP09/preview_frames/qa_02_45s_clean.jpg",
+      "safezone": "factory619/staging/EP09/preview_frames/qa_02_45s_safezone.jpg"
+    },
+    {
+      "timestamp_sec": 7.58,
+      "clean": "factory619/staging/EP09/preview_frames/qa_07_58s_clean.jpg",
+      "safezone": "factory619/staging/EP09/preview_frames/qa_07_58s_safezone.jpg"
+    },
+    {
+      "timestamp_sec": 13.3,
+      "clean": "factory619/staging/EP09/preview_frames/qa_13_30s_clean.jpg",
+      "safezone": "factory619/staging/EP09/preview_frames/qa_13_30s_safezone.jpg"
+    },
+    {
+      "timestamp_sec": 19.2,
+      "clean": "factory619/staging/EP09/preview_frames/qa_19_20s_clean.jpg",
+      "safezone": "factory619/staging/EP09/preview_frames/qa_19_20s_safezone.jpg"
+    },
+    {
+      "timestamp_sec": 32.0,
+      "clean": "factory619/staging/EP09/preview_frames/qa_32_00s_clean.jpg",
+      "safezone": "factory619/staging/EP09/preview_frames/qa_32_00s_safezone.jpg"
+    },
+    {
+      "timestamp_sec": 45.3,
+      "clean": "factory619/staging/EP09/preview_frames/qa_45_30s_clean.jpg",
+      "safezone": "factory619/staging/EP09/preview_frames/qa_45_30s_safezone.jpg"
+    },
+    {
+      "timestamp_sec": 51.9,
+      "clean": "factory619/staging/EP09/preview_frames/qa_51_90s_clean.jpg",
+      "safezone": "factory619/staging/EP09/preview_frames/qa_51_90s_safezone.jpg"
+    },
+    {
+      "timestamp_sec": 51.92,
+      "clean": "factory619/staging/EP09/preview_frames/qa_51_92s_clean.jpg",
+      "safezone": "factory619/staging/EP09/preview_frames/qa_51_92s_safezone.jpg"
+    },
+    {
+      "timestamp_sec": 53.8,
+      "clean": "factory619/staging/EP09/preview_frames/qa_53_80s_clean.jpg",
+      "safezone": "factory619/staging/EP09/preview_frames/qa_53_80s_safezone.jpg"
+    }
+  ]
+}

@@ -1,0 +1,449 @@
+{
+  "episode_id": "EP09",
+  "slug": "BayCuocGoiNho",
+  "title": "Bẫy cuộc gọi nhỡ lúc đang chờ việc – Cách gọi lại trọn vẹn không mất tiền oan",
+  "version": "v2",
+  "scam_family": "ON-02",
+  "duration_sec": 55.2,
+  "hook": {
+    "kicker": "BẪY CUỘC GỌI NHỠ LÚC ĐANG CHỜ VIỆC",
+    "title": "Đang đợi phỏng vấn, báo tin gấp: Đừng chạm gọi lại trước khi biết cách này!",
+    "start": 0.25,
+    "end": 4.3
+  },
+  "scenes": [
+    {
+      "id": "s1_nho_may_goi_lai",
+      "image": "assets/scene1.jpg",
+      "start": 0.0,
+      "end": 4.9,
+      "motion": {
+        "scale": [
+          1.05,
+          1.14
+        ],
+        "focus": [
+          [
+            0.5,
+            0.48
+          ],
+          [
+            0.5,
+            0.44
+          ]
+        ],
+        "wobble": "tense"
+      },
+      "shakes": [
+        {
+          "at": 0.78,
+          "amp": 22
+        }
+      ]
+    },
+    {
+      "id": "s2_giu_may_cau_gio",
+      "image": "assets/scene2.jpg",
+      "start": 4.9,
+      "end": 10.25,
+      "motion": {
+        "scale": [
+          1.04,
+          1.14
+        ],
+        "focus": [
+          [
+            0.5,
+            0.46
+          ],
+          [
+            0.5,
+            0.42
+          ]
+        ],
+        "wobble": "tense"
+      },
+      "transition_in": {
+        "type": "dissolve",
+        "dur": 0.26
+      }
+    },
+    {
+      "id": "s3_cao_trao_het_tien",
+      "image": "assets/scene3.jpg",
+      "start": 10.25,
+      "end": 16.35,
+      "motion": {
+        "scale": [
+          1.06,
+          1.18
+        ],
+        "focus": [
+          [
+            0.5,
+            0.44
+          ],
+          [
+            0.5,
+            0.4
+          ]
+        ],
+        "wobble": "tense"
+      },
+      "transition_in": {
+        "type": "flash_red",
+        "dur": 0.24
+      },
+      "shakes": [
+        {
+          "at": 10.35,
+          "amp": 26
+        },
+        {
+          "at": 11.25,
+          "amp": 32
+        }
+      ]
+    },
+    {
+      "id": "s4_giai_thich_tien_dien_thoai",
+      "image": "assets/scene4.jpg",
+      "image_note": "Anh Hai pointing at foreign plus globe & intact blue bank shield",
+      "start": 16.35,
+      "end": 22.05,
+      "motion": {
+        "scale": [
+          1.03,
+          1.11
+        ],
+        "focus": [
+          [
+            0.5,
+            0.48
+          ],
+          [
+            0.48,
+            0.45
+          ]
+        ],
+        "wobble": "calm"
+      },
+      "transition_in": {
+        "type": "dissolve",
+        "dur": 0.28
+      }
+    },
+    {
+      "id": "s5_giai_phap_tron_ven",
+      "image": "assets/scene5.jpg",
+      "start": 22.05,
+      "end": 41.95,
+      "motion": {
+        "scale": [
+          1.11,
+          1.03
+        ],
+        "focus": [
+          [
+            0.5,
+            0.46
+          ],
+          [
+            0.5,
+            0.5
+          ]
+        ],
+        "wobble": "handheld"
+      },
+      "transition_in": {
+        "type": "flash_white",
+        "dur": 0.24
+      }
+    },
+    {
+      "id": "s6_boc_tran_co_che",
+      "image": "assets/scene6.jpg",
+      "start": 41.95,
+      "end": 48.65,
+      "motion": {
+        "scale": [
+          1.03,
+          1.1
+        ],
+        "focus": [
+          [
+            0.5,
+            0.46
+          ],
+          [
+            0.5,
+            0.42
+          ]
+        ],
+        "wobble": "calm"
+      },
+      "transition_in": {
+        "type": "glitch",
+        "dur": 0.3
+      }
+    },
+    {
+      "id": "s7_the_nho_ky",
+      "image": "assets/scene7.jpg",
+      "start": 48.65,
+      "end": 55.2,
+      "motion": {
+        "scale": [
+          1.02,
+          1.06
+        ],
+        "focus": [
+          [
+            0.5,
+            0.48
+          ],
+          [
+            0.5,
+            0.48
+          ]
+        ],
+        "wobble": "none"
+      },
+      "transition_in": {
+        "type": "fade_black",
+        "dur": 0.32
+      }
+    }
+  ],
+  "dialogue": [
+    {
+      "id": "l1",
+      "speaker": "be_na",
+      "start": 0.85,
+      "window": 4.05,
+      "text": "Đang đợi gọi phỏng vấn mà nhỡ máy! Bấm gọi lại liền kẻo mất việc!",
+      "style": "Giọng cô gái trẻ miền Nam Sài Gòn 22 tuổi, phát âm chuẩn phương ngữ miền Nam, giữ cố định một âm sắc tự nhiên đời thực, hơi gấp vì sợ trễ cuộc gọi phỏng vấn, nhịp nói nhanh gọn rõ chữ, tuyệt đối không rên rỉ cải lương."
+    },
+    {
+      "id": "l2",
+      "speaker": "be_na",
+      "start": 5.25,
+      "window": 5.0,
+      "text": "Alo? Sao đồng hồ nhảy giây rồi mà bên kia đổ chuông hoài không ai nói?",
+      "style": "Giọng cô gái trẻ miền Nam Sài Gòn 22 tuổi, phát âm chuẩn phương ngữ miền Nam, giữ cố định một âm sắc tự nhiên đời thực, sốt ruột thắc mắc khi đang áp máy lên tai chờ, nhịp gọn rõ chữ."
+    },
+    {
+      "id": "l3",
+      "speaker": "be_na",
+      "start": 12.15,
+      "window": 4.15,
+      "text": "Ủa?! Chưa ai nói câu nào mà máy hết sạch tiền luôn?!",
+      "style": "Giọng cô gái trẻ miền Nam Sài Gòn 22 tuổi, phát âm chuẩn phương ngữ miền Nam, giữ cố định một âm sắc tự nhiên đời thực, sững sờ bật thốt dứt khoát khi thấy điện thoại bị trừ hết sạch tiền, rõ chữ, không khóc lóc cải lương."
+    },
+    {
+      "id": "l4",
+      "speaker": "anh_hai",
+      "start": 16.67,
+      "window": 5.35,
+      "text": "Đầu dấu cộng lạ nhá máy trừ tiền điện thoại đó! Chứ gọi thường không tự mất tiền ngân hàng.",
+      "style": "Giọng nam miền Nam Sài Gòn 35 tuổi, phát âm chuẩn phương ngữ miền Nam, giữ cố định một âm sắc điềm tĩnh, thẳng gọn, dứt khoát, rõ chữ, tuyệt đối không lên giọng dạy đời."
+    },
+    {
+      "id": "l5",
+      "speaker": "be_na",
+      "start": 22.38,
+      "window": 5.45,
+      "text": "Nhưng lỡ bên phỏng vấn hay ai báo tin gấp gọi bất ngờ, làm sao biết mà gọi lại anh?",
+      "style": "Giọng cô gái trẻ miền Nam Sài Gòn 22 tuổi, phát âm chuẩn phương ngữ miền Nam, giữ cố định một âm sắc tự nhiên đời thực, hỏi thẳng băn khoăn thực tế, nhịp gọn, rõ chữ."
+    },
+    {
+      "id": "l6",
+      "speaker": "anh_hai",
+      "start": 27.74,
+      "window": 7.15,
+      "text": "Báo nhà mạng khóa gọi quốc tế trước! Mở coi đúng số thường trong nước thì tra nhanh, nhắn hoặc gọi lại.",
+      "style": "Giọng nam miền Nam Sài Gòn 35 tuổi, phát âm chuẩn phương ngữ miền Nam, giữ cố định một âm sắc điềm tĩnh, hướng dẫn gãy gọn dứt khoát từng ý, rõ chữ."
+    },
+    {
+      "id": "l7",
+      "speaker": "anh_hai",
+      "start": 34.76,
+      "window": 7.2,
+      "text": "Chỉ hỏi gọn nãy gọi việc gì, đừng tự khai trước; nghe báo chuyện gấp thì cúp máy kiểm chứng lại!",
+      "style": "Giọng nam miền Nam Sài Gòn 35 tuổi, phát âm chuẩn phương ngữ miền Nam, giữ cố định một âm sắc điềm tĩnh, dứt khoát, sắc bén, rõ chữ."
+    },
+    {
+      "id": "l8",
+      "speaker": "nguoi_boc_tran",
+      "start": 42.3,
+      "window": 6.35,
+      "text": "Số di động mười số không tốn cước cao; chỉ né dấu cộng khác tám tư, đầu một chín không không!",
+      "style": "Giọng nam trung niên miền Nam Sài Gòn, trầm tĩnh, khách quan, sắc lạnh vạch trần bản chất cơ chế, nhịp gọn dứt khoát, rõ chữ, tuyệt đối không kéo dài giọng hay rao giảng dạy đời."
+    }
+  ],
+  "chat_bubbles": [],
+  "callouts": [
+    {
+      "text": "ĐỒNG HỒ NHẢY GIÂY = ĐÃ TÍNH TIỀN (CHUÔNG CHỜ LÀ GIẢ!)",
+      "style": "warn",
+      "start": 5.2,
+      "end": 10.1,
+      "y": 190
+    },
+    {
+      "text": "NGẮT ĐƯỜNG DÂY · TRỪ SẠCH HẾT TIỀN ĐIỆN THOẠI!",
+      "style": "danger",
+      "start": 10.4,
+      "end": 16.1,
+      "y": 190
+    },
+    {
+      "text": "KHÓA GỌI QUỐC TẾ · SỐ THƯỜNG TRONG NƯỚC: TRA NHANH, NHẮN HOẶC HỎI GỌN!",
+      "style": "warn",
+      "start": 27.7,
+      "end": 41.7,
+      "y": 190
+    }
+  ],
+  "red_flags": {
+    "start": 48.65,
+    "end": 52.4,
+    "stagger_sec": 0.4,
+    "title": "NHỚ KỸ",
+    "items": [
+      "Số di động 10 số trong nước không trừ cước cao; chỉ mất tiền oan khi gọi dấu + khác 84 hoặc 1900",
+      "Cuộc nhỡ bất ngờ: mở chi tiết coi đầu số; đúng số thường trong nước thì tra nhanh, nhắn tin hoặc gọi lại",
+      "Khi gọi lại: đồng hồ nhảy giây mà im lặng thì tắt ngay; chỉ hỏi gọn việc gì, không tự khai trước"
+    ],
+    "action": "Báo nhà mạng khóa chiều gọi quốc tế nếu không dùng · Nghe báo tin khẩn cấp: cúp máy gọi người thân kiểm lại!"
+  },
+  "disclaimer": {
+    "start": 52.4,
+    "end": 55.2
+  },
+  "audio": {
+    "ambience": [
+      {
+        "preset": "room_tone",
+        "start": 0.0,
+        "end": 55.2,
+        "gain_db": -3.0
+      }
+    ],
+    "foley": [
+      {
+        "preset": "phone_ring",
+        "at": 0.05,
+        "dur": 0.65,
+        "gain_db": 0.0
+      },
+      {
+        "preset": "call_end",
+        "at": 0.72,
+        "dur": 0.45,
+        "gain_db": -0.5
+      },
+      {
+        "preset": "phone_ring",
+        "at": 5.0,
+        "dur": 2.2,
+        "gain_db": -4.5
+      },
+      {
+        "preset": "riser",
+        "at": 9.15,
+        "dur": 1.15,
+        "gain_db": 1.6
+      },
+      {
+        "preset": "call_end",
+        "at": 10.32,
+        "dur": 1.0,
+        "gain_db": 2.2
+      },
+      {
+        "preset": "notification",
+        "at": 11.18,
+        "gain_db": 2.0
+      },
+      {
+        "preset": "impact",
+        "at": 11.24,
+        "dur": 1.5,
+        "gain_db": 2.6
+      },
+      {
+        "preset": "glitch",
+        "at": 11.3,
+        "dur": 0.65,
+        "gain_db": 1.5
+      },
+      {
+        "preset": "glitch",
+        "at": 41.95,
+        "dur": 0.6,
+        "gain_db": 0.5
+      }
+    ],
+    "bgm": [
+      {
+        "preset": "suspense_pulse",
+        "start": 0.0,
+        "end": 10.25
+      },
+      {
+        "preset": "tension_drone",
+        "start": 10.25,
+        "end": 41.95,
+        "gain_db": 1.3
+      },
+      {
+        "preset": "action_climax",
+        "start": 41.95,
+        "end": 48.65,
+        "gain_db": 1.2
+      },
+      {
+        "preset": "warm_outro",
+        "start": 48.65,
+        "end": 55.2
+      }
+    ],
+    "duck_extra": [
+      {
+        "start": 10.2,
+        "end": 12.1,
+        "bgm_db": -15.5,
+        "amb_db": -9.0
+      }
+    ]
+  },
+  "forbidden_terms": [],
+  "publish": {
+    "titles": [
+      "Đang đợi phỏng vấn, tin gấp mà nhỡ máy: Đừng chạm gọi lại trước khi biết cách này! #shorts #bóctrầnlừađảo",
+      "Chưa ai nói câu nào mà máy hết sạch tiền điện thoại! Cách gọi lại cuộc nhỡ an toàn #shorts #cảnhgiáclừađảo",
+      "Lỡ cuộc gọi bất ngờ: Làm sao gọi lại không mất tiền oan mà không tuột việc? #shorts #vạnchuyện"
+    ],
+    "description": "Đang thấp thỏm đợi gọi phỏng vấn, chờ giao hàng hay sợ có ai báo tin gấp bất ngờ, thấy màn hình hiện \"Cuộc gọi nhỡ\" 1 giây là hầu hết chúng ta đều phản xạ chạm thẳng vào để gọi lại ngay.\n\nKẻ gian đánh trúng tâm lý \"thế cửa dưới\" này bằng cách nhá máy tự động từ các đầu số quốc tế / vệ tinh tính cước cao (hiển thị dấu + hoặc 00 ở đầu nhưng mã theo sau không phải 84) hoặc nhắn dụ gọi vào đầu số thu phí 1900. Ngay khi bạn gọi lại, hệ thống bên kia tự động bắt máy ngay giây đầu tiên (màn hình nhảy đồng hồ đếm giây tính tiền) nhưng lại phát tiếng chuông chờ giả để giữ chân bạn trên đường dây đến lúc máy hết sạch tiền điện thoại!\n\n📌 Lưu ý từ cơ quan quản lý viễn thông: Nghe hay gọi cuộc gọi thoại thông thường KHÔNG tự làm mất tiền ngân hàng; số di động 10 số thông thường trong nước cũng KHÔNG thể trừ cước cao của bạn.\n\n✅ Giải pháp trọn vẹn cho mọi cuộc gọi nhỡ (kể cả phỏng vấn & báo tin bất ngờ):\n1. Chặn gốc trên máy: Nếu không gọi đi nước ngoài, báo tổng đài nhà mạng khóa chiều gọi quốc tế (miễn phí, nghe gọi trong nước vẫn bình thường).\n2. Đừng chạm thẳng dòng cuộc nhỡ: Bấm mở chi tiết (i) soi đầu số trước — né dấu + / 00 khác 84 và đầu số 1900.\n3. Với số thường trong nước gọi bất ngờ: Có thể tra nhanh số trên mạng, nhắn tin hỏi hoặc gọi lại bình thường (vì chỉ tốn cước nội địa thường).\n4. Giữ chủ động khi gọi lại: Hễ đồng hồ nhảy giây mà bên kia im lặng / giả chuông chờ thì tắt ngay; khi mở lời chỉ hỏi gọn \"Nãy gọi có việc gì ạ?\", không tự khai trước; nếu nghe báo chuyện khẩn cấp của người nhà hay cơ quan thì cúp máy và tự gọi số người thân / tổng đài chính thức để kiểm chứng!",
+    "pinned_comment": "📌 Nhớ kỹ: Số di động 10 số thông thường trong nước KHÔNG trừ cước cao được — bạn chỉ mất tiền điện thoại oan khi gọi ra đầu số quốc tế (+ / 00 khác 84) hoặc tổng đài 1900! Ai không gọi nước ngoài cứ báo nhà mạng khóa chiều gọi quốc tế, còn gặp số nội địa lạ nhỡ máy thì tra nhanh, nhắn tin hoặc gọi hỏi gọn mà không tự khai trước nhé!",
+    "hashtags": [
+      "#shorts",
+      "#bóctrầnlừađảo",
+      "#cảnhgiáclừađảo"
+    ],
+    "tags": [
+      "lừa đảo cuộc gọi quốc tế",
+      "nháy máy hết tiền điện thoại",
+      "cách gọi lại số lạ an toàn",
+      "khóa chiều gọi quốc tế",
+      "tổng đài 1900 tính cước",
+      "bóc trần lừa đảo",
+      "vạn chuyện",
+      "shorts"
+    ],
+    "category": "Education (Giáo dục)",
+    "playlist": "Bóc Trần Lừa Đảo – Kỹ Năng Cảnh Giác & An Toàn Đời Thực",
+    "thumbnail_sec": 12.2
+  }
+}
