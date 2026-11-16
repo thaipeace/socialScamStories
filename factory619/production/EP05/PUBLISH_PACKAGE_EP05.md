@@ -1,16 +1,16 @@
-# GÓI XUẤT BẢN YOUTUBE – EP05: Bẫy Tình Ái Kết Hợp Nhiệm Vụ Chốt Đơn: Quơ Tay Ngang Mặt, Vỡ Mặt Nạ AI Ngay Trên Sóng!
+# GÓI XUẤT BẢN YOUTUBE [factory619 · 9:16] – EP05: Bẫy Tình Ái Kết Hợp Nhiệm Vụ Chốt Đơn: Quơ Tay Ngang Mặt, Vỡ Mặt Nạ AI Ngay Trên Sóng!
 
 ## 📦 1. Các File Cần Dùng Khi Upload
-- **Video Master (MP4 9:16)**: [EP05_ViecNheLuongCao_56s.mp4](file:///C:/projects/socialScamStories/factory/production/EP05/EP05_ViecNheLuongCao_56s.mp4) (32.71 MB, SHA-256 `8f5326168199cece…`)
-- **Phụ đề chuẩn thời gian (SRT)**: [EP05_ViecNheLuongCao_56s.srt](file:///C:/projects/socialScamStories/factory/production/EP05/EP05_ViecNheLuongCao_56s.srt)
-- **Thumbnail dọc (9:16 — mốc `31.0s`)**: [EP05_Thumbnail_9x16.jpg](file:///C:/projects/socialScamStories/factory/production/EP05/EP05_Thumbnail_9x16.jpg)
-- **Thumbnail ngang (16:9 — dùng trên YouTube Studio Web)**: [EP05_Thumbnail_16x9.jpg](file:///C:/projects/socialScamStories/factory/production/EP05/EP05_Thumbnail_16x9.jpg)
+- **Video Master (MP4 9:16)**: [EP05_ViecNheLuongCao_56s.mp4](file:///C:/projects/socialScamStories/factory619/production/EP05/EP05_ViecNheLuongCao_56s.mp4) (42.43 MB, SHA-256 `94da08f5315462c3…`)
+- **Phụ đề chuẩn thời gian (SRT)**: [EP05_ViecNheLuongCao_56s.srt](file:///C:/projects/socialScamStories/factory619/production/EP05/EP05_ViecNheLuongCao_56s.srt)
+- **Thumbnail dọc (9:16 — mốc `31.0s`)**: [EP05_Thumbnail_9x16.jpg](file:///C:/projects/socialScamStories/factory619/production/EP05/EP05_Thumbnail_9x16.jpg)
+- **Thumbnail ngang (16:9)**: [EP05_Thumbnail_16x9.jpg](file:///C:/projects/socialScamStories/factory619/production/EP05/EP05_Thumbnail_16x9.jpg)
 - **Bộ file `.txt` sẵn sàng Copy–Paste nhanh**:
-  - Tiêu đề: [1_TITLE.txt](file:///C:/projects/socialScamStories/factory/production/EP05/youtube_upload/1_TITLE.txt)
-  - Mô tả (Description): [2_DESCRIPTION.txt](file:///C:/projects/socialScamStories/factory/production/EP05/youtube_upload/2_DESCRIPTION.txt)
-  - Thẻ từ khóa (Tags): [3_TAGS.txt](file:///C:/projects/socialScamStories/factory/production/EP05/youtube_upload/3_TAGS.txt)
-  - Bình luận ghim (Pinned Comment): [4_PINNED_COMMENT.txt](file:///C:/projects/socialScamStories/factory/production/EP05/youtube_upload/4_PINNED_COMMENT.txt)
-  - Hướng dẫn cài đặt YouTube Studio: [5_YOUTUBE_STUDIO_SETTINGS.md](file:///C:/projects/socialScamStories/factory/production/EP05/youtube_upload/5_YOUTUBE_STUDIO_SETTINGS.md)
+  - Tiêu đề: [1_TITLE.txt](file:///C:/projects/socialScamStories/factory619/production/EP05/youtube_upload/1_TITLE.txt)
+  - Mô tả (Description): [2_DESCRIPTION.txt](file:///C:/projects/socialScamStories/factory619/production/EP05/youtube_upload/2_DESCRIPTION.txt)
+  - Thẻ từ khóa (Tags): [3_TAGS.txt](file:///C:/projects/socialScamStories/factory619/production/EP05/youtube_upload/3_TAGS.txt)
+  - Bình luận ghim (Pinned Comment): [4_PINNED_COMMENT.txt](file:///C:/projects/socialScamStories/factory619/production/EP05/youtube_upload/4_PINNED_COMMENT.txt)
+  - Hướng dẫn cài đặt YouTube Studio: [5_YOUTUBE_STUDIO_SETTINGS.md](file:///C:/projects/socialScamStories/factory619/production/EP05/youtube_upload/5_YOUTUBE_STUDIO_SETTINGS.md)
 
 ---
 
@@ -55,15 +55,3 @@ bóc trần lừa đảo, bẫy tình ái, lừa đảo chốt đơn, nhiệm v�
 ```text
 📌 Nhớ kỹ: Người yêu qua mạng chưa từng gặp mặt, dùng filter ghép mặt AI và nhiệt tình hướng dẫn nạp tiền làm nhiệm vụ chốt đơn trên đường link lạ 100% là bẫy lừa đảo! Tuyệt đối không nạp thêm tiền để 'gỡ lệnh đóng băng'!
 ```
-
----
-
-## ⚙️ 6. Bảng Cài Đặt Nhanh Trong YouTube Studio
-| Hạng mục | Thao tác chọn trên YouTube Studio | Trạng thái |
-| :--- | :--- | :---: |
-| **Danh sách phát (Playlist)** | `Bóc Trần Lừa Đảo – Kỹ Năng Cảnh Giác & An Toàn Đời Thực` | ☐ |
-| **Đối tượng (Audience – Made for kids)** | Chọn **No, it's not made for kids** *(Không dành cho trẻ em – để mở bình luận ghim & tiếp cận phụ huynh)* | ☐ |
-| **Khai báo nội dung AI (Altered content)** | Chọn **Yes** *(Có sử dụng hình ảnh/âm thanh tổng hợp)* | ☐ |
-| **Ngôn ngữ & Phụ đề (Language & Subtitles)** | Ngôn ngữ: **Tiếng Việt** · Tải lên file `EP05_ViecNheLuongCao_56s.srt` | ☐ |
-| **Danh mục (Category)** | `Education (Giáo dục)` | ☐ |
-| **Kiểm tra trước khi Public** | Đăng **Unlisted** → xem thử trên điện thoại → ghim bình luận → bật **Public** | ☐ |

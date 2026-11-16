@@ -2,19 +2,19 @@
   "2": {
     "status": "PASS",
     "by": "Antigravity Staging Visual QA",
-    "note": "Da kiem tra 6 anh va preview frames EP06 v4: canh bao check-in du lich thoi gian thuc, khong huong dan thu doan chi tiet, hinh anh an toan khong sac phuc hay logo that, ton trong nan nhan",
-    "at": "2026-11-06T21:25:45+07:00"
+    "note": "Da kiem tra 12 anh keyframe + 6 clip 30fps va preview frames EP06 v5: mo dau tren xe xem lai anh check-in, nhip nhanh 47.62s khong cau gio, hinh anh an toan khong logo/sac phuc/bien so that",
+    "at": "2026-11-15T22:38:35+07:00"
   },
   "4": {
     "status": "PASS",
     "by": "Antigravity Staging Visual QA",
-    "note": "Da kiem tra 6 anh va preview frames EP06 v4: canh bao check-in du lich thoi gian thuc, khong huong dan thu doan chi tiet, hinh anh an toan khong sac phuc hay logo that, ton trong nan nhan",
-    "at": "2026-11-06T21:25:45+07:00"
+    "note": "Da kiem tra 12 anh keyframe + 6 clip 30fps va preview frames EP06 v5: mo dau tren xe xem lai anh check-in, nhip nhanh 47.62s khong cau gio, hinh anh an toan khong logo/sac phuc/bien so that",
+    "at": "2026-11-15T22:38:35+07:00"
   },
   "5": {
     "status": "PASS",
     "by": "Antigravity Staging Visual QA",
-    "note": "Da kiem tra 6 anh va preview frames EP06 v4: canh bao check-in du lich thoi gian thuc, khong huong dan thu doan chi tiet, hinh anh an toan khong sac phuc hay logo that, ton trong nan nhan",
-    "at": "2026-11-06T21:25:45+07:00"
+    "note": "Da kiem tra 12 anh keyframe + 6 clip 30fps va preview frames EP06 v5: mo dau tren xe xem lai anh check-in, nhip nhanh 47.62s khong cau gio, hinh anh an toan khong logo/sac phuc/bien so that",
+    "at": "2026-11-15T22:38:35+07:00"
   }
 }

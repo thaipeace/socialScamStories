@@ -2,25 +2,26 @@
   "episode_id": "EP06",
   "slug": "CheckInDuLich",
   "title": "Thói quen check-in du lịch thời gian thực mời trộm vào nhà",
-  "version": "v4",
+  "version": "v5",
   "scam_family": "MIX-05",
-  "duration_sec": 56.0,
+  "duration_sec": 47.62,
   "hook": {
     "kicker": "SƠ HỞ CHECK-IN DU LỊCH",
-    "title": "Vô tư đăng ảnh \"cả nhà đi biển 4 ngày\", về tới nhà thấy ổ khóa bị cạy!",
-    "start": 0.3,
-    "end": 4.2
+    "title": "Trên xe về nhà xem lại ảnh check-in đi biển, mở cổng thấy ổ khóa bị cạy!",
+    "start": 0.25,
+    "end": 4.1
   },
   "scenes": [
     {
       "id": "s1_hook",
       "image": "assets/scene1.jpg",
+      "video": "assets/scene1.mp4",
       "start": 0.0,
-      "end": 5.0,
+      "end": 9.16,
       "motion": {
         "scale": [
-          1.06,
-          1.15
+          1.05,
+          1.13
         ],
         "focus": [
           [
@@ -29,21 +30,22 @@
           ],
           [
             0.5,
-            0.46
+            0.47
           ]
         ],
-        "wobble": "tense"
+        "wobble": "calm"
       }
     },
     {
       "id": "s2_moi_nhu",
       "image": "assets/scene2.jpg",
-      "start": 5.0,
-      "end": 18.0,
+      "video": "assets/scene2.mp4",
+      "start": 9.16,
+      "end": 18.46,
       "motion": {
         "scale": [
-          1.03,
-          1.12
+          1.04,
+          1.13
         ],
         "focus": [
           [
@@ -51,26 +53,27 @@
             0.5
           ],
           [
-            0.46,
-            0.44
+            0.47,
+            0.45
           ]
         ],
-        "wobble": "calm"
+        "wobble": "tense"
       },
       "transition_in": {
         "type": "dissolve",
-        "dur": 0.3
+        "dur": 0.28
       }
     },
     {
       "id": "s3_leo_thang",
       "image": "assets/scene3.jpg",
-      "start": 18.0,
-      "end": 34.0,
+      "video": "assets/scene3.mp4",
+      "start": 18.46,
+      "end": 26.68,
       "motion": {
         "scale": [
           1.04,
-          1.15
+          1.14
         ],
         "focus": [
           [
@@ -79,24 +82,25 @@
           ],
           [
             0.5,
-            0.42
+            0.44
           ]
         ],
         "wobble": "handheld"
       },
       "transition_in": {
         "type": "dissolve",
-        "dur": 0.35
+        "dur": 0.28
       }
     },
     {
       "id": "s4_cu_chot",
       "image": "assets/scene4.jpg",
-      "start": 34.0,
-      "end": 44.0,
+      "video": "assets/scene4.mp4",
+      "start": 26.68,
+      "end": 36.1,
       "motion": {
         "scale": [
-          1.14,
+          1.13,
           1.04
         ],
         "focus": [
@@ -113,20 +117,21 @@
       },
       "transition_in": {
         "type": "flash_white",
-        "dur": 0.25
+        "dur": 0.24
       },
       "shakes": [
         {
-          "at": 34.2,
-          "amp": 32
+          "at": 26.84,
+          "amp": 30
         }
       ]
     },
     {
       "id": "s5_boc_tran",
       "image": "assets/scene5.jpg",
-      "start": 44.0,
-      "end": 51.0,
+      "video": "assets/scene5.mp4",
+      "start": 36.1,
+      "end": 41.82,
       "motion": {
         "scale": [
           1.02,
@@ -139,25 +144,26 @@
           ],
           [
             0.5,
-            0.45
+            0.46
           ]
         ],
         "wobble": "calm"
       },
       "transition_in": {
         "type": "glitch",
-        "dur": 0.35
+        "dur": 0.3
       }
     },
     {
       "id": "s6_dau_hieu",
       "image": "assets/scene6.jpg",
-      "start": 51.0,
-      "end": 56.0,
+      "video": "assets/scene6.mp4",
+      "start": 41.82,
+      "end": 47.62,
       "motion": {
         "scale": [
-          1.03,
-          1.07
+          1.02,
+          1.06
         ],
         "focus": [
           [
@@ -173,65 +179,86 @@
       },
       "transition_in": {
         "type": "fade_black",
-        "dur": 0.35
+        "dur": 0.32
       }
     }
   ],
+  "scene_splits_sec": {
+    "scene1": 5.08,
+    "scene2": 4.2,
+    "scene3": 4.42,
+    "scene4": 5.32,
+    "scene5": 2.81,
+    "scene6": 2.2
+  },
   "dialogue": [
     {
       "id": "l1",
       "speaker": "chi_ba",
-      "start": 0.7,
-      "window": 4.2,
-      "text": "Đăng ảnh lên mạng khoe cả nhà đi biển nghỉ mát bốn ngày!"
+      "start": 0.32,
+      "window": 6.06,
+      "text": "Hình check-in cả nhà đi biển bốn ngày hôm bữa, quá trời người thả tim nè anh!"
+    },
+    {
+      "id": "l1b",
+      "speaker": "anh_hai",
+      "start": 5.18,
+      "window": 5.1,
+      "text": "Xe tới cổng nhà mình rồi kìa, xuống mở khóa vô nhà thôi em!"
     },
     {
       "id": "l2",
       "speaker": "ke_ngot_ngao_nam",
-      "start": 5.6,
-      "window": 5.0,
-      "text": "Chủ nhà mới đăng ảnh đi biển, đêm nay tha hồ cạy cửa!"
+      "start": 9.44,
+      "window": 5.18,
+      "text": "Nhà này đăng hình đi biển bốn ngày chưa về, vô cạy khóa lẹ!",
+      "af": "default",
+      "style": "Giọng nam miền Nam Sài Gòn 28 tuổi, hạ giọng ranh mãnh, thì thầm gấp gáp với đồng bọn trong đêm, nhịp nói nhanh gọn, rõ chữ, tuyệt đối không kéo dài."
     },
     {
       "id": "l3",
       "speaker": "anh_hai",
-      "start": 11.6,
-      "window": 5.4,
+      "start": 13.5,
+      "window": 6.06,
       "text": "Ủa mình ơi, đi chơi về sao ổ khóa bị cạy xước hết?!"
     },
     {
       "id": "l4",
       "speaker": "chi_ba",
-      "start": 18.6,
-      "window": 5.2,
+      "start": 18.74,
+      "window": 5.42,
       "text": "Trời ơi, nhà suýt mất trộm mà đi chơi không biết gì!"
     },
     {
       "id": "l5",
       "speaker": "ong_bay",
-      "start": 24.5,
-      "window": 6.0,
-      "text": "May mà tổ an ninh khu phố có kết bạn mạng với con!"
+      "start": 22.96,
+      "window": 4.82,
+      "text": "May mà tổ an ninh khu phố có kết bạn mạng với tụi con!",
+      "style": "Giọng nam miền Nam Sài Gòn 58 tuổi, chú tổ trưởng an ninh khu phố lanh lẹ, nhịp nói nhanh gọn, dứt khoát, sắc bén, rõ chữ, tuyệt đối không kéo dài chữ hay ngân giọng chậm."
     },
     {
       "id": "l6",
       "speaker": "chu_bao_ve",
-      "start": 34.4,
-      "window": 4.7,
-      "text": "Thấy gia đình đăng bài đi vắng sơ hở, tụi tôi tuần tra giúp!"
+      "start": 26.98,
+      "window": 6.3,
+      "text": "Thấy gia đình đăng bài đi vắng sơ hở, đêm qua mấy chú tuần tra canh giùm!",
+      "voice": "Fenrir",
+      "af": "default",
+      "style": "Giọng nam miền Nam Sài Gòn 50 tuổi, chú tuần tra an ninh khu phố nhanh nhẹn, dứt khoát, nhịp nói nhanh gọn, rõ chữ, tự nhiên, tuyệt đối không nghỉ dài giữa câu hay kéo giọng."
     },
     {
       "id": "l7",
       "speaker": "chi_ba",
-      "start": 39.4,
-      "window": 4.2,
+      "start": 32.08,
+      "window": 5.1,
       "text": "Hú hồn! Không có các chú tuần tra giúp là mất sạch rồi!"
     },
     {
       "id": "l8",
       "speaker": "nguoi_boc_tran",
-      "start": 44.5,
-      "window": 6.3,
+      "start": 36.4,
+      "window": 6.5,
       "text": "Đi chơi thường về nhà mới biết mất trộm; về nhà hãy đăng ảnh!",
       "subtitle": [
         "Đi chơi xa thường về nhà mới biết mất trộm;",
@@ -242,9 +269,9 @@
   "chat_bubbles": [],
   "callouts": [],
   "red_flags": {
-    "start": 51.0,
-    "end": 53.5,
-    "stagger_sec": 0.4,
+    "start": 41.82,
+    "end": 44.92,
+    "stagger_sec": 0.38,
     "title": "NHỚ KỸ",
     "items": [
       "Đăng công khai \"cả nhà đi du lịch dài ngày\" khiến kẻ gian biết chắc nhà không có ai",
@@ -253,56 +280,56 @@
     "action": "Đi chơi cứ vui hết nấc, nhưng ảnh đẹp thì về nhà hãy đăng & báo an ninh khu phố khi đi xa!"
   },
   "disclaimer": {
-    "start": 53.5,
-    "end": 56.0
+    "start": 44.92,
+    "end": 47.62
   },
   "audio": {
     "ambience": [
       {
         "preset": "street",
         "start": 0.0,
-        "end": 56.0,
+        "end": 47.62,
         "gain_db": -3.0
       }
     ],
     "foley": [
       {
         "preset": "notification",
-        "at": 0.4,
+        "at": 0.3,
         "gain_db": -1.5
       },
       {
         "preset": "footsteps",
-        "at": 5.5,
-        "dur": 2.0,
+        "at": 13.41,
+        "dur": 1.6,
         "gain_db": -2.0
       },
       {
         "preset": "heartbeat",
-        "at": 19.5,
-        "dur": 11.0,
-        "gain_db": 0.0
+        "at": 18.71,
+        "dur": 7.72,
+        "gain_db": -1.0
       },
       {
         "preset": "riser",
-        "at": 31.2,
-        "dur": 2.9,
-        "gain_db": 2.5
+        "at": 25.53,
+        "dur": 1.15,
+        "gain_db": 2.0
       },
       {
         "preset": "impact",
-        "at": 34.1,
-        "dur": 2.2,
-        "gain_db": 3.5
+        "at": 26.76,
+        "dur": 1.9,
+        "gain_db": 3.2
       },
       {
         "preset": "whistle",
-        "at": 34.4,
+        "at": 26.9,
         "gain_db": 2.0
       },
       {
         "preset": "glitch",
-        "at": 44.0,
+        "at": 36.1,
         "gain_db": 0.0
       }
     ],
@@ -310,30 +337,30 @@
       {
         "preset": "suspense_pulse",
         "start": 0.0,
-        "end": 18.0
+        "end": 18.46
       },
       {
         "preset": "tension_drone",
-        "start": 18.0,
-        "end": 34.0,
-        "gain_db": 2.0
+        "start": 18.46,
+        "end": 26.68,
+        "gain_db": 1.8
       },
       {
         "preset": "action_climax",
-        "start": 34.0,
-        "end": 48.0,
-        "gain_db": 3.0
+        "start": 26.68,
+        "end": 41.82,
+        "gain_db": 2.6
       },
       {
         "preset": "warm_outro",
-        "start": 48.0,
-        "end": 56.0
+        "start": 41.82,
+        "end": 47.62
       }
     ],
     "duck_extra": [
       {
-        "start": 33.7,
-        "end": 34.1,
+        "start": 26.48,
+        "end": 26.9,
         "bgm_db": -14,
         "amb_db": -10
       }
@@ -342,12 +369,12 @@
   "forbidden_terms": [],
   "publish": {
     "titles": [
-      "Vô tư đăng ảnh cả nhà đi biển 4 ngày, lúc về thấy ổ khóa bị cạy xước! #shorts #bảomậtthôngtin",
+      "Trên xe về nhà xem lại ảnh check-in đi biển, mở cổng thấy ổ khóa bị cạy! #shorts #bảomậtthôngtin",
       "Đi du lịch về mới tá hỏa biết nhà suýt mất trộm chỉ vì 1 bức ảnh check-in! #shorts #cảnhgiáclừađảo",
       "Tại sao ảnh đẹp đi du lịch nhất định phải đợi về đến nhà rồi mới đăng? #shorts #bóctrầnlừađảo"
     ],
-    "description": "Đi du lịch xa, hầu hết các gia đình đang mải vui chơi nên hoàn toàn không biết chuyện gì xảy ra ở nhà – thường chỉ phát hiện khi mọi sự đã rồi hoặc lúc kéo vali về đến cổng!\n\nVợ chồng Anh Hai – Chị Ba vừa lên đường đã vô tư đăng ảnh công khai \"Cả nhà đi biển 4 ngày\". Đêm đó kẻ gian mò tới cạy khóa. Khi hai vợ chồng trở về thấy ổ khóa trầy xước mới bàng hoàng biết: Nhờ tổ an ninh khu phố có kết bạn mạng xã hội với gia đình, thấy bài đăng quá sơ hở nên đã chủ động tăng cường tuần tra ngang nhà và xua đuổi bọn trộm kịp lúc!\n\n⏱️ Bố cục tình huống:\n00:00 Vô tư đăng ảnh công khai \"cả nhà đi biển 4 ngày\"\n00:05 Kẻ gian lướt mạng thấy nhà trống mò tới cạy khóa & lúc gia đình về đến cổng\n00:18 Bàng hoàng phát hiện vết cạy khóa khi đi chơi về\n00:34 Nhờ tổ an ninh khu phố kết bạn mạng xã hội thấy sơ hở nên tuần tra canh giúp!\n00:51 2 bài học nhớ kỹ trước khi đăng ảnh du lịch\n\n⚠️ 2 điều cần nhớ kỹ:\n1. Đăng công khai \"cả nhà đi vắng dài ngày\" chẳng khác nào thông báo cho kẻ gian biết nhà không có ai\n2. Khi đi chơi xa, gia đình thường chỉ biết chuyện khi đã về đến nhà\n\n✅ Việc nên làm: Đi chơi cứ vui hết nấc, nhưng ảnh đẹp thì về nhà hãy đăng & nhớ báo cho tổ trưởng/an ninh khu phố biết khi vắng nhà dài ngày!",
-    "pinned_comment": "📌 Đi chơi xa thường chỉ biết chuyện khi về đến nhà thôi! Đừng bao giờ đăng lịch trình \"cả nhà đang đi vắng\" theo thời gian thực, và nhớ giữ liên lạc với tổ an ninh khu phố nhé!",
+    "description": "Trên chuyến xe trở về sau 4 ngày đi biển, vợ chồng Anh Hai – Chị Ba vẫn vui vẻ lướt xem lại tấm ảnh check-in \"cả nhà đi biển 4 ngày\" đăng công khai từ hôm khởi hành với hàng chục lượt thả tim.\n\nVừa bước xuống xe tới cổng nhà, hai vợ chồng tá hỏa phát hiện ổ khóa bị cạy trầy xước! May nhờ tổ an ninh khu phố có kết bạn mạng xã hội với gia đình, thấy bài đăng đi vắng quá sơ hở nên đêm qua đã chủ động rọi đèn tuần tra ngang nhà và thổi còi xua đuổi kẻ trộm kịp lúc!\n\n⚠️ 2 điều cần nhớ kỹ:\n1. Đăng công khai \"cả nhà đi vắng dài ngày\" chẳng khác nào báo cho kẻ gian biết nhà không có ai\n2. Khi đi chơi xa, gia đình thường chỉ biết chuyện khi đã về đến nhà\n\n✅ Việc nên làm: Đi chơi cứ vui hết nấc, nhưng ảnh đẹp thì về nhà hãy đăng & nhớ báo tổ an ninh khu phố khi vắng nhà dài ngày!",
+    "pinned_comment": "📌 Đi chơi xa thường chỉ biết chuyện khi về đến nhà thôi! Đừng đăng lịch trình \"cả nhà đang đi vắng\" theo thời gian thực, và nhớ báo tổ an ninh khu phố khi đi xa nhé!",
     "hashtags": [
       "#shorts",
       "#bảomậtthôngtin",
@@ -365,6 +392,6 @@
     ],
     "category": "Education (Giáo dục)",
     "playlist": "Bóc Trần Lừa Đảo – Kỹ Năng Cảnh Giác & An Toàn Đời Thực",
-    "thumbnail_sec": 36.0
+    "thumbnail_sec": 27.68
   }
 }

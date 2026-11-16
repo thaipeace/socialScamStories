@@ -2,7 +2,7 @@
   "episode_id": "EP05",
   "slug": "ViecNheLuongCao",
   "title": "Bẫy Tình Ái Kết Hợp Nhiệm Vụ Chốt Đơn: Quơ Tay Ngang Mặt, Vỡ Mặt Nạ AI Ngay Trên Sóng!",
-  "version": "v4",
+  "version": "v5",
   "scam_family": "ON-11",
   "duration_sec": 56.0,
   "hook": {
@@ -15,6 +15,7 @@
     {
       "id": "s1_bay_tinh_ai",
       "image": "assets/scene1.jpg",
+      "video": "assets/scene1.mp4",
       "start": 0.0,
       "end": 5.5,
       "motion": {
@@ -38,6 +39,7 @@
     {
       "id": "s2_khoa_tai_khoan",
       "image": "assets/scene2.jpg",
+      "video": "assets/scene2.mp4",
       "start": 5.5,
       "end": 16.0,
       "motion": {
@@ -71,6 +73,7 @@
     {
       "id": "s3_chi_ba_nhu_moi",
       "image": "assets/scene3.jpg",
+      "video": "assets/scene3.mp4",
       "start": 16.0,
       "end": 28.5,
       "motion": {
@@ -104,6 +107,7 @@
     {
       "id": "s4_vo_mat_na_ai_climax",
       "image": "assets/scene4.jpg",
+      "video": "assets/scene4.mp4",
       "start": 28.5,
       "end": 41.8,
       "motion": {
@@ -149,6 +153,7 @@
     {
       "id": "s5_boc_tran",
       "image": "assets/scene5.jpg",
+      "video": "assets/scene5.mp4",
       "start": 41.8,
       "end": 49.5,
       "motion": {
@@ -176,6 +181,7 @@
     {
       "id": "s6_ket_luan",
       "image": "assets/scene6.jpg",
+      "video": "assets/scene6.mp4",
       "start": 49.5,
       "end": 56.0,
       "motion": {
@@ -269,11 +275,11 @@
   "chat_bubbles": [],
   "callouts": [
     {
-      "text": "VẪY TAY NGANG MẶT: LỖI FILTER GHÉP MẶT AI!",
+      "text": "QUƠ TAY NGANG MẶT: VỠ FILTER AI!",
       "style": "danger",
       "start": 30.8,
-      "end": 35.0,
-      "y": 190
+      "end": 34.6,
+      "y": 585
     }
   ],
   "red_flags": {

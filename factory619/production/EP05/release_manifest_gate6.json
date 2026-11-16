@@ -1,18 +1,20 @@
 {
   "episode_id": "EP05",
+  "factory": "factory619",
+  "aspect_ratio": "9:16",
   "title": "Bẫy Tình Ái Kết Hợp Nhiệm Vụ Chốt Đơn: Quơ Tay Ngang Mặt, Vỡ Mặt Nạ AI Ngay Trên Sóng!",
   "gate": "GATE_6_PRODUCTION_RELEASE",
   "status": "PRODUCED_READY_FOR_PUBLISH",
-  "released_at": "2026-11-06T21:58:13.712346+07:00",
+  "released_at": "2026-11-16T08:36:29.276023+07:00",
   "master_video": {
-    "path": "factory/production/EP05/EP05_ViecNheLuongCao_56s.mp4",
+    "path": "factory619/production/EP05/EP05_ViecNheLuongCao_56s.mp4",
     "mirror": "06_RENDERED_SHORTS/EP05_ViecNheLuongCao_56s.mp4",
-    "srt": "factory/production/EP05/EP05_ViecNheLuongCao_56s.srt",
-    "thumbnail_9x16": "factory/production/EP05/EP05_Thumbnail_9x16.jpg",
-    "thumbnail_16x9": "factory/production/EP05/EP05_Thumbnail_16x9.jpg",
+    "srt": "factory619/production/EP05/EP05_ViecNheLuongCao_56s.srt",
+    "thumbnail_9x16": "factory619/production/EP05/EP05_Thumbnail_9x16.jpg",
+    "thumbnail_16x9": "factory619/production/EP05/EP05_Thumbnail_16x9.jpg",
     "thumbnail_sec": 31.0,
-    "size_mb": 32.71,
-    "sha256": "8f5326168199cece76650069fc6fdcfba311a8988193a58a701d4eec23959a0f"
+    "size_mb": 42.43,
+    "sha256": "94da08f5315462c31588f12ea64c4f8554d5083839d41b8a63c0f99ec083962b"
   },
   "youtube_upload": {
     "primary_title": "Bẫy tình ái rủ chốt đơn: Quơ tay ngang mặt, vỡ mặt nạ AI ngay trên sóng! #shorts #bẫytìnhái",
@@ -49,18 +51,18 @@
       "altered_or_synthetic_content": true,
       "category": "Education (Giáo dục)",
       "video_language": "vi",
-      "subtitles_file": "factory/production/EP05/EP05_ViecNheLuongCao_56s.srt",
+      "subtitles_file": "factory619/production/EP05/EP05_ViecNheLuongCao_56s.srt",
       "comments": "ON_MODERATION_BASIC"
     },
     "copy_paste_files": {
-      "title_txt": "factory/production/EP05/youtube_upload/1_TITLE.txt",
-      "description_txt": "factory/production/EP05/youtube_upload/2_DESCRIPTION.txt",
-      "tags_txt": "factory/production/EP05/youtube_upload/3_TAGS.txt",
-      "pinned_comment_txt": "factory/production/EP05/youtube_upload/4_PINNED_COMMENT.txt",
-      "studio_settings_md": "factory/production/EP05/youtube_upload/5_YOUTUBE_STUDIO_SETTINGS.md"
+      "title_txt": "factory619/production/EP05/youtube_upload/1_TITLE.txt",
+      "description_txt": "factory619/production/EP05/youtube_upload/2_DESCRIPTION.txt",
+      "tags_txt": "factory619/production/EP05/youtube_upload/3_TAGS.txt",
+      "pinned_comment_txt": "factory619/production/EP05/youtube_upload/4_PINNED_COMMENT.txt",
+      "studio_settings_md": "factory619/production/EP05/youtube_upload/5_YOUTUBE_STUDIO_SETTINGS.md"
     }
   },
-  "gate5_reference": "factory/staging/EP05/qa_audit_report_gate5.json",
+  "gate5_reference": "factory619/staging/EP05/qa_audit_report_gate5.json",
   "compliance_flags": {
     "no_real_identity": true,
     "no_how_to_detail": true,

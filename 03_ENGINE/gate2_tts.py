@@ -131,8 +131,8 @@ def synthesize(ep: Episode, text: str, voice: str, style: str, keys: list[str], 
     primary_model = preferred_model or tts_cfg["model"]
     candidate_models = []
     for m in (
-        "gemini-3.8-flash-lite-tts",
         primary_model,
+        "gemini-3.8-flash-lite-tts",
         "gemini-3.1-flash-tts-preview",
         "gemini-2.5-pro-preview-tts",
         "gemini-2.5-flash-preview-tts",

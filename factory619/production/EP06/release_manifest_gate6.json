@@ -1,0 +1,74 @@
+{
+  "episode_id": "EP06",
+  "factory": "factory619",
+  "aspect_ratio": "9:16",
+  "title": "Thói quen check-in du lịch thời gian thực mời trộm vào nhà",
+  "gate": "GATE_6_PRODUCTION_RELEASE",
+  "status": "PRODUCED_READY_FOR_PUBLISH",
+  "released_at": "2026-11-15T22:50:58.822867+07:00",
+  "master_video": {
+    "path": "factory619/production/EP06/EP06_CheckInDuLich_48s.mp4",
+    "mirror": "06_RENDERED_SHORTS/EP06_CheckInDuLich_48s.mp4",
+    "srt": "factory619/production/EP06/EP06_CheckInDuLich_48s.srt",
+    "thumbnail_9x16": "factory619/production/EP06/EP06_Thumbnail_9x16.jpg",
+    "thumbnail_16x9": "factory619/production/EP06/EP06_Thumbnail_16x9.jpg",
+    "thumbnail_sec": 27.68,
+    "size_mb": 35.3,
+    "sha256": "63893c8118fc7533d811b5d52f8fea9ad78b30715a5bd5e803bbc72753d31d6f"
+  },
+  "youtube_upload": {
+    "primary_title": "Trên xe về nhà xem lại ảnh check-in đi biển, mở cổng thấy ổ khóa bị cạy! #shorts #bảomậtthôngtin",
+    "primary_title_length": 96,
+    "alternative_titles": [
+      "Đi du lịch về mới tá hỏa biết nhà suýt mất trộm chỉ vì 1 bức ảnh check-in! #shorts #cảnhgiáclừađảo",
+      "Tại sao ảnh đẹp đi du lịch nhất định phải đợi về đến nhà rồi mới đăng? #shorts #bóctrầnlừađảo"
+    ],
+    "description": "Trên chuyến xe trở về sau 4 ngày đi biển, vợ chồng Anh Hai – Chị Ba vẫn vui vẻ lướt xem lại tấm ảnh check-in \"cả nhà đi biển 4 ngày\" đăng công khai từ hôm khởi hành với hàng chục lượt thả tim.\n\nVừa bước xuống xe tới cổng nhà, hai vợ chồng tá hỏa phát hiện ổ khóa bị cạy trầy xước! May nhờ tổ an ninh khu phố có kết bạn mạng xã hội với gia đình, thấy bài đăng đi vắng quá sơ hở nên đêm qua đã chủ động rọi đèn tuần tra ngang nhà và thổi còi xua đuổi kẻ trộm kịp lúc!\n\n⚠️ 2 điều cần nhớ kỹ:\n1. Đăng công khai \"cả nhà đi vắng dài ngày\" chẳng khác nào báo cho kẻ gian biết nhà không có ai\n2. Khi đi chơi xa, gia đình thường chỉ biết chuyện khi đã về đến nhà\n\n✅ Việc nên làm: Đi chơi cứ vui hết nấc, nhưng ảnh đẹp thì về nhà hãy đăng & nhớ báo tổ an ninh khu phố khi vắng nhà dài ngày!\n\n🎬 ĐÂY LÀ PHIM HOẠT HÌNH DỰNG LẠI TÌNH HUỐNG ĐỂ CẢNH BÁO\nNhân vật, tên gọi, số điện thoại, số tiền trong phim đều là hư cấu nhằm mục đích cảnh báo.\n\n🤖 Hình ảnh và âm thanh được hỗ trợ sản xuất bởi công cụ AI.\n\n#shorts #bảomậtthôngtin #cảnhgiáclừađảo",
+    "tags_csv": "bóc trần lừa đảo, bảo mật thông tin, du lịch an toàn, check in du lịch, an ninh khu phố, phòng chống trộm cắp, vạn chuyện, shorts, cảnh giác lừa đảo, kỹ năng thoát hiểm, an toàn đời thực, phim hoạt hình cảnh báo",
+    "tags_list": [
+      "bóc trần lừa đảo",
+      "bảo mật thông tin",
+      "du lịch an toàn",
+      "check in du lịch",
+      "an ninh khu phố",
+      "phòng chống trộm cắp",
+      "vạn chuyện",
+      "shorts",
+      "cảnh giác lừa đảo",
+      "kỹ năng thoát hiểm",
+      "an toàn đời thực",
+      "phim hoạt hình cảnh báo"
+    ],
+    "hashtags": [
+      "#shorts",
+      "#bảomậtthôngtin",
+      "#cảnhgiáclừađảo"
+    ],
+    "pinned_comment": "📌 Đi chơi xa thường chỉ biết chuyện khi về đến nhà thôi! Đừng đăng lịch trình \"cả nhà đang đi vắng\" theo thời gian thực, và nhớ báo tổ an ninh khu phố khi đi xa nhé!",
+    "studio_settings": {
+      "playlist": "Bóc Trần Lừa Đảo – Kỹ Năng Cảnh Giác & An Toàn Đời Thực",
+      "made_for_kids": false,
+      "age_restricted": false,
+      "altered_or_synthetic_content": true,
+      "category": "Education (Giáo dục)",
+      "video_language": "vi",
+      "subtitles_file": "factory619/production/EP06/EP06_CheckInDuLich_48s.srt",
+      "comments": "ON_MODERATION_BASIC"
+    },
+    "copy_paste_files": {
+      "title_txt": "factory619/production/EP06/youtube_upload/1_TITLE.txt",
+      "description_txt": "factory619/production/EP06/youtube_upload/2_DESCRIPTION.txt",
+      "tags_txt": "factory619/production/EP06/youtube_upload/3_TAGS.txt",
+      "pinned_comment_txt": "factory619/production/EP06/youtube_upload/4_PINNED_COMMENT.txt",
+      "studio_settings_md": "factory619/production/EP06/youtube_upload/5_YOUTUBE_STUDIO_SETTINGS.md"
+    }
+  },
+  "gate5_reference": "factory619/staging/EP06/qa_audit_report_gate5.json",
+  "compliance_flags": {
+    "no_real_identity": true,
+    "no_how_to_detail": true,
+    "red_flags_card": true,
+    "dramatized_disclaimer": true,
+    "ai_disclosure_required": true
+  }
+}

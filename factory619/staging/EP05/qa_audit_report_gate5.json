@@ -1,8 +1,9 @@
 {
   "episode_id": "EP05",
+  "factory": "factory619",
   "gate": "GATE_5_RENDER_AND_QA",
-  "staging_mp4_path": "factory/staging/EP05/EP05_ViecNheLuongCao_56s_staging.mp4",
-  "file_size_mb": 32.71,
+  "staging_mp4_path": "factory619/staging/EP05/EP05_ViecNheLuongCao_56s_staging.mp4",
+  "file_size_mb": 42.43,
   "stream_probe": {
     "programs": [],
     "stream_groups": [],
@@ -24,7 +25,7 @@
     ],
     "format": {
       "duration": "56.000000",
-      "size": "34297924"
+      "size": "44487881"
     }
   },
   "all_8_points_passed": true,
@@ -39,7 +40,7 @@
       "id": 2,
       "name": "Không hướng dẫn thủ đoạn chi tiết (chỉ bóc trần cơ chế tâm lý & dấu hiệu)",
       "status": "PASS",
-      "evidence": "Người duyệt: Antigravity Staging Visual QA. Da kiem tra 6 anh v3: bay tinh ai ket hop nhiem vu chot don san thuong mai, Chi Ba giu tay Na va tim kiem anh nguoc lat mat ban trai ao, khong chu sai chinh ta"
+      "evidence": "Người duyệt: Antigravity Staging Visual QA v5. Duyệt v5 13 keyframes + 6 clip 30fps, split-screen đúng cao trào, callout y=585 không che mặt, 100% Safe Zone"
     },
     {
       "id": 3,
@@ -51,13 +52,13 @@
       "id": 4,
       "name": "Hình ảnh an toàn: không máu me/khỏa thân, không logo – giao diện – sắc phục thật",
       "status": "PASS",
-      "evidence": "Người duyệt: Antigravity Staging Visual QA. Da kiem tra 6 anh v3: bay tinh ai ket hop nhiem vu chot don san thuong mai, Chi Ba giu tay Na va tim kiem anh nguoc lat mat ban trai ao, khong chu sai chinh ta"
+      "evidence": "Người duyệt: Antigravity Staging Visual QA v5. Duyệt v5 13 keyframes + 6 clip 30fps, split-screen đúng cao trào, callout y=585 không che mặt, 100% Safe Zone"
     },
     {
       "id": 5,
       "name": "Tôn trọng nạn nhân, không kỳ thị vùng miền / dân tộc / nghề nghiệp / tuổi tác",
       "status": "PASS",
-      "evidence": "Người duyệt: Antigravity Staging Visual QA. Da kiem tra 6 anh v3: bay tinh ai ket hop nhiem vu chot don san thuong mai, Chi Ba giu tay Na va tim kiem anh nguoc lat mat ban trai ao, khong chu sai chinh ta"
+      "evidence": "Người duyệt: Antigravity Staging Visual QA v5. Duyệt v5 13 keyframes + 6 clip 30fps, split-screen đúng cao trào, callout y=585 không che mặt, 100% Safe Zone"
     },
     {
       "id": 6,
@@ -67,7 +68,7 @@
     },
     {
       "id": 7,
-      "name": "Safe Zone + Disclaimer + Thẻ Dấu hiệu nhận biết",
+      "name": "Safe Zone (9:16) + Disclaimer + Thẻ Dấu hiệu nhận biết",
       "status": "PASS",
       "evidence": "Overlay trong Safe Zone: True; disclaimer: 1; thẻ dấu hiệu: 3 ý"
     },
