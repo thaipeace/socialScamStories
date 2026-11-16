@@ -124,6 +124,30 @@
       "voice": "Zephyr",
       "style": "Giọng nữ MC sân khấu, hồ hởi, to, nói liến thoắng, tạo không khí 'cơ hội có một không hai'.",
       "subtitle_rgb": [255, 150, 190]
+    },
+    "chi_hai": {
+      "label": "Chị Hai – vợ Anh Hai 34 tuổi, ít nói, thực tế (tách giọng khỏi Cô Tư/Kore)",
+      "label_short": "CHỊ HAI",
+      "model": "gemini-3.8-flash-tts",
+      "voice": "Sulafat",
+      "style": "Giọng phụ nữ miền Nam Sài Gòn 34 tuổi, phát âm chuẩn phương ngữ miền Nam xuyên suốt mọi câu, giữ cố định một âm sắc ấm, trầm vừa, ít lời; nói gọn, chắc, nhịp tự nhiên như đời thực, không ngân dài, không bi lụy.",
+      "subtitle_rgb": [205, 225, 255]
+    },
+    "co_hanh": {
+      "label": "Cô Hạnh – kẻ dắt mối 'chị em cùng cảnh', đang chìm trong vòng xoay nợ",
+      "label_short": "HẠNH",
+      "model": "gemini-3.8-flash-tts",
+      "voice": "Despina",
+      "style": "Giọng phụ nữ miền Nam Sài Gòn khoảng 45 tuổi, phát âm chuẩn phương ngữ miền Nam xuyên suốt mọi câu, giữ cố định một âm sắc mượt, ngọt, thân tình; nói nhanh, gọn, hơi gấp như người lúc nào cũng đang chạy việc; tuyệt đối không kéo dài giọng, không giả giọng người già.",
+      "subtitle_rgb": [255, 205, 160]
+    },
+    "chu_no": {
+      "label": "Chủ nợ tín dụng đen – lạnh, lịch sự, không la hét",
+      "label_short": "CHỦ NỢ",
+      "model": "gemini-3.8-flash-tts",
+      "voice": "Fenrir",
+      "style": "Giọng nam miền Nam Sài Gòn 40 tuổi, phát âm chuẩn phương ngữ miền Nam xuyên suốt mọi câu, giữ cố định một âm sắc trầm, đều, lịch sự mà lạnh; không la hét, không dồn dập, nói như chuyện thường ngày nên càng gây áp lực.",
+      "subtitle_rgb": [255, 120, 120]
     }
   }
 }

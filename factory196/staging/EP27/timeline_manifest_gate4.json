@@ -1,0 +1,3084 @@
+{
+  "episode_id": "EP27",
+  "factory": "factory196",
+  "gate": "GATE_4_TIMELINE_SAFE_ZONE",
+  "preview_only": false,
+  "canvas": {
+    "width": 1920,
+    "height": 1080,
+    "fps": 30,
+    "aspect_ratio": "16:9",
+    "total_frames": 13487,
+    "total_duration_sec": 449.57
+  },
+  "safe_zone_rules": {
+    "left_x": 120,
+    "right_x": 1800,
+    "max_y": 980,
+    "top_hook_y": 96,
+    "platform_ui_bottom_y": 980,
+    "all_overlays_compliant": true
+  },
+  "scenes": [
+    {
+      "id": "s00_night_call",
+      "image": "assets/c00.jpg",
+      "start": 0.0,
+      "end": 19.93,
+      "motion": {
+        "scale": [
+          1.0,
+          1.16
+        ],
+        "focus": [
+          [
+            0.5,
+            0.5
+          ],
+          [
+            0.5,
+            0.45
+          ]
+        ],
+        "wobble": "calm"
+      }
+    },
+    {
+      "id": "s01_finger_hover",
+      "image": "assets/c01.jpg",
+      "start": 19.93,
+      "end": 25.68,
+      "motion": {
+        "scale": [
+          1.0,
+          1.16
+        ],
+        "focus": [
+          [
+            0.5,
+            0.5
+          ],
+          [
+            0.5,
+            0.45
+          ]
+        ],
+        "wobble": "calm"
+      },
+      "transition_in": {
+        "type": "dissolve",
+        "dur": 0.3
+      }
+    },
+    {
+      "id": "s02_son_visit",
+      "image": "assets/c02.jpg",
+      "start": 25.68,
+      "end": 43.59,
+      "motion": {
+        "scale": [
+          1.02,
+          1.09
+        ],
+        "focus": [
+          [
+            0.5,
+            0.5
+          ],
+          [
+            0.5,
+            0.47
+          ]
+        ],
+        "wobble": "calm"
+      },
+      "transition_in": {
+        "type": "fade_black",
+        "dur": 0.4
+      }
+    },
+    {
+      "id": "s03_tet_photo",
+      "image": "assets/c03.jpg",
+      "start": 43.59,
+      "end": 51.74,
+      "motion": {
+        "scale": [
+          1.0,
+          1.16
+        ],
+        "focus": [
+          [
+            0.5,
+            0.5
+          ],
+          [
+            0.5,
+            0.45
+          ]
+        ],
+        "wobble": "calm"
+      },
+      "transition_in": {
+        "type": "dissolve",
+        "dur": 0.35
+      }
+    },
+    {
+      "id": "s04_tea_stall",
+      "image": "assets/c04.jpg",
+      "start": 51.74,
+      "end": 87.97,
+      "motion": {
+        "scale": [
+          1.02,
+          1.09
+        ],
+        "focus": [
+          [
+            0.5,
+            0.5
+          ],
+          [
+            0.5,
+            0.47
+          ]
+        ],
+        "wobble": "calm"
+      },
+      "transition_in": {
+        "type": "fade_black",
+        "dur": 0.4
+      }
+    },
+    {
+      "id": "s05_signing",
+      "image": "assets/c05.jpg",
+      "start": 87.97,
+      "end": 91.72,
+      "motion": {
+        "scale": [
+          1.0,
+          1.16
+        ],
+        "focus": [
+          [
+            0.5,
+            0.5
+          ],
+          [
+            0.5,
+            0.45
+          ]
+        ],
+        "wobble": "calm"
+      },
+      "transition_in": {
+        "type": "dissolve",
+        "dur": 0.3
+      }
+    },
+    {
+      "id": "s06_hanh_alone",
+      "image": "assets/c06.jpg",
+      "start": 91.72,
+      "end": 101.67,
+      "motion": {
+        "scale": [
+          1.02,
+          1.09
+        ],
+        "focus": [
+          [
+            0.5,
+            0.5
+          ],
+          [
+            0.5,
+            0.47
+          ]
+        ],
+        "wobble": "calm"
+      },
+      "transition_in": {
+        "type": "dissolve",
+        "dur": 0.3
+      }
+    },
+    {
+      "id": "s07_ledger_days",
+      "image": "assets/c07.jpg",
+      "start": 101.67,
+      "end": 115.82,
+      "motion": {
+        "scale": [
+          1.0,
+          1.05
+        ],
+        "focus": [
+          [
+            0.5,
+            0.5
+          ],
+          [
+            0.5,
+            0.5
+          ]
+        ],
+        "wobble": "none"
+      },
+      "transition_in": {
+        "type": "fade_black",
+        "dur": 0.35
+      }
+    },
+    {
+      "id": "s08_workshop_call",
+      "image": "assets/c08.jpg",
+      "start": 115.82,
+      "end": 135.28,
+      "motion": {
+        "scale": [
+          1.02,
+          1.1
+        ],
+        "focus": [
+          [
+            0.46,
+            0.48
+          ],
+          [
+            0.54,
+            0.46
+          ]
+        ],
+        "wobble": "handheld"
+      },
+      "transition_in": {
+        "type": "flash_red",
+        "dur": 0.3
+      }
+    },
+    {
+      "id": "s09_paper_found",
+      "image": "assets/c09.jpg",
+      "start": 135.28,
+      "end": 156.63,
+      "motion": {
+        "scale": [
+          1.0,
+          1.16
+        ],
+        "focus": [
+          [
+            0.5,
+            0.5
+          ],
+          [
+            0.5,
+            0.45
+          ]
+        ],
+        "wobble": "calm"
+      },
+      "transition_in": {
+        "type": "fade_black",
+        "dur": 0.35
+      }
+    },
+    {
+      "id": "s10_papers_ring",
+      "image": "assets/c10.jpg",
+      "start": 156.63,
+      "end": 203.06,
+      "motion": {
+        "scale": [
+          1.02,
+          1.09
+        ],
+        "focus": [
+          [
+            0.5,
+            0.5
+          ],
+          [
+            0.5,
+            0.47
+          ]
+        ],
+        "wobble": "calm"
+      },
+      "transition_in": {
+        "type": "fade_black",
+        "dur": 0.4
+      }
+    },
+    {
+      "id": "s11_son_beside",
+      "image": "assets/c11.jpg",
+      "start": 203.06,
+      "end": 211.25,
+      "motion": {
+        "scale": [
+          1.0,
+          1.16
+        ],
+        "focus": [
+          [
+            0.5,
+            0.5
+          ],
+          [
+            0.5,
+            0.45
+          ]
+        ],
+        "wobble": "calm"
+      },
+      "transition_in": {
+        "type": "dissolve",
+        "dur": 0.5
+      }
+    },
+    {
+      "id": "s12_couple_night",
+      "image": "assets/c12.jpg",
+      "start": 211.25,
+      "end": 244.24,
+      "motion": {
+        "scale": [
+          1.02,
+          1.09
+        ],
+        "focus": [
+          [
+            0.5,
+            0.5
+          ],
+          [
+            0.5,
+            0.47
+          ]
+        ],
+        "wobble": "calm"
+      },
+      "transition_in": {
+        "type": "fade_black",
+        "dur": 0.4
+      }
+    },
+    {
+      "id": "s13_legal_aid",
+      "image": "assets/c13.jpg",
+      "start": 244.24,
+      "end": 261.23,
+      "motion": {
+        "scale": [
+          1.02,
+          1.09
+        ],
+        "focus": [
+          [
+            0.5,
+            0.5
+          ],
+          [
+            0.5,
+            0.47
+          ]
+        ],
+        "wobble": "calm"
+      },
+      "transition_in": {
+        "type": "fade_black",
+        "dur": 0.35
+      }
+    },
+    {
+      "id": "s14_hand_over",
+      "image": "assets/c19.jpg",
+      "start": 261.23,
+      "end": 283.66,
+      "motion": {
+        "scale": [
+          1.02,
+          1.09
+        ],
+        "focus": [
+          [
+            0.5,
+            0.5
+          ],
+          [
+            0.5,
+            0.47
+          ]
+        ],
+        "wobble": "calm"
+      },
+      "transition_in": {
+        "type": "fade_black",
+        "dur": 0.45
+      }
+    },
+    {
+      "id": "s14b_farewell_baby",
+      "image": "assets/c19b.jpg",
+      "start": 283.66,
+      "end": 296.21,
+      "motion": {
+        "scale": [
+          1.0,
+          1.16
+        ],
+        "focus": [
+          [
+            0.5,
+            0.5
+          ],
+          [
+            0.5,
+            0.45
+          ]
+        ],
+        "wobble": "calm"
+      },
+      "transition_in": {
+        "type": "dissolve",
+        "dur": 0.45
+      }
+    },
+    {
+      "id": "s14c_walk_away",
+      "image": "assets/c19c.jpg",
+      "start": 296.21,
+      "end": 300.36,
+      "motion": {
+        "scale": [
+          1.12,
+          1.02
+        ],
+        "focus": [
+          [
+            0.5,
+            0.46
+          ],
+          [
+            0.5,
+            0.5
+          ]
+        ],
+        "wobble": "calm"
+      },
+      "transition_in": {
+        "type": "dissolve",
+        "dur": 0.5
+      }
+    },
+    {
+      "id": "s15_hanh_door",
+      "image": "assets/c14.jpg",
+      "start": 300.36,
+      "end": 336.67,
+      "motion": {
+        "scale": [
+          1.02,
+          1.09
+        ],
+        "focus": [
+          [
+            0.5,
+            0.5
+          ],
+          [
+            0.5,
+            0.47
+          ]
+        ],
+        "wobble": "calm"
+      },
+      "transition_in": {
+        "type": "fade_black",
+        "dur": 0.4
+      }
+    },
+    {
+      "id": "s16_standoff",
+      "image": "assets/c15.jpg",
+      "start": 336.67,
+      "end": 367.02,
+      "motion": {
+        "scale": [
+          1.02,
+          1.09
+        ],
+        "focus": [
+          [
+            0.5,
+            0.5
+          ],
+          [
+            0.5,
+            0.47
+          ]
+        ],
+        "wobble": "calm"
+      },
+      "transition_in": {
+        "type": "fade_black",
+        "dur": 0.4
+      }
+    },
+    {
+      "id": "s17_settled_paper",
+      "image": "assets/c16.jpg",
+      "start": 367.02,
+      "end": 371.17,
+      "motion": {
+        "scale": [
+          1.0,
+          1.05
+        ],
+        "focus": [
+          [
+            0.5,
+            0.5
+          ],
+          [
+            0.5,
+            0.5
+          ]
+        ],
+        "wobble": "none"
+      },
+      "transition_in": {
+        "type": "dissolve",
+        "dur": 0.35
+      }
+    },
+    {
+      "id": "s18_pawnshop",
+      "image": "assets/c17.jpg",
+      "start": 371.17,
+      "end": 376.72,
+      "motion": {
+        "scale": [
+          1.02,
+          1.09
+        ],
+        "focus": [
+          [
+            0.5,
+            0.5
+          ],
+          [
+            0.5,
+            0.47
+          ]
+        ],
+        "wobble": "calm"
+      },
+      "transition_in": {
+        "type": "fade_black",
+        "dur": 0.45
+      }
+    },
+    {
+      "id": "s19_five_am",
+      "image": "assets/c18.jpg",
+      "start": 376.72,
+      "end": 386.71,
+      "motion": {
+        "scale": [
+          1.02,
+          1.09
+        ],
+        "focus": [
+          [
+            0.5,
+            0.5
+          ],
+          [
+            0.5,
+            0.47
+          ]
+        ],
+        "wobble": "calm"
+      },
+      "transition_in": {
+        "type": "fade_black",
+        "dur": 0.4
+      }
+    },
+    {
+      "id": "s20_ledger_84m",
+      "image": "assets/c22.jpg",
+      "start": 386.71,
+      "end": 392.46,
+      "motion": {
+        "scale": [
+          1.0,
+          1.05
+        ],
+        "focus": [
+          [
+            0.5,
+            0.5
+          ],
+          [
+            0.5,
+            0.5
+          ]
+        ],
+        "wobble": "none"
+      },
+      "transition_in": {
+        "type": "dissolve",
+        "dur": 0.45
+      }
+    },
+    {
+      "id": "s21_tet_return",
+      "image": "assets/c20.jpg",
+      "start": 392.46,
+      "end": 398.21,
+      "motion": {
+        "scale": [
+          1.12,
+          1.02
+        ],
+        "focus": [
+          [
+            0.5,
+            0.46
+          ],
+          [
+            0.5,
+            0.5
+          ]
+        ],
+        "wobble": "calm"
+      },
+      "transition_in": {
+        "type": "fade_black",
+        "dur": 0.6
+      }
+    },
+    {
+      "id": "s22_bare_finger",
+      "image": "assets/c21.jpg",
+      "start": 398.21,
+      "end": 402.16,
+      "motion": {
+        "scale": [
+          1.0,
+          1.16
+        ],
+        "focus": [
+          [
+            0.5,
+            0.5
+          ],
+          [
+            0.5,
+            0.45
+          ]
+        ],
+        "wobble": "calm"
+      },
+      "transition_in": {
+        "type": "dissolve",
+        "dur": 0.4
+      }
+    },
+    {
+      "id": "s23_tom_asks",
+      "image": "assets/c21b.jpg",
+      "start": 402.16,
+      "end": 409.33,
+      "motion": {
+        "scale": [
+          1.0,
+          1.16
+        ],
+        "focus": [
+          [
+            0.5,
+            0.5
+          ],
+          [
+            0.5,
+            0.45
+          ]
+        ],
+        "wobble": "calm"
+      },
+      "transition_in": {
+        "type": "dissolve",
+        "dur": 0.4
+      }
+    },
+    {
+      "id": "s24_tet_silence",
+      "image": "assets/c21c.jpg",
+      "start": 409.33,
+      "end": 420.08,
+      "motion": {
+        "scale": [
+          1.02,
+          1.09
+        ],
+        "focus": [
+          [
+            0.5,
+            0.5
+          ],
+          [
+            0.5,
+            0.47
+          ]
+        ],
+        "wobble": "calm"
+      },
+      "transition_in": {
+        "type": "dissolve",
+        "dur": 0.45
+      }
+    },
+    {
+      "id": "s23_black_text",
+      "image": "assets/c23.jpg",
+      "start": 420.08,
+      "end": 429.83,
+      "motion": {
+        "scale": [
+          1.0,
+          1.05
+        ],
+        "focus": [
+          [
+            0.5,
+            0.5
+          ],
+          [
+            0.5,
+            0.5
+          ]
+        ],
+        "wobble": "none"
+      },
+      "transition_in": {
+        "type": "fade_black",
+        "dur": 0.6
+      }
+    },
+    {
+      "id": "s24_red_flags",
+      "image": "factory196/materialAndDraft/EP01b/assets/scene18.jpg",
+      "start": 429.83,
+      "end": 444.22,
+      "motion": {
+        "scale": [
+          1.0,
+          1.05
+        ],
+        "focus": [
+          [
+            0.5,
+            0.5
+          ],
+          [
+            0.5,
+            0.5
+          ]
+        ],
+        "wobble": "none"
+      },
+      "transition_in": {
+        "type": "fade_black",
+        "dur": 0.4
+      }
+    },
+    {
+      "id": "s25_disclaimer",
+      "image": "factory196/materialAndDraft/EP01b/assets/scene18.jpg",
+      "start": 444.22,
+      "end": 449.57,
+      "motion": {
+        "scale": [
+          1.0,
+          1.05
+        ],
+        "focus": [
+          [
+            0.5,
+            0.5
+          ],
+          [
+            0.5,
+            0.5
+          ]
+        ],
+        "wobble": "none"
+      },
+      "transition_in": {
+        "type": "fade_black",
+        "dur": 0.3
+      }
+    }
+  ],
+  "subtitle_srt": "factory196/staging/EP27/subtitles/EP27.srt",
+  "video_track_noaudio": "factory196/staging/EP27/timeline_video_gate4.mp4",
+  "channel_branding": {
+    "type": "channel_branding",
+    "logo_text": "VCH",
+    "watermark_text": "VẠN CHUYỆN",
+    "safe_zone_compliant": true
+  },
+  "overlays": [
+    {
+      "id": "000_hook",
+      "start_sec": 0.4,
+      "end_sec": 5.0,
+      "fade_sec": 0.3,
+      "png_path": "factory196/staging/EP27/overlays/000_hook.png",
+      "type": "text_hook",
+      "text": "TẬP ĐẶC BIỆT ĐÊM GIAO THỪA · MÙA VAY NÓNG — SAU KHOẢN NỢ CUỐI CÙNG",
+      "bbox_px": [
+        635,
+        96,
+        1286,
+        226
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "001_chapter1",
+      "start_sec": 25.88,
+      "end_sec": 30.48,
+      "fade_sec": 0.3,
+      "png_path": "factory196/staging/EP27/overlays/001_chapter1.png",
+      "type": "chapter_card",
+      "text": "HỒI 1 · TƯỞNG ĐÃ YÊN — LẦN CUỐI",
+      "bbox_px": [
+        812,
+        96,
+        1108,
+        208
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "002_chapter2",
+      "start_sec": 51.94,
+      "end_sec": 56.54,
+      "fade_sec": 0.3,
+      "png_path": "factory196/staging/EP27/overlays/002_chapter2.png",
+      "type": "chapter_card",
+      "text": "HỒI 2 · QUÁN NƯỚC ĐẦU HẺM — NGƯỜI CÙNG CẢNH NGỘ",
+      "bbox_px": [
+        702,
+        96,
+        1219,
+        208
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "003_chapter3",
+      "start_sec": 116.02,
+      "end_sec": 120.62,
+      "fade_sec": 0.3,
+      "png_path": "factory196/staging/EP27/overlays/003_chapter3.png",
+      "type": "chapter_card",
+      "text": "HỒI 3 · XƯỞNG LÀM VIỆC — CÚ SẬP",
+      "bbox_px": [
+        801,
+        96,
+        1119,
+        208
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "004_chapter4",
+      "start_sec": 211.45,
+      "end_sec": 216.05,
+      "fade_sec": 0.3,
+      "png_path": "factory196/staging/EP27/overlays/004_chapter4.png",
+      "type": "chapter_card",
+      "text": "HỒI 4 · LỐI THOÁT DUY NHẤT — NGÀY MÁ RỜI ĐI",
+      "bbox_px": [
+        779,
+        96,
+        1142,
+        208
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "005_chapter5",
+      "start_sec": 371.37,
+      "end_sec": 375.97,
+      "fade_sec": 0.3,
+      "png_path": "factory196/staging/EP27/overlays/005_chapter5.png",
+      "type": "chapter_card",
+      "text": "BẢY NĂM RÒNG RÃ · 84 KỲ TRẢ GÓP — CÁI GIÁ PHẢI TRẢ",
+      "bbox_px": [
+        745,
+        96,
+        1176,
+        208
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "006_chapter6",
+      "start_sec": 392.66,
+      "end_sec": 397.26,
+      "fade_sec": 0.3,
+      "png_path": "factory196/staging/EP27/overlays/006_chapter6.png",
+      "type": "chapter_card",
+      "text": "HỒI 5 · BẢY NĂM SAU — NGÀY MÁ QUAY VỀ",
+      "bbox_px": [
+        754,
+        96,
+        1166,
+        208
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "007_chapter7",
+      "start_sec": 420.68,
+      "end_sec": 424.28,
+      "fade_sec": 0.3,
+      "png_path": "factory196/staging/EP27/overlays/007_chapter7.png",
+      "type": "chapter_card",
+      "text": "Có những khoản nợ phải mất nhiều năm mới trả hết.",
+      "bbox_px": [
+        474,
+        96,
+        1446,
+        176
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "008_chapter8",
+      "start_sec": 424.48,
+      "end_sec": 428.68,
+      "fade_sec": 0.3,
+      "png_path": "factory196/staging/EP27/overlays/008_chapter8.png",
+      "type": "chapter_card",
+      "text": "Và có những thứ, một khi đã mất, không thể lấy lại.",
+      "bbox_px": [
+        487,
+        96,
+        1434,
+        176
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "009_sub_l01_long",
+      "start_sec": 2.75,
+      "end_sec": 5.782,
+      "fade_sec": 0.1,
+      "png_path": "factory196/staging/EP27/overlays/009_sub_l01_long.png",
+      "type": "subtitle",
+      "lines": [
+        "Chị Tư, hôm nay tới ngày rồi đó."
+      ],
+      "bbox_px": [
+        638,
+        906,
+        1283,
+        958
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "010_sub_l02_ma",
+      "start_sec": 6.12,
+      "end_sec": 8.62,
+      "fade_sec": 0.1,
+      "png_path": "factory196/staging/EP27/overlays/010_sub_l02_ma.png",
+      "type": "subtitle",
+      "lines": [
+        "Cho chị thêm ít bữa nữa nghen em."
+      ],
+      "bbox_px": [
+        610,
+        906,
+        1311,
+        958
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "011_sub_l03_long",
+      "start_sec": 8.96,
+      "end_sec": 11.064,
+      "fade_sec": 0.1,
+      "png_path": "factory196/staging/EP27/overlays/011_sub_l03_long.png",
+      "type": "subtitle",
+      "lines": [
+        "Bữa nào chị cũng nói vậy."
+      ],
+      "bbox_px": [
+        697,
+        906,
+        1223,
+        958
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "012_sub_l03_long",
+      "start_sec": 11.064,
+      "end_sec": 13.589,
+      "fade_sec": 0.1,
+      "png_path": "factory196/staging/EP27/overlays/012_sub_l03_long.png",
+      "type": "subtitle",
+      "lines": [
+        "Không có thì kêu thằng Hai lo."
+      ],
+      "bbox_px": [
+        659,
+        906,
+        1261,
+        958
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "013_sub_l03_long",
+      "start_sec": 13.589,
+      "end_sec": 16.872,
+      "fade_sec": 0.1,
+      "png_path": "factory196/staging/EP27/overlays/013_sub_l03_long.png",
+      "type": "subtitle",
+      "lines": [
+        "Nó làm ở xưởng gần chợ mà, em biết chỗ."
+      ],
+      "bbox_px": [
+        544,
+        906,
+        1376,
+        958
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "014_sub_l04_ma",
+      "start_sec": 17.21,
+      "end_sec": 19.59,
+      "fade_sec": 0.1,
+      "png_path": "factory196/staging/EP27/overlays/014_sub_l04_ma.png",
+      "type": "subtitle",
+      "lines": [
+        "Đừng gọi cho con chị. Để chị tự lo."
+      ],
+      "bbox_px": [
+        614,
+        906,
+        1306,
+        958
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "015_sub_l05_ah",
+      "start_sec": 26.63,
+      "end_sec": 30.242,
+      "fade_sec": 0.1,
+      "png_path": "factory196/staging/EP27/overlays/015_sub_l05_ah.png",
+      "type": "subtitle",
+      "lines": [
+        "Tiền để dành của vợ chồng con vét trả hết đợt trước rồi."
+      ],
+      "bbox_px": [
+        413,
+        906,
+        1508,
+        958
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "016_sub_l05_ah",
+      "start_sec": 30.242,
+      "end_sec": 32.37,
+      "fade_sec": 0.1,
+      "png_path": "factory196/staging/EP27/overlays/016_sub_l05_ah.png",
+      "type": "subtitle",
+      "lines": [
+        "Má đừng mượn bên ngoài nữa nghen."
+      ],
+      "bbox_px": [
+        584,
+        906,
+        1336,
+        958
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "017_sub_l06_ma",
+      "start_sec": 32.71,
+      "end_sec": 35.13,
+      "fade_sec": 0.1,
+      "png_path": "factory196/staging/EP27/overlays/017_sub_l06_ma.png",
+      "type": "subtitle",
+      "lines": [
+        "Ừ, má biết rồi."
+      ],
+      "bbox_px": [
+        810,
+        906,
+        1111,
+        958
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "018_sub_l07_ah",
+      "start_sec": 35.47,
+      "end_sec": 37.632,
+      "fade_sec": 0.1,
+      "png_path": "factory196/staging/EP27/overlays/018_sub_l07_ah.png",
+      "type": "subtitle",
+      "lines": [
+        "Lần này là lần cuối con trả."
+      ],
+      "bbox_px": [
+        690,
+        906,
+        1231,
+        958
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "019_sub_l07_ah",
+      "start_sec": 37.632,
+      "end_sec": 39.33,
+      "fade_sec": 0.1,
+      "png_path": "factory196/staging/EP27/overlays/019_sub_l07_ah.png",
+      "type": "subtitle",
+      "lines": [
+        "Lần sau má tự chịu đó."
+      ],
+      "bbox_px": [
+        727,
+        906,
+        1194,
+        958
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "020_sub_l08_ma",
+      "start_sec": 40.27,
+      "end_sec": 43.25,
+      "fade_sec": 0.1,
+      "png_path": "factory196/staging/EP27/overlays/020_sub_l08_ma.png",
+      "type": "subtitle",
+      "lines": [
+        "Má biết mà. Con lo đi làm đi."
+      ],
+      "bbox_px": [
+        677,
+        906,
+        1244,
+        958
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "021_sub_l09_ha",
+      "start_sec": 52.69,
+      "end_sec": 54.91,
+      "fade_sec": 0.1,
+      "png_path": "factory196/staging/EP27/overlays/021_sub_l09_ha.png",
+      "type": "subtitle",
+      "lines": [
+        "Chị còn thiếu nhiều hông?"
+      ],
+      "bbox_px": [
+        695,
+        906,
+        1226,
+        958
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "022_sub_l10_ma",
+      "start_sec": 55.25,
+      "end_sec": 58.371,
+      "fade_sec": 0.1,
+      "png_path": "factory196/staging/EP27/overlays/022_sub_l10_ma.png",
+      "type": "subtitle",
+      "lines": [
+        "Chỗ này một ít, chỗ kia một ít."
+      ],
+      "bbox_px": [
+        662,
+        906,
+        1259,
+        958
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "023_sub_l10_ma",
+      "start_sec": 58.371,
+      "end_sec": 61.19,
+      "fade_sec": 0.1,
+      "png_path": "factory196/staging/EP27/overlays/023_sub_l10_ma.png",
+      "type": "subtitle",
+      "lines": [
+        "Trả chỗ này lại hụt chỗ kia."
+      ],
+      "bbox_px": [
+        690,
+        906,
+        1231,
+        958
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "024_sub_l11_ha",
+      "start_sec": 61.53,
+      "end_sec": 63.352,
+      "fade_sec": 0.1,
+      "png_path": "factory196/staging/EP27/overlays/024_sub_l11_ha.png",
+      "type": "subtitle",
+      "lines": [
+        "Em cũng từng y chang chị."
+      ],
+      "bbox_px": [
+        689,
+        906,
+        1231,
+        958
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "025_sub_l11_ha",
+      "start_sec": 63.352,
+      "end_sec": 65.83,
+      "fade_sec": 0.1,
+      "png_path": "factory196/staging/EP27/overlays/025_sub_l11_ha.png",
+      "type": "subtitle",
+      "lines": [
+        "Có bữa đứng giữa chợ mà muốn khóc."
+      ],
+      "bbox_px": [
+        576,
+        906,
+        1345,
+        958
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "026_sub_l12_ha",
+      "start_sec": 66.17,
+      "end_sec": 71.55,
+      "fade_sec": 0.1,
+      "png_path": "factory196/staging/EP27/overlays/026_sub_l12_ha.png",
+      "type": "subtitle",
+      "lines": [
+        "Chị ký giấy 10 triệu, cầm về 8 triệu 6. Chia đôi, em góp mỗi ngày phụ chị."
+      ],
+      "bbox_px": [
+        259,
+        906,
+        1662,
+        958
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "027_sub_l13_ma",
+      "start_sec": 71.89,
+      "end_sec": 76.51,
+      "fade_sec": 0.1,
+      "png_path": "factory196/staging/EP27/overlays/027_sub_l13_ma.png",
+      "type": "subtitle",
+      "lines": [
+        "Sao 10 triệu mà cầm có 8 triệu 6?"
+      ],
+      "bbox_px": [
+        629,
+        906,
+        1292,
+        958
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "028_sub_l14_ha",
+      "start_sec": 76.85,
+      "end_sec": 78.175,
+      "fade_sec": 0.1,
+      "png_path": "factory196/staging/EP27/overlays/028_sub_l14_ha.png",
+      "type": "subtitle",
+      "lines": [
+        "Phí hồ sơ đó chị."
+      ],
+      "bbox_px": [
+        783,
+        906,
+        1137,
+        958
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "029_sub_l14_ha",
+      "start_sec": 78.175,
+      "end_sec": 80.67,
+      "fade_sec": 0.1,
+      "png_path": "factory196/staging/EP27/overlays/029_sub_l14_ha.png",
+      "type": "subtitle",
+      "lines": [
+        "Bên nào cũng trừ, em làm hoài à."
+      ],
+      "bbox_px": [
+        630,
+        906,
+        1290,
+        958
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "030_sub_l15_ma",
+      "start_sec": 81.01,
+      "end_sec": 83.91,
+      "fade_sec": 0.1,
+      "png_path": "factory196/staging/EP27/overlays/030_sub_l15_ma.png",
+      "type": "subtitle",
+      "lines": [
+        "Mà giấy đứng tên ai?"
+      ],
+      "bbox_px": [
+        746,
+        906,
+        1175,
+        958
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "031_sub_l16_ha",
+      "start_sec": 84.25,
+      "end_sec": 87.63,
+      "fade_sec": 0.1,
+      "png_path": "factory196/staging/EP27/overlays/031_sub_l16_ha.png",
+      "type": "subtitle",
+      "lines": [
+        "Tên chị. Chị em mình mà, em bỏ chị sao được."
+      ],
+      "bbox_px": [
+        504,
+        906,
+        1417,
+        958
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "032_sub_l17_long",
+      "start_sec": 117.37,
+      "end_sec": 122.962,
+      "fade_sec": 0.1,
+      "png_path": "factory196/staging/EP27/overlays/032_sub_l17_long.png",
+      "type": "subtitle",
+      "lines": [
+        "Anh Hai phải hông? Má anh nợ bên tôi 9 triệu 1. Trễ ba bữa rồi."
+      ],
+      "bbox_px": [
+        350,
+        906,
+        1570,
+        958
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "033_sub_l18_ah",
+      "start_sec": 123.31,
+      "end_sec": 124.69,
+      "fade_sec": 0.1,
+      "png_path": "factory196/staging/EP27/overlays/033_sub_l18_ah.png",
+      "type": "subtitle",
+      "lines": [
+        "Anh là ai?"
+      ],
+      "bbox_px": [
+        849,
+        906,
+        1072,
+        958
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "034_sub_l19_long",
+      "start_sec": 125.03,
+      "end_sec": 126.182,
+      "fade_sec": 0.1,
+      "png_path": "factory196/staging/EP27/overlays/034_sub_l19_long.png",
+      "type": "subtitle",
+      "lines": [
+        "Anh khỏi cần biết."
+      ],
+      "bbox_px": [
+        773,
+        906,
+        1147,
+        958
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "035_sub_l19_long",
+      "start_sec": 126.182,
+      "end_sec": 130.342,
+      "fade_sec": 0.1,
+      "png_path": "factory196/staging/EP27/overlays/035_sub_l19_long.png",
+      "type": "subtitle",
+      "lines": [
+        "Chiều nay không có, mai tôi ghé xưởng nói chuyện với quản lý anh."
+      ],
+      "bbox_px": [
+        305,
+        906,
+        1615,
+        958
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "036_sub_l20_ah",
+      "start_sec": 136.43,
+      "end_sec": 140.93,
+      "fade_sec": 0.1,
+      "png_path": "factory196/staging/EP27/overlays/036_sub_l20_ah.png",
+      "type": "subtitle",
+      "lines": [
+        "Giấy ghi 10 triệu. Má cầm về có 8 triệu 6?"
+      ],
+      "bbox_px": [
+        556,
+        906,
+        1365,
+        958
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "037_sub_l21_ma",
+      "start_sec": 141.27,
+      "end_sec": 144.29,
+      "fade_sec": 0.1,
+      "png_path": "factory196/staging/EP27/overlays/037_sub_l21_ma.png",
+      "type": "subtitle",
+      "lines": [
+        "Hạnh nói phí hồ sơ…"
+      ],
+      "bbox_px": [
+        744,
+        906,
+        1177,
+        958
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "038_sub_l22_ah",
+      "start_sec": 144.63,
+      "end_sec": 145.77,
+      "fade_sec": 0.1,
+      "png_path": "factory196/staging/EP27/overlays/038_sub_l22_ah.png",
+      "type": "subtitle",
+      "lines": [
+        "Rồi tiền đâu?"
+      ],
+      "bbox_px": [
+        818,
+        906,
+        1102,
+        958
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "039_sub_l23_ma",
+      "start_sec": 146.11,
+      "end_sec": 148.006,
+      "fade_sec": 0.1,
+      "png_path": "factory196/staging/EP27/overlays/039_sub_l23_ma.png",
+      "type": "subtitle",
+      "lines": [
+        "Má đưa nó một nửa."
+      ],
+      "bbox_px": [
+        753,
+        906,
+        1168,
+        958
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "040_sub_l23_ma",
+      "start_sec": 148.006,
+      "end_sec": 150.85,
+      "fade_sec": 0.1,
+      "png_path": "factory196/staging/EP27/overlays/040_sub_l23_ma.png",
+      "type": "subtitle",
+      "lines": [
+        "Nó nói góp mỗi ngày phụ má."
+      ],
+      "bbox_px": [
+        666,
+        906,
+        1254,
+        958
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "041_sub_l24_ah",
+      "start_sec": 151.19,
+      "end_sec": 153.09,
+      "fade_sec": 0.1,
+      "png_path": "factory196/staging/EP27/overlays/041_sub_l24_ah.png",
+      "type": "subtitle",
+      "lines": [
+        "Nó góp được mấy bữa?"
+      ],
+      "bbox_px": [
+        718,
+        906,
+        1203,
+        958
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "042_sub_l25_ah",
+      "start_sec": 157.58,
+      "end_sec": 160.24,
+      "fade_sec": 0.1,
+      "png_path": "factory196/staging/EP27/overlays/042_sub_l25_ah.png",
+      "type": "subtitle",
+      "lines": [
+        "Khoản này của ai? Còn khoản này?"
+      ],
+      "bbox_px": [
+        610,
+        906,
+        1311,
+        958
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "043_sub_l26_ma",
+      "start_sec": 160.58,
+      "end_sec": 161.979,
+      "fade_sec": 0.1,
+      "png_path": "factory196/staging/EP27/overlays/043_sub_l26_ma.png",
+      "type": "subtitle",
+      "lines": [
+        "Má hông nhớ rõ nữa."
+      ],
+      "bbox_px": [
+        745,
+        906,
+        1176,
+        958
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "044_sub_l26_ma",
+      "start_sec": 161.979,
+      "end_sec": 167.28,
+      "fade_sec": 0.1,
+      "png_path": "factory196/staging/EP27/overlays/044_sub_l26_ma.png",
+      "type": "subtitle",
+      "lines": [
+        "Cứ mượn chỗ này đắp chỗ kia, riết rồi hông biết khoản nào còn bao nhiêu."
+      ],
+      "bbox_px": [
+        241,
+        906,
+        1680,
+        958
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "045_sub_l27_ah",
+      "start_sec": 170.22,
+      "end_sec": 172.0,
+      "fade_sec": 0.1,
+      "png_path": "factory196/staging/EP27/overlays/045_sub_l27_ah.png",
+      "type": "subtitle",
+      "lines": [
+        "Nhẫn của ba?"
+      ],
+      "bbox_px": [
+        814,
+        906,
+        1107,
+        958
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "046_sub_l28_ah",
+      "start_sec": 173.54,
+      "end_sec": 176.28,
+      "fade_sec": 0.1,
+      "png_path": "factory196/staging/EP27/overlays/046_sub_l28_ah.png",
+      "type": "subtitle",
+      "lines": [
+        "Sao má hông nói với con?"
+      ],
+      "bbox_px": [
+        695,
+        906,
+        1225,
+        958
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "047_sub_l29_ma",
+      "start_sec": 176.62,
+      "end_sec": 184.36,
+      "fade_sec": 0.1,
+      "png_path": "factory196/staging/EP27/overlays/047_sub_l29_ma.png",
+      "type": "subtitle",
+      "lines": [
+        "Đợt trước con vét hết tiền để dành trả cho má rồi, vợ chồng con còn nuôi",
+        "thằng Tom nhỏ xíu."
+      ],
+      "bbox_px": [
+        252,
+        854,
+        1669,
+        958
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "048_sub_l30_ma",
+      "start_sec": 184.7,
+      "end_sec": 191.605,
+      "fade_sec": 0.1,
+      "png_path": "factory196/staging/EP27/overlays/048_sub_l30_ma.png",
+      "type": "subtitle",
+      "lines": [
+        "Má tưởng ráng xoay thêm một bận là êm, ai dè lãi đẻ ra lãi."
+      ],
+      "bbox_px": [
+        391,
+        906,
+        1530,
+        958
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "049_sub_l30_ma",
+      "start_sec": 191.605,
+      "end_sec": 193.36,
+      "fade_sec": 0.1,
+      "png_path": "factory196/staging/EP27/overlays/049_sub_l30_ma.png",
+      "type": "subtitle",
+      "lines": [
+        "Má sợ con biết."
+      ],
+      "bbox_px": [
+        799,
+        906,
+        1122,
+        958
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "050_sub_l31_ma",
+      "start_sec": 194.7,
+      "end_sec": 197.267,
+      "fade_sec": 0.1,
+      "png_path": "factory196/staging/EP27/overlays/050_sub_l31_ma.png",
+      "type": "subtitle",
+      "lines": [
+        "Rồi con nói lần đó là lần cuối."
+      ],
+      "bbox_px": [
+        665,
+        906,
+        1256,
+        958
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "051_sub_l31_ma",
+      "start_sec": 197.267,
+      "end_sec": 198.84,
+      "fade_sec": 0.1,
+      "png_path": "factory196/staging/EP27/overlays/051_sub_l31_ma.png",
+      "type": "subtitle",
+      "lines": [
+        "Má đâu dám nói nữa."
+      ],
+      "bbox_px": [
+        745,
+        906,
+        1175,
+        958
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "052_sub_l32_ah_echo",
+      "start_sec": 199.18,
+      "end_sec": 201.92,
+      "fade_sec": 0.1,
+      "png_path": "factory196/staging/EP27/overlays/052_sub_l32_ah_echo.png",
+      "type": "subtitle",
+      "lines": [
+        "Lần này là lần cuối con trả."
+      ],
+      "bbox_px": [
+        690,
+        906,
+        1231,
+        958
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "053_sub_l33_ah",
+      "start_sec": 203.81,
+      "end_sec": 206.51,
+      "fade_sec": 0.1,
+      "png_path": "factory196/staging/EP27/overlays/053_sub_l33_ah.png",
+      "type": "subtitle",
+      "lines": [
+        "Tại con nói câu đó, phải hông má?"
+      ],
+      "bbox_px": [
+        619,
+        906,
+        1302,
+        958
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "054_sub_l34_ch",
+      "start_sec": 212.2,
+      "end_sec": 213.54,
+      "fade_sec": 0.1,
+      "png_path": "factory196/staging/EP27/overlays/054_sub_l34_ch.png",
+      "type": "subtitle",
+      "lines": [
+        "Bao nhiêu anh?"
+      ],
+      "bbox_px": [
+        795,
+        906,
+        1125,
+        958
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "055_sub_l35_ah",
+      "start_sec": 213.88,
+      "end_sec": 215.192,
+      "fade_sec": 0.1,
+      "png_path": "factory196/staging/EP27/overlays/055_sub_l35_ah.png",
+      "type": "subtitle",
+      "lines": [
+        "Bảy khoản lớn nhỏ."
+      ],
+      "bbox_px": [
+        759,
+        906,
+        1161,
+        958
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "056_sub_l35_ah",
+      "start_sec": 215.192,
+      "end_sec": 218.18,
+      "fade_sec": 0.1,
+      "png_path": "factory196/staging/EP27/overlays/056_sub_l35_ah.png",
+      "type": "subtitle",
+      "lines": [
+        "Tiền để dành đợt trước mình vét sạch rồi."
+      ],
+      "bbox_px": [
+        550,
+        906,
+        1370,
+        958
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "057_sub_l36_ah",
+      "start_sec": 218.52,
+      "end_sec": 224.42,
+      "fade_sec": 0.1,
+      "png_path": "factory196/staging/EP27/overlays/057_sub_l36_ah.png",
+      "type": "subtitle",
+      "lines": [
+        "Riêng khoản của Hạnh: cầm 8 triệu 6, phải góp 12 triệu trong 40 ngày."
+      ],
+      "bbox_px": [
+        287,
+        906,
+        1633,
+        958
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "058_sub_l37_ah",
+      "start_sec": 226.76,
+      "end_sec": 229.86,
+      "fade_sec": 0.1,
+      "png_path": "factory196/staging/EP27/overlays/058_sub_l37_ah.png",
+      "type": "subtitle",
+      "lines": [
+        "Tính ra hơn 300% một năm."
+      ],
+      "bbox_px": [
+        683,
+        906,
+        1237,
+        958
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "059_sub_l38_ch",
+      "start_sec": 230.8,
+      "end_sec": 235.38,
+      "fade_sec": 0.1,
+      "png_path": "factory196/staging/EP27/overlays/059_sub_l38_ch.png",
+      "type": "subtitle",
+      "lines": [
+        "Vậy mình rà lại từng khoản, rồi vay ngân hàng trả góp dài hạn đi anh."
+      ],
+      "bbox_px": [
+        292,
+        906,
+        1628,
+        958
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "060_sub_l39_ch",
+      "start_sec": 235.72,
+      "end_sec": 241.7,
+      "fade_sec": 0.1,
+      "png_path": "factory196/staging/EP27/overlays/060_sub_l39_ch.png",
+      "type": "subtitle",
+      "lines": [
+        "Tính kéo dài chừng 7 năm, mỗi tháng gói ghém lại vẫn còn đủ nuôi thằng",
+        "Tom."
+      ],
+      "bbox_px": [
+        256,
+        854,
+        1664,
+        958
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "061_sub_l41_cb",
+      "start_sec": 244.99,
+      "end_sec": 248.7,
+      "fade_sec": 0.1,
+      "png_path": "factory196/staging/EP27/overlays/061_sub_l41_cb.png",
+      "type": "subtitle",
+      "lines": [
+        "Khoản có giấy thì chốt số thực cầm, thu lại giấy gốc."
+      ],
+      "bbox_px": [
+        448,
+        906,
+        1472,
+        958
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "062_sub_l41_cb",
+      "start_sec": 248.7,
+      "end_sec": 251.57,
+      "fade_sec": 0.1,
+      "png_path": "factory196/staging/EP27/overlays/062_sub_l41_cb.png",
+      "type": "subtitle",
+      "lines": [
+        "Nhưng mấy mối bên ngoài chưa êm ngay đâu."
+      ],
+      "bbox_px": [
+        507,
+        906,
+        1413,
+        958
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "063_sub_l42_cb",
+      "start_sec": 251.91,
+      "end_sec": 259.69,
+      "fade_sec": 0.1,
+      "png_path": "factory196/staging/EP27/overlays/063_sub_l42_cb.png",
+      "type": "subtitle",
+      "lines": [
+        "Tạm thời nên đưa cô đi xa ở với người thân, cắt hết số cũ để họ khỏi tìm",
+        "gặp ép ký tiếp."
+      ],
+      "bbox_px": [
+        259,
+        854,
+        1661,
+        958
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "064_sub_l58_ah",
+      "start_sec": 262.18,
+      "end_sec": 262.845,
+      "fade_sec": 0.1,
+      "png_path": "factory196/staging/EP27/overlays/064_sub_l58_ah.png",
+      "type": "subtitle",
+      "lines": [
+        "Số mới."
+      ],
+      "bbox_px": [
+        869,
+        906,
+        1051,
+        958
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "065_sub_l58_ah",
+      "start_sec": 262.845,
+      "end_sec": 266.36,
+      "fade_sec": 0.1,
+      "png_path": "factory196/staging/EP27/overlays/065_sub_l58_ah.png",
+      "type": "subtitle",
+      "lines": [
+        "Con lưu số con, vợ con với dì Ba rồi."
+      ],
+      "bbox_px": [
+        595,
+        906,
+        1325,
+        958
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "066_sub_l59_ah",
+      "start_sec": 268.1,
+      "end_sec": 270.76,
+      "fade_sec": 0.1,
+      "png_path": "factory196/staging/EP27/overlays/066_sub_l59_ah.png",
+      "type": "subtitle",
+      "lines": [
+        "Má đưa con giữ. Trong đó là bằng chứng."
+      ],
+      "bbox_px": [
+        551,
+        906,
+        1369,
+        958
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "067_sub_l60_ma",
+      "start_sec": 272.9,
+      "end_sec": 276.72,
+      "fade_sec": 0.1,
+      "png_path": "factory196/staging/EP27/overlays/067_sub_l60_ma.png",
+      "type": "subtitle",
+      "lines": [
+        "Má đi vậy, có phải trốn nợ hông con?"
+      ],
+      "bbox_px": [
+        593,
+        906,
+        1328,
+        958
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "068_sub_l61_ah",
+      "start_sec": 277.06,
+      "end_sec": 279.339,
+      "fade_sec": 0.1,
+      "png_path": "factory196/staging/EP27/overlays/068_sub_l61_ah.png",
+      "type": "subtitle",
+      "lines": [
+        "Khoản nào đúng thì mình trả đủ."
+      ],
+      "bbox_px": [
+        639,
+        906,
+        1281,
+        958
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "069_sub_l61_ah",
+      "start_sec": 279.339,
+      "end_sec": 282.72,
+      "fade_sec": 0.1,
+      "png_path": "factory196/staging/EP27/overlays/069_sub_l61_ah.png",
+      "type": "subtitle",
+      "lines": [
+        "Nhưng má ở lại đây, tụi nó hông để má yên đâu."
+      ],
+      "bbox_px": [
+        491,
+        906,
+        1430,
+        958
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "070_sub_l61b_ma",
+      "start_sec": 284.81,
+      "end_sec": 290.35,
+      "fade_sec": 0.1,
+      "png_path": "factory196/staging/EP27/overlays/070_sub_l61b_ma.png",
+      "type": "subtitle",
+      "lines": [
+        "Má về dưới ít tháng, êm chuyện rồi má lên thăm thằng Tom liền nghen con."
+      ],
+      "bbox_px": [
+        237,
+        906,
+        1684,
+        958
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "071_sub_l61c_ch",
+      "start_sec": 291.29,
+      "end_sec": 293.58,
+      "fade_sec": 0.1,
+      "png_path": "factory196/staging/EP27/overlays/071_sub_l61c_ch.png",
+      "type": "subtitle",
+      "lines": [
+        "Dạ, má đi giữ gìn sức khỏe."
+      ],
+      "bbox_px": [
+        683,
+        906,
+        1237,
+        958
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "072_sub_l61c_ch",
+      "start_sec": 293.58,
+      "end_sec": 295.87,
+      "fade_sec": 0.1,
+      "png_path": "factory196/staging/EP27/overlays/072_sub_l61c_ch.png",
+      "type": "subtitle",
+      "lines": [
+        "Ở trên này tụi con lo được."
+      ],
+      "bbox_px": [
+        688,
+        906,
+        1232,
+        958
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "073_sub_l45_ah",
+      "start_sec": 302.11,
+      "end_sec": 304.29,
+      "fade_sec": 0.1,
+      "png_path": "factory196/staging/EP27/overlays/073_sub_l45_ah.png",
+      "type": "subtitle",
+      "lines": [
+        "Tôi là con trai chị Tư."
+      ],
+      "bbox_px": [
+        743,
+        906,
+        1177,
+        958
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "074_sub_l46_ah",
+      "start_sec": 305.43,
+      "end_sec": 307.354,
+      "fade_sec": 0.1,
+      "png_path": "factory196/staging/EP27/overlays/074_sub_l46_ah.png",
+      "type": "subtitle",
+      "lines": [
+        "Tôi hông tới đòi tiền."
+      ],
+      "bbox_px": [
+        748,
+        906,
+        1173,
+        958
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "075_sub_l46_ah",
+      "start_sec": 307.354,
+      "end_sec": 312.25,
+      "fade_sec": 0.1,
+      "png_path": "factory196/staging/EP27/overlays/075_sub_l46_ah.png",
+      "type": "subtitle",
+      "lines": [
+        "Tôi chỉ hỏi: mỗi người cô dắt vô, Long trả cô bao nhiêu?"
+      ],
+      "bbox_px": [
+        413,
+        906,
+        1508,
+        958
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "076_sub_l47_ha",
+      "start_sec": 314.99,
+      "end_sec": 316.37,
+      "fade_sec": 0.1,
+      "png_path": "factory196/staging/EP27/overlays/076_sub_l47_ha.png",
+      "type": "subtitle",
+      "lines": [
+        "5%."
+      ],
+      "bbox_px": [
+        909,
+        906,
+        1012,
+        958
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "077_sub_l48_ha",
+      "start_sec": 316.71,
+      "end_sec": 319.257,
+      "fade_sec": 0.1,
+      "png_path": "factory196/staging/EP27/overlays/077_sub_l48_ha.png",
+      "type": "subtitle",
+      "lines": [
+        "Em mà ngưng xoay một bữa là sập hết."
+      ],
+      "bbox_px": [
+        572,
+        906,
+        1349,
+        958
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "078_sub_l48_ha",
+      "start_sec": 319.257,
+      "end_sec": 321.45,
+      "fade_sec": 0.1,
+      "png_path": "factory196/staging/EP27/overlays/078_sub_l48_ha.png",
+      "type": "subtitle",
+      "lines": [
+        "Em cũng nợ ổng. Nợ cả chục chỗ."
+      ],
+      "bbox_px": [
+        622,
+        906,
+        1299,
+        958
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "079_sub_l49_ah",
+      "start_sec": 323.39,
+      "end_sec": 328.09,
+      "fade_sec": 0.1,
+      "png_path": "factory196/staging/EP27/overlays/079_sub_l49_ah.png",
+      "type": "subtitle",
+      "lines": [
+        "Cô ghi giùm tôi một tờ: cô đã nhận 4 triệu 3 của má tôi."
+      ],
+      "bbox_px": [
+        425,
+        906,
+        1496,
+        958
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "080_sub_l50_ah",
+      "start_sec": 331.03,
+      "end_sec": 333.33,
+      "fade_sec": 0.1,
+      "png_path": "factory196/staging/EP27/overlays/080_sub_l50_ah.png",
+      "type": "subtitle",
+      "lines": [
+        "Cô đừng dắt thêm ai nữa."
+      ],
+      "bbox_px": [
+        702,
+        906,
+        1218,
+        958
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "081_sub_l51_long",
+      "start_sec": 337.62,
+      "end_sec": 340.32,
+      "fade_sec": 0.1,
+      "png_path": "factory196/staging/EP27/overlays/081_sub_l51_long.png",
+      "type": "subtitle",
+      "lines": [
+        "9 triệu 1. Anh mang đủ chưa?"
+      ],
+      "bbox_px": [
+        664,
+        906,
+        1257,
+        958
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "082_sub_l52_ah",
+      "start_sec": 340.66,
+      "end_sec": 347.12,
+      "fade_sec": 0.1,
+      "png_path": "factory196/staging/EP27/overlays/082_sub_l52_ah.png",
+      "type": "subtitle",
+      "lines": [
+        "Má tôi cầm về 8 triệu 6, đã góp 3 triệu 9. Còn 4 triệu 7."
+      ],
+      "bbox_px": [
+        438,
+        906,
+        1482,
+        958
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "083_sub_l53_ah",
+      "start_sec": 347.46,
+      "end_sec": 350.64,
+      "fade_sec": 0.1,
+      "png_path": "factory196/staging/EP27/overlays/083_sub_l53_ah.png",
+      "type": "subtitle",
+      "lines": [
+        "Tôi tính thêm lãi đúng luật, làm tròn 5 triệu."
+      ],
+      "bbox_px": [
+        538,
+        906,
+        1383,
+        958
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "084_sub_l54_long",
+      "start_sec": 350.98,
+      "end_sec": 353.24,
+      "fade_sec": 0.1,
+      "png_path": "factory196/staging/EP27/overlays/084_sub_l54_long.png",
+      "type": "subtitle",
+      "lines": [
+        "Anh giỡn hả?"
+      ],
+      "bbox_px": [
+        815,
+        906,
+        1105,
+        958
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "085_sub_l55_ah",
+      "start_sec": 353.58,
+      "end_sec": 358.76,
+      "fade_sec": 0.1,
+      "png_path": "factory196/staging/EP27/overlays/085_sub_l55_ah.png",
+      "type": "subtitle",
+      "lines": [
+        "Anh thấy hông đúng thì mình mang giấy này, với mấy cuộc gọi lên xưởng",
+        "tôi, ra công an nhờ tính giùm."
+      ],
+      "bbox_px": [
+        250,
+        854,
+        1671,
+        958
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "086_sub_l56_ah",
+      "start_sec": 362.1,
+      "end_sec": 365.28,
+      "fade_sec": 0.1,
+      "png_path": "factory196/staging/EP27/overlays/086_sub_l56_ah.png",
+      "type": "subtitle",
+      "lines": [
+        "Anh ký nhận đủ. Rồi trả tôi tờ giấy nợ."
+      ],
+      "bbox_px": [
+        584,
+        906,
+        1337,
+        958
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "087_sub_l57_ch",
+      "start_sec": 379.47,
+      "end_sec": 380.725,
+      "fade_sec": 0.1,
+      "png_path": "factory196/staging/EP27/overlays/087_sub_l57_ch.png",
+      "type": "subtitle",
+      "lines": [
+        "Nợ thì trả dần."
+      ],
+      "bbox_px": [
+        808,
+        906,
+        1112,
+        958
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "088_sub_l57_ch",
+      "start_sec": 380.725,
+      "end_sec": 383.57,
+      "fade_sec": 0.1,
+      "png_path": "factory196/staging/EP27/overlays/088_sub_l57_ch.png",
+      "type": "subtitle",
+      "lines": [
+        "Anh mà ngã xuống, mình lấy gì trả."
+      ],
+      "bbox_px": [
+        614,
+        906,
+        1306,
+        958
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "089_sub_l62_ch",
+      "start_sec": 396.01,
+      "end_sec": 397.87,
+      "fade_sec": 0.1,
+      "png_path": "factory196/staging/EP27/overlays/089_sub_l62_ch.png",
+      "type": "subtitle",
+      "lines": [
+        "Ăn cơm thôi cả nhà."
+      ],
+      "bbox_px": [
+        753,
+        906,
+        1167,
+        958
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "090_sub_l62b_tom",
+      "start_sec": 403.01,
+      "end_sec": 407.79,
+      "fade_sec": 0.1,
+      "png_path": "factory196/staging/EP27/overlays/090_sub_l62b_tom.png",
+      "type": "subtitle",
+      "lines": [
+        "Bà nội ơi, sao hồi con còn nhỏ, con hông thấy bà vậy?"
+      ],
+      "bbox_px": [
+        431,
+        906,
+        1490,
+        958
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "091_sub_l62c_ma",
+      "start_sec": 410.88,
+      "end_sec": 412.962,
+      "fade_sec": 0.1,
+      "png_path": "factory196/staging/EP27/overlays/091_sub_l62c_ma.png",
+      "type": "subtitle",
+      "lines": [
+        "Tại hồi đó bà ở xa."
+      ],
+      "bbox_px": [
+        769,
+        906,
+        1151,
+        958
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "092_sub_l62c_ma",
+      "start_sec": 412.962,
+      "end_sec": 416.14,
+      "fade_sec": 0.1,
+      "png_path": "factory196/staging/EP27/overlays/092_sub_l62c_ma.png",
+      "type": "subtitle",
+      "lines": [
+        "Giờ bà về ở luôn với Tom rồi."
+      ],
+      "bbox_px": [
+        666,
+        906,
+        1255,
+        958
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "093_sub_l63_narr",
+      "start_sec": 430.18,
+      "end_sec": 433.884,
+      "fade_sec": 0.1,
+      "png_path": "factory196/staging/EP27/overlays/093_sub_l63_narr.png",
+      "type": "subtitle",
+      "lines": [
+        "Người dắt bạn vào nợ có khi cũng đang chìm."
+      ],
+      "bbox_px": [
+        511,
+        906,
+        1409,
+        958
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "094_sub_l63_narr",
+      "start_sec": 433.884,
+      "end_sec": 438.88,
+      "fade_sec": 0.1,
+      "png_path": "factory196/staging/EP27/overlays/094_sub_l63_narr.png",
+      "type": "subtitle",
+      "lines": [
+        "Và tín dụng đen sống được là nhờ sự im lặng trong mỗi nhà."
+      ],
+      "bbox_px": [
+        371,
+        906,
+        1550,
+        958
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "095_chat1",
+      "start_sec": 0.65,
+      "end_sec": 4.65,
+      "fade_sec": 0.15,
+      "png_path": "factory196/staging/EP27/overlays/095_chat1.png",
+      "type": "chat_bubble",
+      "text": "14 cuộc gọi nhỡ",
+      "sender": "ĐIỆN THOẠI",
+      "bbox_px": [
+        1453,
+        260,
+        1744,
+        402
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "096_chat2",
+      "start_sec": 20.48,
+      "end_sec": 24.68,
+      "fade_sec": 0.15,
+      "png_path": "factory196/staging/EP27/overlays/096_chat2.png",
+      "type": "chat_bubble",
+      "text": "Con Hai",
+      "sender": "DANH BẠ",
+      "bbox_px": [
+        1568,
+        300,
+        1744,
+        442
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "097_chat3",
+      "start_sec": 46.64,
+      "end_sec": 51.64,
+      "fade_sec": 0.15,
+      "png_path": "factory196/staging/EP27/overlays/097_chat3.png",
+      "type": "chat_bubble",
+      "text": "Chị Tư cần xoay thì nói em nha. Em có cách.",
+      "sender": "HẠNH",
+      "bbox_px": [
+        180,
+        500,
+        885,
+        642
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "098_chat4",
+      "start_sec": 92.37,
+      "end_sec": 95.97,
+      "fade_sec": 0.15,
+      "png_path": "factory196/staging/EP27/overlays/098_chat4.png",
+      "type": "chat_bubble",
+      "text": "+500.000 · hh khách chị Tư",
+      "sender": "LONG",
+      "bbox_px": [
+        180,
+        260,
+        636,
+        402
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "099_chat5",
+      "start_sec": 95.97,
+      "end_sec": 99.57,
+      "fade_sec": 0.15,
+      "png_path": "factory196/staging/EP27/overlays/099_chat5.png",
+      "type": "chat_bubble",
+      "text": "–500.000  ·  –4.300.000",
+      "sender": "HẠNH CHUYỂN ĐI",
+      "bbox_px": [
+        1357,
+        320,
+        1744,
+        462
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "100_chat6",
+      "start_sec": 102.22,
+      "end_sec": 104.12,
+      "fade_sec": 0.15,
+      "png_path": "factory196/staging/EP27/overlays/100_chat6.png",
+      "type": "chat_bubble",
+      "text": "Hạnh chuyển +150.000",
+      "sender": "NGÀY 1",
+      "bbox_px": [
+        180,
+        280,
+        575,
+        422
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "101_chat7",
+      "start_sec": 104.22,
+      "end_sec": 106.12,
+      "fade_sec": 0.15,
+      "png_path": "factory196/staging/EP27/overlays/101_chat7.png",
+      "type": "chat_bubble",
+      "text": "Hạnh chuyển +150.000",
+      "sender": "NGÀY 2",
+      "bbox_px": [
+        180,
+        280,
+        575,
+        422
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "102_chat8",
+      "start_sec": 106.22,
+      "end_sec": 108.12,
+      "fade_sec": 0.15,
+      "png_path": "factory196/staging/EP27/overlays/102_chat8.png",
+      "type": "chat_bubble",
+      "text": "Hạnh chuyển +150.000",
+      "sender": "NGÀY 3",
+      "bbox_px": [
+        180,
+        280,
+        575,
+        422
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "103_chat9",
+      "start_sec": 108.42,
+      "end_sec": 111.62,
+      "fade_sec": 0.15,
+      "png_path": "factory196/staging/EP27/overlays/103_chat9.png",
+      "type": "chat_bubble",
+      "text": "Đang gọi Hạnh…",
+      "sender": "NGÀY 4",
+      "bbox_px": [
+        1436,
+        260,
+        1744,
+        402
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "104_chat10",
+      "start_sec": 111.82,
+      "end_sec": 115.22,
+      "fade_sec": 0.15,
+      "png_path": "factory196/staging/EP27/overlays/104_chat10.png",
+      "type": "chat_bubble",
+      "text": "Hạnh ơi?",
+      "sender": "NGÀY 5",
+      "bbox_px": [
+        1552,
+        320,
+        1744,
+        462
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "105_chat11",
+      "start_sec": 131.88,
+      "end_sec": 135.08,
+      "fade_sec": 0.15,
+      "png_path": "factory196/staging/EP27/overlays/105_chat11.png",
+      "type": "chat_bubble",
+      "text": "Tự động ghi âm cuộc gọi: BẬT",
+      "sender": "CÀI ĐẶT",
+      "bbox_px": [
+        1247,
+        280,
+        1744,
+        422
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "106_chat12",
+      "start_sec": 387.36,
+      "end_sec": 392.16,
+      "fade_sec": 0.15,
+      "png_path": "factory196/staging/EP27/overlays/106_chat12.png",
+      "type": "chat_bubble",
+      "text": "Kỳ 84 / 84  (7 NĂM)",
+      "sender": "NGÂN HÀNG GOM NỢ",
+      "bbox_px": [
+        180,
+        250,
+        514,
+        392
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "107_chat13",
+      "start_sec": 388.36,
+      "end_sec": 392.16,
+      "fade_sec": 0.15,
+      "png_path": "factory196/staging/EP27/overlays/107_chat13.png",
+      "type": "chat_bubble",
+      "text": "Khoản nợ cuối cùng – ĐÃ TẤT TOÁN",
+      "sender": "SỔ CHI TIÊU",
+      "bbox_px": [
+        180,
+        420,
+        776,
+        562
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "108_redflags_0",
+      "start_sec": 430.18,
+      "end_sec": 430.98,
+      "fade_sec": 0.25,
+      "png_path": "factory196/staging/EP27/overlays/108_redflags_0.png",
+      "type": "red_flags",
+      "title": "NHỚ KỸ – 5 DẤU HIỆU TÍN DỤNG ĐEN",
+      "lines": [
+        "KÝ MƯỜI, CẦM TÁM: Tiền bị trừ trước khi đưa là lãi trá hình",
+        "GÓP NGÀY, PHẠT TRỄ: Quy ra lãi năm có thể lên tới hàng trăm phần trăm",
+        "\"CHỊ EM CÙNG CẢNH\" RỦ KÝ VAY CHIA ĐÔI: Giấy đứng tên bạn – nợ là của bạn",
+        "GỌI LÊN CHỖ LÀM, NHẮN NGƯỜI THÂN: Giữ ghi âm, tin nhắn và trình báo công an",
+        "TRẢ NỢ: Có biên nhận, có người làm chứng, lấy lại giấy nợ gốc",
+        "Trước khi ký bất kỳ giấy vay nào, hãy nói với một người thân – và nếu bạn là người thân ấy, hãy nghe trước khi trách."
+      ],
+      "bbox_px": [
+        270,
+        303,
+        1650,
+        773
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "109_redflags_1",
+      "start_sec": 430.98,
+      "end_sec": 431.78,
+      "fade_sec": 0.0,
+      "png_path": "factory196/staging/EP27/overlays/109_redflags_1.png",
+      "type": "red_flags",
+      "title": "NHỚ KỸ – 5 DẤU HIỆU TÍN DỤNG ĐEN",
+      "lines": [
+        "KÝ MƯỜI, CẦM TÁM: Tiền bị trừ trước khi đưa là lãi trá hình",
+        "GÓP NGÀY, PHẠT TRỄ: Quy ra lãi năm có thể lên tới hàng trăm phần trăm",
+        "\"CHỊ EM CÙNG CẢNH\" RỦ KÝ VAY CHIA ĐÔI: Giấy đứng tên bạn – nợ là của bạn",
+        "GỌI LÊN CHỖ LÀM, NHẮN NGƯỜI THÂN: Giữ ghi âm, tin nhắn và trình báo công an",
+        "TRẢ NỢ: Có biên nhận, có người làm chứng, lấy lại giấy nợ gốc",
+        "Trước khi ký bất kỳ giấy vay nào, hãy nói với một người thân – và nếu bạn là người thân ấy, hãy nghe trước khi trách."
+      ],
+      "bbox_px": [
+        270,
+        303,
+        1650,
+        773
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "110_redflags_2",
+      "start_sec": 431.78,
+      "end_sec": 432.58,
+      "fade_sec": 0.0,
+      "png_path": "factory196/staging/EP27/overlays/110_redflags_2.png",
+      "type": "red_flags",
+      "title": "NHỚ KỸ – 5 DẤU HIỆU TÍN DỤNG ĐEN",
+      "lines": [
+        "KÝ MƯỜI, CẦM TÁM: Tiền bị trừ trước khi đưa là lãi trá hình",
+        "GÓP NGÀY, PHẠT TRỄ: Quy ra lãi năm có thể lên tới hàng trăm phần trăm",
+        "\"CHỊ EM CÙNG CẢNH\" RỦ KÝ VAY CHIA ĐÔI: Giấy đứng tên bạn – nợ là của bạn",
+        "GỌI LÊN CHỖ LÀM, NHẮN NGƯỜI THÂN: Giữ ghi âm, tin nhắn và trình báo công an",
+        "TRẢ NỢ: Có biên nhận, có người làm chứng, lấy lại giấy nợ gốc",
+        "Trước khi ký bất kỳ giấy vay nào, hãy nói với một người thân – và nếu bạn là người thân ấy, hãy nghe trước khi trách."
+      ],
+      "bbox_px": [
+        270,
+        303,
+        1650,
+        773
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "111_redflags_3",
+      "start_sec": 432.58,
+      "end_sec": 433.38,
+      "fade_sec": 0.0,
+      "png_path": "factory196/staging/EP27/overlays/111_redflags_3.png",
+      "type": "red_flags",
+      "title": "NHỚ KỸ – 5 DẤU HIỆU TÍN DỤNG ĐEN",
+      "lines": [
+        "KÝ MƯỜI, CẦM TÁM: Tiền bị trừ trước khi đưa là lãi trá hình",
+        "GÓP NGÀY, PHẠT TRỄ: Quy ra lãi năm có thể lên tới hàng trăm phần trăm",
+        "\"CHỊ EM CÙNG CẢNH\" RỦ KÝ VAY CHIA ĐÔI: Giấy đứng tên bạn – nợ là của bạn",
+        "GỌI LÊN CHỖ LÀM, NHẮN NGƯỜI THÂN: Giữ ghi âm, tin nhắn và trình báo công an",
+        "TRẢ NỢ: Có biên nhận, có người làm chứng, lấy lại giấy nợ gốc",
+        "Trước khi ký bất kỳ giấy vay nào, hãy nói với một người thân – và nếu bạn là người thân ấy, hãy nghe trước khi trách."
+      ],
+      "bbox_px": [
+        270,
+        303,
+        1650,
+        773
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "112_redflags_4",
+      "start_sec": 433.38,
+      "end_sec": 434.18,
+      "fade_sec": 0.0,
+      "png_path": "factory196/staging/EP27/overlays/112_redflags_4.png",
+      "type": "red_flags",
+      "title": "NHỚ KỸ – 5 DẤU HIỆU TÍN DỤNG ĐEN",
+      "lines": [
+        "KÝ MƯỜI, CẦM TÁM: Tiền bị trừ trước khi đưa là lãi trá hình",
+        "GÓP NGÀY, PHẠT TRỄ: Quy ra lãi năm có thể lên tới hàng trăm phần trăm",
+        "\"CHỊ EM CÙNG CẢNH\" RỦ KÝ VAY CHIA ĐÔI: Giấy đứng tên bạn – nợ là của bạn",
+        "GỌI LÊN CHỖ LÀM, NHẮN NGƯỜI THÂN: Giữ ghi âm, tin nhắn và trình báo công an",
+        "TRẢ NỢ: Có biên nhận, có người làm chứng, lấy lại giấy nợ gốc",
+        "Trước khi ký bất kỳ giấy vay nào, hãy nói với một người thân – và nếu bạn là người thân ấy, hãy nghe trước khi trách."
+      ],
+      "bbox_px": [
+        270,
+        303,
+        1650,
+        773
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "113_redflags_5",
+      "start_sec": 434.18,
+      "end_sec": 444.22,
+      "fade_sec": 0.0,
+      "png_path": "factory196/staging/EP27/overlays/113_redflags_5.png",
+      "type": "red_flags",
+      "title": "NHỚ KỸ – 5 DẤU HIỆU TÍN DỤNG ĐEN",
+      "lines": [
+        "KÝ MƯỜI, CẦM TÁM: Tiền bị trừ trước khi đưa là lãi trá hình",
+        "GÓP NGÀY, PHẠT TRỄ: Quy ra lãi năm có thể lên tới hàng trăm phần trăm",
+        "\"CHỊ EM CÙNG CẢNH\" RỦ KÝ VAY CHIA ĐÔI: Giấy đứng tên bạn – nợ là của bạn",
+        "GỌI LÊN CHỖ LÀM, NHẮN NGƯỜI THÂN: Giữ ghi âm, tin nhắn và trình báo công an",
+        "TRẢ NỢ: Có biên nhận, có người làm chứng, lấy lại giấy nợ gốc",
+        "Trước khi ký bất kỳ giấy vay nào, hãy nói với một người thân – và nếu bạn là người thân ấy, hãy nghe trước khi trách."
+      ],
+      "bbox_px": [
+        270,
+        303,
+        1650,
+        773
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "114_disclaimer",
+      "start_sec": 444.57,
+      "end_sec": 449.57,
+      "fade_sec": 0.25,
+      "png_path": "factory196/staging/EP27/overlays/114_disclaimer.png",
+      "type": "disclaimer",
+      "text": "Tình huống trong phim được dựng lại nhằm mục đích cảnh báo cộng đồng; nhân vật, tên gọi và số liệu đều là hư cấu. Thông tin pháp lý trong phim chỉ mang tính tham khảo – hãy hỏi trực tiếp trung tâm trợ giúp pháp lý hoặc luật sư cho trường hợp cụ thể.",
+      "bbox_px": [
+        380,
+        758,
+        1540,
+        964
+      ],
+      "safe_zone_compliant": true
+    }
+  ],
+  "qa_preview_frames": [
+    {
+      "timestamp_sec": 1.4,
+      "clean": "factory196/staging/EP27/preview_frames/qa_01_40s_clean.jpg",
+      "safezone": "factory196/staging/EP27/preview_frames/qa_01_40s_safezone.jpg"
+    },
+    {
+      "timestamp_sec": 9.96,
+      "clean": "factory196/staging/EP27/preview_frames/qa_09_96s_clean.jpg",
+      "safezone": "factory196/staging/EP27/preview_frames/qa_09_96s_safezone.jpg"
+    },
+    {
+      "timestamp_sec": 22.8,
+      "clean": "factory196/staging/EP27/preview_frames/qa_22_80s_clean.jpg",
+      "safezone": "factory196/staging/EP27/preview_frames/qa_22_80s_safezone.jpg"
+    },
+    {
+      "timestamp_sec": 34.64,
+      "clean": "factory196/staging/EP27/preview_frames/qa_34_64s_clean.jpg",
+      "safezone": "factory196/staging/EP27/preview_frames/qa_34_64s_safezone.jpg"
+    },
+    {
+      "timestamp_sec": 47.67,
+      "clean": "factory196/staging/EP27/preview_frames/qa_47_67s_clean.jpg",
+      "safezone": "factory196/staging/EP27/preview_frames/qa_47_67s_safezone.jpg"
+    },
+    {
+      "timestamp_sec": 69.86,
+      "clean": "factory196/staging/EP27/preview_frames/qa_69_86s_clean.jpg",
+      "safezone": "factory196/staging/EP27/preview_frames/qa_69_86s_safezone.jpg"
+    },
+    {
+      "timestamp_sec": 89.84,
+      "clean": "factory196/staging/EP27/preview_frames/qa_89_84s_clean.jpg",
+      "safezone": "factory196/staging/EP27/preview_frames/qa_89_84s_safezone.jpg"
+    },
+    {
+      "timestamp_sec": 96.69,
+      "clean": "factory196/staging/EP27/preview_frames/qa_96_69s_clean.jpg",
+      "safezone": "factory196/staging/EP27/preview_frames/qa_96_69s_safezone.jpg"
+    },
+    {
+      "timestamp_sec": 108.75,
+      "clean": "factory196/staging/EP27/preview_frames/qa_108_75s_clean.jpg",
+      "safezone": "factory196/staging/EP27/preview_frames/qa_108_75s_safezone.jpg"
+    },
+    {
+      "timestamp_sec": 125.55,
+      "clean": "factory196/staging/EP27/preview_frames/qa_125_55s_clean.jpg",
+      "safezone": "factory196/staging/EP27/preview_frames/qa_125_55s_safezone.jpg"
+    },
+    {
+      "timestamp_sec": 145.95,
+      "clean": "factory196/staging/EP27/preview_frames/qa_145_95s_clean.jpg",
+      "safezone": "factory196/staging/EP27/preview_frames/qa_145_95s_safezone.jpg"
+    },
+    {
+      "timestamp_sec": 179.84,
+      "clean": "factory196/staging/EP27/preview_frames/qa_179_84s_clean.jpg",
+      "safezone": "factory196/staging/EP27/preview_frames/qa_179_84s_safezone.jpg"
+    },
+    {
+      "timestamp_sec": 207.16,
+      "clean": "factory196/staging/EP27/preview_frames/qa_207_16s_clean.jpg",
+      "safezone": "factory196/staging/EP27/preview_frames/qa_207_16s_safezone.jpg"
+    },
+    {
+      "timestamp_sec": 227.75,
+      "clean": "factory196/staging/EP27/preview_frames/qa_227_75s_clean.jpg",
+      "safezone": "factory196/staging/EP27/preview_frames/qa_227_75s_safezone.jpg"
+    },
+    {
+      "timestamp_sec": 252.74,
+      "clean": "factory196/staging/EP27/preview_frames/qa_252_74s_clean.jpg",
+      "safezone": "factory196/staging/EP27/preview_frames/qa_252_74s_safezone.jpg"
+    },
+    {
+      "timestamp_sec": 272.45,
+      "clean": "factory196/staging/EP27/preview_frames/qa_272_45s_clean.jpg",
+      "safezone": "factory196/staging/EP27/preview_frames/qa_272_45s_safezone.jpg"
+    },
+    {
+      "timestamp_sec": 289.94,
+      "clean": "factory196/staging/EP27/preview_frames/qa_289_94s_clean.jpg",
+      "safezone": "factory196/staging/EP27/preview_frames/qa_289_94s_safezone.jpg"
+    },
+    {
+      "timestamp_sec": 298.28,
+      "clean": "factory196/staging/EP27/preview_frames/qa_298_28s_clean.jpg",
+      "safezone": "factory196/staging/EP27/preview_frames/qa_298_28s_safezone.jpg"
+    },
+    {
+      "timestamp_sec": 318.51,
+      "clean": "factory196/staging/EP27/preview_frames/qa_318_51s_clean.jpg",
+      "safezone": "factory196/staging/EP27/preview_frames/qa_318_51s_safezone.jpg"
+    },
+    {
+      "timestamp_sec": 351.85,
+      "clean": "factory196/staging/EP27/preview_frames/qa_351_85s_clean.jpg",
+      "safezone": "factory196/staging/EP27/preview_frames/qa_351_85s_safezone.jpg"
+    },
+    {
+      "timestamp_sec": 369.1,
+      "clean": "factory196/staging/EP27/preview_frames/qa_369_10s_clean.jpg",
+      "safezone": "factory196/staging/EP27/preview_frames/qa_369_10s_safezone.jpg"
+    },
+    {
+      "timestamp_sec": 373.95,
+      "clean": "factory196/staging/EP27/preview_frames/qa_373_95s_clean.jpg",
+      "safezone": "factory196/staging/EP27/preview_frames/qa_373_95s_safezone.jpg"
+    },
+    {
+      "timestamp_sec": 381.72,
+      "clean": "factory196/staging/EP27/preview_frames/qa_381_72s_clean.jpg",
+      "safezone": "factory196/staging/EP27/preview_frames/qa_381_72s_safezone.jpg"
+    },
+    {
+      "timestamp_sec": 389.58,
+      "clean": "factory196/staging/EP27/preview_frames/qa_389_58s_clean.jpg",
+      "safezone": "factory196/staging/EP27/preview_frames/qa_389_58s_safezone.jpg"
+    },
+    {
+      "timestamp_sec": 395.33,
+      "clean": "factory196/staging/EP27/preview_frames/qa_395_33s_clean.jpg",
+      "safezone": "factory196/staging/EP27/preview_frames/qa_395_33s_safezone.jpg"
+    },
+    {
+      "timestamp_sec": 400.19,
+      "clean": "factory196/staging/EP27/preview_frames/qa_400_19s_clean.jpg",
+      "safezone": "factory196/staging/EP27/preview_frames/qa_400_19s_safezone.jpg"
+    },
+    {
+      "timestamp_sec": 405.75,
+      "clean": "factory196/staging/EP27/preview_frames/qa_405_75s_clean.jpg",
+      "safezone": "factory196/staging/EP27/preview_frames/qa_405_75s_safezone.jpg"
+    },
+    {
+      "timestamp_sec": 414.7,
+      "clean": "factory196/staging/EP27/preview_frames/qa_414_70s_clean.jpg",
+      "safezone": "factory196/staging/EP27/preview_frames/qa_414_70s_safezone.jpg"
+    },
+    {
+      "timestamp_sec": 424.95,
+      "clean": "factory196/staging/EP27/preview_frames/qa_424_95s_clean.jpg",
+      "safezone": "factory196/staging/EP27/preview_frames/qa_424_95s_safezone.jpg"
+    },
+    {
+      "timestamp_sec": 437.02,
+      "clean": "factory196/staging/EP27/preview_frames/qa_437_02s_clean.jpg",
+      "safezone": "factory196/staging/EP27/preview_frames/qa_437_02s_safezone.jpg"
+    },
+    {
+      "timestamp_sec": 443.72,
+      "clean": "factory196/staging/EP27/preview_frames/qa_443_72s_clean.jpg",
+      "safezone": "factory196/staging/EP27/preview_frames/qa_443_72s_safezone.jpg"
+    },
+    {
+      "timestamp_sec": 446.89,
+      "clean": "factory196/staging/EP27/preview_frames/qa_446_89s_clean.jpg",
+      "safezone": "factory196/staging/EP27/preview_frames/qa_446_89s_safezone.jpg"
+    },
+    {
+      "timestamp_sec": 447.07,
+      "clean": "factory196/staging/EP27/preview_frames/qa_447_07s_clean.jpg",
+      "safezone": "factory196/staging/EP27/preview_frames/qa_447_07s_safezone.jpg"
+    }
+  ]
+}
