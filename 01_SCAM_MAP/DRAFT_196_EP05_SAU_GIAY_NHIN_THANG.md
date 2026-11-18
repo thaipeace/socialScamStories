@@ -1,216 +1,151 @@
-# 196 / EP05 – TỜ NĂM TRĂM & SÁU GIÂY NHÌN THẲNG *(Bản nháp v1 – chờ chủ kênh duyệt)*
+# 196 / EP05 – TỜ NĂM TRĂM & SÁU GIÂY NHÌN THẲNG *(Bản Staging v3 – Kết mở cắt đúng 04:15)*
 
-- **Mã tập đề xuất:** `EP05` (`factory196`) · **Slug:** `ToNamTramVaSauGiayNhinThang`
-- **Nhà máy:** `factory196` – `16:9` (`1920x1080 @ 30fps`) · **Thời lượng dự kiến:** `~255s – 270s` (~4 phút 20 giây, căn theo WAV thật sau Gate 2)
-- **Họ kịch bản:** `MIX` – Dàn cảnh 2 chốt ngoài đời thực: **Chốt 1** thu ảnh căn cước & SĐT qua quà tặng nhỏ → **Chốt 2** đóng vai người lớn tuổi mắt mờ đưa **500.000đ tiền mặt thật trước** để lấy số tài khoản, rồi nhờ cầm điện thoại bấm thoát màn hình để quay lén **6 giây khuôn mặt sống + giọng đọc xác nhận** → Gài bẫy **"giải ngân mồi"** (`+3,5 triệu` đòi `6 triệu`) đánh vào nỗi sợ mất mặt nơi làm việc.
-- **Tỷ lệ:** **~97% kịch tâm lý đời sống / ~3% Người Bóc Trần (đúng 1 câu ~6,5 giây ở thẻ kết)**
-- **Thông điệp lõi:** *Kẻ gian không nhắm vào tờ tiền lẻ trên tay bạn — chúng lấy lòng tốt làm mồi câu khuôn mặt, giọng nói và sự im lặng vì sĩ diện. Giữ lòng tốt, nhưng tuyệt đối không đưa căn cước và không cầm điện thoại người lạ.*
+- **Mã tập:** `EP05` (`factory196`) · **Slug:** `ToNamTramVaSauGiayNhinThang`
+- **Nhà máy:** `factory196` – `16:9` (`1920x1080 @ 30fps`) · **Thời lượng thực tế (WAV thật):** `262.1s` (`04:22` · 16 cảnh · 33 câu thoại)
+- **Họ kịch bản:** `MIX` – Dàn cảnh 2 chốt ngoài đời thực: **Chốt 1** thu ảnh căn cước & SĐT qua hộp quà màu cam cho trẻ nhỏ → **Chốt 2** đóng vai người lớn tuổi mắt mờ đưa **500.000đ tiền mặt thật trước** để lấy số tài khoản, rồi đứng sát bên chỉ tay nhờ đọc dòng chữ nhỏ trên màn hình trong lúc khéo léo nghiêng lùi người ra sau vai nạn nhân để **không lọt vào camera trước** → Nhánh ngoài tung bẫy **"giải ngân mồi"** (`+3,5 triệu` đòi `6 triệu`) thử phản ứng → **Kết mở đường dây ngầm (cắt đúng `04:15`):** "Bà già mắt mờ" lộ diện ở băng ghế sau xe hơi đen lúc đêm mưa, bình thản nói món tiền lẻ đó chỉ là thả cho nhánh ngoài thử phản ứng — để ngỏ hoàn toàn động cơ thật sự mà không lộ trước hướng kịch bản.
+- **Tỷ lệ:** **~97% kịch tâm lý – điện ảnh / ~3% Người Bóc Trần (đúng 1 câu `6.34s`, tổng thẻ `8.28s` < 10s)**
+- **Thông điệp lõi:** *Kẻ gian không nhắm vào tờ tiền lẻ trên tay bạn — chúng lấy lòng tốt làm mồi câu khuôn mặt, giọng nói và sự im lặng vì sĩ diện. Giữ lòng tốt, nhưng tuyệt đối không đưa căn cước và không cầm hay nhìn vào điện thoại người lạ.*
 
 ---
 
-## 1. Nhân vật & Phân tách giọng (`02_CAST/cast.json` – 8 nhân vật / 8 voice khác nhau 100%)
+## 1. Nhân vật & Phân tách giọng (`02_CAST/cast.json` – 9 tuyến / 9 voice khác nhau 100%)
 
 | Nhân vật trong tập | Key `cast.json` | Voice | Chỉ đạo diễn xuất & âm sắc |
 | :--- | :--- | :--- | :--- |
-| **Anh Hai** (35t, người cha đàng hoàng, hay giúp người) | `anh_hai` | `Orus` | Nam trầm ấm, thẳng tính; bàng hoàng và nghẹn giọng ở Hồi 3, điềm tĩnh chắc nịch ở Hồi 4–5 |
-| **Chị Hai** (34t, vợ Anh Hai) | `chi_hai` | `Sulafat` | Nữ trầm vừa, **kiệm lời, thực tế, không chì chiết**, nói câu nào sắc câu đó |
+| **Anh Hai** (35t, người cha đàng hoàng, hay giúp người) | `anh_hai` | `Orus` | Nam trầm ấm, thẳng tính; ngập ngừng tặc lưỡi ở Hồi 1, bàng hoàng ở Hồi 3, điềm tĩnh dứt khoát ở Hồi 4–5 |
+| **Chị Hai** (34t, vợ Anh Hai) | `chi_hai` | `Sulafat` | Nữ trầm vừa, **cực kiệm lời, thực tế, không chì chiết**, nói câu nào gọn sắc câu đó |
 | **Bé Tom** (8t, con trai) | `be_tom` | `Puck` | Bé trai trong sáng, lễ phép; cài tình huống đầu phim và đặt câu hỏi chạm cảm xúc cuối phim |
-| **Cô Lành** (~50t, kẻ đóng vai người đi đường mắt mờ) | `co_hanh` | `Despina` | Nữ trung niên mượt, hiền lành thân tình lúc nhờ giúp; **tuyệt đối không giả giọng bà già run rẩy** |
-| **Đầu dây đòi nợ** (kẻ khống chế qua điện thoại) | `chu_no` (+ `af: phone`) | `Fenrir` | Nam trầm, đều, **lịch sự lạnh tanh**, không gào thét chợ búa |
+| **Cô Lành / Bà Dì** (~50t, mắt xích cấp cao trực tiếp đi săn mẫu) | `co_hanh` | `Despina` | Hồi 2: hiền lành, luống cuống nhờ vả · Kết mở (`s13`): trầm lạnh, chậm rãi, quyền lực ngầm đáng sợ |
+| **Đầu dây dưới (đàn em báo cáo)** | `ke_ngot_ngao_nam` (+ `af: phone`) | `Achird` | Nam trẻ cung kính, dè dặt báo cáo tình hình cho "Dì" |
+| **Đầu dây đòi nợ (nhánh ngoài)** | `chu_no` (+ `af: phone`) | `Fenrir` | Nam trầm, đều, **lịch sự lạnh tanh**, không gào thét chợ búa |
 | **Nhân viên quầy quà** (Chốt 1) | `ke_ngot_ngao_nu` | `Aoede` | Nữ trẻ tươi tắn, lịch sự chuyên nghiệp (đúng 1 câu) |
 | **Giao dịch viên ngân hàng** | `chi_tu` | `Zephyr` | Nữ điềm tĩnh, chuẩn mực nghiệp vụ (đúng 3 câu ngắn gỡ nút thắt) |
-| **Người Bóc Trần** | `nguoi_boc_tran` | `Charon` | **Chỉ xuất hiện đúng 1 câu (~6,5 giây, 21 từ) ở thẻ `NHỚ KỸ` cuối phim** |
+| **Người Bóc Trần** | `nguoi_boc_tran` | `Charon` | **Chỉ xuất hiện đúng 1 câu (`6.34s`, 18 từ) ở thẻ `NHỚ KỸ`** |
 
 ---
 
-## 2. Bản đồ chi tiết CÀI – TRẢ *(Không có chi tiết thừa, không dùng thoại giải thích)*
+## 2. Bản đồ chi tiết CÀI – TRẢ & Liên kết Vũ trụ Tổ chức ngầm
 
 | Cài ở | Chi tiết điện ảnh | Trả ở |
 | :--- | :--- | :--- |
-| **C2** (Hồi 1) | Chiếc **bình nước vỏ hộp màu cam** phát miễn phí khi chụp căn cước | **C3** ánh mắt Cô Lành liếc hộp cam nhận diện con mồi → **C6** tin nhắn *"Khách hộp cam áo xám"* → **C11** bình nước cam bên hông Tom chiều tan học |
-| **C2** (Hồi 1) | Câu chủ quan của Anh Hai: *"Giờ đụng tới tiền bạc đều phải quét mặt sống hết rồi"* | **C1 (Hook) & C4:** Chính Anh Hai tự nộp "mặt sống + giọng nói" chỉ 2 phút sau |
-| **C3** (Hồi 2) | **Tờ 500.000đ tiền mặt thật** đưa trước + câu đọc *"Tôi xác nhận đồng ý thực hiện hồ sơ…"* | **C1 (Hook):** Biến thành bằng chứng khống chế đòi 6 triệu sau khoản giải ngân mồi 3,5 triệu |
-| **C3–C4** (Hồi 2) | Cặp kính lão & đôi tay run rẩy của Cô Lành | **C6 (Cảnh câm):** Cô Lành tháo kính lão, tay vững như đá nhận `+300.000` công chốt ca sáng |
-| **C5** (Hồi 2) | Tay nhặt rau của Chị Hai **khựng lại nửa giây** khi nghe chồng nói *"cầm máy bả bấm tắt"* | **C7–C8:** Chị Hai không trách một lời, giữ cổ tay chồng kịp lúc trước cú chuyển tiền trả nợ khống |
-| **C1** (Hook) | Đòn tâm lý đánh vào sĩ diện: *"Sáng thứ Bảy cả xưởng anh xem clip này"* | **C7** Anh Hai suýt tự bù 2,5 triệu tiền túi cho êm chuyện → **C8 & C10** Anh Hai nhắn báo xưởng trước, tước sạch vũ khí khiến kẻ đòi nợ cúp máy chặn số |
-| **C3** (Hồi 2) | Bé Tom đứng cạnh nhìn ba giúp người lớn tuổi ngoài bãi xe | **C11 (Kết):** Câu hỏi của Tom *"Vậy mốt gặp người lớn tuổi nhờ giúp, mình giả bộ hông thấy hả ba?"* |
+| **C2** (Hồi 1) | **Bé Tom đã ôm sẵn hộp quà màu cam** khiến Anh Hai ngập ngừng trên ví rồi đành rút căn cước cho chụp | **C3** ánh mắt Cô Lành liếc hộp cam nhận diện con mồi → **C6** tin nhắn *"Mẫu hộp cam áo xám"* → **C11** bình nước cam bên hông Tom → **C12** đàn em gọi mật danh *"thằng hộp cam"* |
+| **C3–C4** (Hồi 2) | **Tờ 500.000đ tiền mặt thật** đưa trước + thế đứng **sát vai cùng nhìn điện thoại**, ngón tay Cô Lành chỉ vào dòng chữ nhỏ trong lúc **đầu bà ta né khuất sau vai Anh Hai khỏi cam trước** | **C1 (Hook):** Khung hình video 6 giây chỉ lọt duy nhất mặt thật và giọng thật của Anh Hai |
+| **C3–C4** (Hồi 2) | Cặp kính lão & vẻ luống cuống mắt mờ của Cô Lành | **C6:** Tháo kính lão, chuyển *"bộ nháp"* cho nhánh ngoài thử nước → **C12 (Kết mở):** Ngồi băng ghế sau xe sang trong đêm mưa, bình thản nói món 3,5 triệu chỉ là *"bạc lẻ thả cho nhánh ngoài thử phản ứng thôi"* rồi cắt đen ngay ở `04:15` (gợi mở đường dây nhiều nhánh mà không tự khóa vào chi tiết cứng) |
+| **C1** (Hook) | Đòn tâm lý đánh vào sĩ diện: *"Sáng thứ Bảy cả xưởng anh xem clip này"* | **C7** Anh Hai suýt tự bù 2,5 triệu tiền túi → **C8 & C10** Chị Hai nhắc khóa thẻ trước, Anh Hai nhắn báo nhóm xưởng ngay trong đêm tước sạch vũ khí tống tiền |
+| **C3** (Hồi 2) | Bé Tom đứng cạnh nhìn ba giúp người lớn tuổi ngoài bãi xe | **C11 (Hồi 5):** Câu hỏi của Tom *"Vậy mốt gặp người lớn tuổi ngoài đường nhờ giúp, mình giả bộ hông thấy hả ba?"* |
 
 ---
 
-## 3. Kịch bản chi tiết theo cảnh (31 câu thoại · Mọi câu ≤ 23 từ)
+## 3. Kịch bản chi tiết theo cảnh (16 cảnh · 33 câu thoại · Mọi câu ≤ 25 từ)
 
-### HOOK – MÓN NỢ TỪ CHÍNH GƯƠNG MẶT MÌNH *(00:00 – 00:26)*
+### HOOK – MÓN NỢ TỪ CHÍNH GƯƠNG MẶT MÌNH *(00:00 – 00:31)*
 
 **`s00_night_ping` · `c00` – Phòng khách nhà Anh Hai · 21:40 Đêm.**
 *Đêm yên tĩnh. Điện thoại trên bàn gỗ sáng rực kèm tiếng "Ting!":*
-> **NGÂN HÀNG X:** `+3.500.000 VND · ND: GIAI NGAN HD 6000000`
+> **NGÂN HÀNG X:** `+3.500.000 VND · ND: GIAI NGAN HD 6.000.000`
 
 *Anh Hai nhíu mày cầm máy lên thì một số lạ gọi thẳng vào.*
-* *(Thẻ Hook hiện ở `0.4s`):* **BẪY LÒNG TỐT NGOÀI ĐỜI · TỜ NĂM TRĂM & SÁU GIÂY NHÌN THẲNG**
-
+- *(Thẻ Hook ở `0.4s`):* **BẪY LÒNG TỐT NGOÀI ĐỜI · TỜ NĂM TRĂM & SÁU GIÂY NHÌN THẲNG**
 - `l01_ah` **ANH HAI**: Alo, ai mới chuyển nhầm tiền vậy?
-- `l02_cn` **ĐẦU DÂY LẠ** *(điện thoại, trầm lạnh)*: Không ai chuyển nhầm hết anh Hai. Hợp đồng sáu triệu của anh tới hạn thứ Sáu.
+- `l02_cn` **SỐ LẠ** *(điện thoại, trầm lạnh)*: Không ai chuyển nhầm hết anh Hai. Hợp đồng sáu triệu của anh tới hạn thứ Sáu.
 - `l03_ah` **ANH HAI**: Anh nói bậy gì đó, tôi vay hồi nào?
 
 **`s01_mirror_shock` · `c01` – Cận màn hình điện thoại & gương mặt chết lặng của Anh Hai.**
-*Cuộc gọi chưa tắt, một tin nhắn bật sáng giữa màn hình: Ảnh hai mặt căn cước của Anh Hai ghép sát đoạn video 6 giây quay cận mặt chính anh ngoài bãi xe nắng gắt — mắt nhìn thẳng ống kính, miệng đọc rõ từng chữ.*
-
+*Cuộc gọi chưa tắt, tệp đính kèm bật sáng: Ảnh hai mặt căn cước của Anh Hai ghép sát đoạn video 6 giây quay cận mặt chính anh ngoài bãi xe nắng gắt — mắt nhìn thẳng ống kính, miệng đọc rõ từng chữ.*
 - `l04_ah_clip` **ANH HAI (TRONG CLIP)** *(lọc qua loa máy)*: Tôi xác nhận đồng ý thực hiện hồ sơ…
-- `l05_cn` **ĐẦU DÂY LẠ** *(điện thoại)*: Mặt anh, tiếng anh, căn cước của anh đủ hết. Trễ hẹn thì sáng thứ Bảy cả xưởng anh xem clip này.
-
-*Đầu dây cúp phụt. Anh Hai đứng cứng đờ dưới ánh đèn vàng. Sau tấm rèm buồng, **Chị Hai** đứng lặng nhìn chồng. (Freeze-frame).*
+- `l05_cn` **SỐ LẠ** *(điện thoại)*: Mặt anh, tiếng anh, căn cước của anh đủ hết. Trễ hẹn thì sáng thứ Bảy cả xưởng anh xem clip này.
 
 ---
 
-### HỒI 1 – MẢNH GHÉP THỨ NHẤT: "CHỈ LÀ TẤM HÌNH CHỤP" *(00:26 – 01:12)*
+### HỒI 1 – CHIẾC HỘP CAM & TẤM HÌNH CĂN CƯỚC *(00:31 – 00:49)*
 
-**`s02_promo_desk` · `c02` – Sáng Chủ Nhật, 4 ngày trước · Sảnh trước nhà sách khu phố.**
-*Nắng sáng. **Bé Tom** (8 tuổi) thích thú chỉ vào dãy **bình nước thể thao đựng trong hộp giấy màu cam** trên quầy quà tặng khai trương. Cô nhân viên trẻ mặc áo thun trơn mỉm cười lịch sự.*
-
+**`s02_promo_desk` · `c02` – Sáng Chủ Nhật, 4 ngày trước · Quầy quà trước nhà sách.**
+***Bé Tom** đã ôm sẵn **chiếc hộp bình nước màu cam** vào lòng, ngước mắt háo hức nhìn ba. Anh Hai thoáng khựng tay ngập ngừng trên chiếc ví da khi nghe đòi chụp căn cước, nhưng nhìn con trai đã ôm hộp quà nên đành tặc lưỡi rút thẻ đưa ra.*
 - `l06_tom` **TOM**: Ba ơi, mình đăng ký lấy cái bình màu cam nghen ba!
-- `l07_vy` **NHÂN VIÊN QUẦY**: Dạ quà tặng cho bé, anh cho em chụp căn cước với số điện thoại để tránh nhận trùng nha.
-
-*Anh Hai thoáng chần chừ một nhịp, nhưng nhìn con trai háo hức nên rút thẻ căn cước đặt lên mặt bàn. Màn hình nhân viên nhá chụp hai mặt.*
-
-- `l08_ah` **ANH HAI** *(cười nhẹ, cất thẻ vào ví)*: Chụp cái hình thôi mà. Giờ đụng tới tiền bạc đều phải quét mặt sống hết rồi.
-
-*Bé Tom ôm khư khư **chiếc hộp màu cam** trước ngực, nắm tay ba bước ra bãi giữ xe.*
+- `l07_vy` **QUẦY QUÀ**: Dạ quà tặng cho bé, anh cho em chụp căn cước với số điện thoại để tránh nhận trùng nha.
+- `l08_ah` **ANH HAI** *(ngập ngừng một nhịp rồi chìa thẻ ra)*: Ờ… vậy em chụp lẹ giùm anh nha.
 
 ---
 
-### HỒI 2 – MẢNH GHÉP THỨ HAI: TỜ NĂM TRĂM TIỀN THẬT *(01:12 – 02:25)*
+### HỒI 2 – TỜ NĂM TRĂM TIỀN THẬT & GÓC NÉ CAMERA *(00:49 – 01:58)*
 
 **`s03_parking_approach` · `c03` – Bãi giữ xe ngoài trời · 2 phút sau.**
-***Cô Lành** (ngoài 50 tuổi, áo sơ mi nhã nhặn, đeo kính lão gọng mảnh, nét mặt hiền hậu) đứng loay hoay bấm điện thoại cạnh dãy xe máy, trán lấm tấm mồ hôi.*
-*Cận cảnh câm 1.5s: Ánh mắt Cô Lành **liếc nhanh xuống chiếc hộp màu cam trên tay bé Tom**, rồi ngước lên với vẻ bối rối cầu cứu.*
-
+***Cô Lành** liếc nhanh xuống chiếc hộp màu cam trên tay bé Tom, rồi rút **tờ 500.000đ tiền mặt thật** đưa TRƯỚC vào tay Anh Hai.*
 - `l09_la` **CÔ LÀNH**: Chú ơi, làm ơn giúp chị với. Chị đóng tiền thuốc mà thẻ lỗi hoài, chú đổi giùm chị năm trăm tiền mặt nghen.
-
-*Cô Lành rút **tờ 500.000đ tiền mặt mới cứng** đưa TRƯỚC vào tay Anh Hai. Anh Hai miết nhẹ tờ tiền — tiền thật. Anh nhìn xuống thấy **bé Tom đang ngước mắt nhìn ba chờ đợi**.*
-
 - `l10_ah` **ANH HAI**: Dạ được chị. Chị đọc số tài khoản đi em chuyển cho.
 
-*Anh Hai bấm chuyển `500.000 VND` trên máy mình rồi cất điện thoại vào túi.*
-
-**`s04_six_seconds_face` · `c04` – Khoảnh khắc 6 giây nhìn thẳng *(Bố cục cắt ngang Trái – Phải)*.**
-*Đúng lúc Anh Hai định dắt xe, Cô Lành luống cuống giơ chiếc điện thoại của bà ta lên ngang tầm ngực anh, bàn tay hơi run.*
-
-- `l11_la` **CÔ LÀNH**: Khổ thiệt, mắt chị mờ quá, bấm trúng đâu nó hiện khung chữ nhỏ xíu. Chú cầm đọc giùm chị rồi bấm tắt cái!
-
-*Anh Hai cầm chiếc điện thoại lạ đưa ngang tầm mặt, hơi nghiêng đầu tránh nắng, nhìn thẳng vào màn hình tối và đọc rõ dòng chữ trên khung xác nhận:*
-
-- `l12_ah` **ANH HAI**: Tôi xác nhận đồng ý thực hiện hồ sơ… Rồi, em bấm thoát giùm chị rồi đó.
+**`s04_six_seconds_face` · `c04` – Cùng nhìn vào màn hình & Góc khuất sau vai.**
+*Cô Lành bước sát bên cạnh Anh Hai để cả hai cùng nhìn xuống màn hình điện thoại. Ngón tay bà chỉ thẳng vào dòng chữ nhỏ nhờ anh đọc hộ, trong khi đầu và người bà khéo léo nghiêng lùi ra sau vai Anh Hai — né hoàn toàn khỏi góc thu của camera trước.*
+- `l11_la` **CÔ LÀNH**: Khổ thiệt, mắt chị mờ quá… Chú đọc giùm chị dòng chữ nhỏ ngay ngón tay chị chỉ nè.
+- `l12_ah` **ANH HAI**: Tôi xác nhận đồng ý thực hiện hồ sơ… Rồi, em bấm thoát giùm chị luôn rồi đó.
 - `l13_la` **CÔ LÀNH**: Cảm ơn hai cha con nhiều lắm, đúng là gặp quý nhân!
 
 **`s05_home_noon` · `c05` – Bếp nhà Anh Hai · Trưa cùng ngày.**
-*Bé Tom đặt hộp bình nước màu cam lên bàn ăn. Anh Hai đặt tờ 500.000đ ngay ngắn cạnh rổ rau của vợ.*
-
 - `l14_tom` **TOM**: Mẹ ơi, sáng nay ba mới giúp một bà cô mắt mờ ngoài bãi xe đó!
-- `l15_ch` **CHỊ HAI** *(ngước lên hỏi gọn)*: Giúp sao vậy anh?
+- `l15_ch` **CHỊ HAI**: Giúp sao vậy anh?
 - `l16_ah` **ANH HAI**: Bả đưa tờ năm trăm trước, nhờ anh chuyển khoản rồi bấm tắt giùm cái màn hình đơ.
 
-*Bàn tay nhặt rau của Chị Hai **khựng lại nửa giây** khi nghe cụm chữ "bấm tắt giùm cái màn hình", ánh mắt trầm xuống nhìn tờ tiền nhưng chưa nói gì.*
-
-**`s06_glasses_off` · `c06` – Góc khuất hàng cây sau bãi xe *(CẢNH CÂM ĐIỆN ẢNH – không thoại, chỉ SFX)*:**
-*Hai cha con đã khuất hẳn. **Cô Lành** bước vào bóng râm, chậm rãi **tháo cặp kính lão ra**. Đôi tay lúc nãy run rẩy giờ **vững như đá**, ngón cái bấm dừng trình ghi ngầm.*
-*Bong bóng tin nhắn trung tính bật lên:*
-> **KHO HỒ SƠ:** *"Khách hộp cam áo xám: Đã ghép khớp căn cước quầy trong. Sáu giây mặt với tiếng nét căng."*
-> **KHO HỒ SƠ:** *"+300.000 · Công chốt ca sáng"*
-
-*Cô Lành đeo lại kính lão, ánh mắt lạnh tanh hướng về cửa nhà sách — nơi một người phụ nữ khác vừa xách chiếc hộp màu cam bước ra.*
+**`s06_glasses_off` · `c06` – Góc khuất hàng cây sau bãi xe *(CẢNH CÂM ĐIỆN ẢNH)*:**
+*Cô Lành bước vào bóng râm, tháo cặp kính lão ra, đôi tay vững như đá bấm gửi tệp:*
+> **GỬI NHÁNH NGOÀI:** *"Mẫu hộp cam áo xám: Đã khớp căn cước quầy trong. Sáu giây mặt với tiếng nét căng."*
+> **GỬI NHÁNH NGOÀI:** *"Chuyển bộ nháp cho tụi bây thử nước trước đi."*
 
 ---
 
-### HỒI 3 – THẾ KẸT LÚC NỬA ĐÊM: CÁI BẪY "TRẢ CHO ÊM CHUYỆN" *(02:25 – 03:20)*
+### HỒI 3 – CÁI BẪY "TRẢ CHO ÊM CHUYỆN" *(01:58 – 02:38)*
 
-**`s07_midnight_temptation` · `c07` – Phòng khách nhà Anh Hai · 22:00 Đêm *(Nối tiếp sau Hook)*.**
-*Màn hình điện thoại Anh Hai sáng lên tin nhắn mới từ số lạ:*
+**`s07_midnight_temptation` · `c07` – Phòng khách nhà Anh Hai · 22:00 Đêm.**
 > **SỐ LẠ:** *"Tất toán 6.000.000 vào TK cá nhân …9104 trước 23h đêm nay để xóa hồ sơ."*
 
-*Anh Hai ngồi căng cứng, trán rịn mồ hôi. Anh mở ứng dụng ngân hàng của mình, ngón cái run run gõ số tài khoản lạ, định lấy 3,5 triệu vừa nhận bù thêm **2,5 triệu tiền nhà** chuyển đi cho êm chuyện.*
-*Bàn tay **Chị Hai** từ phía sau đặt lên cổ tay chồng, giữ chặt lại.*
-
+*Anh Hai mở app định bù thêm 2,5 triệu tiền nhà chuyển cho êm chuyện. Chị Hai giữ chặt cổ tay chồng.*
 - `l17_ch` **CHỊ HAI**: Anh chuyển vô tài khoản cá nhân đó, lấy gì chắc tụi nó xóa clip?
-- `l18_ah` **ANH HAI** *(giọng khàn đi)*: Bù có hai triệu rưỡi tiền mình thôi em… Chứ mai nó rải clip khắp xưởng, anh nhìn mặt ai?
-- `l19_ch` **CHỊ HAI** *(nhìn thẳng chồng, trầm và sắc)*: Nó thấy anh sợ mất mặt mà chịu trả lần đầu, tuần sau chính cái clip đó sẽ đẻ ra khoản thứ hai.
+- `l18_ah` **ANH HAI**: Bù có hai triệu rưỡi tiền mình thôi em… Chứ mai nó rải clip khắp xưởng, anh nhìn mặt ai?
+- `l19_ch` **CHỊ HAI**: Nó thấy anh sợ mất mặt mà chịu trả lần đầu, tuần sau chính cái clip đó sẽ đẻ ra khoản thứ hai.
 
-*Anh Hai sững người. Ngón cái rời khỏi màn hình.*
-
-**`s08_lockdown_first_strike` · `c08` – Bàn ăn lúc khuya · Đi trước một bước.**
-*Chị Hai kéo ghế ngồi sát cạnh chồng. Không một lời trách móc.*
-
-- `l20_ch` **CHỊ HAI**: Ba triệu rưỡi đó cứ để nguyên. Giờ anh khóa thẻ online rồi hạ hết hạn mức chuyển khoản xuống thấp nhất đi.
-
-*Cận tay Anh Hai kéo thanh hạn mức giao dịch về tối thiểu, chụp màn hình toàn bộ tin nhắn và mã giao dịch.*
-
-- `l21_ah` **ANH HAI** *(hít sâu một hơi, mở nhóm tin nhắn công việc)*: Để anh báo trước cho anh em trong xưởng một tiếng. Mình nói trước thì nó hết đường hù.
-
-*Bong bóng tin nhắn Anh Hai gửi vào nhóm xưởng: `"Hình căn cước và clip mặt tôi vừa bị kẻ gian dàn cảnh quay lén. Ai nhận tin vay mượn tuyệt đối đừng chuyển."`*
+**`s08_lockdown_first_strike` · `c08` – Bàn ăn lúc khuya · Phản ứng gọn thực tế.**
+- `l20_ch` **CHỊ HAI**: Anh khóa thẻ trước đi.
+- `l21_ah` **ANH HAI**: Ừ… Để anh nhắn lên nhóm xưởng báo trước một tiếng luôn.
+> **NHÓM XƯỞNG:** *"Hình căn cước và clip mặt tôi vừa bị kẻ gian dàn cảnh quay lén. Ai nhận tin vay mượn tuyệt đối đừng chuyển."*
 
 ---
 
-### HỒI 4 – GỠ BẪY ĐÚNG LUẬT & CÚ CÚP MÁY Ở CỔNG ĐỒN *(03:20 – 04:08)*
+### HỒI 4 – KHOANH GIỮ TIỀN LẠ & LẬP BIÊN BẢN *(02:38 – 03:25)*
 
 **`s09_bank_counter` · `c09` – Sáng hôm sau · Quầy giao dịch ngân hàng.**
-*Nắng sáng. Anh Hai đặt thẻ căn cước gắn chip lên quầy đối diện nữ **Giao dịch viên**.*
-
 - `l22_gdv` **GIAO DỊCH VIÊN**: Ngân hàng chính thống bắt buộc quét chip căn cước thật, nên kẻ gian không mở trộm khoản vay ngân hàng dưới tên anh được.
 - `l23a_gdv` **GIAO DỊCH VIÊN**: Em đã cập nhật lại khuôn mặt và tra tín dụng cá nhân của anh, hoàn toàn không có nợ vay.
 - `l23b_gdv` **GIAO DỊCH VIÊN**: Còn khoản ba triệu rưỡi chuyển vào không rõ nguồn, ngân hàng sẽ khoanh giữ chờ công an xử lý.
 
-*Anh Hai thở phào một hơi nhẹ nhõm.*
-
-**`s10_police_gate_call` · `c10` – Trưa cùng ngày · Trước hiên trụ sở cơ quan công an.**
-*Anh Hai bước ra hiên (góc máy trung tính, không biển hiệu địa danh, không sắc phục thật), tay cầm **giấy xác nhận tiếp nhận trình báo** và xấp sao kê.*
-*Điện thoại đổ chuông từ **Đầu dây lạ**. Anh Hai bấm nghe, bật ghi âm.*
-
-- `l24_cn` **ĐẦU DÂY LẠ** *(điện thoại)*: Quá giờ rồi đó anh Hai. Chuyển sáu triệu hay để tôi gửi clip vô xưởng?
-- `l25_ah` **ANH HAI** *(điềm tĩnh, dứt khoát)*: Xưởng tôi báo hết từ tối qua rồi. Khoản ba triệu rưỡi bên anh chuyển vô, tôi cũng vừa lập biên bản ngoài công an.
+**`s10_police_gate_call` · `c10` – Trưa cùng ngày · Trước hiên cơ quan công an.**
+- `l24_cn` **SỐ LẠ** *(điện thoại)*: Quá giờ rồi đó anh Hai. Chuyển sáu triệu hay để tôi gửi clip vô xưởng?
+- `l25_ah` **ANH HAI**: Xưởng tôi báo hết từ tối qua rồi. Khoản ba triệu rưỡi bên anh chuyển vô, tôi cũng vừa lập biên bản ngoài công an.
 - `l26_ah` **ANH HAI**: Anh muốn nhận lại tiền thì mang giấy tờ ra cơ quan công an làm việc.
-
-*Đầu dây bên kia im phăng phắc ba giây… **"TÚT!"** — cuộc gọi ngắt phụt, số lạ chặn liên lạc ngay lập tức.*
+- *(Tút! Đầu dây nhánh ngoài lập tức cúp máy, chặn số.)*
 
 ---
 
-### HỒI 5 – CÂU HỎI CỦA ĐỨA CON TRAI *(04:08 – 04:35)*
+### HỒI 5 – GIỮ LÒNG TỐT, NHƯNG ĐỪNG ĐƯA ĐIỆN THOẠI *(03:25 – 03:52)*
 
 **`s11_school_pickup` · `c11` – Chiều tan học · Trước cổng trường Tiểu học.**
-*Nắng chiều vàng ấm. **Bé Tom** đeo chiếc **bình nước màu cam** bên hông bước ra xe ba, nét mặt tần ngần khác hẳn mọi hôm.*
-
-- `l27_tom` **TOM** *(ngước mắt nhìn ba, giọng nhỏ)*: Ba ơi… Vậy mốt gặp người lớn tuổi ngoài đường nhờ giúp, mình giả bộ hông thấy hả ba?
-
-*Tay Anh Hai đang cài quai nón bảo hiểm cho con khựng lại. Anh nhìn chiếc bình nước cam bên hông con, rồi nhìn thẳng vào đôi mắt trong veo của thằng bé.*
-
-- `l28_ah` **ANH HAI** *(trầm ấm, khẽ mỉm cười)*: Đâu có con. Người ta lạc đường hay mệt thì mình vẫn gọi bảo vệ, gọi người nhà phụ họ.
+- `l27_tom` **TOM**: Ba ơi… Vậy mốt gặp người lớn tuổi ngoài đường nhờ giúp, mình giả bộ hông thấy hả ba?
+- `l28_ah` **ANH HAI**: Đâu có con. Người ta lạc đường hay mệt thì mình vẫn gọi bảo vệ, gọi người nhà phụ họ.
 - `l29_ah` **ANH HAI**: Chỉ có căn cước của mình với cái điện thoại người lạ… là ba con mình không đưa, không cầm thôi.
 
-*Bé Tom nhoẻn cười, gật đầu cái rụp rồi vòng tay ôm chặt lưng ba. Chiếc xe máy hòa vào dòng người tan tầm.*
+---
+
+### THẺ NHỚ KỸ – NGƯỜI BÓC TRẦN *(03:52 – 04:01 · `8.28s` < 10 GIÂY)*
+
+**`s12_red_flags`:**
+- `l30_narr` **NGƯỜI BÓC TRẦN** *(`6.34s` · 18 từ)*: *"Thứ chúng lấy không phải tiền lẻ trên tay, mà là khuôn mặt và lòng tốt của bạn."*
 
 ---
 
-### THẺ KẾT – NGƯỜI BÓC TRẦN *(04:35 – 04:43 · ĐÚNG DƯỚI 10 GIÂY)*
+### KẾT MỞ ĐƯỜNG DÂY NGẦM – CUỘC GỌI ĐÊM MƯA TRÊN CHIẾC XE ĐEN *(04:01 – 04:22)*
 
-**`s12_red_flags` – Thẻ `NHỚ KỸ` bán trong suốt (`alpha <= 195`) + Biểu tượng kính lúp đỏ:**
+**`s13_backseat_boss` · `c12` – Đêm mưa lất phất · Băng ghế da phía sau chiếc sedan đen sang trọng.**
+*Không còn cặp kính lão hay dáng vẻ khắc khổ ngoài bãi xe, **"Cô Lành"** khoác áo tối màu sang trọng, gương mặt lạnh sắc nhìn xuống màn hình máy tính bảng hắt ánh xanh lạnh trong bóng tối.*
+- `l31_sub` **ĐẦU DÂY DƯỚI** *(điện thoại, dè dặt)*: Dì ơi, thằng hộp cam đem khoản ba triệu rưỡi ra công an rồi. Nhánh ngoài cắt số rút êm rồi dì.
+- `l32_lanh_boss` **NGƯỜI ĐÀN BÀ** *(trầm lạnh, chậm rãi)*: Mấy đồng bạc lẻ đó… thả cho nhánh ngoài thử phản ứng thôi.
 
-- `l30_narr` **NGƯỜI BÓC TRẦN** *(18 từ · ~5,5 giây, trọn thẻ kết < 9 giây)*: *"Thứ chúng lấy không phải tiền lẻ trên tay, mà là khuôn mặt và lòng tốt của bạn."*
-
-#### 🟥 NHỚ KỸ
-1. **Không cho chụp thẻ căn cước** ở các quầy tặng quà, khảo sát dọc đường.
-2. **Không cầm điện thoại người lạ** đưa ngang mặt hay đọc theo chữ trên màn hình.
-3. **Nhận khoản tiền lạ "giải ngân":** giữ nguyên, **tuyệt đối không tự chuyển trả** vào tài khoản cá nhân kẻ lạ đưa.
-4. **Khóa thẻ online, hạ hạn mức chuyển khoản**, báo trước người thân/nơi làm việc và ra quầy ngân hàng kiểm tra tín dụng cá nhân (CIC).
-5. **Trình báo cơ quan công an** để lập biên bản bảo vệ mình trước mọi tranh chấp vay mạo danh.
-
-👉 **Việc nên làm:** *Giúp người lớn tuổi ngoài đường bằng cách gọi bảo vệ hoặc người thân hỗ trợ — tuyệt đối không đưa căn cước và không nhìn vào màn hình điện thoại người lạ.*
-
-**`s13_disclaimer` (`3.5s`):** Thẻ `LƯU Ý` chuẩn của `factory196`.
-
----
-
-## 4. Tự kiểm Pháp lý, Nghiệp vụ & Harness (`Gate 0` & `Gate 5` Pre-check)
-
-- [x] **Đúng nghiệp vụ ngân hàng 2026 (Không hù dọa sai cơ chế):** Làm rõ ngay tại `s09` rằng ngân hàng chính thống bắt buộc quét chip căn cước thật nên kẻ gian không thể mở trộm khoản vay ngân hàng chỉ bằng ảnh chụp & clip quay lén; bản chất ở đây là **bẫy "giải ngân mồi" của tín dụng đen/web vay lậu** kết hợp khống chế danh dự bằng dữ liệu sinh trắc học quay lén (vẫn hướng dẫn kiểm tra CIC, cập nhật sinh trắc học, hạ hạn mức và lập biên bản công an đúng thực tế).
-- [x] **Không dạy lừa (Nguyên tắc 3):** Không mô tả tên ứng dụng, cách cài trình ghi hình ẩn, cách tạo hồ sơ vay khống hay công cụ AI ghép mặt. Cảnh `s06` chỉ dùng 2 bong bóng tin nhắn trung tính giống `EP27/c06`.
-- [x] **Không định danh & Không giả mạo (Nguyên tắc 1 & 4):** Ngân hàng X, TK 4 số cuối (`…9104`), không logo/sắc phục/biển hiệu địa danh thật.
-- [x] **Quét sạch `policy_wordlists.json`:** **0 `identity_hard_block`** · **0 `identity_soft_warn`** (dùng *"tiền thuốc"*, *"nhóm tin nhắn"*, *"cơ quan công an"* thay cho các từ cảnh báo) · **0 `asr_ocr_hard_block`** · **0 `asr_ocr_soft_warn`** (dùng *"Khổ thiệt"*, *"hết đường hù"*).
-- [x] **Chuẩn thoại `factory196`:** 31 câu thoại, **100% câu ≤ 23 từ**, tổng ~465 từ, phương ngữ miền Nam đồng nhất, `Người Bóc Trần` đúng 1 câu ~6,5 giây (< 10s).
+**`s14_black_cut` · `c13` (`04:15`):** **Cú dội âm trầm + CẮT ĐEN ĐỘT NGỘT!**
+**`s15_disclaimer` (`4.2s`):** Thẻ `LƯU Ý` chuẩn của `factory196`.

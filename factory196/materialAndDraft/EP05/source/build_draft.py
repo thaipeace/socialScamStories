@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """
 Trình biên dịch `factory196/materialAndDraft/EP05/episode.json` – Tập EP05:
-"Tờ năm trăm và sáu giây nhìn thẳng" (16:9 Long-form).
+"Tờ năm trăm và sáu giây nhìn thẳng" (16:9 Long-form · v2 Open-Ending).
 
 Nguồn sự thật duy nhất của timeline: sửa thoại/nhịp ở phần STORY rồi chạy lại
     python factory196/materialAndDraft/EP05/source/build_draft.py
@@ -38,7 +38,7 @@ real = {p.stem: wav_dur(p.stem) for p in TTS.glob("*.wav")} if TTS.is_dir() else
 real = {k: v for k, v in real.items() if v}
 
 # ---------------------------------------------------------------- GIỌNG
-# 8 nhân vật = 8 voice hoàn toàn tách biệt trong 02_CAST/cast.json
+# 9 nhân vật = 9 voice hoàn toàn tách biệt trong 02_CAST/cast.json
 NOT_OLD = "tuyệt đối không giả giọng bà già run rẩy, không kéo dài chữ, không cải lương"
 SPK = {
     "AH": dict(
@@ -86,10 +86,31 @@ SPK = {
         speaker="co_hanh",
         voice="Despina",
         label_short="CÔ LÀNH",
-        speaker_label="Cô Lành – kẻ đóng vai phụ nữ trung niên mắt mờ ngoài bãi xe",
+        speaker_label="Cô Lành – vỏ bọc phụ nữ trung niên mắt mờ ngoài bãi xe",
         base=(
             "Giọng phụ nữ miền Nam Sài Gòn khoảng 50 tuổi, phát âm chuẩn phương ngữ miền Nam xuyên suốt mọi câu, "
             "giữ cố định một âm sắc mượt, hiền lành, thân tình, hơi rối nhẹ lúc nhờ giúp; " + NOT_OLD
+        ),
+    ),
+    "LANH_BOSS": dict(
+        speaker="co_hanh",
+        voice="Despina",
+        label_short="NGƯỜI ĐÀN BÀ",
+        speaker_label="Bà trùm thu thập mẫu sinh trắc học (bộ mặt thật của Cô Lành)",
+        base=(
+            "Giọng phụ nữ miền Nam Sài Gòn khoảng 50 tuổi, phát âm chuẩn phương ngữ miền Nam xuyên suốt mọi câu, "
+            "hạ tông trầm lạnh, chậm rãi, sắc bén và đầy quyền lực ngầm trong bóng tối; " + NOT_OLD
+        ),
+    ),
+    "SUB_P": dict(
+        speaker="ke_ngot_ngao_nam",
+        voice="Achird",
+        af="phone",
+        label_short="ĐẦU DÂY DƯỚI",
+        speaker_label="Đàn em báo cáo qua điện thoại",
+        base=(
+            "Giọng nam thanh niên miền Nam Sài Gòn 28 tuổi, phát âm chuẩn phương ngữ miền Nam, "
+            "hạ giọng cung kính, dè dặt, báo cáo ngắn gọn qua điện thoại"
         ),
     ),
     "CN_P": dict(
@@ -97,7 +118,7 @@ SPK = {
         voice="Fenrir",
         af="phone",
         label_short="SỐ LẠ",
-        speaker_label="Đầu dây đòi nợ khống chế qua điện thoại",
+        speaker_label="Đầu dây đòi nợ nhánh ngoài qua điện thoại",
         base=(
             "Giọng nam miền Nam Sài Gòn 40 tuổi, phát âm chuẩn phương ngữ miền Nam xuyên suốt mọi câu, "
             "giữ cố định một âm sắc trầm, đều, lịch sự mà lạnh băng; không la hét, không gào thét"
@@ -210,23 +231,23 @@ sfx("call_end", 0.0, -3)
 sfx("heartbeat", 0.2, -5, dur=2.2)
 beat(2.6)
 
-# ---- HỒI 1 · MẢNH GHÉP THỨ NHẤT: "CHỈ LÀ TẤM HÌNH CHỤP" ----
+# ---- HỒI 1 · MẢNH GHÉP THỨ NHẤT: CHIẾC HỘP CAM & SỰ NGẬP NGỪNG ----
 amb("street", -3.5); bgm("investigative_story", -3.5)
 scene("s02_promo_desk", "assets/c02.jpg", "calm", tr="fade_black", trd=0.45)
 chapter("HỒI 1 · BỐN NGÀY TRƯỚC", "CHIẾC HỘP CAM & TẤM HÌNH CĂN CƯỚC")
 sfx("chapter_sting", -0.1, -5)
 beat(1.0)
 line("l06_tom", "TOM", "Ba ơi, mình đăng ký lấy cái bình màu cam nghen ba!",
-     "háo hức, lễ phép chỉ vào hộp quà")
+     "háo hức, ôm hộp màu cam ngước nhìn ba")
 line("l07_vy", "VY", "Dạ quà tặng cho bé, anh cho em chụp căn cước với số điện thoại để tránh nhận trùng nha.",
      "tươi cười, lịch sự, tự nhiên như nhân viên phát quà bình thường")
-sfx("notification", 0.2, -6)
-beat(1.8)
-line("l08_ah", "AH", "Chụp cái hình thôi mà. Giờ đụng tới tiền bạc đều phải quét mặt sống hết rồi.",
-     "nhẹ tênh, tự tin cất thẻ vào ví", pause=0.8)
+beat(1.8)   # nhịp ngập ngừng thật: Anh Hai khựng tay trên ví nhưng thấy con đã ôm chặt hộp quà
+line("l08_ah", "AH", "Ờ… vậy em chụp lẹ giùm anh nha.",
+     "ngập ngừng một nhịp rồi miễn cưỡng đồng ý vì con trai đã ôm hộp quà", pause=0.4)
+sfx("notification", 0.1, -6)
 beat(1.2)
 
-# ---- HỒI 2 · MẢNH GHÉP THỨ HAI: TỜ NĂM TRĂM TIỀN THẬT ----
+# ---- HỒI 2 · MẢNH GHÉP THỨ HAI: TỜ NĂM TRĂM TIỀN THẬT & GÓC NÉ CAM ----
 amb("street", -3.0); bgm("investigative_story", -3.0)
 scene("s03_parking_approach", "assets/c03.jpg", "calm", tr="dissolve", trd=0.4)
 chapter("HỒI 2 · BÃI GIỮ XE", "TỜ NĂM TRĂM TIỀN THẬT & SÁU GIÂY NHÌN THẲNG")
@@ -235,21 +256,21 @@ beat(2.2)   # nhịp câm: ánh mắt Cô Lành liếc chiếc hộp màu cam tr
 line("l09_la", "LANH", "Chú ơi, làm ơn giúp chị với. Chị đóng tiền thuốc mà thẻ lỗi hoài, chú đổi giùm chị năm trăm tiền mặt nghen.",
      "bối rối, hiền lành, đưa tờ 500 ngàn ra trước",
      sub="Chú ơi, làm ơn giúp chị với. Chị đóng tiền thuốc mà thẻ lỗi hoài, chú đổi giùm chị 500 tiền mặt nghen.")
-beat(1.6)
+beat(1.4)
 line("l10_ah", "AH", "Dạ được chị. Chị đọc số tài khoản đi em chuyển cho.",
      "cởi mở, sẵn lòng giúp sau khi thấy tiền mặt thật và con trai đứng nhìn")
 sfx("typing", 0.1, -6, dur=1.4)
 sfx("bank_ting", 1.6, -4)
-beat(2.4)
+beat(2.2)
 
 scene("s04_six_seconds_face", "assets/c04.jpg", "hand", tr="dissolve", trd=0.35)
 beat(0.5)
-line("l11_la", "LANH", "Khổ thiệt, mắt chị mờ quá, bấm trúng đâu nó hiện khung chữ nhỏ xíu. Chú cầm đọc giùm chị rồi bấm tắt cái!",
-     "luống cuống, nhờ vả rất tự nhiên")
-beat(1.2)
+line("l11_la", "LANH", "Khổ thiệt, mắt chị mờ quá… Chú đọc giùm chị dòng chữ nhỏ ngay ngón tay chị chỉ nè.",
+     "luống cuống chỉ tay vào màn hình đưa trước mặt Anh Hai, khéo léo nghiêng đầu né khỏi camera")
+beat(1.0)
 mark("six_sec")
-line("l12_ah", "AH", "Tôi xác nhận đồng ý thực hiện hồ sơ… Rồi, em bấm thoát giùm chị rồi đó.",
-     "nhìn thẳng màn hình đọc rõ chữ đầu, rồi vui vẻ trả máy", pause=0.4)
+line("l12_ah", "AH", "Tôi xác nhận đồng ý thực hiện hồ sơ… Rồi, em bấm thoát giùm chị luôn rồi đó.",
+     "cúi nhìn thẳng vào chỗ bà chỉ đọc rõ từng chữ, rồi vui vẻ bấm thoát", pause=0.4)
 line("l13_la", "LANH", "Cảm ơn hai cha con nhiều lắm, đúng là gặp quý nhân!",
      "cảm kích rối rít", pause=0.6)
 beat(0.8)
@@ -264,28 +285,28 @@ line("l15_ch", "CH", "Giúp sao vậy anh?", "hỏi gọn, tay vẫn nhặt rau"
 line("l16_ah", "AH", "Bả đưa tờ năm trăm trước, nhờ anh chuyển khoản rồi bấm tắt giùm cái màn hình đơ.",
      "bình thản, đặt tờ tiền lên bàn",
      sub="Bả đưa tờ 500 trước, nhờ anh chuyển khoản rồi bấm tắt giùm cái màn hình đơ.")
-beat(2.6)   # nhịp câm: tay Chị Hai khựng lại nửa giây
+beat(2.4)   # nhịp câm: tay Chị Hai khựng lại nửa giây
 
-# Cảnh câm điện ảnh: Cô Lành tháo kính lão sau bãi xe
+# Cảnh câm điện ảnh: Cô Lành tháo kính lão sau bãi xe – ra lệnh cho nhánh ngoài "thử nước"
 amb("street", -4.5); bgm("tension_drone", -2.5)
 scene("s06_glasses_off", "assets/c06.jpg", "push", tr="fade_black", trd=0.4)
 mark("glasses_off")
-beat(1.8)
+beat(1.6)
 sfx("message_send", 0.0, -4)
-bubble("KHO HỒ SƠ", "Khách hộp cam áo xám: Đã khớp căn cước quầy trong. Sáu giây mặt với tiếng nét căng.",
-       side="left", y=250, stamp="GHÉP ĐỦ BỘ", dur=5.2, offset=0.2)
+bubble("GỬI NHÁNH NGOÀI", "Mẫu hộp cam áo xám: Đã khớp căn cước quầy trong. Sáu giây mặt với tiếng nét căng.",
+       side="left", y=250, stamp="ĐỦ HỒ SƠ", dur=5.2, offset=0.2)
 beat(4.8)
-sfx("bank_ting", 0.2, -3)
-bubble("KHO HỒ SƠ", "+300.000 VND · Công chốt ca sáng",
-       side="left", y=430, stamp="HOA HỒNG", dur=4.2, offset=0.2)
-beat(4.6)
+sfx("message_send", 0.2, -4)
+bubble("GỬI NHÁNH NGOÀI", "Chuyển bộ nháp cho tụi bây thử nước trước đi.",
+       side="left", y=430, stamp="LỆNH ĐIỀU PHỐI", dur=4.0, offset=0.2)
+beat(4.4)
 
 # ---- HỒI 3 · THẾ KẸT LÚC NỬA ĐÊM: CÁI BẪY "TRẢ CHO ÊM CHUYỆN" ----
 amb("night_room", -2.0); bgm("tension_drone", -2.0)
 scene("s07_midnight_temptation", "assets/c07.jpg", "tense", tr="fade_black", trd=0.45)
 chapter("HỒI 3 · NỬA ĐÊM TẠI NHÀ", "CÁI BẪY “TRẢ CHO ÊM CHUYỆN”")
 sfx("chapter_sting", -0.1, -5)
-beat(4.8)   # đợi chapter card tắt rồi mới lên bubble tin nhắn đòi tiền
+beat(4.8)
 sfx("notification", 0.0, -4)
 bubble("SỐ LẠ", "Tất toán 6.000.000 vào TK cá nhân …9104 trước 23h đêm nay để xóa hồ sơ.",
        side="left", y=260, stamp="HỐI CHUYỂN", dur=5.2, offset=0.1)
@@ -298,22 +319,21 @@ line("l18_ah", "AH", "Bù có hai triệu rưỡi tiền mình thôi em… Chứ
      sub="Bù có 2 triệu rưỡi tiền mình thôi em… Chứ mai nó rải clip khắp xưởng, anh nhìn mặt ai?")
 mark("chihai_truth")
 line("l19_ch", "CH", "Nó thấy anh sợ mất mặt mà chịu trả lần đầu, tuần sau chính cái clip đó sẽ đẻ ra khoản thứ hai.",
-     "nhìn thẳng chồng, chậm, sắc và chắc nịch", pause=1.0)
-beat(1.4)
+     "nhìn thẳng chồng, chậm, sắc và chắc nịch", pause=0.8)
+beat(1.0)
 
+# Tinh gọn tối đa phản ứng thực tế: khóa thẻ + báo nhóm xưởng
 scene("s08_lockdown_first_strike", "assets/c08.jpg", "calm", tr="dissolve", trd=0.35)
-beat(0.5)
-line("l20_ch", "CH", "Ba triệu rưỡi đó cứ để nguyên. Giờ anh khóa thẻ online rồi hạ hết hạn mức chuyển khoản xuống thấp nhất đi.",
-     "gọn gàng, thực tế, không một lời trách móc",
-     sub="3 triệu rưỡi đó cứ để nguyên. Giờ anh khóa thẻ online rồi hạ hết hạn mức chuyển khoản xuống thấp nhất đi.")
-sfx("typing", 0.2, -6, dur=1.6)
-beat(2.0)
-line("l21_ah", "AH", "Để anh báo trước cho anh em trong xưởng một tiếng. Mình nói trước thì nó hết đường hù.",
-     "hít sâu, lấy lại bình tĩnh và tự trọng")
+beat(0.4)
+line("l20_ch", "CH", "Anh khóa thẻ trước đi.", "ngắn gọn, thực tế")
+sfx("typing", 0.1, -6, dur=1.2)
+beat(1.2)
+line("l21_ah", "AH", "Ừ… Để anh nhắn lên nhóm xưởng báo trước một tiếng luôn.",
+     "gọn, dứt khoát, tự nhiên")
 sfx("message_send", 0.2, -4)
-bubble("NHÓM XƯỞNG CƠ KHÍ", "Hình căn cước và clip mặt tôi vừa bị dàn cảnh quay lén. Ai nhận tin vay mượn tuyệt đối đừng chuyển.",
-       side="right", y=280, stamp="ANH HAI BÁO TRƯỚC", dur=5.0, offset=0.3)
-beat(5.4)
+bubble("NHÓM XƯỞNG CƠ KHÍ", "Hình căn cước và mặt tôi vừa bị quay lén. Ai nhận tin vay mượn đừng chuyển.",
+       side="right", y=280, stamp="BÁO TRƯỚC", dur=3.8, offset=0.2)
+beat(4.2)
 
 # ---- HỒI 4 · GỠ BẪY ĐÚNG LUẬT & CÚ CÚP MÁY Ở CỔNG ĐỒN ----
 amb("office", -3.5); bgm("investigative_story", -4.5)
@@ -328,9 +348,9 @@ line("l23a_gdv", "GDV", "Em đã cập nhật lại khuôn mặt và tra tín d�
 line("l23b_gdv", "GDV", "Còn khoản ba triệu rưỡi chuyển vào không rõ nguồn, ngân hàng sẽ khoanh giữ chờ công an xử lý.",
      "chuẩn mực, dứt khoát",
      sub="Còn khoản 3 triệu rưỡi chuyển vào không rõ nguồn, ngân hàng sẽ khoanh giữ chờ công an xử lý.")
-beat(1.8)
+beat(1.6)
 
-# Cổng trụ sở cơ quan công an – Không nhạc nền lúc đối chất để tăng sức nặng
+# Cổng trụ sở cơ quan công an – Không nhạc nền lúc đối chất
 amb("street", -4.0); bgm("tension_drone", SILENT)
 scene("s10_police_gate_call", "assets/c10.jpg", "calm", tr="fade_black", trd=0.4)
 sfx("phone_ring", 0.2, -4, dur=1.4)
@@ -344,29 +364,29 @@ line("l25_ah", "AH", "Xưởng tôi báo hết từ tối qua rồi. Khoản ba 
      sub="Xưởng tôi báo hết từ tối qua rồi. Khoản 3 triệu rưỡi bên anh chuyển vô, tôi cũng vừa lập biên bản ngoài công an.")
 line("l26_ah", "AH", "Anh muốn nhận lại tiền thì mang giấy tờ ra cơ quan công an làm việc.",
      "dứt khoát, bình thản", pause=0.6)
-beat(2.6)   # 2.6 giây im phăng phắc ở đầu dây bên kia
+beat(2.4)
 sfx("call_end", 0.0, -2)
 bubble("CUỘC GỌI ĐÃ KẾT THÚC", "Số máy này hiện không liên lạc được",
-       side="left", y=280, stamp="ĐÃ CHẶN SỐ", dur=3.8, offset=0.2)
-beat(4.2)
+       side="left", y=280, stamp="ĐÃ CHẶN SỐ", dur=3.6, offset=0.2)
+beat(4.0)
 
 # ---- HỒI 5 · CÂU HỎI CỦA ĐỨA CON TRAI ----
 amb("street", -4.5); bgm("warm_outro", -3.5)
 scene("s11_school_pickup", "assets/c11.jpg", "calm", tr="fade_black", trd=0.5)
 chapter("HỒI 5 · CHIỀU TAN HỌC", "GIỮ LÒNG TỐT, NHƯNG ĐỪNG ĐƯA ĐIỆN THOẠI")
 sfx("school_bell", 0.0, -7)
-beat(1.8)
+beat(1.6)
 mark("tom_q")
 line("l27_tom", "TOM", "Ba ơi… Vậy mốt gặp người lớn tuổi ngoài đường nhờ giúp, mình giả bộ hông thấy hả ba?",
      "ngước nhìn ba, hỏi khẽ thật thà, hơi buồn", pause=1.0)
-beat(1.0)
+beat(0.8)
 line("l28_ah", "AH", "Đâu có con. Người ta lạc đường hay mệt thì mình vẫn gọi bảo vệ, gọi người nhà phụ họ.",
      "trầm ấm, hiền hậu, cài nón bảo hiểm cho con")
 line("l29_ah", "AH", "Chỉ có căn cước của mình với cái điện thoại người lạ… là ba con mình không đưa, không cầm thôi.",
      "nhẹ nhàng mà dứt khoát", pause=0.8)
-beat(3.4)
+beat(2.6)
 
-# ---- THẺ KẾT · NGƯỜI BÓC TRẦN (DƯỚI 10 GIÂY) + NHỚ KỸ ----
+# ---- THẺ NHỚ KỸ (DƯỚI 10 GIÂY) ----
 amb("room_tone", -5.0); bgm("warm_outro", -4.0)
 scene("s12_red_flags", EP01B + "scene18.jpg", "still", tr="fade_black", trd=0.4)
 mark("rf_start")
@@ -375,9 +395,29 @@ line("l30_narr", "N", "Thứ chúng lấy không phải tiền lẻ trên tay, m
 beat(1.6)
 mark("rf_end")
 
-scene("s13_disclaimer", EP01B + "scene18.jpg", "still", tr="fade_black", trd=0.3)
+# ---- KẾT MỞ ĐƯỜNG DÂY NGẦM: BÀ GIÀ NGUY HIỂM KHÚC CUỐI (CẮT ĐÚNG 4:15) ----
+amb("rain", -4.0); bgm("tension_drone", -1.2)
+scene("s13_backseat_boss", "assets/c12.jpg", "push", tr="fade_black", trd=0.45)
+sfx("phone_vibrate", 0.2, -3, dur=1.2)
+beat(1.4)
+mark("mafia_coda")
+line("l31_sub", "SUB_P", "Dì ơi, thằng hộp cam đem khoản ba triệu rưỡi ra công an rồi. Nhánh ngoài cắt số rút êm rồi dì.",
+     "cung kính, dè dặt báo cáo",
+     sub="Dì ơi, thằng hộp cam đem khoản 3 triệu rưỡi ra công an rồi. Nhánh ngoài cắt số rút êm rồi dì.",
+     pause=0.5)
+sfx("heartbeat", 0.0, -4, dur=2.2)
+line("l32_lanh_boss", "LANH_BOSS", "Mấy đồng bạc lẻ đó… thả cho nhánh ngoài thử phản ứng thôi.",
+     "trầm lạnh, chậm rãi, bình thản đầy quyền lực", pause=0.25)
+
+sfx("impact", 0.0, -1)
+scene("s14_black_cut", "assets/c13.jpg", "still", tr="fade_black", trd=0.08)
+beat(2.0)
+
+# ---- DISCLAIMER ----
+amb("room_tone", -6.0); bgm("tension_drone", -8.0)
+scene("s15_disclaimer", EP01B + "scene18.jpg", "still", tr="fade_black", trd=0.35)
 mark("disc_start")
-beat(4.6)
+beat(4.2)
 
 # ================================================================ COMPILE
 t = 0.0
@@ -462,14 +502,15 @@ _desc = [(0.0, "Mở đầu – Khoản giải ngân lạ & đoạn clip 6 giây
 _desc += [(c["start"] - 0.2, f"{c['kicker'].split('·')[0].strip().title()} – {c['title'].capitalize()}")
           for c in chapters if c["kicker"]]
 _desc += [(marks["rf_start"], "Nhớ kỹ – 5 nguyên tắc bảo vệ khuôn mặt & căn cước")]
+_desc += [(marks["mafia_coda"] - 1.2, "Kết mở – Cuộc gọi đêm mưa trên chiếc xe đen")]
 desc_chapters = "\n".join(f"{mmss(max(0.0, s))} {label}" for s, label in sorted(_desc))
 
 episode = {
     "episode_id": "EP05",
     "slug": "ToNamTramVaSauGiayNhinThang",
     "title": "Tờ năm trăm và sáu giây nhìn thẳng",
-    "version": "v1-draft",
-    "scam_family": "MIX – Dàn cảnh 2 chốt thu căn cước & quay lén 6 giây khuôn mặt sống + bẫy giải ngân mồi",
+    "version": "v3-staging",
+    "scam_family": "MIX – Dàn cảnh 2 chốt thu căn cước & quay lén 6 giây khuôn mặt sống + kết mở đường dây ngầm",
     "duration_sec": total,
     "visual_style_lock": (
         "Horizontal 16:9 widescreen (1920x1080), semi-realistic cinematic 2D anime illustration, "
@@ -519,25 +560,25 @@ episode = {
             {"start": marks["chihai_truth"] - 0.2, "end": marks["chihai_truth"] + 4.5, "bgm_db": -14, "amb_db": -8},
             {"start": marks["climax_counter"] - 0.2, "end": marks["climax_counter"] + 6.0, "bgm_db": -16, "amb_db": -10},
             {"start": marks["tom_q"] - 0.2, "end": marks["tom_q"] + 4.8, "bgm_db": -12, "amb_db": -6},
+            {"start": marks["mafia_coda"] - 0.2, "end": marks["disc_start"] - 0.2, "bgm_db": -10, "amb_db": -7},
             {"start": marks["disc_start"], "end": total - 0.05},
         ],
     },
     "forbidden_terms": [],
     "publish": {
         "titles": [
-            "Cầm Hộ Điện Thoại 6 Giây Ngoài Bãi Xe – Đêm Hôm Sau Tài Khoản Báo “Giải Ngân” | Bóc Trần Lừa Đảo",
-            "Tờ Năm Trăm Tiền Thật & Sáu Giây Nhìn Thẳng Vào Màn Hình Lạ | Bóc Trần Lừa Đảo",
-            "Đổi Tiền Mặt Giúp Người Lớn Tuổi Ngoài Đường: Cái Bẫy Phía Sau Màn Hình Bị Đơ | Bóc Trần Lừa Đảo",
+            "Đọc Giùm Dòng Chữ 6 Giây Ngoài Bãi Xe – Đêm Khuya Lộ Diện Chiếc Xe Đen | Bóc Trần Lừa Đảo",
+            "Tờ Năm Trăm Tiền Thật, Sáu Giây Nhìn Thẳng & Người Đàn Bà Sau Kính Lão | Bóc Trần Lừa Đảo",
+            "Đổi Tiền Mặt Giúp Người Lớn Tuổi Ngoài Đường: Cái Bẫy Phía Sau Ngón Tay Chỉ Chữ | Bóc Trần Lừa Đảo",
         ],
         "description": (
-            "Đưa tờ 500.000đ tiền mặt thật vào tay bạn trước, rồi nhờ cầm điện thoại bấm thoát giùm cái màn hình bị đơ — "
-            "vì sao một hành động tử tế mất chưa đầy sáu giây ngoài bãi xe lại biến thành khoản 'giải ngân' từ trên trời rơi xuống "
-            "cùng đoạn video quay cận mặt chính bạn? Một câu chuyện cảnh giác dành cho mọi gia đình.\n\n"
+            "Đưa tờ 500.000đ tiền mặt thật vào tay bạn trước, rồi chỉ tay vào dòng chữ nhỏ trên màn hình nhờ đọc giùm — "
+            "nhưng liệu khoản đòi nợ 6 triệu tối hôm đó đã phải là toàn bộ câu chuyện phía sau người phụ nữ mắt mờ ngoài bãi xe?\n\n"
             "⏱️ Các hồi trong phim:\n" + desc_chapters
         ),
         "pinned_comment": (
-            "📌 Bạn hoặc người thân đã từng gặp tình huống người lạ nhờ đổi tiền mặt lấy chuyển khoản hay nhờ cầm điện thoại bấm hộ ngoài đường chưa? "
-            "Hãy chia sẻ kinh nghiệm cảnh giác ở bình luận (lưu ý không đăng số điện thoại, số tài khoản hay tên người thật nhé)."
+            "📌 Bạn từng gặp ai đưa tiền mặt thật ra trước rồi nhờ chuyển khoản hoặc nhờ đọc giùm màn hình điện thoại ngoài đường chưa? "
+            "Hãy chia sẻ để mọi người cùng cảnh giác (lưu ý không đăng SĐT, STK hay tên người thật nhé)."
         ),
         "hashtags": ["#bóctrầnlừađảo", "#cảnhgiáclừađảo", "#vạnchuyện", "#antoànmạng", "#bảovệthôngtin"],
         "tags": [
