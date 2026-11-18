@@ -1,0 +1,1348 @@
+{
+  "episode_id": "EP06",
+  "slug": "BaTrieuTamTrenManHinh",
+  "title": "Ba triệu tám trên màn hình",
+  "version": "v1-draft",
+  "scam_family": "JOB-TASK – Cộng tác viên đơn hàng: cấp vốn làm thử, bù phần thiếu & ảo giác số dư trên màn hình",
+  "duration_sec": 289.84,
+  "visual_style_lock": "Horizontal 16:9 widescreen (1920x1080), semi-realistic cinematic 2D anime illustration, contemporary Southern Vietnam urban setting, naturalistic dramatic lighting, clean bottom 15% for subtitles, no text, no letters, no numbers, no license plates, no logos, no real app interface, no real uniforms",
+  "hook": {
+    "kicker": "BẪY CỘNG TÁC VIÊN ĐƠN HÀNG · ĐÊM THỨ BA",
+    "title": "BA TRIỆU TÁM TRÊN MÀN HÌNH",
+    "start": 0.4,
+    "end": 5.0
+  },
+  "chapters": [
+    {
+      "kicker": "HỒI 1 · BA TỐI TRƯỚC",
+      "title": "BỐN CHỤC NGÀN CẤP SẴN & MỒI NHỬ KHÔNG TỐN VỐN",
+      "start": 37.38,
+      "end": 41.98
+    },
+    {
+      "kicker": "HỒI 2 · MỒI NHỬ TỪNG BƯỚC",
+      "title": "MƯỜI NGÀN BÙ THIẾU & CON SỐ NHẢY MÚA",
+      "start": 88.44,
+      "end": 93.04
+    },
+    {
+      "kicker": "HỒI 3 · ĐỐI CHIẾU NỬA ĐÊM",
+      "title": "TIỀN THẬT ĐI RA & CON SỐ ĐỨNG YÊN",
+      "start": 149.13,
+      "end": 153.73
+    },
+    {
+      "kicker": "HỒI 4 · NGƯỜI BẠN GIẤU MẶT",
+      "title": "TÊN MIỀN SÁU NGÀY TUỔI",
+      "start": 174.54,
+      "end": 179.14
+    },
+    {
+      "kicker": "HỒI 5 · DỪNG ĐÚNG LÚC",
+      "title": "TẮT MÀN HÌNH ĐỂ GIỮ LẠI TIỀN THẬT",
+      "start": 226.0,
+      "end": 230.6
+    }
+  ],
+  "scenes": [
+    {
+      "id": "s00_hook_blocked",
+      "image": "assets/c00.jpg",
+      "start": 0.0,
+      "end": 25.65,
+      "motion": {
+        "scale": [
+          1.0,
+          1.16
+        ],
+        "focus": [
+          [
+            0.5,
+            0.5
+          ],
+          [
+            0.5,
+            0.45
+          ]
+        ],
+        "wobble": "calm"
+      },
+      "shakes": [
+        {
+          "at": 0.2,
+          "dur": 0.4,
+          "amp": 16
+        }
+      ]
+    },
+    {
+      "id": "s01_hook_two_screens",
+      "image": "assets/c01.jpg",
+      "start": 25.65,
+      "end": 37.18,
+      "motion": {
+        "scale": [
+          1.04,
+          1.14
+        ],
+        "focus": [
+          [
+            0.5,
+            0.5
+          ],
+          [
+            0.48,
+            0.45
+          ]
+        ],
+        "wobble": "tense"
+      },
+      "transition_in": {
+        "type": "flash_white",
+        "dur": 0.25
+      },
+      "shakes": [
+        {
+          "at": 25.8,
+          "dur": 0.4,
+          "amp": 16
+        }
+      ]
+    },
+    {
+      "id": "s02_rainy_shift_cut",
+      "image": "assets/c02.jpg",
+      "start": 37.18,
+      "end": 55.01,
+      "motion": {
+        "scale": [
+          1.02,
+          1.09
+        ],
+        "focus": [
+          [
+            0.5,
+            0.5
+          ],
+          [
+            0.5,
+            0.47
+          ]
+        ],
+        "wobble": "calm"
+      },
+      "transition_in": {
+        "type": "fade_black",
+        "dur": 0.45
+      }
+    },
+    {
+      "id": "s03_first_free_order",
+      "image": "assets/c03.jpg",
+      "start": 55.01,
+      "end": 88.24,
+      "motion": {
+        "scale": [
+          1.02,
+          1.09
+        ],
+        "focus": [
+          [
+            0.5,
+            0.5
+          ],
+          [
+            0.5,
+            0.47
+          ]
+        ],
+        "wobble": "calm"
+      },
+      "transition_in": {
+        "type": "dissolve",
+        "dur": 0.4
+      }
+    },
+    {
+      "id": "s04_ten_thousand_bait",
+      "image": "assets/c04.jpg",
+      "start": 88.24,
+      "end": 111.01,
+      "motion": {
+        "scale": [
+          1.02,
+          1.1
+        ],
+        "focus": [
+          [
+            0.46,
+            0.48
+          ],
+          [
+            0.54,
+            0.46
+          ]
+        ],
+        "wobble": "handheld"
+      },
+      "transition_in": {
+        "type": "fade_black",
+        "dur": 0.4
+      }
+    },
+    {
+      "id": "s05_escalating_topups",
+      "image": "assets/c05.jpg",
+      "start": 111.01,
+      "end": 123.76,
+      "motion": {
+        "scale": [
+          1.0,
+          1.16
+        ],
+        "focus": [
+          [
+            0.5,
+            0.5
+          ],
+          [
+            0.5,
+            0.45
+          ]
+        ],
+        "wobble": "calm"
+      },
+      "transition_in": {
+        "type": "dissolve",
+        "dur": 0.4
+      }
+    },
+    {
+      "id": "s06_wife_sharp_question",
+      "image": "assets/c06.jpg",
+      "start": 123.76,
+      "end": 148.93,
+      "motion": {
+        "scale": [
+          1.02,
+          1.09
+        ],
+        "focus": [
+          [
+            0.5,
+            0.5
+          ],
+          [
+            0.5,
+            0.47
+          ]
+        ],
+        "wobble": "calm"
+      },
+      "transition_in": {
+        "type": "dissolve",
+        "dur": 0.35
+      }
+    },
+    {
+      "id": "s07_real_vs_screen",
+      "image": "assets/c07.jpg",
+      "start": 148.93,
+      "end": 174.34,
+      "motion": {
+        "scale": [
+          1.04,
+          1.14
+        ],
+        "focus": [
+          [
+            0.5,
+            0.5
+          ],
+          [
+            0.48,
+            0.45
+          ]
+        ],
+        "wobble": "tense"
+      },
+      "transition_in": {
+        "type": "fade_black",
+        "dur": 0.45
+      }
+    },
+    {
+      "id": "s08_porch_call_friend",
+      "image": "assets/c08.jpg",
+      "start": 174.34,
+      "end": 185.21,
+      "motion": {
+        "scale": [
+          1.02,
+          1.09
+        ],
+        "focus": [
+          [
+            0.5,
+            0.5
+          ],
+          [
+            0.5,
+            0.47
+          ]
+        ],
+        "wobble": "calm"
+      },
+      "transition_in": {
+        "type": "fade_black",
+        "dur": 0.4
+      }
+    },
+    {
+      "id": "s09_faceless_it_lookup",
+      "image": "assets/c09.jpg",
+      "start": 185.21,
+      "end": 225.8,
+      "motion": {
+        "scale": [
+          1.0,
+          1.16
+        ],
+        "focus": [
+          [
+            0.5,
+            0.5
+          ],
+          [
+            0.5,
+            0.45
+          ]
+        ],
+        "wobble": "calm"
+      },
+      "transition_in": {
+        "type": "dissolve",
+        "dur": 0.4
+      }
+    },
+    {
+      "id": "s10_turn_off_screen",
+      "image": "assets/c10.jpg",
+      "start": 225.8,
+      "end": 257.67,
+      "motion": {
+        "scale": [
+          1.02,
+          1.09
+        ],
+        "focus": [
+          [
+            0.5,
+            0.5
+          ],
+          [
+            0.5,
+            0.47
+          ]
+        ],
+        "wobble": "calm"
+      },
+      "transition_in": {
+        "type": "fade_black",
+        "dur": 0.5
+      }
+    },
+    {
+      "id": "s11_red_flags",
+      "image": "factory196/materialAndDraft/EP01b/assets/scene18.jpg",
+      "start": 257.67,
+      "end": 266.72,
+      "motion": {
+        "scale": [
+          1.0,
+          1.05
+        ],
+        "focus": [
+          [
+            0.5,
+            0.5
+          ],
+          [
+            0.5,
+            0.5
+          ]
+        ],
+        "wobble": "none"
+      },
+      "transition_in": {
+        "type": "fade_black",
+        "dur": 0.4
+      }
+    },
+    {
+      "id": "s12_unseen_tracker_coda",
+      "image": "assets/c11.jpg",
+      "start": 266.72,
+      "end": 282.94,
+      "motion": {
+        "scale": [
+          1.0,
+          1.16
+        ],
+        "focus": [
+          [
+            0.5,
+            0.5
+          ],
+          [
+            0.5,
+            0.45
+          ]
+        ],
+        "wobble": "calm"
+      },
+      "transition_in": {
+        "type": "fade_black",
+        "dur": 0.45
+      }
+    },
+    {
+      "id": "s13_black_cut",
+      "image": "assets/c12.jpg",
+      "start": 282.94,
+      "end": 285.29,
+      "motion": {
+        "scale": [
+          1.0,
+          1.05
+        ],
+        "focus": [
+          [
+            0.5,
+            0.5
+          ],
+          [
+            0.5,
+            0.5
+          ]
+        ],
+        "wobble": "none"
+      },
+      "transition_in": {
+        "type": "fade_black",
+        "dur": 0.08
+      }
+    },
+    {
+      "id": "s14_disclaimer",
+      "image": "factory196/materialAndDraft/EP01b/assets/scene18.jpg",
+      "start": 285.29,
+      "end": 289.84,
+      "motion": {
+        "scale": [
+          1.0,
+          1.05
+        ],
+        "focus": [
+          [
+            0.5,
+            0.5
+          ],
+          [
+            0.5,
+            0.5
+          ]
+        ],
+        "wobble": "none"
+      },
+      "transition_in": {
+        "type": "fade_black",
+        "dur": 0.35
+      }
+    }
+  ],
+  "dialogue": [
+    {
+      "id": "l01_nam",
+      "speaker": "anh_hai",
+      "voice": "Orus",
+      "label_short": "NAM",
+      "speaker_label": "Nam – kỹ thuật viên 32 tuổi, chăm làm, hiền lành, muốn kiếm việc phụ buổi tối",
+      "style": "Giọng nam miền Nam Sài Gòn 32 tuổi, phát âm chuẩn phương ngữ miền Nam xuyên suốt mọi câu, giữ cố định một âm sắc trầm ấm, thật thà, rõ chữ, tự nhiên như đời thực. Sắc thái câu này: sốt ruột, hỏi thẳng.",
+      "start": 2.55,
+      "window": 8.28,
+      "text": "Alo, trong ví tôi đang có ba triệu tám, sao bấm rút về ngân hàng lại khóa?",
+      "subtitle": [
+        "Alo, trong ví tôi đang có 3 triệu 8, sao bấm rút về ngân hàng lại khóa?"
+      ]
+    },
+    {
+      "id": "l02_ht",
+      "speaker": "chu_no",
+      "voice": "Fenrir",
+      "label_short": "HỖ TRỢ",
+      "speaker_label": "Bộ phận Hỗ trợ đối soát – trả lời lạnh lùng rập khuôn khi chặn rút tiền",
+      "af": "phone",
+      "style": "Giọng nam miền Nam Sài Gòn 40 tuổi, phát âm chuẩn phương ngữ miền Nam xuyên suốt mọi câu, trầm, đều, lịch sự lạnh băng như máy trả lời, không gào thét nhưng gây áp lực tâm lý nặng. Sắc thái câu này: trầm đều, lạnh tanh như máy trả lời.",
+      "start": 9.57,
+      "window": 10.32,
+      "text": "Tài khoản anh còn treo một đơn đối soát cuối. Anh bù thêm hai triệu chín là hệ thống giải ngân toàn bộ.",
+      "subtitle": [
+        "Tài khoản anh còn treo 1 đơn đối soát cuối. Anh bù thêm 2 triệu 9 là hệ thống giải ngân toàn bộ."
+      ]
+    },
+    {
+      "id": "l03_nam",
+      "speaker": "anh_hai",
+      "voice": "Orus",
+      "label_short": "NAM",
+      "speaker_label": "Nam – kỹ thuật viên 32 tuổi, chăm làm, hiền lành, muốn kiếm việc phụ buổi tối",
+      "style": "Giọng nam miền Nam Sài Gòn 32 tuổi, phát âm chuẩn phương ngữ miền Nam xuyên suốt mọi câu, giữ cố định một âm sắc trầm ấm, thật thà, rõ chữ, tự nhiên như đời thực. Sắc thái câu này: nhíu mày, bức xúc.",
+      "start": 18.63,
+      "window": 8.28,
+      "text": "Tiền tôi nằm sẵn trỏng gần bốn triệu rồi, sao không trừ thẳng mà bắt nạp thêm?!",
+      "subtitle": [
+        "Tiền tôi nằm sẵn trỏng gần 4 triệu rồi, sao không trừ thẳng mà bắt nạp thêm?!"
+      ]
+    },
+    {
+      "id": "l04_ht",
+      "speaker": "chu_no",
+      "voice": "Fenrir",
+      "label_short": "HỖ TRỢ",
+      "speaker_label": "Bộ phận Hỗ trợ đối soát – trả lời lạnh lùng rập khuôn khi chặn rút tiền",
+      "af": "phone",
+      "style": "Giọng nam miền Nam Sài Gòn 40 tuổi, phát âm chuẩn phương ngữ miền Nam xuyên suốt mọi câu, trầm, đều, lịch sự lạnh băng như máy trả lời, không gào thét nhưng gây áp lực tâm lý nặng. Sắc thái câu này: lạnh băng, buông gọn từng chữ.",
+      "start": 26.4,
+      "window": 9.64,
+      "text": "Quy trình tự động không trừ cấn anh nha. Quá hai mươi ba giờ chưa xong đơn là ví đóng băng.",
+      "subtitle": [
+        "Quy trình tự động không trừ cấn anh nha. Quá 23 giờ chưa xong đơn là ví đóng băng."
+      ]
+    },
+    {
+      "id": "l05_nam",
+      "speaker": "anh_hai",
+      "voice": "Orus",
+      "label_short": "NAM",
+      "speaker_label": "Nam – kỹ thuật viên 32 tuổi, chăm làm, hiền lành, muốn kiếm việc phụ buổi tối",
+      "style": "Giọng nam miền Nam Sài Gòn 32 tuổi, phát âm chuẩn phương ngữ miền Nam xuyên suốt mọi câu, giữ cố định một âm sắc trầm ấm, thật thà, rõ chữ, tự nhiên như đời thực. Sắc thái câu này: lau áo mưa, thở dài nhẹ với vợ.",
+      "start": 38.53,
+      "window": 9.98,
+      "text": "Mưa dầm cả tuần nay kho cắt hết ca tối, tháng này chắc hụt tiền phụ em đóng học cho con rồi."
+    },
+    {
+      "id": "l06_thao",
+      "speaker": "chi_hai",
+      "voice": "Sulafat",
+      "label_short": "THẢO",
+      "speaker_label": "Thảo – vợ Nam 31 tuổi, thực tế, kiệm lời, tinh tế, không chì chiết chồng",
+      "style": "Giọng phụ nữ miền Nam Sài Gòn 31 tuổi, phát âm chuẩn phương ngữ miền Nam xuyên suốt mọi câu, giữ cố định một âm sắc ấm, trầm vừa, nói cực gọn, điềm tĩnh, tự nhiên như đời thực, tuyệt đối không giả giọng ông già hay bà già run rẩy, không kéo dài chữ, không cải lương. Sắc thái câu này: dịu dàng, thực tế, đưa khăn cho chồng.",
+      "start": 47.25,
+      "window": 8.62,
+      "text": "Tháng nào hụt mình gói ghém tháng đó, mưa gió anh chạy ráng ngoài đường nguy hiểm lắm."
+    },
+    {
+      "id": "l07_vy",
+      "speaker": "ke_ngot_ngao_nu",
+      "voice": "Aoede",
+      "label_short": "ĐIỀU PHỐI",
+      "speaker_label": "Vy Điều Phối – người hướng dẫn đơn hàng đầu tiên qua tin nhắn thoại",
+      "af": "phone",
+      "style": "Giọng nữ trẻ miền Nam Sài Gòn 28 tuổi, phát âm chuẩn phương ngữ miền Nam, nhẹ nhàng, ngọt ngào, lịch sự chuyên nghiệp như nhân viên chăm sóc khách hàng thật. Sắc thái câu này: ngọt ngào, thân thiện, hướng dẫn nhẹ nhàng.",
+      "start": 56.36,
+      "window": 11.0,
+      "text": "Chào anh Nam, bên em tặng sẵn bốn chục ngàn trong ví rồi đó. Anh bấm xác nhận đơn ba chục ngàn đầu tiên nha.",
+      "subtitle": [
+        "Chào anh Nam, bên em tặng sẵn 40 ngàn trong ví rồi đó. Anh bấm xác nhận đơn 30 ngàn đầu tiên nha."
+      ]
+    },
+    {
+      "id": "l08_nam",
+      "speaker": "anh_hai",
+      "voice": "Orus",
+      "label_short": "NAM",
+      "speaker_label": "Nam – kỹ thuật viên 32 tuổi, chăm làm, hiền lành, muốn kiếm việc phụ buổi tối",
+      "style": "Giọng nam miền Nam Sài Gòn 32 tuổi, phát âm chuẩn phương ngữ miền Nam xuyên suốt mọi câu, giữ cố định một âm sắc trầm ấm, thật thà, rõ chữ, tự nhiên như đời thực. Sắc thái câu này: ngạc nhiên, quay sang khoe vợ.",
+      "start": 67.7,
+      "window": 7.6,
+      "text": "Ủa… làm thử có một đơn mà nhảy lên bốn lăm ngàn liền nè em.",
+      "subtitle": [
+        "Ủa… làm thử có 1 đơn mà nhảy lên 45 ngàn liền nè em."
+      ]
+    },
+    {
+      "id": "l09_thao",
+      "speaker": "chi_hai",
+      "voice": "Sulafat",
+      "label_short": "THẢO",
+      "speaker_label": "Thảo – vợ Nam 31 tuổi, thực tế, kiệm lời, tinh tế, không chì chiết chồng",
+      "style": "Giọng phụ nữ miền Nam Sài Gòn 31 tuổi, phát âm chuẩn phương ngữ miền Nam xuyên suốt mọi câu, giữ cố định một âm sắc ấm, trầm vừa, nói cực gọn, điềm tĩnh, tự nhiên như đời thực, tuyệt đối không giả giọng ông già hay bà già run rẩy, không kéo dài chữ, không cải lương. Sắc thái câu này: ngước nhìn chồng, hỏi gọn đúng trọng tâm.",
+      "start": 74.04,
+      "window": 6.58,
+      "text": "Làm cái đó có bắt mình bỏ tiền túi ra hông anh?"
+    },
+    {
+      "id": "l10_nam",
+      "speaker": "anh_hai",
+      "voice": "Orus",
+      "label_short": "NAM",
+      "speaker_label": "Nam – kỹ thuật viên 32 tuổi, chăm làm, hiền lành, muốn kiếm việc phụ buổi tối",
+      "style": "Giọng nam miền Nam Sài Gòn 32 tuổi, phát âm chuẩn phương ngữ miền Nam xuyên suốt mọi câu, giữ cố định một âm sắc trầm ấm, thật thà, rõ chữ, tự nhiên như đời thực. Sắc thái câu này: yên tâm, cười nhẹ trấn an vợ.",
+      "start": 79.36,
+      "window": 9.64,
+      "text": "Đâu có, trang này ghi chạy từ năm hai ngàn mười tám, lại cho sẵn tiền trong ví làm thử mà.",
+      "subtitle": [
+        "Đâu có, trang này ghi chạy từ năm 2018, lại cho sẵn tiền trong ví làm thử mà."
+      ]
+    },
+    {
+      "id": "l11_nam",
+      "speaker": "anh_hai",
+      "voice": "Orus",
+      "label_short": "NAM",
+      "speaker_label": "Nam – kỹ thuật viên 32 tuổi, chăm làm, hiền lành, muốn kiếm việc phụ buổi tối",
+      "style": "Giọng nam miền Nam Sài Gòn 32 tuổi, phát âm chuẩn phương ngữ miền Nam xuyên suốt mọi câu, giữ cố định một âm sắc trầm ấm, thật thà, rõ chữ, tự nhiên như đời thực. Sắc thái câu này: hơi khựng lại nhìn màn hình.",
+      "start": 89.79,
+      "window": 5.9,
+      "text": "Ủa, sao đơn này báo thiếu mười ngàn vậy ta?",
+      "subtitle": [
+        "Ủa, sao đơn này báo thiếu 10 ngàn vậy ta?"
+      ]
+    },
+    {
+      "id": "l12_vy",
+      "speaker": "ke_ngot_ngao_nu",
+      "voice": "Aoede",
+      "label_short": "ĐIỀU PHỐI",
+      "speaker_label": "Vy Điều Phối – người hướng dẫn đơn hàng đầu tiên qua tin nhắn thoại",
+      "af": "phone",
+      "style": "Giọng nữ trẻ miền Nam Sài Gòn 28 tuổi, phát âm chuẩn phương ngữ miền Nam, nhẹ nhàng, ngọt ngào, lịch sự chuyên nghiệp như nhân viên chăm sóc khách hàng thật. Sắc thái câu này: lịch sự, giải thích trơn tru như chuyện bình thường.",
+      "start": 94.43,
+      "window": 11.0,
+      "text": "Dạ anh bù đúng mười ngàn phần thiếu thôi. Xong đơn là tiền hàng với hoa hồng cộng dồn hết lại vô ví anh liền.",
+      "subtitle": [
+        "Dạ anh bù đúng 10 ngàn phần thiếu thôi. Xong đơn là tiền hàng với hoa hồng cộng dồn hết lại vô ví anh liền."
+      ]
+    },
+    {
+      "id": "l13_nam",
+      "speaker": "anh_hai",
+      "voice": "Orus",
+      "label_short": "NAM",
+      "speaker_label": "Nam – kỹ thuật viên 32 tuổi, chăm làm, hiền lành, muốn kiếm việc phụ buổi tối",
+      "style": "Giọng nam miền Nam Sài Gòn 32 tuổi, phát âm chuẩn phương ngữ miền Nam xuyên suốt mọi câu, giữ cố định một âm sắc trầm ấm, thật thà, rõ chữ, tự nhiên như đời thực. Sắc thái câu này: gật đầu nhẹ, trút bỏ cảnh giác.",
+      "start": 105.97,
+      "window": 5.9,
+      "text": "Ờ… sổ giao dịch ghi cộng trừ rõ ràng thiệt."
+    },
+    {
+      "id": "l14_vy",
+      "speaker": "ke_ngot_ngao_nu",
+      "voice": "Aoede",
+      "label_short": "ĐIỀU PHỐI",
+      "speaker_label": "Vy Điều Phối – người hướng dẫn đơn hàng đầu tiên qua tin nhắn thoại",
+      "af": "phone",
+      "style": "Giọng nữ trẻ miền Nam Sài Gòn 28 tuổi, phát âm chuẩn phương ngữ miền Nam, nhẹ nhàng, ngọt ngào, lịch sự chuyên nghiệp như nhân viên chăm sóc khách hàng thật. Sắc thái câu này: ngọt ngào khích lệ, bình thường hóa khoản nạp lớn dần.",
+      "start": 112.76,
+      "window": 10.66,
+      "text": "Anh lên bậc quen rồi nên được ưu tiên đơn lớn. Ví có sẵn triệu rưỡi, anh bù thêm bốn trăm rưỡi thôi nha.",
+      "subtitle": [
+        "Anh lên bậc quen rồi nên được ưu tiên đơn lớn. Ví có sẵn triệu rưỡi, anh bù thêm 450 ngàn thôi nha."
+      ]
+    },
+    {
+      "id": "l15_nam",
+      "speaker": "anh_hai",
+      "voice": "Orus",
+      "label_short": "NAM",
+      "speaker_label": "Nam – kỹ thuật viên 32 tuổi, chăm làm, hiền lành, muốn kiếm việc phụ buổi tối",
+      "style": "Giọng nam miền Nam Sài Gòn 32 tuổi, phát âm chuẩn phương ngữ miền Nam xuyên suốt mọi câu, giữ cố định một âm sắc trầm ấm, thật thà, rõ chữ, tự nhiên như đời thực. Sắc thái câu này: hào hứng đưa điện thoại cho vợ coi.",
+      "start": 124.91,
+      "window": 8.28,
+      "text": "Em nhìn nè, ba tối nay anh gom hoa hồng lên được gần bốn triệu rồi đó!",
+      "subtitle": [
+        "Em nhìn nè, 3 tối nay anh gom hoa hồng lên được gần 4 triệu rồi đó!"
+      ]
+    },
+    {
+      "id": "l16_thao",
+      "speaker": "chi_hai",
+      "voice": "Sulafat",
+      "label_short": "THẢO",
+      "speaker_label": "Thảo – vợ Nam 31 tuổi, thực tế, kiệm lời, tinh tế, không chì chiết chồng",
+      "style": "Giọng phụ nữ miền Nam Sài Gòn 31 tuổi, phát âm chuẩn phương ngữ miền Nam xuyên suốt mọi câu, giữ cố định một âm sắc ấm, trầm vừa, nói cực gọn, điềm tĩnh, tự nhiên như đời thực, tuyệt đối không giả giọng ông già hay bà già run rẩy, không kéo dài chữ, không cải lương. Sắc thái câu này: nhìn kỹ màn hình rồi ngước hỏi chồng, điềm tĩnh mà sắc.",
+      "start": 131.93,
+      "window": 6.92,
+      "text": "Nhưng anh bấm rút thử tiền về ngân hàng mình lần nào chưa?"
+    },
+    {
+      "id": "l17_nam",
+      "speaker": "anh_hai",
+      "voice": "Orus",
+      "label_short": "NAM",
+      "speaker_label": "Nam – kỹ thuật viên 32 tuổi, chăm làm, hiền lành, muốn kiếm việc phụ buổi tối",
+      "style": "Giọng nam miền Nam Sài Gòn 32 tuổi, phát âm chuẩn phương ngữ miền Nam xuyên suốt mọi câu, giữ cố định một âm sắc trầm ấm, thật thà, rõ chữ, tự nhiên như đời thực. Sắc thái câu này: chỉ tay vô màn hình, tự tin vì thấy giao diện đầy đủ.",
+      "start": 137.59,
+      "window": 11.0,
+      "text": "Mục rút tiền với số tài khoản anh nằm sẵn đây nè. Làm nốt đợt tối nay cho chẵn rồi anh rút một lượt luôn."
+    },
+    {
+      "id": "l18_nam",
+      "speaker": "anh_hai",
+      "voice": "Orus",
+      "label_short": "NAM",
+      "speaker_label": "Nam – kỹ thuật viên 32 tuổi, chăm làm, hiền lành, muốn kiếm việc phụ buổi tối",
+      "style": "Giọng nam miền Nam Sài Gòn 32 tuổi, phát âm chuẩn phương ngữ miền Nam xuyên suốt mọi câu, giữ cố định một âm sắc trầm ấm, thật thà, rõ chữ, tự nhiên như đời thực. Sắc thái câu này: giọng trầm xuống, chua chát khi gọi điều phối không ai nghe.",
+      "start": 156.48,
+      "window": 8.96,
+      "text": "Lúc biểu bù mười ngàn thì bắt máy lẹ lắm… Tới lúc hỏi rút tiền thì khóa máy luôn.",
+      "subtitle": [
+        "Lúc biểu bù 10 ngàn thì bắt máy lẹ lắm… Tới lúc hỏi rút tiền thì khóa máy luôn."
+      ]
+    },
+    {
+      "id": "l19_ht",
+      "speaker": "chu_no",
+      "voice": "Fenrir",
+      "label_short": "HỖ TRỢ",
+      "speaker_label": "Bộ phận Hỗ trợ đối soát – trả lời lạnh lùng rập khuôn khi chặn rút tiền",
+      "af": "phone",
+      "style": "Giọng nam miền Nam Sài Gòn 40 tuổi, phát âm chuẩn phương ngữ miền Nam xuyên suốt mọi câu, trầm, đều, lịch sự lạnh băng như máy trả lời, không gào thét nhưng gây áp lực tâm lý nặng. Sắc thái câu này: thúc ép đúng tâm lý tiếc của để dụ nạp thêm.",
+      "start": 164.18,
+      "window": 8.62,
+      "text": "Anh bỏ ngang lúc này là mất trắng ba triệu tám đang nằm sẵn trong ví đó nha.",
+      "subtitle": [
+        "Anh bỏ ngang lúc này là mất trắng 3 triệu 8 đang nằm sẵn trong ví đó nha."
+      ]
+    },
+    {
+      "id": "l20_nam",
+      "speaker": "anh_hai",
+      "voice": "Orus",
+      "label_short": "NAM",
+      "speaker_label": "Nam – kỹ thuật viên 32 tuổi, chăm làm, hiền lành, muốn kiếm việc phụ buổi tối",
+      "style": "Giọng nam miền Nam Sài Gòn 32 tuổi, phát âm chuẩn phương ngữ miền Nam xuyên suốt mọi câu, giữ cố định một âm sắc trầm ấm, thật thà, rõ chữ, tự nhiên như đời thực. Sắc thái câu này: ngồi ngoài hiên vắng, hạ giọng gọi bạn cũ.",
+      "start": 176.49,
+      "window": 9.98,
+      "text": "Ê, giờ này còn thức hông mày? Tao mới gửi cái đường dẫn qua tin nhắn, coi giùm tao trang này cái."
+    },
+    {
+      "id": "l21_it",
+      "speaker": "ong_bay",
+      "voice": "Algenib",
+      "label_short": "BẠN CŨ",
+      "speaker_label": "Người bạn IT giấu mặt – không lộ diện mạo, không nêu tên, điềm tĩnh tra hạ tầng",
+      "style": "Giọng nam miền Nam Sài Gòn 35 tuổi, phát âm chuẩn phương ngữ miền Nam xuyên suốt mọi câu, trầm khàn nhẹ, cực kỳ điềm tĩnh, kiệm lời, dứt khoát, nói câu nào sắc câu đó, tuyệt đối không giả giọng ông già hay bà già run rẩy, không kéo dài chữ, không cải lương. Sắc thái câu này: nhìn màn hình tra cứu, giọng trầm khàn điềm tĩnh.",
+      "start": 188.56,
+      "window": 11.0,
+      "text": "Tên miền này mới đăng ký hồi thứ Ba tuần trước. Mà trên trang lại tự nhận hoạt động từ năm hai ngàn mười tám?",
+      "subtitle": [
+        "Tên miền này mới đăng ký hồi thứ Ba tuần trước. Mà trên trang lại tự nhận hoạt động từ năm 2018?"
+      ]
+    },
+    {
+      "id": "l22_nam",
+      "speaker": "anh_hai",
+      "voice": "Orus",
+      "label_short": "NAM",
+      "speaker_label": "Giọng Nam phát qua loa điện thoại đặt trên bàn của người bạn IT",
+      "af": "phone",
+      "style": "Giọng nam miền Nam Sài Gòn 32 tuổi, phát âm chuẩn phương ngữ miền Nam, giữ cố định cùng âm sắc với Nam, rõ chữ. Sắc thái câu này: ngỡ ngàng, vẫn còn tiếc con số trên màn hình.",
+      "start": 198.7,
+      "window": 8.96,
+      "text": "Nhưng trong ví tao nó vẫn hiện nguyên ba triệu tám với lịch sử đơn đầy đủ mà mày…",
+      "subtitle": [
+        "Nhưng trong ví tao nó vẫn hiện nguyên 3 triệu 8 với lịch sử đơn đầy đủ mà mày…"
+      ]
+    },
+    {
+      "id": "l23_it",
+      "speaker": "ong_bay",
+      "voice": "Algenib",
+      "label_short": "BẠN CŨ",
+      "speaker_label": "Người bạn IT giấu mặt – không lộ diện mạo, không nêu tên, điềm tĩnh tra hạ tầng",
+      "style": "Giọng nam miền Nam Sài Gòn 35 tuổi, phát âm chuẩn phương ngữ miền Nam xuyên suốt mọi câu, trầm khàn nhẹ, cực kỳ điềm tĩnh, kiệm lời, dứt khoát, nói câu nào sắc câu đó, tuyệt đối không giả giọng ông già hay bà già run rẩy, không kéo dài chữ, không cải lương. Sắc thái câu này: chậm, rõ, bóc trần thẳng bản chất mà không giáo điều.",
+      "start": 206.4,
+      "window": 10.32,
+      "text": "Tiền trong ngân hàng mới có nơi giữ cho mày. Còn con số trên trang lạ… tụi nó gõ bao nhiêu chẳng được."
+    },
+    {
+      "id": "l24_it",
+      "speaker": "ong_bay",
+      "voice": "Algenib",
+      "label_short": "BẠN CŨ",
+      "speaker_label": "Người bạn IT giấu mặt – không lộ diện mạo, không nêu tên, điềm tĩnh tra hạ tầng",
+      "style": "Giọng nam miền Nam Sài Gòn 35 tuổi, phát âm chuẩn phương ngữ miền Nam xuyên suốt mọi câu, trầm khàn nhẹ, cực kỳ điềm tĩnh, kiệm lời, dứt khoát, nói câu nào sắc câu đó, tuyệt đối không giả giọng ông già hay bà già run rẩy, không kéo dài chữ, không cải lương. Sắc thái câu này: dứt khoát, dặn bạn cắt lỗ ngay.",
+      "start": 215.86,
+      "window": 9.3,
+      "text": "Thôi, mày quên con số đó đi. Đừng nạp thêm, cũng đừng tin đứa nào nhận kéo tiền treo về."
+    },
+    {
+      "id": "l25_nam",
+      "speaker": "anh_hai",
+      "voice": "Orus",
+      "label_short": "NAM",
+      "speaker_label": "Nam – kỹ thuật viên 32 tuổi, chăm làm, hiền lành, muốn kiếm việc phụ buổi tối",
+      "style": "Giọng nam miền Nam Sài Gòn 32 tuổi, phát âm chuẩn phương ngữ miền Nam xuyên suốt mọi câu, giữ cố định một âm sắc trầm ấm, thật thà, rõ chữ, tự nhiên như đời thực. Sắc thái câu này: thật thà nhận lỗi với vợ, giọng trầm buồn.",
+      "start": 227.15,
+      "window": 10.32,
+      "text": "Anh mất hai triệu mốt tiền thiệt rồi Thảo ơi… Tưởng bù mỗi lần vài trăm lẻ, cộng lại đứt mấy ngày công.",
+      "subtitle": [
+        "Anh mất 2 triệu mốt tiền thiệt rồi Thảo ơi… Tưởng bù mỗi lần vài trăm lẻ, cộng lại đứt mấy ngày công."
+      ]
+    },
+    {
+      "id": "l26_thao",
+      "speaker": "chi_hai",
+      "voice": "Sulafat",
+      "label_short": "THẢO",
+      "speaker_label": "Thảo – vợ Nam 31 tuổi, thực tế, kiệm lời, tinh tế, không chì chiết chồng",
+      "style": "Giọng phụ nữ miền Nam Sài Gòn 31 tuổi, phát âm chuẩn phương ngữ miền Nam xuyên suốt mọi câu, giữ cố định một âm sắc ấm, trầm vừa, nói cực gọn, điềm tĩnh, tự nhiên như đời thực, tuyệt đối không giả giọng ông già hay bà già run rẩy, không kéo dài chữ, không cải lương. Sắc thái câu này: đặt ly nước ấm xuống bàn, giọng ấm áp tỉnh táo, không một lời trách móc.",
+      "start": 236.21,
+      "window": 10.66,
+      "text": "Dừng ngay khúc này là may lắm rồi anh. Chứ nãy tiếc của mà nạp thêm ba triệu nữa là lún sâu luôn đó.",
+      "subtitle": [
+        "Dừng ngay khúc này là may lắm rồi anh. Chứ nãy tiếc của mà nạp thêm 3 triệu nữa là lún sâu luôn đó."
+      ]
+    },
+    {
+      "id": "l27_nam",
+      "speaker": "anh_hai",
+      "voice": "Orus",
+      "label_short": "NAM",
+      "speaker_label": "Nam – kỹ thuật viên 32 tuổi, chăm làm, hiền lành, muốn kiếm việc phụ buổi tối",
+      "style": "Giọng nam miền Nam Sài Gòn 32 tuổi, phát âm chuẩn phương ngữ miền Nam xuyên suốt mọi câu, giữ cố định một âm sắc trầm ấm, thật thà, rõ chữ, tự nhiên như đời thực. Sắc thái câu này: bình tĩnh lại, bấm tắt màn hình đặt úp điện thoại xuống bàn.",
+      "start": 245.61,
+      "window": 10.32,
+      "text": "Ừ… Mai anh đem sao kê trình báo công an, rồi dặn anh em dưới kho né cái trò bù tiền này ra."
+    },
+    {
+      "id": "l28_narr",
+      "speaker": "nguoi_boc_tran",
+      "start": 258.02,
+      "window": 8.96,
+      "text": "Số dư trên trang lạ là chữ họ tự gõ, còn tiền rời ngân hàng bạn mới mất thật."
+    },
+    {
+      "id": "l29_sec",
+      "speaker": "chi_tu",
+      "voice": "Zephyr",
+      "label_short": "ĐẦU DÂY LẠ",
+      "speaker_label": "Giọng nữ bí ẩn gọi vào máy phụ của người bạn IT ở cảnh kết mở",
+      "af": "phone",
+      "style": "Giọng nữ miền Nam Sài Gòn 35 tuổi, phát âm chuẩn phương ngữ miền Nam, trầm tĩnh, gọn, chuyên nghiệp, nói khẽ vừa đủ nghe qua điện thoại. Sắc thái câu này: trầm tĩnh hỏi khẽ qua điện thoại.",
+      "start": 269.27,
+      "window": 8.96,
+      "text": "Đường dẫn cậu bạn anh vừa gửi… lại trỏ về cụm máy chủ mới mở tuần trước hả anh?"
+    },
+    {
+      "id": "l30_it_coda",
+      "speaker": "ong_bay",
+      "voice": "Algenib",
+      "label_short": "BẠN CŨ",
+      "speaker_label": "Người bạn IT giấu mặt – không lộ diện mạo, không nêu tên, điềm tĩnh tra hạ tầng",
+      "style": "Giọng nam miền Nam Sài Gòn 35 tuổi, phát âm chuẩn phương ngữ miền Nam xuyên suốt mọi câu, trầm khàn nhẹ, cực kỳ điềm tĩnh, kiệm lời, dứt khoát, nói câu nào sắc câu đó, tuyệt đối không giả giọng ông già hay bà già run rẩy, không kéo dài chữ, không cải lương. Sắc thái câu này: trầm khàn, lạnh sắc, nhìn thẳng vào ánh sáng màn hình.",
+      "start": 277.37,
+      "window": 6.58,
+      "text": "Ừ. Lại chung một đầu mối đứng sau mấy nhánh đợt trước."
+    }
+  ],
+  "chat_bubbles": [
+    {
+      "sender": "VÍ ĐỐI TÁC ĐƠN HÀNG",
+      "text": "Số dư: 3.850.000đ · Chưa đủ điều kiện đối soát để rút tiền",
+      "side": "left",
+      "y": 270,
+      "stamp": "KHÓA RÚT TIỀN",
+      "start": 0.55,
+      "end": 5.75
+    },
+    {
+      "sender": "HỆ THỐNG ĐỐI SOÁT",
+      "text": "Chỉ còn 01 bước cuối để nhận toàn bộ 6.750.000đ gốc và hoa hồng",
+      "side": "left",
+      "y": 260,
+      "stamp": "ĐANG TREO ĐƠN",
+      "start": 26.15,
+      "end": 31.55
+    },
+    {
+      "sender": "SÀN ĐỐI TÁC ĐƠN HÀNG",
+      "text": "Giới thiệu: Vận hành từ năm 2018 · Cấp sẵn 40.000đ vốn làm thử",
+      "side": "left",
+      "y": 260,
+      "stamp": "TUYỂN CTV",
+      "start": 55.56,
+      "end": 60.96
+    },
+    {
+      "sender": "VÍ ĐỐI TÁC ĐƠN HÀNG",
+      "text": "Đơn 30.000đ hoàn thành · Cộng gốc & hoa hồng -> Số dư: 45.000đ",
+      "side": "left",
+      "y": 440,
+      "stamp": "HOÀN THÀNH",
+      "start": 67.2,
+      "end": 71.4
+    },
+    {
+      "sender": "ĐƠN HÀNG THỨ 02",
+      "text": "Giá trị đơn: 55.000đ · Ví hiện có: 45.000đ · Thiếu: 10.000đ",
+      "side": "left",
+      "y": 260,
+      "stamp": "THIẾU 10.000Đ",
+      "start": 88.99,
+      "end": 94.19
+    },
+    {
+      "sender": "LỊCH SỬ GIAO DỊCH VÍ",
+      "text": "Nạp bù +10.000đ -> Hoàn thành đơn -> Số dư mới: 65.000đ",
+      "side": "left",
+      "y": 440,
+      "stamp": "+HOA HỒNG",
+      "start": 105.47,
+      "end": 109.47
+    },
+    {
+      "sender": "VÍ ĐỐI TÁC ĐƠN HÀNG",
+      "text": "Số dư khả dụng: 3.850.000đ · Mục Rút Tiền: Đã liên kết TK …6821",
+      "side": "left",
+      "y": 260,
+      "stamp": "GẦN 4 TRIỆU",
+      "start": 124.31,
+      "end": 129.71
+    },
+    {
+      "sender": "NGÂN HÀNG CỦA NAM",
+      "text": "Đã chuyển đi: -10.000đ · -180.000đ · -450.000đ · -1.500.000đ (Tổng: -2.140.000đ)",
+      "side": "left",
+      "y": 250,
+      "stamp": "TIỀN THẬT ĐÃ TRỪ",
+      "start": 150.88,
+      "end": 156.68
+    },
+    {
+      "sender": "TRA CỨU ĐĂNG KÝ TÊN MIỀN",
+      "text": "Tự nhận trên trang: Từ năm 2018  |  Ngày đăng ký thật: Thứ Ba tuần trước",
+      "side": "left",
+      "y": 250,
+      "stamp": "MỚI MỞ 6 NGÀY",
+      "start": 187.36,
+      "end": 193.36
+    }
+  ],
+  "callouts": [],
+  "red_flags": {
+    "title": "NHỚ KỸ – BẪY CỘNG TÁC VIÊN ĐƠN HÀNG",
+    "start": 258.02,
+    "end": 266.72,
+    "stagger_sec": 0.45,
+    "items": [
+      "VIỆC LÀM THẬT KHÔNG BẮT NẠP TIỀN: Mọi yêu cầu bù phần thiếu hay đóng phí đối soát đều là bẫy",
+      "ĐỪNG TIN SỐ DƯ TRÊN TRANG LẠ: Kẻ gian tự tạo đơn, tự cộng hoa hồng ảo và khóa nút rút bất cứ lúc nào",
+      "CẢNH GIÁC VỐN CẤP SẴN & MỒI MƯỜI NGÀN: Cho sẵn vài chục ngàn làm thử chỉ để kéo bạn vào chuỗi nạp bù",
+      "DỪNG NGAY KHI BỊ ĐÒI BÙ ĐƠN LỚN: Cắt lỗ lập tức, tuyệt đối không nạp thêm tiền thật để cứu con số ảo",
+      "KHÔNG THUÊ DỊCH VỤ LẤY LẠI TIỀN TREO: Lưu sao kê và đường dẫn để trình báo cơ quan công an, tránh bị lừa lần hai"
+    ],
+    "action": "Trước mọi lời mời làm cộng tác viên chốt đơn, hãy tự hỏi: tiền đang nằm trong ngân hàng của mình hay chỉ là con số gõ trên màn hình của người lạ?"
+  },
+  "disclaimer": {
+    "header": "LƯU Ý",
+    "start": 285.64,
+    "end": 289.84,
+    "lines": [
+      "Tình huống trong phim được dựng lại nhằm mục đích cảnh báo cộng đồng; nhân vật, tên gọi và số liệu đều là hư cấu.",
+      "Thông tin nghiệp vụ và pháp lý chỉ mang tính tham khảo — khi gặp sự cố, hãy liên hệ trực tiếp ngân hàng và cơ quan công an nơi gần nhất."
+    ]
+  },
+  "audio": {
+    "ambience": [
+      {
+        "preset": "night_room",
+        "start": 0.0,
+        "end": 37.18,
+        "gain_db": -1.5
+      },
+      {
+        "preset": "rain",
+        "start": 37.18,
+        "end": 55.01,
+        "gain_db": -4.0
+      },
+      {
+        "preset": "night_room",
+        "start": 55.01,
+        "end": 88.24,
+        "gain_db": -3.0
+      },
+      {
+        "preset": "night_room",
+        "start": 88.24,
+        "end": 123.76,
+        "gain_db": -2.5
+      },
+      {
+        "preset": "room_tone",
+        "start": 123.76,
+        "end": 148.93,
+        "gain_db": -2.5
+      },
+      {
+        "preset": "night_room",
+        "start": 148.93,
+        "end": 174.34,
+        "gain_db": -2.0
+      },
+      {
+        "preset": "street",
+        "start": 174.34,
+        "end": 185.21,
+        "gain_db": -4.5
+      },
+      {
+        "preset": "night_room",
+        "start": 185.21,
+        "end": 225.8,
+        "gain_db": -3.5
+      },
+      {
+        "preset": "room_tone",
+        "start": 225.8,
+        "end": 257.67,
+        "gain_db": -3.5
+      },
+      {
+        "preset": "room_tone",
+        "start": 257.67,
+        "end": 266.72,
+        "gain_db": -5.0
+      },
+      {
+        "preset": "night_room",
+        "start": 266.72,
+        "end": 285.29,
+        "gain_db": -3.5
+      },
+      {
+        "preset": "room_tone",
+        "start": 285.29,
+        "end": 289.84,
+        "gain_db": -6.0
+      }
+    ],
+    "foley": [
+      {
+        "preset": "notification",
+        "at": 0.5,
+        "gain_db": -2
+      },
+      {
+        "preset": "phone_ring",
+        "at": 1.45,
+        "gain_db": -4,
+        "dur": 1.4
+      },
+      {
+        "preset": "impact",
+        "at": 26.0,
+        "gain_db": -3
+      },
+      {
+        "preset": "call_end",
+        "at": 34.78,
+        "gain_db": -3
+      },
+      {
+        "preset": "heartbeat",
+        "at": 34.98,
+        "gain_db": -5,
+        "dur": 2.2
+      },
+      {
+        "preset": "chapter_sting",
+        "at": 37.43,
+        "gain_db": -5
+      },
+      {
+        "preset": "notification",
+        "at": 55.56,
+        "gain_db": -5
+      },
+      {
+        "preset": "typing",
+        "at": 66.2,
+        "gain_db": -6,
+        "dur": 0.9
+      },
+      {
+        "preset": "bank_ting",
+        "at": 67.2,
+        "gain_db": -3
+      },
+      {
+        "preset": "chapter_sting",
+        "at": 88.49,
+        "gain_db": -5
+      },
+      {
+        "preset": "notification",
+        "at": 88.99,
+        "gain_db": -4
+      },
+      {
+        "preset": "typing",
+        "at": 104.27,
+        "gain_db": -6,
+        "dur": 1.1
+      },
+      {
+        "preset": "bank_ting",
+        "at": 105.47,
+        "gain_db": -4
+      },
+      {
+        "preset": "bank_ting",
+        "at": 111.66,
+        "gain_db": -5
+      },
+      {
+        "preset": "bank_ting",
+        "at": 112.46,
+        "gain_db": -4
+      },
+      {
+        "preset": "typing",
+        "at": 122.26,
+        "gain_db": -6,
+        "dur": 1.2
+      },
+      {
+        "preset": "bank_ting",
+        "at": 123.56,
+        "gain_db": -3
+      },
+      {
+        "preset": "chapter_sting",
+        "at": 149.18,
+        "gain_db": -5
+      },
+      {
+        "preset": "typing",
+        "at": 150.58,
+        "gain_db": -6,
+        "dur": 1.2
+      },
+      {
+        "preset": "phone_ring",
+        "at": 154.38,
+        "gain_db": -4,
+        "dur": 1.6
+      },
+      {
+        "preset": "call_end",
+        "at": 156.08,
+        "gain_db": -3
+      },
+      {
+        "preset": "notification",
+        "at": 164.38,
+        "gain_db": -3
+      },
+      {
+        "preset": "heartbeat",
+        "at": 172.14,
+        "gain_db": -4,
+        "dur": 2.0
+      },
+      {
+        "preset": "chapter_sting",
+        "at": 174.59,
+        "gain_db": -5
+      },
+      {
+        "preset": "phone_ring",
+        "at": 175.09,
+        "gain_db": -4,
+        "dur": 1.3
+      },
+      {
+        "preset": "typing",
+        "at": 185.76,
+        "gain_db": -4,
+        "dur": 1.8
+      },
+      {
+        "preset": "call_end",
+        "at": 224.4,
+        "gain_db": -3
+      },
+      {
+        "preset": "chapter_sting",
+        "at": 226.05,
+        "gain_db": -5
+      },
+      {
+        "preset": "bank_ting",
+        "at": 258.02,
+        "gain_db": -5
+      },
+      {
+        "preset": "typing",
+        "at": 267.17,
+        "gain_db": -5,
+        "dur": 1.0
+      },
+      {
+        "preset": "phone_vibrate",
+        "at": 268.17,
+        "gain_db": -3,
+        "dur": 1.1
+      },
+      {
+        "preset": "heartbeat",
+        "at": 277.37,
+        "gain_db": -4,
+        "dur": 2.0
+      },
+      {
+        "preset": "impact",
+        "at": 282.94,
+        "gain_db": -1
+      }
+    ],
+    "bgm": [
+      {
+        "preset": "suspense_pulse",
+        "start": 0.0,
+        "end": 37.18,
+        "gain_db": -2.5
+      },
+      {
+        "preset": "investigative_story",
+        "start": 37.18,
+        "end": 55.01,
+        "gain_db": -3.5
+      },
+      {
+        "preset": "investigative_story",
+        "start": 55.01,
+        "end": 88.24,
+        "gain_db": -3.2
+      },
+      {
+        "preset": "investigative_story",
+        "start": 88.24,
+        "end": 123.76,
+        "gain_db": -2.8
+      },
+      {
+        "preset": "investigative_story",
+        "start": 123.76,
+        "end": 148.93,
+        "gain_db": -4.0
+      },
+      {
+        "preset": "tension_drone",
+        "start": 148.93,
+        "end": 174.34,
+        "gain_db": -2.0
+      },
+      {
+        "preset": "tension_drone",
+        "start": 174.34,
+        "end": 185.21,
+        "gain_db": -3.5
+      },
+      {
+        "preset": "tension_drone",
+        "start": 185.21,
+        "end": 225.8,
+        "gain_db": -40.0
+      },
+      {
+        "preset": "warm_outro",
+        "start": 225.8,
+        "end": 257.67,
+        "gain_db": -3.5
+      },
+      {
+        "preset": "warm_outro",
+        "start": 257.67,
+        "end": 266.72,
+        "gain_db": -4.0
+      },
+      {
+        "preset": "tension_drone",
+        "start": 266.72,
+        "end": 285.29,
+        "gain_db": -1.2
+      },
+      {
+        "preset": "tension_drone",
+        "start": 285.29,
+        "end": 289.84,
+        "gain_db": -8.0
+      }
+    ],
+    "duck_extra": [
+      {
+        "start": 25.8,
+        "end": 29.5,
+        "bgm_db": -12,
+        "amb_db": -8
+      },
+      {
+        "start": 185.36,
+        "end": 193.56,
+        "bgm_db": -16,
+        "amb_db": -10
+      },
+      {
+        "start": 226.95000000000002,
+        "end": 231.65,
+        "bgm_db": -12,
+        "amb_db": -6
+      },
+      {
+        "start": 269.07,
+        "end": 285.44,
+        "bgm_db": -10,
+        "amb_db": -7
+      },
+      {
+        "start": 285.64,
+        "end": 289.78999999999996
+      }
+    ]
+  },
+  "forbidden_terms": [],
+  "publish": {
+    "titles": [
+      "Ví Hiện 3 Triệu 8 Mà Bắt Nạp Thêm – Cú Tra Tên Miền Nửa Đêm Bóc Trần Tất Cả | Bóc Trần Lừa Đảo",
+      "Bù 10 Ngàn Phần Thiếu Khi Nhận Đơn Tại Nhà: Tiền Thật Đi Ra & Con Số Đứng Yên | Bóc Trần Lừa Đảo",
+      "Trang Tuyển Cộng Tác Viên Ghi Từ Năm 2018, Tra Ra Mới Mở Tuần Trước | Bóc Trần Lừa Đảo"
+    ],
+    "description": "Được cấp sẵn 40.000đ làm thử không tốn vốn, mỗi đơn sau chỉ bù thêm phần chênh lệch thiếu vài chục đến vài trăm ngàn — cho đến khi số dư trên màn hình nhảy lên 3.850.000đ nhưng nút rút tiền bất ngờ khóa chặt.\n\n⏱️ Các hồi trong phim:\n00:00 Mở đầu – Ba triệu tám trên màn hình & cú khóa rút tiền\n00:37 Hồi 1 – Bốn chục ngàn cấp sẵn & mồi nhử không tốn vốn\n01:28 Hồi 2 – Mười ngàn bù thiếu & con số nhảy múa\n02:28 Hồi 3 – Tiền thật đi ra & con số đứng yên\n02:54 Hồi 4 – Tên miền sáu ngày tuổi\n03:45 Hồi 5 – Tắt màn hình để giữ lại tiền thật\n04:18 Nhớ kỹ – 5 nguyên tắc nhận diện bẫy cộng tác viên đơn hàng\n04:27 Kết mở – Căn phòng tối của người bạn giấu mặt",
+    "pinned_comment": "📌 Bạn hay người thân từng gặp chiêu 'cấp sẵn tiền làm thử' rồi dụ bù phần thiếu theo từng đơn chưa? Chia sẻ ở bình luận để mọi người cùng cảnh giác nhé (lưu ý không đăng SĐT, STK, tên miền thật hay tên người thật).",
+    "hashtags": [
+      "#bóctrầnlừađảo",
+      "#cảnhgiáclừađảo",
+      "#vạnchuyện",
+      "#antoànmạng",
+      "#cộngtácviênảo"
+    ],
+    "tags": [
+      "cảnh giác lừa đảo",
+      "bóc trần lừa đảo",
+      "vạn chuyện",
+      "cộng tác viên đơn hàng",
+      "bẫy bù tiền đơn hàng",
+      "số dư ảo trên màn hình",
+      "việc làm thêm tại nhà",
+      "an toàn mạng"
+    ],
+    "category": "Education (Giáo dục)",
+    "playlist": "Hồ Sơ Bóc Trần Lừa Đảo – Phim Dài Chuyên Sâu",
+    "thumbnail_sec": 187.06
+  }
+}
