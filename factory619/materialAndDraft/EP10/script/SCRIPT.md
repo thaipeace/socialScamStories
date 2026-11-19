@@ -1,0 +1,27 @@
+# KỊCH BẢN EP10 — HAI MẠNG WI-FI TRÙNG TÊN: MÁY TỰ MỞ NGÂN HÀNG ĐIỀN SỐ TIỀN (57.6 GIÂY · V7)
+
+- **Mã tập:** `EP10` (`BayWifiMienPhi`)
+- **Họ kịch bản:** `ON-08` / `MIX` (Hai mạng Wi-Fi trùng hệt tên khách sạn — một có khóa, một mở miễn phí không mật khẩu; vừa kết nối đã nhảy sang trang web bắt bấm đồng ý cài "gói kết nối", thực chất cài **app chạy ngầm** tự mở ngân hàng điền số tiền → Tắt nguồn ngay, nhận phòng xong kiếm chỗ sửa điện thoại → Tại tiệm, anh thợ chỉ báo bệnh máy mà không hỏi gì về Wi-Fi, Tùng tự kể → Bóc trần & Thẻ `NHỚ KỸ` bình thường → **Kết mở 4,5s câm thoại:** Anh thợ giữ tờ `200K` nhìn theo lưng hai chị em bước ra cửa, khẽ cười hơi hắc ám khi thấy thêm một "con mồi mới" ôm điện thoại hớt hải chạy tới…)
+- **Thời lượng thực tế (WAV thật Staging):** `57.6s` (`9:16` dọc `1080x1920` @ `30fps` — dưới 1 phút!)
+- **Hashtag chuẩn:** `#shorts #bóctrầnlừađảo #cảnhgiáclừađảo #vạnchuyện`
+- **Dàn nhân vật (`02_CAST/cast.json` – 4 giọng tách biệt 100% âm sắc, 100% đối thoại đời thực):**
+  - `thang_tun` (`Puck` – Tùng 20 tuổi)
+  - `chi_hai` (`Sulafat` – Chị Hai 34 tuổi, phản ứng hoàn toàn như người bình thường)
+  - `anh_hai` (`Orus`, nhãn phụ đề `ANH THỢ` – Anh thợ sửa điện thoại 35 tuổi, cực kiệm lời, không hỏi vụ Wi-Fi, giữ bí ẩn đến giây cuối)
+  - `nguoi_boc_tran` (`Charon` – Xuất hiện duy nhất 1 câu ở Khung 6, khách quan, sắc gọn)
+
+---
+
+## BẢNG PHÂN CẢNH & LỜI THOẠI CHI TIẾT (9 KHUNG · 8 CÂU THOẠI · 127 TỪ · 57.6 GIÂY WAV THẬT)
+
+| Khung | Thời gian | Bối cảnh, Hình ảnh & Thiết kế Âm thanh (`9:16`) | Lời thoại (`speaker`) | Số từ |
+| :--- | :---: | :--- | :--- | :---: |
+| **1. HOOK: HAI MẠNG TRÙNG TÊN & BIỂN HIỆU ĐỐI DIỆN** | `00.00 – 05.70s` | Sảnh khách sạn ban ngày có vách kính lớn hướng ra mặt đường — bên kia đường đối diện là **biển hiệu tiệm sửa điện thoại màu xanh dương – vàng nổi bật có hình cờ-lê đặt cạnh chiếc điện thoại** (cài tự nhiên không nhấn nhá bằng lời). Chị Hai bước tới quầy lễ tân; Tùng cầm máy hiện **2 mạng trùng hệt tên khách sạn** (1 có khóa, 1 miễn phí không mật khẩu) nói với Chị Hai. Ghế sofa phía sau: bóng kẻ đội nón sụp cạnh balo đen lóe đèn đỏ.<br>• **Hook:** `HAI MẠNG WI-FI TRÙNG TÊN` – `Thấy Wi-Fi khách sạn, sân bay không mật khẩu: Bấm lẹ coi chừng bị điều khiển máy!` | **l1 (`thang_tun` → Chị Hai):** *"Chị Hai, có hai cái Wi-Fi khách sạn luôn nè! Em bắt cái không mật khẩu cho lẹ nha!"* | 19 |
+| **2. CÂM THOẠI CAO TRÀO: NHẢY WEB & BẤM "ĐỒNG Ý"** | `05.70 – 09.20s` | **Câm thoại 3,5s dồn nhạc (`notification` → `typing` → `message_send` → `riser` kéo thẳng vào Khung 3):** Cận tay Tùng bấm nút xanh trên trang web giả.<br>• **Callout lớn nổi bật (`size: large`, kicker `CẠM BẪY BẮT ĐẦU`):** `TỰ NHẢY SANG WEB · BẤM "ĐỒNG Ý" TẢI GÓI KẾT NỐI LẠ!` | *(Không lời thoại)* | **0** |
+| **3. PHẢN XẠ NGƯỜI THƯỜNG: BẤM THỬ KHÔNG ĂN** | `09.20 – 19.80s` | Chị Hai quay lại ngồi cạnh Tùng (ngoài cửa kính vẫn đồng nhất biển hiệu xanh-vàng cờ-lê + điện thoại). Màn hình tự nhảy loạn; hai chị em cầm bấm thoát thử lại vẫn đơ cứng (`glitch`). | **l2 (`thang_tun` → Chị Hai):** *"Ủa chị Hai, coi giùm em cái máy sao tự nhảy màn hình mà bấm không ăn nè?"*<br>**l3 (`chi_hai` → Tùng):** *"Đưa chị coi… Kỳ vậy, sao màn hình tự chạy mà bấm thoát không ăn?"* | 18<br>15 |
+| **4. CAO TRÀO: TỰ ĐIỀN SỐ TIỀN → TẮT NGUỒN LIỀN!** | `19.80 – 27.40s` | **1,15s dồn âm (`riser` → `glitch` + `impact` + `heartbeat` chớp đỏ):** Tách chéo kẻ ghế sofa điều khiển & máy tự mở app ngân hàng điền số tiền → Chị Hai hoảng hốt đè tắt nguồn (`call_end`).<br>• **Callout đỏ (`danger`):** `MÁY TỰ MỞ NGÂN HÀNG, ĐANG ĐIỀN SỐ TIỀN · TẮT NGUỒN GẤP!` | **l4 (`chi_hai` → Tùng):** *"Nó tự mở ngân hàng điền số tiền kìa! Tắt nguồn liền, nhận phòng xong kiếm chỗ sửa điện thoại coi!"* | 21 |
+| **5. TIỆM SỬA MÁY: KHÁCH TỰ KỂ, ANH THỢ GIỮ BÍ ẨN** | `27.40 – 37.80s` | Trong tiệm sửa điện thoại (qua cửa kính sau lưng thấy rõ khách sạn đối diện). **Anh thợ (`ANH THỢ`)** chỉ báo gọn bệnh máy, **không hỏi gì về Wi-Fi**; Tùng tự ngớ người kể ra việc kết nối không cần mật khẩu; Anh thợ tỉnh bơ trả máy báo giá hai trăm. | **l5 (`anh_hai` – ANH THỢ):** *"Máy em bị cài app chạy ngầm rồi."*<br>**l6 (`thang_tun` → ANH THỢ):** *"Nãy em vô Wi-Fi khách sạn, kết nối không cần mật khẩu xong là bị liền!"*<br>**l7 (`anh_hai` – ANH THỢ):** *"Rồi, gỡ sạch rồi đó. Của em hai trăm."* | 8<br>16<br>9 |
+| **6. BÓC TRẦN CƠ CHẾ** | `37.80 – 46.80s` | Kính lúp đỏ soi 2 sóng Wi-Fi trùng tên: sóng có khóa về quầy, sóng không khóa về cục phát trong balo luồn app ngầm vào thẻ ngân hàng (`glitch`). | **l8 (`nguoi_boc_tran`):** *"Wi-Fi trùng tên không mật khẩu dễ dẫn sang cài app ngầm; mở ngân hàng hãy tắt Wi-Fi, dùng 4G, 5G!"* | 21 |
+| **7. THẺ `NHỚ KỸ`** | `46.80 – 50.50s` | Tùng cầm lại máy bật `4G/5G` xanh (`warm_outro`) + **Thẻ `NHỚ KỸ`** (3 dấu hiệu + hành động). | *(Không lời thoại)* | **0** |
+| **8. KẾT MỞ HƠI ÁM (4,5s CÂM THOẠI 100%)** | `50.50 – 55.00s` | **Cắt lạnh (`cut`), tắt `warm_outro`, nổi `tension_drone` + `footsteps` chạy gấp + `heartbeat`:** Bên trong quầy tiệm, Anh thợ đặt tay lên **tờ 200K**, nhìn ra cửa theo **lưng hai chị em Tùng – Chị Hai** đang bước ra ngoài, **khóe miệng khẽ cười hơi hắc ám chút** khi qua lớp kính thấy **một vị khách mới ôm chặt điện thoại hớt hải chạy từ khách sạn đối diện thẳng tới tiệm…** → **`impact` trầm cắt đen đột ngột!** | *(Không lời thoại)* | **0** |
+| **9. CẮT ĐEN & `LƯU Ý`** | `55.00 – 57.60s` | Khung hình đen sâu (`scene9_black.jpg`) + **`LƯU Ý` (`Disclaimer`)**. | *(Không lời thoại)* | **0** |

@@ -258,11 +258,43 @@ def _warn_icon(d: ImageDraw.ImageDraw, cx: int, cy: int, r: int, color) -> None:
     d.text((cx, cy + int(r * 0.15)), "!", font=font(int(r * 1.1)), anchor="mm", fill=(20, 20, 20, 255))
 
 
-def plate_callout(cv: Canvas, text: str, style: str = "danger", y_center: int | None = None) -> tuple[Image.Image, dict]:
-    """Tag ghi chú gọn nhẹ ôm sát chữ ở mép trên."""
+def plate_callout(cv: Canvas, text: str, style: str = "danger", y_center: int | None = None,
+                  size: str = "normal", kicker: str = "") -> tuple[Image.Image, dict]:
+    """Tag ghi chú ở mép trên; hỗ trợ size='large' + kicker để nhấn mạnh cao trào."""
     img = cv.blank()
     d = ImageDraw.Draw(img)
     color = {"danger": cv.pal["danger_rgb"], "safe": cv.pal["safe_rgb"], "info": cv.pal["accent_rgb"], "warn": cv.pal["accent_rgb"]}.get(style, cv.pal["danger_rgb"])
+    if size == "large":
+        f = font(42 if cv.is_landscape else 46)
+        fk = font(22 if cv.is_landscape else 25)
+        max_w = min(cv.R - cv.L - 56, 1340 if cv.is_landscape else (cv.R - cv.L - 56))
+        lines = wrap(d, text, f, max_w, 4)
+        lh = 52 if cv.is_landscape else 58
+        kh = 46 if kicker else 0
+        bh = 28 + kh + lh * len(lines) + 18
+        text_max_w = max([text_w(d, ln, f, 4) for ln in lines] + ([text_w(d, kicker, fk, 2) + 36] if kicker else [0]))
+        bw = min(cv.R - cv.L, text_max_w + 60)
+        cx = (cv.L + cv.R) // 2
+        x0 = max(cv.L, cx - bw // 2)
+        x1 = min(cv.R, x0 + bw)
+        yc = int(y_center if y_center is not None else (210 if cv.is_landscape else 320))
+        min_y = cv.TOPY if cv.is_landscape else 155
+        y0 = max(min_y, min(cv.MAXY - bh, yc - bh // 2))
+        y1 = y0 + bh
+        d.rounded_rectangle([x0, y0, x1, y1], radius=18, fill=(12, 14, 22, 195), outline=(*color, 245), width=4)
+        y = y0 + 18
+        if kicker:
+            kw = text_w(d, kicker, fk, 0) + 34
+            d.rounded_rectangle([cx - kw // 2, y - 2, cx + kw // 2, y + 36], radius=10, fill=(*color, 245))
+            k_fill = (18, 18, 22, 255) if style in ("warn", "info") else (255, 255, 255, 255)
+            d.text((cx, y + 17), kicker, font=fk, anchor="mm", fill=k_fill)
+            y += kh
+        txt_fill = (255, 232, 110, 255) if style == "warn" else (255, 255, 255, 255)
+        for ln in lines:
+            d.text((cx, y + lh // 2 - 4), ln, font=f, anchor="mm", fill=txt_fill, stroke_width=4, stroke_fill=(0, 0, 0, 255))
+            y += lh
+        return img, {"type": "callout", "style": style, "text": f"{kicker} — {text}".strip(" —"), "bbox_px": [x0, y0, x1, y1],
+                     "safe_zone_compliant": cv.compliant(x0, y0, x1, y1)}
     f = font(30 if cv.is_landscape else 32)
     max_w = min(cv.R - cv.L - 110, 1280 if cv.is_landscape else (cv.R - cv.L - 110))
     lines = wrap(d, text, f, max_w, 3)
@@ -649,7 +681,8 @@ def run(ep: Episode, preview_only: bool = False) -> dict:
         add(im, me, f"chat{i + 1}", cb["start"], cb["end"], 0.15)
 
     for i, co in enumerate(cfg.get("callouts", [])):
-        im, me = plate_callout(cv, co["text"], co.get("style", "danger"), co.get("y"))
+        im, me = plate_callout(cv, co["text"], co.get("style", "danger"), co.get("y"),
+                               co.get("size", "normal"), co.get("kicker", ""))
         add(im, me, f"callout{i + 1}", co["start"], co["end"], 0.2)
 
     rf = cfg.get("red_flags")

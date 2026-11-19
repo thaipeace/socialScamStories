@@ -1,0 +1,9 @@
+# NGUỒN CẢM HỨNG & CƠ SỞ KỸ THUẬT NỘI BỘ – EP10 (`BayWifiMienPhi`)
+
+> Chỉ lưu nội bộ để đối chiếu kỹ thuật an toàn thông tin & pháp lý; **không** nêu tên khách sạn, tiệm sửa máy, sân bay, ngân hàng, nhà mạng, hệ điều hành hay phần cứng/công cụ cụ thể trong lời thoại, hình ảnh và metadata video.
+
+1. **Chất liệu gốc (`story.txt`) & Chuẩn hóa kể chuyện đời thực + Kết mở (V6):**
+   - **Cài – Trả thuần hình ảnh & tình tiết (không lộ chủ đích bằng lời):** Hậu cảnh phố xá ngoài vách kính sảnh khách sạn (Khung 1) thoáng có tiệm sửa điện thoại nhỏ bên kia đường một cách hoàn toàn tự nhiên. Ở Khung 4, Chị Hai chỉ phản ứng đúng người thường (*"Tắt nguồn liền, nhận phòng xong kiếm chỗ sửa điện thoại coi!"*, không nhắc tới tiệm đối diện). Sau khi nhận phòng, hai chị em ghé tiệm gần nhất (chính là tiệm bên kia đường).
+   - **Điểm đánh trúng tâm lý (*Evil Twin* trùng tên 100%) & Thủ đoạn nặng đô (cài app chạy ngầm):** Hai mạng trùng hệt tên khách sạn (một có ổ khóa, một mở miễn phí không mật khẩu); vừa kết nối đã nhảy trang web bắt bấm *"Đồng ý cài gói kết nối"* → thực chất cài ứng dụng chạy ngầm chiếm quyền điều khiển màn hình, tự mở app ngân hàng điền số tiền.
+   - **Giữ Cảnh 5 và Cảnh 6 thật bình thường, không làm lộ:** Khung 2 câm thoại hoàn toàn; hai chị em phản ứng đúng người thường; tại tiệm (Khung 5), anh thợ ít nói đúng kiểu người quen việc (*"Dính app chạy ngầm rồi. Nãy vô Wi-Fi miễn phí ngoài kia phải không?"* → *"Rồi, gỡ sạch rồi đó. Của em hai trăm."*), không giảng bài an ninh mạng.
+   - **Kết mở 4,6s câm thoại hơi ám, tuyệt đối không quy kết (Khung 8 – sau khi đã Bóc trần & Thẻ `NHỚ KỸ`):** Tùng đặt tờ `200K` trả công sửa máy, anh thợ bình thản nhận tiền; xa xa qua cửa kính hướng sang bên kia đường, một người khách khác cầm điện thoại hớt hải cũng đang chạy về phía tiệm → cắt đen đột ngột. Không lời thoại, không quy kết — tự khán giả cảm nhận và mở ra nhiều tầng suy ngẫm.
