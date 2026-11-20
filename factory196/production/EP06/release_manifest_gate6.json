@@ -1,0 +1,74 @@
+{
+  "episode_id": "EP06",
+  "factory": "factory196",
+  "aspect_ratio": "16:9",
+  "title": "Ba triệu tám trên màn hình",
+  "gate": "GATE_6_PRODUCTION_RELEASE",
+  "status": "PRODUCED_READY_FOR_PUBLISH",
+  "released_at": "2026-11-20T07:44:17.705952+07:00",
+  "master_video": {
+    "path": "factory196/production/EP06/EP06_BaTrieuTamTrenManHinh_242s.mp4",
+    "mirror": "06_RENDERED_VIDEOS/EP06_BaTrieuTamTrenManHinh_242s.mp4",
+    "srt": "factory196/production/EP06/EP06_BaTrieuTamTrenManHinh_242s.srt",
+    "thumbnail_9x16": "factory196/production/EP06/EP06_Thumbnail_9x16.jpg",
+    "thumbnail_16x9": "factory196/production/EP06/EP06_Thumbnail_16x9.jpg",
+    "thumbnail_sec": 175.27,
+    "size_mb": 97.84,
+    "sha256": "bcb36c9393c73d5c706884f4ec0ce939fdd86d9ff102bcd610b08cc9516704e3"
+  },
+  "youtube_upload": {
+    "primary_title": "App Mua Hàng Hộ 'Bạn Thân 4.0' & Nhóm Chat Cảm Ơn Rối Rít: Cú Khóa Rút 3 Triệu 8 | Bóc Trần Lừa Đảo",
+    "primary_title_length": 99,
+    "alternative_titles": [
+      "Bù 10 Ngàn Phần Thiếu Khi Mua Hàng Hộ Tại Nhà: Tiền Thật Đi Ra & Con Số Đứng Yên | Bóc Trần Lừa Đảo",
+      "Trang Mua Hàng Hộ Ghi Từ Năm 2018, Tra Ra Mới Mở Tuần Trước | Bóc Trần Lừa Đảo"
+    ],
+    "description": "Ứng dụng 'Bạn Thân 4.0' giới thiệu mua hàng giùm cho người bận không có thời gian, cấp sẵn 40.000đ làm thử cùng nhóm chat báo thành quả cảm ơn rối rít — cho đến khi số dư trên màn hình nhảy lên 3.850.000đ nhưng nút rút tiền bất ngờ khóa chặt.\n\n⏱️ Các hồi trong phim:\n00:00 Mở đầu – Ba triệu tám trên màn hình & cú khóa rút tiền\n00:31 Hồi 1 – Ứng dụng Bạn Thân 4.0 & nhóm chat rối rít cảm ơn\n01:28 Hồi 2 – Mười ngàn bù thiếu & con số nhảy múa\n02:18 Hồi 3 – Tiền thật đi ra & con số đứng yên\n02:44 Hồi 4 – Tên miền sáu ngày tuổi\n03:12 Hồi 5 – Tắt màn hình để giữ lại tiền thật\n03:39 Nhớ kỹ – 5 nguyên tắc nhận diện bẫy mua hàng hộ\n03:47 Kết mở – Màn hình danh sách & nút Chốt khách\n\n🎬 ĐÂY LÀ PHIM HOẠT HÌNH DỰNG LẠI TÌNH HUỐNG ĐỂ CẢNH BÁO\nNhân vật, tên gọi, số điện thoại, số tiền trong phim đều là hư cấu nhằm mục đích cảnh báo.\n\n🤖 Hình ảnh và âm thanh được hỗ trợ sản xuất bởi công cụ AI.\n\n#bóctrầnlừađảo #cảnhgiáclừađảo #vạnchuyện",
+    "tags_csv": "cảnh giác lừa đảo, bóc trần lừa đảo, vạn chuyện, cộng tác viên mua hàng hộ, bẫy bù tiền đơn hàng, nhóm chat chim mồi, số dư ảo trên màn hình, an toàn mạng, kỹ năng thoát hiểm, an toàn đời thực, phim hoạt hình cảnh báo, hồ sơ lừa đảo",
+    "tags_list": [
+      "cảnh giác lừa đảo",
+      "bóc trần lừa đảo",
+      "vạn chuyện",
+      "cộng tác viên mua hàng hộ",
+      "bẫy bù tiền đơn hàng",
+      "nhóm chat chim mồi",
+      "số dư ảo trên màn hình",
+      "an toàn mạng",
+      "kỹ năng thoát hiểm",
+      "an toàn đời thực",
+      "phim hoạt hình cảnh báo",
+      "hồ sơ lừa đảo"
+    ],
+    "hashtags": [
+      "#bóctrầnlừađảo",
+      "#cảnhgiáclừađảo",
+      "#vạnchuyện"
+    ],
+    "pinned_comment": "📌 Bạn hay người thân từng được mời vào nhóm chat mua hàng hộ 'cấp sẵn tiền làm thử' rồi mọi người báo thành quả cảm ơn rối rít chưa? Chia sẻ ở bình luận để mọi người cùng cảnh giác nhé (lưu ý không đăng SĐT, STK, tên miền thật hay tên người thật).",
+    "studio_settings": {
+      "playlist": "Hồ Sơ Bóc Trần Lừa Đảo – Phim Dài Chuyên Sâu",
+      "made_for_kids": false,
+      "age_restricted": false,
+      "altered_or_synthetic_content": true,
+      "category": "Education (Giáo dục)",
+      "video_language": "vi",
+      "subtitles_file": "factory196/production/EP06/EP06_BaTrieuTamTrenManHinh_242s.srt",
+      "comments": "ON_MODERATION_BASIC"
+    },
+    "copy_paste_files": {
+      "title_txt": "factory196/production/EP06/youtube_upload/1_TITLE.txt",
+      "description_txt": "factory196/production/EP06/youtube_upload/2_DESCRIPTION.txt",
+      "tags_txt": "factory196/production/EP06/youtube_upload/3_TAGS.txt",
+      "pinned_comment_txt": "factory196/production/EP06/youtube_upload/4_PINNED_COMMENT.txt",
+      "studio_settings_md": "factory196/production/EP06/youtube_upload/5_YOUTUBE_STUDIO_SETTINGS.md"
+    }
+  },
+  "gate5_reference": "factory196/staging/EP06/qa_audit_report_gate5.json",
+  "compliance_flags": {
+    "no_real_identity": true,
+    "no_how_to_detail": true,
+    "red_flags_card": true,
+    "dramatized_disclaimer": true,
+    "ai_disclosure_required": true
+  }
+}

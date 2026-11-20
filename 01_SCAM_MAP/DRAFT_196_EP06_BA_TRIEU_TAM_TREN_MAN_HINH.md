@@ -1,36 +1,37 @@
-# 196 / EP06 – BA TRIỆU TÁM TRÊN MÀN HÌNH *(Bản nháp chuẩn hóa Tầng 1 – chờ duyệt lên Staging)*
+# 196 / EP06 – BA TRIỆU TÁM TRÊN MÀN HÌNH *(Đã xuất Production – Gate 6 Release 8/8 PASS)*
 
 - **Mã tập:** `EP06` (`factory196`) · **Slug:** `BaTrieuTamTrenManHinh`
-- **Nhà máy:** `factory196` – `16:9` (`1920x1080 @ 30fps`) · **Thời lượng ước tính:** `~260s – 285s` (~4 phút 25 giây sau khi căn WAV TTS thật ở Gate 2)
-- **Họ kịch bản:** `JOB-TASK` – Bẫy cộng tác viên xử lý đơn hàng tại nhà: **Cấp sẵn `40.000đ` vốn làm thử** (không tốn tiền túi ở đơn đầu `30.000đ` → nhảy lên `45.000đ`) → Đơn `55.000đ` chỉ bắt **"bù phần thiếu" `10.000đ`** → Trượt dần sang các khoản bù chênh lệch vài trăm ngàn khiến nạn nhân mất **`2.140.000đ` tiền thật**, trong khi màn hình treo con số ảo **`3.850.000đ`** để ép nạp thêm `2.900.000đ` → **Người bạn IT giấu mặt** tra tên miền bóc trần trang tự nhận từ năm 2018 thực chất mới mở 6 ngày → **Kết mở đường dây ngầm:** Cụm máy chủ mới mở lại chung đầu mối với mấy nhánh đợt trước.
-- **Tỷ lệ:** **~97% kịch tâm lý – điện ảnh / ~3% Người Bóc Trần (đúng 1 câu 19 từ, thẻ kết `< 9s`)**
+- **Nhà máy:** `factory196` – `16:9` (`1920x1080 @ 30fps`) · **Thời lượng thực tế (WAV thật):** `242.29s` (`04:02` · 16 cảnh · 30 câu thoại · 568 từ · câu dài nhất `25 từ` · Staging MP4 `97.84 MB`)
+- **Họ kịch bản:** `JOB-TASK` – Ứng dụng mua hàng hộ **"Bạn Thân 4.0"** (mua hàng giùm cho người bận không có thời gian, nhận hoa hồng theo đơn, tự nhận vận hành từ năm 2018): **Cấp sẵn `40.000đ` vốn làm thử** (`30.000đ` → nhảy lên `45.000đ`) + **nhóm chat mọi người báo thành quả cảm ơn rối rít** → Đơn `55.000đ` chỉ bắt **"bù phần thiếu" `10.000đ`**, cả nhóm xúm vô chỉ vẽ & khuyến khích chốt đơn lớn khiến nạn nhân mất **`2.140.000đ` tiền thật**, trong khi màn hình treo **`3.850.000đ`** và vừa bấm rút liền bị đòi bù `2.900.000đ` trước 23h giữa lúc cả nhóm lẫn hỗ trợ vẫn xúm vô hối nạp tiếp → **Người bạn cũ giấu mặt** cực kiệm lời, phản ứng như đã biết chuyện, chốt dứt khoát giúp Nam dừng tay ngay → **Kết mở đường dây ngầm:** Màn hình vi tính hiện danh sách khách, 1 câu buông gọn *"Haiz… đúng là trái đất tròn."*, con trỏ chuột rê vào nút **`"Chốt khách"`** rồi cắt đen đột ngột.
+- **Tỷ lệ:** **~97% kịch tâm lý – điện ảnh / ~3% Người Bóc Trần (đúng 1 câu 19 từ, thẻ kết `8.7s < 9s`)**
 - **Thông điệp lõi:** *Tiền nằm trong ngân hàng mới có đơn vị chịu trách nhiệm giữ cho bạn; còn số dư nhảy trên một trang web lạ chỉ là con số người dựng trang muốn gõ bao nhiêu cũng được.*
 
 ---
 
-## 1. Đối chiếu nâng cấp từ bản nháp thô [`story.txt`](../factory196/materialAndDraft/EP06/story.txt) sang chuẩn `factory196` (`EP04` / `EP27` / `EP05`)
+## 1. Nâng cấp lên `v2-draft` (từ [`story.txt`](../factory196/materialAndDraft/EP06/story.txt) & `v1-draft`)
 
-1. **Sửa lỗi toán học ở mồi nhử đầu tiên:** Bản nháp gốc ghi cấp sẵn `50.000đ`, làm đơn `30.000đ` xong số dư lại tụt còn `45.000đ` (lỗ 5.000đ). Bản chuẩn chỉnh lại: **cấp sẵn `40.000đ`** → hoàn thành đơn `30.000đ` cộng hoa hồng thành **`45.000đ`** → qua đơn `55.000đ` báo **thiếu đúng `10.000đ`** (`55k - 45k = 10k`), khớp logic tuyệt đối.
-2. **Đảo cấu trúc Hook `00:00 – 00:30` chuẩn điện ảnh:** Thay vì mở đầu chậm rãi lướt điện thoại, phim mở thẳng vào khoảnh khắc nửa đêm khi Nam bấm rút `3.850.000đ` bị khóa và bị ép nạp thêm `2.900.000đ` trước 23h, sau đó mới lùi về 3 tối mưa trước.
-3. **Bối cảnh đời thực tôn trọng nhân vật:** Nam không tham làm giàu ảo — mưa dầm cả tuần làm kho cắt ca tối, anh muốn kiếm thêm chút tiền buổi tối ở nhà phụ vợ đóng học cho con. Vợ Nam (**Thảo**) kiệm lời, tỉnh táo, hỏi đúng 2 câu chạm tim đen (*"Có bắt bỏ tiền túi ra hông?"* và *"Anh rút thử về ngân hàng mình lần nào chưa?"*) và không hề chì chiết khi chồng thú thật mất `2.140.000đ`.
-4. **Chuyển hóa đoạn thuyết giảng cuối phim thành thoại đời & Bóc trần `< 10s`:** Đoạn lời dẫn dài gần 100 chữ ở cuối `story.txt` được cô đọng thành câu nói sắc gọn của người bạn IT (*"Tiền trong ngân hàng mới có nơi giữ cho mày. Còn con số trên trang lạ… tụi nó gõ bao nhiêu chẳng được."*) và đúng **1 câu 19 từ (`< 9s`)** của `Người Bóc Trần`.
-5. **Giữ trọn chi tiết "Từ năm 2018" + Người bạn IT giấu mặt + Kết mở nhẹ nhàng:**
-   - Cài rõ dòng chữ `"Vận hành từ năm 2018"` ngay ở Hồi 1 (`s03`) cả trên bong bóng lẫn câu Nam trấn an vợ để cú tra tên miền ở Hồi 4 (`s09`) có căn cứ chặt chẽ.
-   - Giữ đúng ghi chú sản xuất của tác giả: **Người bạn IT hoàn toàn không lộ mặt, không lộ tên**. Sau thẻ `NHỚ KỸ`, thêm đúng 10 giây kết mở khi chiếc điện thoại thứ hai trên bàn anh ta rung lên: *"Ừ. Lại chung một đầu mối đứng sau mấy nhánh đợt trước."* rồi cắt đen đột ngột — nối mạch tự nhiên với `EP04` & `EP05` mà không lộ ý tưởng hay tự trói kịch bản về sau.
+1. **Tạo lý do kinh tế thuyết phục & tên app sang hơn ở Hồi 1 (`Bạn Thân 4.0`):** Thêm lời giới thiệu ngắn gọn ngay Hồi 1 (`s03`) rằng **"Bạn Thân 4.0"** là ứng dụng uy tín mua hàng giùm cho những người bận không có thời gian, người rảnh nhận mua hộ hưởng hoa hồng theo đơn và tự nhận chạy từ năm 2018 — tạo động cơ hợp lý để Nam tin và làm tiếp.
+2. **Bổ sung Group Chat sôi động cảm ơn rối rít & đẩy tương tác qua kênh nhóm (`s03b`, `s04`, `s05`):**
+   - Thêm cảnh **`s03b_group_buzz`** trong Hồi 1: **Nhóm Bạn Thân 4.0** nổ thông báo liên tục, các thành viên (*Chị Loan, Hoa, Tuấn, Minh*) báo thành quả và cảm ơn rối rít.
+   - Giảm bớt tương tác 1-1 khô khan với Điều Phối (chỉ giữ đúng 1 câu chào mở đầu ở `s03`) và Hỗ Trợ; chuyển toàn bộ nhịp giải thích **"bù `10.000đ` phần thiếu"** (`s04`) và **cổ vũ chốt đơn lớn** (`s05`) sang **kênh group chat** để các bạn cùng nhóm chỉ vẽ, khuyến khích. Sang Hồi 3 (`s07`), hai tiếng sau bữa cơm, khi Nam bấm rút liền bị đòi bù `2.900.000đ`, nhóm chat lẫn hỗ trợ **không hề vô lý khóa chặn gì cả** mà tiếp tục hối nạp nốt trước 23h — chính sự đối lập với sao kê ngân hàng thật `-2.140.000đ` khiến Nam tự dừng tay.
+3. **Sửa lỗi toán học mồi nhử & giữ nhịp Hook điện ảnh:** Cấp sẵn `40.000đ` → đơn `30.000đ` nhảy lên `45.000đ` → đơn `55.000đ` thiếu đúng `10.000đ` (`55k - 45k = 10k`) → cộng dồn sao kê thật `-10k -180k -450k -1.500k = -2.140.000đ`, treo `3.850.000đ` đòi bù `2.900.000đ` (`= 6.750.000đ`).
+4. **Người bạn cũ cực kiệm lời, nói như đã biết chuyện (`s09`):** Cắt thoại từ 3 câu dài (67 từ) xuống chỉ còn **2 câu sắc lạnh (25 từ tổng)**: *"Tên miền mới mở thứ Ba tuần trước. Biết ngay mà."* và *"Số đó tụi nó tự gõ. Bỏ ngay đi, chuyển nữa là mất nữa."* — dứt khoát, đủ sức nặng thuyết phục Nam ngay lập tức.
+5. **Kết mở đường dây ngầm gọn lạnh, không thừa thông tin (`s12` – `s13`):** Bỏ hoàn toàn cuộc gọi máy phụ giải thích cụm máy chủ/nhánh trước để tránh tự trói logic các tập sau. Chỉ giữ đúng hình ảnh căn phòng tối: màn hình vi tính hiện **danh sách khách** (`#408 · #409 · #410 · Nam`), đúng 1 câu *"Haiz… đúng là trái đất tròn."*, con trỏ chuột rê thẳng vào nút đỏ **`[ CHỐT KHÁCH ]`** → **IMPACT + CẮT ĐEN ĐỘT NGỘT**.
 
 ---
 
-## 2. Nhân vật & Phân tách giọng (`02_CAST/cast.json` – 7 tuyến / 7 voice khác nhau 100%)
+## 2. Nhân vật & Phân tách giọng (`02_CAST/cast.json` – 8 tuyến / 8 voice khác nhau 100%)
 
 | Nhân vật trong tập | Key `cast.json` | Voice | Chỉ đạo diễn xuất & âm sắc |
 | :--- | :--- | :--- | :--- |
 | **Nam** (32t, kỹ thuật viên kho, chăm làm) | `anh_hai` | `Orus` | Nam trầm ấm, thật thà; hào hứng lúc đầu, chua chát ở Hồi 3, thẳng thắn nhận lỗi ở Hồi 5 |
 | **Thảo** (31t, vợ Nam) | `chi_hai` | `Sulafat` | Nữ trầm vừa, **cực kiệm lời, thực tế, không trách móc**, giữ nhịp tỉnh táo cho gia đình |
-| **Vy Điều Phối** (hướng dẫn đơn đầu) | `ke_ngot_ngao_nu` (+ `af: phone`) | `Aoede` | Nữ trẻ ngọt ngào, lịch sự, bình thường hóa việc "bù phần thiếu" rồi khóa máy |
-| **Bộ phận Hỗ trợ đối soát** | `chu_no` (+ `af: phone`) | `Fenrir` | Nam trầm đều, **lịch sự lạnh băng**, đánh đúng tâm lý tiếc `3,8 triệu` đang treo |
-| **Người bạn IT giấu mặt** | `ong_bay` | `Algenib` | Nam 35t trầm khàn nhẹ, điềm tĩnh, kiệm lời; **khung hình tuyệt đối không lộ mặt** |
-| **Đầu dây lạ (Kết mở)** | `chi_tu` (+ `af: phone`) | `Zephyr` | Nữ trầm tĩnh gọi vào máy phụ của người bạn IT ở cảnh kết mở |
-| **Người Bóc Trần** | `nguoi_boc_tran` | `Charon` | **Chỉ xuất hiện đúng 1 câu (19 từ, `< 9s`) ở thẻ `NHỚ KỸ`** |
+| **Vy Điều Phối** (chào mở đầu Hồi 1) | `ke_ngot_ngao_nu` (+ `af: phone`) | `Aoede` | Nữ trẻ ngọt ngào, chỉ xuất hiện đúng 1 câu chào mở đầu ở Hồi 1 |
+| **Chị Loan** (thành viên nhóm chat) | `co_hanh` (+ `af: phone`) | `Despina` | Nữ ~42t thân tình, hồ hởi cảm ơn rối rít (Hồi 1) & nhiệt tình chỉ vẽ Nam bù `10k` (Hồi 2) |
+| **Tuấn** (thành viên nhóm chat) | `thang_tun` (+ `af: phone`) | `Puck` | Nam trẻ 24t sáng, sôi nổi báo thành quả (Hồi 1) & cổ vũ Nam chốt đơn lớn (Hồi 2) |
+| **Bộ phận Hỗ trợ đối soát** | `chu_no` (+ `af: phone`) | `Fenrir` | Nam trầm đều, **lịch sự lạnh băng**, đánh đúng tâm lý tiếc `3,8 triệu` ở Hook & Hồi 3 |
+| **Người bạn cũ giấu mặt** | `ong_bay` | `Algenib` | Nam 35t trầm khàn nhẹ, **cực kiệm lời, nói như đã biết chuyện, dứt khoát; tuyệt đối không lộ mặt** |
+| **Người Bóc Trần** | `nguoi_boc_tran` | `Charon` | **Chỉ xuất hiện đúng 1 câu (19 từ, `8.7s < 9s`) ở thẻ `NHỚ KỸ`** |
 
 ---
 
@@ -38,22 +39,24 @@
 
 | Cài ở | Chi tiết điện ảnh | Trả ở |
 | :--- | :--- | :--- |
-| **C3** (Hồi 1) | Dòng giới thiệu `"Vận hành từ năm 2018"` + câu Nam khoe vợ *"trang này ghi chạy từ năm hai ngàn mười tám"* | **C9** (Hồi 4): Người bạn IT tra ra tên miền thật mới đăng ký hồi **thứ Ba tuần trước (6 ngày tuổi)** |
+| **C3** (Hồi 1) | App **"Bạn Thân 4.0"** giới thiệu mua hàng giùm người không có thời gian · `"Từ năm 2018"` | **C9** (Hồi 4): Người bạn cũ tra ra tên miền mới mở hồi **thứ Ba tuần trước (6 ngày tuổi)** — *"Biết ngay mà."* |
+| **C3b–C5** (Hồi 1–2) | **Nhóm Bạn Thân 4.0** báo thành quả cảm ơn rối rít, cả nhóm xúm vô chỉ vẽ bù `10.000đ` & cổ vũ đơn lớn | **C7** (Hồi 3): Khi bấm rút bị đòi bù `2.900.000đ`, **nhóm vẫn xúm vô hối nạp nốt trước 23h** trong khi sao kê ngân hàng thật chỉ thấy tiền đi ra (`-2.140.000đ`), khiến Nam nhận ra bất thường và dừng tay |
 | **C3–C5** (Hồi 1–2) | Cấp sẵn `40.000đ` → bù `10.000đ` → bù từng khoản chênh lệch lẻ vài trăm ngàn | **C7 & C10** (Hồi 3 & 5): Sao kê ngân hàng thật cộng dồn thành **`-2.140.000đ` tiền thật đã mất** |
 | **C6** (Hồi 2) | Câu hỏi tỉnh táo của Thảo: *"Nhưng anh bấm rút thử tiền về ngân hàng mình lần nào chưa?"* | **C0 & C7**: Nút rút tiền có sẵn chỉ là hình vẽ; chính sự tỉnh táo giúp Nam dừng tay không nạp thêm `2.900.000đ` |
-| **C8–C9** (Hồi 4) | Căn phòng tối của **Người bạn IT giấu mặt** (chỉ thấy đôi bàn tay cạnh laptop) | **C11 (Kết mở):** Cuộc gọi máy phụ tiết lộ cụm tên miền mới mở lại chung đầu mối với *"mấy nhánh đợt trước"* |
+| **C8–C9** (Hồi 4) | **Người bạn cũ giấu mặt** cực kiệm lời, phản ứng như đã biết rõ trò này (*"Biết ngay mà."*) | **C11 (Kết mở):** Màn hình vi tính hiện **danh sách khách** (`#408 · #409 · #410 · Nam`), *"Haiz… đúng là trái đất tròn."*, chuột rê vào nút **`[ CHỐT KHÁCH ]`** → cắt đen |
 
 ---
 
-## 4. Kịch bản chi tiết theo cảnh (15 cảnh · 30 câu thoại · Mọi câu ≤ 25 từ)
+## 4. Kịch bản chi tiết theo cảnh (16 cảnh · 30 câu thoại · Mọi câu ≤ 25 từ)
 
-*(Xem toàn văn lời thoại và mã biên dịch timeline tại [`factory196/materialAndDraft/EP06/script/SCRIPT.md`](../factory196/materialAndDraft/EP06/script/SCRIPT.md) và [`factory196/materialAndDraft/EP06/source/build_draft.py`](../factory196/materialAndDraft/EP06/source/build_draft.py)).*
+*(Xem toàn văn lời thoại, bảng prompt 14 ảnh và mã biên dịch timeline tại [`SCRIPT.md`](../factory196/materialAndDraft/EP06/script/SCRIPT.md), [`IMAGE_PROMPTS.md`](../factory196/materialAndDraft/EP06/IMAGE_PROMPTS.md) và [`build_draft.py`](../factory196/materialAndDraft/EP06/source/build_draft.py)).*
 
 ---
 
 ## 5. Tự kiểm Pháp lý, Nghiệp vụ & Harness (`Gate 0` & `Gate 5` Pre-check)
 
-- [x] **Sạch 100% `policy_wordlists.json`:** `0 identity_hard_block` (không nêu tên sàn TMĐT, ngân hàng, ví điện tử thật) · `0 identity_soft_warn` (không dùng Zalo/Facebook/Telegram) · `0 asr_ocr_hard_block` · `0 asr_ocr_soft_warn` (tuyệt đối không dùng cụm `"kiếm tiền online"`, `"lãi khủng"`, `"chết"`, `"tống tiền"`).
-- [x] **Sạch 100% Regex `PHONE_RE` / `URL_RE` / `ACCOUNT_RE`:** Không viết tên miền có đuôi `.com/.vn/.online` trên bong bóng (dùng nhãn mô tả `"Ngày đăng ký thật: Thứ Ba tuần trước"`), số tài khoản che 4 số cuối (`TK …6821`).
-- [x] **Đúng khuyến nghị pháp lý (`CONTENT_LEGAL_SAFETY_HARNESS.md`):** Dặn rõ cắt lỗ ngay, không thuê "dịch vụ lấy lại tiền treo" (tránh bẫy lừa lần hai), lưu sao kê và đường dẫn trình báo cơ quan công an.
-- [x] **Chuẩn thoại `factory196`:** 30 câu thoại, **100% câu ≤ 25 từ**, phương ngữ miền Nam tự nhiên xuyên suốt, `Người Bóc Trần` đúng 1 câu 19 từ (`< 9s`).
+- [x] **Sạch 100% `policy_wordlists.json`:** `0 identity_hard_block` · `0 identity_soft_warn` · `0 asr_ocr_hard_block` · `0 asr_ocr_soft_warn` (đã quét tự động toàn bộ `episode.json`).
+- [x] **Sạch 100% Regex `PHONE_RE` / `URL_RE` / `ACCOUNT_RE`:** Tên ứng dụng hư cấu `Bạn Thân 4.0` không chạm `URL_RE`, không viết tên miền có đuôi `.com/.vn/.online`, số tài khoản che 4 số cuối (`TK …6821`).
+- [x] **Sạch Safe Zone 100% (đã kiểm tra bbox từng pixel trên `gate4_timeline`):** 18 bong bóng chat + 1 callout `[ CHỐT KHÁCH ]` + 5 thẻ chương + Hook đều `safe_zone_compliant = True`, `0` va chạm pixel, `0` tràn qua điểm cắt cảnh.
+- [x] **Đúng khuyến nghị pháp lý (`CONTENT_LEGAL_SAFETY_HARNESS.md`):** Dặn rõ cắt lỗ ngay, cảnh giác nhóm chat chim mồi, không thuê "dịch vụ lấy lại tiền treo", lưu sao kê và đường dẫn trình báo cơ quan công an.
+- [x] **Chuẩn thoại `factory196`:** 30 câu thoại, **100% câu ≤ 25 từ** (`568 từ`, `119 từ/phút`), phương ngữ miền Nam tự nhiên xuyên suốt, `Người Bóc Trần` đúng 1 câu 19 từ (`8.7s < 9s`).
