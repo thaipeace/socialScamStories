@@ -1,0 +1,29 @@
+# EP08 – MỘT VÒNG TIỀN, HAI NỬA SỰ THẬT *(Ý tưởng & Hồ sơ kịch bản 196 · v2)*
+
+## 1. Cốt lõi tâm lý (Insight)
+Vụ lừa "người đứng giữa" (Man-in-the-Middle) trên ứng dụng nhắn tin có 4 tầng đánh gục lý trí mà người xem cần **nghe rõ và thấy rõ**:
+
+1. **Kẻ gian không chỉ biết thông tin — nó nhái đúng phong cách nói chuyện:** Đọc lén lịch sử trò chuyện giúp kẻ gian nắm trọn khẩu ngữ đặc trưng của sếp (*"cu Khang"*, *"chị nhà"*, *"lộ bài"*, *"làm gọn giùm anh, anh tính"*) cùng một sự kiện có thật sắp diễn ra (*kỷ niệm 10 năm ngày cưới*).
+2. **Cú chốt lòng tin cho tài khoản mới — cuộc gọi hình/giọng ghép 3 giây:** Để nhân viên không nghi ngờ nick mới, kẻ gian chủ động nhá một cuộc gọi video giật hình 3 giây (cắt ghép từ clip/tin thoại cũ của sếp) rồi cúp liền, đổ tại mạng yếu. Vừa thấy mặt, vừa nghe giọng, lại đúng văn phong — mọi hàng rào phòng vệ đều hạ xuống.
+3. **Kiểm chứng sai câu hỏi & dòng tiền đi vòng:** Nhân viên có gọi trực tiếp vào **số điện thoại thật** của sếp; sếp cũng nghe đúng **giọng thật** của nhân viên. Nhưng vì lý do *"giữ bí mật khỏi vợ"*, cả hai lại diễn đúng vai kẻ đứng giữa viết sẵn. Tiền đi trọn một vòng: Đạt → Khang (`45 triệu`, `ND: Ung luong`) → Kẻ gian.
+4. **Cái giá đắt nhất là vết nứt nghi ngờ sau khi mất 45 triệu (Kết mở không đường dây ngầm):** Không cần băng nhóm lớn ở cuối phim. Ngay trên bàn cà phê quen, hai anh em từng tin nhau tuyệt đối bắt đầu lặng lẽ **xin bằng chứng của nhau để phòng thân** — cắt đen đột ngột.
+
+## 2. Giải pháp thể hiện (Dễ hiểu qua tai nghe, không nhồi chữ)
+- **Thay 2 bong bóng giải thích dài ở `s03` bằng đối thoại trực tiếp trong phòng tối:** Kẻ đứng giữa và một đàn em kỹ thuật (cả hai giấu mặt) bàn gọn 4 câu — người xem chỉ cần nghe là hiểu ngay toàn bộ ván cờ mà không phải căng mắt đọc bong bóng.
+- **Không để nhân vật tự nói chuyện một mình:** Cắt chéo sang phòng tối để chính giọng kẻ đứng giữa đọc 3 nhịp nhắn tin (nhái đúng khẩu ngữ Anh Đạt), kết hợp Hân (đồng nghiệp bàn bên) và Chị Quyên (vợ Đạt) để chuyển phần còn lại thành thoại đời thường tự nhiên.
+- **Bong bóng chat tối giản tối đa:** Chỉ giữ nhãn siêu ngắn 1 dòng để đánh dấu cuộc gọi hình ghép 3 giây và 3 bước dòng tiền (`1 · ĐẠT → KHANG` → `2 · GỬI STK LẠ` → `3 · KHANG → KẺ GIAN`).
+
+## 3. Nhân vật & Bản đồ Cài – Trả (Hư cấu 100%, không thương hiệu)
+- **Anh Đạt (38t):** Chủ xưởng nội thất nhỏ, nói cộc gọn thực dụng, quý nhân viên.
+- **Khang (26t):** Kỹ thuật viên theo Anh Đạt 3 năm, chịu khó, rất nể sếp.
+- **Chị Quyên (36t):** Vợ Anh Đạt, giữ tài khoản chung gia đình, thực tế, ít lời.
+- **Hân (27t):** Đồng nghiệp văn phòng bàn kế Khang.
+- **Kẻ đứng giữa & Đàn em kỹ thuật:** Giấu mặt trong phòng tối ánh xanh lạnh (Đàn em chỉ xuất hiện ở `s03` bàn kế hoạch).
+
+| Cài | Chi tiết | Trả |
+|---|---|---|
+| `s02` | Quán cà phê sáng quen + 2 ly cà phê đá nắng ấm | `s13–s14` Đúng quán đó, đúng 2 ly cà phê đá nhưng trời chiều xám lạnh |
+| `s02` | Khẩu ngữ riêng của Đạt (*"cu Khang"*, *"chị nhà"*, *"lộ bài"*, *"gọn ghẽ / anh tính"*) + *kỷ niệm 10 năm* | `s03` Đàn em phân tích → `s04–s05–s08–s10` Kẻ gian nhái y hệt → `s12` Khang bàng hoàng nhắc lại |
+| `s03` | Kế hoạch nhá cuộc gọi hình/giọng ghép 3 giây đổ mạng yếu | `s04` Cuộc gọi 3 giây giật hình → `s06` Khang kể tự nhiên với Hân → `s12` Đối chất vỡ lẽ |
+| `s07` | Chị Quyên dặn *"ghi rõ nội dung ứng lương rồi chuyển"* | `s14` Dòng sao kê `ND: Ung luong · +45.000.000đ` tạo áp lực buộc Khang phòng thân |
+| `s12` | Đạt chợt nhớ *"hồi khuya máy anh có báo đăng nhập từ thiết bị khác mà bấm bỏ qua"* | `s14` Câu chốt lạnh người của Khang: *"Vậy anh cũng chụp gửi em cái thông báo tài khoản anh bị đăng nhập lạ hôm kia… để em giữ."* |
