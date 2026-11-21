@@ -38,9 +38,8 @@ real = {p.stem: wav_dur(p.stem) for p in TTS.glob("*.wav")} if TTS.is_dir() else
 real = {k: v for k, v in real.items() if v}
 
 # ---------------------------------------------------------------- GIỌNG
-# 8 tuyến nhân vật = 8 voice hoàn toàn tách biệt trong 02_CAST/cast.json
-# (DAT_FAKE chủ đích dùng đúng voice Orus + af="phone" cho cú gọi ghép 3s;
-#  LONG_P dùng đúng voice Algieba + af="phone" để nối mượt sang nhân vật Long ở EP08b)
+# 7 tuyến nhân vật = 7 voice hoàn toàn tách biệt trong 02_CAST/cast.json
+# (DAT_FAKE chủ đích dùng đúng voice Orus + af="phone" để thể hiện giọng cắt ghép giống Anh Đạt)
 NOT_OLD = "tuyệt đối không giả giọng ông già hay bà già run rẩy, không kéo dài chữ, không cải lương"
 DAT_BASE = (
     "Giọng nam miền Nam Sài Gòn 38 tuổi, phát âm chuẩn phương ngữ miền Nam xuyên suốt mọi câu, "
@@ -133,17 +132,6 @@ SPK = {
             "giữ cố định một âm sắc gọn, hơi nhanh, tỉnh bơ kiểu dân kỹ thuật làm việc trong phòng tối, " + NOT_OLD
         ),
     ),
-    "LONG_P": dict(
-        speaker="ke_ngot_ngao_nam",
-        voice="Algieba",
-        af="phone",
-        label_short="ĐẦU DÂY LẠ",
-        speaker_label="Đầu dây lạ gọi từ phòng công chứng (chính là giọng Long trong EP08b – cài nối liên hoàn)",
-        base=(
-            "Giọng nam miền Nam Sài Gòn 32 tuổi, phát âm chuẩn phương ngữ miền Nam xuyên suốt mọi câu, "
-            "giữ cố định một âm sắc sáng vừa, mượt mà, lịch sự nhanh gọn kiểu dân văn phòng, " + NOT_OLD
-        ),
-    ),
     "N": dict(speaker="nguoi_boc_tran"),
 }
 
@@ -151,6 +139,8 @@ MOTION = {
     "calm": {"scale": [1.02, 1.09], "focus": [[0.50, 0.50], [0.50, 0.47]], "wobble": "calm"},
     "tense": {"scale": [1.04, 1.14], "focus": [[0.50, 0.50], [0.48, 0.45]], "wobble": "tense"},
     "push": {"scale": [1.00, 1.16], "focus": [[0.50, 0.50], [0.50, 0.45]], "wobble": "calm"},
+    "push_left": {"scale": [1.02, 1.16], "focus": [[0.46, 0.46], [0.38, 0.38]], "wobble": "tense"},
+    "push_right": {"scale": [1.02, 1.16], "focus": [[0.54, 0.46], [0.62, 0.38]], "wobble": "tense"},
     "hand": {"scale": [1.02, 1.10], "focus": [[0.46, 0.48], [0.54, 0.46]], "wobble": "handheld"},
     "still": {"scale": [1.00, 1.05], "focus": [[0.50, 0.50], [0.50, 0.50]], "wobble": "none"},
 }
@@ -220,7 +210,7 @@ sfx("impact", 0.0, -2.5)
 bubble("ANH ĐẠT (NICK MỚI)", "Mượn anh thêm 30.000.000đ · Như sáng nay",
        side="left", y=260, stamp="AI ĐANG NHẮN?", dur=2.5, offset=0.15)
 sfx("heartbeat", 0.2, -5, dur=2.2)
-beat(2.8)
+beat(3.1)
 
 # ---- HỒI 1 · HAI HÔM TRƯỚC: CÁCH NÓI CHUYỆN ĐẶC TRƯNG & KẾ HOẠCH PHÒNG TỐI ----
 amb("street", -5.0); bgm("investigative_story", -3.8)
@@ -239,23 +229,17 @@ line("l06_dat", "DAT", "Ừ, tuần sau kỷ niệm mười năm ngày cưới. 
 line("l07_khang", "KHANG", "Dạ dễ ợt, anh chọn xong cứ nhắn em làm gọn.",
      "gật đầu nhanh nhẹn, tự tin", pause=0.3)
 
-# Phòng tối ánh xanh lạnh: KHÔNG dùng bong bóng dài — hai gã bàn nhau rõ ràng để người xem NGHE LÀ HIỂU 100%!
+# Phòng tối ánh xanh lạnh: thoại cực gọn đúng chất ám hiệu/cách làm, không giảng bài 3s hay mạng yếu
 amb("night_room", -2.5); bgm("tension_drone", -2.8)
 scene("s03_dark_room_plan", "assets/c03.jpg", "push", tr="fade_black", trd=0.4)
 mark("two_phones")
 sfx("typing", 0.2, -5, dur=1.2)
-beat(0.8)
-line("l08_tech", "TECH", "Tin nhắn cũ của ông Đạt em đọc kỹ rồi. Ổng nói cộc lắm, cứ mở miệng kêu cu Khang, gọi vợ là chị nhà.",
-     "vừa lướt màn hình bên trái vừa báo cáo gọn gàng")
-line("l09_ke", "KE_ROOM", "Tốt, nhắn y chang kiểu đó. Tới lúc cần thì nhá cuộc gọi hình ghép ba giây, cắt giọng từ tin cũ rồi cúp liền.",
-     "lạnh tĩnh chỉ đạo, giọng trầm đều không vội vã",
-     sub="Tốt, nhắn y chang kiểu đó. Tới lúc cần thì nhá cuộc gọi hình ghép 3 giây, cắt giọng từ tin cũ rồi cúp liền.")
-line("l10_tech", "TECH", "Đổ tại mạng yếu là nó tin liền. Mà mượn thẳng thằng Khang thì sao nó có tiền nhiều?",
-     "hỏi gọn đúng trọng tâm cơ chế")
-line("l11_ke", "KE_ROOM", "Không mượn nó. Bày nó gọi số thật ông Đạt xin ứng bốn lăm triệu. Sếp tự chuyển cho lính, rồi lính đẩy qua mình.",
-     "điềm nhiên chốt toàn bộ nước cờ hai đầu dây",
-     sub="Không mượn nó. Bày nó gọi số thật ông Đạt xin ứng 45 triệu. Sếp tự chuyển cho lính, rồi lính đẩy qua mình.",
-     pause=0.35)
+beat(1.1)
+line("l08_tech", "TECH", "Xong máy ông Đạt rồi. Lọc hết tin cũ, nắm thói quen xưng hô của ổng luôn.",
+     "vừa lướt màn hình bên trái vừa báo cáo gọn bơ")
+line("l09_ke", "KE_ROOM", "Ừ. Mai lên nick mới, nhớ gọi nhá nó một cái rồi mới nhắn. Đánh vòng qua thằng Khang cho gọn.",
+     "lạnh tĩnh ra lệnh gọn bằng tiếng lóng nghiệp vụ, không dài dòng",
+     pause=0.8)
 
 # ---- HỒI 2 · SÁNG HÔM SAU: CUỘC GỌI HÌNH GHÉP 3 GIÂY & VĂN PHONG Y HỆT ----
 amb("office", -3.0); bgm("suspense_pulse", -3.0)
@@ -287,18 +271,16 @@ line("l14_ke", "KE_MSG", "Trưa nay gọi số cũ xin ứng bốn lăm triệu,
      sub="Trưa nay gọi số cũ xin ứng 45 triệu, nói dưới quê có việc gấp. Làm gọn giùm anh, xong việc anh tính.",
      pause=0.3)
 
-# Cắt về văn phòng sáng nắng: Khang không tự nói một mình — thoại tự nhiên với đồng nghiệp Hân
+# Cắt về văn phòng sáng nắng: Khang ngồi tại bàn cười tủm tỉm, Hân chọc nhẹ — ngắn gọn tự nhiên, không nhắc lại thông tin thừa
 amb("office", -3.0); bgm("investigative_story", -4.0)
 scene("s06_office_relay", "assets/c06.jpg", "calm", tr="dissolve", trd=0.35)
-beat(0.4)
-line("l15_han", "HAN", "Ủa Khang, gần trưa rồi còn đi đâu mà cười tủm tỉm vậy?",
-     "ngước từ bàn bên nhìn qua, hỏi đùa nhẹ nhàng")
-line("l16_khang", "KHANG", "Anh Đạt nhờ đặt quà kỷ niệm cho chị nhà. Ảnh mới gọi hình qua nick mới mà mạng yếu quá nên nhắn tiếp.",
-     "ghé nhỏ giọng vui vẻ, hoàn toàn tin vì đã thấy mặt nghe giọng")
-line("l17_han", "HAN", "Chà, sếp cưng vợ ghê ha. Mà sao ảnh hông tự chuyển tiền luôn?",
-     "cười hỏi tự nhiên")
-line("l18_khang", "KHANG", "Tài khoản nhà chị Quyên giữ chung, ảnh tự chuyển lộ bài liền. Tiền của ảnh mà, mình phụ một tay thôi.",
-     "xua tay nhẹ, thấy chuyện hợp lý tuyệt đối", pause=0.3)
+beat(0.5)
+line("l15_han", "HAN", "Ủa Khang, ôm điện thoại cười tủm tỉm gì đó? Có bồ rồi hả?",
+     "ngước từ bàn bên nhìn qua, cười chọc nhẹ tự nhiên")
+line("l16_khang", "KHANG", "Đâu có. Sếp nhờ phụ đặt quà cho chị nhà, kêu giữ kín kẻo lộ.",
+     "cười xòa, hạ giọng thoải mái không chút nghi ngờ")
+line("l17_han", "HAN", "Sếp chiều vợ ghê ha. Ráng làm gọn cho ổng đi.",
+     "cười gật nhẹ quay lại màn hình, đời thường không kịch", pause=0.35)
 
 # ---- HỒI 3 · BUỔI TRƯA: DÒNG TIỀN ĐI MỘT VÒNG ----
 amb("room_tone", -3.0); bgm("investigative_story", -3.5)
@@ -307,10 +289,10 @@ chapter("HỒI 3 · BUỔI TRƯA", "DÒNG TIỀN ĐI MỘT VÒNG")
 sfx("chapter_sting", -0.1, -5)
 sfx("phone_ring", 0.3, -4, dur=1.1)
 beat(1.3)
-line("l19_khang_p", "KHANG_P", "Alo anh Đạt… Dưới quê nhà em đột xuất có việc gấp, anh cho em ứng trước bốn lăm triệu được hông?",
+line("l19_khang_p", "KHANG_P", "Alo anh Đạt… Dưới quê nhà em đột xuất có việc gấp, anh cho em ứng trước bốn mươi lăm triệu được hông?",
      "hơi vội vã nhập vai qua điện thoại",
      sub="Alo anh Đạt… Dưới quê nhà em đột xuất có việc gấp, anh cho em ứng trước 45 triệu được hông?")
-line("l20_dat", "DAT", "Chuyện gấp hả cu Khang? Rồi, để anh chuyển qua tài khoản mày liền, lo xong rồi tính.",
+line("l20_dat", "DAT", "Chuyện gấp hả cu Khang? Rồi, để anh chuyển qua tài khoản của mày liền, lo xong rồi tính.",
      "không chút nghi ngờ vì nghe đúng giọng người em quen")
 line("l21_quyen", "QUYEN", "Thằng Khang làm với mình ba năm nay đàng hoàng. Anh cứ ghi rõ nội dung ứng lương rồi chuyển cho nó đi.",
      "ngồi bên mâm cơm, điềm tĩnh gật đầu thực tế")
@@ -324,17 +306,13 @@ line("l22_dat", "DAT", "Rồi, anh mới chuyển bốn lăm triệu xong đó. 
 sfx("call_end", 0.0, -4)
 beat(0.35)
 
-# Cắt chéo sang phòng tối (12:05): cài thoáng giọng Long (Algieba) từ đầu dây phòng công chứng → bắc cầu sang EP08b
+# Cắt chéo sang phòng tối: kẻ đứng giữa tiếp tục nhái văn phong cộc gọn của Đạt
 amb("night_room", -2.5); bgm("suspense_pulse", -2.5)
 scene("s08_dark_step2_account", "assets/c08.jpg", "push", tr="dissolve", trd=0.35)
-sfx("notification", 0.1, -4)
-beat(0.4)
-line("l22b_long_p", "LONG_P", "Em tới quầy công chứng rồi, bên bán chờ tiền vô là ký.",
-     "nói gọn qua loa điện thoại từ nơi ồn ào, khớp đúng giọng Long ở EP08b", pause=0.2)
-sfx("message_send", 0.1, -3)
+sfx("message_send", 0.2, -3)
 bubble("ANH ĐẠT (NICK MỚI)", "Chuyển 45.000.000đ vô TK cửa hàng này",
-       side="left", y=260, stamp="2 · GỬI STK LẠ", dur=5.2, offset=0.15)
-beat(0.5)
+       side="left", y=260, stamp="2 · GỬI STK LẠ", dur=5.2, offset=0.2)
+beat(0.6)
 line("l23_ke", "KE_MSG", "Tiền vô rồi hả cu Khang? Đẩy bốn lăm triệu vô số tài khoản cửa hàng này gọn giùm anh, họ giao thẳng về xưởng.",
      "bình thản, giữ đúng kiểu nói cộc gọn của Anh Đạt",
      sub="Tiền vô rồi hả cu Khang? Đẩy 45 triệu vô số tài khoản cửa hàng này gọn giùm anh, họ giao thẳng về xưởng.",
@@ -392,50 +370,57 @@ line("l29_khang", "KHANG", "Nó chặn mất rồi anh Đạt ơi… Bốn mươ
      "tái mặt, giọng nghẹn lại khi gọi nick giả không còn liên lạc được",
      sub="Nó chặn mất rồi anh Đạt ơi… 45 triệu em vừa chuyển qua tài khoản lạ rồi!")
 line("l30_dat", "DAT", "Bình tĩnh lại. Gọi tổng đài ngân hàng liền đi, rồi gom hết sao kê với tin nhắn đi trình báo công an!",
-     "kìm giọng dứt khoát, xử lý ngay lập tức", pause=0.4)
+     "kìm giọng dứt khoát, xử lý ngay lập tức", pause=0.7)
 
-# ---- HỒI 5 · CHIỀU HÔM SAU: KẾT MỞ LẶNG NGƯỜI (XIN BẰNG CHỨNG CỦA NHAU) ----
-amb("street", -5.5); bgm("tension_drone", -4.5)
+# ---- HỒI 5 · CHIỀU HÔM SAU: THỨ MẤT ĐI KHÔNG CHỈ LÀ TIỀN ----
+amb("street", -5.5); bgm("warm_outro", -5.2)
 scene("s13_coffee_aftermath", "assets/c13.jpg", "calm", tr="fade_black", trd=0.55)
 chapter("HỒI 5 · CHIỀU HÔM SAU", "THỨ MẤT ĐI KHÔNG CHỈ LÀ TIỀN")
 sfx("chapter_sting", -0.1, -6)
-beat(0.9)
+beat(1.1)
 mark("quiet_aftermath")
 line("l31_khang", "KHANG", "Bên ngân hàng nói tiền đi qua nhiều lớp rồi, khó giữ kịp… Bốn lăm triệu đó để em góp lương trả dần.",
      "ngồi cúi mắt bên ly cà phê đá, giọng trầm buồn áy náy",
      sub="Bên ngân hàng nói tiền đi qua nhiều lớp rồi, khó giữ kịp… 45 triệu đó để em góp lương trả dần.")
 line("l32_dat", "DAT", "Thôi, coi như hai anh em xui. Chuyện tiền nong cứ để từ từ tính.",
-     "lắc đầu nhẹ, giọng điềm tĩnh không một lời trách móc", pause=0.6)
-line("l33_dat", "DAT", "À… mấy đoạn tin nhắn với nick giả hôm qua, em chụp lại đủ hết rồi gửi cho anh giữ một bản nha.",
-     "hạ giọng nhẹ tênh như tiện miệng nhắc, mắt nhìn thẳng Khang", pause=0.35)
-
-# Cú lặng quyết định: Khang liếc sao kê "Ung luong" rồi đáp nhẹ ngang nhau
-amb("room_tone", -5.0); bgm("tension_drone", SILENT)
-scene("s14_silent_crack", "assets/c14.jpg", "push", tr="dissolve", trd=0.35)
-mark("silent_crack")
-bubble("SAO KÊ NGÂN HÀNG", "Anh Đạt → Khang: +45.000.000đ · ND: Ung luong",
-       side="left", y=260, stamp="CHỨNG TỪ DUY NHẤT", dur=5.4, offset=0.2)
-sfx("heartbeat", 0.3, -5, dur=1.8)
-beat(1.1)
-line("l34_khang", "KHANG", "Dạ. Vậy anh cũng chụp gửi em cái thông báo tài khoản anh bị đăng nhập lạ hôm kia… để em giữ.",
-     "ngừng tay trên ly cà phê, ngước lên nhìn thẳng sếp, giọng nhẹ nhưng lạnh hẳn đi", pause=0.6)
-
-# Cắt đen đột ngột! (Không đường dây ngầm)
-sfx("impact", 0.0, -1.5)
-scene("s15_black_cut", "assets/c15.jpg", "still", tr="fade_black", trd=0.08)
+     "lắc đầu nhẹ, giọng điềm tĩnh không một lời trách móc", pause=0.8)
 beat(2.0)
 
-# ---- THẺ NHỚ KỸ (< 10 GIÂY) ----
+# ---- THẺ NHỚ KỸ (< 10 GIÂY · NGƯỜI BÓC TRẦN ĐÚNG 1 CÂU) ----
 amb("room_tone", -5.0); bgm("warm_outro", -4.2)
 scene("s16_red_flags", EP01B + "scene18.jpg", "still", tr="fade_black", trd=0.4)
 mark("rf_start")
 sfx("bank_ting", 0.0, -5)
 line("l35_narr", "N", "Mặt, giọng hay cách nói đều giả được. Cứ dính tiền mà dặn giữ bí mật, hãy gọi số thật hỏi thẳng.")
-beat(0.8)
+beat(1.0)
 mark("rf_end")
 
+# ---- KẾT MỞ SAU THẺ NHỚ · CÚ LẬT RẠN NỨT LÒNG TIN (GỌI THẲNG TÊN & GIỮ LÀM BẰNG) ----
+amb("street", -5.5); bgm("tension_drone", -1.4)
+scene("s14a_coda_dat_probe", "assets/c14a.jpg", "push_left", tr="fade_black", trd=0.5)
+mark("silent_crack")
+beat(1.6)
+line("l33_dat", "DAT", "À Khang… Sao kê chỉ ghi anh cho em ứng lương. Đừng xóa tin nhắn giả hôm qua, gửi anh giữ làm bằng.",
+     "bỏ hẳn chữ cu, hạ giọng trầm hẳn và lạnh băng, mắt dò xét, nhả từng chữ sắc và nặng như giữ bằng chứng phòng thân",
+     pause=0.9)
+
+amb("room_tone", -5.0); bgm("tension_drone", -1.2)
+scene("s14b_coda_khang_counter", "assets/c14b.jpg", "push_right", tr="dissolve", trd=0.25)
+sfx("heartbeat", 0.1, -3.5, dur=2.6)
+bubble("SAO KÊ NGÂN HÀNG", "Anh Đạt → Khang: +45.000.000đ · ND: Ung luong",
+       side="left", y=245, stamp="CHỨNG TỪ DUY NHẤT", dur=7.4, offset=0.15)
+beat(1.9)
+line("l34_khang", "KHANG", "Được anh. Vậy anh cũng chụp cái báo đăng nhập lạ hôm kia… gửi em giữ làm bằng luôn đi.",
+     "mất hẳn vẻ áy náy lễ phép, bỏ chữ dạ, ngước nhìn thẳng đối mặt, giọng lạnh ngang hàng sắc như dao",
+     pause=1.0)
+
+# Cắt đen đột ngột!
+sfx("impact", 0.0, -1.2)
+scene("s15_black_cut", "assets/c15.jpg", "still", tr="fade_black", trd=0.08)
+beat(2.2)
+
 # ---- DISCLAIMER ----
-amb("room_tone", -6.0); bgm("warm_outro", -7.5)
+amb("room_tone", -6.0); bgm("tension_drone", -8.0)
 scene("s17_disclaimer", EP01B + "scene18.jpg", "still", tr="fade_black", trd=0.35)
 mark("disc_start")
 beat(4.2)
@@ -529,7 +514,7 @@ episode = {
     "episode_id": "EP08",
     "slug": "MotVongTienHaiNuaSuThat",
     "title": "Một vòng tiền, hai nửa sự thật",
-    "version": "v2-draft",
+    "version": "v3-staging",
     "scam_family": "IMPERSONATION-MITM – Người đứng giữa đọc lén trò chuyện, nhái đúng văn phong + nhá video hình/giọng ghép 3 giây để điều phối hai người quen tự chuyển tiền đường vòng",
     "duration_sec": total,
     "visual_style_lock": (
@@ -580,8 +565,8 @@ episode = {
             {"start": marks["two_phones"] - 0.2, "end": marks["two_phones"] + 10.0, "bgm_db": -11, "amb_db": -8},
             {"start": marks["money_loop"] - 0.2, "end": marks["money_loop"] + 4.0, "bgm_db": -10, "amb_db": -7},
             {"start": marks["confrontation"] - 0.2, "end": marks["confrontation"] + 14.0, "bgm_db": -11, "amb_db": -7},
-            {"start": marks["quiet_aftermath"] - 0.2, "end": marks["silent_crack"] - 0.2, "bgm_db": -12, "amb_db": -7},
-            {"start": marks["silent_crack"] - 0.2, "end": marks["rf_start"] - 0.2, "bgm_db": -18, "amb_db": -10},
+            {"start": marks["quiet_aftermath"] - 0.2, "end": marks["rf_start"] - 0.2, "bgm_db": -10, "amb_db": -7},
+            {"start": marks["silent_crack"] - 0.2, "end": marks["disc_start"] - 0.2, "bgm_db": -5, "amb_db": -9},
             {"start": marks["disc_start"], "end": total - 0.05},
         ],
     },

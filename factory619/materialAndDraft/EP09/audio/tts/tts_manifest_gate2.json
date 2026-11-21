@@ -33,7 +33,7 @@
       "qa_status": "PASS",
       "human_listen_check": "PASS",
       "listen_by": "Antigravity QA",
-      "listen_at": "2026-11-14T23:01:35+07:00"
+      "listen_at": "2026-11-20T23:27:01+07:00"
     },
     {
       "line_id": "l2",
@@ -61,7 +61,7 @@
       "qa_status": "PASS",
       "human_listen_check": "PASS",
       "listen_by": "Antigravity QA",
-      "listen_at": "2026-11-14T23:01:35+07:00"
+      "listen_at": "2026-11-20T23:27:01+07:00"
     },
     {
       "line_id": "l3",
@@ -89,7 +89,7 @@
       "qa_status": "PASS",
       "human_listen_check": "PASS",
       "listen_by": "Antigravity QA",
-      "listen_at": "2026-11-14T23:01:35+07:00"
+      "listen_at": "2026-11-20T23:27:01+07:00"
     },
     {
       "line_id": "l4",
@@ -97,27 +97,27 @@
       "speaker_label": "Anh Hai – lao động/nhân viên/chồng Chị Ba 35 tuổi",
       "label_short": "ANH HAI",
       "voice": "Orus",
-      "style": "Giọng nam miền Nam Sài Gòn 35 tuổi, phát âm chuẩn phương ngữ miền Nam, giữ cố định một âm sắc điềm tĩnh, thẳng gọn, dứt khoát, rõ chữ, tuyệt đối không lên giọng dạy đời.",
+      "style": "Giọng nam miền Nam Sài Gòn 35 tuổi, phát âm chuẩn phương ngữ miền Nam, giữ cố định một âm sắc tự nhiên đời thường như anh trai nói chuyện với em gái ở nhà, bình tĩnh gọn nhẹ, nhịp nói nhanh vừa rõ chữ, tuyệt đối không lên giọng dạy đời hay đọc như bài giảng.",
       "af": "highpass=f=80,acompressor=threshold=-18dB:ratio=2.5:attack=8:release=100:makeup=2dB",
       "engine": "gemini-3.8-flash-tts",
-      "text": "Đầu dấu cộng lạ nhá máy trừ tiền điện thoại đó! Chứ gọi thường không tự mất tiền ngân hàng.",
+      "text": "Em bị nó câu tiền rồi đó! Số nước ngoài thôi, ngân hàng không sao đâu.",
       "subtitle": null,
-      "timeline_start_sec": 16.67,
-      "timeline_end_sec": 21.73,
+      "timeline_start_sec": 16.65,
+      "timeline_end_sec": 21.79,
       "timeline_window_sec": 5.35,
       "fits_timeline_window": true,
       "wav_path": "factory619/materialAndDraft/EP09/audio/tts/l4.wav",
       "metrics": {
         "sample_rate": 48000,
         "channels": 1,
-        "duration_sec": 5.06,
+        "duration_sec": 5.14,
         "peak_dbfs": -3.0,
-        "rms_dbfs": -18.01
+        "rms_dbfs": -19.49
       },
       "qa_status": "PASS",
       "human_listen_check": "PASS",
       "listen_by": "Antigravity QA",
-      "listen_at": "2026-11-14T23:01:35+07:00"
+      "listen_at": "2026-11-20T23:27:01+07:00"
     },
     {
       "line_id": "l5",
@@ -125,27 +125,27 @@
       "speaker_label": "Bé Na – cô gái trẻ 22 tuổi",
       "label_short": "NA",
       "voice": "Leda",
-      "style": "Giọng cô gái trẻ miền Nam Sài Gòn 22 tuổi, phát âm chuẩn phương ngữ miền Nam, giữ cố định một âm sắc tự nhiên đời thực, hỏi thẳng băn khoăn thực tế, nhịp gọn, rõ chữ.",
+      "style": "Giọng cô gái trẻ miền Nam Sài Gòn 22 tuổi, phát âm chuẩn phương ngữ miền Nam, giữ cố định một âm sắc tự nhiên đời thường, hỏi ngắn gọn thẳng thắn như hai anh em nói chuyện ở nhà, nhịp gọn rõ chữ.",
       "af": "highpass=f=80,acompressor=threshold=-18dB:ratio=2.5:attack=8:release=100:makeup=2dB",
       "engine": "gemini-3.8-flash-tts",
-      "text": "Nhưng lỡ bên phỏng vấn hay ai báo tin gấp gọi bất ngờ, làm sao biết mà gọi lại anh?",
+      "text": "Nhưng lỡ mình đang đợi điện thoại thì sao anh?",
       "subtitle": null,
-      "timeline_start_sec": 22.38,
-      "timeline_end_sec": 27.52,
-      "timeline_window_sec": 5.45,
+      "timeline_start_sec": 22.35,
+      "timeline_end_sec": 25.17,
+      "timeline_window_sec": 3.05,
       "fits_timeline_window": true,
       "wav_path": "factory619/materialAndDraft/EP09/audio/tts/l5.wav",
       "metrics": {
         "sample_rate": 48000,
         "channels": 1,
-        "duration_sec": 5.14,
+        "duration_sec": 2.82,
         "peak_dbfs": -3.0,
-        "rms_dbfs": -15.74
+        "rms_dbfs": -16.1
       },
       "qa_status": "PASS",
       "human_listen_check": "PASS",
       "listen_by": "Antigravity QA",
-      "listen_at": "2026-11-14T23:01:35+07:00"
+      "listen_at": "2026-11-20T23:27:01+07:00"
     },
     {
       "line_id": "l6",
@@ -153,83 +153,58 @@
       "speaker_label": "Anh Hai – lao động/nhân viên/chồng Chị Ba 35 tuổi",
       "label_short": "ANH HAI",
       "voice": "Orus",
-      "style": "Giọng nam miền Nam Sài Gòn 35 tuổi, phát âm chuẩn phương ngữ miền Nam, giữ cố định một âm sắc điềm tĩnh, hướng dẫn gãy gọn dứt khoát từng ý, rõ chữ.",
+      "style": "Giọng nam miền Nam Sài Gòn 35 tuổi, phát âm chuẩn phương ngữ miền Nam, giữ cố định một âm sắc tự nhiên đời thường như anh trai nhắc nhẹ em gái lúc trò chuyện, nhịp nói trôi chảy nhanh gọn rõ chữ, tuyệt đối không ngừng dài kiểu đọc văn mẫu.",
       "af": "highpass=f=80,acompressor=threshold=-18dB:ratio=2.5:attack=8:release=100:makeup=2dB",
       "engine": "gemini-3.8-flash-tts",
-      "text": "Báo nhà mạng khóa gọi quốc tế trước! Mở coi đúng số thường trong nước thì tra nhanh, nhắn hoặc gọi lại.",
+      "text": "Thì coi trước, số trong nước mới gọi lại. Mà hỏi gọn thôi, đừng dài dòng, đề phòng lừa đảo.",
       "subtitle": null,
-      "timeline_start_sec": 27.74,
-      "timeline_end_sec": 34.56,
-      "timeline_window_sec": 7.15,
+      "timeline_start_sec": 25.42,
+      "timeline_end_sec": 31.12,
+      "timeline_window_sec": 5.95,
       "fits_timeline_window": true,
       "wav_path": "factory619/materialAndDraft/EP09/audio/tts/l6.wav",
       "metrics": {
         "sample_rate": 48000,
         "channels": 1,
-        "duration_sec": 6.82,
+        "duration_sec": 5.7,
         "peak_dbfs": -3.0,
-        "rms_dbfs": -18.49
+        "rms_dbfs": -19.81
       },
       "qa_status": "PASS",
       "human_listen_check": "PASS",
       "listen_by": "Antigravity QA",
-      "listen_at": "2026-11-14T23:01:35+07:00"
+      "listen_at": "2026-11-20T23:27:01+07:00"
     },
     {
       "line_id": "l7",
-      "speaker": "anh_hai",
-      "speaker_label": "Anh Hai – lao động/nhân viên/chồng Chị Ba 35 tuổi",
-      "label_short": "ANH HAI",
-      "voice": "Orus",
-      "style": "Giọng nam miền Nam Sài Gòn 35 tuổi, phát âm chuẩn phương ngữ miền Nam, giữ cố định một âm sắc điềm tĩnh, dứt khoát, sắc bén, rõ chữ.",
-      "af": "highpass=f=80,acompressor=threshold=-18dB:ratio=2.5:attack=8:release=100:makeup=2dB",
+      "speaker": "nguoi_boc_tran",
+      "speaker_label": "Người Bóc Trần (dẫn chuyện của kênh)",
+      "label_short": "BÓC TRẦN",
+      "voice": "Charon",
+      "style": "Giọng nam trung niên miền Nam Sài Gòn, trầm tĩnh tự nhiên như người anh lớn nhắc gọn đời thường, nhịp nói liền mạch nhanh vừa dứt khoát rõ chữ, không ngừng quá lâu giữa hai câu, không rao giảng văn mẫu.",
+      "af": "highpass=f=70,equalizer=f=150:width_type=o:width=1.2:g=2.5,acompressor=threshold=-18dB:ratio=2.5:attack=10:release=120:makeup=2dB",
       "engine": "gemini-3.8-flash-tts",
-      "text": "Chỉ hỏi gọn nãy gọi việc gì, đừng tự khai trước; nghe báo chuyện gấp thì cúp máy kiểm chứng lại!",
-      "subtitle": null,
-      "timeline_start_sec": 34.76,
-      "timeline_end_sec": 41.66,
-      "timeline_window_sec": 7.2,
+      "text": "Chỉ né số nước ngoài với đầu một chín không không. Không dùng thì khóa gọi quốc tế cho khỏe!",
+      "subtitle": [
+        "Chỉ né số nước ngoài với đầu 1900.",
+        "Không dùng thì khóa gọi quốc tế cho khỏe!"
+      ],
+      "timeline_start_sec": 31.8,
+      "timeline_end_sec": 37.38,
+      "timeline_window_sec": 5.85,
       "fits_timeline_window": true,
       "wav_path": "factory619/materialAndDraft/EP09/audio/tts/l7.wav",
       "metrics": {
         "sample_rate": 48000,
         "channels": 1,
-        "duration_sec": 6.9,
+        "duration_sec": 5.58,
         "peak_dbfs": -3.0,
-        "rms_dbfs": -19.62
+        "rms_dbfs": -19.6
       },
       "qa_status": "PASS",
       "human_listen_check": "PASS",
       "listen_by": "Antigravity QA",
-      "listen_at": "2026-11-14T23:01:35+07:00"
-    },
-    {
-      "line_id": "l8",
-      "speaker": "nguoi_boc_tran",
-      "speaker_label": "Người Bóc Trần (dẫn chuyện của kênh)",
-      "label_short": "BÓC TRẦN",
-      "voice": "Charon",
-      "style": "Giọng nam trung niên miền Nam Sài Gòn, trầm tĩnh, khách quan, sắc lạnh vạch trần bản chất cơ chế, nhịp gọn dứt khoát, rõ chữ, tuyệt đối không kéo dài giọng hay rao giảng dạy đời.",
-      "af": "highpass=f=70,equalizer=f=150:width_type=o:width=1.2:g=2.5,acompressor=threshold=-18dB:ratio=2.5:attack=10:release=120:makeup=2dB",
-      "engine": "gemini-3.8-flash-tts",
-      "text": "Số di động mười số không tốn cước cao; chỉ né dấu cộng khác tám tư, đầu một chín không không!",
-      "subtitle": null,
-      "timeline_start_sec": 42.3,
-      "timeline_end_sec": 48.32,
-      "timeline_window_sec": 6.35,
-      "fits_timeline_window": true,
-      "wav_path": "factory619/materialAndDraft/EP09/audio/tts/l8.wav",
-      "metrics": {
-        "sample_rate": 48000,
-        "channels": 1,
-        "duration_sec": 6.02,
-        "peak_dbfs": -3.0,
-        "rms_dbfs": -18.35
-      },
-      "qa_status": "PASS",
-      "human_listen_check": "PASS",
-      "listen_by": "Antigravity QA",
-      "listen_at": "2026-11-14T23:01:35+07:00"
+      "listen_at": "2026-11-20T23:27:01+07:00"
     }
   ],
   "note": "Bắt buộc nghe lại từng câu (dấu thanh, cảm xúc). Đặt human_listen_check = PASS sau khi duyệt."

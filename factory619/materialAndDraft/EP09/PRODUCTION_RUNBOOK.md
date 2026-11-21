@@ -13,5 +13,6 @@ Lệnh chạy từ thư mục gốc dự án (`c:\projects\socialScamStorys`).
 | 6 | Đóng gói phát hành | `python factory/_engine/run.py gate EP09 6` | ☐ |
 
 Ghi chú vòng sửa:
-- 
+- v3 (45.5s): Rút gọn đoạn 0:22–0:42 từ ~20s xuống ~9.4s (bỏ callout giảng bài), chuyển toàn bộ thoại từ s4–s6 sang văn nói đời thường tự nhiên, bỏ lặp ý giữa Anh Hai – Người Bóc Trần – Thẻ NHỚ KỸ, cô đọng Thẻ NHỚ KỸ dễ đọc nhanh.
+
 

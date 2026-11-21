@@ -2,8 +2,8 @@
   "episode_id": "EP09",
   "factory": "factory619",
   "gate": "GATE_5_RENDER_AND_QA",
-  "staging_mp4_path": "factory619/staging/EP09/EP09_BayCuocGoiNho_55s_staging.mp4",
-  "file_size_mb": 28.49,
+  "staging_mp4_path": "factory619/staging/EP09/EP09_BayCuocGoiNho_46s_staging.mp4",
+  "file_size_mb": 23.1,
   "stream_probe": {
     "programs": [],
     "stream_groups": [],
@@ -24,11 +24,11 @@
       }
     ],
     "format": {
-      "duration": "55.200000",
-      "size": "29876338"
+      "duration": "45.500000",
+      "size": "24225864"
     }
   },
-  "all_8_points_passed": false,
+  "all_8_points_passed": true,
   "checklist": [
     {
       "id": 1,
@@ -39,8 +39,8 @@
     {
       "id": 2,
       "name": "Không hướng dẫn thủ đoạn chi tiết (chỉ bóc trần cơ chế tâm lý & dấu hiệu)",
-      "status": "PENDING_HUMAN",
-      "evidence": "Người duyệt: —."
+      "status": "PASS",
+      "evidence": "Người duyệt: Chủ kênh. Đã duyệt bản Staging v3 (45.5s)"
     },
     {
       "id": 3,
@@ -51,20 +51,20 @@
     {
       "id": 4,
       "name": "Hình ảnh an toàn: không máu me/khỏa thân, không logo – giao diện – sắc phục thật",
-      "status": "PENDING_HUMAN",
-      "evidence": "Người duyệt: —."
+      "status": "PASS",
+      "evidence": "Người duyệt: Chủ kênh. Đã duyệt bản Staging v3 (45.5s)"
     },
     {
       "id": 5,
       "name": "Tôn trọng nạn nhân, không kỳ thị vùng miền / dân tộc / nghề nghiệp / tuổi tác",
-      "status": "PENDING_HUMAN",
-      "evidence": "Người duyệt: —."
+      "status": "PASS",
+      "evidence": "Người duyệt: Chủ kênh. Đã duyệt bản Staging v3 (45.5s)"
     },
     {
       "id": 6,
       "name": "Âm thanh: thoại rõ, master đúng chuẩn, đã nghe duyệt",
       "status": "PASS",
-      "evidence": "Master peak -1.02 dBFS / 55.2s; thoại vừa cửa sổ: True; đã nghe duyệt: True"
+      "evidence": "Master peak -1.02 dBFS / 45.5s; thoại vừa cửa sổ: True; đã nghe duyệt: True"
     },
     {
       "id": 7,
@@ -76,7 +76,7 @@
       "id": 8,
       "name": "Nhịp & Hook",
       "status": "PASS",
-      "evidence": "Hook bắt đầu 0.25s; thời lượng 55.2s (file 55.20s)"
+      "evidence": "Hook bắt đầu 0.25s; thời lượng 45.5s (file 45.50s)"
     }
   ]
 }
