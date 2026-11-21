@@ -5,6 +5,7 @@
   "version": "v1",
   "scam_family": "<mã nhóm trong 01_SCAM_MAP, ví dụ ON-01>",
   "duration_sec": 300.0,
+  "motion_upgrade": "level2",
 
   "hook": {
     "kicker": "HỒ SƠ BÓC TRẦN LỪA ĐẢO",
@@ -22,36 +23,52 @@
 
   "scenes": [
     {"id": "s01_hook",        "image": "assets/scene01.jpg", "start": 0.0,   "end": 25.0,
-     "motion": {"scale": [1.06, 1.14], "focus": [[0.5, 0.5], [0.5, 0.46]], "wobble": "tense"},
-     "shakes": [{"at": 0.8, "amp": 24}]},
+     "beat_type": "climax", "motion_level": "A", "motion_intent": "Đẩy chậm tạo áp lực mở màn, khớp chuông gọi",
+     "motion": {"preset": "slow_push_in", "scale": [1.03, 1.11], "wobble": "calm"},
+     "shakes": [{"at": 0.8, "amp": 20}]},
     {"id": "s02_boi_canh",    "image": "assets/scene02.jpg", "start": 25.0,  "end": 55.0,
-     "motion": {"scale": [1.02, 1.09], "focus": [[0.48, 0.5], [0.52, 0.48]], "wobble": "calm"},
+     "beat_type": "establishing", "motion_level": "A", "motion_intent": "Pan ngang dịu giới thiệu không gian đời thường (nâng lên Level B 2.5D nếu tách lớp sạch)",
+     "motion": {"preset": "pan_right"},
      "transition_in": {"type": "dissolve", "dur": 0.4}},
     {"id": "s03_tiep_can",    "image": "assets/scene03.jpg", "start": 55.0,  "end": 90.0,
-     "motion": {"scale": [1.03, 1.10], "focus": [[0.5, 0.5], [0.48, 0.46]], "wobble": "calm"},
+     "beat_type": "information", "motion_level": "C", "motion_intent": "Ánh sáng màn hình điện thoại bật sáng khi có thông báo đến",
+     "motion": {"preset": "static_hold"},
+     "detail_fx": [
+       {"type": "screen_glow", "start": 58.0, "end": 88.0, "pos": [0.52, 0.62], "radius": [0.22, 0.24], "color": [130, 195, 255], "intensity": 0.32, "mode": "turn_on"}
+     ],
      "transition_in": {"type": "dissolve", "dur": 0.4}},
     {"id": "s04_tha_moi",     "image": "assets/scene04.jpg", "start": 90.0,  "end": 125.0,
-     "motion": {"scale": [1.03, 1.11], "focus": [[0.52, 0.5], [0.48, 0.48]], "wobble": "calm"},
+     "beat_type": "normal", "motion_level": "A", "motion_intent": "Đẩy nhẹ vào đối thoại tạo lòng tin",
+     "motion": {"preset": "slow_push_in"},
      "transition_in": {"type": "dissolve", "dur": 0.4}},
     {"id": "s05_thao_tung",   "image": "assets/scene05.jpg", "start": 125.0, "end": 165.0,
-     "motion": {"scale": [1.04, 1.13], "focus": [[0.5, 0.48], [0.5, 0.44]], "wobble": "handheld"},
+     "beat_type": "suspicion", "motion_level": "A", "motion_intent": "Lùi nhẹ mở rộng không gian bất an (ứng viên nâng lên Level B nếu có tiền cảnh/hậu cảnh rõ)",
+     "motion": {"preset": "slow_pull_out"},
      "transition_in": {"type": "dissolve", "dur": 0.4}},
     {"id": "s06_co_lap",      "image": "assets/scene06.jpg", "start": 165.0, "end": 195.0,
-     "motion": {"scale": [1.05, 1.15], "focus": [[0.5, 0.5], [0.46, 0.44]], "wobble": "handheld"},
+     "beat_type": "anomaly", "motion_level": "C", "motion_intent": "Gom ánh sáng tập trung chi tiết bất thường trong khung hình",
+     "motion": {"preset": "subtle_push_left"},
+     "detail_fx": [
+       {"type": "focus_highlight", "start": 170.0, "end": 193.0, "pos": [0.50, 0.50], "radius": [0.30, 0.30], "dim_outer": 0.24}
+     ],
      "transition_in": {"type": "dissolve", "dur": 0.35}},
     {"id": "s07_cao_trao",    "image": "assets/scene07.jpg", "start": 195.0, "end": 225.0,
-     "motion": {"scale": [1.14, 1.04], "focus": [[0.52, 0.46], [0.5, 0.5]], "wobble": "tense"},
+     "beat_type": "climax", "motion_level": "A", "motion_intent": "Lùi giật nhẹ + rung tắt dần đúng nhịp cao trào (hoặc Level D nếu có clip phản ứng sạch)",
+     "motion": {"preset": "slow_pull_out", "scale": [1.12, 1.03], "wobble": "tense"},
      "transition_in": {"type": "flash_red", "dur": 0.3},
-     "shakes": [{"at": 195.4, "amp": 30}]},
+     "shakes": [{"at": 195.4, "amp": 26}]},
     {"id": "s08_cu_lat",      "image": "assets/scene08.jpg", "start": 225.0, "end": 250.0,
-     "motion": {"scale": [1.08, 1.02], "focus": [[0.48, 0.48], [0.5, 0.5]], "wobble": "handheld"},
+     "beat_type": "aftermath", "motion_level": "A", "motion_intent": "Pan trái–phải nhẹ giữ rõ bố cục đối đầu, không rung thừa",
+     "motion": {"preset": "pan_left"},
      "transition_in": {"type": "flash_white", "dur": 0.3},
-     "shakes": [{"at": 225.3, "amp": 28}]},
+     "shakes": [{"at": 225.3, "amp": 24}]},
     {"id": "s09_boc_tran",    "image": "assets/scene09.jpg", "start": 250.0, "end": 280.0,
-     "motion": {"scale": [1.02, 1.09], "focus": [[0.5, 0.5], [0.5, 0.46]], "wobble": "calm"},
+     "beat_type": "information", "motion_level": "A", "motion_intent": "Đẩy chậm điềm tĩnh theo lời Người Bóc Trần",
+     "motion": {"preset": "slow_push_in"},
      "transition_in": {"type": "glitch", "dur": 0.4}},
     {"id": "s10_dau_hieu",    "image": "assets/scene10.jpg", "start": 280.0, "end": 300.0,
-     "motion": {"scale": [1.02, 1.06], "focus": [[0.5, 0.5], [0.5, 0.5]], "wobble": "none"},
+     "beat_type": "ending", "motion_level": "A", "motion_intent": "Giữ tĩnh tuyệt đối để người xem đọc thẻ Dấu hiệu nhận biết",
+     "motion": {"preset": "static_hold"},
      "transition_in": {"type": "fade_black", "dur": 0.45}}
   ],
 
@@ -69,6 +86,7 @@
   ],
 
   "chat_bubbles": [],
+  "notifications": [],
   "callouts": [],
 
   "red_flags": {

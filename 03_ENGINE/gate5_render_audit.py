@@ -11,10 +11,11 @@ import subprocess
 from pathlib import Path
 
 from core import FFMPEG, FFPROBE, Episode, GateError, load_json, rel, save_json
+from motion_fx import audit_episode_motion
 
 HUMAN_POINTS = {
     2: "Không hướng dẫn thủ đoạn chi tiết (chỉ bóc trần cơ chế tâm lý & dấu hiệu)",
-    4: "Hình ảnh an toàn: không máu me/khỏa thân, không logo – giao diện – sắc phục thật",
+    4: "Hình ảnh & chuyển động an toàn: không logo/giao diện/sắc phục thật, không máu me, motion mượt đúng nhịp & giữ continuity (QC 11 điểm)",
     5: "Tôn trọng nạn nhân, không kỳ thị vùng miền / dân tộc / nghề nghiệp / tuổi tác",
 }
 
@@ -171,6 +172,27 @@ def run(ep: Episode, skip_render: bool = False) -> dict:
     ]
     checklist = [{"id": i, "name": n, "status": s, "evidence": e} for i, n, s, e in pts]
     all_pass = all(c["status"] == "PASS" for c in checklist)
+
+    # --- Visual Motion Upgrade (Level 2) QC Summary ---
+    ma = audit_episode_motion(ep)
+    ms = tl.get("motion_summary") or {}
+    eff = ms.get("effective_level_counts") or ma["level_counts"]
+    fallbacks = ms.get("fallbacks") or []
+    zoom_streaks = ms.get("zoom_streaks") if "zoom_streaks" in ms else ma["zoom_streaks"]
+    sfx_sync = ms.get("sfx_sync") or ma["sfx_sync"]
+    motion_qc = {
+        "is_level2": ma["is_level2"],
+        "effective_level_counts": eff,
+        "declared_level_counts": ma["level_counts"],
+        "has_highlights": (eff.get("B", 0) + eff.get("C", 0) + eff.get("D", 0) > 0) or bool(ep.cfg.get("chat_bubbles")) or bool(ep.cfg.get("notifications")),
+        "zoom_repetition_streaks": zoom_streaks,
+        "shake_scenes": ma["shake_scenes"],
+        "fallbacks": fallbacks,
+        "sfx_sync": sfx_sync,
+        "warnings": ma["warnings"],
+        "point4_human_signed": p4 == "PASS",
+    }
+
     report = {
         "episode_id": ep.id,
         "factory": ep.factory_name,
@@ -180,11 +202,15 @@ def run(ep: Episode, skip_render: bool = False) -> dict:
         "stream_probe": info,
         "all_8_points_passed": all_pass,
         "checklist": checklist,
+        "motion_qc": motion_qc,
     }
     save_json(ep.qa_json_path, report)
     write_md(ep, report)
     for c in checklist:
         print(f"    [{c['status']:>13}] {c['id']}. {c['name']}")
+    print(f" -> Motion QC: A={eff.get('A', 0)} · B={eff.get('B', 0)} · C={eff.get('C', 0)} · D={eff.get('D', 0)}"
+          + (f" | lặp zoom-in: {len(zoom_streaks)}" if zoom_streaks else " | nhịp camera sạch")
+          + (f" | fallback: {len(fallbacks)}" if fallbacks else ""))
     print(f" -> {'ĐẠT 8/8' if all_pass else 'CHƯA ĐẠT'} | {rel(ep.qa_json_path)}")
     return report
 
@@ -192,6 +218,18 @@ def run(ep: Episode, skip_render: bool = False) -> dict:
 def write_md(ep: Episode, r: dict) -> None:
     badge = {"PASS": "✅ PASS", "FAIL": "❌ FAIL", "WARN": "⚠️ WARN", "PENDING_HUMAN": "⏳ CHỜ NGƯỜI DUYỆT"}
     rows = "\n".join(f"| {c['id']}. {c['name']} | {badge.get(c['status'], c['status'])} | {c['evidence']} |" for c in r["checklist"])
+    mq = r.get("motion_qc") or {}
+    eff = mq.get("effective_level_counts") or {"A": 0, "B": 0, "C": 0, "D": 0}
+    streaks = mq.get("zoom_repetition_streaks") or []
+    fallbacks = mq.get("fallbacks") or []
+    ss = mq.get("sfx_sync") or {"synced": [], "unsynced": []}
+    chk = "x" if mq.get("point4_human_signed") else " "
+    zoom_note = "Không có chuỗi ≥ 3 cảnh zoom-in liên tiếp" if not streaks else f"⚠️ Phát hiện {len(streaks)} chuỗi lặp: " + "; ".join(" → ".join(s) for s in streaks)
+    hl_note = f"Level B={eff.get('B', 0)}, Level C={eff.get('C', 0)}, Level D={eff.get('D', 0)}"
+    fb_note = "Không có cảnh fallback lỗi" if not fallbacks else f"Đã hạ cấp an toàn {len(fallbacks)} cảnh: " + "; ".join(f"{f['scene_id']}" for f in fallbacks)
+    sfx_note = f"Khớp foley: {len(ss.get('synced', []))} · Chưa có foley gần mốc: {len(ss.get('unsynced', []))}"
+    motion_warns = "\n".join(f"- ⚠️ {w}" for w in (mq.get("warnings") or [])) or "- Không có cảnh báo motion tự động."
+
     md = f"""# BIÊN BẢN KIỂM DUYỆT GATE 5 [{ep.factory_name} · {ep.aspect_label}] – {ep.id}: {ep.title}
 
 - Video staging: [{Path(r['staging_mp4_path']).name}](file:///{(ep.staging_mp4_path).as_posix()}) ({r['file_size_mb']} MB)
@@ -201,8 +239,28 @@ def write_md(ep: Episode, r: dict) -> None:
 | :--- | :---: | :--- |
 {rows}
 
+## KIỂM DUYỆT CHUYỂN ĐỘNG HÌNH ẢNH — VISUAL MOTION QC (LEVEL 2)
+*Phân bổ thực thi: **Level A = {eff.get('A', 0)} · Level B = {eff.get('B', 0)} · Level C = {eff.get('C', 0)} · Level D = {eff.get('D', 0)}** · Chuẩn đối chiếu: [VISUAL_MOTION_HARNESS.md](../../../00_HARNESS_GUIDELINES/VISUAL_MOTION_HARNESS.md)*
+
+- [{chk}] Motion có phục vụ câu chuyện không?
+- [{chk}] Có cảnh nào bị zoom/pan lặp lại quá máy móc không? *(Tự động: {zoom_note})*
+- [{chk}] Có ít nhất một vài visual highlight đáng nhớ nếu nguồn hình phù hợp không? *(Tự động: {hl_note})*
+- [{chk}] 2.5D có tạo chiều sâu tự nhiên, không méo hình không? *(Level B: {eff.get('B', 0)} cảnh)*
+- [{chk}] Object motion có đúng nội dung và timing không? *(Level C: {eff.get('C', 0)} cảnh · không đổi text/UI/số tiền)*
+- [{chk}] Có chi tiết AI bị biến dạng không? *(Level D: {eff.get('D', 0)} cảnh)*
+- [{chk}] Motion có gây distraction khỏi voice-over không? *(Số cảnh shake: {mq.get('shake_scenes', 0)})*
+- [{chk}] Có giữ được continuity giữa các cảnh không?
+- [{chk}] Có sound effect nào không cần thiết không? *(Tự động: {sfx_note})*
+- [{chk}] Render có smooth, không flicker, không jump frame, không lỗi layer hoặc mask không?
+- [{chk}] Các cảnh không phù hợp motion nâng cao có được giữ xử lý đơn giản không? *(Tự động: {fb_note})*
+
+**Ghi nhận tự động từ Engine:**
+{motion_warns}
+
+> **Nguyên tắc hạ cấp:** Nếu bất kỳ hiệu ứng nào không đạt chất lượng, hãy hạ cấp hoặc loại bỏ nó (`video_enabled: false` hoặc chuyển về Level A). Cảnh tĩnh sạch sẽ luôn tốt hơn cảnh chuyển động lỗi.
+>
 > Mục ⏳ cần bạn xem video rồi ký duyệt trong `clearance/human_qa_signoff.json`
-> (`python {ep.factory_name}/_engine/run.py signoff {ep.id}`), sau đó chạy lại Gate 5 với `--skip-render`.
+> (`python {ep.factory_name}/_engine/run.py signoff {ep.id} --point 2 4 5 --by "<tên>"`), sau đó chạy lại Gate 5 với `--skip-render`.
 """
     (ep.staging_dir / "GATE5_QA_REPORT.md").write_text(md, encoding="utf-8")
 

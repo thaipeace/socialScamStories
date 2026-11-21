@@ -60,8 +60,9 @@ factory/production/<EP>/         ── Gate 6 (đóng gói phát hành) → b�
 > 6. **Kiểm tra OCR chữ rác / biển số xe ở mép ảnh trước khi chạy Gate 4:**
 >    - Luôn kiểm tra mép ảnh (đặc biệt đuôi xe máy ở rìa khung hình) để xóa/làm mờ mọi ký tự số ngẫu nhiên tránh bị trình quét OCR ở Gate 5 bắt nhầm.
 >
-> 7. **Cao trào âm nhạc & SFX đúng điểm bùng nổ (Climax Punch):**
->    - Điểm lật tình huống (twist/climax) phải có combo `riser` dẫn nhịp -> `impact` + `flash_white` + `shakes` -> nhạc nền `action_climax` đẩy gain rõ rệt và tiếng động hiện trường (`whistle`, `footsteps`).
+> 7. **Cao trào âm nhạc & SFX đúng điểm bùng nổ (Climax Punch – có tiết chế):**
+>    - Điểm lật tình huống (twist/climax) có thể dùng combo `riser` dẫn nhịp -> `impact` + `flash_white`/`flash_red` + `shakes` khớp foley, nhạc nền `action_climax` và tiếng động hiện trường (`whistle`, `footsteps`).
+>    - **Tuyệt đối không lạm dụng `shakes`/`wobble` trên các cảnh bình thường, thiết lập bối cảnh hay cảnh kết**; mọi cú rung/hiệu ứng phải phục vụ điểm nhấn kịch tính cụ thể theo [VISUAL_MOTION_HARNESS.md](VISUAL_MOTION_HARNESS.md).
 >
 > 8. **Chuẩn riêng bắt buộc cho Phim dài 16:9 `factory196` (Đúc kết từ `EP01` → `EP01b`, chi tiết tại [LONG_FORMAT_196_SPEC.md](LONG_FORMAT_196_SPEC.md)):**
 >    - **Thời lượng linh hoạt `4 – 5+ phút` (`min_duration_sec = 240s`)**: Không gò ép kéo dài cho đủ 5 phút bằng lời thoại giải thích lê thê; câu thoại phải ngắn gọn, đủ ý (`≤ 26 từ/câu`, mật độ `~120–140 từ/phút`).
@@ -69,41 +70,51 @@ factory/production/<EP>/         ── Gate 6 (đóng gói phát hành) → b�
 >    - **Phản biện đa chiều Pháp lý & Logic trước khi dựng**: Không ép tình tiết "lừa giật một lần" vào điểm giao dịch quen cố định; không nói sai cơ chế tài chính/pháp luật (như CIC, giữ căn cước, hứa duyệt trả góp); xưng hô đúng vai vế gia đình (vợ của Anh Hai là **Chị Hai**).
 >    - **Tách biệt rõ rệt giọng các nhân vật cùng giới**: Có từ 2–3 nhân vật nam/nữ trở lên thì phải gán `voice` + `style` khác hẳn nhau về âm sắc (cao sáng vs. trầm khàn vs. mượt chậm) để người nghe phân biệt được ngay.
 >    - **Cảnh vào trước tiếng & Dàn timeline theo TTS thật**: Cảnh mới phải lên hình trước ít nhất `0.25–0.4s` rồi nhân vật mới cất tiếng; sau Gate 2 bắt buộc căn lại toàn bộ timeline và mốc YouTube chapters theo thời lượng WAV thật.
+>
+> 9. **DEFAULT RULE — Visual Motion Upgrade (Level 2) bắt buộc cho mọi tập mới ([VISUAL_MOTION_HARNESS.md](VISUAL_MOTION_HARNESS.md)):**
+>    - **Phân tích Visual Beat & phân loại Motion Level (`A/B/C/D`) ngay từ Pre-production** (`SCRIPT.md` + `IMAGE_PROMPTS.md` + `episode.json` có `"motion_upgrade": "level2"`), kiểm tra trước bằng `run.py motion-check <EP>` và `gate0`.
+>    - **Đa dạng hóa nhịp thị giác:** Giữ Ken Burns làm nền tảng (Level A) nhưng **không lặp zoom-in máy móc ≥ 3 cảnh liên tiếp**; chủ động phối hợp `slow_push_in`, `slow_pull_out`, `pan_left/right`, `static_hold` (giữ tĩnh tạo tương phản), **Level B (2.5D parallax ~2–4 cảnh có chiều sâu phù hợp)**, **Level C (object/detail motion khớp VO + SFX)** và **Level D (AI I2V ngắn tùy chọn, chỉ dùng khi không méo/lệch continuity)**.
+>    - **Không làm méo ý nghĩa/nội dung gốc & luôn có đường hạ cấp:** Tuyệt đối không đổi chữ/số tiền/UI/biểu cảm/đạo cụ khi animate; nếu hiệu ứng không sạch ở Gate 5 QC 11 điểm → **hạ cấp ngay về Level A**.
 
-### GATE 0 – ĐẦU VÀO (`run.py gate0 <EP>`)
-Tự kiểm: thời lượng hợp lệ · cảnh phủ kín timeline & đủ ảnh · speaker có trong cast · độ dài thoại · thẻ dấu hiệu 2–4 ý + việc nên làm · có hook · có kịch bản · `clearance/CLEARANCE.md` ghi `TRẠNG THÁI TỔNG: ĐẠT`.
+### GATE 0 – ĐẦU VÀO & VISUAL MOTION PLAN (`run.py gate0 <EP>` · `run.py motion-check <EP>`)
+Tự kiểm: thời lượng hợp lệ · cảnh phủ kín timeline & đủ ảnh/layer · **Visual Motion Plan (`motion_upgrade: level2` yêu cầu đủ `beat_type` + `motion_level` A/B/C/D, kiểm file layer/detail và cảnh báo lặp zoom-in/shake)** · speaker có trong cast · độ dài thoại · thẻ dấu hiệu 2–4 ý (Short) / 3–6 ý (Long) + việc nên làm · có hook · có kịch bản · `clearance/CLEARANCE.md` ghi `TRẠNG THÁI TỔNG: ĐẠT`.
 
-### GATE 1 – DUYỆT ẢNH & CHUYỂN ĐỘNG (thủ công + preview)
-1. Kiểm 5 tiêu chí trên từng ảnh: **đồng nhất nhân vật** · **không chữ/logo/giao diện app/sắc phục thật** · **bối cảnh Việt Nam đương đại** · **không máu me, khỏa thân** · **kẻ lừa không lộ mặt rõ**.
-2. Chạy thử nhanh không tốn API: `run.py gate <EP> 2 --placeholder` rồi `run.py gate <EP> 4 --preview` → xem `staging/<EP>/preview_frames/*_safezone.jpg`.
-3. Chỉnh `motion` / `shakes` / `transition_in` trong `episode.json` đến khi ưng.
+### GATE 1 – DUYỆT ẢNH, LỚP 2.5D & CHUYỂN ĐỘNG (thủ công + preview)
+1. Kiểm 5 tiêu chí trên từng ảnh: **đồng nhất nhân vật & đạo cụ** · **không chữ/logo/giao diện app/sắc phục thật** · **bối cảnh Việt Nam đương đại** · **không máu me, khỏa thân** · **kẻ lừa không lộ mặt rõ**.
+2. Chuẩn bị nguồn hình theo phân cấp motion đã lập ở `IMAGE_PROMPTS.md`:
+   - **Level B (2.5D):** tách sẵn 2–3 lớp sạch (`bg`, `subject` RGBA, `fg` RGBA tùy chọn) nếu cảnh đủ chiều sâu; không đủ sạch thì giữ Level A.
+   - **Level C (Detail):** chuẩn bị ảnh đồng khung (`detail_reveal`) hoặc cutout (`detail_layer`) nếu dùng; kiểm tọa độ `screen_glow`/`cursor_click`/`focus_highlight`.
+   - **Level D (AI I2V tùy chọn):** chỉ đưa clip ngắn vào `assets/` sau khi kiểm tay không biến dạng mặt/tay/trang phục/continuity; luôn giữ ảnh gốc để hạ cấp.
+3. Chạy thử nhanh không tốn API: `run.py motion-check <EP>`, `run.py gate <EP> 2 --placeholder` rồi `run.py gate <EP> 4 --preview` → xem `staging/<EP>/preview_frames/*_safezone.jpg`.
+4. Tinh chỉnh `motion` (preset/easing), `parallax`, `detail_fx`, `shakes`, `transition_in` trong `episode.json` đến khi ưng.
 
 ### GATE 2 – GIỌNG THOẠI (`run.py gate <EP> 2`)
 - Engine chỉ tổng hợp lại câu **có thay đổi** (text/voice/style) – tiết kiệm API.
 - Bắt buộc **nghe từng câu** (dấu thanh, cảm xúc, giọng điện thoại). Đạt → `run.py signoff <EP> --listen PASS --by "<tên>"`.
 - Câu vượt `window` → rút gọn thoại hoặc nới `window`.
 
-### GATE 3 – ÂM THANH (`run.py gate <EP> 3`)
+### GATE 3 – ÂM THANH & MOTION–SFX SYNC (`run.py gate <EP> 3`)
 - 3 lớp: Ambience · Foley (đặt theo giây `at`) · BGM; tự ducking dưới mọi câu thoại + vùng `duck_extra`.
+- Khớp foley đúng mốc với các chuyển động vật lý/chi tiết Level C (`phone_vibrate`, `notification`, `click`, `keyboard`, `light_switch`, `low_accent`, `rain`...) mà không thêm SFX thừa gây mệt hay lấn voice-over.
 - Chuẩn mức: thoại −3 dBFS; master đỉnh trong −6 → −0.8 dBFS (limiter mềm kế thừa 779).
 
-### GATE 4 – TIMELINE (`run.py gate <EP> 4`)
-- Ken Burns sub-pixel, wobble, rung tắt dần, chuyển cảnh, branding, hook, phụ đề tự động, tin nhắn, callout, thẻ dấu hiệu, disclaimer.
-- Kiểm Safe Zone tự động; ảnh QA tại `preview_frames/`.
+### GATE 4 – TIMELINE & VISUAL MOTION LEVEL 2 (`run.py gate <EP> 4`)
+- Thực thi tuần tự từng cảnh với cơ chế **nạp trượt giải phóng RAM (sliding-window: tối đa 1–2 cảnh trong RAM)** an toàn cho máy ThinkPad L480 (i5-8250U / 8GB RAM / iGPU): **Level A** (Ken Burns preset + easing + `static_hold`), **Level B** (2.5D parallax tối đa 2–3 lớp, blur nhẹ `<= 2.0px`), **Level C** (`detail_reveal`, `screen_glow` cục bộ, `light_shift` 1D LUT, `cursor_click`, `focus_highlight`, `detail_layer`, `notifications` & `chat_bubbles` trượt nhẹ — loại trừ hiệu ứng hạt/volumetric nặng), **Level D** (chỉ phát clip `.mp4` dựng ngoài tùy chọn + fallback an toàn).
+- Hỗ trợ cờ `--safe-motion` để hạ cấp tức thì toàn bộ tập về Level A Ken Burns nếu cần tiết kiệm tài nguyên. Tự ghi `motion_summary` vào `timeline_manifest_gate4.json`, xuất thêm khung QA đúng các mốc highlight Level C; kiểm Safe Zone tự động tại `preview_frames/`.
 
-### GATE 5 – RENDER & QA 8 ĐIỂM (`run.py gate <EP> 5`)
+### GATE 5 – RENDER & QA 8 ĐIỂM + VISUAL MOTION QC 11 ĐIỂM (`run.py gate <EP> 5`)
 | # | Tiêu chí | Kiểm |
 | :-: | :--- | :--- |
 | 1 | Không định danh người/tổ chức/số thật | Tự động (WARN cần ký) |
 | 2 | Không hướng dẫn thủ đoạn chi tiết | **Người duyệt** |
 | 3 | Sạch từ khóa thuật toán | Tự động (WARN cần ký) |
-| 4 | Hình ảnh an toàn, không logo/giao diện/sắc phục thật | **Người duyệt** |
+| 4 | Hình ảnh & chuyển động an toàn: không logo/giao diện/sắc phục thật + **Visual Motion QC 11 điểm** (mượt, không méo, không lặp máy móc, đúng continuity) | **Người duyệt** *(+ dữ liệu tự động trong `GATE5_QA_REPORT.md`)* |
 | 5 | Tôn trọng nạn nhân, không kỳ thị | **Người duyệt** |
 | 6 | Âm thanh đạt chuẩn + đã nghe duyệt (không còn giọng placeholder) | Tự động + người |
 | 7 | Safe Zone + Disclaimer + Thẻ dấu hiệu | Tự động |
-| 8 | Hook trước 1s, thời lượng đúng | Tự động |
+| 8 | Hook trước mốc chuẩn, thời lượng đúng | Tự động |
 
-Xem video staging trên **điện thoại** → `run.py signoff <EP> --point 2 4 5 --by "<tên>"` (thêm `1 3` nếu có WARN đã xem xét) → `run.py gate <EP> 5 --skip-render`.
+Xem video staging trên **điện thoại/màn hình** và rà đủ **11 điểm Visual Motion QC** trong `GATE5_QA_REPORT.md` (hạ cấp bất kỳ hiệu ứng nào lỗi về Level A) → `run.py signoff <EP> --point 2 4 5 --by "<tên>"` (thêm `1 3` nếu có WARN đã xem xét) → `run.py gate <EP> 5 --skip-render`.
 
 ### GATE 6 – ĐÓNG GÓI (`run.py gate <EP> 6`)
 Chỉ chạy khi 8/8 PASS. Tạo master MP4, SRT, thumbnail, `release_manifest_gate6.json` (SHA-256), `PUBLISH_PACKAGE_<EP>.md` (tiêu đề, description có nhãn hư cấu + AI, bình luận ghim, checklist khai báo AI).

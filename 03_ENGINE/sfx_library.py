@@ -368,6 +368,78 @@ def fx_chapter_sting(dur: float = 2.2, seed: int = 36) -> np.ndarray:
     return normalize_to_dbfs(fade_in_out(st, 0.01, 0.25), -6.5)
 
 
+def fx_click(dur: float = 0.18, seed: int = 37) -> np.ndarray:
+    """Tiếng click chuột / chạm màn hình gọn, nhẹ – khớp Level C cursor_click / thao tác UI."""
+    rng = np.random.default_rng(seed)
+    n = max(128, int(SR * dur))
+    tt = _t(n)
+    snap = fft_bandpass(rng.standard_normal(n), 1800, 7500) * np.exp(-tt * 220) * 0.85
+    body = np.sin(2 * np.pi * 920.0 * tt) * np.exp(-tt * 160) * 0.45
+    rel_idx = min(n - 1, int(0.042 * SR))
+    rel_len = max(1, min(n - rel_idx, int(0.03 * SR)))
+    rel_t = _t(rel_len)
+    release = np.zeros(n)
+    release[rel_idx: rel_idx + rel_len] = (
+        fft_bandpass(rng.standard_normal(rel_len), 2200, 8000) * np.exp(-rel_t * 260) * 0.4
+    )
+    sig = snap + body + release
+    return normalize_to_dbfs(fade_in_out(stereo_pan(sig, 0.05), 0.001, 0.02), -11.0)
+
+
+def fx_keyboard(dur: float = 1.8, seed: int = 38) -> np.ndarray:
+    """Tiếng gõ bàn phím máy tính nhẹ, đều nhịp (tách biệt với typing màn hình điện thoại)."""
+    rng = np.random.default_rng(seed)
+    n = int(SR * dur)
+    out = np.zeros(n)
+    c = 0.03
+    while c < dur - 0.05:
+        idx = int(c * SR)
+        ln = min(n - idx, int(0.04 * SR))
+        if ln <= 16:
+            break
+        tt = _t(ln)
+        key_clack = (
+            fft_bandpass(rng.standard_normal(ln), 900, 5200) * np.exp(-tt * 180) * 0.75
+            + np.sin(2 * np.pi * rng.uniform(320, 480) * tt) * np.exp(-tt * 140) * 0.35
+        )
+        out[idx: idx + ln] += key_clack * rng.uniform(0.55, 1.0)
+        c += rng.uniform(0.09, 0.21) if rng.random() > 0.14 else rng.uniform(0.28, 0.45)
+    return normalize_to_dbfs(add_reverb(stereo_pan(out, -0.08), 0.1, 0.25, seed), -13.0)
+
+
+def fx_light_switch(dur: float = 0.25, seed: int = 39) -> np.ndarray:
+    """Tiếng công tắc đèn bật/tắt gọn – khớp Level C light_shift / detail_reveal."""
+    rng = np.random.default_rng(seed)
+    n = max(128, int(SR * dur))
+    out = np.zeros(n)
+    for t0, amp, f0 in [(0.008, 0.65, 620.0), (0.032, 1.0, 1450.0)]:
+        idx = int(t0 * SR)
+        ln = min(n - idx, int(0.045 * SR))
+        if ln > 16:
+            tt = _t(ln)
+            snap = (
+                fft_bandpass(rng.standard_normal(ln), 1200, 6800) * np.exp(-tt * 170) * 0.8
+                + np.sin(2 * np.pi * f0 * tt) * np.exp(-tt * 130) * 0.5
+            )
+            out[idx: idx + ln] += snap * amp
+    st = add_reverb(stereo_pan(out, 0.0), 0.12, 0.28, seed)
+    return normalize_to_dbfs(fade_in_out(st, 0.002, 0.03), -11.0)
+
+
+def fx_low_accent(dur: float = 1.6, seed: int = 45) -> np.ndarray:
+    """Low-impact cinematic accent: nhấn trầm tinh tế khi tiết lộ chi tiết/nghi vấn, không lấn voice-over."""
+    rng = np.random.default_rng(seed)
+    n = int(SR * dur)
+    tt = _t(n)
+    f_sub = 52.0 + 18.0 * np.exp(-tt * 6.0)
+    sub = np.sin(2 * np.pi * np.cumsum(f_sub) / SR) * np.exp(-tt * 2.4) * 0.85
+    warm = np.sin(2 * np.pi * 110.0 * tt) * np.exp(-tt * 3.8) * 0.35
+    air = fft_bandpass(pink_noise(n, rng), 180, 1200) * np.exp(-tt * 5.0) * 0.18
+    sig = fft_bandpass(sub + warm + air, 36, 950)
+    st = add_reverb(stereo_pan(sig, 0.0), wet=0.22, rt60=0.85, seed=seed)
+    return normalize_to_dbfs(fade_in_out(st, 0.035, 0.25), -11.5)
+
+
 # ============================================================================
 # LAYER 3 – BGM (nhạc nền)
 # ============================================================================
@@ -525,6 +597,10 @@ FOLEY: dict[str, Callable[..., np.ndarray]] = {
     "bank_ting": fx_bank_ting,
     "message_send": fx_message_send,
     "typing": fx_typing,
+    "keyboard": fx_keyboard,
+    "click": fx_click,
+    "light_switch": fx_light_switch,
+    "low_accent": fx_low_accent,
     "door_knock": fx_door_knock,
     "footsteps": fx_footsteps,
     "heartbeat": fx_heartbeat,
@@ -547,7 +623,8 @@ BGM: dict[str, Callable[..., np.ndarray]] = {
 
 FOLEY_DEFAULT_DUR = {
     "phone_ring": 4.0, "phone_vibrate": 2.4, "notification": 0.8, "bank_ting": 1.4, "message_send": 0.5,
-    "typing": 2.0, "door_knock": 1.2, "footsteps": 2.0, "heartbeat": 4.0, "impact": 2.0, "riser": 3.0,
+    "typing": 2.0, "keyboard": 1.8, "click": 0.18, "light_switch": 0.25, "low_accent": 1.6,
+    "door_knock": 1.2, "footsteps": 2.0, "heartbeat": 4.0, "impact": 2.0, "riser": 3.0,
     "glitch": 0.9, "call_end": 1.6, "whistle": 1.6, "school_bell": 3.0, "chapter_sting": 2.2,
 }
 

@@ -54,6 +54,14 @@
 - Cấm cắt chữ, cấm dùng `atempo`/`asetrate` ép tốc độ giọng.
 - Sau khi Gate 2 sinh xong toàn bộ WAV thật, phải căn lại `start`, `window`, điểm cắt `scenes`, `chapters`, `thumbnail_sec` và **mốc thời gian YouTube Chapters trong `publish.description`** khớp 100% với độ dài audio thực tế (nằm gọn trong khoảng `240s+`).
 
+### 8. Chuyển động Hình ảnh có chủ đích — Visual Motion Upgrade Level 2 ([VISUAL_MOTION_HARNESS.md](VISUAL_MOTION_HARNESS.md))
+- **Lập Visual Motion Plan ngay từ tiền kỳ (`SCRIPT.md` + `IMAGE_PROMPTS.md` + `episode.json`):** Khai báo `"motion_upgrade": "level2"`, phân loại rõ `beat_type` (`establishing`, `normal`, `information`, `suspicion`, `anomaly`, `climax`, `aftermath`, `ending`) và `motion_level` (`A`/`B`/`C`/`D`) cho toàn bộ cảnh, kiểm trước bằng `python factory196/_engine/run.py motion-check <EP>`.
+- **Phân bổ khuyến nghị cho phim dài 16:9 (10–25+ cảnh):**
+  - **Phần lớn cảnh → Level A:** Dùng đa dạng preset (`pan_right`, `pan_left`, `slow_push_in`, `slow_pull_out`, `drift_up`, `static_hold`), **cấm lặp zoom-in ≥ 3 cảnh liên tiếp**; tận dụng `static_hold` ở các khoảnh khắc đối thoại căng hoặc khoảng lặng để tạo tương phản điện ảnh; không rung tùy tiện.
+  - **~2–4 cảnh có chiều sâu nổi bật → Level B (2.5D Parallax):** Ưu tiên cảnh thiết lập không gian rộng, cảnh đối đầu Trái–Phải hoặc cảnh nghi vấn có tiền cảnh/chủ thể/hậu cảnh rõ (chỉ làm khi nguồn hình tách lớp sạch, không bắt buộc đủ số lượng).
+  - **Cảnh điện thoại / tin nhắn / bằng chứng / ánh sáng → Level C (Object/Detail Motion nhẹ):** Dùng `detail_reveal`, `screen_glow`, `light_shift`, `cursor_click`, `focus_highlight`, `detail_layer`, `notifications`, `chat_bubbles` khớp chính xác với nhịp thoại và foley (`click`, `keyboard`, `light_switch`, `notification`, `low_accent`) mà không đổi chữ/số liệu (loại trừ particle/volumetric nặng theo Hardware Safety Profile L480).
+  - **Khoảnh khắc cảm xúc đặc biệt → Level D (AI I2V ngắn tùy chọn):** Chỉ dùng khi vi chuyển động (quay đầu, khựng lại, ánh mắt chuyển hướng) nâng mạnh giá trị câu chuyện và tuyệt đối không biến dạng; luôn có ảnh gốc dự phòng để hạ cấp ngay bằng `"video_enabled": false` nếu không đạt QC 11 điểm ở Gate 5.
+
 ---
 
 ## III. KHUNG CẤU TRÚC 5 HỒI MẪU (`4 – 5+ PHÚT`)
@@ -75,7 +83,8 @@
 # 1. Tạo tập phim dài mới (mặc định 270s = 4p30s, hợp lệ từ 240s = 4p trở lên)
 python factory196/_engine/run.py new EP02 --slug TenTapPhim --title "Tên tập phim dài" --duration 270
 
-# 2. Kiểm tra đầu vào Gate 0
+# 2. Kiểm tra Visual Motion Plan & đầu vào Gate 0
+python factory196/_engine/run.py motion-check EP02
 python factory196/_engine/run.py gate0 EP02
 
 # 3. Chạy thật Gate 2 → Gate 5 (dàn lại timeline sau Gate 2 theo độ dài TTS thật, luôn dừng ở Staging)

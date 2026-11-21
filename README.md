@@ -12,9 +12,10 @@
 2. [Harness Pháp lý & An toàn nội dung](00_HARNESS_GUIDELINES/CONTENT_LEGAL_SAFETY_HARNESS.md) – 5 nguyên tắc vàng
 3. [Quy chuẩn định dạng Short 70s (`factory619`)](00_HARNESS_GUIDELINES/SHORT_FORMAT_SPEC.md) · [Quy chuẩn định dạng Phim dài 16:9 4–5+ phút (`factory196`)](00_HARNESS_GUIDELINES/LONG_FORMAT_196_SPEC.md)
 4. [Hình tượng nhân vật & phong cách hình ảnh](00_HARNESS_GUIDELINES/CAST_AND_VISUAL_STYLE.md) · [cast.json](02_CAST/cast.json)
-5. [Harness quy trình sản xuất (Gate 0 → 6)](00_HARNESS_GUIDELINES/EPISODE_PRODUCTION_HARNESS.md)
-6. [Bản đồ Thư viện 3 lớp & phủ sóng biến thể (dùng cho tập mới)](01_SCAM_MAP/VIGILANCE_LIBRARY_MAP.md) · [Bản đồ chiêu trò gốc](01_SCAM_MAP/SCAM_MAP_ONLINE_TO_OFFLINE.md) · [Kho kịch bản & Lịch phát sóng Tháng 11](01_SCAM_MAP/KHO_KICH_BAN_THANG_11.md)
-7. [Bộ từ cấm / cảnh báo tự động](00_HARNESS_GUIDELINES/policy_wordlists.json)
+5. **[Harness Chuyển động Hình ảnh – Visual Motion Upgrade Level 2 (MẶC ĐỊNH)](00_HARNESS_GUIDELINES/VISUAL_MOTION_HARNESS.md)**
+6. [Harness quy trình sản xuất (Gate 0 → 6)](00_HARNESS_GUIDELINES/EPISODE_PRODUCTION_HARNESS.md)
+7. [Bản đồ Thư viện 3 lớp & phủ sóng biến thể (dùng cho tập mới)](01_SCAM_MAP/VIGILANCE_LIBRARY_MAP.md) · [Bản đồ chiêu trò gốc](01_SCAM_MAP/SCAM_MAP_ONLINE_TO_OFFLINE.md) · [Kho kịch bản & Lịch phát sóng Tháng 11](01_SCAM_MAP/KHO_KICH_BAN_THANG_11.md)
+8. [Bộ từ cấm / cảnh báo tự động](00_HARNESS_GUIDELINES/policy_wordlists.json)
 
 ## CẤU TRÚC HAI NHÀ MÁY (`factory196` & `factory619`) + SERVICE DÙNG CHUNG (`03_ENGINE`)
 ```
@@ -47,6 +48,10 @@ factory619/              NHÀ MÁY VIDEO NGẮN DỌC 9:16 (1080x1920, Shorts/Re
 3. **Mạch chuyện tự nhiên như phim, không làm kiểu "bài giáo án":** Không dùng hộp đen `callouts` giữa phim; phụ đề là chữ viền điện ảnh trong suốt (boxless outline); thời lượng gọn (~55–58s), kết nhanh dứt khoát.
 4. **Logic không gian & hướng nhìn nhân vật chuẩn xác:** Cảnh đối đầu/giải cứu phải bố cục cắt ngang Trái – Phải rõ ràng (người bảo vệ đứng ngay cổng đón nạn nhân và quay mặt nhìn nghi ngờ thẳng về phía kẻ gian); kẻ dụ dỗ có vẻ ngoài hiền lành, lịch sự.
 5. **Chuẩn riêng cho Phim dài 16:9 (`factory196`, 4–5+ phút / `≥ 240s`):** Giữ tỷ lệ `~80%` kịch đời sống xoay quanh 1 nhân vật chính có chiều sâu đời tư / `~20%` sơ đồ & Người Bóc Trần; phản biện đa chiều pháp lý & logic trước khi dựng; lời thoại ngắn gọn (`≤ 26 từ/câu`, `~120–140 từ/phút`); phân tách rõ âm sắc các giọng cùng giới tính; cắt cảnh lên hình trước giọng nói (`0.25–0.4s`) và căn lại timeline theo độ dài WAV thật sau Gate 2.
+6. **DEFAULT RULE — Visual Motion Upgrade (Level 2) cho mọi video mới ([VISUAL_MOTION_HARNESS.md](00_HARNESS_GUIDELINES/VISUAL_MOTION_HARNESS.md)):**
+   - **Bắt buộc lập Visual Motion Plan trước khi render** (khai báo `"motion_upgrade": "level2"`, phân loại `beat_type` và `motion_level` `A/B/C/D` cho từng cảnh; kiểm trước bằng `run.py motion-check <EP>` và `gate0`).
+   - **Ken Burns là nền tảng (Level A), không còn là giải pháp duy nhất:** đa dạng hóa nhịp camera (`slow_push_in`, `slow_pull_out`, `pan_left/right`, `static_hold` — cấm lặp zoom-in máy móc ≥ 3 cảnh liền và cấm rung tùy tiện); kết hợp có tiết chế **Level B (2.5D parallax ~2–4 cảnh phù hợp)**, **Level C (object/detail motion khớp VO + SFX)** và **Level D (AI I2V ngắn tùy chọn, chỉ dùng khi không biến dạng)**.
+   - **QC đủ 11 điểm Visual Motion ở Gate 5:** hiệu ứng lỗi phải hạ cấp về Level A; cảnh tĩnh sạch sẽ luôn tốt hơn cảnh chuyển động lỗi.
 
 ## BẮT ĐẦU NHANH
 ```powershell
@@ -54,6 +59,7 @@ cd c:\projects\socialScamStories
 
 # --- NHÀ MÁY 196: PHIM DÀI 16:9 (4–5+ PHÚT / ≥ 240s) ---
 python factory196/_engine/run.py new EP01 --slug HoSoLuaDao --title "Tên tập phim dài" --duration 270
+python factory196/_engine/run.py motion-check EP01
 python factory196/_engine/run.py gate0 EP01
 python factory196/_engine/run.py gate EP01 2 --placeholder
 python factory196/_engine/run.py gate EP01 4 --preview
@@ -62,6 +68,7 @@ python factory196/_engine/run.py presets
 
 # --- NHÀ MÁY 619: VIDEO SHORT 9:16 (~55-70s) ---
 python factory619/_engine/run.py new EP01 --slug TenTapShort --title "Tên tập Short"
+python factory619/_engine/run.py motion-check EP01
 python factory619/_engine/run.py gate0 EP01
 python factory619/_engine/run.py all EP01
 ```

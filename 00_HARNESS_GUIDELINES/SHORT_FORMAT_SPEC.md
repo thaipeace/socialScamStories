@@ -41,20 +41,26 @@
 
 **Safe Zone** (giữ nguyên chuẩn 779): X 80–920, Y ≤ 1420; cấm vùng phải 15% và đáy 25% (UI của Shorts/TikTok/Reels).
 
-## IV. CHUYỂN CẢNH & CHUYỂN ĐỘNG
+## IV. CHUYỂN CẢNH & CHUYỂN ĐỘNG — VISUAL MOTION UPGRADE (LEVEL 2)
+*Áp dụng mặc định theo [VISUAL_MOTION_HARNESS.md](VISUAL_MOTION_HARNESS.md): mỗi cảnh bắt buộc khai báo `beat_type` và `motion_level` (`A`/`B`/`C`/`D`) trong `episode.json` (`"motion_upgrade": "level2"`).*
+
 | `transition_in.type` | Dùng khi |
 | :--- | :--- |
 | `dissolve` (0.3s) | Chuyển nhịp thông thường |
 | `flash_red` (0.25s) | Vào CÚ CHỐT |
 | `glitch` (0.4s) | Vào BÓC TRẦN / lộ deepfake |
 | `fade_black` (0.4s) | Vào THẺ DẤU HIỆU |
-| `flash_white`, `cut` | Tùy ý |
+| `flash_white`, `cut` | Tùy ý (ưu tiên `cut` gọn khi tiết lộ thông tin quan trọng) |
 
-`motion.wobble`: `none` · `calm` · `handheld` · `tense`; `shakes`: rung tắt dần tại giây khớp foley (impact, đập cửa).
+- **Phân cấp Motion cho Short 9:16 (~55–70s):**
+  - **Level A (nền tảng):** Đa dạng hóa `motion.preset` (`slow_push_in`, `slow_pull_out`, `pan_left`, `pan_right`, `drift_up`, `static_hold`) — **cấm lặp zoom-in máy móc ≥ 3 cảnh liên tiếp**; giữ `wobble: "none"` mặc định cho cảnh thường/kết, chỉ dùng `handheld`/`tense` và `shakes` đúng điểm cao trào khớp foley.
+  - **Level B (2.5D parallax):** Chọn 1–2 cảnh đắt giá có chiều sâu phù hợp (tách lớp `bg` + `subject` + `fg` tùy chọn), không bắt buộc nếu nguồn hình chưa phù hợp.
+  - **Level C (Object/Detail motion):** Rất hiệu quả trên khung dọc 9:16 cho điện thoại sáng màn hình (`screen_glow`), thông báo trượt xuống (`notifications`), tin nhắn trượt lên (`chat_bubbles`), thao tác bấm (`cursor_click`), đổi chi tiết đồng khung (`detail_reveal`) hoặc gom sáng (`focus_highlight`), khớp sát nhịp VO & foley.
+  - **Level D (AI I2V ngắn tùy chọn):** Tối đa 1 khoảnh khắc phản ứng đặc biệt nếu không biến dạng; có lỗi → hạ cấp ngay bằng `"video_enabled": false`.
 
-## V. ÂM THANH (preset có sẵn – `python factory/_engine/run.py presets`)
-- **Ambience:** room_tone, night_room, office, street, crowd, rain
-- **Foley:** phone_ring, phone_vibrate, notification, **bank_ting** (âm nhận diện kênh), message_send, typing, door_knock, footsteps, heartbeat, impact, riser, glitch, call_end
-- **BGM:** suspense_pulse (nhịp 1–4), tension_drone (bóc trần), warm_outro (thẻ dấu hiệu)
-- Có thể thay preset bằng file thật: `{"file": "assets/sfx/xxx.wav", "at": 12.0}` (chỉ dùng âm thanh có quyền sử dụng).
+## V. ÂM THANH (preset có sẵn – `python factory619/_engine/run.py presets`)
+- **Ambience:** `room_tone`, `night_room`, `office`, `street`, `crowd`, `rain`
+- **Foley:** `phone_ring`, `phone_vibrate`, `notification`, **`bank_ting`** (âm nhận diện kênh), `message_send`, `typing`, `keyboard`, `click`, `light_switch`, `low_accent`, `door_knock`, `footsteps`, `heartbeat`, `impact`, `riser`, `glitch`, `call_end`, `whistle`, `school_bell`, `chapter_sting`
+- **BGM:** `investigative_story`, `suspense_pulse` (nhịp 1–4), `tension_drone` (bóc trần), `action_climax`, `warm_outro` (thẻ dấu hiệu)
+- Có thể thay preset bằng file thật: `{"file": "assets/sfx/xxx.wav", "at": 12.0}` (chỉ dùng âm thanh có quyền sử dụng). Không chèn SFX thừa chỉ để lấp khoảng trống; mọi SFX đi kèm motion phải giữ mức không lấn thoại.
 

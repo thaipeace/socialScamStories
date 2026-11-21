@@ -31,3 +31,12 @@
 - Điện thoại sáng trong bóng tối / bảng mã QR dán chồng / túi quà bọc kín (khung hình chủ lực của nhịp Hook).
 - Màn hình & bảng hiệu **không có chữ/số đọc được** – mọi chữ do engine chèn.
 - Kính lúp đỏ: biểu tượng “bóc trần” ở Scene 5.
+
+## IV. CHUẨN BỊ HÌNH ẢNH CHO VISUAL MOTION UPGRADE (LEVEL 2)
+*Chi tiết đầy đủ xem tại [VISUAL_MOTION_HARNESS.md](VISUAL_MOTION_HARNESS.md).*
+- **Level A (Static Cinematic):** Bố cục thoáng mép (chừa khoảng overscan 10–15%) để push-in, pull-out, pan trái/phải không cắt cụt mặt nhân vật hoặc đạo cụ; giữ ánh sáng & đạo cụ nhất quán giữa các cảnh liên tiếp.
+- **Level B (2.5D Parallax — ~2–4 cảnh có chiều sâu phù hợp):** Khi chọn cảnh đầu tư 2.5D, thiết kế rõ 3 lớp không gian (**Background** có chiều sâu bối cảnh · **Main subject** tách bạch biên · **Foreground** như góc bàn, khung cửa, vật cận cảnh mờ nhẹ). Tách file lớp sạch (`bg.jpg` + `mid.png`/`fg.png` RGBA) không lem biên, không méo người; nếu ảnh không phù hợp tách lớp thì giữ Level A.
+- **Level C (Object / Detail Motion):**
+  - Với cảnh cần `detail_reveal` (màn hình điện thoại sáng lên, đèn bật/tắt, chi tiết lộ diện), sinh cặp ảnh **đồng góc máy – đồng bố cục – đồng nhân vật**, chỉ khác đúng chi tiết biến đổi để engine blend theo vùng mượt mà.
+  - Với `screen_glow` / `cursor_click` / `notifications` / `chat_bubbles`: chừa khoảng sạch quanh màn hình/đạo cụ, tuyệt đối không làm biến đổi chữ, số tiền, tên hoặc UI gốc.
+- **Level D (AI I2V ngắn tùy chọn):** Chỉ dùng khi cần vi chuyển động cảm xúc (quay đầu, liếc mắt, khựng lại, tay ngập ngừng) và bắt buộc khớp 100% tạo hình, trang phục, đạo cụ với ảnh tĩnh trước/sau; có bất kỳ biến dạng nào → hạ cấp về Level A.

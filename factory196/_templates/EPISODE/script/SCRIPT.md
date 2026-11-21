@@ -24,15 +24,17 @@
 - [ ] **Dễ kể lại:** Đã nén thành 1 câu neo ký ức rõ ràng.
 - [ ] **An toàn:** Hình ảnh hóa được không cần logo/app thật; không chạm `L2` (dạy lừa) & `L8` (khuyến nghị chưa kiểm chứng).
 
-## 1. Cấu trúc 5 Hồi (≥ 240 giây)
-| Hồi | Thời gian | Phân cảnh (Scenes) | Diễn biến tâm lý & Hành động | Âm thanh & Nhạc nền |
-| :--- | :---: | :--- | :--- | :--- |
-| **MỞ MÀN (HOOK)** | `00:00–00:25` | `scene01` | Khoảnh khắc kịch tính nhất + câu hỏi giữ chân | `suspense_pulse` + `phone_ring` |
-| **HỒI 1: MỒI NHỬ ĐỜI THƯỜNG** | `00:25–01:30` | `scene02–03` | Hoàn cảnh thực tế của nạn nhân & cách kẻ lừa tiếp cận tự nhiên | `chapter_sting` + `investigative_story` |
-| **HỒI 2: CHIẾC BẪY TÂM LÝ** | `01:30–02:45` | `scene04–05` | Thả lợi ích nhỏ / tạo uy tín giả / dẫn nạn nhân vào quy trình | `chapter_sting` + `suspense_pulse` |
-| **HỒI 3: CÔ LẬP & DỒN ÉP** | `02:45–03:45` | `scene06–07` | Cắt đứt liên lạc người thân, ép thời gian, đẩy nỗi sợ lên đỉnh điểm | `tension_drone` + `heartbeat` |
-| **HỒI 4: LẬT MẶT & BÓC TRẦN** | `03:45–04:40` | `scene08–09` | Điểm bẻ lái cứu cánh (Saving Hook) + Người Bóc Trần giải phẫu toàn bộ đường dây | `riser` + `impact` + `action_climax` |
-| **HỒI 5: PHÒNG VỆ & NHỚ KỸ** | `04:40–05:00+` | `scene10` | Thẻ DẤU HIỆU NHẬN BIẾT (3–6 ý) + VIỆC NÊN LÀM + Disclaimer | `bank_ting` + `warm_outro` |
+## 1. Cấu trúc 5 Hồi & Kế hoạch Visual Motion (Level 2 · ≥ 240 giây)
+*Phân loại `beat_type` và `motion_level` (`A`/`B`/`C`/`D`) cho từng cảnh ngay tại bước kịch bản theo [VISUAL_MOTION_HARNESS.md](../../../../00_HARNESS_GUIDELINES/VISUAL_MOTION_HARNESS.md); tránh lặp zoom-in ≥ 3 cảnh liên tiếp.*
+
+| Hồi | Thời gian | Phân cảnh (Scenes) | Diễn biến tâm lý & Hành động | Beat & Motion Level (A/B/C/D + Lý do) | Âm thanh & SFX khớp Motion |
+| :--- | :---: | :--- | :--- | :--- | :--- |
+| **MỞ MÀN (HOOK)** | `00:00–00:25` | `scene01` | Khoảnh khắc kịch tính nhất + câu hỏi giữ chân | `climax` · Lv `A` (`slow_push_in` nhẹ) | `suspense_pulse` + `phone_ring` |
+| **HỒI 1: MỒI NHỬ ĐỜI THƯỜNG** | `00:25–01:30` | `scene02–03` | Hoàn cảnh thực tế của nạn nhân & cách kẻ lừa tiếp cận tự nhiên | `establishing` Lv `A`/`B` (`pan_right`/2.5D) → `information` Lv `C` (`screen_glow` / `notifications`) | `chapter_sting` + `notification` + `investigative_story` |
+| **HỒI 2: CHIẾC BẪY TÂM LÝ** | `01:30–02:45` | `scene04–05` | Thả lợi ích nhỏ / tạo uy tín giả / dẫn nạn nhân vào quy trình | `normal` Lv `A` (`slow_push_in`) → `suspicion` Lv `A`/`B` (`slow_pull_out`/2.5D) | `chapter_sting` + `click` / `keyboard` + `suspense_pulse` |
+| **HỒI 3: CÔ LẬP & DỒN ÉP** | `02:45–03:45` | `scene06–07` | Cắt đứt liên lạc người thân, ép thời gian, đẩy nỗi sợ lên đỉnh điểm | `anomaly` Lv `C` (`focus_highlight`/`detail_reveal`) → `climax` Lv `A`/`D` | `low_accent` + `tension_drone` + `heartbeat` |
+| **HỒI 4: LẬT MẶT & BÓC TRẦN** | `03:45–04:40` | `scene08–09` | Điểm bẻ lái cứu cánh (Saving Hook) + Người Bóc Trần giải phẫu cơ chế | `aftermath` Lv `A` (`pan_left`) → `information` Lv `A` (`slow_push_in`) | `riser` + `impact` + `action_climax` |
+| **HỒI 5: PHÒNG VỆ & NHỚ KỸ** | `04:40–05:00+` | `scene10` | Thẻ DẤU HIỆU NHẬN BIẾT (3–6 ý) + VIỆC NÊN LÀM + Disclaimer | `ending` · Lv `A` (`static_hold`, không rung) | `bank_ting` + `warm_outro` |
 
 ## 2. Lời thoại chi tiết (≤ 32 từ/câu, tổng ≤ 170 từ/phút)
 1. 

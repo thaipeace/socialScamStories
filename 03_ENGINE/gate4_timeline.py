@@ -18,6 +18,20 @@ from pathlib import Path
 from PIL import Image, ImageDraw, ImageFont
 
 from core import FFMPEG, Episode, GateError, load_json, rel, save_json
+from motion_fx import (
+    HARDWARE_PROFILE,
+    apply_post_camera_fx,
+    apply_pre_camera_fx,
+    audit_episode_motion,
+    collect_fx_qa_timestamps,
+    ease_u,
+    fit_aspect_crop,
+    prepare_detail_fx,
+    prepare_parallax,
+    render_parallax_frame,
+    resolve_motion_params,
+    unload_scene_runtime,
+)
 
 # ----------------------------------------------------------------------------
 # Fonts & text helpers
@@ -253,6 +267,50 @@ def plate_chat(cv: Canvas, text: str, side: str = "left", sender: str = "", y_to
                  "safe_zone_compliant": cv.compliant(x0, y0, x1 + 4, y1 + 30)}
 
 
+def plate_notification(cv: Canvas, title: str, text: str, stamp: str = "vừa xong",
+                       y_top: int | None = None, style: str = "neutral") -> tuple[Image.Image, dict]:
+    """Thanh thông báo điện thoại trung tính (Level C detail motion – không logo, không UI app thật)."""
+    img = cv.blank()
+    d = ImageDraw.Draw(img)
+    ft = font(24 if cv.is_landscape else 27)
+    fb = font(27 if cv.is_landscape else 31, bold=False)
+    fs = font(20 if cv.is_landscape else 22, bold=False)
+    card_w = min(760, int((cv.R - cv.L) * 0.56)) if cv.is_landscape else min(cv.R - cv.L - 12, 820)
+    inner_w = card_w - 116
+    lines = wrap(d, text, fb, inner_w)
+    lh = 35 if cv.is_landscape else 40
+    bh = 26 + 34 + lh * len(lines) + 14
+    cx = (cv.L + cv.R) // 2
+    x0 = max(cv.L, cx - card_w // 2)
+    x1 = min(cv.R, x0 + card_w)
+    default_y = (cv.TOPY + 10) if cv.is_landscape else (cv.TOPY + 20)
+    y0 = max(cv.TOPY, min(cv.MAXY - bh - 12, int(y_top if y_top is not None else default_y)))
+    y1 = y0 + bh
+
+    accent = (
+        tuple(cv.pal["danger_rgb"]) if style == "danger"
+        else tuple(cv.pal["safe_rgb"]) if style == "safe"
+        else tuple(cv.pal["accent_rgb"])
+    )
+    d.rounded_rectangle([x0 + 4, y0 + 6, x1 + 4, y1 + 6], radius=22, fill=(0, 0, 0, 105))
+    d.rounded_rectangle([x0, y0, x1, y1], radius=22, fill=(22, 26, 36, 232), outline=(*accent, 210), width=2)
+    # Neutral indicator badge (no brand icon)
+    icx, icy = x0 + 44, (y0 + y1) // 2
+    d.ellipse([icx - 20, icy - 20, icx + 20, icy + 20], fill=(*accent, 235))
+    d.ellipse([icx - 7, icy - 7, icx + 7, icy + 7], fill=(255, 255, 255, 245))
+
+    tx = x0 + 82
+    d.text((tx, y0 + 28), title or "Thông báo mới", font=ft, anchor="lm", fill=(255, 255, 255, 255))
+    if stamp:
+        d.text((x1 - 24, y0 + 28), stamp, font=fs, anchor="rm", fill=(195, 205, 220, 225))
+    y = y0 + 54
+    for ln in lines:
+        d.text((tx, y + lh // 2), ln, font=fb, anchor="lm", fill=(235, 240, 248, 250))
+        y += lh
+    return img, {"type": "notification", "title": title, "text": text, "bbox_px": [x0, y0, x1 + 4, y1 + 6],
+                 "safe_zone_compliant": cv.compliant(x0, y0, x1 + 4, y1 + 6)}
+
+
 def _warn_icon(d: ImageDraw.ImageDraw, cx: int, cy: int, r: int, color) -> None:
     d.polygon([(cx, cy - r), (cx + r, cy + int(r * 0.8)), (cx - r, cy + int(r * 0.8))], fill=color)
     d.text((cx, cy + int(r * 0.15)), "!", font=font(int(r * 1.1)), anchor="mm", fill=(20, 20, 20, 255))
@@ -454,6 +512,8 @@ class SceneVideoReader:
         idx = max(0, min(self.n_frames - 1, idx))
         if idx == self._cur_idx and self._cur_img is not None:
             return self._cur_img
+        if getattr(self, "_eof", False) and idx >= self._cur_idx and self._cur_img is not None:
+            return self._cur_img
         if self._proc is None or idx < self._cur_idx:
             self.close()
             self._proc = subprocess.Popen([
@@ -462,13 +522,20 @@ class SceneVideoReader:
                 "-f", "rawvideo", "-pix_fmt", "rgb24", "-"
             ], stdout=subprocess.PIPE)
             self._cur_idx = -1
+            self._eof = False
+        last_buf = None
         while self._cur_idx < idx:
             buf = self._proc.stdout.read(self.frame_sz)
             if len(buf) < self.frame_sz:
+                self._eof = True
                 break
             self._cur_idx += 1
-            if self._cur_idx == idx or self._cur_img is None:
+            last_buf = buf
+            if self._cur_idx == idx:
                 self._cur_img = Image.frombytes("RGB", (self.W, self.H), buf)
+                last_buf = None
+        if last_buf is not None:
+            self._cur_img = Image.frombytes("RGB", (self.W, self.H), last_buf)
         return self._cur_img if self._cur_img is not None else Image.new("RGB", (self.W, self.H))
 
     def close(self):
@@ -484,18 +551,11 @@ class SceneVideoReader:
 
 def scene_frame(sc: dict, t: float, W: int, H: int) -> Image.Image:
     s, e = sc["start"], sc["end"]
-    u = smoothstep((max(s, min(e, t)) - s) / max(e - s, 1e-4))
-    if sc.get("_vreader"):
-        vr: SceneVideoReader = sc["_vreader"]
-        lin_u = max(0.0, min(1.0, (t - s) / max(e - s, 1e-4)))
-        v_idx = min(vr.n_frames - 1, max(0, int(round(lin_u * (vr.n_frames - 1)))))
-        return vr.get_frame(v_idx)
-    m = sc.get("motion", {})
-    s0, s1 = m.get("scale", [1.03, 1.12])
-    (fx0, fy0), (fx1, fy1) = m.get("focus", [[0.5, 0.5], [0.5, 0.5]])
-    scale = s0 + (s1 - s0) * u
-    fx, fy = fx0 + (fx1 - fx0) * u, fy0 + (fy1 - fy0) * u
-    ax, fqx, ay, fqy = WOBBLE.get(m.get("wobble", "calm"), WOBBLE["calm"])
+    mp = sc.get("_motion") or resolve_motion_params(sc)
+    dfx = sc.get("_detail_fx") or []
+
+    # Shared wobble + intentional shakes calculation
+    ax, fqx, ay, fqy = WOBBLE.get(mp.get("wobble", "none"), WOBBLE["none"])
     lt = t - s
     dx = ax * math.sin(2 * math.pi * fqx * lt) + (ax * 0.5 * math.cos(2 * math.pi * fqx * 2.1 * lt) if ax else 0)
     dy = ay * math.cos(2 * math.pi * fqy * lt)
@@ -506,7 +566,140 @@ def scene_frame(sc: dict, t: float, W: int, H: int) -> Image.Image:
             dec = math.exp(-dt * float(sh.get("decay", 8.5)))
             dx += amp * dec * math.sin(2 * math.pi * 24 * dt)
             dy += amp * 0.75 * dec * math.cos(2 * math.pi * 31 * dt)
-    return camera_frame(sc["_img"], W, H, scale, fx, fy, dx, dy)
+
+    # Level D — Optional external pre-rendered clip (or legacy video scene)
+    if sc.get("_vreader"):
+        try:
+            vr: SceneVideoReader = sc["_vreader"]
+            if sc.get("video_fit") == "natural_hold":
+                v_off = float(sc.get("video_start_offset", 0.0))
+                v_idx = max(0, min(vr.n_frames - 1, int(round((t - s - v_off) * vr.fps))))
+            else:
+                lin_u = max(0.0, min(1.0, (t - s) / max(e - s, 1e-4)))
+                v_idx = min(vr.n_frames - 1, max(0, int(round(lin_u * (vr.n_frames - 1)))))
+            frame = vr.get_frame(v_idx)
+            return apply_post_camera_fx(frame, dfx, t, W, H) if dfx else frame
+        except Exception as exc:
+            if sc.get("_img") is None:
+                raise
+            print(f"    [motion fallback · {sc.get('id', '?')}] Lỗi đọc clip Level D ({exc}) -> hạ cấp Level A")
+            sc["_vreader"].close()
+            sc["_vreader"] = None
+            sc["_effective_level"] = "A"
+
+    # Level B — Lightweight 2.5D Multi-Layer Parallax (max 2–3 layers)
+    if sc.get("_parallax"):
+        try:
+            frame = render_parallax_frame(sc["_parallax"], sc, t, W, H, extra_dx=dx, extra_dy=dy)
+            return apply_post_camera_fx(frame, dfx, t, W, H) if dfx else frame
+        except Exception as exc:
+            if sc.get("_img") is None:
+                raise
+            print(f"    [motion fallback · {sc.get('id', '?')}] Lỗi parallax Level B ({exc}) -> hạ cấp Level A")
+            sc["_parallax"] = None
+            sc["_effective_level"] = "A"
+
+    # Level A / Level C — Static Cinematic Motion + optional lightweight Object/Detail Motion
+    u = ease_u((max(s, min(e, t)) - s) / max(e - s, 1e-4), mp.get("easing", "smoothstep"))
+    s0, s1 = mp["scale"]
+    (fx0, fy0), (fx1, fy1) = mp["focus"]
+    scale = s0 + (s1 - s0) * u
+    fx, fy = fx0 + (fx1 - fx0) * u, fy0 + (fy1 - fy0) * u
+    src_img = sc["_img"]
+    if dfx:
+        try:
+            src_img = apply_pre_camera_fx(src_img, dfx, t)
+        except Exception as exc:
+            print(f"    [motion warn · {sc.get('id', '?')}] Bỏ qua pre-camera detail_fx lỗi ({exc})")
+    frame = camera_frame(src_img, W, H, scale, fx, fy, dx, dy)
+    if dfx:
+        try:
+            frame = apply_post_camera_fx(frame, dfx, t, W, H)
+        except Exception as exc:
+            print(f"    [motion warn · {sc.get('id', '?')}] Bỏ qua post-camera detail_fx lỗi ({exc})")
+    return frame
+
+
+def _validate_scene_paths(ep: Episode, sc: dict) -> None:
+    """Fast path-only check before render starts (decodes ZERO images into RAM)."""
+    has_img = bool(sc.get("image")) and ep.resolve_asset(sc["image"]).is_file()
+    has_vid = bool(sc.get("video")) and sc.get("video_enabled", True) and ep.resolve_asset(sc["video"]).is_file()
+    px_layers = (sc.get("parallax") or {}).get("layers") or []
+    has_px = len(px_layers) >= 2 and all(
+        bool(ly.get("image")) and ep.resolve_asset(ly["image"]).is_file() for ly in px_layers[:3]
+    )
+    if not (has_img or has_vid or has_px):
+        ref = sc.get("image") or sc.get("video") or "parallax.layers"
+        raise GateError(f"Cảnh {sc.get('id', '?')} thiếu tài nguyên hình ảnh/video hợp lệ: {ref}")
+
+
+def _load_scene_runtime(ep: Episode, sc: dict, W: int, H: int, FPS: int, oversample: float,
+                        safe_motion: bool, fallbacks: list[dict], detail_warnings: list[dict]) -> None:
+    """Lazy-load exactly ONE scene into RAM right before it enters the timeline window."""
+    if sc.get("_loaded"):
+        return
+    sc["_loaded"] = True
+    sid = sc.get("id", "?")
+    logged = sc.get("_logged_once", False)
+    sc["_logged_once"] = True
+
+    def record_fb(msg: str) -> None:
+        if not logged:
+            print(f"    [motion fallback · {sid}] {msg}")
+            fallbacks.append({"scene_id": sid, "reason": msg})
+
+    # Optional safe_motion mode: force lightweight Level A Ken Burns wherever a static image exists
+    if safe_motion:
+        sc["_detail_fx"] = []
+        if sc.get("image") and ep.resolve_asset(sc["image"]).is_file():
+            with Image.open(ep.resolve_asset(sc["image"])) as raw_im:
+                img = fit_aspect_crop(raw_im.convert("RGB"), W, H)
+                sc["_img"] = img.resize((int(W * oversample), int(H * oversample)), Image.Resampling.BILINEAR)
+            if sc.get("parallax") or sc.get("detail_fx") or (sc.get("video") and sc.get("video_enabled", True)):
+                record_fb("Chế độ --safe-motion -> hạ cấp an toàn về Level A Ken Burns")
+            sc["_effective_level"] = "A"
+            return
+
+    sc["_detail_fx"] = prepare_detail_fx(ep, sc, W, H, oversample)
+    if sc.get("_detail_warnings") and not logged:
+        for w_msg in sc["_detail_warnings"]:
+            print(f"    [motion warn · {sid}] {w_msg}")
+            detail_warnings.append({"scene_id": sid, "warning": w_msg})
+
+    # Level D — External pre-rendered clip
+    video_enabled = sc.get("video_enabled", True)
+    vpath = ep.resolve_asset(sc["video"]) if (sc.get("video") and video_enabled) else None
+    if vpath and vpath.is_file():
+        dur_s = max(0.5, sc["end"] - sc["start"])
+        n_vf = max(2, int(round(dur_s * FPS)))
+        sc["_vreader"] = SceneVideoReader(vpath, W, H, FPS, n_vf)
+        sc["_effective_level"] = "D"
+        return
+    elif sc.get("video") and not video_enabled:
+        record_fb("Level D tắt (video_enabled=false) -> hạ cấp an toàn về ảnh tĩnh")
+    elif sc.get("video") and sc.get("image"):
+        record_fb(f"Thiếu clip '{sc['video']}' -> hạ cấp an toàn về ảnh tĩnh '{sc['image']}'")
+
+    # Level B — Lightweight 2–3 layer 2.5D parallax
+    if sc.get("parallax"):
+        px_rt = prepare_parallax(ep, sc, W, H, oversample)
+        if px_rt is not None:
+            sc["_parallax"] = px_rt
+            sc["_effective_level"] = "B"
+            return
+        elif sc.get("_motion_fallback"):
+            record_fb(sc["_motion_fallback"])
+
+    # Level A / Level C — Base static image
+    if not sc.get("image"):
+        raise GateError(f"Cảnh {sid} thiếu cả ảnh lẫn video/parallax hợp lệ.")
+    p = ep.resolve_asset(sc["image"])
+    if not p.is_file():
+        raise GateError(f"Thiếu ảnh cảnh: {rel(p)}")
+    with Image.open(p) as raw_im:
+        img = fit_aspect_crop(raw_im.convert("RGB"), W, H)
+        sc["_img"] = img.resize((int(W * oversample), int(H * oversample)), Image.Resampling.LANCZOS)
+    sc["_effective_level"] = "C" if sc["_detail_fx"] else "A"
 
 
 def composite_scene(scenes: list[dict], t: float, W: int, H: int) -> Image.Image:
@@ -587,8 +780,9 @@ def _paste_rgba_crop(dst_rgb: Image.Image, crop_rgba: Image.Image, pos: tuple[in
 # Main
 # ----------------------------------------------------------------------------
 
-def run(ep: Episode, preview_only: bool = False) -> dict:
-    print(f"=== GATE 4: TIMELINE & SAFE ZONE [{ep.factory_name} · {ep.aspect_label}] – {ep.id} ===")
+def run(ep: Episode, preview_only: bool = False, safe_motion: bool = False) -> dict:
+    mode_tag = " · SAFE-MOTION (Level A)" if safe_motion else ""
+    print(f"=== GATE 4: TIMELINE & SAFE ZONE [{ep.factory_name} · {ep.aspect_label}{mode_tag}] – {ep.id} ===")
     cfg = ep.cfg
     cv = Canvas(ep)
     W, H, FPS, DUR = ep.width, ep.height, ep.fps, ep.duration
@@ -601,31 +795,19 @@ def run(ep: Episode, preview_only: bool = False) -> dict:
         raise GateError("Chưa có manifest Gate 2.")
     tts = load_json(ep.tts_manifest_path)
 
-    # --- scenes ---
+    # --- scenes: validate paths ONLY (lazy sliding-window load keeps max 1–2 scenes in RAM) ---
+    is_level2 = str(cfg.get("motion_upgrade", "")).lower() in ("level2", "v2", "2") or bool(cfg.get("motion_plan"))
     scenes = []
+    fallbacks: list[dict] = []
+    detail_warnings: list[dict] = []
     oversample = 1.25 if cv.is_landscape else 1.3333
     for sc in cfg["scenes"]:
         sc2 = dict(sc)
         sc2["start"], sc2["end"] = float(sc["start"]), float(sc["end"])
-        vpath = ep.resolve_asset(sc["video"]) if sc.get("video") else None
-        if vpath and vpath.is_file():
-            dur_s = max(0.5, sc2["end"] - sc2["start"])
-            n_vf = max(2, int(round(dur_s * FPS)))
-            sc2["_vreader"] = SceneVideoReader(vpath, W, H, FPS, n_vf)
-            scenes.append(sc2)
-            continue
-        p = ep.resolve_asset(sc["image"])
-        if not p.is_file():
-            raise GateError(f"Thiếu ảnh cảnh: {rel(p)}")
-        img = Image.open(p).convert("RGB")
-        if abs(img.width / img.height - W / H) > 0.02:
-            tw = int(img.height * W / H)
-            if tw <= img.width:
-                img = img.crop(((img.width - tw) // 2, 0, (img.width - tw) // 2 + tw, img.height))
-            else:
-                th = int(img.width * H / W)
-                img = img.crop((0, (img.height - th) // 2, img.width, (img.height - th) // 2 + th))
-        sc2["_img"] = img.resize((int(W * oversample), int(H * oversample)), Image.Resampling.LANCZOS)
+        sc2["_motion"] = resolve_motion_params(sc2)
+        sc2["_loaded"] = False
+        _validate_scene_paths(ep, sc2)
+        sc2["_effective_level"] = "A"
         scenes.append(sc2)
     scenes.sort(key=lambda s: s["start"])
     if abs(scenes[0]["start"]) > 1e-3 or abs(scenes[-1]["end"] - DUR) > 0.05:
@@ -634,14 +816,16 @@ def run(ep: Episode, preview_only: bool = False) -> dict:
     # --- overlays ---
     events: list[dict] = []
 
-    def add(img: Image.Image, meta: dict, name: str, start: float, end: float, fade: float = 0.15):
+    def add(img: Image.Image, meta: dict, name: str, start: float, end: float, fade: float = 0.15,
+            slide_y: int = 0, anim_dur: float = 0.0):
         path = ovl_dir / f"{len(events):03d}_{name}.png"
         img.save(path)
         bbox = img.getbbox()
         crop = img.crop(bbox) if bbox else None
         pos = (bbox[0], bbox[1]) if bbox else (0, 0)
         events.append({"id": path.stem, "start_sec": round(start, 3), "end_sec": round(end, 3), "fade_sec": fade,
-                       "png_path": rel(path), "_crop": crop, "_pos": pos, **meta})
+                       "png_path": rel(path), "_crop": crop, "_pos": pos, "_slide_y": slide_y,
+                       "_anim_dur": anim_dur, **meta})
 
     brand_img, brand_meta = plate_branding(cv)
     brand_img.save(ovl_dir / "branding.png")
@@ -678,7 +862,17 @@ def run(ep: Episode, preview_only: bool = False) -> dict:
 
     for i, cb in enumerate(cfg.get("chat_bubbles", [])):
         im, me = plate_chat(cv, cb["text"], cb.get("side", "left"), cb.get("sender", ""), cb.get("y"), cb.get("stamp", ""))
-        add(im, me, f"chat{i + 1}", cb["start"], cb["end"], 0.15)
+        anim = cb.get("anim", "slide_up" if is_level2 else "fade")
+        s_y = 20 if anim == "slide_up" else (-20 if anim == "slide_down" else 0)
+        add(im, me, f"chat{i + 1}", cb["start"], cb["end"], 0.16, slide_y=s_y, anim_dur=0.24 if s_y else 0.0)
+
+    for i, nt in enumerate(cfg.get("notifications", [])):
+        im, me = plate_notification(cv, nt.get("title", "Thông báo mới"), nt["text"],
+                                    nt.get("stamp", "vừa xong"), nt.get("y"), nt.get("style", "neutral"))
+        anim = nt.get("anim", "slide_down")
+        s_y = -24 if anim == "slide_down" else (20 if anim == "slide_up" else 0)
+        add(im, me, f"notif{i + 1}", float(nt["start"]), float(nt["end"]), 0.18,
+            slide_y=s_y, anim_dur=0.24 if s_y else 0.0)
 
     for i, co in enumerate(cfg.get("callouts", [])):
         im, me = plate_callout(cv, co["text"], co.get("style", "danger"), co.get("y"),
@@ -710,13 +904,15 @@ def run(ep: Episode, preview_only: bool = False) -> dict:
     # --- QA preview timestamps ---
     qa_times = cfg.get("qa_preview_sec") or sorted(set(
         [round((sc["start"] + sc["end"]) / 2, 2) for sc in scenes]
+        + collect_fx_qa_timestamps(scenes)
+        + [round(float(nt["start"]) + 0.4, 2) for nt in cfg.get("notifications", [])]
         + ([round(hk.get("start", 0.3) + 1.0, 2)] if hk else [])
         + ([round(float(rf["end"]) - 0.5, 2)] if rf else [])
         + [round((ds + de) / 2, 2)]
     ))
-    qa_idx = {int(round(t * FPS)): t for t in qa_times if t < DUR}
+    qa_idx = {int(round(t * FPS)): t for t in qa_times if 0 <= t < DUR}
 
-    # --- render ---
+    # --- render (strict sequential single-scene streaming + sliding-window RAM control) ---
     out_mp4 = ep.timeline_video_path
     total_frames = ep.total_frames
     frame_range = sorted(qa_idx) if preview_only else range(total_frames)
@@ -725,46 +921,81 @@ def run(ep: Episode, preview_only: bool = False) -> dict:
         print(f" -> Render {total_frames} frames ({DUR}s @ {FPS}fps, {W}x{H}) -> {out_mp4.name}")
         proc = subprocess.Popen([FFMPEG, "-y", "-v", "error", "-f", "rawvideo", "-vcodec", "rawvideo", "-s", f"{W}x{H}",
                                  "-pix_fmt", "rgb24", "-r", str(FPS), "-i", "-", "-an", "-c:v", "libx264", "-preset", "fast",
-                                 "-crf", "18", "-pix_fmt", "yuv420p", str(out_mp4)], stdin=subprocess.PIPE, stderr=subprocess.PIPE)
+                                 "-threads", "4", "-crf", "18", "-pix_fmt", "yuv420p", str(out_mp4)],
+                                stdin=subprocess.PIPE, stderr=subprocess.PIPE)
     previews = []
     step_log = 900 if cv.is_landscape else 300
-    for fi in frame_range:
-        t = fi / FPS
-        frame = composite_scene(scenes, t, W, H)
-        for ev in events:
-            if ev["start_sec"] <= t < ev["end_sec"] and ev.get("_crop") is not None:
-                fade = ev["fade_sec"]
-                a = 1.0
-                if fade > 0:
-                    a = min(1.0, (t - ev["start_sec"]) / fade, (ev["end_sec"] - t) / fade)
-                _paste_rgba_crop(frame, ev["_crop"], ev["_pos"], a)
-        if brand_crop is not None:
-            _paste_rgba_crop(frame, brand_crop, brand_pos, 1.0)
-        if t < 0.3:
-            frame = Image.blend(Image.new("RGB", (W, H)), frame, smoothstep(t / 0.3))
-        elif t > DUR - 0.35:
-            frame = Image.blend(frame, Image.new("RGB", (W, H)), smoothstep((t - (DUR - 0.35)) / 0.35) * 0.6)
-        if fi in qa_idx:
-            tag = f"qa_{qa_idx[fi]:05.2f}s".replace(".", "_")
-            cp, gp = prv_dir / f"{tag}_clean.jpg", prv_dir / f"{tag}_safezone.jpg"
-            frame.save(cp, quality=92)
-            safe_zone_guide(frame, cv).save(gp, quality=88)
-            previews.append({"timestamp_sec": qa_idx[fi], "clean": rel(cp), "safezone": rel(gp)})
+    loaded_indices: set[int] = set()
+    try:
+        for fi in frame_range:
+            t = fi / FPS
+            # Find active scene index & whether previous scene is needed for transition_in
+            idx = 0
+            for i, sc_ in enumerate(scenes):
+                if t >= sc_["start"]:
+                    idx = i
+            sc_cur = scenes[idx]
+            tr = sc_cur.get("transition_in", {"type": "dissolve", "dur": 0.3})
+            need_prev = idx > 0 and tr.get("type", "dissolve") != "cut" and t < sc_cur["start"] + float(tr.get("dur", 0.3))
+            needed = {idx, idx - 1} if need_prev else {idx}
+            # Evict any scene outside the active 1–2 scene window immediately
+            for old_i in list(loaded_indices - needed):
+                unload_scene_runtime(scenes[old_i])
+                loaded_indices.discard(old_i)
+            for req_i in sorted(needed):
+                if req_i not in loaded_indices:
+                    _load_scene_runtime(ep, scenes[req_i], W, H, FPS, oversample, safe_motion, fallbacks, detail_warnings)
+                    loaded_indices.add(req_i)
+
+            frame = composite_scene(scenes, t, W, H)
+            for ev in events:
+                if ev["start_sec"] <= t < ev["end_sec"] and ev.get("_crop") is not None:
+                    fade = ev["fade_sec"]
+                    a = 1.0
+                    if fade > 0:
+                        a = min(1.0, (t - ev["start_sec"]) / fade, (ev["end_sec"] - t) / fade)
+                    px, py = ev["_pos"]
+                    if ev.get("_slide_y") and ev.get("_anim_dur", 0.0) > 0:
+                        dt_in = t - ev["start_sec"]
+                        if dt_in < ev["_anim_dur"]:
+                            py += int(round(ev["_slide_y"] * (1.0 - ease_u(dt_in / ev["_anim_dur"], "ease_out"))))
+                    _paste_rgba_crop(frame, ev["_crop"], (px, py), a)
+            if brand_crop is not None:
+                _paste_rgba_crop(frame, brand_crop, brand_pos, 1.0)
+            if t < 0.3:
+                frame = Image.blend(Image.new("RGB", (W, H)), frame, smoothstep(t / 0.3))
+            elif t > DUR - 0.35:
+                frame = Image.blend(frame, Image.new("RGB", (W, H)), smoothstep((t - (DUR - 0.35)) / 0.35) * 0.6)
+            if fi in qa_idx:
+                tag = f"qa_{qa_idx[fi]:05.2f}s".replace(".", "_")
+                cp, gp = prv_dir / f"{tag}_clean.jpg", prv_dir / f"{tag}_safezone.jpg"
+                frame.save(cp, quality=92)
+                safe_zone_guide(frame, cv).save(gp, quality=88)
+                previews.append({"timestamp_sec": qa_idx[fi], "clean": rel(cp), "safezone": rel(gp)})
+            if proc:
+                proc.stdin.write(frame.tobytes())
+                if (fi + 1) % step_log == 0:
+                    print(f"    ... {fi + 1}/{total_frames}")
+    finally:
+        for sc in scenes:
+            unload_scene_runtime(sc)
         if proc:
-            proc.stdin.write(frame.tobytes())
-            if (fi + 1) % step_log == 0:
-                print(f"    ... {fi + 1}/{total_frames}")
+            try:
+                proc.stdin.close()
+            except Exception:
+                pass
     if proc:
-        proc.stdin.close()
         err = proc.stderr.read().decode("utf-8", "replace")
         if proc.wait() != 0:
             raise GateError(f"FFmpeg lỗi: {err}")
 
+    motion_audit = audit_episode_motion(ep)
+    effective_counts = {"A": 0, "B": 0, "C": 0, "D": 0}
     for sc in scenes:
-        if sc.get("_vreader"):
-            sc["_vreader"].close()
+        lv = sc.get("_effective_level", "A")
+        effective_counts[lv] = effective_counts.get(lv, 0) + 1
 
-    overlays = [{k: v for k, v in ev.items() if k not in ("_crop", "_pos")} for ev in events]
+    overlays = [{k: v for k, v in ev.items() if not k.startswith("_")} for ev in events]
     manifest = {
         "episode_id": ep.id,
         "factory": ep.factory_name,
@@ -772,7 +1003,20 @@ def run(ep: Episode, preview_only: bool = False) -> dict:
         "preview_only": preview_only,
         "canvas": {"width": W, "height": H, "fps": FPS, "aspect_ratio": ep.aspect_label, "total_frames": total_frames, "total_duration_sec": DUR},
         "safe_zone_rules": {**ep.safe, "all_overlays_compliant": all(o.get("safe_zone_compliant", True) for o in overlays)},
-        "scenes": [{k: v for k, v in sc.items() if k not in ("_img", "_vframes", "_vreader")} for sc in scenes],
+        "motion_summary": {
+            "hardware_profile": HARDWARE_PROFILE,
+            "safe_motion_mode": safe_motion,
+            "is_level2": is_level2,
+            "declared_level_counts": motion_audit["level_counts"],
+            "effective_level_counts": effective_counts,
+            "fallbacks": fallbacks,
+            "detail_warnings": detail_warnings,
+            "zoom_streaks": motion_audit["zoom_streaks"],
+            "shake_scenes": motion_audit["shake_scenes"],
+            "sfx_sync": motion_audit["sfx_sync"],
+            "warnings": motion_audit["warnings"],
+        },
+        "scenes": [{k: v for k, v in sc.items() if not k.startswith("_")} for sc in scenes],
         "subtitle_srt": rel(ep.srt_path),
         "video_track_noaudio": None if preview_only else rel(out_mp4),
         "channel_branding": brand_meta,
@@ -783,6 +1027,8 @@ def run(ep: Episode, preview_only: bool = False) -> dict:
     bad = [o["id"] for o in overlays if not o.get("safe_zone_compliant", True)]
     if bad:
         print(f" !! Overlay tràn Safe Zone: {bad}")
+    print(f" -> Motion Level thực thi: A={effective_counts['A']} · B={effective_counts['B']} · C={effective_counts['C']} · D={effective_counts['D']}"
+          + (f" (fallback: {len(fallbacks)})" if fallbacks else ""))
     print(f" -> {len(previews)} khung QA tại {rel(prv_dir)}")
     print(f" -> Manifest: {rel(ep.timeline_manifest_path)}")
     return manifest

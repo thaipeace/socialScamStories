@@ -66,8 +66,15 @@ def gate0(ep: Episode) -> list[str]:
         for sc in scenes:
             has_img = bool(sc.get("image")) and ep.resolve_asset(sc["image"]).is_file()
             has_vid = bool(sc.get("video")) and ep.resolve_asset(sc["video"]).is_file()
-            if not (has_img or has_vid):
-                errs.append(f"Thiếu ảnh/video {sc.get('image') or sc.get('video')}")
+            px_layers = (sc.get("parallax") or {}).get("layers") or []
+            has_px = len(px_layers) >= 2 and all(
+                bool(ly.get("image")) and ep.resolve_asset(ly["image"]).is_file() for ly in px_layers
+            )
+            if not (has_img or has_vid or has_px):
+                errs.append(f"Thiếu ảnh/video/layer 2.5D cho cảnh {sc.get('id', '?')} ({sc.get('image') or sc.get('video')})")
+    import motion_fx
+    m_audit = motion_fx.audit_episode_motion(ep)
+    errs.extend(m_audit["errors"])
     max_words_line = int(fmt.get("max_words_per_line", 32 if ep.is_landscape else 22))
     for ln in cfg.get("dialogue", []):
         if ln["speaker"] not in ep.cast:
@@ -111,7 +118,45 @@ def cmd_gate0(a) -> None:
         for e in errs:
             print("  -", e)
         sys.exit(1)
+    import motion_fx
+    ma = motion_fx.audit_episode_motion(ep)
+    lc = ma["level_counts"]
     print(f"GATE 0 [{ep.factory_name} · {ep.aspect_label} · {ep.duration:.0f}s] – ĐẠT. Có thể chạy Gate 2 → 5.")
+    print(f" -> Visual Motion Plan: A={lc['A']} · B={lc['B']} · C={lc['C']} · D={lc['D']}"
+          + (" (Level 2 active)" if ma["is_level2"] else " (legacy mode)"))
+    for w in ma["warnings"]:
+        print(f"    [motion note] {w}")
+
+
+def cmd_motion_check(a) -> None:
+    import motion_fx
+    ep = Episode(a.episode, a.factory)
+    ma = motion_fx.audit_episode_motion(ep)
+    lc = ma["level_counts"]
+    mode = "LEVEL 2 ACTIVE" if ma["is_level2"] else "LEGACY (chưa khai báo motion_upgrade: level2)"
+    print(f"=== VISUAL MOTION PLAN [{ep.factory_name} · {ep.aspect_label}] – {ep.id} ({mode}) ===")
+    print(f"Phân bổ: Level A={lc['A']} | Level B={lc['B']} | Level C={lc['C']} | Level D={lc['D']} (Tổng {ma['total_scenes']} cảnh)")
+    print(f"{'Scene':<24} {'Time':<13} {'Beat':<13} {'Lv':<3} {'Pattern':<18} {'Wobble':<9} {'Detail FX'}")
+    print("-" * 98)
+    for r in ma["scenes"]:
+        dfx = ",".join(r["detail_fx"]) if r["detail_fx"] else "—"
+        trange = f"{r['start']:5.1f}-{r['end']:5.1f}s"
+        print(f"{r['id'][:23]:<24} {trange:<13} {r['beat_type'][:12]:<13} {r['motion_level']:<3} {r['camera_pattern'][:17]:<18} {r['wobble'][:8]:<9} {dfx}")
+    ss = ma["sfx_sync"]
+    if ss["synced"] or ss["unsynced"]:
+        print(f"\nMotion ↔ SFX Sync: khớp {len(ss['synced'])} · chưa khớp foley (±0.65s): {len(ss['unsynced'])}")
+        if ss["unsynced"]:
+            print("  - Chưa có foley gần mốc:", ", ".join(ss["unsynced"]))
+    if ma["errors"]:
+        print("\nLỖI MOTION PLAN (chặn Gate 0):")
+        for e in ma["errors"]:
+            print("  [ERR]", e)
+    if ma["warnings"]:
+        print("\nCẢNH BÁO / GỢI Ý TỐI ƯU:")
+        for w in ma["warnings"]:
+            print("  [WARN]", w)
+    if ma["errors"]:
+        sys.exit(1)
 
 
 def run_gate(ep: Episode, g: int, a) -> None:
@@ -123,7 +168,7 @@ def run_gate(ep: Episode, g: int, a) -> None:
         gate3_audio.run(ep)
     elif g == 4:
         import gate4_timeline
-        gate4_timeline.run(ep, preview_only=getattr(a, "preview", False))
+        gate4_timeline.run(ep, preview_only=getattr(a, "preview", False), safe_motion=getattr(a, "safe_motion", False))
     elif g == 5:
         import gate5_render_audit
         gate5_render_audit.run(ep, skip_render=getattr(a, "skip_render", False))
@@ -186,9 +231,15 @@ def cmd_status(a) -> None:
 
 
 def cmd_presets(_a) -> None:
+    import motion_fx
     import sfx_library
     for k, v in sfx_library.list_presets().items():
-        print(f"{k:9}: {', '.join(v)}")
+        print(f"{k:14}: {', '.join(v)}")
+    print(f"{'motion_lvA':14}: {', '.join(sorted(motion_fx.LEVEL_A_PRESETS))}")
+    print(f"{'parallax_cam':14}: {', '.join(sorted(motion_fx.PARALLAX_CAMERA_PRESETS))} (max {motion_fx.MAX_PARALLAX_LAYERS} layers, blur <= {motion_fx.MAX_PARALLAX_BLUR}px)")
+    print(f"{'detail_fx':14}: {', '.join(motion_fx.DETAIL_FX_TYPES)}")
+    print(f"{'excluded_fx':14}: {', '.join(sorted(motion_fx.EXCLUDED_HEAVY_FX))} (loại trừ theo Hardware Safety Profile L480)")
+    print(f"{'beat_types':14}: {', '.join(motion_fx.BEAT_TYPES)}")
 
 
 def main(default_factory: str | Path | None = None) -> None:
@@ -199,11 +250,14 @@ def main(default_factory: str | Path | None = None) -> None:
     s = sp.add_parser("new"); s.add_argument("episode"); s.add_argument("--slug"); s.add_argument("--title")
     s.add_argument("--duration", type=float); s.set_defaults(f=cmd_new)
     s = sp.add_parser("gate0"); s.add_argument("episode"); s.set_defaults(f=cmd_gate0)
+    s = sp.add_parser("motion-check"); s.add_argument("episode"); s.set_defaults(f=cmd_motion_check)
     s = sp.add_parser("gate"); s.add_argument("episode"); s.add_argument("number")
     s.add_argument("--placeholder", action="store_true"); s.add_argument("--force", action="store_true")
-    s.add_argument("--preview", action="store_true"); s.add_argument("--skip-render", action="store_true"); s.set_defaults(f=cmd_gate)
+    s.add_argument("--preview", action="store_true"); s.add_argument("--skip-render", action="store_true")
+    s.add_argument("--safe-motion", action="store_true", help="Hạ cấp an toàn toàn bộ về Level A Ken Burns"); s.set_defaults(f=cmd_gate)
     s = sp.add_parser("all"); s.add_argument("episode"); s.add_argument("--from", dest="frm", default=2); s.add_argument("--to", default=5)
     s.add_argument("--placeholder", action="store_true"); s.add_argument("--force", action="store_true")
+    s.add_argument("--safe-motion", action="store_true", help="Hạ cấp an toàn toàn bộ về Level A Ken Burns")
     s.add_argument("--skip-gate0", action="store_true"); s.set_defaults(f=cmd_all)
     s = sp.add_parser("signoff"); s.add_argument("episode"); s.add_argument("--point", type=int, nargs="*")
     s.add_argument("--status", default="PASS", choices=["PASS", "FAIL", "PENDING"]); s.add_argument("--by", required=True)

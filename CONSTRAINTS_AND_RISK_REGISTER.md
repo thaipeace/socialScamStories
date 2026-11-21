@@ -24,6 +24,7 @@
 | C3 | Tên giọng Gemini TTS trong `cast.json` chưa nghe thử với tiếng Việt | TRUNG BÌNH | Nghe thử từng giọng ở tập đầu, đổi nếu không hợp | MỞ |
 | C4 | Engine mới viết lại từ 779, mới chạy thử với dữ liệu giả | TRUNG BÌNH | Chạy trọn 6 gate với tập thật đầu tiên, sửa lỗi phát sinh | ĐANG LÀM |
 | C5 | Thư viện SFX tổng hợp có thể chưa đủ “thật” | THẤP | Cho phép thay bằng file âm thanh có bản quyền (`"file": ...`) | MỞ |
+| C6 | Giới hạn phần cứng máy dựng (**ThinkPad L480 · Intel i5-8250U · 8GB RAM · iGPU, không GPU rời**) | **CAO** | Hardware Safety Profile trong `motion_fx.py` & `gate4_timeline.py`: chỉ dùng hiệu ứng nhẹ (Pillow+NumPy+FFmpeg), tối đa 2–3 lớp 2.5D, blur `<= 2.0px`, nạp trượt tối đa 1–2 cảnh trong RAM, loại trừ AI I2V cục bộ / particle / volumetric / render song song, luôn có fallback `--safe-motion` về Level A | ĐÃ XONG |
 
 ## D. HIỆU QUẢ
 | ID | Vấn đề | Mức | Biện pháp | Trạng thái |
@@ -39,7 +40,7 @@
 | 6 Gate + phiếu runbook | ✅ Giữ, thêm Gate 0 tự động |
 | TTS Gemini + mastering (trim không phá, −3 dBFS) | ✅ Port, nâng model `gemini-3.8-flash-tts` |
 | DSP tổng hợp SFX/BGM + auto-ducking + limiter | ✅ Port thành `dsp.py`, thư viện preset mới |
-| Ken Burns, rung, chuyển cảnh, Safe Zone, branding VCH | ✅ Port thành `gate4_timeline.py` cấu hình hóa |
+| Ken Burns, rung, chuyển cảnh, Safe Zone, branding VCH | ✅ Đã nâng cấp lên **Visual Motion Level 2** (`motion_fx.py` + `gate4_timeline.py`: Level A presets/easing, Level B 2.5D multi-layer parallax, Level C detail motion, Level D clip + fallback) |
 | Bộ lọc từ khóa ASR/OCR | ✅ Port + mở rộng |
 | Nội dung lịch sử, nhân vật, bản đồ, harness chính trị 779 | ❌ Loại bỏ hoàn toàn |
 
@@ -48,3 +49,4 @@
 | :--- | :--- | :--- |
 | 01/11/2026 | — | Khởi tạo dự án, port engine 6 Gate từ 779, viết harness pháp lý & định dạng mới, chạy thử engine với tập giả `EP00_SMOKE` (Gate 0→5 chạy trọn, Gate 6 từ chối đúng khi chưa ký duyệt) |
 | 01/11/2026 | C3, C4 | Gọi thử thật `gemini-3.8-flash-tts` (giọng Charon) qua key HaizFlow: trả về WAV 24 kHz hợp lệ. Các giọng khác trong cast.json chưa nghe thử |
+| 21/11/2026 | — | Tích hợp chuẩn **Visual Motion Upgrade (Level 2)** (`VISUAL_MOTION_HARNESS.md`, `03_ENGINE/motion_fx.py`, `gate4_timeline.py`, `gate5_render_audit.py`, `cli.py`, `sfx_library.py` + templates 2 nhà máy). Lưu ý giới hạn kỹ thuật: tách lớp PNG cho Level B và sinh clip ngắn AI I2V cho Level D thực hiện ngoài engine (do chưa cài ML segmentation/video API), engine đảm nhiệm ghép lớp, animate chi tiết, đồng bộ SFX, tự kiểm lặp zoom-in và hạ cấp an toàn về Level A |

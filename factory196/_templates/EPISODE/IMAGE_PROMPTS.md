@@ -9,18 +9,18 @@ keep bottom 15% relatively clean for subtitles, no text, no letters, no numbers,
 no logos, no brand names, no real app interface, no real police/bank uniforms or insignia, no blood, no gore.
 ```
 
-| Scene | Hồi / Nhịp | Thời lượng gợi ý | Prompt riêng (16:9 Widescreen) | Ghi chú nhân vật / bố cục Trái–Phải | Duyệt |
-| :-: | :--- | :---: | :--- | :--- | :-: |
-| 01 | Mở màn – Hook | 00:00–00:25 | | | ☐ |
-| 02 | Hồi 1 – Bối cảnh đời thường | 00:25–00:55 | | | ☐ |
-| 03 | Hồi 1 – Kẻ lừa tiếp cận | 00:55–01:30 | | | ☐ |
-| 04 | Hồi 2 – Thả mồi tạo lòng tin | 01:30–02:05 | | | ☐ |
-| 05 | Hồi 2 – Thao túng tâm lý | 02:05–02:45 | | | ☐ |
-| 06 | Hồi 3 – Cô lập nạn nhân | 02:45–03:15 | | | ☐ |
-| 07 | Hồi 3 – Cao trào ép thời gian | 03:15–03:45 | | | ☐ |
-| 08 | Hồi 4 – Cú lật / Giải cứu | 03:45–04:10 | | Bố cục cắt ngang Trái – Phải rõ hướng nhìn | ☐ |
-| 09 | Hồi 4 – Bóc trần cơ chế | 04:10–04:40 | (kẻ lừa trong bóng tối/ánh màn hình, không lộ mặt rõ) | | ☐ |
-| 10 | Hồi 5 – Nền thẻ dấu hiệu | 04:40–05:00+ | Ảnh bối cảnh bình yên, dịu, ít chi tiết | | ☐ |
+| Scene | Hồi / Nhịp | Thời lượng gợi ý | Motion Level & Chuẩn bị lớp/chi tiết (A/B/C/D) | Prompt riêng (16:9 Widescreen) | Ghi chú nhân vật / bố cục Trái–Phải | Duyệt |
+| :-: | :--- | :---: | :--- | :--- | :--- | :-: |
+| 01 | Mở màn – Hook | 00:00–00:25 | `A` (`slow_push_in`) | | | ☐ |
+| 02 | Hồi 1 – Bối cảnh đời thường | 00:25–00:55 | `A` (`pan_right`) hoặc `B` (tách BG/Subject/FG) | | | ☐ |
+| 03 | Hồi 1 – Kẻ lừa tiếp cận | 00:55–01:30 | `C` (`screen_glow` / `detail_reveal` màn hình) | | Chừa vùng màn hình rõ để gắn ánh sáng/thông báo | ☐ |
+| 04 | Hồi 2 – Thả mồi tạo lòng tin | 01:30–02:05 | `A` (`slow_push_in`) | | | ☐ |
+| 05 | Hồi 2 – Thao túng tâm lý | 02:05–02:45 | `A` (`slow_pull_out`) hoặc `B` (2.5D chiều sâu) | | | ☐ |
+| 06 | Hồi 3 – Cô lập nạn nhân | 02:45–03:15 | `C` (`focus_highlight` / `cursor_click` / `light_shift`) | | | ☐ |
+| 07 | Hồi 3 – Cao trào ép thời gian | 03:15–03:45 | `A` (`slow_pull_out`) hoặc `D` (clip ngắn tùy chọn) | | | ☐ |
+| 08 | Hồi 4 – Cú lật / Giải cứu | 03:45–04:10 | `A` (`pan_left`) hoặc `B` (2.5D đối đầu) | | Bố cục cắt ngang Trái – Phải rõ hướng nhìn | ☐ |
+| 09 | Hồi 4 – Bóc trần cơ chế | 04:10–04:40 | `A` (`slow_push_in`) | (kẻ lừa trong bóng tối/ánh màn hình, không lộ mặt rõ) | | ☐ |
+| 10 | Hồi 5 – Nền thẻ dấu hiệu | 04:40–05:00+ | `A` (`static_hold`, không rung) | Ảnh bối cảnh bình yên, dịu, ít chi tiết | | ☐ |
 
-Ảnh duyệt xong lưu `assets/scene01.jpg … scene10.jpg` (hoặc thêm `scene11..18.jpg` tùy độ dài phim).
+Ảnh duyệt xong lưu `assets/scene01.jpg … scene10.jpg` (hoặc thêm `scene11..18.jpg` tùy độ dài phim). Với cảnh **Level B**, lưu thêm lớp `assets/sXX_bg.jpg`, `assets/sXX_mid.png` (và `assets/sXX_fg.png` nếu có); với cảnh **Level C (`detail_reveal`)**, lưu thêm ảnh đồng khung `assets/sXX_b.jpg`; với cảnh **Level D**, luôn giữ ảnh gốc `sceneXX.jpg` bên cạnh clip `.mp4` để hạ cấp an toàn nếu cần.
 
