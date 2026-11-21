@@ -10,15 +10,16 @@
 2. **Bổ sung cú nhá gọi hình/giọng ghép 3 giây (`s04_fake_video_call`):** Trước khi nhắn chuyện tiền bạc, nick mới gọi video chập chờn 3 giây hiện đúng mặt và giọng cắt ghép của Anh Đạt rồi cúp đổ tại mạng yếu — đủ thuyết phục thực tế vì sao Khang không nghi ngờ tài khoản mới.
 3. **Khắc sâu khẩu ngữ riêng của Anh Đạt (không chỉ biết thông tin):** Cài rõ bộ khẩu ngữ đặc trưng của Anh Đạt ở `s02` (*"Nè cu Khang"*, *"chị nhà"*, *"lộ bài"*, *"gọn ghẽ / làm gọn giùm anh, anh tính"*) → đàn em phân tích ở `s03` → kẻ đứng giữa nhái y hệt ở `s04`, `s05`, `s08`, `s10` → Khang nhắc lại trong bàng hoàng lúc đối chất `s12`.
 
-## Nhân vật & giọng (`02_CAST/cast.json` – 7 tuyến / 7 voice độc lập)
+## Nhân vật & giọng (`02_CAST/cast.json` – 8 tuyến / 8 voice độc lập)
 | Nhân vật | Key | Voice | Chỉ đạo giọng |
 |---|---|---|---|
 | **Anh Đạt** (38t, chủ xưởng nội thất nhỏ) | `anh_hai` | `Orus` | Nam trầm chắc, điềm tĩnh, nói cộc gọn thực dụng *(bản `DAT_FAKE` dùng đúng `Orus` + `phone` cho cú gọi ghép 3 giây)* |
-| **Khang** (26t, kỹ thuật viên theo Đạt 3 năm) | `thang_tun` | `Puck` | Nam trẻ sáng, nhịp nhanh gọn, thật thà lễ phép *(có bản `phone`)* |
+| **Khang** (26t, kỹ thuật viên theo Đạt 3 năm) | `thang_tun` | `Puck` | Nam trẻ sáng, nhịp nhanh gọn, thật thà lễ phép *(có bản `phone` — đồng bộ sang cú echo đầu `EP08b`)* |
 | **Chị Quyên** (36t, vợ Anh Đạt) | `chi_hai` | `Sulafat` | Nữ trầm vừa, thực tế, kiệm lời, quản lý tài khoản chung |
 | **Hân** (27t, đồng nghiệp bàn kế Khang) | `chi_tu` | `Zephyr` | Nữ trẻ sáng gọn, thân thiện kiểu công sở |
-| **Kẻ đứng giữa** (ẩn mặt phòng tối) | `chu_no` | `Fenrir` | Nam 40t trầm đều, lạnh tĩnh *(phòng thật ở `s03`, `phone` khi gõ tin nhắn điều phối)* |
-| **Đàn em kỹ thuật** (ẩn mặt phòng tối) | `ke_ngot_ngao_nam` | `Achird` | Nam 28t gọn, tỉnh bơ, chỉ xuất hiện ở `s03` bàn kế hoạch *(không đường dây ngầm ở kết)* |
+| **Kẻ đứng giữa** (ẩn mặt phòng tối) | `chu_no` | `Fenrir` | Nam 40t trầm đều, lạnh tĩnh *(đồng bộ 100% sang `EP08b`)* |
+| **Đàn em kỹ thuật** (ẩn mặt phòng tối) | `ke_ngot_ngao_nam` | `Achird` | Nam 28t gọn, tỉnh bơ, chỉ xuất hiện ở `s03` bàn kế hoạch |
+| **Đầu dây lạ *(Long ở `EP08b`)*** | `ke_ngot_ngao_nam` | `Algieba` | Nam 32t mượt lịch sự (`phone`), chỉ vang 1 câu cài mạch ở `s08` lúc `12:05` |
 | **Người Bóc Trần** | `nguoi_boc_tran` | `Charon` | Đúng 1 câu (22 từ, `< 10s`) ở thẻ `NHỚ KỸ` |
 
 ## Tự kiểm "Không dạy lừa"
@@ -76,7 +77,8 @@
 - *(Ting! Bong bóng: "NGÂN HÀNG CỦA ĐẠT: Chuyển sang Khang: -45.000.000đ · ND: Ung luong" · `1 · ĐẠT → KHANG`)*.
 - `l22_dat` **ANH ĐẠT**: Rồi, anh mới chuyển bốn lăm triệu xong đó. Lo gọn việc dưới quê đi nghen.
 
-**`s08_dark_step2_account` · `c08`** – 12:05 trưa. Phòng tối ánh xanh lạnh: bàn tay kẻ đứng giữa gửi số tài khoản lạ, giữ đúng văn phong Anh Đạt. *(Bong bóng: "ANH ĐẠT (NICK MỚI): Chuyển 45.000.000đ vô TK cửa hàng này" · `2 · GỬI STK LẠ`)*.
+**`s08_dark_step2_account` · `c08`** – 12:05 trưa. Phòng tối ánh xanh lạnh: bàn tay kẻ đứng giữa bên 2 chiếc điện thoại (màn hình phụ phía sau hắt thoáng **bóng mờ chiếc xe máy tay ga xám bạc + chấm sáng bìa hồ sơ đỏ** — cài thị giác nối sang `EP08b`). Từ loa ngoài điện thoại trái vang gọn 1 câu giọng `Algieba` (chính là Long ở `EP08b`), rồi kẻ đứng giữa gửi số tài khoản lạ cho Khang. *(Bong bóng: "ANH ĐẠT (NICK MỚI): Chuyển 45.000.000đ vô TK cửa hàng này" · `2 · GỬI STK LẠ`)*.
+- `l22b_long_p` **ĐẦU DÂY LẠ** *(loa điện thoại – giọng Long `EP08b`)*: Em tới quầy công chứng rồi, bên bán chờ tiền vô là ký.
 - `l23_ke` **KẺ ĐỨNG GIỮA** *(phòng tối)*: Tiền vô rồi hả cu Khang? Đẩy bốn lăm triệu vô số tài khoản cửa hàng này gọn giùm anh, họ giao thẳng về xưởng.
 
 **`s09_khang_transfers` · `c09`** – Góc văn phòng giờ trưa. Khang mở ngân hàng thấy tiền từ Anh Đạt đã vào, bình thản bấm chuyển tiếp trọn 45 triệu đi. *(Bong bóng: "NGÂN HÀNG CỦA KHANG: Đã chuyển: -45.000.000đ → TK ••••" · `3 · KHANG → KẺ GIAN`)*. *(Nhịp câm nhìn rõ dòng tiền rời tay).*

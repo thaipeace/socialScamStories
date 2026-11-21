@@ -4,7 +4,7 @@
   "title": "Một vòng tiền, hai nửa sự thật",
   "version": "v2-draft",
   "scam_family": "IMPERSONATION-MITM – Người đứng giữa đọc lén trò chuyện, nhái đúng văn phong + nhá video hình/giọng ghép 3 giây để điều phối hai người quen tự chuyển tiền đường vòng",
-  "duration_sec": 324.5,
+  "duration_sec": 330.66,
   "visual_style_lock": "Horizontal 16:9 widescreen (1920x1080), semi-realistic cinematic 2D anime illustration, contemporary Southern Vietnam urban setting, naturalistic dramatic lighting, clean bottom 15% for subtitles, no text, no letters, no numbers, no license plates, no logos, no real app interface, no real uniforms",
   "hook": {
     "kicker": "BẪY NGƯỜI ĐỨNG GIỮA · BỐN GIỜ CHIỀU",
@@ -34,14 +34,14 @@
     {
       "kicker": "HỒI 4 · BỐN GIỜ CHIỀU",
       "title": "NHỊP THỨ HAI & PHÚT VỠ LẼ",
-      "start": 203.93,
-      "end": 208.33
+      "start": 210.09,
+      "end": 214.49
     },
     {
       "kicker": "HỒI 5 · CHIỀU HÔM SAU",
       "title": "THỨ MẤT ĐI KHÔNG CHỈ LÀ TIỀN",
-      "start": 270.5,
-      "end": 274.9
+      "start": 276.66,
+      "end": 281.06
     }
   ],
   "scenes": [
@@ -275,7 +275,7 @@
       "id": "s08_dark_step2_account",
       "image": "assets/c08.jpg",
       "start": 188.14,
-      "end": 199.08,
+      "end": 205.24,
       "motion": {
         "scale": [
           1.0,
@@ -301,8 +301,8 @@
     {
       "id": "s09_khang_transfers",
       "image": "assets/c09.jpg",
-      "start": 199.08,
-      "end": 203.73,
+      "start": 205.24,
+      "end": 209.89,
       "motion": {
         "scale": [
           1.02,
@@ -328,8 +328,8 @@
     {
       "id": "s10_second_attempt_dark",
       "image": "assets/c10.jpg",
-      "start": 203.73,
-      "end": 214.52,
+      "start": 209.89,
+      "end": 220.68,
       "motion": {
         "scale": [
           1.04,
@@ -355,8 +355,8 @@
     {
       "id": "s11_real_call_suspect",
       "image": "assets/c11.jpg",
-      "start": 214.52,
-      "end": 223.57,
+      "start": 220.68,
+      "end": 229.73,
       "motion": {
         "scale": [
           1.04,
@@ -380,7 +380,7 @@
       },
       "shakes": [
         {
-          "at": 214.67,
+          "at": 220.83,
           "dur": 0.4,
           "amp": 16
         }
@@ -389,8 +389,8 @@
     {
       "id": "s12_confrontation_desk",
       "image": "assets/c12.jpg",
-      "start": 223.57,
-      "end": 270.3,
+      "start": 229.73,
+      "end": 276.46,
       "motion": {
         "scale": [
           1.04,
@@ -414,7 +414,7 @@
       },
       "shakes": [
         {
-          "at": 223.75,
+          "at": 229.91,
           "dur": 0.4,
           "amp": 16
         }
@@ -423,8 +423,8 @@
     {
       "id": "s13_coffee_aftermath",
       "image": "assets/c13.jpg",
-      "start": 270.3,
-      "end": 296.96,
+      "start": 276.46,
+      "end": 303.12,
       "motion": {
         "scale": [
           1.02,
@@ -450,8 +450,8 @@
     {
       "id": "s14_silent_crack",
       "image": "assets/c14.jpg",
-      "start": 296.96,
-      "end": 307.73,
+      "start": 303.12,
+      "end": 313.89,
       "motion": {
         "scale": [
           1.0,
@@ -477,8 +477,8 @@
     {
       "id": "s15_black_cut",
       "image": "assets/c15.jpg",
-      "start": 307.73,
-      "end": 310.08,
+      "start": 313.89,
+      "end": 316.24,
       "motion": {
         "scale": [
           1.0,
@@ -504,8 +504,8 @@
     {
       "id": "s16_red_flags",
       "image": "factory196/materialAndDraft/EP01b/assets/scene18.jpg",
-      "start": 310.08,
-      "end": 319.95,
+      "start": 316.24,
+      "end": 326.11,
       "motion": {
         "scale": [
           1.0,
@@ -531,8 +531,8 @@
     {
       "id": "s17_disclaimer",
       "image": "factory196/materialAndDraft/EP01b/assets/scene18.jpg",
-      "start": 319.95,
-      "end": 324.5,
+      "start": 326.11,
+      "end": 330.66,
       "motion": {
         "scale": [
           1.0,
@@ -830,6 +830,18 @@
       ]
     },
     {
+      "id": "l22b_long_p",
+      "speaker": "ke_ngot_ngao_nam",
+      "voice": "Algieba",
+      "label_short": "ĐẦU DÂY LẠ",
+      "speaker_label": "Đầu dây lạ gọi từ phòng công chứng (chính là giọng Long trong EP08b – cài nối liên hoàn)",
+      "af": "phone",
+      "style": "Giọng nam miền Nam Sài Gòn 32 tuổi, phát âm chuẩn phương ngữ miền Nam xuyên suốt mọi câu, giữ cố định một âm sắc sáng vừa, mượt mà, lịch sự nhanh gọn kiểu dân văn phòng, tuyệt đối không giả giọng ông già hay bà già run rẩy, không kéo dài chữ, không cải lương. Sắc thái câu này: nói gọn qua loa điện thoại từ nơi ồn ào, khớp đúng giọng Long ở EP08b.",
+      "start": 188.89,
+      "window": 6.92,
+      "text": "Em tới quầy công chứng rồi, bên bán chờ tiền vô là ký."
+    },
+    {
       "id": "l23_ke",
       "speaker": "chu_no",
       "voice": "Fenrir",
@@ -837,7 +849,7 @@
       "speaker_label": "Kẻ đứng giữa gõ tin nhắn điều phối từ phòng tối, nhái đúng văn phong Anh Đạt",
       "af": "phone",
       "style": "Giọng nam miền Nam Sài Gòn 40 tuổi, phát âm chuẩn phương ngữ miền Nam xuyên suốt mọi câu, giữ cố định một âm sắc trầm đều, lạnh tĩnh, điềm nhiên như kẻ cầm quân cờ, không la hét, tuyệt đối không giả giọng ông già hay bà già run rẩy, không kéo dài chữ, không cải lương. Sắc thái câu này: bình thản, giữ đúng kiểu nói cộc gọn của Anh Đạt.",
-      "start": 189.09,
+      "start": 195.25,
       "window": 11.0,
       "text": "Tiền vô rồi hả cu Khang? Đẩy bốn lăm triệu vô số tài khoản cửa hàng này gọn giùm anh, họ giao thẳng về xưởng.",
       "subtitle": [
@@ -852,7 +864,7 @@
       "speaker_label": "Kẻ đứng giữa gõ tin nhắn điều phối từ phòng tối, nhái đúng văn phong Anh Đạt",
       "af": "phone",
       "style": "Giọng nam miền Nam Sài Gòn 40 tuổi, phát âm chuẩn phương ngữ miền Nam xuyên suốt mọi câu, giữ cố định một âm sắc trầm đều, lạnh tĩnh, điềm nhiên như kẻ cầm quân cờ, không la hét, tuyệt đối không giả giọng ông già hay bà già run rẩy, không kéo dài chữ, không cải lương. Sắc thái câu này: thản nhiên lặp lại đúng văn phong cũ.",
-      "start": 204.78,
+      "start": 210.94,
       "window": 11.0,
       "text": "Cu Khang, cửa hàng còn thêm món quà kèm đẹp quá. Gọi số cũ mượn anh thêm ba chục triệu, làm gọn giùm anh nha.",
       "subtitle": [
@@ -866,7 +878,7 @@
       "label_short": "ANH ĐẠT",
       "speaker_label": "Anh Đạt – chủ xưởng nội thất nhỏ 38 tuổi, điềm tĩnh, sòng phẳng, quý nhân viên",
       "style": "Giọng nam miền Nam Sài Gòn 38 tuổi, phát âm chuẩn phương ngữ miền Nam xuyên suốt mọi câu, giữ cố định một âm sắc trầm chắc, điềm tĩnh, thẳng tính, nói gọn cộc thực dụng, rõ chữ, tự nhiên như đời thực, tuyệt đối không giả giọng ông già hay bà già run rẩy, không kéo dài chữ, không cải lương. Sắc thái câu này: gấp gáp, nghiêm giọng dứt khoát.",
-      "start": 215.32,
+      "start": 221.48,
       "window": 8.96,
       "text": "Mày đứng yên đó, chạy thẳng qua phòng anh ngay! Đem cái điện thoại qua đây cho anh coi!"
     },
@@ -877,7 +889,7 @@
       "label_short": "KHANG",
       "speaker_label": "Khang – kỹ thuật viên 26 tuổi, theo Anh Đạt 3 năm, chịu khó, rất nể sếp",
       "style": "Giọng nam thanh niên miền Nam Sài Gòn 26 tuổi, phát âm chuẩn phương ngữ miền Nam xuyên suốt mọi câu, giữ cố định một âm sắc sáng trẻ, nhịp nhanh gọn, thật thà lễ phép, rõ chữ, tự nhiên như đời thực, tuyệt đối không giả giọng ông già hay bà già run rẩy, không kéo dài chữ, không cải lương. Sắc thái câu này: hốt hoảng đặt điện thoại xuống bàn, giọng run lên.",
-      "start": 224.37,
+      "start": 230.53,
       "window": 10.66,
       "text": "Anh coi nè! Hồi sáng nó còn gọi hình đúng mặt đúng giọng anh, nhắn y chang kiểu cu Khang, chị nhà luôn mà!"
     },
@@ -888,7 +900,7 @@
       "label_short": "ANH ĐẠT",
       "speaker_label": "Anh Đạt – chủ xưởng nội thất nhỏ 38 tuổi, điềm tĩnh, sòng phẳng, quý nhân viên",
       "style": "Giọng nam miền Nam Sài Gòn 38 tuổi, phát âm chuẩn phương ngữ miền Nam xuyên suốt mọi câu, giữ cố định một âm sắc trầm chắc, điềm tĩnh, thẳng tính, nói gọn cộc thực dụng, rõ chữ, tự nhiên như đời thực, tuyệt đối không giả giọng ông già hay bà già run rẩy, không kéo dài chữ, không cải lương. Sắc thái câu này: sững sờ nhìn màn hình, giọng trầm nặng.",
-      "start": 233.77,
+      "start": 239.93,
       "window": 9.98,
       "text": "Tài khoản này đâu phải của anh! Mà sao nó có clip mặt anh với biết tuần sau kỷ niệm ngày cưới?!"
     },
@@ -899,7 +911,7 @@
       "label_short": "ANH ĐẠT",
       "speaker_label": "Anh Đạt – chủ xưởng nội thất nhỏ 38 tuổi, điềm tĩnh, sòng phẳng, quý nhân viên",
       "style": "Giọng nam miền Nam Sài Gòn 38 tuổi, phát âm chuẩn phương ngữ miền Nam xuyên suốt mọi câu, giữ cố định một âm sắc trầm chắc, điềm tĩnh, thẳng tính, nói gọn cộc thực dụng, rõ chữ, tự nhiên như đời thực, tuyệt đối không giả giọng ông già hay bà già run rẩy, không kéo dài chữ, không cải lương. Sắc thái câu này: mở máy mình lên, chợt giật mình nhận ra lỗ hổng.",
-      "start": 242.49,
+      "start": 248.65,
       "window": 10.66,
       "text": "Khoan… hồi khuya máy anh có báo đăng nhập từ thiết bị khác. Anh tưởng lỗi mạng nên bấm bỏ qua mất tiêu rồi!"
     },
@@ -910,7 +922,7 @@
       "label_short": "KHANG",
       "speaker_label": "Khang – kỹ thuật viên 26 tuổi, theo Anh Đạt 3 năm, chịu khó, rất nể sếp",
       "style": "Giọng nam thanh niên miền Nam Sài Gòn 26 tuổi, phát âm chuẩn phương ngữ miền Nam xuyên suốt mọi câu, giữ cố định một âm sắc sáng trẻ, nhịp nhanh gọn, thật thà lễ phép, rõ chữ, tự nhiên như đời thực, tuyệt đối không giả giọng ông già hay bà già run rẩy, không kéo dài chữ, không cải lương. Sắc thái câu này: tái mặt, giọng nghẹn lại khi gọi nick giả không còn liên lạc được.",
-      "start": 253.14,
+      "start": 259.3,
       "window": 8.96,
       "text": "Nó chặn mất rồi anh Đạt ơi… Bốn mươi lăm triệu em vừa chuyển qua tài khoản lạ rồi!",
       "subtitle": [
@@ -924,7 +936,7 @@
       "label_short": "ANH ĐẠT",
       "speaker_label": "Anh Đạt – chủ xưởng nội thất nhỏ 38 tuổi, điềm tĩnh, sòng phẳng, quý nhân viên",
       "style": "Giọng nam miền Nam Sài Gòn 38 tuổi, phát âm chuẩn phương ngữ miền Nam xuyên suốt mọi câu, giữ cố định một âm sắc trầm chắc, điềm tĩnh, thẳng tính, nói gọn cộc thực dụng, rõ chữ, tự nhiên như đời thực, tuyệt đối không giả giọng ông già hay bà già run rẩy, không kéo dài chữ, không cải lương. Sắc thái câu này: kìm giọng dứt khoát, xử lý ngay lập tức.",
-      "start": 260.84,
+      "start": 267.0,
       "window": 10.32,
       "text": "Bình tĩnh lại. Gọi tổng đài ngân hàng liền đi, rồi gom hết sao kê với tin nhắn đi trình báo công an!"
     },
@@ -935,7 +947,7 @@
       "label_short": "KHANG",
       "speaker_label": "Khang – kỹ thuật viên 26 tuổi, theo Anh Đạt 3 năm, chịu khó, rất nể sếp",
       "style": "Giọng nam thanh niên miền Nam Sài Gòn 26 tuổi, phát âm chuẩn phương ngữ miền Nam xuyên suốt mọi câu, giữ cố định một âm sắc sáng trẻ, nhịp nhanh gọn, thật thà lễ phép, rõ chữ, tự nhiên như đời thực, tuyệt đối không giả giọng ông già hay bà già run rẩy, không kéo dài chữ, không cải lương. Sắc thái câu này: ngồi cúi mắt bên ly cà phê đá, giọng trầm buồn áy náy.",
-      "start": 271.55,
+      "start": 277.71,
       "window": 10.32,
       "text": "Bên ngân hàng nói tiền đi qua nhiều lớp rồi, khó giữ kịp… Bốn lăm triệu đó để em góp lương trả dần.",
       "subtitle": [
@@ -949,7 +961,7 @@
       "label_short": "ANH ĐẠT",
       "speaker_label": "Anh Đạt – chủ xưởng nội thất nhỏ 38 tuổi, điềm tĩnh, sòng phẳng, quý nhân viên",
       "style": "Giọng nam miền Nam Sài Gòn 38 tuổi, phát âm chuẩn phương ngữ miền Nam xuyên suốt mọi câu, giữ cố định một âm sắc trầm chắc, điềm tĩnh, thẳng tính, nói gọn cộc thực dụng, rõ chữ, tự nhiên như đời thực, tuyệt đối không giả giọng ông già hay bà già run rẩy, không kéo dài chữ, không cải lương. Sắc thái câu này: lắc đầu nhẹ, giọng điềm tĩnh không một lời trách móc.",
-      "start": 280.61,
+      "start": 286.77,
       "window": 7.6,
       "text": "Thôi, coi như hai anh em xui. Chuyện tiền nong cứ để từ từ tính."
     },
@@ -960,7 +972,7 @@
       "label_short": "ANH ĐẠT",
       "speaker_label": "Anh Đạt – chủ xưởng nội thất nhỏ 38 tuổi, điềm tĩnh, sòng phẳng, quý nhân viên",
       "style": "Giọng nam miền Nam Sài Gòn 38 tuổi, phát âm chuẩn phương ngữ miền Nam xuyên suốt mọi câu, giữ cố định một âm sắc trầm chắc, điềm tĩnh, thẳng tính, nói gọn cộc thực dụng, rõ chữ, tự nhiên như đời thực, tuyệt đối không giả giọng ông già hay bà già run rẩy, không kéo dài chữ, không cải lương. Sắc thái câu này: hạ giọng nhẹ tênh như tiện miệng nhắc, mắt nhìn thẳng Khang.",
-      "start": 287.55,
+      "start": 293.71,
       "window": 10.32,
       "text": "À… mấy đoạn tin nhắn với nick giả hôm qua, em chụp lại đủ hết rồi gửi cho anh giữ một bản nha."
     },
@@ -971,14 +983,14 @@
       "label_short": "KHANG",
       "speaker_label": "Khang – kỹ thuật viên 26 tuổi, theo Anh Đạt 3 năm, chịu khó, rất nể sếp",
       "style": "Giọng nam thanh niên miền Nam Sài Gòn 26 tuổi, phát âm chuẩn phương ngữ miền Nam xuyên suốt mọi câu, giữ cố định một âm sắc sáng trẻ, nhịp nhanh gọn, thật thà lễ phép, rõ chữ, tự nhiên như đời thực, tuyệt đối không giả giọng ông già hay bà già run rẩy, không kéo dài chữ, không cải lương. Sắc thái câu này: ngừng tay trên ly cà phê, ngước lên nhìn thẳng sếp, giọng nhẹ nhưng lạnh hẳn đi.",
-      "start": 298.41,
+      "start": 304.57,
       "window": 9.98,
       "text": "Dạ. Vậy anh cũng chụp gửi em cái thông báo tài khoản anh bị đăng nhập lạ hôm kia… để em giữ."
     },
     {
       "id": "l35_narr",
       "speaker": "nguoi_boc_tran",
-      "start": 310.43,
+      "start": 316.59,
       "window": 9.98,
       "text": "Mặt, giọng hay cách nói đều giả được. Cứ dính tiền mà dặn giữ bí mật, hãy gọi số thật hỏi thẳng."
     }
@@ -1035,8 +1047,8 @@
       "side": "left",
       "y": 260,
       "stamp": "2 · GỬI STK LẠ",
-      "start": 188.69,
-      "end": 193.89
+      "start": 194.9,
+      "end": 200.1
     },
     {
       "sender": "NGÂN HÀNG CỦA KHANG",
@@ -1044,8 +1056,8 @@
       "side": "left",
       "y": 260,
       "stamp": "3 · KHANG → KẺ GIAN",
-      "start": 200.53,
-      "end": 203.53
+      "start": 206.69,
+      "end": 209.69
     },
     {
       "sender": "ANH ĐẠT (NICK MỚI)",
@@ -1053,8 +1065,8 @@
       "side": "left",
       "y": 260,
       "stamp": "NHỊP 2 · ĐÒI THÊM",
-      "start": 204.38,
-      "end": 209.38
+      "start": 210.54,
+      "end": 215.54
     },
     {
       "sender": "SAO KÊ NGÂN HÀNG",
@@ -1062,15 +1074,15 @@
       "side": "left",
       "y": 260,
       "stamp": "CHỨNG TỪ DUY NHẤT",
-      "start": 297.51,
-      "end": 302.91
+      "start": 303.67,
+      "end": 309.07
     }
   ],
   "callouts": [],
   "red_flags": {
     "title": "NHỚ KỸ – BẪY NGƯỜI ĐỨNG GIỮA",
-    "start": 310.43,
-    "end": 319.95,
+    "start": 316.59,
+    "end": 326.11,
     "stagger_sec": 0.45,
     "items": [
       "HỎI THẲNG ĐÚNG VIỆC ĐƯỢC NHỜ: Gọi số thật vẫn dính bẫy nếu bạn diễn theo kịch bản giữ bí mật của kẻ gian",
@@ -1083,8 +1095,8 @@
   },
   "disclaimer": {
     "header": "LƯU Ý",
-    "start": 320.3,
-    "end": 324.5,
+    "start": 326.46,
+    "end": 330.66,
     "lines": [
       "Tình huống trong phim được dựng lại nhằm mục đích cảnh báo cộng đồng; nhân vật, tên gọi và số liệu đều là hư cấu.",
       "Thông tin nghiệp vụ và pháp lý chỉ mang tính tham khảo — khi gặp sự cố, hãy liên hệ trực tiếp ngân hàng và cơ quan công an nơi gần nhất."
@@ -1137,55 +1149,55 @@
       {
         "preset": "night_room",
         "start": 188.14,
-        "end": 199.08,
+        "end": 205.24,
         "gain_db": -2.5
       },
       {
         "preset": "office",
-        "start": 199.08,
-        "end": 203.73,
+        "start": 205.24,
+        "end": 209.89,
         "gain_db": -3.5
       },
       {
         "preset": "night_room",
-        "start": 203.73,
-        "end": 214.52,
+        "start": 209.89,
+        "end": 220.68,
         "gain_db": -2.5
       },
       {
         "preset": "office",
-        "start": 214.52,
-        "end": 223.57,
+        "start": 220.68,
+        "end": 229.73,
         "gain_db": -2.5
       },
       {
         "preset": "office",
-        "start": 223.57,
-        "end": 270.3,
+        "start": 229.73,
+        "end": 276.46,
         "gain_db": -3.0
       },
       {
         "preset": "street",
-        "start": 270.3,
-        "end": 296.96,
+        "start": 276.46,
+        "end": 303.12,
         "gain_db": -5.5
       },
       {
         "preset": "room_tone",
-        "start": 296.96,
-        "end": 310.08,
+        "start": 303.12,
+        "end": 316.24,
         "gain_db": -5.0
       },
       {
         "preset": "room_tone",
-        "start": 310.08,
-        "end": 319.95,
+        "start": 316.24,
+        "end": 326.11,
         "gain_db": -5.0
       },
       {
         "preset": "room_tone",
-        "start": 319.95,
-        "end": 324.5,
+        "start": 326.11,
+        "end": 330.66,
         "gain_db": -6.0
       }
     ],
@@ -1271,77 +1283,82 @@
         "gain_db": -4
       },
       {
+        "preset": "notification",
+        "at": 188.59,
+        "gain_db": -4
+      },
+      {
         "preset": "message_send",
-        "at": 188.69,
+        "at": 194.85,
         "gain_db": -3
       },
       {
         "preset": "typing",
-        "at": 199.58,
+        "at": 205.74,
         "gain_db": -5,
         "dur": 0.9
       },
       {
         "preset": "bank_ting",
-        "at": 200.53,
+        "at": 206.69,
         "gain_db": -2.5
       },
       {
         "preset": "chapter_sting",
-        "at": 203.98,
+        "at": 210.14,
         "gain_db": -5
       },
       {
         "preset": "message_send",
-        "at": 204.38,
+        "at": 210.54,
         "gain_db": -4
       },
       {
         "preset": "riser",
-        "at": 214.87,
+        "at": 221.03,
         "gain_db": -4,
         "dur": 1.0
       },
       {
         "preset": "call_end",
-        "at": 223.02,
+        "at": 229.18,
         "gain_db": -3
       },
       {
         "preset": "impact",
-        "at": 223.92,
+        "at": 230.08,
         "gain_db": -2.5
       },
       {
         "preset": "phone_ring",
-        "at": 252.09,
+        "at": 258.25,
         "gain_db": -5,
         "dur": 0.9
       },
       {
         "preset": "call_end",
-        "at": 253.04,
+        "at": 259.2,
         "gain_db": -3
       },
       {
         "preset": "chapter_sting",
-        "at": 270.55,
+        "at": 276.71,
         "gain_db": -6
       },
       {
         "preset": "heartbeat",
-        "at": 297.61,
+        "at": 303.77,
         "gain_db": -5,
         "dur": 1.8
       },
       {
         "preset": "impact",
-        "at": 307.73,
+        "at": 313.89,
         "gain_db": -1.5
       },
       {
         "preset": "bank_ting",
-        "at": 310.43,
+        "at": 316.59,
         "gain_db": -5
       }
     ],
@@ -1391,55 +1408,55 @@
       {
         "preset": "suspense_pulse",
         "start": 188.14,
-        "end": 199.08,
+        "end": 205.24,
         "gain_db": -2.5
       },
       {
         "preset": "tension_drone",
-        "start": 199.08,
-        "end": 203.73,
+        "start": 205.24,
+        "end": 209.89,
         "gain_db": -2.8
       },
       {
         "preset": "tension_drone",
-        "start": 203.73,
-        "end": 214.52,
+        "start": 209.89,
+        "end": 220.68,
         "gain_db": -2.0
       },
       {
         "preset": "action_climax",
-        "start": 214.52,
-        "end": 223.57,
+        "start": 220.68,
+        "end": 229.73,
         "gain_db": -2.5
       },
       {
         "preset": "action_climax",
-        "start": 223.57,
-        "end": 270.3,
+        "start": 229.73,
+        "end": 276.46,
         "gain_db": -2.2
       },
       {
         "preset": "tension_drone",
-        "start": 270.3,
-        "end": 296.96,
+        "start": 276.46,
+        "end": 303.12,
         "gain_db": -4.5
       },
       {
         "preset": "tension_drone",
-        "start": 296.96,
-        "end": 310.08,
+        "start": 303.12,
+        "end": 316.24,
         "gain_db": -40.0
       },
       {
         "preset": "warm_outro",
-        "start": 310.08,
-        "end": 319.95,
+        "start": 316.24,
+        "end": 326.11,
         "gain_db": -4.2
       },
       {
         "preset": "warm_outro",
-        "start": 319.95,
-        "end": 324.5,
+        "start": 326.11,
+        "end": 330.66,
         "gain_db": -7.5
       }
     ],
@@ -1457,32 +1474,32 @@
         "amb_db": -8
       },
       {
-        "start": 199.23000000000002,
-        "end": 203.43,
+        "start": 205.39000000000001,
+        "end": 209.59,
         "bgm_db": -10,
         "amb_db": -7
       },
       {
-        "start": 223.72,
-        "end": 237.92,
+        "start": 229.88000000000002,
+        "end": 244.08,
         "bgm_db": -11,
         "amb_db": -7
       },
       {
-        "start": 271.35,
-        "end": 297.11,
+        "start": 277.51,
+        "end": 303.27000000000004,
         "bgm_db": -12,
         "amb_db": -7
       },
       {
-        "start": 297.11,
-        "end": 310.23,
+        "start": 303.27000000000004,
+        "end": 316.39,
         "bgm_db": -18,
         "amb_db": -10
       },
       {
-        "start": 320.3,
-        "end": 324.45
+        "start": 326.46,
+        "end": 330.61
       }
     ]
   },
@@ -1493,7 +1510,7 @@
       "Một Vòng Tiền, Hai Nửa Sự Thật: Khi Sếp Và Nhân Viên Cùng Tự Tay Chuyển Tiền Cho Kẻ Gian | Bóc Trần Lừa Đảo",
       "Nick Mới Nhái Y Chang Cách Nói Chuyện Của Sếp – Gọi Số Thật Sao Vẫn Sập Bẫy? | Bóc Trần Lừa Đảo"
     ],
-    "description": "Thấy đúng mặt sếp qua cuộc gọi hình 3 giây chập chờn, tin nhắn nhái y hệt cách xưng hô thường ngày, rồi chính nhân viên gọi thẳng vào số điện thoại thật của sếp — nhưng 45 triệu đồng vẫn đi trọn một vòng rồi biến mất vào tài khoản lạ.\n\n⏱️ Các hồi trong phim:\n00:00 Mở đầu – Cuộc gọi lần hai & câu hỏi đóng băng\n00:23 Hồi 1 – Cách nói chuyện & kế hoạch phòng tối\n01:32 Hồi 2 – Cuộc gọi hình ghép & nhái giọng sếp\n02:33 Hồi 3 – Dòng tiền đi một vòng\n03:23 Hồi 4 – Nhịp thứ hai & phút vỡ lẽ\n04:30 Hồi 5 – Thứ mất đi không chỉ là tiền\n05:10 Nhớ kỹ – 5 nguyên tắc chặn bẫy người đứng giữa",
+    "description": "Thấy đúng mặt sếp qua cuộc gọi hình 3 giây chập chờn, tin nhắn nhái y hệt cách xưng hô thường ngày, rồi chính nhân viên gọi thẳng vào số điện thoại thật của sếp — nhưng 45 triệu đồng vẫn đi trọn một vòng rồi biến mất vào tài khoản lạ.\n\n⏱️ Các hồi trong phim:\n00:00 Mở đầu – Cuộc gọi lần hai & câu hỏi đóng băng\n00:23 Hồi 1 – Cách nói chuyện & kế hoạch phòng tối\n01:32 Hồi 2 – Cuộc gọi hình ghép & nhái giọng sếp\n02:33 Hồi 3 – Dòng tiền đi một vòng\n03:29 Hồi 4 – Nhịp thứ hai & phút vỡ lẽ\n04:36 Hồi 5 – Thứ mất đi không chỉ là tiền\n05:16 Nhớ kỹ – 5 nguyên tắc chặn bẫy người đứng giữa",
     "pinned_comment": "📌 Theo bạn, sau câu nói ở cuối phim trên bàn cà phê, hai anh em có còn làm việc chung với nhau được nữa không? Chia sẻ góc nhìn ở bình luận để mọi người cùng cảnh giác nhé (lưu ý không đăng SĐT, STK hay tên người thật).",
     "hashtags": [
       "#bóctrầnlừađảo",
@@ -1514,6 +1531,6 @@
     ],
     "category": "Education (Giáo dục)",
     "playlist": "Hồ Sơ Bóc Trần Lừa Đảo – Phim Dài Chuyên Sâu",
-    "thumbnail_sec": 225.42
+    "thumbnail_sec": 231.58
   }
 }

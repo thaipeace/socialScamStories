@@ -1,0 +1,38 @@
+# EP08b – TIỀN NỔI RỒI, TÊN LẠI KHÁC *(Nửa bên kia dòng tiền 45 triệu từ EP08 · STRAT-VIGILANCE-LIB-V1)*
+
+## 1. Cốt lõi thực dụng & Mạch nối trực tiếp từ `EP08`
+`EP08b` là **phần nối trực tiếp (đầu dây bên kia)** của chính khoản tiền **`45.000.000đ`** mà **Khang** đã bấm chuyển sang tài khoản lạ lúc **`12:05 trưa`** trong [`EP08` (*Một vòng tiền, hai nửa sự thật*)](../EP08/story.txt).
+
+- **Cú nối hoàn hảo bịt kín 100% lỗ hổng logic ngoài đời:**
+  - Ở `EP08`, khán giả thấy **Anh Đạt** chuyển `45 triệu` cho **Khang**, rồi lúc `12:05` Khang chuyển tiếp `45 triệu` đó sang một tài khoản lạ (`TK ••••`) vì tưởng thanh toán quà cho sếp. Sau đó hai anh em phát hiện bị lừa và đi trình báo công an.
+  - Ở `EP08b`, tài khoản `TK ••••` đó **chính là tài khoản của Anh Minh** — người đang ngồi tại phòng công chứng đông đúc bán **chiếc xe máy tay ga cũ giá đúng `45 triệu`**!
+  - Kẻ đứng giữa không bỏ ra một đồng nào và cũng không cần đồng bọn mạo hiểm tự đi báo chuyển nhầm: chúng dẫn thẳng **`45 triệu` tiền lừa đảo từ Khang** chảy vào tài khoản của Anh Minh, còn tại phòng công chứng thì tay chân (**Long**) đứng tên ký hợp đồng hợp pháp lấy chiếc xe máy chạy đi.
+  - Khi **Khang (bị hại thật 100%)** trình báo công an, dòng tiền `45 triệu` bị truy vết tới ngay tài khoản của Anh Minh (F1 nhận tiền lừa đảo). Lúc này **cả Khang lẫn Anh Minh đều là nạn nhân thật** — đúng nghĩa *"kế trùng kế"*: xe máy đã sang tay theo hợp đồng công chứng đứng tên Long, còn `45 triệu` trong tài khoản Minh là tiền từ vụ án lừa đảo khác đang phải phong tỏa xác minh!
+- **Độc lập 100% cho người xem mới:** Dù chưa xem `EP08`, khán giả vẫn hiểu trọn vẹn câu chuyện và nắm chắc quy tắc **"2 Phải – 3 Không"** khi bán xe/bán đất có công chứng; còn ai đã xem `EP08` sẽ nhận ra ngay cú ghép mảnh kinh hoàng qua các móc nối: **`45 triệu`** · **`12:05 trưa`** · **người chuyển tên `Khang`** · **vụ bị lừa mạo danh sếp mua quà** · **căn phòng tối hai điện thoại & giọng `Fenrir`**.
+
+## 2. Phân tầng Thư viện Cảnh giác 3 lớp (`STRAT-VIGILANCE-LIB-V1`)
+- **Góc quan sát (Format):** **`D+F`** *(Biến thể nâng cấp nối trực tiếp cơ chế Người đứng giữa từ `EP08` sang giao dịch công chứng mua bán tài sản + Nhúng ứng phó "2 Phải – 3 Không" & xử lý khi vướng dòng tiền lừa đảo)*.
+- **Lớp 1 – Biến thể mới (`VAR-MITM-02` / `VAR-COM-04`):** *Bẫy tam giác rửa tiền qua công chứng mua bán xe máy/ô tô/đất đai* — đẩy dòng tiền từ một bị hại vụ lừa khác chảy thẳng vào tài khoản người bán tài sản, còn tay chân đứng tên ký hợp đồng công chứng lấy tài sản thật.
+- **Lớp 2 – Điểm dễ mắc (`COND`):** `COND-01` (muốn bán xe nhanh được đúng giá) · `COND-02` (niềm tin phổ biến *"ra công chứng + tiền thật nổi vào tài khoản rồi là chắc ăn 100%"*) · `COND-05` (bối cảnh phòng công chứng đông đúc, tới lượt ký nên kiệm lời ký nhanh).
+- **Lớp 3 – Ứng phó thực chiến (`RESP`, nhúng trực tiếp vào hành động kịch):**
+  - `RESP-01`, `RESP-03`: **Nguyên tắc "2 Phải – 3 Không"** (Hồi 5 — Nam đòi đúng người đứng tên hợp đồng chuyển khoản + ghi rõ họ tên, mua xe, biển số, ngày hợp đồng → đối phương chột dạ rút lui ngay vì bị hại đầu dây kia không thể trùng tên và sẽ giật mình nếu thấy nội dung mua xe).
+  - `RESP-04`, `RESP-05`, `RESP-06`: Lỡ nhận tiền lệch tên khi chưa ký thì **dừng ký, không giao xe, phối hợp ngân hàng hoàn trả**; lỡ giao xe rồi mới nhận báo dòng tiền vụ lừa thì **giữ nguyên tiền trong tài khoản (tuyệt đối không rút/tẩu tán)**, gom hợp đồng công chứng, sao kê và tin nhắn trình báo công an và làm việc thẳng với ngân hàng.
+- **1 câu neo ký ức (`Recall Anchor`):**
+  > *"Bán xe, bán đất: **ai ký hợp đồng thì đúng người đó chuyển tiền**, ghi rõ biển số và ngày hợp đồng — lệch tên là dừng ký ngay!"*
+
+## 3. Nhân vật & Bản đồ Cài – Trả (Hư cấu 100%, không thương hiệu)
+- **Anh Minh (39t):** Chủ tiệm điện lạnh nhỏ bán chiếc **xe máy tay ga màu xám bạc (`45 triệu`)** để xoay vốn; thực tế, tin chắc *"tiền nổi tài khoản + công chứng là chắc ăn"*.
+- **Chị Thảo (36t):** Vợ Anh Minh, cẩn thận, thoáng thấy tên người chuyển **"Khang"** lạ ở phòng công chứng; sau sự cố bình tĩnh cản chồng rút tiền và dẫn hướng trình báo đúng luật.
+- **Nam (28t):** Em họ chạy dịch vụ; ở Hồi 1 trầm trồ thấy anh Minh gặp khách chốt dễ, định bán chiếc xe máy cũ giống vậy → ở Hồi 5 suýt dính đúng bẫy đó nhưng gọi kịp cho Anh Minh để chặn đứng.
+- **Kẻ đứng giữa / Nick khách mua "Anh Hùng" (giấu mặt phòng tối):** **Chính là kẻ điều phối của `EP08`** (`chu_no` / voice `Fenrir`, phòng tối ánh xanh lạnh với 2 chiếc điện thoại song song!).
+- **Long (32t):** Người ăn mặc lịch sự đến phòng công chứng "đứng tên mua hộ" chiếc xe máy ở Hồi 2.
+- **Người mua hộ nữ (31t):** Xuất hiện ở Hồi 5 tại phòng công chứng với Nam rồi gọi báo động ở kết mở.
+- **Người phụ nữ bí ẩn (Kết mở đường dây ngầm – liên đới mờ Chị Hai `EP04`):** Giấu mặt 100%, chỉ lộ thoáng bóng **tóc đen ngắn ngang vai uốn cụp**, cổ tay **áo lụa xanh ngọc lục bảo trầm**, điện thoại phụ màu đen mảnh và âm sắc `chi_ba` / `Kore` sắc lạnh kiệm lời gợi liên tưởng tới Chị Hai vụ vé 300 triệu ở `EP04`.
+- **Nhân viên ngân hàng (29t, giọng điện thoại):** Gọi xác minh khoản `45 triệu` từ vụ trình báo của Khang ở Hook.
+
+| Cài | Chi tiết | Trả |
+|---|---|---|
+| `EP08 s08–s09` | Lúc `12:05 trưa`, giọng `Algieba` (Long) vang 1 câu ở phòng tối `EP08 c08` (*"Em tới quầy công chứng rồi..."*) + bóng mờ xe tay ga & chấm đỏ + **Khang** (`Puck`) bấm chuyển `45.000.000đ` tỏa dải sáng `cyan-amber` (`EP08 c09`) | **Giấu twist gọn qua 2 hồi đầu:** `s00a` chỉ nối mô-típ màu `cyan-amber` (giấu mặt & tên); `s05` thả đúng 1 hook thoáng tên `"Khang"`; đến **Hồi 3 (`s08a`)** mới nổ trọn twist với hồi ức rõ **mặt Khang & Anh Đạt (`EP08 c12`)** + nguyên câu giọng `Puck`: *"Nó chặn mất rồi anh Đạt ơi… 45 triệu em vừa chuyển qua tài khoản lạ rồi!"* |
+| `s02` | Nam khen *"Gặp khách sộp vậy sướng ha! Ít bữa em bán chiếc xe máy cũ chắc cũng lên nhóm rao thử."* | `s11–s14` Hai tuần sau chính Nam ra công chứng gặp khách chốt nhanh, nhờ người thân đứng tên mua hộ |
+| `s05` | Giữa phòng công chứng đông đúc, Minh yên tâm kiệm lời (*"Đủ 45 triệu rồi. Ra ký đi em."*), Thảo chỉ thoáng khựng 1 câu hook nhẹ (*"Ủa… người gửi sao tên Khang lạ vậy anh?"*) — **không mở bài sớm** | `s07–s08` Đến Hồi 3 mới vỡ òa trọn vẹn: Khang là bị hại vụ lừa khác, nội dung chuyển khoản trống trơn, hợp đồng lại đứng tên Long |
+| `s14` | Người mua hộ nữ vội bỏ ra khỏi phòng công chứng khi bị Nam đòi chính chủ chuyển khoản & ghi biển số | `s17a–s18` Kết mở cộc gọn sắc lạnh trên lưới 4 ô đêm mưa hội tụ tất cả mắt xích `EP08` & `EP08b` (`Fenrir`: *"Bên ông Đạt với Khang… công an vào cuộc."* · `Algieba`: *"Chiếc tay ga đẩy xong. Số hủy sạch."* · `Aoede`: *"Khu này động. Chủ xe đòi chính chủ chuyển."*) → bóng lưng giấu mặt **Người phụ nữ bí ẩn** (`Kore`, gợi mờ tóc bob đen & áo xanh ngọc lục bảo `EP04`) chốt lạnh 3 nhịp: ***"Bỏ xe. Dời vùng. Sang kèo đất."*** + cắt đen đột ngột |

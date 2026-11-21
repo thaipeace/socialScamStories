@@ -1,0 +1,1797 @@
+{
+  "episode_id": "EP08b",
+  "slug": "TienNoiRoiTenLaiKhac",
+  "title": "Tiền nổi rồi, tên lại khác",
+  "version": "v1-draft",
+  "scam_family": "VAR-MITM-02 / VAR-COM-04 · TRIANGULATION-PAYMENT-MISMATCH – Nửa bên kia dòng tiền 45 triệu từ EP08: bẫy tam giác đẩy tiền của nạn nhân vụ lừa khác vào tài khoản người bán xe máy công chứng",
+  "duration_sec": 320.8,
+  "visual_style_lock": "Horizontal 16:9 widescreen (1920x1080), semi-realistic cinematic 2D anime illustration, contemporary Southern Vietnam urban setting, naturalistic dramatic lighting, clean bottom 15% for subtitles, no text, no letters, no numbers, no license plates, no logos, no real app interface, no real uniforms",
+  "hook": {
+    "kicker": "12:05 TRƯA · CÔNG CHỨNG THẬT",
+    "title": "TIỀN NỔI RỒI, TÊN LẠI KHÁC",
+    "start": 0.4,
+    "end": 5.0
+  },
+  "chapters": [
+    {
+      "kicker": "HỒI 1 · BA HÔM TRƯỚC",
+      "title": "KHÁCH CHỐT KHÔNG MẶC CẢ",
+      "start": 29.4,
+      "end": 33.8
+    },
+    {
+      "kicker": "HỒI 2 · TRƯA HÔM SAU",
+      "title": "TIỀN ĐÃ NỔI TRONG TÀI KHOẢN",
+      "start": 85.35,
+      "end": 89.75
+    },
+    {
+      "kicker": "HỒI 3 · HAI NGÀY SAU",
+      "title": "NICK ĐÃ XÓA, XE ĐÃ SANG TAY",
+      "start": 127.83,
+      "end": 132.23
+    },
+    {
+      "kicker": "HỒI 4 · LỘ DIỆN CƠ CHẾ",
+      "title": "TAM GIÁC LỆCH DÒNG TIỀN",
+      "start": 176.45,
+      "end": 180.85
+    },
+    {
+      "kicker": "HỒI 5 · HAI TUẦN SAU",
+      "title": "NGUYÊN TẮC HAI PHẢI, BA KHÔNG",
+      "start": 217.14,
+      "end": 221.54
+    }
+  ],
+  "scenes": [
+    {
+      "id": "s00a_pulse_1205",
+      "image": "assets/c00a.jpg",
+      "start": 0.0,
+      "end": 2.65,
+      "motion": {
+        "scale": [
+          1.0,
+          1.16
+        ],
+        "focus": [
+          [
+            0.5,
+            0.5
+          ],
+          [
+            0.5,
+            0.45
+          ]
+        ],
+        "wobble": "calm"
+      }
+    },
+    {
+      "id": "s00b_hook_call",
+      "image": "assets/c00.jpg",
+      "start": 2.65,
+      "end": 26.95,
+      "motion": {
+        "scale": [
+          1.0,
+          1.16
+        ],
+        "focus": [
+          [
+            0.5,
+            0.5
+          ],
+          [
+            0.5,
+            0.45
+          ]
+        ],
+        "wobble": "calm"
+      },
+      "transition_in": {
+        "type": "flash_white",
+        "dur": 0.2
+      },
+      "shakes": [
+        {
+          "at": 2.83,
+          "dur": 0.4,
+          "amp": 16
+        }
+      ]
+    },
+    {
+      "id": "s01_hook_freeze",
+      "image": "assets/c01.jpg",
+      "start": 26.95,
+      "end": 29.2,
+      "motion": {
+        "scale": [
+          1.04,
+          1.14
+        ],
+        "focus": [
+          [
+            0.5,
+            0.5
+          ],
+          [
+            0.48,
+            0.45
+          ]
+        ],
+        "wobble": "tense"
+      },
+      "transition_in": {
+        "type": "flash_white",
+        "dur": 0.22
+      },
+      "shakes": [
+        {
+          "at": 27.1,
+          "dur": 0.4,
+          "amp": 16
+        }
+      ]
+    },
+    {
+      "id": "s02_sell_bike_cafe",
+      "image": "assets/c02.jpg",
+      "start": 29.2,
+      "end": 68.07,
+      "motion": {
+        "scale": [
+          1.02,
+          1.09
+        ],
+        "focus": [
+          [
+            0.5,
+            0.5
+          ],
+          [
+            0.5,
+            0.47
+          ]
+        ],
+        "wobble": "calm"
+      },
+      "transition_in": {
+        "type": "fade_black",
+        "dur": 0.45
+      }
+    },
+    {
+      "id": "s03_buyer_chat_dark",
+      "image": "assets/c03.jpg",
+      "start": 68.07,
+      "end": 85.15,
+      "motion": {
+        "scale": [
+          1.0,
+          1.16
+        ],
+        "focus": [
+          [
+            0.5,
+            0.5
+          ],
+          [
+            0.5,
+            0.45
+          ]
+        ],
+        "wobble": "calm"
+      },
+      "transition_in": {
+        "type": "fade_black",
+        "dur": 0.4
+      }
+    },
+    {
+      "id": "s04_notary_meeting",
+      "image": "assets/c04.jpg",
+      "start": 85.15,
+      "end": 104.88,
+      "motion": {
+        "scale": [
+          1.02,
+          1.09
+        ],
+        "focus": [
+          [
+            0.5,
+            0.5
+          ],
+          [
+            0.5,
+            0.47
+          ]
+        ],
+        "wobble": "calm"
+      },
+      "transition_in": {
+        "type": "fade_black",
+        "dur": 0.4
+      }
+    },
+    {
+      "id": "s05_money_arrives_mismatch",
+      "image": "assets/c05.jpg",
+      "start": 104.88,
+      "end": 120.92,
+      "motion": {
+        "scale": [
+          1.04,
+          1.14
+        ],
+        "focus": [
+          [
+            0.5,
+            0.5
+          ],
+          [
+            0.48,
+            0.45
+          ]
+        ],
+        "wobble": "tense"
+      },
+      "transition_in": {
+        "type": "dissolve",
+        "dur": 0.3
+      }
+    },
+    {
+      "id": "s06_sign_handover",
+      "image": "assets/c06.jpg",
+      "start": 120.92,
+      "end": 127.63,
+      "motion": {
+        "scale": [
+          1.02,
+          1.1
+        ],
+        "focus": [
+          [
+            0.46,
+            0.48
+          ],
+          [
+            0.54,
+            0.46
+          ]
+        ],
+        "wobble": "handheld"
+      },
+      "transition_in": {
+        "type": "dissolve",
+        "dur": 0.35
+      }
+    },
+    {
+      "id": "s07_call_blocked",
+      "image": "assets/c07.jpg",
+      "start": 127.63,
+      "end": 152.08,
+      "motion": {
+        "scale": [
+          1.04,
+          1.14
+        ],
+        "focus": [
+          [
+            0.5,
+            0.5
+          ],
+          [
+            0.48,
+            0.45
+          ]
+        ],
+        "wobble": "tense"
+      },
+      "transition_in": {
+        "type": "fade_black",
+        "dur": 0.4
+      },
+      "shakes": [
+        {
+          "at": 127.78,
+          "dur": 0.4,
+          "amp": 16
+        }
+      ]
+    },
+    {
+      "id": "s08a_ep08_twist",
+      "image": "assets/c08a.jpg",
+      "start": 152.08,
+      "end": 160.68,
+      "motion": {
+        "scale": [
+          1.0,
+          1.16
+        ],
+        "focus": [
+          [
+            0.5,
+            0.5
+          ],
+          [
+            0.5,
+            0.45
+          ]
+        ],
+        "wobble": "calm"
+      },
+      "transition_in": {
+        "type": "flash_white",
+        "dur": 0.22
+      },
+      "shakes": [
+        {
+          "at": 152.26,
+          "dur": 0.4,
+          "amp": 16
+        }
+      ]
+    },
+    {
+      "id": "s08b_paper_trap",
+      "image": "assets/c08.jpg",
+      "start": 160.68,
+      "end": 176.25,
+      "motion": {
+        "scale": [
+          1.0,
+          1.16
+        ],
+        "focus": [
+          [
+            0.5,
+            0.5
+          ],
+          [
+            0.5,
+            0.45
+          ]
+        ],
+        "wobble": "calm"
+      },
+      "transition_in": {
+        "type": "dissolve",
+        "dur": 0.35
+      }
+    },
+    {
+      "id": "s09_triangle_reveal",
+      "image": "assets/c09.jpg",
+      "start": 176.25,
+      "end": 192.31,
+      "motion": {
+        "scale": [
+          1.0,
+          1.16
+        ],
+        "focus": [
+          [
+            0.5,
+            0.5
+          ],
+          [
+            0.5,
+            0.45
+          ]
+        ],
+        "wobble": "calm"
+      },
+      "transition_in": {
+        "type": "flash_white",
+        "dur": 0.22
+      },
+      "shakes": [
+        {
+          "at": 176.39,
+          "dur": 0.4,
+          "amp": 16
+        }
+      ]
+    },
+    {
+      "id": "s10_response_action",
+      "image": "assets/c10.jpg",
+      "start": 192.31,
+      "end": 216.94,
+      "motion": {
+        "scale": [
+          1.02,
+          1.09
+        ],
+        "focus": [
+          [
+            0.5,
+            0.5
+          ],
+          [
+            0.5,
+            0.47
+          ]
+        ],
+        "wobble": "calm"
+      },
+      "transition_in": {
+        "type": "fade_black",
+        "dur": 0.4
+      }
+    },
+    {
+      "id": "s11_nam_calls_notary",
+      "image": "assets/c11.jpg",
+      "start": 216.94,
+      "end": 233.3,
+      "motion": {
+        "scale": [
+          1.02,
+          1.1
+        ],
+        "focus": [
+          [
+            0.46,
+            0.48
+          ],
+          [
+            0.54,
+            0.46
+          ]
+        ],
+        "wobble": "handheld"
+      },
+      "transition_in": {
+        "type": "fade_black",
+        "dur": 0.45
+      }
+    },
+    {
+      "id": "s12_minh_warns_rule",
+      "image": "assets/c12.jpg",
+      "start": 233.3,
+      "end": 249.5,
+      "motion": {
+        "scale": [
+          1.04,
+          1.14
+        ],
+        "focus": [
+          [
+            0.5,
+            0.5
+          ],
+          [
+            0.48,
+            0.45
+          ]
+        ],
+        "wobble": "tense"
+      },
+      "transition_in": {
+        "type": "dissolve",
+        "dur": 0.3
+      }
+    },
+    {
+      "id": "s13_nam_tests_proxy",
+      "image": "assets/c13.jpg",
+      "start": 249.5,
+      "end": 274.08,
+      "motion": {
+        "scale": [
+          1.04,
+          1.14
+        ],
+        "focus": [
+          [
+            0.5,
+            0.5
+          ],
+          [
+            0.48,
+            0.45
+          ]
+        ],
+        "wobble": "tense"
+      },
+      "transition_in": {
+        "type": "dissolve",
+        "dur": 0.3
+      }
+    },
+    {
+      "id": "s14_scammer_flees",
+      "image": "assets/c14.jpg",
+      "start": 274.08,
+      "end": 286.98,
+      "motion": {
+        "scale": [
+          1.0,
+          1.16
+        ],
+        "focus": [
+          [
+            0.5,
+            0.5
+          ],
+          [
+            0.5,
+            0.45
+          ]
+        ],
+        "wobble": "calm"
+      },
+      "transition_in": {
+        "type": "flash_white",
+        "dur": 0.2
+      },
+      "shakes": [
+        {
+          "at": 274.22,
+          "dur": 0.4,
+          "amp": 16
+        }
+      ]
+    },
+    {
+      "id": "s15_outro_still",
+      "image": "assets/c15.jpg",
+      "start": 286.98,
+      "end": 288.13,
+      "motion": {
+        "scale": [
+          1.0,
+          1.05
+        ],
+        "focus": [
+          [
+            0.5,
+            0.5
+          ],
+          [
+            0.5,
+            0.5
+          ]
+        ],
+        "wobble": "none"
+      },
+      "transition_in": {
+        "type": "fade_black",
+        "dur": 0.4
+      }
+    },
+    {
+      "id": "s16_red_flags",
+      "image": "factory196/materialAndDraft/EP01b/assets/scene18.jpg",
+      "start": 288.13,
+      "end": 296.68,
+      "motion": {
+        "scale": [
+          1.0,
+          1.05
+        ],
+        "focus": [
+          [
+            0.5,
+            0.5
+          ],
+          [
+            0.5,
+            0.5
+          ]
+        ],
+        "wobble": "none"
+      },
+      "transition_in": {
+        "type": "fade_black",
+        "dur": 0.4
+      }
+    },
+    {
+      "id": "s17a_syndicate_grid",
+      "image": "assets/c16a.jpg",
+      "start": 296.68,
+      "end": 310.33,
+      "motion": {
+        "scale": [
+          1.0,
+          1.16
+        ],
+        "focus": [
+          [
+            0.5,
+            0.5
+          ],
+          [
+            0.5,
+            0.45
+          ]
+        ],
+        "wobble": "calm"
+      },
+      "transition_in": {
+        "type": "fade_black",
+        "dur": 0.4
+      }
+    },
+    {
+      "id": "s17b_boss_order",
+      "image": "assets/c16b.jpg",
+      "start": 310.33,
+      "end": 314.8,
+      "motion": {
+        "scale": [
+          1.0,
+          1.16
+        ],
+        "focus": [
+          [
+            0.5,
+            0.5
+          ],
+          [
+            0.5,
+            0.45
+          ]
+        ],
+        "wobble": "calm"
+      },
+      "transition_in": {
+        "type": "dissolve",
+        "dur": 0.25
+      }
+    },
+    {
+      "id": "s18_black_cut",
+      "image": "assets/c17.jpg",
+      "start": 314.8,
+      "end": 316.45,
+      "motion": {
+        "scale": [
+          1.0,
+          1.05
+        ],
+        "focus": [
+          [
+            0.5,
+            0.5
+          ],
+          [
+            0.5,
+            0.5
+          ]
+        ],
+        "wobble": "none"
+      },
+      "transition_in": {
+        "type": "fade_black",
+        "dur": 0.08
+      }
+    },
+    {
+      "id": "s19_disclaimer",
+      "image": "factory196/materialAndDraft/EP01b/assets/scene18.jpg",
+      "start": 316.45,
+      "end": 320.8,
+      "motion": {
+        "scale": [
+          1.0,
+          1.05
+        ],
+        "focus": [
+          [
+            0.5,
+            0.5
+          ],
+          [
+            0.5,
+            0.5
+          ]
+        ],
+        "wobble": "none"
+      },
+      "transition_in": {
+        "type": "fade_black",
+        "dur": 0.35
+      }
+    }
+  ],
+  "dialogue": [
+    {
+      "id": "l01_bank_p",
+      "speaker": "chi_tu",
+      "voice": "Zephyr",
+      "label_short": "NGÂN HÀNG",
+      "speaker_label": "Nhân viên ngân hàng 29 tuổi gọi xác minh dòng tiền 45 triệu từ đơn trình báo của Khang",
+      "af": "phone",
+      "style": "Giọng nữ miền Nam Sài Gòn 29 tuổi, phát âm chuẩn phương ngữ miền Nam xuyên suốt mọi câu, giữ cố định một âm sắc rõ ràng, chuẩn mực, điềm tĩnh kiểu tổng đài viên ngân hàng, tuyệt đối không giả giọng ông già hay bà già run rẩy, không kéo dài chữ, không cải lương. Sắc thái câu này: chuẩn mực, bình tĩnh qua điện thoại.",
+      "start": 3.85,
+      "window": 8.96,
+      "text": "Chào anh Minh. Có đơn trình báo vụ lừa bốn lăm triệu, tiền chảy thẳng vô tài khoản anh.",
+      "subtitle": [
+        "Chào anh Minh. Có đơn trình báo vụ lừa 45 triệu, tiền chảy thẳng vô tài khoản anh."
+      ]
+    },
+    {
+      "id": "l02_minh",
+      "speaker": "anh_hai",
+      "voice": "Orus",
+      "label_short": "ANH MINH",
+      "speaker_label": "Anh Minh – chủ tiệm điện lạnh 39 tuổi, thẳng tính, bán chiếc xe máy tay ga 45 triệu",
+      "style": "Giọng nam miền Nam Sài Gòn 39 tuổi, phát âm chuẩn phương ngữ miền Nam xuyên suốt mọi câu, giữ cố định một âm sắc trầm chắc, thẳng tính, đời thường, nói gọn rõ chữ, tự nhiên như đời thực, tuyệt đối không giả giọng ông già hay bà già run rẩy, không kéo dài chữ, không cải lương. Sắc thái câu này: sững người, giọng gấp gáp khó tin.",
+      "start": 11.55,
+      "window": 9.3,
+      "text": "Khoan chị! Bốn lăm triệu đó khách mua xe máy chuyển tại phòng công chứng mà! Tôi giao xe rồi!",
+      "subtitle": [
+        "Khoan chị! 45 triệu đó khách mua xe máy chuyển tại phòng công chứng mà! Tôi giao xe rồi!"
+      ]
+    },
+    {
+      "id": "l03_bank_p",
+      "speaker": "chi_tu",
+      "voice": "Zephyr",
+      "label_short": "NGÂN HÀNG",
+      "speaker_label": "Nhân viên ngân hàng 29 tuổi gọi xác minh dòng tiền 45 triệu từ đơn trình báo của Khang",
+      "af": "phone",
+      "style": "Giọng nữ miền Nam Sài Gòn 29 tuổi, phát âm chuẩn phương ngữ miền Nam xuyên suốt mọi câu, giữ cố định một âm sắc rõ ràng, chuẩn mực, điềm tĩnh kiểu tổng đài viên ngân hàng, tuyệt đối không giả giọng ông già hay bà già run rẩy, không kéo dài chữ, không cải lương. Sắc thái câu này: rõ ràng, dứt khoát đúng nghiệp vụ.",
+      "start": 19.59,
+      "window": 8.62,
+      "text": "Nhưng người chuyển báo bị lừa, không mua xe của anh. Nội dung cũng không ghi mua xe."
+    },
+    {
+      "id": "l04_nam",
+      "speaker": "thang_tun",
+      "voice": "Achird",
+      "label_short": "NAM",
+      "speaker_label": "Nam – em họ 28 tuổi, thật thà, phản ứng nhanh khi được nhắc kịp thời",
+      "style": "Giọng nam thanh niên miền Nam Sài Gòn 28 tuổi, phát âm chuẩn phương ngữ miền Nam xuyên suốt mọi câu, giữ cố định một âm sắc gọn, sáng vừa, nhanh nhẹn, thật thà gần gũi, rõ chữ, tự nhiên như đời thực, tuyệt đối không giả giọng ông già hay bà già run rẩy, không kéo dài chữ, không cải lương. Sắc thái câu này: uống trà đá nói chuyện thoải mái.",
+      "start": 30.1,
+      "window": 8.62,
+      "text": "Chiếc tay ga rao bốn lăm triệu cả tuần, thợ trả bốn chục. Chắc bớt chút mới trôi.",
+      "subtitle": [
+        "Chiếc tay ga rao 45 triệu cả tuần, thợ trả 40. Chắc bớt chút mới trôi."
+      ]
+    },
+    {
+      "id": "l05_minh",
+      "speaker": "anh_hai",
+      "voice": "Orus",
+      "label_short": "ANH MINH",
+      "speaker_label": "Anh Minh – chủ tiệm điện lạnh 39 tuổi, thẳng tính, bán chiếc xe máy tay ga 45 triệu",
+      "style": "Giọng nam miền Nam Sài Gòn 39 tuổi, phát âm chuẩn phương ngữ miền Nam xuyên suốt mọi câu, giữ cố định một âm sắc trầm chắc, thẳng tính, đời thường, nói gọn rõ chữ, tự nhiên như đời thực, tuyệt đối không giả giọng ông già hay bà già run rẩy, không kéo dài chữ, không cải lương. Sắc thái câu này: mừng rỡ khoe với em họ và vợ.",
+      "start": 37.46,
+      "window": 9.3,
+      "text": "Sáng nay có anh Hùng hỏi mua. Coi hình xong chốt thẳng bốn lăm triệu, hông trả giá một đồng!",
+      "subtitle": [
+        "Sáng nay có anh Hùng hỏi mua. Coi hình xong chốt thẳng 45 triệu, hông trả giá một đồng!"
+      ]
+    },
+    {
+      "id": "l06_thao",
+      "speaker": "chi_hai",
+      "voice": "Sulafat",
+      "label_short": "CHỊ THẢO",
+      "speaker_label": "Chị Thảo – vợ Anh Minh 36 tuổi, tinh ý, thực tế, bình tĩnh xử lý đúng luật",
+      "style": "Giọng phụ nữ miền Nam Sài Gòn 36 tuổi, phát âm chuẩn phương ngữ miền Nam xuyên suốt mọi câu, giữ cố định một âm sắc ấm, trầm vừa, cẩn thận thực tế, nói gọn chắc, tự nhiên như đời thực, tuyệt đối không giả giọng ông già hay bà già run rẩy, không kéo dài chữ, không cải lương. Sắc thái câu này: nhíu mày nhẹ, đặt câu hỏi thực tế.",
+      "start": 45.5,
+      "window": 7.6,
+      "text": "Nghe dễ quá cũng lạ nha anh. Sao ổng hông qua coi xe trực tiếp?"
+    },
+    {
+      "id": "l07_minh",
+      "speaker": "anh_hai",
+      "voice": "Orus",
+      "label_short": "ANH MINH",
+      "speaker_label": "Anh Minh – chủ tiệm điện lạnh 39 tuổi, thẳng tính, bán chiếc xe máy tay ga 45 triệu",
+      "style": "Giọng nam miền Nam Sài Gòn 39 tuổi, phát âm chuẩn phương ngữ miền Nam xuyên suốt mọi câu, giữ cố định một âm sắc trầm chắc, thẳng tính, đời thường, nói gọn rõ chữ, tự nhiên như đời thực, tuyệt đối không giả giọng ông già hay bà già run rẩy, không kéo dài chữ, không cải lương. Sắc thái câu này: xua tay tự tin tuyệt đối vào quy tắc cũ.",
+      "start": 51.84,
+      "window": 9.98,
+      "text": "Ổng công tác xa, thấy xe hợp màu nên chốt. Tiền nổi vô tài khoản anh mới ký công chứng, sợ gì!"
+    },
+    {
+      "id": "l08_nam",
+      "speaker": "thang_tun",
+      "voice": "Achird",
+      "label_short": "NAM",
+      "speaker_label": "Nam – em họ 28 tuổi, thật thà, phản ứng nhanh khi được nhắc kịp thời",
+      "style": "Giọng nam thanh niên miền Nam Sài Gòn 28 tuổi, phát âm chuẩn phương ngữ miền Nam xuyên suốt mọi câu, giữ cố định một âm sắc gọn, sáng vừa, nhanh nhẹn, thật thà gần gũi, rõ chữ, tự nhiên như đời thực, tuyệt đối không giả giọng ông già hay bà già run rẩy, không kéo dài chữ, không cải lương. Sắc thái câu này: cười trầm trồ thật thà.",
+      "start": 60.56,
+      "window": 8.62,
+      "text": "Gặp khách sộp vậy sướng ha! Ít bữa em bán xe máy chắc cũng lên nhóm rao thử."
+    },
+    {
+      "id": "l09_buyer_msg",
+      "speaker": "chu_no",
+      "voice": "Fenrir",
+      "label_short": "KHÁCH MUA",
+      "speaker_label": "Kẻ đứng giữa (từ EP08) đóng vai nick 'Anh Hùng' nhắn chốt mua xe máy 45 triệu",
+      "af": "phone",
+      "style": "Giọng nam miền Nam Sài Gòn 40 tuổi, phát âm chuẩn phương ngữ miền Nam xuyên suốt mọi câu, giữ cố định một âm sắc trầm đều, lịch sự mà lạnh tĩnh như kẻ cầm quân cờ, không la hét, tuyệt đối không giả giọng ông già hay bà già run rẩy, không kéo dài chữ, không cải lương. Sắc thái câu này: lịch sự, bình thản đầy tin cậy.",
+      "start": 68.92,
+      "window": 9.64,
+      "text": "Anh bận công tác xa chưa về kịp, nên nhờ em họ tên Long ra công chứng đứng tên mua hộ."
+    },
+    {
+      "id": "l10_buyer_msg",
+      "speaker": "chu_no",
+      "voice": "Fenrir",
+      "label_short": "KHÁCH MUA",
+      "speaker_label": "Kẻ đứng giữa (từ EP08) đóng vai nick 'Anh Hùng' nhắn chốt mua xe máy 45 triệu",
+      "af": "phone",
+      "style": "Giọng nam miền Nam Sài Gòn 40 tuổi, phát âm chuẩn phương ngữ miền Nam xuyên suốt mọi câu, giữ cố định một âm sắc trầm đều, lịch sự mà lạnh tĩnh như kẻ cầm quân cờ, không la hét, tuyệt đối không giả giọng ông già hay bà già run rẩy, không kéo dài chữ, không cải lương. Sắc thái câu này: chủ động trấn an để hạ cảnh giác.",
+      "start": 77.3,
+      "window": 8.96,
+      "text": "Chú yên tâm. Bao giờ tiền nổi đủ bốn lăm triệu trong tài khoản rồi hẵng ký giao xe!",
+      "subtitle": [
+        "Chú yên tâm. Bao giờ tiền nổi đủ 45 triệu trong tài khoản rồi hẵng ký giao xe!"
+      ]
+    },
+    {
+      "id": "l11_long",
+      "speaker": "ke_ngot_ngao_nam",
+      "voice": "Algieba",
+      "label_short": "LONG",
+      "speaker_label": "Long – người 32 tuổi lịch sự đứng tên mua hộ (khớp giọng Algieba ở EP08 s08)",
+      "af": "default",
+      "style": "Giọng nam miền Nam Sài Gòn 32 tuổi, phát âm chuẩn phương ngữ miền Nam xuyên suốt mọi câu, giữ cố định một âm sắc sáng vừa, mượt mà, lịch sự khéo léo kiểu dân văn phòng, nói nhanh gọn, tuyệt đối không giả giọng ông già hay bà già run rẩy, không kéo dài chữ, không cải lương. Sắc thái câu này: cười lịch sự, gọn gàng giữa sảnh công chứng đông người.",
+      "start": 86.05,
+      "window": 8.62,
+      "text": "Em là Long, em họ anh Hùng. Hồ sơ nộp quầy rồi, chờ gọi tên thôi anh chị."
+    },
+    {
+      "id": "l12_thao",
+      "speaker": "chi_hai",
+      "voice": "Sulafat",
+      "label_short": "CHỊ THẢO",
+      "speaker_label": "Chị Thảo – vợ Anh Minh 36 tuổi, tinh ý, thực tế, bình tĩnh xử lý đúng luật",
+      "style": "Giọng phụ nữ miền Nam Sài Gòn 36 tuổi, phát âm chuẩn phương ngữ miền Nam xuyên suốt mọi câu, giữ cố định một âm sắc ấm, trầm vừa, cẩn thận thực tế, nói gọn chắc, tự nhiên như đời thực, tuyệt đối không giả giọng ông già hay bà già run rẩy, không kéo dài chữ, không cải lương. Sắc thái câu này: hỏi xã giao bình thường, không chút căng thẳng.",
+      "start": 93.41,
+      "window": 6.58,
+      "text": "Rồi chút nữa bên anh Hùng chuyển thẳng qua luôn hả cậu?"
+    },
+    {
+      "id": "l13_long",
+      "speaker": "ke_ngot_ngao_nam",
+      "voice": "Algieba",
+      "label_short": "LONG",
+      "speaker_label": "Long – người 32 tuổi lịch sự đứng tên mua hộ (khớp giọng Algieba ở EP08 s08)",
+      "af": "default",
+      "style": "Giọng nam miền Nam Sài Gòn 32 tuổi, phát âm chuẩn phương ngữ miền Nam xuyên suốt mọi câu, giữ cố định một âm sắc sáng vừa, mượt mà, lịch sự khéo léo kiểu dân văn phòng, nói nhanh gọn, tuyệt đối không giả giọng ông già hay bà già run rẩy, không kéo dài chữ, không cải lương. Sắc thái câu này: trấn an nhẹ nhàng, hoàn toàn tự nhiên.",
+      "start": 98.73,
+      "window": 7.26,
+      "text": "Dạ ảnh đang bấm chuyển đó chị, tiền vô là mình vô ký gọn."
+    },
+    {
+      "id": "l14_minh",
+      "speaker": "anh_hai",
+      "voice": "Orus",
+      "label_short": "ANH MINH",
+      "speaker_label": "Anh Minh – chủ tiệm điện lạnh 39 tuổi, thẳng tính, bán chiếc xe máy tay ga 45 triệu",
+      "style": "Giọng nam miền Nam Sài Gòn 39 tuổi, phát âm chuẩn phương ngữ miền Nam xuyên suốt mọi câu, giữ cố định một âm sắc trầm chắc, thẳng tính, đời thường, nói gọn rõ chữ, tự nhiên như đời thực, tuyệt đối không giả giọng ông già hay bà già run rẩy, không kéo dài chữ, không cải lương. Sắc thái câu này: nhìn thoáng số dư, giọng nhẹ hẳn xuống đầy yên tâm và kiệm lời.",
+      "start": 105.83,
+      "window": 5.56,
+      "text": "Đủ bốn lăm triệu rồi. Ra ký đi em.",
+      "subtitle": [
+        "Đủ 45 triệu rồi. Ra ký đi em."
+      ]
+    },
+    {
+      "id": "l15_thao",
+      "speaker": "chi_hai",
+      "voice": "Sulafat",
+      "label_short": "CHỊ THẢO",
+      "speaker_label": "Chị Thảo – vợ Anh Minh 36 tuổi, tinh ý, thực tế, bình tĩnh xử lý đúng luật",
+      "style": "Giọng phụ nữ miền Nam Sài Gòn 36 tuổi, phát âm chuẩn phương ngữ miền Nam xuyên suốt mọi câu, giữ cố định một âm sắc ấm, trầm vừa, cẩn thận thực tế, nói gọn chắc, tự nhiên như đời thực, tuyệt đối không giả giọng ông già hay bà già run rẩy, không kéo dài chữ, không cải lương. Sắc thái câu này: liếc màn hình đúng nửa giây, khựng nhẹ hỏi nhỏ.",
+      "start": 110.13,
+      "window": 5.56,
+      "text": "Ủa… người gửi sao tên Khang lạ vậy anh?"
+    },
+    {
+      "id": "l16_long",
+      "speaker": "ke_ngot_ngao_nam",
+      "voice": "Algieba",
+      "label_short": "LONG",
+      "speaker_label": "Long – người 32 tuổi lịch sự đứng tên mua hộ (khớp giọng Algieba ở EP08 s08)",
+      "af": "default",
+      "style": "Giọng nam miền Nam Sài Gòn 32 tuổi, phát âm chuẩn phương ngữ miền Nam xuyên suốt mọi câu, giữ cố định một âm sắc sáng vừa, mượt mà, lịch sự khéo léo kiểu dân văn phòng, nói nhanh gọn, tuyệt đối không giả giọng ông già hay bà già run rẩy, không kéo dài chữ, không cải lương. Sắc thái câu này: cười nhẹ lịch sự, gật gọn tự nhiên hướng về quầy công chứng.",
+      "start": 114.43,
+      "window": 7.6,
+      "text": "Kế toán bên công ty ảnh chuyển đó chị. Tới số mình vô ký rồi."
+    },
+    {
+      "id": "l17_long",
+      "speaker": "ke_ngot_ngao_nam",
+      "voice": "Algieba",
+      "label_short": "LONG",
+      "speaker_label": "Long – người 32 tuổi lịch sự đứng tên mua hộ (khớp giọng Algieba ở EP08 s08)",
+      "af": "default",
+      "style": "Giọng nam miền Nam Sài Gòn 32 tuổi, phát âm chuẩn phương ngữ miền Nam xuyên suốt mọi câu, giữ cố định một âm sắc sáng vừa, mượt mà, lịch sự khéo léo kiểu dân văn phòng, nói nhanh gọn, tuyệt đối không giả giọng ông già hay bà già run rẩy, không kéo dài chữ, không cải lương. Sắc thái câu này: tươi cười nhận chìa khóa, nổ máy chạy chiếc tay ga đi.",
+      "start": 121.77,
+      "window": 6.92,
+      "text": "Cảm ơn anh chị nha. Em chạy xe về nhà anh Hùng đây!"
+    },
+    {
+      "id": "l18_minh",
+      "speaker": "anh_hai",
+      "voice": "Orus",
+      "label_short": "ANH MINH",
+      "speaker_label": "Anh Minh – chủ tiệm điện lạnh 39 tuổi, thẳng tính, bán chiếc xe máy tay ga 45 triệu",
+      "style": "Giọng nam miền Nam Sài Gòn 39 tuổi, phát âm chuẩn phương ngữ miền Nam xuyên suốt mọi câu, giữ cố định một âm sắc trầm chắc, thẳng tính, đời thường, nói gọn rõ chữ, tự nhiên như đời thực, tuyệt đối không giả giọng ông già hay bà già run rẩy, không kéo dài chữ, không cải lương. Sắc thái câu này: tái mặt hoảng hốt, giọng run lên.",
+      "start": 128.98,
+      "window": 7.94,
+      "text": "Trời đất ơi! Nick ông Hùng xóa rồi! Gọi số thằng Long cũng tắt máy luôn!"
+    },
+    {
+      "id": "l19_thao",
+      "speaker": "chi_hai",
+      "voice": "Sulafat",
+      "label_short": "CHỊ THẢO",
+      "speaker_label": "Chị Thảo – vợ Anh Minh 36 tuổi, tinh ý, thực tế, bình tĩnh xử lý đúng luật",
+      "style": "Giọng phụ nữ miền Nam Sài Gòn 36 tuổi, phát âm chuẩn phương ngữ miền Nam xuyên suốt mọi câu, giữ cố định một âm sắc ấm, trầm vừa, cẩn thận thực tế, nói gọn chắc, tự nhiên như đời thực, tuyệt đối không giả giọng ông già hay bà già run rẩy, không kéo dài chữ, không cải lương. Sắc thái câu này: sững người lo lắng, chợt nhớ lại khoảnh khắc hôm công chứng.",
+      "start": 135.66,
+      "window": 8.62,
+      "text": "Lúc ký em thoáng thấy tên Khang lạ mà tưởng tiền vô là xong… Người đó là ai?"
+    },
+    {
+      "id": "l20_minh",
+      "speaker": "anh_hai",
+      "voice": "Orus",
+      "label_short": "ANH MINH",
+      "speaker_label": "Anh Minh – chủ tiệm điện lạnh 39 tuổi, thẳng tính, bán chiếc xe máy tay ga 45 triệu",
+      "style": "Giọng nam miền Nam Sài Gòn 39 tuổi, phát âm chuẩn phương ngữ miền Nam xuyên suốt mọi câu, giữ cố định một âm sắc trầm chắc, thẳng tính, đời thường, nói gọn rõ chữ, tự nhiên như đời thực, tuyệt đối không giả giọng ông già hay bà già run rẩy, không kéo dài chữ, không cải lương. Sắc thái câu này: giọng trầm nặng, bàng hoàng không tin nổi.",
+      "start": 143.02,
+      "window": 10.32,
+      "text": "Công an nói anh Khang bị giả sếp nhờ mua quà kỷ niệm cho vợ, lừa chuyển bốn lăm triệu vô máy mình!",
+      "subtitle": [
+        "Công an nói anh Khang bị giả sếp nhờ mua quà kỷ niệm cho vợ, lừa chuyển 45 triệu vô máy mình!"
+      ]
+    },
+    {
+      "id": "l20b_khang_echo",
+      "speaker": "thang_tun",
+      "voice": "Puck",
+      "label_short": "KHANG (EP08)",
+      "speaker_label": "Khang (EP08) – tiếng vọng hồi ức từ khoảnh khắc chuyển 45 triệu sang tài khoản lạ",
+      "af": "memory",
+      "style": "Giọng nam thanh niên miền Nam Sài Gòn 26 tuổi, phát âm chuẩn phương ngữ miền Nam xuyên suốt mọi câu, giữ cố định một âm sắc sáng trẻ, nhịp nhanh gọn, thật thà lễ phép, rõ chữ, tự nhiên như đời thực, tuyệt đối không giả giọng ông già hay bà già run rẩy, không kéo dài chữ, không cải lương. Sắc thái câu này: tái mặt nghẹn giọng — trích nguyên khoảnh khắc vỡ lẽ từ EP08 (voice Puck).",
+      "start": 152.78,
+      "window": 8.96,
+      "text": "Nó chặn mất rồi anh Đạt ơi… Bốn mươi lăm triệu em vừa chuyển qua tài khoản lạ rồi!",
+      "subtitle": [
+        "Nó chặn mất rồi anh Đạt ơi… 45 triệu em vừa chuyển qua tài khoản lạ rồi!"
+      ]
+    },
+    {
+      "id": "l21_thao",
+      "speaker": "chi_hai",
+      "voice": "Sulafat",
+      "label_short": "CHỊ THẢO",
+      "speaker_label": "Chị Thảo – vợ Anh Minh 36 tuổi, tinh ý, thực tế, bình tĩnh xử lý đúng luật",
+      "style": "Giọng phụ nữ miền Nam Sài Gòn 36 tuổi, phát âm chuẩn phương ngữ miền Nam xuyên suốt mọi câu, giữ cố định một âm sắc ấm, trầm vừa, cẩn thận thực tế, nói gọn chắc, tự nhiên như đời thực, tuyệt đối không giả giọng ông già hay bà già run rẩy, không kéo dài chữ, không cải lương. Sắc thái câu này: đặt hai tờ giấy cạnh nhau trên bàn, giọng trầm căng.",
+      "start": 161.38,
+      "window": 8.28,
+      "text": "Hợp đồng bán xe cho Long ghi nhận đủ, còn tiền lại từ anh Khang bị lừa!"
+    },
+    {
+      "id": "l22_minh",
+      "speaker": "anh_hai",
+      "voice": "Orus",
+      "label_short": "ANH MINH",
+      "speaker_label": "Anh Minh – chủ tiệm điện lạnh 39 tuổi, thẳng tính, bán chiếc xe máy tay ga 45 triệu",
+      "style": "Giọng nam miền Nam Sài Gòn 39 tuổi, phát âm chuẩn phương ngữ miền Nam xuyên suốt mọi câu, giữ cố định một âm sắc trầm chắc, thẳng tính, đời thường, nói gọn rõ chữ, tự nhiên như đời thực, tuyệt đối không giả giọng ông già hay bà già run rẩy, không kéo dài chữ, không cải lương. Sắc thái câu này: ôm trán bàng hoàng nhận ra cái bẫy kế trùng kế.",
+      "start": 168.4,
+      "window": 8.96,
+      "text": "Nội dung chỉ ghi chuyển tiền, không biển số, không ngày hợp đồng… Cả hai đều là nạn nhân!"
+    },
+    {
+      "id": "l23_buyer_room",
+      "speaker": "chu_no",
+      "voice": "Fenrir",
+      "label_short": "KẺ ĐỨNG GIỮA",
+      "speaker_label": "Kẻ đứng giữa giấu mặt trong phòng tối – khớp giọng và bối cảnh 2 điện thoại của EP08",
+      "af": "default",
+      "style": "Giọng nam miền Nam Sài Gòn 40 tuổi, phát âm chuẩn phương ngữ miền Nam xuyên suốt mọi câu, giữ cố định một âm sắc trầm đều, lịch sự mà lạnh tĩnh như kẻ cầm quân cờ, không la hét, tuyệt đối không giả giọng ông già hay bà già run rẩy, không kéo dài chữ, không cải lương. Sắc thái câu này: trầm lạnh điềm nhiên từ phòng tối hai điện thoại.",
+      "start": 177.1,
+      "window": 8.96,
+      "text": "Đầu kia lừa thằng Khang đẩy bốn lăm triệu. Đầu này cho Long công chứng hốt chiếc xe máy.",
+      "subtitle": [
+        "Đầu kia lừa thằng Khang đẩy 45 triệu. Đầu này cho Long công chứng hốt chiếc xe máy."
+      ]
+    },
+    {
+      "id": "l24_buyer_room",
+      "speaker": "chu_no",
+      "voice": "Fenrir",
+      "label_short": "KẺ ĐỨNG GIỮA",
+      "speaker_label": "Kẻ đứng giữa giấu mặt trong phòng tối – khớp giọng và bối cảnh 2 điện thoại của EP08",
+      "af": "default",
+      "style": "Giọng nam miền Nam Sài Gòn 40 tuổi, phát âm chuẩn phương ngữ miền Nam xuyên suốt mọi câu, giữ cố định một âm sắc trầm đều, lịch sự mà lạnh tĩnh như kẻ cầm quân cờ, không la hét, tuyệt đối không giả giọng ông già hay bà già run rẩy, không kéo dài chữ, không cải lương. Sắc thái câu này: lạnh tĩnh chốt gọn ván cờ hai đầu dây.",
+      "start": 184.8,
+      "window": 8.62,
+      "text": "Tiền bẩn đổi ra xe thật trong một buổi trưa. Hai nạn nhân tự giải trình với nhau!"
+    },
+    {
+      "id": "l25_minh",
+      "speaker": "anh_hai",
+      "voice": "Orus",
+      "label_short": "ANH MINH",
+      "speaker_label": "Anh Minh – chủ tiệm điện lạnh 39 tuổi, thẳng tính, bán chiếc xe máy tay ga 45 triệu",
+      "style": "Giọng nam miền Nam Sài Gòn 39 tuổi, phát âm chuẩn phương ngữ miền Nam xuyên suốt mọi câu, giữ cố định một âm sắc trầm chắc, thẳng tính, đời thường, nói gọn rõ chữ, tự nhiên như đời thực, tuyệt đối không giả giọng ông già hay bà già run rẩy, không kéo dài chữ, không cải lương. Sắc thái câu này: sốt ruột định làm theo phản xạ.",
+      "start": 192.96,
+      "window": 8.28,
+      "text": "Hay anh rút bốn lăm triệu cất trước, chừng nào kiếm lại được xe rồi mới tính?",
+      "subtitle": [
+        "Hay anh rút 45 triệu cất trước, chừng nào kiếm lại được xe rồi mới tính?"
+      ]
+    },
+    {
+      "id": "l26_thao",
+      "speaker": "chi_hai",
+      "voice": "Sulafat",
+      "label_short": "CHỊ THẢO",
+      "speaker_label": "Chị Thảo – vợ Anh Minh 36 tuổi, tinh ý, thực tế, bình tĩnh xử lý đúng luật",
+      "style": "Giọng phụ nữ miền Nam Sài Gòn 36 tuổi, phát âm chuẩn phương ngữ miền Nam xuyên suốt mọi câu, giữ cố định một âm sắc ấm, trầm vừa, cẩn thận thực tế, nói gọn chắc, tự nhiên như đời thực, tuyệt đối không giả giọng ông già hay bà già run rẩy, không kéo dài chữ, không cải lương. Sắc thái câu này: cản ngay lập tức, giọng điềm tĩnh kiên quyết.",
+      "start": 199.98,
+      "window": 9.98,
+      "text": "Khoan! Đừng rút hay chuyển đi đâu! Tiền đang xác minh vụ án mà tự tẩu tán còn rắc rối nặng hơn!"
+    },
+    {
+      "id": "l27_minh",
+      "speaker": "anh_hai",
+      "voice": "Orus",
+      "label_short": "ANH MINH",
+      "speaker_label": "Anh Minh – chủ tiệm điện lạnh 39 tuổi, thẳng tính, bán chiếc xe máy tay ga 45 triệu",
+      "style": "Giọng nam miền Nam Sài Gòn 39 tuổi, phát âm chuẩn phương ngữ miền Nam xuyên suốt mọi câu, giữ cố định một âm sắc trầm chắc, thẳng tính, đời thường, nói gọn rõ chữ, tự nhiên như đời thực, tuyệt đối không giả giọng ông già hay bà già run rẩy, không kéo dài chữ, không cải lương. Sắc thái câu này: hít sâu lấy lại bình tĩnh, gật đầu dứt khoát.",
+      "start": 208.7,
+      "window": 9.3,
+      "text": "Vậy giữ nguyên tiền trong tài khoản, gom hợp đồng, sao kê với tin nhắn trình báo công an liền!"
+    },
+    {
+      "id": "l28_nam",
+      "speaker": "thang_tun",
+      "voice": "Achird",
+      "label_short": "NAM",
+      "speaker_label": "Nam – em họ 28 tuổi, thật thà, phản ứng nhanh khi được nhắc kịp thời",
+      "style": "Giọng nam thanh niên miền Nam Sài Gòn 28 tuổi, phát âm chuẩn phương ngữ miền Nam xuyên suốt mọi câu, giữ cố định một âm sắc gọn, sáng vừa, nhanh nhẹn, thật thà gần gũi, rõ chữ, tự nhiên như đời thực, tuyệt đối không giả giọng ông già hay bà già run rẩy, không kéo dài chữ, không cải lương. Sắc thái câu này: vui vẻ gọi khoe anh họ ngay trước khi ký.",
+      "start": 218.24,
+      "window": 8.96,
+      "text": "Alo anh Minh! Em đang công chứng bán xe máy. Khách chốt nhanh, nhờ người thân đứng tên hộ!"
+    },
+    {
+      "id": "l29_minh_p",
+      "speaker": "anh_hai",
+      "voice": "Orus",
+      "label_short": "ANH MINH",
+      "speaker_label": "Anh Minh gọi qua điện thoại cản gấp Nam ở phòng công chứng",
+      "af": "phone",
+      "style": "Giọng nam miền Nam Sài Gòn 39 tuổi, phát âm chuẩn phương ngữ miền Nam xuyên suốt mọi câu, giữ cố định một âm sắc trầm chắc, thẳng tính, đời thường, nói gọn rõ chữ, tự nhiên như đời thực, tuyệt đối không giả giọng ông già hay bà già run rẩy, không kéo dài chữ, không cải lương. Sắc thái câu này: quát gấp qua điện thoại để chặn ngay lập tức.",
+      "start": 225.94,
+      "window": 8.62,
+      "text": "Khoan ký! Dừng lại liền! Anh mới dính bẫy tam giác kẹt cứng bốn lăm triệu đây nè!",
+      "subtitle": [
+        "Khoan ký! Dừng lại liền! Anh mới dính bẫy tam giác kẹt cứng 45 triệu đây nè!"
+      ]
+    },
+    {
+      "id": "l30_minh",
+      "speaker": "anh_hai",
+      "voice": "Orus",
+      "label_short": "ANH MINH",
+      "speaker_label": "Anh Minh – chủ tiệm điện lạnh 39 tuổi, thẳng tính, bán chiếc xe máy tay ga 45 triệu",
+      "style": "Giọng nam miền Nam Sài Gòn 39 tuổi, phát âm chuẩn phương ngữ miền Nam xuyên suốt mọi câu, giữ cố định một âm sắc trầm chắc, thẳng tính, đời thường, nói gọn rõ chữ, tự nhiên như đời thực, tuyệt đối không giả giọng ông già hay bà già run rẩy, không kéo dài chữ, không cải lương. Sắc thái câu này: dặn nhanh, rõ từng chữ đầy khẩn thiết.",
+      "start": 233.95,
+      "window": 8.96,
+      "text": "Ai ký hợp đồng chính người đó chuyển tiền. Tuyệt đối không nhận tài khoản thứ ba chuyển giùm!"
+    },
+    {
+      "id": "l31_minh",
+      "speaker": "anh_hai",
+      "voice": "Orus",
+      "label_short": "ANH MINH",
+      "speaker_label": "Anh Minh – chủ tiệm điện lạnh 39 tuổi, thẳng tính, bán chiếc xe máy tay ga 45 triệu",
+      "style": "Giọng nam miền Nam Sài Gòn 39 tuổi, phát âm chuẩn phương ngữ miền Nam xuyên suốt mọi câu, giữ cố định một âm sắc trầm chắc, thẳng tính, đời thường, nói gọn rõ chữ, tự nhiên như đời thực, tuyệt đối không giả giọng ông già hay bà già run rẩy, không kéo dài chữ, không cải lương. Sắc thái câu này: nhấn mạnh nguyên tắc sống còn.",
+      "start": 241.65,
+      "window": 8.96,
+      "text": "Nội dung ghi rõ họ tên, mua xe, biển số và ngày hợp đồng. Lệch tên là dừng ký!"
+    },
+    {
+      "id": "l32_nam",
+      "speaker": "thang_tun",
+      "voice": "Achird",
+      "label_short": "NAM",
+      "speaker_label": "Nam – em họ 28 tuổi, thật thà, phản ứng nhanh khi được nhắc kịp thời",
+      "style": "Giọng nam thanh niên miền Nam Sài Gòn 28 tuổi, phát âm chuẩn phương ngữ miền Nam xuyên suốt mọi câu, giữ cố định một âm sắc gọn, sáng vừa, nhanh nhẹn, thật thà gần gũi, rõ chữ, tự nhiên như đời thực, tuyệt đối không giả giọng ông già hay bà già run rẩy, không kéo dài chữ, không cải lương. Sắc thái câu này: bình tĩnh dứt khoát, nhìn thẳng đối phương.",
+      "start": 250.15,
+      "window": 9.98,
+      "text": "Hợp đồng tên chị nên chị dùng đúng tài khoản tên chị chuyển, ghi rõ biển số với ngày hợp đồng nha!"
+    },
+    {
+      "id": "l33_proxy_nu",
+      "speaker": "ke_ngot_ngao_nu",
+      "voice": "Aoede",
+      "label_short": "NGƯỜI MUA HỘ",
+      "speaker_label": "Người phụ nữ 31 tuổi lịch sự đóng vai đứng tên mua hộ ở Hồi 5",
+      "af": "default",
+      "style": "Giọng nữ miền Nam Sài Gòn 31 tuổi, phát âm chuẩn phương ngữ miền Nam xuyên suốt mọi câu, giữ cố định một âm sắc ngọt ngào lịch sự nhưng nhanh chóng chột dạ lúng túng khi bị chặn, tuyệt đối không giả giọng ông già hay bà già run rẩy, không kéo dài chữ, không cải lương. Sắc thái câu này: hơi khựng lại nhưng cố cười trấn an.",
+      "start": 258.87,
+      "window": 7.94,
+      "text": "Ủa… chồng chị ở xa chuyển giùm cho nhanh, tiền vô rồi cần gì rắc rối?"
+    },
+    {
+      "id": "l34_nam",
+      "speaker": "thang_tun",
+      "voice": "Achird",
+      "label_short": "NAM",
+      "speaker_label": "Nam – em họ 28 tuổi, thật thà, phản ứng nhanh khi được nhắc kịp thời",
+      "style": "Giọng nam thanh niên miền Nam Sài Gòn 28 tuổi, phát âm chuẩn phương ngữ miền Nam xuyên suốt mọi câu, giữ cố định một âm sắc gọn, sáng vừa, nhanh nhẹn, thật thà gần gũi, rõ chữ, tự nhiên như đời thực, tuyệt đối không giả giọng ông già hay bà già run rẩy, không kéo dài chữ, không cải lương. Sắc thái câu này: kiên quyết đóng chặt mọi kẽ hở.",
+      "start": 265.55,
+      "window": 9.64,
+      "text": "Không được chị. Lệch tên hay mập mờ em không ký, tiền lỡ vô em cũng ra ngân hàng hoàn lại."
+    },
+    {
+      "id": "l35_proxy_nu",
+      "speaker": "ke_ngot_ngao_nu",
+      "voice": "Aoede",
+      "label_short": "NGƯỜI MUA HỘ",
+      "speaker_label": "Người phụ nữ 31 tuổi lịch sự đóng vai đứng tên mua hộ ở Hồi 5",
+      "af": "default",
+      "style": "Giọng nữ miền Nam Sài Gòn 31 tuổi, phát âm chuẩn phương ngữ miền Nam xuyên suốt mọi câu, giữ cố định một âm sắc ngọt ngào lịch sự nhưng nhanh chóng chột dạ lúng túng khi bị chặn, tuyệt đối không giả giọng ông già hay bà già run rẩy, không kéo dài chữ, không cải lương. Sắc thái câu này: lúng túng chột dạ, vội gom giấy đứng dậy đi thẳng.",
+      "start": 274.78,
+      "window": 6.58,
+      "text": "À… thôi để chị ra ngoài gọi hỏi lại chồng chút nha!"
+    },
+    {
+      "id": "l36_nam",
+      "speaker": "thang_tun",
+      "voice": "Achird",
+      "label_short": "NAM",
+      "speaker_label": "Nam – em họ 28 tuổi, thật thà, phản ứng nhanh khi được nhắc kịp thời",
+      "style": "Giọng nam thanh niên miền Nam Sài Gòn 28 tuổi, phát âm chuẩn phương ngữ miền Nam xuyên suốt mọi câu, giữ cố định một âm sắc gọn, sáng vừa, nhanh nhẹn, thật thà gần gũi, rõ chữ, tự nhiên như đời thực, tuyệt đối không giả giọng ông già hay bà già run rẩy, không kéo dài chữ, không cải lương. Sắc thái câu này: thở phào nhẹ nhõm nhìn theo bóng người kia rời khỏi cửa.",
+      "start": 280.1,
+      "window": 7.94,
+      "text": "Đi mất tiêu rồi! May gọi kịp anh Minh… suýt chút nữa mất trắng chiếc xe!"
+    },
+    {
+      "id": "l37_narr",
+      "speaker": "nguoi_boc_tran",
+      "start": 288.48,
+      "window": 8.96,
+      "text": "Tiền nổi rồi vẫn mất nếu lệch tên. Ai ký hợp đồng người đó chuyển, ghi rõ mục đích."
+    },
+    {
+      "id": "l38a_ke_p",
+      "speaker": "chu_no",
+      "voice": "Fenrir",
+      "label_short": "KHÁCH MUA",
+      "speaker_label": "Kẻ đứng giữa (từ EP08) đóng vai nick 'Anh Hùng' nhắn chốt mua xe máy 45 triệu",
+      "af": "phone",
+      "style": "Giọng nam miền Nam Sài Gòn 40 tuổi, phát âm chuẩn phương ngữ miền Nam xuyên suốt mọi câu, giữ cố định một âm sắc trầm đều, lịch sự mà lạnh tĩnh như kẻ cầm quân cờ, không la hét, tuyệt đối không giả giọng ông già hay bà già run rẩy, không kéo dài chữ, không cải lương. Sắc thái câu này: báo cáo cộc gọn, lạnh tĩnh qua điện thoại từ phòng tối EP08.",
+      "start": 297.33,
+      "window": 5.56,
+      "text": "Bên ông Đạt với Khang… công an vào cuộc."
+    },
+    {
+      "id": "l38b_long_p",
+      "speaker": "ke_ngot_ngao_nam",
+      "voice": "Algieba",
+      "label_short": "LONG",
+      "speaker_label": "Long báo cáo qua cuộc gọi nhóm đường dây ngầm ở kết mở",
+      "af": "phone",
+      "style": "Giọng nam miền Nam Sài Gòn 32 tuổi, phát âm chuẩn phương ngữ miền Nam xuyên suốt mọi câu, giữ cố định một âm sắc sáng vừa, mượt mà, gọn gàng kiểu tay chân báo cáo sếp, tuyệt đối không giả giọng ông già hay bà già run rẩy, không kéo dài chữ, không cải lương. Sắc thái câu này: ngắn gọn, dứt khoát qua điện thoại.",
+      "start": 301.75,
+      "window": 5.22,
+      "text": "Chiếc tay ga đẩy xong. Số hủy sạch."
+    },
+    {
+      "id": "l38c_proxy_p",
+      "speaker": "ke_ngot_ngao_nu",
+      "voice": "Aoede",
+      "label_short": "NGƯỜI MUA HỘ",
+      "speaker_label": "Người mua hộ nữ gọi điện báo động cho bà trùm ở kết mở",
+      "af": "phone",
+      "style": "Giọng nữ miền Nam Sài Gòn 31 tuổi, phát âm chuẩn phương ngữ miền Nam xuyên suốt mọi câu, giữ cố định một âm sắc ngọt ngào lịch sự nhưng nhanh chóng chột dạ lúng túng khi bị chặn, tuyệt đối không giả giọng ông già hay bà già run rẩy, không kéo dài chữ, không cải lương. Sắc thái câu này: gấp gáp, cộc gọn báo động qua điện thoại.",
+      "start": 305.83,
+      "window": 5.56,
+      "text": "Khu này động. Chủ xe đòi chính chủ chuyển."
+    },
+    {
+      "id": "l39_boss_nu",
+      "speaker": "chi_ba",
+      "voice": "Kore",
+      "label_short": "NGƯỜI PHỤ NỮ BÍ ẨN",
+      "speaker_label": "Nhân vật nữ bí mật giấu mặt – hơi liên đới âm sắc & thần thái sắc lạnh kiệm lời của Chị Hai (EP04)",
+      "af": "default",
+      "style": "Giọng phụ nữ miền Nam Sài Gòn 35 tuổi, phát âm chuẩn phương ngữ miền Nam xuyên suốt mọi câu, giữ cố định một âm sắc sắc lạnh, trầm tĩnh, kiệm lời đầy uy quyền, nói ngắn cắt gọn không chút cảm xúc, tuyệt đối không giả giọng ông già hay bà già run rẩy, không kéo dài chữ, không cải lương. Sắc thái câu này: lạnh băng, cắt gọn ba nhịp dứt khoát, không chút cảm xúc — gợi âm hưởng 'Cứ để đó!' ở EP04.",
+      "start": 311.03,
+      "window": 4.88,
+      "text": "Bỏ xe. Dời vùng. Sang kèo đất."
+    }
+  ],
+  "chat_bubbles": [
+    {
+      "sender": "BIẾN ĐỘNG SỐ DƯ · 12:05",
+      "text": "+45.000.000đ · Đã vào tài khoản · Công chứng xong",
+      "side": "left",
+      "y": 260,
+      "stamp": "TIỀN THẬT ĐÃ NỔI",
+      "start": 0.55,
+      "end": 2.75
+    },
+    {
+      "sender": "XÁC MINH DÒNG TIỀN · NGÂN HÀNG",
+      "text": "Đơn trình báo vụ lừa 45.000.000đ · Chảy thẳng vào TK này",
+      "side": "left",
+      "y": 260,
+      "stamp": "YÊU CẦU XÁC MINH",
+      "start": 3.15,
+      "end": 7.65
+    },
+    {
+      "sender": "SAO KÊ NGÂN HÀNG · 12:05",
+      "text": "+45.000.000đ · Từ: TÊN LẠ · ND: Chuyen tien",
+      "side": "left",
+      "y": 260,
+      "stamp": "TIỀN TỪ VỤ LỪA?",
+      "start": 27.45,
+      "end": 29.45
+    },
+    {
+      "sender": "KHÁCH MUA · ANH HÙNG",
+      "text": "Chốt 45tr · Nhờ em họ Long đứng tên mua hộ",
+      "side": "left",
+      "y": 260,
+      "stamp": "MỒI CHỐT NHANH",
+      "start": 68.57,
+      "end": 73.37
+    },
+    {
+      "sender": "NGÂN HÀNG CỦA MINH · 12:05",
+      "text": "+45.000.000đ · Đã vào tài khoản",
+      "side": "left",
+      "y": 260,
+      "stamp": "ĐÃ NHẬN TIỀN",
+      "start": 105.38,
+      "end": 109.58
+    },
+    {
+      "sender": "HỢP ĐỒNG CÔNG CHỨNG",
+      "text": "Bên mua: Long · Đã nhận đủ 45.000.000đ · Đã giao xe",
+      "side": "left",
+      "y": 260,
+      "stamp": "XONG TRÊN GIẤY",
+      "start": 121.42,
+      "end": 125.42
+    },
+    {
+      "sender": "LIÊN HỆ NGƯỜI MUA",
+      "text": "Nick khách mua đã xóa · Số của Long tắt máy",
+      "side": "left",
+      "y": 260,
+      "stamp": "MẤT DẤU CẢ HAI",
+      "start": 128.23,
+      "end": 132.43
+    },
+    {
+      "sender": "12:05 · MẢNH GHÉP CÒN LẠI",
+      "text": "Khang (-45.000.000đ)  →  Chảy thẳng vào tài khoản Anh Minh",
+      "side": "left",
+      "y": 260,
+      "stamp": "CÙNG MỘT VỤ LỪA",
+      "start": 152.58,
+      "end": 157.58
+    },
+    {
+      "sender": "BẪY TAM GIÁC · 12:05 TRƯA",
+      "text": "Khang chuyển 45tr → TK Minh · Long công chứng lấy xe máy",
+      "side": "left",
+      "y": 260,
+      "stamp": "RỬA TIỀN SẠCH",
+      "start": 176.8,
+      "end": 182.0
+    },
+    {
+      "sender": "NGUYÊN TẮC 2 PHẢI",
+      "text": "1. Ai ký HĐ, người đó chuyển · 2. Ghi tên, mua xe, BSX, ngày HĐ",
+      "side": "left",
+      "y": 260,
+      "stamp": "CHẶN BẪY NGAY",
+      "start": 233.8,
+      "end": 239.0
+    }
+  ],
+  "callouts": [],
+  "red_flags": {
+    "title": "NHỚ KỸ – NGUYÊN TẮC 2 PHẢI, 3 KHÔNG",
+    "start": 288.48,
+    "end": 296.68,
+    "stagger_sec": 0.42,
+    "items": [
+      "PHẢI TRÙNG KHỚP 100%: Ai đứng tên ký hợp đồng mua bán thì chính chủ tài khoản đó chuyển tiền",
+      "PHẢI GHI RÕ NỘI DUNG: Họ tên người mua + thanh toán mua xe + biển số + theo hợp đồng ngày ký",
+      "KHÔNG NHẬN NGƯỜI THỨ BA CHUYỂN HỘ: Từ chối mọi lý do tài khoản người thân hay công ty chuyển giùm",
+      "LỆCH TÊN HAY MẬP MỜ LÀ DỪNG KÝ NGAY: Tiền đã lỡ vào thì không giao xe và phối hợp ngân hàng hoàn trả",
+      "CẢNH GIÁC KHÁCH CHỐT QUÁ DỄ: Không mặc cả, né gặp mặt, nhờ người khác đứng tên mua hộ"
+    ],
+    "action": "Nếu đã lỡ giao tài sản và nhận báo tiền từ vụ lừa khác, giữ nguyên tiền trong tài khoản, gom hợp đồng, sao kê và tin nhắn trình báo công an ngay."
+  },
+  "disclaimer": {
+    "header": "LƯU Ý",
+    "start": 316.8,
+    "end": 320.8,
+    "lines": [
+      "Tình huống trong phim được dựng lại nhằm mục đích cảnh báo cộng đồng; nhân vật, tên gọi và số liệu đều là hư cấu.",
+      "Thông tin nghiệp vụ và pháp lý chỉ mang tính tham khảo — khi gặp sự cố, hãy liên hệ trực tiếp ngân hàng và cơ quan công an nơi gần nhất."
+    ]
+  },
+  "audio": {
+    "ambience": [
+      {
+        "preset": "office",
+        "start": 0.0,
+        "end": 2.65,
+        "gain_db": -3.0
+      },
+      {
+        "preset": "room_tone",
+        "start": 2.65,
+        "end": 29.2,
+        "gain_db": -2.5
+      },
+      {
+        "preset": "street",
+        "start": 29.2,
+        "end": 68.07,
+        "gain_db": -5.0
+      },
+      {
+        "preset": "night_room",
+        "start": 68.07,
+        "end": 85.15,
+        "gain_db": -2.8
+      },
+      {
+        "preset": "crowd",
+        "start": 85.15,
+        "end": 104.88,
+        "gain_db": -5.5
+      },
+      {
+        "preset": "crowd",
+        "start": 104.88,
+        "end": 120.92,
+        "gain_db": -5.5
+      },
+      {
+        "preset": "street",
+        "start": 120.92,
+        "end": 127.63,
+        "gain_db": -4.5
+      },
+      {
+        "preset": "room_tone",
+        "start": 127.63,
+        "end": 152.08,
+        "gain_db": -2.5
+      },
+      {
+        "preset": "office",
+        "start": 152.08,
+        "end": 160.68,
+        "gain_db": -4.5
+      },
+      {
+        "preset": "room_tone",
+        "start": 160.68,
+        "end": 176.25,
+        "gain_db": -2.5
+      },
+      {
+        "preset": "night_room",
+        "start": 176.25,
+        "end": 192.31,
+        "gain_db": -2.5
+      },
+      {
+        "preset": "room_tone",
+        "start": 192.31,
+        "end": 216.94,
+        "gain_db": -3.0
+      },
+      {
+        "preset": "crowd",
+        "start": 216.94,
+        "end": 233.3,
+        "gain_db": -5.5
+      },
+      {
+        "preset": "street",
+        "start": 233.3,
+        "end": 249.5,
+        "gain_db": -4.5
+      },
+      {
+        "preset": "crowd",
+        "start": 249.5,
+        "end": 286.98,
+        "gain_db": -5.5
+      },
+      {
+        "preset": "room_tone",
+        "start": 286.98,
+        "end": 288.13,
+        "gain_db": -5.0
+      },
+      {
+        "preset": "room_tone",
+        "start": 288.13,
+        "end": 296.68,
+        "gain_db": -5.0
+      },
+      {
+        "preset": "rain",
+        "start": 296.68,
+        "end": 316.45,
+        "gain_db": -3.2
+      },
+      {
+        "preset": "room_tone",
+        "start": 316.45,
+        "end": 320.8,
+        "gain_db": -6.0
+      }
+    ],
+    "foley": [
+      {
+        "preset": "typing",
+        "at": 0.45,
+        "gain_db": -5,
+        "dur": 0.6
+      },
+      {
+        "preset": "message_send",
+        "at": 1.1,
+        "gain_db": -3
+      },
+      {
+        "preset": "bank_ting",
+        "at": 1.55,
+        "gain_db": -2.5
+      },
+      {
+        "preset": "phone_ring",
+        "at": 3.1,
+        "gain_db": -4,
+        "dur": 0.8
+      },
+      {
+        "preset": "impact",
+        "at": 27.3,
+        "gain_db": -2.5
+      },
+      {
+        "preset": "heartbeat",
+        "at": 27.5,
+        "gain_db": -5,
+        "dur": 1.6
+      },
+      {
+        "preset": "chapter_sting",
+        "at": 29.45,
+        "gain_db": -5
+      },
+      {
+        "preset": "typing",
+        "at": 68.57,
+        "gain_db": -5,
+        "dur": 0.8
+      },
+      {
+        "preset": "message_send",
+        "at": 69.32,
+        "gain_db": -4
+      },
+      {
+        "preset": "chapter_sting",
+        "at": 85.4,
+        "gain_db": -5
+      },
+      {
+        "preset": "bank_ting",
+        "at": 105.38,
+        "gain_db": -2.5
+      },
+      {
+        "preset": "footsteps",
+        "at": 121.42,
+        "gain_db": -5,
+        "dur": 1.0
+      },
+      {
+        "preset": "chapter_sting",
+        "at": 127.88,
+        "gain_db": -5
+      },
+      {
+        "preset": "phone_ring",
+        "at": 128.18,
+        "gain_db": -5,
+        "dur": 0.7
+      },
+      {
+        "preset": "call_end",
+        "at": 128.93,
+        "gain_db": -3
+      },
+      {
+        "preset": "impact",
+        "at": 152.43,
+        "gain_db": -2.0
+      },
+      {
+        "preset": "heartbeat",
+        "at": 161.23,
+        "gain_db": -5,
+        "dur": 1.6
+      },
+      {
+        "preset": "impact",
+        "at": 176.6,
+        "gain_db": -2.5
+      },
+      {
+        "preset": "chapter_sting",
+        "at": 217.19,
+        "gain_db": -5
+      },
+      {
+        "preset": "phone_ring",
+        "at": 217.54,
+        "gain_db": -4,
+        "dur": 0.8
+      },
+      {
+        "preset": "riser",
+        "at": 249.85,
+        "gain_db": -4.5,
+        "dur": 0.8
+      },
+      {
+        "preset": "impact",
+        "at": 274.43,
+        "gain_db": -2.5
+      },
+      {
+        "preset": "footsteps",
+        "at": 274.78,
+        "gain_db": -4,
+        "dur": 1.1
+      },
+      {
+        "preset": "bank_ting",
+        "at": 288.48,
+        "gain_db": -5
+      },
+      {
+        "preset": "phone_vibrate",
+        "at": 297.13,
+        "gain_db": -5,
+        "dur": 0.5
+      },
+      {
+        "preset": "heartbeat",
+        "at": 310.68,
+        "gain_db": -5,
+        "dur": 0.9
+      },
+      {
+        "preset": "impact",
+        "at": 314.8,
+        "gain_db": -1.5
+      }
+    ],
+    "bgm": [
+      {
+        "preset": "suspense_pulse",
+        "start": 0.0,
+        "end": 2.65,
+        "gain_db": -2.5
+      },
+      {
+        "preset": "suspense_pulse",
+        "start": 2.65,
+        "end": 29.2,
+        "gain_db": -2.5
+      },
+      {
+        "preset": "investigative_story",
+        "start": 29.2,
+        "end": 68.07,
+        "gain_db": -3.8
+      },
+      {
+        "preset": "tension_drone",
+        "start": 68.07,
+        "end": 85.15,
+        "gain_db": -3.0
+      },
+      {
+        "preset": "investigative_story",
+        "start": 85.15,
+        "end": 104.88,
+        "gain_db": -4.0
+      },
+      {
+        "preset": "suspense_pulse",
+        "start": 104.88,
+        "end": 120.92,
+        "gain_db": -4.2
+      },
+      {
+        "preset": "investigative_story",
+        "start": 120.92,
+        "end": 127.63,
+        "gain_db": -3.8
+      },
+      {
+        "preset": "tension_drone",
+        "start": 127.63,
+        "end": 152.08,
+        "gain_db": -2.5
+      },
+      {
+        "preset": "tension_drone",
+        "start": 152.08,
+        "end": 160.68,
+        "gain_db": -2.0
+      },
+      {
+        "preset": "tension_drone",
+        "start": 160.68,
+        "end": 176.25,
+        "gain_db": -2.5
+      },
+      {
+        "preset": "suspense_pulse",
+        "start": 176.25,
+        "end": 192.31,
+        "gain_db": -2.5
+      },
+      {
+        "preset": "investigative_story",
+        "start": 192.31,
+        "end": 216.94,
+        "gain_db": -3.6
+      },
+      {
+        "preset": "suspense_pulse",
+        "start": 216.94,
+        "end": 233.3,
+        "gain_db": -3.0
+      },
+      {
+        "preset": "action_climax",
+        "start": 233.3,
+        "end": 249.5,
+        "gain_db": -3.2
+      },
+      {
+        "preset": "action_climax",
+        "start": 249.5,
+        "end": 286.98,
+        "gain_db": -2.5
+      },
+      {
+        "preset": "investigative_story",
+        "start": 286.98,
+        "end": 288.13,
+        "gain_db": -40.0
+      },
+      {
+        "preset": "warm_outro",
+        "start": 288.13,
+        "end": 296.68,
+        "gain_db": -4.2
+      },
+      {
+        "preset": "tension_drone",
+        "start": 296.68,
+        "end": 316.45,
+        "gain_db": -2.4
+      },
+      {
+        "preset": "warm_outro",
+        "start": 316.45,
+        "end": 320.8,
+        "gain_db": -7.5
+      }
+    ],
+    "duck_extra": [
+      {
+        "start": 27.1,
+        "end": 29.7,
+        "bgm_db": -12,
+        "amb_db": -8
+      },
+      {
+        "start": 105.03,
+        "end": 110.23,
+        "bgm_db": -10,
+        "amb_db": -7
+      },
+      {
+        "start": 152.23000000000002,
+        "end": 158.43,
+        "bgm_db": -12,
+        "amb_db": -8
+      },
+      {
+        "start": 160.83,
+        "end": 169.03,
+        "bgm_db": -11,
+        "amb_db": -7
+      },
+      {
+        "start": 176.4,
+        "end": 188.6,
+        "bgm_db": -11,
+        "amb_db": -8
+      },
+      {
+        "start": 249.65,
+        "end": 263.85,
+        "bgm_db": -11,
+        "amb_db": -7
+      },
+      {
+        "start": 296.83,
+        "end": 316.6,
+        "bgm_db": -10,
+        "amb_db": -7
+      },
+      {
+        "start": 316.8,
+        "end": 320.75
+      }
+    ]
+  },
+  "forbidden_terms": [],
+  "publish": {
+    "titles": [
+      "Tiền Nổi Đủ 45 Triệu Mới Ký Công Chứng Bán Xe Máy – Sao Hai Ngày Sau Vẫn Kẹt Cứng? | Bóc Trần Lừa Đảo",
+      "Tiền Nổi Rồi, Tên Lại Khác: Cái Bẫy Ngay Tại Phòng Công Chứng Đông Người | Bóc Trần Lừa Đảo",
+      "Bán Xe Máy Thấy Tiền Nổi Đủ 45 Triệu Mới Giao Xe – Sự Thật Đằng Sau Dòng Tiền Lạ | Bóc Trần Lừa Đảo"
+    ],
+    "description": "Đúng 12 giờ 05 trưa tại phòng công chứng đông người, chủ xe máy thấy tiền thật nổi đủ 45 triệu trong tài khoản mới đặt bút ký giao xe — vậy mà hai ngày sau lại nhận thông báo khoản tiền đó chảy thẳng từ một vụ lừa đảo khác.\n\nGhi nhớ nguyên tắc 2 Phải – 3 Không khi mua bán xe máy, ô tô, đất đai: ai ký hợp đồng thì chính người đó chuyển tiền, và nội dung chuyển khoản phải ghi rõ họ tên, tài sản/biển số cùng ngày hợp đồng.\n\n⏱️ Các hồi trong phim:\n00:00 Mở đầu – Tiền 45 triệu đã nổi, công chứng rồi sao vẫn mất?\n00:29 Hồi 1 – Khách chốt không mặc cả\n01:25 Hồi 2 – Tiền đã nổi trong tài khoản\n02:07 Hồi 3 – Nick đã xóa, xe đã sang tay\n02:56 Hồi 4 – Tam giác lệch dòng tiền\n03:36 Hồi 5 – Nguyên tắc hai phải, ba không\n04:48 Nhớ kỹ – Nguyên tắc 2 Phải, 3 Không khi bán xe, bán đất",
+    "pinned_comment": "📌 Tới Hồi 3 bạn có giật mình nhận ra cái tên 'Khang' và câu gọi 'anh Đạt ơi' nối thẳng từ tập trước không? Chia sẻ cảm nhận và kinh nghiệm đi công chứng mua bán xe bên dưới nhé!\n⚠️ Lưu ý: Không đăng SĐT, STK hay tên người thật; tuyệt đối cảnh giác mọi bình luận mời chào dịch vụ 'hỗ trợ lấy lại tiền'.",
+    "hashtags": [
+      "#bóctrầnlừađảo",
+      "#cảnhgiáclừađảo",
+      "#vạnchuyện",
+      "#bẫytamgiác",
+      "#muabánxe"
+    ],
+    "tags": [
+      "cảnh giác lừa đảo",
+      "bóc trần lừa đảo",
+      "vạn chuyện",
+      "lừa đảo tam giác",
+      "lệch dòng tiền giao dịch",
+      "lừa đảo mua bán xe công chứng",
+      "nguyên tắc 2 phải 3 không",
+      "rửa tiền mua xe máy",
+      "an toàn giao dịch"
+    ],
+    "category": "Education (Giáo dục)",
+    "playlist": "Hồ Sơ Bóc Trần Lừa Đảo – Phim Dài Chuyên Sâu",
+    "thumbnail_sec": 251.35
+  }
+}

@@ -8,12 +8,12 @@
 
 ## ĐỌC THEO THỨ TỰ
 0. [Sổ Ràng buộc & Rủi ro](CONSTRAINTS_AND_RISK_REGISTER.md) – đọc đầu tiên
-1. [Channel Bible – định hướng kênh](CHANNEL_BIBLE.md)
+1. [Channel Bible – định hướng kênh](CHANNEL_BIBLE.md) · [Khung Chiến lược Thư viện Cảnh giác (áp dụng từ tập mới)](00_HARNESS_GUIDELINES/VIGILANCE_LIBRARY_FRAMEWORK.md)
 2. [Harness Pháp lý & An toàn nội dung](00_HARNESS_GUIDELINES/CONTENT_LEGAL_SAFETY_HARNESS.md) – 5 nguyên tắc vàng
 3. [Quy chuẩn định dạng Short 70s (`factory619`)](00_HARNESS_GUIDELINES/SHORT_FORMAT_SPEC.md) · [Quy chuẩn định dạng Phim dài 16:9 4–5+ phút (`factory196`)](00_HARNESS_GUIDELINES/LONG_FORMAT_196_SPEC.md)
 4. [Hình tượng nhân vật & phong cách hình ảnh](00_HARNESS_GUIDELINES/CAST_AND_VISUAL_STYLE.md) · [cast.json](02_CAST/cast.json)
 5. [Harness quy trình sản xuất (Gate 0 → 6)](00_HARNESS_GUIDELINES/EPISODE_PRODUCTION_HARNESS.md)
-6. [Bản đồ chiêu trò online → offline](01_SCAM_MAP/SCAM_MAP_ONLINE_TO_OFFLINE.md) · [Kho kịch bản & Lịch phát sóng Tháng 11](01_SCAM_MAP/KHO_KICH_BAN_THANG_11.md)
+6. [Bản đồ Thư viện 3 lớp & phủ sóng biến thể (dùng cho tập mới)](01_SCAM_MAP/VIGILANCE_LIBRARY_MAP.md) · [Bản đồ chiêu trò gốc](01_SCAM_MAP/SCAM_MAP_ONLINE_TO_OFFLINE.md) · [Kho kịch bản & Lịch phát sóng Tháng 11](01_SCAM_MAP/KHO_KICH_BAN_THANG_11.md)
 7. [Bộ từ cấm / cảnh báo tự động](00_HARNESS_GUIDELINES/policy_wordlists.json)
 
 ## CẤU TRÚC HAI NHÀ MÁY (`factory196` & `factory619`) + SERVICE DÙNG CHUNG (`03_ENGINE`)

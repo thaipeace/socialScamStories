@@ -7,6 +7,7 @@
   2. **Sửa điểm khó theo dõi ở v2 (chuyển giải thích chữ thành thoại sống):** Bỏ sạch 2 bong bóng giải thích dài ở `s03`, thay bằng 4 câu đối thoại gọn sắc giữa **Kẻ đứng giữa** và **Đàn em kỹ thuật** (cả hai giấu mặt) để người xem chỉ cần nghe là hiểu trọn 100% cơ chế.
   3. **Tăng độ thuyết phục thực tế bằng 2 lớp xác thực giả:** (a) Bắt chước **đúng phong cách nói chuyện đặc trưng** của Anh Đạt (*"cu Khang"*, *"chị nhà"*, *"lộ bài"*, *"làm gọn giùm anh, anh tính"*) thay vì chỉ biết thông tin khô cứng; (b) Bổ sung **cuộc gọi video hình/giọng ghép 3 giây chập chờn** rồi cúp đổ tại mạng yếu ở `s04` để giải thích thuyết phục lý do nạn nhân tin tài khoản mới.
   4. **Kết thúc mở tâm lý ("Xin bằng chứng của nhau"):** Không mở rộng thành đường dây ngầm ở cuối phim. Hậu quả của 45 triệu đánh thẳng vào lòng tin giữa hai anh em ngay trên bàn cà phê quen, cắt đen đột ngột tạo dư âm lặng.
+  5. **Cầu nối tinh tế sang `EP08b` (không đổi nội dung hay kết thúc `EP08`):** Cài 1 câu điện thoại ngắn của `Đầu dây lạ` (`l22b_long_p`, voice `Algieba` – khớp Long của `EP08b`) và bóng mờ xe máy tay ga + bìa đỏ tại góc màn hình phòng tối `c08` lúc `12:05`, cùng dải sáng chuyển tiền `cyan-amber` ở `c09` làm điểm nối hài hòa cho khung hình mở màn `EP08b`.
 
 ## 2. Bảng hư cấu hóa 100% (Tuân thủ 5 Nguyên tắc vàng `CONTENT_LEGAL_SAFETY_HARNESS.md`)
 | Yếu tố nhạy cảm (KHÔNG ĐƯA LÊN PHIM) | Chi tiết hư cấu hóa trên phim (`196 EP08`) | Lý do an toàn pháp lý & thuật toán |

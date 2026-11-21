@@ -3,14 +3,18 @@
 > Khung 70 giây / 6 nhịp theo [SHORT_FORMAT_SPEC.md](../../../../00_HARNESS_GUIDELINES/SHORT_FORMAT_SPEC.md).
 > Mọi tên người, số điện thoại, số tài khoản, tên ngân hàng/app trong kịch bản đều phải là **hư cấu hoặc chung chung**.
 
-## 0. Thẻ tập
+## 0. Thẻ tập & Khung Thư viện Cảnh giác *(theo [VIGILANCE_LIBRARY_FRAMEWORK.md](../../../../00_HARNESS_GUIDELINES/VIGILANCE_LIBRARY_FRAMEWORK.md))*
 | Mục | Nội dung |
 | :--- | :--- |
-| Nhóm chiêu trò (01_SCAM_MAP) | `ON-xx` / `OFF-xx` |
-| Nạn nhân hình tượng | (từ 02_CAST) |
-| Kẻ lừa hình tượng | (từ 02_CAST) |
-| Đòn tâm lý chính | Sợ hãi / Tham lợi / Tình cảm / Uy quyền / Khan hiếm / Áp lực thời gian |
-| Bài học 1 câu | |
+| Góc quan sát (Format `A–F`) | `B` 1 chi tiết tưởng bình thường / `C` Hai nạn nhân / `D` Biến thể mới / `E` Kiểm tra thực chiến |
+| Nhóm chiêu & Biến thể Lớp 1 (`VAR`) | (tra [VIGILANCE_LIBRARY_MAP.md](../../../../01_SCAM_MAP/VIGILANCE_LIBRARY_MAP.md) — ghi rõ điểm mới bổ sung) |
+| Điểm dễ mắc Lớp 2 (`COND`) | (điều kiện hoàn cảnh cụ thể, không phân tích tâm lý đại cương) |
+| Ứng phó Lớp 3 (`RESP`) | (1 hành động rõ ràng, phổ quát/đã kiểm chứng) |
+| Nạn nhân & Kẻ lừa hình tượng | (từ `02_CAST/cast.json`) |
+| 1 câu neo ký ức (`Recall Anchor`) | *(đúng 1 câu dễ kể lại cho bố mẹ/bạn bè)* |
+
+### Tự kiểm Pre-Gate 0 (Bộ lọc `4+2`)
+- [ ] **Mới** · [ ] **Thực dụng** · [ ] **Khác biệt** (không trùng tập cũ) · [ ] **Có ích** · [ ] **1 câu dễ kể lại** · [ ] **An toàn (`L2`/`L8`)**
 
 ## 1. Sáu nhịp
 | Nhịp | Thời gian | Hình (scene) | Thoại / VO | Chữ trên hình | Âm thanh |

@@ -38,8 +38,9 @@ real = {p.stem: wav_dur(p.stem) for p in TTS.glob("*.wav")} if TTS.is_dir() else
 real = {k: v for k, v in real.items() if v}
 
 # ---------------------------------------------------------------- GIỌNG
-# 7 tuyến nhân vật = 7 voice hoàn toàn tách biệt trong 02_CAST/cast.json
-# (DAT_FAKE chủ đích dùng đúng voice Orus + af="phone" để thể hiện giọng cắt ghép giống Anh Đạt)
+# 8 tuyến nhân vật = 8 voice hoàn toàn tách biệt trong 02_CAST/cast.json
+# (DAT_FAKE chủ đích dùng đúng voice Orus + af="phone" cho cú gọi ghép 3s;
+#  LONG_P dùng đúng voice Algieba + af="phone" để nối mượt sang nhân vật Long ở EP08b)
 NOT_OLD = "tuyệt đối không giả giọng ông già hay bà già run rẩy, không kéo dài chữ, không cải lương"
 DAT_BASE = (
     "Giọng nam miền Nam Sài Gòn 38 tuổi, phát âm chuẩn phương ngữ miền Nam xuyên suốt mọi câu, "
@@ -130,6 +131,17 @@ SPK = {
         base=(
             "Giọng nam miền Nam Sài Gòn 28 tuổi, phát âm chuẩn phương ngữ miền Nam xuyên suốt mọi câu, "
             "giữ cố định một âm sắc gọn, hơi nhanh, tỉnh bơ kiểu dân kỹ thuật làm việc trong phòng tối, " + NOT_OLD
+        ),
+    ),
+    "LONG_P": dict(
+        speaker="ke_ngot_ngao_nam",
+        voice="Algieba",
+        af="phone",
+        label_short="ĐẦU DÂY LẠ",
+        speaker_label="Đầu dây lạ gọi từ phòng công chứng (chính là giọng Long trong EP08b – cài nối liên hoàn)",
+        base=(
+            "Giọng nam miền Nam Sài Gòn 32 tuổi, phát âm chuẩn phương ngữ miền Nam xuyên suốt mọi câu, "
+            "giữ cố định một âm sắc sáng vừa, mượt mà, lịch sự nhanh gọn kiểu dân văn phòng, " + NOT_OLD
         ),
     ),
     "N": dict(speaker="nguoi_boc_tran"),
@@ -312,13 +324,17 @@ line("l22_dat", "DAT", "Rồi, anh mới chuyển bốn lăm triệu xong đó. 
 sfx("call_end", 0.0, -4)
 beat(0.35)
 
-# Cắt chéo sang phòng tối: kẻ đứng giữa tiếp tục nhái văn phong cộc gọn của Đạt
+# Cắt chéo sang phòng tối (12:05): cài thoáng giọng Long (Algieba) từ đầu dây phòng công chứng → bắc cầu sang EP08b
 amb("night_room", -2.5); bgm("suspense_pulse", -2.5)
 scene("s08_dark_step2_account", "assets/c08.jpg", "push", tr="dissolve", trd=0.35)
-sfx("message_send", 0.2, -3)
+sfx("notification", 0.1, -4)
+beat(0.4)
+line("l22b_long_p", "LONG_P", "Em tới quầy công chứng rồi, bên bán chờ tiền vô là ký.",
+     "nói gọn qua loa điện thoại từ nơi ồn ào, khớp đúng giọng Long ở EP08b", pause=0.2)
+sfx("message_send", 0.1, -3)
 bubble("ANH ĐẠT (NICK MỚI)", "Chuyển 45.000.000đ vô TK cửa hàng này",
-       side="left", y=260, stamp="2 · GỬI STK LẠ", dur=5.2, offset=0.2)
-beat(0.6)
+       side="left", y=260, stamp="2 · GỬI STK LẠ", dur=5.2, offset=0.15)
+beat(0.5)
 line("l23_ke", "KE_MSG", "Tiền vô rồi hả cu Khang? Đẩy bốn lăm triệu vô số tài khoản cửa hàng này gọn giùm anh, họ giao thẳng về xưởng.",
      "bình thản, giữ đúng kiểu nói cộc gọn của Anh Đạt",
      sub="Tiền vô rồi hả cu Khang? Đẩy 45 triệu vô số tài khoản cửa hàng này gọn giùm anh, họ giao thẳng về xưởng.",

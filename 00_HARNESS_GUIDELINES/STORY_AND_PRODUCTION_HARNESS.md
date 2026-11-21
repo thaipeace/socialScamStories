@@ -2,6 +2,9 @@
 
 Bộ tiêu chí ngắn gọn, tổng quát dùng để kiểm tra bắt buộc cho **mọi tập phim mới** trước và trong khi dựng:
 
+> [!NOTE]
+> **Phân tầng tài liệu:** File này giữ nguyên các nguyên tắc **cảm nhận trực tiếp khi xem** (nhịp kịch, giữ chân, cấm dạy đời, kỹ thuật dựng) đã đúc kết thực chiến. Phần **chiến lược chọn đề tài, Thư viện 3 lớp, 6 góc quan sát và bộ lọc chống trùng lặp theo giai đoạn** cho các tập mới xem tại [VIGILANCE_LIBRARY_FRAMEWORK.md](VIGILANCE_LIBRARY_FRAMEWORK.md) và [VIGILANCE_LIBRARY_MAP.md](../01_SCAM_MAP/VIGILANCE_LIBRARY_MAP.md).
+
 ---
 
 ## I. HARNESS CỐT TRUYỆN & TÂM LÝ (STORYTELLING HARNESS)
