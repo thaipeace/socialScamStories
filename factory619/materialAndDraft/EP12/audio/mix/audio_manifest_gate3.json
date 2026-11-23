@@ -1,0 +1,751 @@
+{
+  "episode_id": "EP12",
+  "factory": "factory619",
+  "gate": "GATE_3_SFX_BGM_MIX",
+  "sample_rate": 48000,
+  "total_duration_sec": 77.05,
+  "layers": {
+    "ambience": [
+      {
+        "name": "ambience_01_night_room",
+        "window_sec": [
+          0.0,
+          50.45
+        ],
+        "preset": "night_room",
+        "start": 0.0,
+        "end": 50.45,
+        "gain_db": -5.5,
+        "wav_path": "factory619/materialAndDraft/EP12/audio/sfx/ambience_01_night_room.wav",
+        "mp3_path": "factory619/materialAndDraft/EP12/audio/sfx/ambience_01_night_room.mp3",
+        "duration_sec": 50.675,
+        "channels": 2,
+        "sample_rate": 48000,
+        "peak_dbfs": -19.0,
+        "rms_dbfs": -40.62
+      },
+      {
+        "name": "ambience_02_room_tone",
+        "window_sec": [
+          50.45,
+          66.95
+        ],
+        "preset": "room_tone",
+        "start": 50.45,
+        "end": 66.95,
+        "gain_db": -6.5,
+        "wav_path": "factory619/materialAndDraft/EP12/audio/sfx/ambience_02_room_tone.wav",
+        "mp3_path": "factory619/materialAndDraft/EP12/audio/sfx/ambience_02_room_tone.mp3",
+        "duration_sec": 16.95,
+        "channels": 2,
+        "sample_rate": 48000,
+        "peak_dbfs": -20.0,
+        "rms_dbfs": -31.77
+      },
+      {
+        "name": "ambience_03_night_room",
+        "window_sec": [
+          66.95,
+          74.35
+        ],
+        "preset": "night_room",
+        "start": 66.95,
+        "end": 74.35,
+        "gain_db": -5.5,
+        "wav_path": "factory619/materialAndDraft/EP12/audio/sfx/ambience_03_night_room.wav",
+        "mp3_path": "factory619/materialAndDraft/EP12/audio/sfx/ambience_03_night_room.mp3",
+        "duration_sec": 7.85,
+        "channels": 2,
+        "sample_rate": 48000,
+        "peak_dbfs": -19.0,
+        "rms_dbfs": -39.66
+      },
+      {
+        "name": "ambience_04_room_tone",
+        "window_sec": [
+          74.35,
+          77.05
+        ],
+        "preset": "room_tone",
+        "start": 74.35,
+        "end": 77.05,
+        "gain_db": -12.0,
+        "wav_path": "factory619/materialAndDraft/EP12/audio/sfx/ambience_04_room_tone.wav",
+        "mp3_path": "factory619/materialAndDraft/EP12/audio/sfx/ambience_04_room_tone.mp3",
+        "duration_sec": 2.925,
+        "channels": 2,
+        "sample_rate": 48000,
+        "peak_dbfs": -20.13,
+        "rms_dbfs": -31.83
+      }
+    ],
+    "foley": [
+      {
+        "name": "foley_01_file",
+        "file": "audio/sfx/fx_oyster_crack.wav",
+        "at": 0.08,
+        "gain_db": 0.5,
+        "wav_path": "factory619/materialAndDraft/EP12/audio/sfx/foley_01_file.wav",
+        "mp3_path": "factory619/materialAndDraft/EP12/audio/sfx/foley_01_file.mp3",
+        "duration_sec": 1.4,
+        "channels": 2,
+        "sample_rate": 48000,
+        "peak_dbfs": -3.0,
+        "rms_dbfs": -29.61
+      },
+      {
+        "name": "foley_02_notification",
+        "preset": "notification",
+        "at": 0.4,
+        "gain_db": -2.0,
+        "wav_path": "factory619/materialAndDraft/EP12/audio/sfx/foley_02_notification.wav",
+        "mp3_path": "factory619/materialAndDraft/EP12/audio/sfx/foley_02_notification.mp3",
+        "duration_sec": 0.8,
+        "channels": 2,
+        "sample_rate": 48000,
+        "peak_dbfs": -7.0,
+        "rms_dbfs": -20.25
+      },
+      {
+        "name": "foley_03_notification",
+        "preset": "notification",
+        "at": 3.1,
+        "gain_db": -4.0,
+        "wav_path": "factory619/materialAndDraft/EP12/audio/sfx/foley_03_notification.wav",
+        "mp3_path": "factory619/materialAndDraft/EP12/audio/sfx/foley_03_notification.mp3",
+        "duration_sec": 0.8,
+        "channels": 2,
+        "sample_rate": 48000,
+        "peak_dbfs": -7.0,
+        "rms_dbfs": -20.17
+      },
+      {
+        "name": "foley_04_file",
+        "file": "audio/sfx/chatter_live_bid1.wav",
+        "at": 5.45,
+        "gain_db": -11.5,
+        "wav_path": "factory619/materialAndDraft/EP12/audio/sfx/foley_04_file.wav",
+        "mp3_path": "factory619/materialAndDraft/EP12/audio/sfx/foley_04_file.mp3",
+        "duration_sec": 2.832,
+        "channels": 2,
+        "sample_rate": 48000,
+        "peak_dbfs": -9.01,
+        "rms_dbfs": -21.85
+      },
+      {
+        "name": "foley_05_file",
+        "file": "audio/sfx/chatter_live_cheer.wav",
+        "at": 8.35,
+        "gain_db": -12.0,
+        "wav_path": "factory619/materialAndDraft/EP12/audio/sfx/foley_05_file.wav",
+        "mp3_path": "factory619/materialAndDraft/EP12/audio/sfx/foley_05_file.mp3",
+        "duration_sec": 3.714,
+        "channels": 2,
+        "sample_rate": 48000,
+        "peak_dbfs": -9.01,
+        "rms_dbfs": -22.11
+      },
+      {
+        "name": "foley_06_phone_vibrate",
+        "preset": "phone_vibrate",
+        "at": 11.95,
+        "dur": 0.5,
+        "gain_db": -0.8,
+        "wav_path": "factory619/materialAndDraft/EP12/audio/sfx/foley_06_phone_vibrate.wav",
+        "mp3_path": "factory619/materialAndDraft/EP12/audio/sfx/foley_06_phone_vibrate.mp3",
+        "duration_sec": 0.5,
+        "channels": 2,
+        "sample_rate": 48000,
+        "peak_dbfs": -8.0,
+        "rms_dbfs": -14.4
+      },
+      {
+        "name": "foley_07_click",
+        "preset": "click",
+        "at": 12.35,
+        "gain_db": 0.2,
+        "wav_path": "factory619/materialAndDraft/EP12/audio/sfx/foley_07_click.wav",
+        "mp3_path": "factory619/materialAndDraft/EP12/audio/sfx/foley_07_click.mp3",
+        "duration_sec": 0.18,
+        "channels": 2,
+        "sample_rate": 48000,
+        "peak_dbfs": -11.0,
+        "rms_dbfs": -35.22
+      },
+      {
+        "name": "foley_08_heartbeat",
+        "preset": "heartbeat",
+        "at": 18.6,
+        "dur": 5.2,
+        "gain_db": -1.5,
+        "wav_path": "factory619/materialAndDraft/EP12/audio/sfx/foley_08_heartbeat.wav",
+        "mp3_path": "factory619/materialAndDraft/EP12/audio/sfx/foley_08_heartbeat.mp3",
+        "duration_sec": 5.2,
+        "channels": 2,
+        "sample_rate": 48000,
+        "peak_dbfs": -7.0,
+        "rms_dbfs": -22.47
+      },
+      {
+        "name": "foley_09_low_accent",
+        "preset": "low_accent",
+        "at": 29.25,
+        "dur": 1.0,
+        "gain_db": 0.6,
+        "wav_path": "factory619/materialAndDraft/EP12/audio/sfx/foley_09_low_accent.wav",
+        "mp3_path": "factory619/materialAndDraft/EP12/audio/sfx/foley_09_low_accent.mp3",
+        "duration_sec": 1.0,
+        "channels": 2,
+        "sample_rate": 48000,
+        "peak_dbfs": -11.5,
+        "rms_dbfs": -24.14
+      },
+      {
+        "name": "foley_10_click",
+        "preset": "click",
+        "at": 35.4,
+        "gain_db": 0.8,
+        "wav_path": "factory619/materialAndDraft/EP12/audio/sfx/foley_10_click.wav",
+        "mp3_path": "factory619/materialAndDraft/EP12/audio/sfx/foley_10_click.mp3",
+        "duration_sec": 0.18,
+        "channels": 2,
+        "sample_rate": 48000,
+        "peak_dbfs": -11.0,
+        "rms_dbfs": -36.89
+      },
+      {
+        "name": "foley_11_riser",
+        "preset": "riser",
+        "at": 35.45,
+        "dur": 0.6,
+        "gain_db": 1.1,
+        "wav_path": "factory619/materialAndDraft/EP12/audio/sfx/foley_11_riser.wav",
+        "mp3_path": "factory619/materialAndDraft/EP12/audio/sfx/foley_11_riser.mp3",
+        "duration_sec": 0.6,
+        "channels": 2,
+        "sample_rate": 48000,
+        "peak_dbfs": -6.0,
+        "rms_dbfs": -20.77
+      },
+      {
+        "name": "foley_12_bank_ting",
+        "preset": "bank_ting",
+        "at": 36.05,
+        "gain_db": 1.6,
+        "wav_path": "factory619/materialAndDraft/EP12/audio/sfx/foley_12_bank_ting.wav",
+        "mp3_path": "factory619/materialAndDraft/EP12/audio/sfx/foley_12_bank_ting.mp3",
+        "duration_sec": 1.4,
+        "channels": 2,
+        "sample_rate": 48000,
+        "peak_dbfs": -6.0,
+        "rms_dbfs": -21.72
+      },
+      {
+        "name": "foley_13_notification",
+        "preset": "notification",
+        "at": 36.85,
+        "gain_db": 0.2,
+        "wav_path": "factory619/materialAndDraft/EP12/audio/sfx/foley_13_notification.wav",
+        "mp3_path": "factory619/materialAndDraft/EP12/audio/sfx/foley_13_notification.mp3",
+        "duration_sec": 0.8,
+        "channels": 2,
+        "sample_rate": 48000,
+        "peak_dbfs": -7.0,
+        "rms_dbfs": -19.75
+      },
+      {
+        "name": "foley_14_click",
+        "preset": "click",
+        "at": 51.05,
+        "gain_db": 0.8,
+        "wav_path": "factory619/materialAndDraft/EP12/audio/sfx/foley_14_click.wav",
+        "mp3_path": "factory619/materialAndDraft/EP12/audio/sfx/foley_14_click.mp3",
+        "duration_sec": 0.18,
+        "channels": 2,
+        "sample_rate": 48000,
+        "peak_dbfs": -11.0,
+        "rms_dbfs": -35.39
+      },
+      {
+        "name": "foley_15_message_send",
+        "preset": "message_send",
+        "at": 51.45,
+        "gain_db": 0.6,
+        "wav_path": "factory619/materialAndDraft/EP12/audio/sfx/foley_15_message_send.wav",
+        "mp3_path": "factory619/materialAndDraft/EP12/audio/sfx/foley_15_message_send.mp3",
+        "duration_sec": 0.5,
+        "channels": 2,
+        "sample_rate": 48000,
+        "peak_dbfs": -9.0,
+        "rms_dbfs": -27.49
+      },
+      {
+        "name": "foley_16_low_accent",
+        "preset": "low_accent",
+        "at": 51.6,
+        "dur": 0.9,
+        "gain_db": 1.0,
+        "wav_path": "factory619/materialAndDraft/EP12/audio/sfx/foley_16_low_accent.wav",
+        "mp3_path": "factory619/materialAndDraft/EP12/audio/sfx/foley_16_low_accent.mp3",
+        "duration_sec": 0.9,
+        "channels": 2,
+        "sample_rate": 48000,
+        "peak_dbfs": -11.5,
+        "rms_dbfs": -24.53
+      },
+      {
+        "name": "foley_17_file",
+        "file": "audio/sfx/fx_desk_slam.wav",
+        "at": 52.85,
+        "gain_db": 2.2,
+        "wav_path": "factory619/materialAndDraft/EP12/audio/sfx/foley_17_file.wav",
+        "mp3_path": "factory619/materialAndDraft/EP12/audio/sfx/foley_17_file.mp3",
+        "duration_sec": 1.2,
+        "channels": 2,
+        "sample_rate": 48000,
+        "peak_dbfs": -1.5,
+        "rms_dbfs": -25.79
+      },
+      {
+        "name": "foley_18_impact",
+        "preset": "impact",
+        "at": 52.88,
+        "dur": 0.9,
+        "gain_db": 1.2,
+        "wav_path": "factory619/materialAndDraft/EP12/audio/sfx/foley_18_impact.wav",
+        "mp3_path": "factory619/materialAndDraft/EP12/audio/sfx/foley_18_impact.mp3",
+        "duration_sec": 0.9,
+        "channels": 2,
+        "sample_rate": 48000,
+        "peak_dbfs": -3.5,
+        "rms_dbfs": -16.73
+      },
+      {
+        "name": "foley_19_call_end",
+        "preset": "call_end",
+        "at": 53.85,
+        "gain_db": 1.2,
+        "wav_path": "factory619/materialAndDraft/EP12/audio/sfx/foley_19_call_end.wav",
+        "mp3_path": "factory619/materialAndDraft/EP12/audio/sfx/foley_19_call_end.mp3",
+        "duration_sec": 1.6,
+        "channels": 2,
+        "sample_rate": 48000,
+        "peak_dbfs": -10.0,
+        "rms_dbfs": -16.28
+      },
+      {
+        "name": "foley_20_glitch",
+        "preset": "glitch",
+        "at": 55.25,
+        "dur": 0.35,
+        "gain_db": 1.2,
+        "wav_path": "factory619/materialAndDraft/EP12/audio/sfx/foley_20_glitch.wav",
+        "mp3_path": "factory619/materialAndDraft/EP12/audio/sfx/foley_20_glitch.mp3",
+        "duration_sec": 0.35,
+        "channels": 2,
+        "sample_rate": 48000,
+        "peak_dbfs": -8.0,
+        "rms_dbfs": -21.22
+      },
+      {
+        "name": "foley_21_impact",
+        "preset": "impact",
+        "at": 55.35,
+        "dur": 1.1,
+        "gain_db": 2.0,
+        "wav_path": "factory619/materialAndDraft/EP12/audio/sfx/foley_21_impact.wav",
+        "mp3_path": "factory619/materialAndDraft/EP12/audio/sfx/foley_21_impact.mp3",
+        "duration_sec": 1.1,
+        "channels": 2,
+        "sample_rate": 48000,
+        "peak_dbfs": -3.5,
+        "rms_dbfs": -18.99
+      },
+      {
+        "name": "foley_22_low_accent",
+        "preset": "low_accent",
+        "at": 56.05,
+        "dur": 0.9,
+        "gain_db": 0.8,
+        "wav_path": "factory619/materialAndDraft/EP12/audio/sfx/foley_22_low_accent.wav",
+        "mp3_path": "factory619/materialAndDraft/EP12/audio/sfx/foley_22_low_accent.mp3",
+        "duration_sec": 0.9,
+        "channels": 2,
+        "sample_rate": 48000,
+        "peak_dbfs": -11.5,
+        "rms_dbfs": -24.9
+      },
+      {
+        "name": "foley_23_heartbeat",
+        "preset": "heartbeat",
+        "at": 67.1,
+        "dur": 6.8,
+        "gain_db": -1.0,
+        "wav_path": "factory619/materialAndDraft/EP12/audio/sfx/foley_23_heartbeat.wav",
+        "mp3_path": "factory619/materialAndDraft/EP12/audio/sfx/foley_23_heartbeat.mp3",
+        "duration_sec": 6.8,
+        "channels": 2,
+        "sample_rate": 48000,
+        "peak_dbfs": -7.0,
+        "rms_dbfs": -22.25
+      },
+      {
+        "name": "foley_24_click",
+        "preset": "click",
+        "at": 68.1,
+        "gain_db": 0.7,
+        "wav_path": "factory619/materialAndDraft/EP12/audio/sfx/foley_24_click.wav",
+        "mp3_path": "factory619/materialAndDraft/EP12/audio/sfx/foley_24_click.mp3",
+        "duration_sec": 0.18,
+        "channels": 2,
+        "sample_rate": 48000,
+        "peak_dbfs": -11.0,
+        "rms_dbfs": -35.68
+      },
+      {
+        "name": "foley_25_message_send",
+        "preset": "message_send",
+        "at": 70.2,
+        "gain_db": 0.8,
+        "wav_path": "factory619/materialAndDraft/EP12/audio/sfx/foley_25_message_send.wav",
+        "mp3_path": "factory619/materialAndDraft/EP12/audio/sfx/foley_25_message_send.mp3",
+        "duration_sec": 0.5,
+        "channels": 2,
+        "sample_rate": 48000,
+        "peak_dbfs": -9.0,
+        "rms_dbfs": -27.71
+      },
+      {
+        "name": "foley_26_riser",
+        "preset": "riser",
+        "at": 70.25,
+        "dur": 0.75,
+        "gain_db": 1.4,
+        "wav_path": "factory619/materialAndDraft/EP12/audio/sfx/foley_26_riser.wav",
+        "mp3_path": "factory619/materialAndDraft/EP12/audio/sfx/foley_26_riser.mp3",
+        "duration_sec": 0.75,
+        "channels": 2,
+        "sample_rate": 48000,
+        "peak_dbfs": -6.0,
+        "rms_dbfs": -20.66
+      },
+      {
+        "name": "foley_27_file",
+        "file": "audio/sfx/fx_door_burst_raid.wav",
+        "at": 71.0,
+        "gain_db": 2.4,
+        "wav_path": "factory619/materialAndDraft/EP12/audio/sfx/foley_27_file.wav",
+        "mp3_path": "factory619/materialAndDraft/EP12/audio/sfx/foley_27_file.mp3",
+        "duration_sec": 3.2,
+        "channels": 2,
+        "sample_rate": 48000,
+        "peak_dbfs": -1.5,
+        "rms_dbfs": -25.07
+      },
+      {
+        "name": "foley_28_impact",
+        "preset": "impact",
+        "at": 71.05,
+        "dur": 1.0,
+        "gain_db": 1.8,
+        "wav_path": "factory619/materialAndDraft/EP12/audio/sfx/foley_28_impact.wav",
+        "mp3_path": "factory619/materialAndDraft/EP12/audio/sfx/foley_28_impact.mp3",
+        "duration_sec": 1.0,
+        "channels": 2,
+        "sample_rate": 48000,
+        "peak_dbfs": -3.5,
+        "rms_dbfs": -17.06
+      },
+      {
+        "name": "foley_29_low_accent",
+        "preset": "low_accent",
+        "at": 72.05,
+        "dur": 0.9,
+        "gain_db": 0.8,
+        "wav_path": "factory619/materialAndDraft/EP12/audio/sfx/foley_29_low_accent.wav",
+        "mp3_path": "factory619/materialAndDraft/EP12/audio/sfx/foley_29_low_accent.mp3",
+        "duration_sec": 0.9,
+        "channels": 2,
+        "sample_rate": 48000,
+        "peak_dbfs": -11.5,
+        "rms_dbfs": -24.89
+      },
+      {
+        "name": "foley_30_impact",
+        "preset": "impact",
+        "at": 74.18,
+        "dur": 1.3,
+        "gain_db": 2.6,
+        "wav_path": "factory619/materialAndDraft/EP12/audio/sfx/foley_30_impact.wav",
+        "mp3_path": "factory619/materialAndDraft/EP12/audio/sfx/foley_30_impact.mp3",
+        "duration_sec": 1.3,
+        "channels": 2,
+        "sample_rate": 48000,
+        "peak_dbfs": -3.5,
+        "rms_dbfs": -17.77
+      }
+    ],
+    "bgm": [
+      {
+        "name": "bgm_01_suspense_pulse",
+        "window_sec": [
+          0.0,
+          34.95
+        ],
+        "preset": "suspense_pulse",
+        "start": 0.0,
+        "end": 34.95,
+        "gain_db": -1.5,
+        "wav_path": "factory619/materialAndDraft/EP12/audio/bgm/bgm_01_suspense_pulse.wav",
+        "mp3_path": "factory619/materialAndDraft/EP12/audio/bgm/bgm_01_suspense_pulse.mp3",
+        "duration_sec": 35.175,
+        "channels": 2,
+        "sample_rate": 48000,
+        "peak_dbfs": -15.0,
+        "rms_dbfs": -30.78
+      },
+      {
+        "name": "bgm_02_action_climax",
+        "window_sec": [
+          34.95,
+          37.55
+        ],
+        "preset": "action_climax",
+        "start": 34.95,
+        "end": 37.55,
+        "gain_db": 0.6,
+        "wav_path": "factory619/materialAndDraft/EP12/audio/bgm/bgm_02_action_climax.wav",
+        "mp3_path": "factory619/materialAndDraft/EP12/audio/bgm/bgm_02_action_climax.mp3",
+        "duration_sec": 3.05,
+        "channels": 2,
+        "sample_rate": 48000,
+        "peak_dbfs": -12.0,
+        "rms_dbfs": -28.28
+      },
+      {
+        "name": "bgm_03_tension_drone",
+        "window_sec": [
+          37.55,
+          55.25
+        ],
+        "preset": "tension_drone",
+        "start": 37.55,
+        "end": 55.25,
+        "gain_db": 0.6,
+        "wav_path": "factory619/materialAndDraft/EP12/audio/bgm/bgm_03_tension_drone.wav",
+        "mp3_path": "factory619/materialAndDraft/EP12/audio/bgm/bgm_03_tension_drone.mp3",
+        "duration_sec": 18.15,
+        "channels": 2,
+        "sample_rate": 48000,
+        "peak_dbfs": -15.0,
+        "rms_dbfs": -25.27
+      },
+      {
+        "name": "bgm_04_investigative_story",
+        "window_sec": [
+          55.25,
+          62.65
+        ],
+        "preset": "investigative_story",
+        "start": 55.25,
+        "end": 62.65,
+        "gain_db": 1.0,
+        "wav_path": "factory619/materialAndDraft/EP12/audio/bgm/bgm_04_investigative_story.wav",
+        "mp3_path": "factory619/materialAndDraft/EP12/audio/bgm/bgm_04_investigative_story.mp3",
+        "duration_sec": 7.85,
+        "channels": 2,
+        "sample_rate": 48000,
+        "peak_dbfs": -16.0,
+        "rms_dbfs": -30.15
+      },
+      {
+        "name": "bgm_05_warm_outro",
+        "window_sec": [
+          62.65,
+          66.95
+        ],
+        "preset": "warm_outro",
+        "start": 62.65,
+        "end": 66.95,
+        "wav_path": "factory619/materialAndDraft/EP12/audio/bgm/bgm_05_warm_outro.wav",
+        "mp3_path": "factory619/materialAndDraft/EP12/audio/bgm/bgm_05_warm_outro.mp3",
+        "duration_sec": 4.75,
+        "channels": 2,
+        "sample_rate": 48000,
+        "peak_dbfs": -15.0,
+        "rms_dbfs": -27.34
+      },
+      {
+        "name": "bgm_06_tension_drone",
+        "window_sec": [
+          66.95,
+          74.35
+        ],
+        "preset": "tension_drone",
+        "start": 66.95,
+        "end": 74.35,
+        "gain_db": 1.8,
+        "wav_path": "factory619/materialAndDraft/EP12/audio/bgm/bgm_06_tension_drone.wav",
+        "mp3_path": "factory619/materialAndDraft/EP12/audio/bgm/bgm_06_tension_drone.mp3",
+        "duration_sec": 7.85,
+        "channels": 2,
+        "sample_rate": 48000,
+        "peak_dbfs": -15.0,
+        "rms_dbfs": -26.74
+      }
+    ]
+  },
+  "ducking": {
+    "bgm_windows": [
+      [
+        0.24999999999999997,
+        5.142,
+        -10.0
+      ],
+      [
+        5.550000000000001,
+        11.91,
+        -10.0
+      ],
+      [
+        12.4,
+        18.517,
+        -10.0
+      ],
+      [
+        18.65,
+        23.49,
+        -10.0
+      ],
+      [
+        23.549999999999997,
+        29.185,
+        -10.0
+      ],
+      [
+        29.299999999999997,
+        34.66,
+        -10.0
+      ],
+      [
+        37.75,
+        43.242,
+        -10.0
+      ],
+      [
+        43.449999999999996,
+        50.05,
+        -10.0
+      ],
+      [
+        55.449999999999996,
+        62.33,
+        -10.0
+      ],
+      [
+        66.95,
+        74.25,
+        -2.0
+      ]
+    ],
+    "ambience_windows": [
+      [
+        0.24999999999999997,
+        5.142,
+        -5.5
+      ],
+      [
+        5.550000000000001,
+        11.91,
+        -5.5
+      ],
+      [
+        12.4,
+        18.517,
+        -5.5
+      ],
+      [
+        18.65,
+        23.49,
+        -5.5
+      ],
+      [
+        23.549999999999997,
+        29.185,
+        -5.5
+      ],
+      [
+        29.299999999999997,
+        34.66,
+        -5.5
+      ],
+      [
+        37.75,
+        43.242,
+        -5.5
+      ],
+      [
+        43.449999999999996,
+        50.05,
+        -5.5
+      ],
+      [
+        55.449999999999996,
+        62.33,
+        -5.5
+      ],
+      [
+        66.95,
+        74.25,
+        -3.0
+      ]
+    ]
+  },
+  "stems": {
+    "dialogue": {
+      "wav_path": "factory619/materialAndDraft/EP12/audio/mix/stem_dialogue.wav",
+      "mp3_path": null,
+      "duration_sec": 77.05,
+      "channels": 2,
+      "sample_rate": 48000,
+      "peak_dbfs": -3.0,
+      "rms_dbfs": -19.87
+    },
+    "ambience": {
+      "wav_path": "factory619/materialAndDraft/EP12/audio/mix/stem_ambience.wav",
+      "mp3_path": null,
+      "duration_sec": 77.05,
+      "channels": 2,
+      "sample_rate": 48000,
+      "peak_dbfs": -26.5,
+      "rms_dbfs": -44.92
+    },
+    "foley": {
+      "wav_path": "factory619/materialAndDraft/EP12/audio/mix/stem_foley.wav",
+      "mp3_path": null,
+      "duration_sec": 77.05,
+      "channels": 2,
+      "sample_rate": 48000,
+      "peak_dbfs": -0.01,
+      "rms_dbfs": -23.66
+    },
+    "bgm": {
+      "wav_path": "factory619/materialAndDraft/EP12/audio/mix/stem_bgm.wav",
+      "mp3_path": null,
+      "duration_sec": 77.05,
+      "channels": 2,
+      "sample_rate": 48000,
+      "peak_dbfs": -11.4,
+      "rms_dbfs": -31.31
+    }
+  },
+  "master": {
+    "wav_path": "factory619/materialAndDraft/EP12/audio/mix/master_audio_EP12.wav",
+    "mp3_path": "factory619/materialAndDraft/EP12/audio/mix/master_audio_EP12.mp3",
+    "duration_sec": 77.05,
+    "channels": 2,
+    "sample_rate": 48000,
+    "peak_dbfs": -1.01,
+    "rms_dbfs": -18.13
+  }
+}

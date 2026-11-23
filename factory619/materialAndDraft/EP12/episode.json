@@ -1,0 +1,598 @@
+{
+  "episode_id": "EP12",
+  "slug": "MoTraiTimNgoc",
+  "title": "Mở trai tìm ngọc trên livestream – Ai cũng biết chuyển trước là lừa, sao vẫn cố tin?",
+  "version": "v3-final-level2-abc",
+  "scam_family": "VAR-LIVE-01",
+  "motion_upgrade": "level2",
+  "duration_sec": 77.05,
+  "hook": {
+    "kicker": "AI CŨNG BIẾT CHUYỂN TRƯỚC LÀ LỪA",
+    "title": "Sao thấy mở trai trúng 1 tỷ 7 vẫn cố tin?",
+    "start": 0.2,
+    "end": 4.9
+  },
+  "scenes": [
+    {
+      "id": "s1_hook_tach_trai_live",
+      "image": "assets/s1.jpg",
+      "start": 0.0,
+      "end": 5.35,
+      "beat_type": "establishing",
+      "motion_level": "C",
+      "motion_intent": "POV trực diện màn hình livestream tách sống con trai lộ 4 viên ngọc sáng rực kèm screen_glow ánh ngọc khớp l1",
+      "motion": {
+        "preset": "slow_push_in",
+        "scale": [1.02, 1.09],
+        "focus": [[0.5, 0.5], [0.5, 0.48]],
+        "wobble": "none",
+        "easing": "ease_out"
+      },
+      "detail_fx": [
+        {
+          "type": "screen_glow",
+          "pos": [0.5, 0.48],
+          "radius": [0.28, 0.22],
+          "color": [255, 244, 210],
+          "intensity": 0.30,
+          "mode": "pulse",
+          "start": 0.15,
+          "end": 5.25,
+          "fade": 0.25
+        }
+      ]
+    },
+    {
+      "id": "s2_co_tu_ca_can_cau",
+      "image": "assets/s2.jpg",
+      "start": 5.35,
+      "end": 12.15,
+      "beat_type": "normal",
+      "motion_level": "C",
+      "motion_intent": "Quét ngang nhẹ phòng khách tối ấm, Cô Tư ôm 1 chiếc điện thoại mừng rỡ thật lòng khớp Living-Character A/B/C (chớp mắt + miệng nói l2 + nhịp thở) & tiếng chim mồi tranh mua",
+      "motion": {
+        "preset": "pan_right",
+        "scale": [1.06, 1.06],
+        "focus": [[0.46, 0.48], [0.54, 0.48]],
+        "wobble": "breathe",
+        "easing": "smoothstep"
+      },
+      "detail_fx": [
+        {
+          "type": "eye_blink",
+          "image": "assets/s2_cotu_blink.jpg",
+          "region": [0.424, 0.278, 0.62, 0.342],
+          "feather": 0.008,
+          "times": [7.2, 10.6],
+          "close_dur": 0.055,
+          "hold_dur": 0.045,
+          "open_dur": 0.085
+        },
+        {
+          "type": "mouth_sync",
+          "speaker": "co_tu",
+          "region": [0.441, 0.351, 0.62, 0.419],
+          "feather": 0.008,
+          "closed_image": "assets/s2_cotu_mouth_closed.jpg",
+          "mid_image": "assets/s2.jpg",
+          "open_image": "assets/s2_cotu_mouth_open.jpg",
+          "fps": 12,
+          "thresh_mid": 0.14,
+          "thresh_open": 0.68
+        },
+        {
+          "type": "screen_glow",
+          "pos": [0.22, 0.48],
+          "radius": [0.20, 0.16],
+          "color": [255, 240, 200],
+          "intensity": 0.22,
+          "mode": "pulse",
+          "start": 5.45,
+          "end": 12.05,
+          "fade": 0.3
+        }
+      ],
+      "transition_in": {"type": "cut", "dur": 0.0}
+    },
+    {
+      "id": "s3_ly_tri_dau_bay_tam_ly",
+      "image": "assets/s3.jpg",
+      "start": 12.15,
+      "end": 34.95,
+      "beat_type": "suspicion",
+      "motion_level": "C",
+      "motion_intent": "Kéo lùi chậm khi ánh xanh cuộc gọi lấn đèn vàng, Cô Tư đắn đo hỏi thẳng l4 rồi mềm lòng chốt chuyển 4 triệu ở l6 khớp Living-Character A/B/C (chớp mắt + miệng nói riêng lúc Cô Tư thoại)",
+      "motion": {
+        "preset": "slow_pull_out",
+        "scale": [1.09, 1.02],
+        "focus": [[0.5, 0.48], [0.5, 0.5]],
+        "wobble": "breathe",
+        "easing": "smoothstep"
+      },
+      "detail_fx": [
+        {
+          "type": "eye_blink",
+          "image": "assets/s3_cotu_blink.jpg",
+          "region": [0.429, 0.286, 0.623, 0.344],
+          "feather": 0.008,
+          "times": [14.8, 18.6, 22.9, 27.1, 31.4, 34.1],
+          "close_dur": 0.055,
+          "hold_dur": 0.045,
+          "open_dur": 0.085
+        },
+        {
+          "type": "mouth_sync",
+          "speaker": "co_tu",
+          "region": [0.471, 0.349, 0.62, 0.419],
+          "feather": 0.008,
+          "closed_image": "assets/s3_cotu_mouth_closed.jpg",
+          "mid_image": "assets/s3.jpg",
+          "open_image": "assets/s3_cotu_mouth_open.jpg",
+          "fps": 12,
+          "thresh_mid": 0.14,
+          "thresh_open": 0.68
+        },
+        {
+          "type": "screen_glow",
+          "pos": [0.34, 0.52],
+          "radius": [0.24, 0.18],
+          "color": [120, 215, 255],
+          "intensity": 0.28,
+          "mode": "turn_on",
+          "start": 12.35,
+          "end": 34.85,
+          "fade": 0.35
+        }
+      ],
+      "transition_in": {"type": "dissolve", "dur": 0.25}
+    },
+    {
+      "id": "s4_bam_chuyen_4_trieu",
+      "image": "assets/s4.jpg",
+      "start": 34.95,
+      "end": 37.55,
+      "beat_type": "climax",
+      "motion_level": "C",
+      "motion_intent": "Câm thoại 2.6s cận ngón tay bấm nút xác nhận chuyển 4 triệu kèm chớp sáng xanh và cú rung khớp bank_ting",
+      "motion": {
+        "preset": "pan_left",
+        "scale": [1.07, 1.07],
+        "focus": [[0.54, 0.52], [0.46, 0.52]],
+        "wobble": "none",
+        "easing": "ease_out"
+      },
+      "detail_fx": [
+        {
+          "type": "screen_glow",
+          "pos": [0.5, 0.46],
+          "radius": [0.24, 0.16],
+          "color": [110, 245, 165],
+          "intensity": 0.34,
+          "mode": "pulse",
+          "start": 35.1,
+          "end": 37.45,
+          "fade": 0.15
+        }
+      ],
+      "shakes": [{"at": 36.05, "amp": 18}],
+      "transition_in": {"type": "cut", "dur": 0.0}
+    },
+    {
+      "id": "s5_doi_14_trieu_cau_chup_lien",
+      "image": "assets/s5.jpg",
+      "start": 37.55,
+      "end": 50.45,
+      "beat_type": "suspicion",
+      "motion_level": "C",
+      "motion_intent": "Đẩy căng chậm cận gương mặt Cô Tư lo lắng thật sự trước đòn đòi tiếp 14 triệu (l7) và năn nỉ chụp liền khay ngọc (l8) khớp Living-Character A/B/C",
+      "motion": {
+        "preset": "tense_push",
+        "scale": [1.02, 1.10],
+        "focus": [[0.5, 0.48], [0.5, 0.46]],
+        "wobble": "breathe",
+        "easing": "ease_in"
+      },
+      "detail_fx": [
+        {
+          "type": "eye_blink",
+          "image": "assets/s5_cotu_blink.jpg",
+          "region": [0.292, 0.268, 0.615, 0.359],
+          "feather": 0.009,
+          "times": [39.6, 43.35, 47.4],
+          "close_dur": 0.055,
+          "hold_dur": 0.045,
+          "open_dur": 0.085
+        },
+        {
+          "type": "mouth_sync",
+          "speaker": "co_tu",
+          "region": [0.343, 0.371, 0.602, 0.479],
+          "feather": 0.009,
+          "closed_image": "assets/s5_cotu_mouth_closed.jpg",
+          "mid_image": "assets/s5.jpg",
+          "open_image": "assets/s5_cotu_mouth_open.jpg",
+          "fps": 12,
+          "thresh_mid": 0.14,
+          "thresh_open": 0.68
+        },
+        {
+          "type": "screen_glow",
+          "pos": [0.42, 0.64],
+          "radius": [0.24, 0.16],
+          "color": [135, 200, 255],
+          "intensity": 0.24,
+          "mode": "flicker",
+          "start": 37.75,
+          "end": 50.35,
+          "fade": 0.25
+        }
+      ],
+      "transition_in": {"type": "cut", "dur": 0.0}
+    },
+    {
+      "id": "s6_phong_live_lo_goc_ban_sep_dap_ban",
+      "image": "assets/s6.jpg",
+      "start": 50.45,
+      "end": 55.25,
+      "beat_type": "climax",
+      "motion_level": "C",
+      "motion_intent": "Câm thoại 4.8s phía ổ lừa đảo: chụp vội khay ngọc lộ tờ hóa đơn rìa bàn (detail_reveal), ông sếp đập bàn giật máy thu hồi & chặn rụp (shakes + light_shift)",
+      "motion": {
+        "preset": "pan_right",
+        "scale": [1.06, 1.06],
+        "focus": [[0.46, 0.50], [0.54, 0.50]],
+        "wobble": "tense",
+        "easing": "ease_out"
+      },
+      "detail_fx": [
+        {
+          "type": "detail_reveal",
+          "image": "assets/s6_reveal.jpg",
+          "at": 51.55,
+          "dur": 0.55
+        },
+        {
+          "type": "light_shift",
+          "at": 52.85,
+          "dur": 0.16,
+          "brightness": 0.88,
+          "tint_rgb": [255, 110, 110],
+          "tint_strength": 0.12
+        }
+      ],
+      "shakes": [{"at": 52.85, "amp": 28}],
+      "transition_in": {"type": "cut", "dur": 0.0}
+    },
+    {
+      "id": "s7_boc_tran_1_cau_duy_nhat",
+      "image": "assets/s7.jpg",
+      "start": 55.25,
+      "end": 62.65,
+      "beat_type": "information",
+      "motion_level": "C",
+      "motion_intent": "1 khung lật mặt duy nhất: đèn vòng nứt vỡ bật lộ vòng bẫy tâm lý khớp đúng 1 câu chốt l9 của Người Bóc Trần",
+      "motion": {
+        "preset": "slow_push_in",
+        "scale": [1.02, 1.08],
+        "focus": [[0.5, 0.48], [0.5, 0.46]],
+        "wobble": "none",
+        "easing": "ease_out"
+      },
+      "detail_fx": [
+        {
+          "type": "detail_reveal",
+          "image": "assets/s7_reveal.jpg",
+          "at": 56.0,
+          "dur": 0.7
+        },
+        {
+          "type": "focus_highlight",
+          "pos": [0.5, 0.48],
+          "radius": [0.46, 0.38],
+          "dim_outer": 0.22,
+          "start": 56.1,
+          "end": 62.55,
+          "fade": 0.35
+        }
+      ],
+      "transition_in": {"type": "glitch", "dur": 0.32}
+    },
+    {
+      "id": "s8_the_nho_ky",
+      "image": "assets/s8.jpg",
+      "start": 62.65,
+      "end": 66.95,
+      "beat_type": "ending",
+      "motion_level": "A",
+      "motion_intent": "Giữ tĩnh tuyệt đối trên nền phòng khách ấm dịu để đọc gọn Thẻ Nhớ kỹ trong 4.3s, không thoại",
+      "motion": {"preset": "static_hold"},
+      "transition_in": {"type": "fade_black", "dur": 0.28}
+    },
+    {
+      "id": "s9a_ket_mo_co_tu_lat_mat",
+      "image": "assets/s9a.jpg",
+      "start": 66.95,
+      "end": 70.85,
+      "beat_type": "anomaly",
+      "motion_level": "C",
+      "motion_intent": "Cú lật thân phận câm thoại 3.9s: ánh mắt Cô Tư đổi sắc lạnh tĩnh táo, chớp mắt chậm cực ngầu & bật detail_reveal khoanh sáng góc tờ hóa đơn trên ảnh kịp chụp màn hình",
+      "motion": {
+        "preset": "slow_pull_out",
+        "scale": [1.08, 1.01],
+        "focus": [[0.5, 0.48], [0.5, 0.50]],
+        "wobble": "none",
+        "easing": "ease_out"
+      },
+      "detail_fx": [
+        {
+          "type": "eye_blink",
+          "image": "assets/s9a_cotu_blink.jpg",
+          "region": [0.424, 0.281, 0.628, 0.342],
+          "feather": 0.008,
+          "times": [67.85],
+          "close_dur": 0.075,
+          "hold_dur": 0.07,
+          "open_dur": 0.115
+        },
+        {
+          "type": "detail_reveal",
+          "image": "assets/s9a_reveal.jpg",
+          "at": 68.15,
+          "dur": 0.55
+        },
+        {
+          "type": "focus_highlight",
+          "pos": [0.42, 0.56],
+          "radius": [0.44, 0.38],
+          "dim_outer": 0.24,
+          "start": 68.1,
+          "end": 70.8,
+          "fade": 0.35
+        }
+      ],
+      "transition_in": {"type": "cut", "dur": 0.0}
+    },
+    {
+      "id": "s9b_ket_mo_o_den_vong_bi_ap_vao",
+      "image": "assets/s9b.jpg",
+      "start": 70.85,
+      "end": 74.35,
+      "beat_type": "climax",
+      "motion_level": "B",
+      "motion_intent": "Kết mở 2.5D push_in câm thoại 3.5s: ánh đèn chớp xanh-đỏ quét qua rèm cửa bật tung, ông sếp & nhân viên giật bắn, tiền cảnh tách lớp rơi con dao & 4 viên ngọc lăn tung tóe",
+      "motion": {
+        "preset": "slow_push_in",
+        "scale": [1.01, 1.09],
+        "focus": [[0.5, 0.50], [0.5, 0.48]],
+        "wobble": "none"
+      },
+      "parallax": {
+        "camera": "push_in",
+        "dolly": [1.01, 1.09],
+        "shift_x": [0.0, 0.0],
+        "shift_y": [3.0, -3.0],
+        "focus": [0.5, 0.5],
+        "strength": 0.88,
+        "easing": "ease_out",
+        "layers": [
+          {"role": "bg", "image": "assets/s9b_bg.jpg", "depth": 0.45, "blur": 0.9},
+          {"role": "fg", "image": "assets/s9b_fg.png", "depth": 1.32, "blur": 0.15}
+        ]
+      },
+      "detail_fx": [
+        {
+          "type": "light_shift",
+          "at": 71.05,
+          "dur": 0.14,
+          "end": 71.65,
+          "end_dur": 0.15,
+          "brightness": 1.12,
+          "tint_rgb": [255, 65, 75],
+          "tint_strength": 0.18
+        },
+        {
+          "type": "light_shift",
+          "at": 72.05,
+          "dur": 0.14,
+          "end": 72.75,
+          "end_dur": 0.15,
+          "brightness": 1.12,
+          "tint_rgb": [65, 145, 255],
+          "tint_strength": 0.18
+        }
+      ],
+      "shakes": [{"at": 71.05, "amp": 26}],
+      "transition_in": {"type": "dissolve", "dur": 0.35}
+    },
+    {
+      "id": "s10_black_disclaimer",
+      "image": "assets/s10_black.jpg",
+      "start": 74.35,
+      "end": 77.05,
+      "beat_type": "ending",
+      "motion_level": "A",
+      "motion_intent": "Cắt đen tĩnh tuyệt đối cho bảng Lưu ý cuối video",
+      "motion": {"preset": "static_hold"},
+      "transition_in": {"type": "cut", "dur": 0.0}
+    }
+  ],
+  "dialogue": [
+    {
+      "id": "l1",
+      "speaker": "ke_ban_hang",
+      "label_short": "MC LIVE",
+      "af": "phone",
+      "start": 0.35,
+      "window": 4.95,
+      "text": "Con số ba cô Tư tự chọn nè! Bốn viên ngọc quý, một tỷ bảy luôn!",
+      "style": "Giọng nữ MC livestream miền Nam Sài Gòn 28 tuổi, phát âm chuẩn phương ngữ miền Nam, tông cao sáng, hồ hởi vỡ òa phấn khích, nói nhanh gọn rõ chữ qua loa điện thoại."
+    },
+    {
+      "id": "l2",
+      "speaker": "co_tu",
+      "start": 5.65,
+      "window": 6.45,
+      "text": "Bỏ có ba trăm chín chín ngàn, tự chọn số ba... mắt thấy nó tách sống rành rành!",
+      "style": "Giọng phụ nữ miền Nam Sài Gòn 50 tuổi, phát âm chuẩn phương ngữ miền Nam xuyên suốt mọi câu, giữ cố định một âm sắc ấm áp đời thực, kinh ngạc mừng rỡ tự nhiên như người lần đầu trúng số, tuyệt đối không giả giọng bà già run rẩy."
+    },
+    {
+      "id": "l3",
+      "speaker": "ke_gia_danh",
+      "label_short": "ĐẦU DÂY",
+      "af": "phone",
+      "start": 12.50,
+      "window": 6.20,
+      "text": "Ngọc của cô tính bằng đô, ký quỹ bốn triệu mở hạn mức thu mua là tiền về liền ạ.",
+      "style": "Giọng nam miền Nam Sài Gòn 40 tuổi qua điện thoại, phát âm chuẩn phương ngữ miền Nam xuyên suốt mọi câu, giữ cố định một âm sắc trầm mượt, lịch sự chuyên nghiệp bình tĩnh như nhân viên thẩm định tài chính, không quát tháo."
+    },
+    {
+      "id": "l4",
+      "speaker": "co_tu",
+      "start": 18.75,
+      "window": 4.90,
+      "text": "Khoan... trên đài hay dặn bắt chuyển tiền trước là lừa mà?",
+      "style": "Giọng phụ nữ miền Nam Sài Gòn 50 tuổi, phát âm chuẩn phương ngữ miền Nam xuyên suốt mọi câu, giữ cố định cùng một âm sắc ấm áp đời thực, chững lại ngập ngừng hỏi thật thà đầy nghi ngại."
+    },
+    {
+      "id": "l5",
+      "speaker": "ke_gia_danh",
+      "label_short": "ĐẦU DÂY",
+      "af": "phone",
+      "start": 23.65,
+      "window": 5.75,
+      "text": "Chính tay cô chọn, mắt thấy tách sống! Có bốn triệu mà bỏ một tỷ bảy tiếc cả đời đó cô!",
+      "style": "Giọng nam miền Nam Sài Gòn 40 tuổi qua điện thoại, phát âm chuẩn phương ngữ miền Nam xuyên suốt mọi câu, giữ cố định cùng một âm sắc mượt mà lịch sự nhưng nhịp hơi nhanh dứt khoát đánh mạnh vào nỗi sợ tiếc, không la hét."
+    },
+    {
+      "id": "l6",
+      "speaker": "co_tu",
+      "start": 29.40,
+      "window": 5.50,
+      "text": "Ừ... bỏ ngang tiếc thiệt! Gửi số tài khoản qua tôi chuyển bốn triệu liền!",
+      "style": "Giọng phụ nữ miền Nam Sài Gòn 50 tuổi, phát âm chuẩn phương ngữ miền Nam xuyên suốt mọi câu, giữ cố định cùng một âm sắc, thở nhẹ mềm lòng pha chút vội vã như người thật sự bị thuyết phục, hoàn toàn tự nhiên không lộ ý đồ."
+    },
+    {
+      "id": "l7",
+      "speaker": "ke_gia_danh",
+      "label_short": "ĐẦU DÂY",
+      "af": "phone",
+      "start": 37.85,
+      "window": 5.60,
+      "text": "Xong bước một rồi, cô chuyển thêm mười bốn triệu phí đổi ngoại tệ mới giải ngân ạ.",
+      "style": "Giọng nam miền Nam Sài Gòn 40 tuổi qua điện thoại, phát âm chuẩn phương ngữ miền Nam xuyên suốt mọi câu, giữ cố định cùng một âm sắc trầm mượt, bình thản lạnh đều như chuyện hiển nhiên."
+    },
+    {
+      "id": "l8",
+      "speaker": "co_tu",
+      "start": 43.55,
+      "window": 6.75,
+      "text": "Mười bốn triệu nhiều quá... chú chụp liền khay ngọc ghi tên tôi coi còn đó tôi mới chuyển!",
+      "style": "Giọng phụ nữ miền Nam Sài Gòn 50 tuổi, phát âm chuẩn phương ngữ miền Nam xuyên suốt mọi câu, giữ cố định cùng một âm sắc, giọng hơi run lo lắng thật thà kiểu người sắp bỏ số tiền lớn muốn nhìn tận mắt cho yên tâm."
+    },
+    {
+      "id": "l9",
+      "speaker": "nguoi_boc_tran",
+      "start": 55.55,
+      "window": 7.00,
+      "text": "Cho tự chọn, thấy tận mắt khiến bạn sợ bỏ lỡ mà cố tin: hễ đòi đóng phí trước là lừa!",
+      "style": "Giọng nam trung niên miền Nam Sài Gòn 40 tuổi, phát âm chuẩn phương ngữ miền Nam, trầm tĩnh, sắc lạnh và gọn gàng như câu chốt điện ảnh, nhịp dứt khoát rõ chữ, tuyệt đối không rao giảng dạy đời."
+    }
+  ],
+  "chat_bubbles": [],
+  "callouts": [],
+  "red_flags": {
+    "start": 62.65,
+    "end": 66.95,
+    "stagger_sec": 0.35,
+    "title": "NHỚ KỸ",
+    "items": [
+      "Cho tự chọn, tách sống trước camera khiến bạn tin chắc món đồ là của mình",
+      "Khởi điểm mồi phí nhỏ (ký quỹ mở hạn mức) đánh vào nỗi sợ tiếc cơ hội đổi đời",
+      "Chuyển xong đợt đầu lập tức đẻ thêm phí đổi ngoại tệ, tuyệt đối không giải ngân"
+    ],
+    "action": "Trúng thưởng hay thu mua thật thì trừ thẳng vào tiền trả · Hễ đòi chuyển tiền túi trước là dừng ngay · Lưu bằng chứng trình báo công an!"
+  },
+  "disclaimer": {
+    "start": 74.35,
+    "end": 77.05
+  },
+  "audio": {
+    "duck_ambience_db": -5.5,
+    "ambience": [
+      {"preset": "night_room", "start": 0.0, "end": 50.45, "gain_db": -5.5},
+      {"preset": "room_tone", "start": 50.45, "end": 66.95, "gain_db": -6.5},
+      {"preset": "night_room", "start": 66.95, "end": 74.35, "gain_db": -5.5},
+      {"preset": "room_tone", "start": 74.35, "end": 77.05, "gain_db": -12.0}
+    ],
+    "foley": [
+      {"file": "audio/sfx/fx_oyster_crack.wav", "at": 0.08, "gain_db": 0.5},
+      {"preset": "notification", "at": 0.40, "gain_db": -2.0},
+      {"preset": "notification", "at": 3.10, "gain_db": -4.0},
+      {"file": "audio/sfx/chatter_live_bid1.wav", "at": 5.45, "gain_db": -11.5},
+      {"file": "audio/sfx/chatter_live_cheer.wav", "at": 8.35, "gain_db": -12.0},
+      {"preset": "phone_vibrate", "at": 11.95, "dur": 0.5, "gain_db": -0.8},
+      {"preset": "click", "at": 12.35, "gain_db": 0.2},
+      {"preset": "heartbeat", "at": 18.60, "dur": 5.2, "gain_db": -1.5},
+      {"preset": "low_accent", "at": 29.25, "dur": 1.0, "gain_db": 0.6},
+      {"preset": "click", "at": 35.40, "gain_db": 0.8},
+      {"preset": "riser", "at": 35.45, "dur": 0.6, "gain_db": 1.1},
+      {"preset": "bank_ting", "at": 36.05, "gain_db": 1.6},
+      {"preset": "notification", "at": 36.85, "gain_db": 0.2},
+      {"preset": "click", "at": 51.05, "gain_db": 0.8},
+      {"preset": "message_send", "at": 51.45, "gain_db": 0.6},
+      {"preset": "low_accent", "at": 51.60, "dur": 0.9, "gain_db": 1.0},
+      {"file": "audio/sfx/fx_desk_slam.wav", "at": 52.85, "gain_db": 2.2},
+      {"preset": "impact", "at": 52.88, "dur": 0.9, "gain_db": 1.2},
+      {"preset": "call_end", "at": 53.85, "gain_db": 1.2},
+      {"preset": "glitch", "at": 55.25, "dur": 0.35, "gain_db": 1.2},
+      {"preset": "impact", "at": 55.35, "dur": 1.1, "gain_db": 2.0},
+      {"preset": "low_accent", "at": 56.05, "dur": 0.9, "gain_db": 0.8},
+      {"preset": "heartbeat", "at": 67.10, "dur": 6.8, "gain_db": -1.0},
+      {"preset": "click", "at": 68.10, "gain_db": 0.7},
+      {"preset": "message_send", "at": 70.20, "gain_db": 0.8},
+      {"preset": "riser", "at": 70.25, "dur": 0.75, "gain_db": 1.4},
+      {"file": "audio/sfx/fx_door_burst_raid.wav", "at": 71.00, "gain_db": 2.4},
+      {"preset": "impact", "at": 71.05, "dur": 1.0, "gain_db": 1.8},
+      {"preset": "low_accent", "at": 72.05, "dur": 0.9, "gain_db": 0.8},
+      {"preset": "impact", "at": 74.18, "dur": 1.3, "gain_db": 2.6}
+    ],
+    "bgm": [
+      {"preset": "suspense_pulse", "start": 0.0, "end": 34.95, "gain_db": -1.5},
+      {"preset": "action_climax", "start": 34.95, "end": 37.55, "gain_db": 0.6},
+      {"preset": "tension_drone", "start": 37.55, "end": 55.25, "gain_db": 0.6},
+      {"preset": "investigative_story", "start": 55.25, "end": 62.65, "gain_db": 1.0},
+      {"preset": "warm_outro", "start": 62.65, "end": 66.95},
+      {"preset": "tension_drone", "start": 66.95, "end": 74.35, "gain_db": 1.8}
+    ],
+    "duck_extra": [
+      {"start": 66.95, "end": 74.25, "bgm_db": -2.0, "amb_db": -3.0}
+    ]
+  },
+  "forbidden_terms": [],
+  "publish": {
+    "titles": [
+      "Ai cũng biết chuyển trước là lừa — sao mở trai trúng 1 tỷ 7 vẫn cố tin? Và 7 giây cuối! #shorts #bóctrầnlừađảo",
+      "Lỡ chụp vội 1 tấm ảnh khay ngọc: Ông sếp đập bàn chặn máy... nhưng đã trễ 1 giây! #shorts #cảnhgiáclừađảo",
+      "Từ 399 ngàn lên 4 triệu rồi 14 triệu: Bẫy tâm lý livestream mở trai tìm ngọc! #shorts #vạnchuyện"
+    ],
+    "description": "Hầu như ai cũng thuộc lòng câu \"bắt chuyển tiền trước là lừa\" — vậy tại sao nhiều người vẫn bấm chuyển hàng triệu, hàng chục triệu trên các phiên livestream mở trai tìm ngọc, cắt đá trúng thưởng?\n\nĐiểm đáng sợ nằm ở bẫy tâm lý trước khoảnh khắc chuyển tiền: bỏ số tiền rất nhỏ, tự tay chọn số, tận mắt thấy tách sống trước camera, cộng thêm bình luận tranh mua khiến nạn nhân tin chắc viên ngọc là tài sản của chính mình. Khi kẻ gian đổi vỏ thành \"ký quỹ mở hạn mức thu mua\" rồi đẻ tiếp \"phí đổi ngoại tệ\", nỗi sợ tiếc cơ hội đổi đời dễ dàng đánh gục lý trí.\n\n✅ Nhớ kỹ để không sập bẫy:\n1. Trúng thưởng hay thu mua thật luôn trừ thẳng vào tiền trả — không bao giờ bắt người trúng chuyển tiền túi trước.\n2. Tuyệt đối không chuyển phí dưới mọi tên gọi (ký quỹ, thanh khoản, đổi ngoại tệ...).\n3. Lỡ chuyển đợt đầu phải dừng cắt lỗ ngay, lưu tin nhắn và biên lai để trình báo cơ quan công an.\n4. Cảnh giác bẫy lừa lần hai từ các tài khoản tự xưng \"hỗ trợ lấy lại tiền\".",
+    "pinned_comment": "📌 Đáng sợ nhất không phải vì người bị lừa không biết \"chuyển tiền trước là lừa\" — mà vì khi tự tay chọn và tận mắt thấy, ai cũng dễ mắc bẫy tâm lý: \"Có vài triệu mà bỏ cả tỷ thì tiếc cả đời sao?\". Nhớ gửi cho bố mẹ, người thân: trúng thưởng hay thu mua thật thì trừ thẳng vào tiền trả, tuyệt đối không đóng bất kỳ khoản phí nào trước!\n⚠️ Lưu ý: Tình tiết 7 giây cuối là kịch tính hư cấu của nhân vật; ngoài đời tuyệt đối KHÔNG tự chuyển tiền thử hay tự lần theo kẻ lừa đảo — thấy đòi đóng phí là dừng và trình báo cơ quan công an ngay!",
+    "hashtags": [
+      "#shorts",
+      "#bóctrầnlừađảo",
+      "#cảnhgiáclừađảo"
+    ],
+    "tags": [
+      "mở trai tìm ngọc lừa đảo",
+      "bẫy tâm lý lừa đảo livestream",
+      "chuyển tiền trước là lừa",
+      "phí thanh khoản đổi ngoại tệ",
+      "bóc trần lừa đảo",
+      "vạn chuyện",
+      "shorts"
+    ],
+    "category": "Education (Giáo dục)",
+    "playlist": "Bóc Trần Lừa Đảo – Kỹ Năng Cảnh Giác & An Toàn Đời Thực",
+    "thumbnail_sec": 52.85
+  }
+}

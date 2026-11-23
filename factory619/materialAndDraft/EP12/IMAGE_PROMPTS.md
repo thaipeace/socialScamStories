@@ -1,0 +1,28 @@
+# EP12 (V3) – Image Prompts (`MoTraiTimNgoc` · Mở Trai Tìm Ngọc Trên Livestream)
+
+Tất cả ảnh dọc `9:16` (`1080×1920`), phong cách `clean-line semi-realistic cinematic 2D anime illustration` đồng bộ tuyệt đối với `EP04` (tạo hình Cô Tư) và `EP11` (nét vẽ & ánh sáng chuẩn kênh).
+
+**Quy tắc bắt buộc (chèn vào mọi prompt):** `no text, no letters, no numbers, no logos, no brand names, no readable app UI, no real police uniforms or insignia, no blood, no gore`.
+
+**Khóa đồng nhất nhân vật & bối cảnh:**
+- **Cô Tư (`co_tu`):** Phụ nữ Việt Nam ~50 tuổi (tham chiếu tạo hình `EP04/assets/scene2.jpg`), tóc đen búi gọn sau gáy có vài lọn mềm hai bên thái dương, hoa tai ngọc nhỏ, mặc **áo bà ba hoa nhí nền xanh ngọc đậm nhã nhặn** (không tạp dề vì đang ở nhà buổi tối), gương mặt hiền hậu tự nhiên.
+- **Phòng khách Cô Tư (`s2, s3, s4, s5, s8, s9a`):** Phòng khách nhà phố Việt Nam buổi tối (~21h), tường kem ấm, đèn tường vàng dịu mờ, sofa gỗ đệm kem, bàn trà gỗ nhỏ **chỉ có ly nước lọc & bình trà — TUYỆT ĐỐI không cài điện thoại thứ 2, không sổ sách, không đạo cụ trinh thám từ `s1` đến `s5`**.
+- **Phòng livestream ổ lừa đảo (`s6, s6_reveal, s9b`):** Phòng kín tối tương phản ánh trắng chói của đèn vòng (`ring-light`), bàn kim loại/gỗ đặt khay nước chứa vỏ sò trai và 4 viên ngọc trắng sáng bên mảnh giấy trắng; **góc rìa bàn có tờ hóa đơn giấy trắng nhàu nhẹ đặt cạnh ly trà đá nhựa**; bàn sát bên có **ông sếp trung niên mặc áo polo tối màu** (không vest đen) cùng **gã nhân viên đeo tai nghe mặc áo thun**.
+
+---
+
+## Danh sách Asset (`assets/` — 11 cảnh + biến thể Living-Character + Reveal + 2.5D Parallax)
+
+1. `assets/s1.jpg` — **HOOK (`00.0–04.8s`, Level C `slow_push_in` + `screen_glow`):** POV trực diện màn hình livestream dọc trong phòng khách tối: dưới đèn vòng sáng rực, đôi tay đeo găng trắng tách sống con trai ướt bóng làm lộ **4 viên ngọc trắng tròn lấp lánh**; viền màn hình có mưa tim hồng & biểu tượng mắt xem trừu tượng (không chữ/số/logo).
+2. `assets/s2.jpg` (+ Living-Char `s2_cotu_blink.jpg`, `s2_cotu_mouth_closed.jpg`, `s2_cotu_mouth_open.jpg`) — **Cá cắn câu (`04.8–10.8s`, Level C `pan_right`):** Cô Tư ngồi một mình trên sofa phòng khách tối, ôm đúng 1 chiếc điện thoại, ánh sáng live hắt lên mắt mở to kinh ngạc, tay trái đặt nhẹ lên ngực đầy phấn khởi; bàn trà chỉ có ly nước & bình trà.
+3. `assets/s3.jpg` (+ Living-Char `s3_cotu_blink.jpg`, `s3_cotu_mouth_closed.jpg`, `s3_cotu_mouth_open.jpg`) — **Lý trí đấu bẫy tâm lý (`10.8–24.5s`, Level C `slow_pull_out` + `screen_glow`):** Cùng phòng khách & áo bà ba, Cô Tư bật loa ngoài cầm điện thoại trước mặt, đôi mày nhíu lại đầy ngập ngừng đắn đo khi ánh xanh cuộc gọi lấn dần đèn vàng ấm.
+4. `assets/s4.jpg` — **Bấm chuyển `4 triệu` (`24.5–27.2s`, Level C `pan_left` + `shakes` + `screen_glow`):** Cận bàn tay Cô Tư hơi run đặt trên mặt bàn gỗ, ngón tay ấn xuống nút xác nhận màu xanh trên màn hình chuyển khoản trừu tượng (không chữ/số/logo ngân hàng).
+5. `assets/s5.jpg` (+ Living-Char `s5_cotu_blink.jpg`, `s5_cotu_mouth_closed.jpg`, `s5_cotu_mouth_open.jpg`) — **Đòi tiếp `14 triệu` & câu "chụp liền" (`27.2–36.2s`, Level C `tense_push` + `screen_glow`):** Cận chặt gương mặt Cô Tư lo lắng, bối rối thật sự tay ôm điện thoại gần ngực đang nói gấp qua loa ngoài, ánh đèn lạnh hơn.
+6. `assets/s6.jpg` + `assets/s6_reveal.jpg` — **Phòng lừa đảo lộ góc bàn & sếp đập bàn (`36.2–41.2s`, Level C `pan_right` + `detail_reveal` + `shakes`):** Gã nhân viên đeo tai nghe mừng rơn giơ điện thoại chụp vội khay 4 viên ngọc dưới đèn vòng, vô tình dính **tờ hóa đơn giấy trắng nhàu bên cạnh ly trà đá ở mép bàn**; ngay bên cạnh, **ông sếp áo polo tối màu** mắt quắc sắc lạnh đập mạnh tay xuống bàn với tới giật điện thoại (`s6_reveal.jpg` đồng khung pixel 100%, bật sáng vòng đỏ khoanh nổi tờ hóa đơn ở mép bàn).
+7. `assets/s7.jpg` + `assets/s7_reveal.jpg` — **Lật tẩy 1 câu (`41.2–48.0s`, Level C `slow_push_in` + `detail_reveal` + `focus_highlight`):** Đồ họa điện ảnh không chữ: đèn vòng livestream nứt vỡ trên nền xanh đêm, 4 viên ngọc trên đỉnh kéo xuống chuỗi vòng bẫy đỏ khóa chặt chiếc điện thoại & ví tiền đang cạn (`s7_reveal.jpg` đồng khung bật sáng đường mũi tên đỏ xuyên tâm bẫy).
+8. `assets/s8.jpg` — **Nền Thẻ `NHỚ KỸ` (`48.0–52.3s`, Level A `static_hold`):** Cùng phòng khách Cô Tư buổi tối ánh đèn vàng ấm dịu, lấy nét mềm hậu cảnh, chiếc điện thoại nằm úp trên bàn cạnh tách trà nóng cho thẻ bán trong suốt nổi bật rõ chữ.
+9. `assets/s9a.jpg` (+ `assets/s9a_cotu_blink.jpg` + `assets/s9a_reveal.jpg`) — **Kết mở 1: Cú lật thân phận Cô Tư (`52.3–56.3s`, Level C `slow_pull_out` + `eye_blink` + `detail_reveal`):** Cùng phòng khách & áo bà ba đó vài giây sau: toàn bộ nét hoảng hốt trên mặt Cô Tư tắt ngấm — ánh mắt lạnh sắc điềm tĩnh cực ngầu nhìn xuống chiếc điện thoại duy nhất trên tay đang phóng to góc tấm ảnh khay ngọc (`s9a_reveal.jpg` đồng khung bật vòng sáng xanh-đỏ phóng đại rõ mép tờ hóa đơn dính trên góc bàn).
+10. `assets/s9b.jpg` + `assets/s9b_bg.jpg` + `assets/s9b_fg.png` — **Kết mở 2: Ổ đèn vòng bị ập vào (`56.3–59.8s`, Level B 2.5D Parallax `push_in` + `light_shift` + `shakes`):** Cùng phòng livestream đèn vòng ở `s6`:
+    - `s9b_bg.jpg`: Hậu cảnh ánh đèn chớp xanh–đỏ quét mạnh qua rèm cửa + cánh cửa bật tung (chỉ bóng ngược sáng, tuyệt đối không sắc phục/phù hiệu thật), ông sếp áo polo & gã nhân viên giật bắn quay đầu lại.
+    - `s9b_fg.png` (RGBA tách nền trong suốt): Tiền cảnh bàn khay nước sò trai với đôi tay đeo găng trắng giật bắn đánh rơi con dao tách vỏ văng nước, 4 viên ngọc trắng lăn tung tóe trên bàn.
+11. `assets/s10_black.jpg` — **Nền đen `#080A0E` cho bảng `LƯU Ý` (`59.8–62.5s`, Level A `static_hold`).**
