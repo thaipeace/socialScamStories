@@ -1,0 +1,114 @@
+{
+  "episode_id": "EP11",
+  "factory": "factory619",
+  "gate": "GATE_5_RENDER_AND_QA",
+  "staging_mp4_path": "factory619/staging/EP11/EP11_DamDongMatDayChuyen_63s_staging.mp4",
+  "file_size_mb": 41.96,
+  "stream_probe": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "codec_name": "h264",
+        "codec_type": "video",
+        "width": 1080,
+        "height": 1920,
+        "r_frame_rate": "30/1"
+      },
+      {
+        "codec_name": "aac",
+        "codec_type": "audio",
+        "sample_rate": "48000",
+        "channels": 2,
+        "r_frame_rate": "0/0"
+      }
+    ],
+    "format": {
+      "duration": "62.600000",
+      "size": "44002113"
+    }
+  },
+  "all_8_points_passed": true,
+  "checklist": [
+    {
+      "id": 1,
+      "name": "Không định danh người / tổ chức / số thật",
+      "status": "PASS",
+      "evidence": "Cấm cứng: 0; cảnh báo: 0; SĐT: 0; URL: 0; dãy số TK: 0"
+    },
+    {
+      "id": 2,
+      "name": "Không hướng dẫn thủ đoạn chi tiết (chỉ bóc trần cơ chế tâm lý & dấu hiệu)",
+      "status": "PASS",
+      "evidence": "Người duyệt: User. Duyet ban v4-multigen-festival-level2 len Production"
+    },
+    {
+      "id": 3,
+      "name": "Sạch từ khóa thuật toán (ASR/OCR/metadata)",
+      "status": "PASS",
+      "evidence": "Cấm cứng: 0; cảnh báo: 0"
+    },
+    {
+      "id": 4,
+      "name": "Hình ảnh & chuyển động an toàn: không logo/giao diện/sắc phục thật, không máu me, motion mượt đúng nhịp & giữ continuity (QC 11 điểm)",
+      "status": "PASS",
+      "evidence": "Người duyệt: User. Duyet ban v4-multigen-festival-level2 len Production"
+    },
+    {
+      "id": 5,
+      "name": "Tôn trọng nạn nhân, không kỳ thị vùng miền / dân tộc / nghề nghiệp / tuổi tác",
+      "status": "PASS",
+      "evidence": "Người duyệt: User. Duyet ban v4-multigen-festival-level2 len Production"
+    },
+    {
+      "id": 6,
+      "name": "Âm thanh: thoại rõ, master đúng chuẩn, đã nghe duyệt",
+      "status": "PASS",
+      "evidence": "Master peak -1.09 dBFS / 62.6s; thoại vừa cửa sổ: True; đã nghe duyệt: True"
+    },
+    {
+      "id": 7,
+      "name": "Safe Zone (9:16) + Disclaimer + Thẻ Dấu hiệu nhận biết",
+      "status": "PASS",
+      "evidence": "Overlay trong Safe Zone: True; disclaimer: 1; thẻ dấu hiệu: 2 ý"
+    },
+    {
+      "id": 8,
+      "name": "Nhịp & Hook",
+      "status": "PASS",
+      "evidence": "Hook bắt đầu 0.2s; thời lượng 62.6s (file 62.60s)"
+    }
+  ],
+  "motion_qc": {
+    "is_level2": true,
+    "effective_level_counts": {
+      "A": 5,
+      "B": 1,
+      "C": 7,
+      "D": 0
+    },
+    "declared_level_counts": {
+      "A": 5,
+      "B": 1,
+      "C": 7,
+      "D": 0
+    },
+    "has_highlights": true,
+    "zoom_repetition_streaks": [],
+    "shake_scenes": 3,
+    "fallbacks": [],
+    "sfx_sync": {
+      "synced": [
+        "s2_bi_vay_chan_nhieu_nguoi:shake@5.25s",
+        "s4_live_giat_chop_nhoang:shake@16.75s",
+        "s7_phat_hien_mat_day_chuyen:shake@25.45s",
+        "s7_phat_hien_mat_day_chuyen:light_shift@25.40s",
+        "s9_boc_tran_1_cau_chot:detail_reveal@39.85s",
+        "s11b_qua_vai_dao_dien_ao_polo:screen_glow@56.00s"
+      ],
+      "unsynced": []
+    },
+    "warnings": [],
+    "point4_human_signed": true
+  }
+}

@@ -1,0 +1,1306 @@
+{
+  "episode_id": "EP11",
+  "factory": "factory619",
+  "gate": "GATE_4_TIMELINE_SAFE_ZONE",
+  "preview_only": false,
+  "canvas": {
+    "width": 1080,
+    "height": 1920,
+    "fps": 30,
+    "aspect_ratio": "9:16",
+    "total_frames": 1878,
+    "total_duration_sec": 62.6
+  },
+  "safe_zone_rules": {
+    "left_x": 80,
+    "right_x": 920,
+    "max_y": 1420,
+    "top_hook_y": 170,
+    "platform_ui_bottom_y": 1440,
+    "all_overlays_compliant": true
+  },
+  "motion_summary": {
+    "hardware_profile": "low_ram_cpu_l480",
+    "safe_motion_mode": false,
+    "is_level2": true,
+    "declared_level_counts": {
+      "A": 5,
+      "B": 1,
+      "C": 7,
+      "D": 0
+    },
+    "effective_level_counts": {
+      "A": 5,
+      "B": 1,
+      "C": 7,
+      "D": 0
+    },
+    "fallbacks": [],
+    "detail_warnings": [],
+    "zoom_streaks": [],
+    "shake_scenes": 3,
+    "sfx_sync": {
+      "synced": [
+        "s2_bi_vay_chan_nhieu_nguoi:shake@5.25s",
+        "s4_live_giat_chop_nhoang:shake@16.75s",
+        "s7_phat_hien_mat_day_chuyen:shake@25.45s",
+        "s7_phat_hien_mat_day_chuyen:light_shift@25.40s",
+        "s9_boc_tran_1_cau_chot:detail_reveal@39.85s",
+        "s11b_qua_vai_dao_dien_ao_polo:screen_glow@56.00s"
+      ],
+      "unsynced": []
+    },
+    "warnings": []
+  },
+  "scenes": [
+    {
+      "id": "s1_ngay_hoi_dong_nghet",
+      "image": "assets/v4_s1.jpg",
+      "start": 0.0,
+      "end": 5.0,
+      "beat_type": "establishing",
+      "motion_level": "C",
+      "motion_intent": "Quét ngang mở lối đi ngày hội đông nghẹt đa thế hệ (ông bà tóc bạc áo bà ba nón lá, chú lao động, cô mặc áo lụa), Living-Character Anh Hai thoại l1 & cả hai chớp mắt",
+      "motion": {
+        "preset": "pan_right",
+        "scale": [
+          1.06,
+          1.06
+        ],
+        "focus": [
+          [
+            0.46,
+            0.5
+          ],
+          [
+            0.54,
+            0.5
+          ]
+        ],
+        "wobble": "breathe",
+        "easing": "smoothstep"
+      },
+      "detail_fx": [
+        {
+          "type": "eye_blink",
+          "image": "assets/v4_s1_anhhai_blink.jpg",
+          "region": [
+            0.626,
+            0.414,
+            0.735,
+            0.448
+          ],
+          "feather": 0.007,
+          "times": [
+            2.4
+          ],
+          "close_dur": 0.055,
+          "hold_dur": 0.045,
+          "open_dur": 0.085
+        },
+        {
+          "type": "eye_blink",
+          "image": "assets/v4_s1_chiba_blink.jpg",
+          "region": [
+            0.348,
+            0.444,
+            0.461,
+            0.478
+          ],
+          "feather": 0.007,
+          "times": [
+            3.5
+          ],
+          "close_dur": 0.055,
+          "hold_dur": 0.045,
+          "open_dur": 0.085
+        },
+        {
+          "type": "mouth_sync",
+          "speaker": "anh_hai",
+          "region": [
+            0.654,
+            0.451,
+            0.726,
+            0.48
+          ],
+          "feather": 0.006,
+          "mid_image": "assets/v4_s1_anhhai_mouth_mid.jpg",
+          "open_image": "assets/v4_s1_anhhai_mouth_open.jpg",
+          "fps": 12,
+          "thresh_mid": 0.14,
+          "thresh_open": 0.68
+        }
+      ]
+    },
+    {
+      "id": "s2_bi_vay_chan_nhieu_nguoi",
+      "image": "assets/v4_s2.jpg",
+      "start": 5.0,
+      "end": 12.6,
+      "beat_type": "suspicion",
+      "motion_level": "C",
+      "motion_intent": "Đẩy chậm vào vòng vây đa lứa tuổi (thanh niên va chạm, chú trung niên áo ca-rô chặn bên trái, phụ nữ áo kem + cô trung niên áo hoa bên phải), rung đúng cú va vai & Living-Character song thoại l2 -> l3",
+      "motion": {
+        "preset": "slow_push_in",
+        "scale": [
+          1.02,
+          1.1
+        ],
+        "focus": [
+          [
+            0.5,
+            0.5
+          ],
+          [
+            0.5,
+            0.47
+          ]
+        ],
+        "wobble": "breathe",
+        "easing": "ease_out"
+      },
+      "detail_fx": [
+        {
+          "type": "eye_blink",
+          "image": "assets/v4_s2_bumper_blink.jpg",
+          "region": [
+            0.239,
+            0.428,
+            0.348,
+            0.467
+          ],
+          "feather": 0.007,
+          "times": [
+            6.9,
+            10.9
+          ],
+          "close_dur": 0.055,
+          "hold_dur": 0.045,
+          "open_dur": 0.085
+        },
+        {
+          "type": "eye_blink",
+          "image": "assets/v4_s2_chiba_blink.jpg",
+          "region": [
+            0.444,
+            0.441,
+            0.58,
+            0.48
+          ],
+          "feather": 0.008,
+          "times": [
+            7.8,
+            11.4
+          ],
+          "close_dur": 0.055,
+          "hold_dur": 0.045,
+          "open_dur": 0.085
+        },
+        {
+          "type": "eye_blink",
+          "image": "assets/v4_s2_woman_blink.jpg",
+          "region": [
+            0.683,
+            0.445,
+            0.791,
+            0.483
+          ],
+          "feather": 0.007,
+          "times": [
+            9.6
+          ],
+          "close_dur": 0.055,
+          "hold_dur": 0.045,
+          "open_dur": 0.085
+        },
+        {
+          "type": "mouth_sync",
+          "speaker": "ke_ngot_ngao_nam",
+          "region": [
+            0.261,
+            0.47,
+            0.339,
+            0.506
+          ],
+          "feather": 0.007,
+          "closed_image": "assets/v4_s2_bumper_mouth_closed.jpg",
+          "mid_image": "assets/v4_s2.jpg",
+          "open_image": "assets/v4_s2_bumper_mouth_open.jpg",
+          "fps": 12,
+          "thresh_mid": 0.14,
+          "thresh_open": 0.68
+        },
+        {
+          "type": "mouth_sync",
+          "speaker": "ke_ngot_ngao_nu",
+          "region": [
+            0.689,
+            0.486,
+            0.767,
+            0.522
+          ],
+          "feather": 0.007,
+          "closed_image": "assets/v4_s2_woman_mouth_closed.jpg",
+          "mid_image": "assets/v4_s2.jpg",
+          "open_image": "assets/v4_s2_woman_mouth_open.jpg",
+          "fps": 12,
+          "thresh_mid": 0.14,
+          "thresh_open": 0.68
+        }
+      ],
+      "shakes": [
+        {
+          "at": 5.25,
+          "amp": 20
+        }
+      ],
+      "transition_in": {
+        "type": "cut",
+        "dur": 0.0
+      }
+    },
+    {
+      "id": "s3_xoay_dau_ap_sat",
+      "image": "assets/v4_s3.jpg",
+      "start": 12.6,
+      "end": 16.5,
+      "beat_type": "suspicion",
+      "motion_level": "C",
+      "motion_intent": "Cận chặt ngột ngạt khi Chị Ba xoay đầu chỉ đường (l4) khớp Living-Character & người đàn ông trung niên áo xanh than áp sát sau gáy giữa biển người già trẻ",
+      "motion": {
+        "preset": "tense_push",
+        "scale": [
+          1.03,
+          1.11
+        ],
+        "focus": [
+          [
+            0.5,
+            0.5
+          ],
+          [
+            0.52,
+            0.48
+          ]
+        ],
+        "wobble": "tense",
+        "easing": "ease_in"
+      },
+      "detail_fx": [
+        {
+          "type": "eye_blink",
+          "image": "assets/v4_s3_chiba_blink.jpg",
+          "region": [
+            0.467,
+            0.508,
+            0.648,
+            0.554
+          ],
+          "feather": 0.008,
+          "times": [
+            14.6
+          ],
+          "close_dur": 0.055,
+          "hold_dur": 0.045,
+          "open_dur": 0.085
+        },
+        {
+          "type": "mouth_sync",
+          "speaker": "chi_ba",
+          "region": [
+            0.52,
+            0.575,
+            0.631,
+            0.622
+          ],
+          "feather": 0.007,
+          "closed_image": "assets/v4_s3_chiba_mouth_closed.jpg",
+          "mid_image": "assets/v4_s3.jpg",
+          "open_image": "assets/v4_s3_chiba_mouth_open.jpg",
+          "fps": 12,
+          "thresh_mid": 0.14,
+          "thresh_open": 0.68
+        }
+      ],
+      "transition_in": {
+        "type": "cut",
+        "dur": 0.0
+      }
+    },
+    {
+      "id": "s4_live_giat_chop_nhoang",
+      "image": "assets/v4_s4.jpg",
+      "start": 16.5,
+      "end": 19.3,
+      "beat_type": "climax",
+      "motion_level": "C",
+      "motion_intent": "Hành động trực tiếp màu tươi ngày hội: quét gấp + rung khớp cú giật dây chuyền & ánh lóe vàng chớp nhoáng giữa cụ bà cầm quạt và dòng người",
+      "motion": {
+        "preset": "pan_right",
+        "scale": [
+          1.07,
+          1.07
+        ],
+        "focus": [
+          [
+            0.46,
+            0.5
+          ],
+          [
+            0.54,
+            0.5
+          ]
+        ],
+        "wobble": "tense",
+        "easing": "ease_out"
+      },
+      "detail_fx": [
+        {
+          "type": "screen_glow",
+          "pos": [
+            0.65,
+            0.52
+          ],
+          "radius": [
+            0.22,
+            0.14
+          ],
+          "color": [
+            255,
+            225,
+            110
+          ],
+          "intensity": 0.34,
+          "mode": "pulse",
+          "start": 16.65,
+          "end": 19.2,
+          "fade": 0.15
+        }
+      ],
+      "shakes": [
+        {
+          "at": 16.75,
+          "amp": 26
+        }
+      ],
+      "transition_in": {
+        "type": "cut",
+        "dur": 0.0
+      }
+    },
+    {
+      "id": "s5_live_chuyen_tay_tuc_thi",
+      "image": "assets/v4_s5.jpg",
+      "start": 19.3,
+      "end": 22.3,
+      "beat_type": "climax",
+      "motion_level": "C",
+      "motion_intent": "Hành động trực tiếp màu tươi: người trung niên áo xanh than lướt qua bác lớn tuổi tóc bạc đeo kính ăn mặc chỉnh tề chuyền tay vệt sáng vàng giữa cụ bà áo bà ba, cô nón lá và cặp đôi khá giả",
+      "motion": {
+        "preset": "pan_left",
+        "scale": [
+          1.06,
+          1.06
+        ],
+        "focus": [
+          [
+            0.54,
+            0.54
+          ],
+          [
+            0.46,
+            0.54
+          ]
+        ],
+        "wobble": "none",
+        "easing": "smoothstep"
+      },
+      "detail_fx": [
+        {
+          "type": "screen_glow",
+          "pos": [
+            0.51,
+            0.71
+          ],
+          "radius": [
+            0.15,
+            0.1
+          ],
+          "color": [
+            255,
+            220,
+            100
+          ],
+          "intensity": 0.34,
+          "mode": "pulse",
+          "start": 19.65,
+          "end": 22.2,
+          "fade": 0.18
+        }
+      ],
+      "transition_in": {
+        "type": "cut",
+        "dur": 0.0
+      }
+    },
+    {
+      "id": "s6_live_tan_vao_bien_nguoi",
+      "image": "assets/v4_s6.jpg",
+      "start": 22.3,
+      "end": 25.3,
+      "beat_type": "aftermath",
+      "motion_level": "A",
+      "motion_intent": "Kéo lùi góc cao giữa phố hội đa thế hệ (cụ ông cụ bà nón lá, áo dài, bình dân, trẻ em) cho thấy 4 đối tượng tản bộ 4 hướng hòa tan vào dòng người",
+      "motion": {
+        "preset": "slow_pull_out",
+        "scale": [
+          1.09,
+          1.01
+        ],
+        "focus": [
+          [
+            0.5,
+            0.52
+          ],
+          [
+            0.5,
+            0.5
+          ]
+        ],
+        "wobble": "none",
+        "easing": "smoothstep"
+      },
+      "transition_in": {
+        "type": "dissolve",
+        "dur": 0.2
+      }
+    },
+    {
+      "id": "s7_phat_hien_mat_day_chuyen",
+      "image": "assets/v4_s7.jpg",
+      "start": 25.3,
+      "end": 34.1,
+      "beat_type": "climax",
+      "motion_level": "C",
+      "motion_intent": "Rơi im lặng đột ngột: cận Chị Ba sững người chạm cổ trống trơn (l5) & Anh Hai ngoái tìm (l6) giữa biển người lớn tuổi và trung niên, Living-Character & hạ tông nhẹ",
+      "motion": {
+        "preset": "tense_push",
+        "scale": [
+          1.03,
+          1.11
+        ],
+        "focus": [
+          [
+            0.5,
+            0.52
+          ],
+          [
+            0.5,
+            0.49
+          ]
+        ],
+        "wobble": "tense",
+        "easing": "ease_in"
+      },
+      "detail_fx": [
+        {
+          "type": "eye_blink",
+          "image": "assets/v4_s7_chiba_blink.jpg",
+          "region": [
+            0.593,
+            0.49,
+            0.787,
+            0.536
+          ],
+          "feather": 0.008,
+          "times": [
+            27.9,
+            32.1
+          ],
+          "close_dur": 0.055,
+          "hold_dur": 0.045,
+          "open_dur": 0.085
+        },
+        {
+          "type": "eye_blink",
+          "image": "assets/v4_s7_anhhai_blink.jpg",
+          "region": [
+            0.269,
+            0.49,
+            0.424,
+            0.537
+          ],
+          "feather": 0.007,
+          "times": [
+            29.4,
+            33.1
+          ],
+          "close_dur": 0.055,
+          "hold_dur": 0.045,
+          "open_dur": 0.085
+        },
+        {
+          "type": "mouth_sync",
+          "speaker": "chi_ba",
+          "region": [
+            0.643,
+            0.544,
+            0.741,
+            0.592
+          ],
+          "feather": 0.007,
+          "closed_image": "assets/v4_s7_chiba_mouth_closed.jpg",
+          "mid_image": "assets/v4_s7.jpg",
+          "open_image": "assets/v4_s7_chiba_mouth_open.jpg",
+          "fps": 12,
+          "thresh_mid": 0.14,
+          "thresh_open": 0.68
+        },
+        {
+          "type": "mouth_sync",
+          "speaker": "anh_hai",
+          "region": [
+            0.319,
+            0.549,
+            0.407,
+            0.593
+          ],
+          "feather": 0.007,
+          "closed_image": "assets/v4_s7_anhhai_mouth_closed.jpg",
+          "mid_image": "assets/v4_s7.jpg",
+          "open_image": "assets/v4_s7_anhhai_mouth_open.jpg",
+          "fps": 12,
+          "thresh_mid": 0.14,
+          "thresh_open": 0.68
+        },
+        {
+          "type": "light_shift",
+          "at": 25.4,
+          "dur": 0.25,
+          "brightness": 0.94,
+          "tint_rgb": [
+            175,
+            200,
+            235
+          ],
+          "tint_strength": 0.08
+        }
+      ],
+      "shakes": [
+        {
+          "at": 25.45,
+          "amp": 22
+        }
+      ],
+      "transition_in": {
+        "type": "cut",
+        "dur": 0.0
+      }
+    },
+    {
+      "id": "s8_bien_nguoi_ngay_hoi_vo_hinh",
+      "image": "assets/v4_s8.jpg",
+      "start": 34.1,
+      "end": 39.1,
+      "beat_type": "aftermath",
+      "motion_level": "A",
+      "motion_intent": "Kéo lùi toàn cảnh sân lễ hội đa thế hệ đông nghẹt 45+ khách (cụ ông chống gậy, cụ bà quạt giấy nón lá, áo dài, bình dân lẫn khá giả), Chị Ba & Anh Hai nhỏ bé bất lực (l7)",
+      "motion": {
+        "preset": "slow_pull_out",
+        "scale": [
+          1.09,
+          1.01
+        ],
+        "focus": [
+          [
+            0.5,
+            0.52
+          ],
+          [
+            0.5,
+            0.5
+          ]
+        ],
+        "wobble": "none",
+        "easing": "smoothstep"
+      },
+      "transition_in": {
+        "type": "dissolve",
+        "dur": 0.24
+      }
+    },
+    {
+      "id": "s9_boc_tran_1_cau_chot",
+      "image": "assets/v4_s9.jpg",
+      "start": 39.1,
+      "end": 47.4,
+      "beat_type": "information",
+      "motion_level": "C",
+      "motion_intent": "1 nhịp lật mặt duy nhất: đóng băng bật sáng 4 vòng đỏ chỉ rõ ê-kíp đa lứa tuổi vây kín quanh Chị Ba khớp câu chốt l8",
+      "motion": {
+        "preset": "slow_push_in",
+        "scale": [
+          1.01,
+          1.07
+        ],
+        "focus": [
+          [
+            0.5,
+            0.5
+          ],
+          [
+            0.5,
+            0.48
+          ]
+        ],
+        "wobble": "none",
+        "easing": "ease_out"
+      },
+      "detail_fx": [
+        {
+          "type": "detail_reveal",
+          "image": "assets/v4_s9_reveal.jpg",
+          "at": 39.85,
+          "dur": 0.75
+        },
+        {
+          "type": "focus_highlight",
+          "pos": [
+            0.5,
+            0.5
+          ],
+          "radius": [
+            0.46,
+            0.36
+          ],
+          "dim_outer": 0.22,
+          "start": 40.0,
+          "end": 47.3,
+          "fade": 0.35
+        }
+      ],
+      "transition_in": {
+        "type": "glitch",
+        "dur": 0.32
+      }
+    },
+    {
+      "id": "s10_the_nho_ky",
+      "image": "assets/scene6.jpg",
+      "start": 47.4,
+      "end": 51.8,
+      "beat_type": "ending",
+      "motion_level": "A",
+      "motion_intent": "Giữ tĩnh tuyệt đối trên nền nắng ấm để đọc gọn thẻ Nhớ kỹ trong 4.4 giây, không dạy đời",
+      "motion": {
+        "preset": "static_hold"
+      },
+      "transition_in": {
+        "type": "fade_black",
+        "dur": 0.28
+      }
+    },
+    {
+      "id": "s11a_nho_dan_giua_le_hoi",
+      "image": "assets/v4_s11a.jpg",
+      "start": 51.8,
+      "end": 54.4,
+      "beat_type": "aftermath",
+      "motion_level": "A",
+      "motion_intent": "Cắt lạnh câm thoại: kéo lùi bóng áo đỏ Chị Ba đứng lặng khi bà ngoại dắt cháu, cặp vợ chồng bình dân và cặp đôi khá giả vô tư đi ngang qua",
+      "motion": {
+        "preset": "slow_pull_out",
+        "scale": [
+          1.08,
+          1.01
+        ],
+        "focus": [
+          [
+            0.5,
+            0.56
+          ],
+          [
+            0.5,
+            0.54
+          ]
+        ],
+        "wobble": "none",
+        "easing": "ease_out"
+      },
+      "transition_in": {
+        "type": "cut",
+        "dur": 0.0
+      }
+    },
+    {
+      "id": "s11b_qua_vai_dao_dien_ao_polo",
+      "image": "assets/v4_s11b.jpg",
+      "start": 54.4,
+      "end": 59.9,
+      "beat_type": "climax",
+      "motion_level": "B",
+      "motion_intent": "Kết mở 2.5D pull-out từ ban công tầng trên qua bờ vai người đàn ông trung niên tóc lấm tấm bạc mặc áo polo thun đời thường (không vest đen) nhìn xuống phố hội đa thế hệ mờ dần ra xa",
+      "motion": {
+        "preset": "slow_pull_out",
+        "scale": [
+          1.09,
+          1.01
+        ],
+        "focus": [
+          [
+            0.5,
+            0.52
+          ],
+          [
+            0.5,
+            0.5
+          ]
+        ],
+        "wobble": "none"
+      },
+      "parallax": {
+        "camera": "pull_out",
+        "dolly": [
+          1.1,
+          1.01
+        ],
+        "shift_x": [
+          0.0,
+          0.0
+        ],
+        "shift_y": [
+          -4.0,
+          4.0
+        ],
+        "focus": [
+          0.5,
+          0.5
+        ],
+        "strength": 0.92,
+        "easing": "smoothstep",
+        "layers": [
+          {
+            "role": "bg",
+            "image": "assets/v4_s11b_bg.jpg",
+            "depth": 0.42,
+            "blur": 1.8
+          },
+          {
+            "role": "fg",
+            "image": "assets/v4_s11b_fg.png",
+            "depth": 1.38,
+            "blur": 0.3,
+            "breathe_y": 2.0,
+            "breathe_scale": 0.004,
+            "breathe_period": 3.6
+          }
+        ]
+      },
+      "detail_fx": [
+        {
+          "type": "screen_glow",
+          "space": "frame",
+          "pos": [
+            0.29,
+            0.59
+          ],
+          "radius": [
+            0.11,
+            0.09
+          ],
+          "color": [
+            125,
+            205,
+            255
+          ],
+          "intensity": 0.28,
+          "mode": "turn_on",
+          "start": 56.0,
+          "end": 59.8,
+          "fade": 0.3
+        },
+        {
+          "type": "focus_highlight",
+          "pos": [
+            0.4,
+            0.52
+          ],
+          "radius": [
+            0.48,
+            0.44
+          ],
+          "dim_outer": 0.24,
+          "start": 55.6,
+          "end": 59.9,
+          "fade": 0.7
+        }
+      ],
+      "transition_in": {
+        "type": "dissolve",
+        "dur": 0.45
+      }
+    },
+    {
+      "id": "s12_black_disclaimer",
+      "image": "assets/scene8_black.jpg",
+      "start": 59.9,
+      "end": 62.6,
+      "beat_type": "ending",
+      "motion_level": "A",
+      "motion_intent": "Cắt đen tĩnh tuyệt đối cho bảng Lưu ý cuối video",
+      "motion": {
+        "preset": "static_hold"
+      },
+      "transition_in": {
+        "type": "cut",
+        "dur": 0.0
+      }
+    }
+  ],
+  "subtitle_srt": "factory619/staging/EP11/subtitles/EP11.srt",
+  "video_track_noaudio": "factory619/staging/EP11/timeline_video_gate4.mp4",
+  "channel_branding": {
+    "type": "channel_branding",
+    "logo_text": "VCH",
+    "watermark_text": "VẠN CHUYỆN",
+    "safe_zone_compliant": true
+  },
+  "overlays": [
+    {
+      "id": "000_hook",
+      "start_sec": 0.2,
+      "end_sec": 4.5,
+      "fade_sec": 0.3,
+      "png_path": "factory619/staging/EP11/overlays/000_hook.png",
+      "type": "text_hook",
+      "text": "MỘT CÚ VA CHẠM GIỮA LỄ HỘI — Đông nghẹt thế này: 3 giây mất sạch dây chuyền!",
+      "bbox_px": [
+        123,
+        170,
+        877,
+        360
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "001_sub_l1",
+      "start_sec": 0.85,
+      "end_sec": 2.439,
+      "fade_sec": 0.1,
+      "png_path": "factory619/staging/EP11/overlays/001_sub_l1.png",
+      "type": "subtitle",
+      "lines": [
+        "Đông nghẹt luôn em ơi!"
+      ],
+      "bbox_px": [
+        235,
+        1324,
+        765,
+        1380
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "002_sub_l1",
+      "start_sec": 2.439,
+      "end_sec": 4.39,
+      "fade_sec": 0.1,
+      "png_path": "factory619/staging/EP11/overlays/002_sub_l1.png",
+      "type": "subtitle",
+      "lines": [
+        "Đi sát vô, coi chừng cổ áo!"
+      ],
+      "bbox_px": [
+        203,
+        1324,
+        797,
+        1380
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "003_sub_l2",
+      "start_sec": 5.35,
+      "end_sec": 6.768,
+      "fade_sec": 0.1,
+      "png_path": "factory619/staging/EP11/overlays/003_sub_l2.png",
+      "type": "subtitle",
+      "lines": [
+        "Ôi, em xin lỗi chị!"
+      ],
+      "bbox_px": [
+        303,
+        1324,
+        698,
+        1380
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "004_sub_l2",
+      "start_sec": 6.768,
+      "end_sec": 8.41,
+      "fade_sec": 0.1,
+      "png_path": "factory619/staging/EP11/overlays/004_sub_l2.png",
+      "type": "subtitle",
+      "lines": [
+        "Đông quá không kịp né!"
+      ],
+      "bbox_px": [
+        233,
+        1324,
+        768,
+        1380
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "005_sub_l3",
+      "start_sec": 8.65,
+      "end_sec": 12.43,
+      "fade_sec": 0.1,
+      "png_path": "factory619/staging/EP11/overlays/005_sub_l3.png",
+      "type": "subtitle",
+      "lines": [
+        "Chị ơi, cho em hỏi đường ra khu",
+        "vườn hoa hướng nào?"
+      ],
+      "bbox_px": [
+        143,
+        1268,
+        857,
+        1380
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "006_sub_l4",
+      "start_sec": 12.95,
+      "end_sec": 16.25,
+      "fade_sec": 0.1,
+      "png_path": "factory619/staging/EP11/overlays/006_sub_l4.png",
+      "type": "subtitle",
+      "lines": [
+        "À, em cứ đi thẳng rồi quẹo trái..."
+      ],
+      "bbox_px": [
+        148,
+        1324,
+        853,
+        1380
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "007_sub_l5",
+      "start_sec": 25.95,
+      "end_sec": 26.653,
+      "fade_sec": 0.1,
+      "png_path": "factory619/staging/EP11/overlays/007_sub_l5.png",
+      "type": "subtitle",
+      "lines": [
+        "Ủa anh..."
+      ],
+      "bbox_px": [
+        392,
+        1324,
+        608,
+        1380
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "008_sub_l5",
+      "start_sec": 26.653,
+      "end_sec": 30.09,
+      "fade_sec": 0.1,
+      "png_path": "factory619/staging/EP11/overlays/008_sub_l5.png",
+      "type": "subtitle",
+      "lines": [
+        "sợi dây chuyền vàng trên cổ em đâu",
+        "mất rồi?!"
+      ],
+      "bbox_px": [
+        105,
+        1268,
+        895,
+        1380
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "009_sub_l6",
+      "start_sec": 30.3,
+      "end_sec": 31.874,
+      "fade_sec": 0.1,
+      "png_path": "factory619/staging/EP11/overlays/009_sub_l6.png",
+      "type": "subtitle",
+      "lines": [
+        "Hả?! Nãy còn đeo mà!"
+      ],
+      "bbox_px": [
+        253,
+        1324,
+        747,
+        1380
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "010_sub_l6",
+      "start_sec": 31.874,
+      "end_sec": 33.92,
+      "fade_sec": 0.1,
+      "png_path": "factory619/staging/EP11/overlays/010_sub_l6.png",
+      "type": "subtitle",
+      "lines": [
+        "Ai mới đụng vô em đâu rồi?"
+      ],
+      "bbox_px": [
+        193,
+        1324,
+        808,
+        1380
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "011_sub_l7",
+      "start_sec": 34.55,
+      "end_sec": 35.966,
+      "fade_sec": 0.1,
+      "png_path": "factory619/staging/EP11/overlays/011_sub_l7.png",
+      "type": "subtitle",
+      "lines": [
+        "Em không nhớ mặt..."
+      ],
+      "bbox_px": [
+        266,
+        1324,
+        735,
+        1380
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "012_sub_l7",
+      "start_sec": 35.966,
+      "end_sec": 38.65,
+      "fade_sec": 0.1,
+      "png_path": "factory619/staging/EP11/overlays/012_sub_l7.png",
+      "type": "subtitle",
+      "lines": [
+        "đông quá, quay đi quay lại mất tiêu!"
+      ],
+      "bbox_px": [
+        111,
+        1324,
+        889,
+        1380
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "013_sub_l8",
+      "start_sec": 39.45,
+      "end_sec": 47.07,
+      "fade_sec": 0.1,
+      "png_path": "factory619/staging/EP11/overlays/013_sub_l8.png",
+      "type": "subtitle",
+      "lines": [
+        "Va chạm, chặn lối, hỏi chuyện,",
+        "chuyền tay — cả nhóm chia vai diễn",
+        "giữa ngày hội, không ai chạy!"
+      ],
+      "bbox_px": [
+        109,
+        1212,
+        892,
+        1380
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "014_redflags_0",
+      "start_sec": 47.4,
+      "end_sec": 47.75,
+      "fade_sec": 0.25,
+      "png_path": "factory619/staging/EP11/overlays/014_redflags_0.png",
+      "type": "red_flags",
+      "title": "NHỚ KỸ",
+      "lines": [
+        "Vừa bị va chạm, xin lỗi rề rà lại có người thứ hai chen vào hỏi chuyện ngay lúc đó",
+        "Nhiều người lạ cùng ép sát bất thường ở lối đi hẹp, khu lễ hội hoặc điểm chụp ảnh",
+        "Giấu trang sức kín trong áo · Thấy bị kẹp là đưa tay che cổ/túi, lùi khỏi dòng chen · Mất đồ hô lớn, báo bảo vệ ngay!"
+      ],
+      "bbox_px": [
+        80,
+        420,
+        920,
+        944
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "015_redflags_1",
+      "start_sec": 47.75,
+      "end_sec": 48.1,
+      "fade_sec": 0.0,
+      "png_path": "factory619/staging/EP11/overlays/015_redflags_1.png",
+      "type": "red_flags",
+      "title": "NHỚ KỸ",
+      "lines": [
+        "Vừa bị va chạm, xin lỗi rề rà lại có người thứ hai chen vào hỏi chuyện ngay lúc đó",
+        "Nhiều người lạ cùng ép sát bất thường ở lối đi hẹp, khu lễ hội hoặc điểm chụp ảnh",
+        "Giấu trang sức kín trong áo · Thấy bị kẹp là đưa tay che cổ/túi, lùi khỏi dòng chen · Mất đồ hô lớn, báo bảo vệ ngay!"
+      ],
+      "bbox_px": [
+        80,
+        420,
+        920,
+        944
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "016_redflags_2",
+      "start_sec": 48.1,
+      "end_sec": 51.8,
+      "fade_sec": 0.0,
+      "png_path": "factory619/staging/EP11/overlays/016_redflags_2.png",
+      "type": "red_flags",
+      "title": "NHỚ KỸ",
+      "lines": [
+        "Vừa bị va chạm, xin lỗi rề rà lại có người thứ hai chen vào hỏi chuyện ngay lúc đó",
+        "Nhiều người lạ cùng ép sát bất thường ở lối đi hẹp, khu lễ hội hoặc điểm chụp ảnh",
+        "Giấu trang sức kín trong áo · Thấy bị kẹp là đưa tay che cổ/túi, lùi khỏi dòng chen · Mất đồ hô lớn, báo bảo vệ ngay!"
+      ],
+      "bbox_px": [
+        80,
+        420,
+        920,
+        944
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "017_disclaimer",
+      "start_sec": 59.9,
+      "end_sec": 62.6,
+      "fade_sec": 0.25,
+      "png_path": "factory619/staging/EP11/overlays/017_disclaimer.png",
+      "type": "disclaimer",
+      "text": "Tình huống được dựng lại để cảnh báo. Nhân vật, tên, số liệu đều là hư cấu.",
+      "bbox_px": [
+        80,
+        210,
+        920,
+        340
+      ],
+      "safe_zone_compliant": true
+    }
+  ],
+  "qa_preview_frames": [
+    {
+      "timestamp_sec": 1.2,
+      "clean": "factory619/staging/EP11/preview_frames/qa_01_20s_clean.jpg",
+      "safezone": "factory619/staging/EP11/preview_frames/qa_01_20s_safezone.jpg"
+    },
+    {
+      "timestamp_sec": 2.5,
+      "clean": "factory619/staging/EP11/preview_frames/qa_02_50s_clean.jpg",
+      "safezone": "factory619/staging/EP11/preview_frames/qa_02_50s_safezone.jpg"
+    },
+    {
+      "timestamp_sec": 8.8,
+      "clean": "factory619/staging/EP11/preview_frames/qa_08_80s_clean.jpg",
+      "safezone": "factory619/staging/EP11/preview_frames/qa_08_80s_safezone.jpg"
+    },
+    {
+      "timestamp_sec": 14.55,
+      "clean": "factory619/staging/EP11/preview_frames/qa_14_55s_clean.jpg",
+      "safezone": "factory619/staging/EP11/preview_frames/qa_14_55s_safezone.jpg"
+    },
+    {
+      "timestamp_sec": 17.0,
+      "clean": "factory619/staging/EP11/preview_frames/qa_17_00s_clean.jpg",
+      "safezone": "factory619/staging/EP11/preview_frames/qa_17_00s_safezone.jpg"
+    },
+    {
+      "timestamp_sec": 17.9,
+      "clean": "factory619/staging/EP11/preview_frames/qa_17_90s_clean.jpg",
+      "safezone": "factory619/staging/EP11/preview_frames/qa_17_90s_safezone.jpg"
+    },
+    {
+      "timestamp_sec": 20.03,
+      "clean": "factory619/staging/EP11/preview_frames/qa_20_03s_clean.jpg",
+      "safezone": "factory619/staging/EP11/preview_frames/qa_20_03s_safezone.jpg"
+    },
+    {
+      "timestamp_sec": 20.8,
+      "clean": "factory619/staging/EP11/preview_frames/qa_20_80s_clean.jpg",
+      "safezone": "factory619/staging/EP11/preview_frames/qa_20_80s_safezone.jpg"
+    },
+    {
+      "timestamp_sec": 23.8,
+      "clean": "factory619/staging/EP11/preview_frames/qa_23_80s_clean.jpg",
+      "safezone": "factory619/staging/EP11/preview_frames/qa_23_80s_safezone.jpg"
+    },
+    {
+      "timestamp_sec": 25.8,
+      "clean": "factory619/staging/EP11/preview_frames/qa_25_80s_clean.jpg",
+      "safezone": "factory619/staging/EP11/preview_frames/qa_25_80s_safezone.jpg"
+    },
+    {
+      "timestamp_sec": 29.7,
+      "clean": "factory619/staging/EP11/preview_frames/qa_29_70s_clean.jpg",
+      "safezone": "factory619/staging/EP11/preview_frames/qa_29_70s_safezone.jpg"
+    },
+    {
+      "timestamp_sec": 36.6,
+      "clean": "factory619/staging/EP11/preview_frames/qa_36_60s_clean.jpg",
+      "safezone": "factory619/staging/EP11/preview_frames/qa_36_60s_safezone.jpg"
+    },
+    {
+      "timestamp_sec": 40.75,
+      "clean": "factory619/staging/EP11/preview_frames/qa_40_75s_clean.jpg",
+      "safezone": "factory619/staging/EP11/preview_frames/qa_40_75s_safezone.jpg"
+    },
+    {
+      "timestamp_sec": 43.25,
+      "clean": "factory619/staging/EP11/preview_frames/qa_43_25s_clean.jpg",
+      "safezone": "factory619/staging/EP11/preview_frames/qa_43_25s_safezone.jpg"
+    },
+    {
+      "timestamp_sec": 49.6,
+      "clean": "factory619/staging/EP11/preview_frames/qa_49_60s_clean.jpg",
+      "safezone": "factory619/staging/EP11/preview_frames/qa_49_60s_safezone.jpg"
+    },
+    {
+      "timestamp_sec": 51.3,
+      "clean": "factory619/staging/EP11/preview_frames/qa_51_30s_clean.jpg",
+      "safezone": "factory619/staging/EP11/preview_frames/qa_51_30s_safezone.jpg"
+    },
+    {
+      "timestamp_sec": 53.1,
+      "clean": "factory619/staging/EP11/preview_frames/qa_53_10s_clean.jpg",
+      "safezone": "factory619/staging/EP11/preview_frames/qa_53_10s_safezone.jpg"
+    },
+    {
+      "timestamp_sec": 56.5,
+      "clean": "factory619/staging/EP11/preview_frames/qa_56_50s_clean.jpg",
+      "safezone": "factory619/staging/EP11/preview_frames/qa_56_50s_safezone.jpg"
+    },
+    {
+      "timestamp_sec": 57.15,
+      "clean": "factory619/staging/EP11/preview_frames/qa_57_15s_clean.jpg",
+      "safezone": "factory619/staging/EP11/preview_frames/qa_57_15s_safezone.jpg"
+    },
+    {
+      "timestamp_sec": 61.25,
+      "clean": "factory619/staging/EP11/preview_frames/qa_61_25s_clean.jpg",
+      "safezone": "factory619/staging/EP11/preview_frames/qa_61_25s_safezone.jpg"
+    }
+  ]
+}
