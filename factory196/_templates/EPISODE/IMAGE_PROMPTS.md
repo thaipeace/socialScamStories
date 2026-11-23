@@ -22,5 +22,8 @@ no logos, no brand names, no real app interface, no real police/bank uniforms or
 | 09 | Hồi 4 – Bóc trần cơ chế | 04:10–04:40 | `A` (`slow_push_in`) | (kẻ lừa trong bóng tối/ánh màn hình, không lộ mặt rõ) | | ☐ |
 | 10 | Hồi 5 – Nền thẻ dấu hiệu | 04:40–05:00+ | `A` (`static_hold`, không rung) | Ảnh bối cảnh bình yên, dịu, ít chi tiết | | ☐ |
 
-Ảnh duyệt xong lưu `assets/scene01.jpg … scene10.jpg` (hoặc thêm `scene11..18.jpg` tùy độ dài phim). Với cảnh **Level B**, lưu thêm lớp `assets/sXX_bg.jpg`, `assets/sXX_mid.png` (và `assets/sXX_fg.png` nếu có); với cảnh **Level C (`detail_reveal`)**, lưu thêm ảnh đồng khung `assets/sXX_b.jpg`; với cảnh **Level D**, luôn giữ ảnh gốc `sceneXX.jpg` bên cạnh clip `.mp4` để hạ cấp an toàn nếu cần.
+Ảnh duyệt xong lưu `assets/scene01.jpg … scene10.jpg` (hoặc thêm `scene11..18.jpg` tùy độ dài phim).
+- **Living-Character A/B/C chọn lọc (mặc định cho 3–5 cảnh cận/trung cận thoại đắt giá):** tạo thêm biến thể khóa khung `assets/sceneXX_blink.jpg` (chớp mắt), và với cảnh cận có thoại trực diện tạo thêm `assets/sceneXX_mouth_closed.jpg`, `assets/sceneXX_mouth_open.jpg` (xử lý căn pixel + cân màu da qua `03_ENGINE/face_roi_prep.py` và duyệt bảng QC cận mặt trước khi render).
+- **Level B (2.5D + Breathing):** lưu thêm `assets/sXX_bg.jpg`, `assets/sXX_fg.png` (gắn `breathe_y`/`breathe_period` và khóa `eye_blink`/`mouth_sync` theo `layer` nếu phù hợp).
+- **Level C (`detail_reveal`):** lưu thêm ảnh đồng khung `assets/sXX_b.jpg`. **Level D:** luôn giữ ảnh gốc `sceneXX.jpg` bên cạnh clip `.mp4` để hạ cấp an toàn nếu cần.
 

@@ -52,10 +52,10 @@
 | `fade_black` (0.4s) | Vào THẺ DẤU HIỆU |
 | `flash_white`, `cut` | Tùy ý (ưu tiên `cut` gọn khi tiết lộ thông tin quan trọng) |
 
-- **Phân cấp Motion cho Short 9:16 (~55–70s):**
-  - **Level A (nền tảng):** Đa dạng hóa `motion.preset` (`slow_push_in`, `slow_pull_out`, `pan_left`, `pan_right`, `drift_up`, `static_hold`) — **cấm lặp zoom-in máy móc ≥ 3 cảnh liên tiếp**; giữ `wobble: "none"` mặc định cho cảnh thường/kết, chỉ dùng `handheld`/`tense` và `shakes` đúng điểm cao trào khớp foley.
-  - **Level B (2.5D parallax):** Chọn 1–2 cảnh đắt giá có chiều sâu phù hợp (tách lớp `bg` + `subject` + `fg` tùy chọn), không bắt buộc nếu nguồn hình chưa phù hợp.
-  - **Level C (Object/Detail motion):** Rất hiệu quả trên khung dọc 9:16 cho điện thoại sáng màn hình (`screen_glow`), thông báo trượt xuống (`notifications`), tin nhắn trượt lên (`chat_bubbles`), thao tác bấm (`cursor_click`), đổi chi tiết đồng khung (`detail_reveal`) hoặc gom sáng (`focus_highlight`), khớp sát nhịp VO & foley.
+- **Phân cấp Motion & Living-Character mặc định cho Short 9:16 (~50–70s):**
+  - **Level A (nền tảng):** Đa dạng hóa `motion.preset` (`slow_push_in`, `slow_pull_out`, `pan_left`, `pan_right`, `drift_up`, `static_hold`) — **cấm lặp zoom-in máy móc ≥ 3 cảnh liên tiếp**; giữ `wobble: "none"` (hoặc `"breathe"` cho cận mặt) ở cảnh thường/kết, chỉ dùng `tense`/`shakes` đúng điểm cao trào khớp foley.
+  - **Level B (2.5D parallax + Breathing):** Chọn 1–2 cảnh cận/trung đắt giá tách 2 lớp (`sX_bg.jpg` + `sX_fg.png`), gắn nhịp thở thân trên (`breathe_y: 2.0–2.5`, `breathe_period: 2.1–3.8`) và khóa cứng `eye_blink` theo `layer: "fg"`.
+  - **Level C (Object/Detail + Living-Character A/B/C chọn lọc):** Trên **2–4 cảnh cận rõ mặt**, áp dụng mặc định tổ hợp **A (`eye_blink`) + B (`mouth_sync` 3 trạng thái theo `.wav` thật khi đúng nhân vật nói) + C (`breathing`)** xử lý khóa pixel qua `03_ENGINE/face_roi_prep.py`, kết hợp `screen_glow`, `detail_reveal`, `light_shift`, `notifications`/`chat_bubbles`, `focus_highlight` khớp VO & foley.
   - **Level D (AI I2V ngắn tùy chọn):** Tối đa 1 khoảnh khắc phản ứng đặc biệt nếu không biến dạng; có lỗi → hạ cấp ngay bằng `"video_enabled": false`.
 
 ## V. ÂM THANH (preset có sẵn – `python factory619/_engine/run.py presets`)

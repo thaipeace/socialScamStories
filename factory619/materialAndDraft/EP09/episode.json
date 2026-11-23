@@ -2,7 +2,7 @@
   "episode_id": "EP09",
   "slug": "BayCuocGoiNho",
   "title": "Bẫy cuộc gọi nhỡ lúc đang chờ việc – Gọi lại sao cho khỏi mất tiền oan",
-  "version": "v3",
+  "version": "v4-level2-abc",
   "scam_family": "ON-02",
   "duration_sec": 45.5,
   "hook": {
@@ -17,10 +17,14 @@
       "image": "assets/scene1.jpg",
       "start": 0.0,
       "end": 4.9,
+      "beat_type": "establishing",
+      "motion_level": "C",
+      "motion_intent": "Đẩy chậm vào bàn học sáng nắng kèm Bé Na chớp mắt lo lắng, miệng nói khớp WAV l1 sau tiếng call_end và ánh sáng đỏ cuộc gọi nhỡ trên máy",
       "motion": {
+        "preset": "slow_push_in",
         "scale": [
-          1.05,
-          1.14
+          1.03,
+          1.11
         ],
         "focus": [
           [
@@ -28,12 +32,71 @@
             0.48
           ],
           [
-            0.5,
-            0.44
+            0.46,
+            0.45
           ]
         ],
-        "wobble": "tense"
+        "wobble": "breathe",
+        "easing": "ease_out"
       },
+      "detail_fx": [
+        {
+          "type": "eye_blink",
+          "image": "assets/scene1_na_blink.jpg",
+          "region": [
+            0.43,
+            0.26,
+            0.613,
+            0.305
+          ],
+          "feather": 0.009,
+          "times": [
+            1.75,
+            4.3
+          ],
+          "close_dur": 0.055,
+          "hold_dur": 0.045,
+          "open_dur": 0.085
+        },
+        {
+          "type": "mouth_sync",
+          "speaker": "be_na",
+          "region": [
+            0.485,
+            0.315,
+            0.572,
+            0.355
+          ],
+          "feather": 0.008,
+          "closed_image": "assets/scene1_na_mouth_closed.jpg",
+          "mid_image": "assets/scene1.jpg",
+          "open_image": "assets/scene1_na_mouth_open.jpg",
+          "fps": 12,
+          "thresh_mid": 0.14,
+          "thresh_open": 0.68
+        },
+        {
+          "type": "screen_glow",
+          "pos": [
+            0.32,
+            0.64
+          ],
+          "radius": [
+            0.18,
+            0.12
+          ],
+          "color": [
+            255,
+            110,
+            75
+          ],
+          "intensity": 0.24,
+          "mode": "turn_on",
+          "start": 0.08,
+          "end": 4.9,
+          "fade": 0.25
+        }
+      ],
       "shakes": [
         {
           "at": 0.78,
@@ -46,23 +109,85 @@
       "image": "assets/scene2.jpg",
       "start": 4.9,
       "end": 10.25,
+      "beat_type": "suspicion",
+      "motion_level": "C",
+      "motion_intent": "Quét ngang trái đổi nhịp (tránh lặp zoom-in) kèm Bé Na chớp mắt sốt ruột, miệng nói 'Alo?' khớp l2 và ánh sáng cam đồng hồ nhảy giây",
       "motion": {
+        "preset": "pan_left",
         "scale": [
-          1.04,
-          1.14
+          1.05,
+          1.06
         ],
         "focus": [
           [
-            0.5,
-            0.46
+            0.53,
+            0.45
           ],
           [
-            0.5,
-            0.42
+            0.46,
+            0.43
           ]
         ],
-        "wobble": "tense"
+        "wobble": "breathe",
+        "easing": "smoothstep"
       },
+      "detail_fx": [
+        {
+          "type": "eye_blink",
+          "image": "assets/scene2_na_blink.jpg",
+          "region": [
+            0.43,
+            0.26,
+            0.613,
+            0.305
+          ],
+          "feather": 0.009,
+          "times": [
+            6.35,
+            9.15
+          ],
+          "close_dur": 0.055,
+          "hold_dur": 0.045,
+          "open_dur": 0.08
+        },
+        {
+          "type": "mouth_sync",
+          "speaker": "be_na",
+          "region": [
+            0.485,
+            0.315,
+            0.572,
+            0.355
+          ],
+          "feather": 0.008,
+          "mid_image": "assets/scene2_na_mouth_mid.jpg",
+          "open_image": "assets/scene2_na_mouth_open.jpg",
+          "fps": 12,
+          "thresh_mid": 0.14,
+          "thresh_open": 0.68
+        },
+        {
+          "type": "screen_glow",
+          "pos": [
+            0.34,
+            0.38
+          ],
+          "radius": [
+            0.22,
+            0.16
+          ],
+          "color": [
+            255,
+            145,
+            75
+          ],
+          "intensity": 0.26,
+          "mode": "pulse",
+          "start": 5.05,
+          "end": 10.25,
+          "fade": 0.3
+        }
+      ],
       "transition_in": {
         "type": "dissolve",
         "dur": 0.26
@@ -73,10 +198,14 @@
       "image": "assets/scene3.jpg",
       "start": 10.25,
       "end": 16.35,
+      "beat_type": "climax",
+      "motion_level": "C",
+      "motion_intent": "Cao trào hết sạch tiền: 2 cú shake + chớp đỏ impact, Bé Na sững sờ chớp mắt và bật thốt khớp l3 kèm ánh đỏ màn hình cạn tiền",
       "motion": {
+        "preset": "tense_push",
         "scale": [
-          1.06,
-          1.18
+          1.05,
+          1.15
         ],
         "focus": [
           [
@@ -84,12 +213,99 @@
             0.44
           ],
           [
-            0.5,
-            0.4
+            0.48,
+            0.41
           ]
         ],
-        "wobble": "tense"
+        "wobble": "tense",
+        "easing": "ease_in"
       },
+      "detail_fx": [
+        {
+          "type": "eye_blink",
+          "image": "assets/scene3_na_blink.jpg",
+          "region": [
+            0.43,
+            0.26,
+            0.613,
+            0.305
+          ],
+          "feather": 0.009,
+          "times": [
+            13.85
+          ],
+          "close_dur": 0.055,
+          "hold_dur": 0.05,
+          "open_dur": 0.09
+        },
+        {
+          "type": "mouth_sync",
+          "speaker": "be_na",
+          "region": [
+            0.485,
+            0.315,
+            0.572,
+            0.355
+          ],
+          "feather": 0.008,
+          "closed_image": "assets/scene3_na_mouth_closed.jpg",
+          "mid_image": "assets/scene3.jpg",
+          "open_image": "assets/scene3_na_mouth_open.jpg",
+          "fps": 12,
+          "thresh_mid": 0.14,
+          "thresh_open": 0.68
+        },
+        {
+          "type": "screen_glow",
+          "pos": [
+            0.35,
+            0.48
+          ],
+          "radius": [
+            0.22,
+            0.18
+          ],
+          "color": [
+            255,
+            70,
+            65
+          ],
+          "intensity": 0.28,
+          "mode": "flicker",
+          "start": 10.35,
+          "end": 16.35,
+          "fade": 0.2
+        },
+        {
+          "type": "light_shift",
+          "at": 11.24,
+          "dur": 0.08,
+          "end": 11.58,
+          "end_dur": 0.22,
+          "brightness": 1.14,
+          "tint_rgb": [
+            255,
+            85,
+            80
+          ],
+          "tint_strength": 0.13
+        },
+        {
+          "type": "focus_highlight",
+          "pos": [
+            0.48,
+            0.44
+          ],
+          "radius": [
+            0.42,
+            0.34
+          ],
+          "dim_outer": 0.2,
+          "start": 10.6,
+          "end": 16.35,
+          "fade": 0.35
+        }
+      ],
       "transition_in": {
         "type": "flash_red",
         "dur": 0.24
@@ -111,23 +327,141 @@
       "image_note": "Anh Hai pointing at foreign plus globe & intact blue bank shield",
       "start": 16.35,
       "end": 22.05,
+      "beat_type": "information",
+      "motion_level": "B",
+      "motion_intent": "Parallax 2.5D hai lớp Anh Hai & Bé Na bên bàn học kết hợp nhịp thở nhẹ, Anh Hai nói khớp l4 + cả 2 chớp mắt khóa cứng theo layer FG, khiên ngân hàng sáng xanh dịu",
       "motion": {
+        "preset": "slow_push_in",
         "scale": [
-          1.03,
-          1.11
+          1.02,
+          1.09
         ],
         "focus": [
           [
             0.5,
-            0.48
+            0.62
           ],
           [
-            0.48,
-            0.45
+            0.5,
+            0.62
           ]
         ],
-        "wobble": "calm"
+        "wobble": "none"
       },
+      "parallax": {
+        "camera": "push_in",
+        "dolly": [
+          1.02,
+          1.09
+        ],
+        "shift_x": [
+          0.0,
+          0.0
+        ],
+        "shift_y": [
+          0.0,
+          0.0
+        ],
+        "focus": [
+          0.5,
+          0.62
+        ],
+        "strength": 0.85,
+        "easing": "ease_out",
+        "layers": [
+          {
+            "role": "bg",
+            "image": "assets/s4_bg.jpg",
+            "depth": 0.45,
+            "blur": 0.8
+          },
+          {
+            "role": "fg",
+            "image": "assets/s4_fg.png",
+            "depth": 1.24,
+            "breathe_y": 1.6,
+            "breathe_period": 3.8
+          }
+        ]
+      },
+      "detail_fx": [
+        {
+          "type": "eye_blink",
+          "image": "assets/scene4_anhhai_blink.jpg",
+          "region": [
+            0.272,
+            0.241,
+            0.437,
+            0.279
+          ],
+          "feather": 0.008,
+          "times": [
+            18.35,
+            21.15
+          ],
+          "close_dur": 0.055,
+          "hold_dur": 0.045,
+          "open_dur": 0.085,
+          "layer": "fg"
+        },
+        {
+          "type": "eye_blink",
+          "image": "assets/scene4_na_blink.jpg",
+          "region": [
+            0.624,
+            0.285,
+            0.811,
+            0.327
+          ],
+          "feather": 0.009,
+          "times": [
+            19.65
+          ],
+          "close_dur": 0.055,
+          "hold_dur": 0.045,
+          "open_dur": 0.085,
+          "layer": "fg"
+        },
+        {
+          "type": "mouth_sync",
+          "speaker": "anh_hai",
+          "region": [
+            0.294,
+            0.296,
+            0.404,
+            0.334
+          ],
+          "feather": 0.008,
+          "mid_image": "assets/scene4_anhhai_mouth_mid.jpg",
+          "open_image": "assets/scene4_anhhai_mouth_open.jpg",
+          "fps": 12,
+          "thresh_mid": 0.14,
+          "thresh_open": 0.68,
+          "layer": "fg"
+        },
+        {
+          "type": "screen_glow",
+          "space": "frame",
+          "pos": [
+            0.8,
+            0.53
+          ],
+          "radius": [
+            0.18,
+            0.14
+          ],
+          "color": [
+            100,
+            215,
+            255
+          ],
+          "intensity": 0.22,
+          "mode": "pulse",
+          "start": 18.8,
+          "end": 22.05,
+          "fade": 0.4
+        }
+      ],
       "transition_in": {
         "type": "dissolve",
         "dur": 0.26
@@ -138,23 +472,121 @@
       "image": "assets/scene5.jpg",
       "start": 22.05,
       "end": 31.45,
+      "beat_type": "information",
+      "motion_level": "C",
+      "motion_intent": "Lùi chậm ấm áp mở khung trò chuyện hai anh em kèm song thoại mouth_sync luân phiên (l5 Bé Na -> l6 Anh Hai), cả 2 chớp mắt tự nhiên và ánh xanh số xác thực",
       "motion": {
+        "preset": "slow_pull_out",
         "scale": [
-          1.1,
-          1.03
+          1.09,
+          1.02
         ],
         "focus": [
           [
-            0.5,
-            0.46
+            0.52,
+            0.45
           ],
           [
             0.5,
-            0.5
+            0.49
           ]
         ],
-        "wobble": "handheld"
+        "wobble": "breathe",
+        "easing": "smoothstep"
       },
+      "detail_fx": [
+        {
+          "type": "eye_blink",
+          "image": "assets/scene5_na_blink.jpg",
+          "region": [
+            0.622,
+            0.285,
+            0.811,
+            0.327
+          ],
+          "feather": 0.009,
+          "times": [
+            24.05,
+            28.55
+          ],
+          "close_dur": 0.055,
+          "hold_dur": 0.045,
+          "open_dur": 0.085
+        },
+        {
+          "type": "eye_blink",
+          "image": "assets/scene5_anhhai_blink.jpg",
+          "region": [
+            0.272,
+            0.241,
+            0.437,
+            0.279
+          ],
+          "feather": 0.008,
+          "times": [
+            26.85,
+            30.25
+          ],
+          "close_dur": 0.055,
+          "hold_dur": 0.045,
+          "open_dur": 0.085
+        },
+        {
+          "type": "mouth_sync",
+          "speaker": "be_na",
+          "region": [
+            0.674,
+            0.34,
+            0.774,
+            0.378
+          ],
+          "feather": 0.008,
+          "closed_image": "assets/scene5_na_mouth_closed.jpg",
+          "mid_image": "assets/scene5.jpg",
+          "open_image": "assets/scene5_na_mouth_open.jpg",
+          "fps": 12,
+          "thresh_mid": 0.14,
+          "thresh_open": 0.68
+        },
+        {
+          "type": "mouth_sync",
+          "speaker": "anh_hai",
+          "region": [
+            0.293,
+            0.293,
+            0.404,
+            0.332
+          ],
+          "feather": 0.008,
+          "closed_image": "assets/scene5_anhhai_mouth_closed.jpg",
+          "mid_image": "assets/scene5.jpg",
+          "open_image": "assets/scene5_anhhai_mouth_open.jpg",
+          "fps": 12,
+          "thresh_mid": 0.14,
+          "thresh_open": 0.68
+        },
+        {
+          "type": "screen_glow",
+          "pos": [
+            0.64,
+            0.36
+          ],
+          "radius": [
+            0.14,
+            0.1
+          ],
+          "color": [
+            100,
+            240,
+            165
+          ],
+          "intensity": 0.2,
+          "mode": "pulse",
+          "start": 25.5,
+          "end": 31.45,
+          "fade": 0.4
+        }
+      ],
       "transition_in": {
         "type": "flash_white",
         "dur": 0.22
@@ -165,23 +597,109 @@
       "image": "assets/scene6.jpg",
       "start": 31.45,
       "end": 37.7,
+      "beat_type": "information",
+      "motion_level": "B",
+      "motion_intent": "Parallax 2.5D bóc trần: tách khối biểu tượng chặn quốc tế đỏ & khiên bảo vệ xanh nổi bồng bềnh trước bóng kẻ gian và dàn cột phát sóng",
       "motion": {
+        "preset": "slow_push_in",
         "scale": [
-          1.03,
+          1.02,
           1.1
         ],
         "focus": [
           [
             0.5,
-            0.46
+            0.48
           ],
           [
             0.5,
-            0.42
+            0.45
           ]
         ],
-        "wobble": "calm"
+        "wobble": "none"
       },
+      "parallax": {
+        "camera": "push_in",
+        "dolly": [
+          1.02,
+          1.1
+        ],
+        "shift_x": [
+          0.0,
+          0.0
+        ],
+        "shift_y": [
+          0.0,
+          -5.0
+        ],
+        "focus": [
+          0.5,
+          0.48
+        ],
+        "strength": 0.9,
+        "easing": "ease_out",
+        "layers": [
+          {
+            "role": "bg",
+            "image": "assets/s6_bg.jpg",
+            "depth": 0.4,
+            "blur": 0.5
+          },
+          {
+            "role": "fg",
+            "image": "assets/s6_fg.png",
+            "depth": 1.32,
+            "breathe_y": 2.6,
+            "breathe_period": 3.2
+          }
+        ]
+      },
+      "detail_fx": [
+        {
+          "type": "screen_glow",
+          "space": "frame",
+          "pos": [
+            0.28,
+            0.44
+          ],
+          "radius": [
+            0.2,
+            0.16
+          ],
+          "color": [
+            255,
+            75,
+            75
+          ],
+          "intensity": 0.24,
+          "mode": "pulse",
+          "start": 31.6,
+          "end": 35.4,
+          "fade": 0.3
+        },
+        {
+          "type": "screen_glow",
+          "space": "frame",
+          "pos": [
+            0.72,
+            0.6
+          ],
+          "radius": [
+            0.24,
+            0.18
+          ],
+          "color": [
+            95,
+            245,
+            210
+          ],
+          "intensity": 0.22,
+          "mode": "pulse",
+          "start": 34.0,
+          "end": 37.65,
+          "fade": 0.35
+        }
+      ],
       "transition_in": {
         "type": "glitch",
         "dur": 0.28
@@ -192,22 +710,11 @@
       "image": "assets/scene7.jpg",
       "start": 37.7,
       "end": 45.5,
+      "beat_type": "ending",
+      "motion_level": "A",
+      "motion_intent": "Giữ tĩnh sạch sẽ tuyệt đối cho bảng Nhớ kỹ & Lưu ý cuối phim",
       "motion": {
-        "scale": [
-          1.02,
-          1.06
-        ],
-        "focus": [
-          [
-            0.5,
-            0.48
-          ],
-          [
-            0.5,
-            0.48
-          ]
-        ],
-        "wobble": "none"
+        "preset": "static_hold"
       },
       "transition_in": {
         "type": "fade_black",
@@ -434,5 +941,6 @@
     "category": "Education (Giáo dục)",
     "playlist": "Bóc Trần Lừa Đảo – Kỹ Năng Cảnh Giác & An Toàn Đời Thực",
     "thumbnail_sec": 11.8
-  }
+  },
+  "motion_upgrade": "level2"
 }

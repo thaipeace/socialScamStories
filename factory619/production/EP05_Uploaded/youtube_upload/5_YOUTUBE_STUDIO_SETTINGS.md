@@ -3,7 +3,7 @@
 ## 1. File tải lên (Upload files)
 - **File Video chính (9:16 MP4)**: [EP05_ViecNheLuongCao_56s.mp4](file:///C:/projects/socialScamStories/factory619/production/EP05/EP05_ViecNheLuongCao_56s.mp4)
 - **File Phụ đề (SRT)**: [EP05_ViecNheLuongCao_56s.srt](file:///C:/projects/socialScamStories/factory619/production/EP05/EP05_ViecNheLuongCao_56s.srt)
-- **Ảnh Thumbnail 16:9**: [EP05_Thumbnail_16x9.jpg](file:///C:/projects/socialScamStories/factory619/production/EP05/EP05_Thumbnail_16x9.jpg) (mốc `31.0s`)
+- **Ảnh Thumbnail 16:9**: [EP05_Thumbnail_16x9.jpg](file:///C:/projects/socialScamStories/factory619/production/EP05/EP05_Thumbnail_16x9.jpg) (mốc `32.5s`)
 - **Ảnh Thumbnail 9:16**: [EP05_Thumbnail_9x16.jpg](file:///C:/projects/socialScamStories/factory619/production/EP05/EP05_Thumbnail_9x16.jpg)
 
 ## 2. Các ô nội dung Copy – Paste nhanh

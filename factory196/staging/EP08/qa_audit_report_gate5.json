@@ -3,7 +3,7 @@
   "factory": "factory196",
   "gate": "GATE_5_RENDER_AND_QA",
   "staging_mp4_path": "factory196/staging/EP08/EP08_MotVongTienHaiNuaSuThat_242s_staging.mp4",
-  "file_size_mb": 92.97,
+  "file_size_mb": 74.75,
   "stream_probe": {
     "programs": [],
     "stream_groups": [],
@@ -25,10 +25,10 @@
     ],
     "format": {
       "duration": "242.133333",
-      "size": "97481725"
+      "size": "78378683"
     }
   },
-  "all_8_points_passed": false,
+  "all_8_points_passed": true,
   "checklist": [
     {
       "id": 1,
@@ -39,8 +39,8 @@
     {
       "id": 2,
       "name": "Không hướng dẫn thủ đoạn chi tiết (chỉ bóc trần cơ chế tâm lý & dấu hiệu)",
-      "status": "PENDING_HUMAN",
-      "evidence": "Người duyệt: —."
+      "status": "PASS",
+      "evidence": "Người duyệt: User. Duyet ban Staging v5-level2-full-staging len Production"
     },
     {
       "id": 3,
@@ -50,21 +50,21 @@
     },
     {
       "id": 4,
-      "name": "Hình ảnh an toàn: không máu me/khỏa thân, không logo – giao diện – sắc phục thật",
-      "status": "PENDING_HUMAN",
-      "evidence": "Người duyệt: —."
+      "name": "Hình ảnh & chuyển động an toàn: không logo/giao diện/sắc phục thật, không máu me, motion mượt đúng nhịp & giữ continuity (QC 11 điểm)",
+      "status": "PASS",
+      "evidence": "Người duyệt: User. Duyet ban Staging v5-level2-full-staging len Production"
     },
     {
       "id": 5,
       "name": "Tôn trọng nạn nhân, không kỳ thị vùng miền / dân tộc / nghề nghiệp / tuổi tác",
-      "status": "PENDING_HUMAN",
-      "evidence": "Người duyệt: —."
+      "status": "PASS",
+      "evidence": "Người duyệt: User. Duyet ban Staging v5-level2-full-staging len Production"
     },
     {
       "id": 6,
       "name": "Âm thanh: thoại rõ, master đúng chuẩn, đã nghe duyệt",
-      "status": "PENDING_HUMAN",
-      "evidence": "Master peak -1.42 dBFS / 242.15s; thoại vừa cửa sổ: True; đã nghe duyệt: False"
+      "status": "PASS",
+      "evidence": "Master peak -1.48 dBFS / 242.15s; thoại vừa cửa sổ: True; đã nghe duyệt: True"
     },
     {
       "id": 7,
@@ -78,5 +78,53 @@
       "status": "PASS",
       "evidence": "Hook bắt đầu 0.4s; thời lượng 242.15s (file 242.13s)"
     }
-  ]
+  ],
+  "motion_qc": {
+    "is_level2": true,
+    "effective_level_counts": {
+      "A": 9,
+      "B": 2,
+      "C": 8,
+      "D": 0
+    },
+    "declared_level_counts": {
+      "A": 9,
+      "B": 2,
+      "C": 8,
+      "D": 0
+    },
+    "has_highlights": true,
+    "zoom_repetition_streaks": [],
+    "shake_scenes": 3,
+    "fallbacks": [],
+    "sfx_sync": {
+      "synced": [
+        "s00_hook_call:shake@0.20s",
+        "s01_hook_freeze:shake@15.43s",
+        "s01_hook_freeze:screen_glow@15.73s",
+        "s04_fake_video_call:detail_reveal@66.39s",
+        "s04_fake_video_call:light_shift@66.49s",
+        "s05_fake_step1_dark:detail_reveal@67.26s",
+        "s05_fake_step1_dark:screen_glow@67.34s",
+        "s08_dark_step2_account:detail_reveal@124.92s",
+        "s08_dark_step2_account:screen_glow@124.95s",
+        "s09_khang_transfers:screen_glow@135.22s",
+        "s12_confrontation_desk:shake@154.34s",
+        "s12_confrontation_desk:light_shift@176.27s",
+        "chat1@0.55s",
+        "chat2@15.78s",
+        "chat3@59.22s",
+        "chat4@67.34s",
+        "chat5@118.42s",
+        "chat6@125.00s",
+        "chat7@135.27s",
+        "chat8@139.12s",
+        "chat9@227.42s",
+        "notif1@168.69s"
+      ],
+      "unsynced": []
+    },
+    "warnings": [],
+    "point4_human_signed": true
+  }
 }

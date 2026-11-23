@@ -71,10 +71,10 @@ factory/production/<EP>/         ── Gate 6 (đóng gói phát hành) → b�
 >    - **Tách biệt rõ rệt giọng các nhân vật cùng giới**: Có từ 2–3 nhân vật nam/nữ trở lên thì phải gán `voice` + `style` khác hẳn nhau về âm sắc (cao sáng vs. trầm khàn vs. mượt chậm) để người nghe phân biệt được ngay.
 >    - **Cảnh vào trước tiếng & Dàn timeline theo TTS thật**: Cảnh mới phải lên hình trước ít nhất `0.25–0.4s` rồi nhân vật mới cất tiếng; sau Gate 2 bắt buộc căn lại toàn bộ timeline và mốc YouTube chapters theo thời lượng WAV thật.
 >
-> 9. **DEFAULT RULE — Visual Motion Upgrade (Level 2) bắt buộc cho mọi tập mới ([VISUAL_MOTION_HARNESS.md](VISUAL_MOTION_HARNESS.md)):**
+> 9. **DEFAULT RULE — Visual Motion Upgrade (Level 2 + Living-Character A/B/C) bắt buộc cho mọi tập mới ([VISUAL_MOTION_HARNESS.md](VISUAL_MOTION_HARNESS.md)):**
 >    - **Phân tích Visual Beat & phân loại Motion Level (`A/B/C/D`) ngay từ Pre-production** (`SCRIPT.md` + `IMAGE_PROMPTS.md` + `episode.json` có `"motion_upgrade": "level2"`), kiểm tra trước bằng `run.py motion-check <EP>` và `gate0`.
->    - **Đa dạng hóa nhịp thị giác:** Giữ Ken Burns làm nền tảng (Level A) nhưng **không lặp zoom-in máy móc ≥ 3 cảnh liên tiếp**; chủ động phối hợp `slow_push_in`, `slow_pull_out`, `pan_left/right`, `static_hold` (giữ tĩnh tạo tương phản), **Level B (2.5D parallax ~2–4 cảnh có chiều sâu phù hợp)**, **Level C (object/detail motion khớp VO + SFX)** và **Level D (AI I2V ngắn tùy chọn, chỉ dùng khi không méo/lệch continuity)**.
->    - **Không làm méo ý nghĩa/nội dung gốc & luôn có đường hạ cấp:** Tuyệt đối không đổi chữ/số tiền/UI/biểu cảm/đạo cụ khi animate; nếu hiệu ứng không sạch ở Gate 5 QC 11 điểm → **hạ cấp ngay về Level A**.
+>    - **Đa dạng hóa nhịp thị giác & Living-Character chọn lọc (A + B + C):** Giữ Ken Burns làm nền tảng (Level A) nhưng **không lặp zoom-in máy móc ≥ 3 cảnh liên tiếp**; phối hợp `slow_push_in`, `slow_pull_out`, `pan_left/right`, `static_hold`, **Level B (2.5D parallax ~2–4 cảnh + `breathing`)**, **Level C (`detail_reveal`, `screen_glow`, `light_shift`, `notifications`, `chat_bubbles`)**, và **tổ hợp Living-Character chọn lọc** (**A: `eye_blink` · B: `mouth_sync` 3 trạng thái khớp `.wav` thật · C: `breathing`**) cho 2–4 cảnh cận rõ mặt (Short 9:16) hoặc 3–5 cảnh cận thoại đắt giá (Long 16:9), xử lý khóa pixel qua `03_ENGINE/face_roi_prep.py` và kiểm bảng QC cận mặt trước khi render.
+>    - **Không làm méo ý nghĩa/nội dung gốc & luôn có đường hạ cấp:** Tuyệt đối không dùng AI lip-sync cục bộ hay vẽ miệng bằng code; không đổi chữ/số tiền/UI/đạo cụ khi animate; nếu hiệu ứng không sạch ở Gate 5 QC 11 điểm → **hạ cấp ngay về Level A**.
 
 ### GATE 0 – ĐẦU VÀO & VISUAL MOTION PLAN (`run.py gate0 <EP>` · `run.py motion-check <EP>`)
 Tự kiểm: thời lượng hợp lệ · cảnh phủ kín timeline & đủ ảnh/layer · **Visual Motion Plan (`motion_upgrade: level2` yêu cầu đủ `beat_type` + `motion_level` A/B/C/D, kiểm file layer/detail và cảnh báo lặp zoom-in/shake)** · speaker có trong cast · độ dài thoại · thẻ dấu hiệu 2–4 ý (Short) / 3–6 ý (Long) + việc nên làm · có hook · có kịch bản · `clearance/CLEARANCE.md` ghi `TRẠNG THÁI TỔNG: ĐẠT`.
@@ -82,8 +82,8 @@ Tự kiểm: thời lượng hợp lệ · cảnh phủ kín timeline & đủ �
 ### GATE 1 – DUYỆT ẢNH, LỚP 2.5D & CHUYỂN ĐỘNG (thủ công + preview)
 1. Kiểm 5 tiêu chí trên từng ảnh: **đồng nhất nhân vật & đạo cụ** · **không chữ/logo/giao diện app/sắc phục thật** · **bối cảnh Việt Nam đương đại** · **không máu me, khỏa thân** · **kẻ lừa không lộ mặt rõ**.
 2. Chuẩn bị nguồn hình theo phân cấp motion đã lập ở `IMAGE_PROMPTS.md`:
-   - **Level B (2.5D):** tách sẵn 2–3 lớp sạch (`bg`, `subject` RGBA, `fg` RGBA tùy chọn) nếu cảnh đủ chiều sâu; không đủ sạch thì giữ Level A.
-   - **Level C (Detail):** chuẩn bị ảnh đồng khung (`detail_reveal`) hoặc cutout (`detail_layer`) nếu dùng; kiểm tọa độ `screen_glow`/`cursor_click`/`focus_highlight`.
+   - **Level B (2.5D + Breathing):** tách sẵn 2–3 lớp sạch (`bg`, `subject`/`fg` RGBA) nếu cảnh đủ chiều sâu (gắn thêm `breathe_y`/`breathe_scale`/`breathe_period` trên lớp nhân vật); không đủ sạch thì giữ Level A.
+   - **Level C (Detail + Living-Character A/B/C):** chuẩn bị ảnh đồng khung (`detail_reveal`) hoặc cutout (`detail_layer`); với **2–4 cảnh cận (Short) / 3–5 cảnh cận thoại (Long)**, tạo ảnh biến thể mắt nhắm (`*_blink.jpg`) và miệng 3 trạng thái (`*_mouth_closed.jpg`, `*_mouth_open.jpg`) rồi chạy `03_ENGINE/face_roi_prep.py` căn pixel + cân màu da + duyệt bảng QC cận mặt trước khi render.
    - **Level D (AI I2V tùy chọn):** chỉ đưa clip ngắn vào `assets/` sau khi kiểm tay không biến dạng mặt/tay/trang phục/continuity; luôn giữ ảnh gốc để hạ cấp.
 3. Chạy thử nhanh không tốn API: `run.py motion-check <EP>`, `run.py gate <EP> 2 --placeholder` rồi `run.py gate <EP> 4 --preview` → xem `staging/<EP>/preview_frames/*_safezone.jpg`.
 4. Tinh chỉnh `motion` (preset/easing), `parallax`, `detail_fx`, `shakes`, `transition_in` trong `episode.json` đến khi ưng.

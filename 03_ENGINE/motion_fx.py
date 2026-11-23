@@ -19,7 +19,10 @@ Các hiệu ứng nặng bị LOẠI TRỪ trên phần cứng CPU/8GB RAM:
 from __future__ import annotations
 
 import gc
+import json
 import math
+import wave
+from pathlib import Path
 from typing import Any
 
 import numpy as np
@@ -35,6 +38,8 @@ MAX_PARALLAX_BLUR = 2.0         # Chỉ blur rất nhẹ 1 lần lúc nạp cả
 PARALLAX_OVERSAMPLE_CAP = 1.18  # Giảm bộ nhớ & CPU cho lớp 2.5D mà vẫn đủ biên dolly/pan
 MAX_REVEAL_FEATHER_PX = 10      # Giới hạn feather đơn giản cho detail_reveal
 MAX_GLOW_RADIUS_FRAC = 0.32     # Giới hạn screen_glow ở vùng cục bộ nhỏ (không chạy full-frame)
+MAX_BREATHE_AMP_PX = 6.0        # Giới hạn biên độ thở nhẹ trên layer 2.5D (an toàn khung hình)
+MAX_BREATHE_SCALE = 0.012       # Giới hạn co giãn nhịp thở nhẹ <= 1.2%
 
 EXCLUDED_HEAVY_FX: dict[str, str] = {
     "rain": (
@@ -153,6 +158,8 @@ ROLE_DEFAULT_DEPTH: dict[str, float] = {
 # Hardware-safe lightweight Level C effects ONLY
 DETAIL_FX_TYPES: tuple[str, ...] = (
     "detail_reveal",
+    "eye_blink",
+    "mouth_sync",
     "screen_glow",
     "light_shift",
     "cursor_click",
@@ -291,12 +298,20 @@ def prepare_parallax(ep, sc: dict, W: int, H: int, oversample: float) -> dict[st
         depth = max(0.1, min(1.6, float(ly.get("depth", ROLE_DEFAULT_DEPTH.get(role, 1.0)))))
         opacity = max(0.0, min(1.0, float(ly.get("opacity", 1.0))))
         off = ly.get("offset", [0.0, 0.0])
+        breathe_y = max(-MAX_BREATHE_AMP_PX, min(MAX_BREATHE_AMP_PX, float(ly.get("breathe_y", 0.0))))
+        breathe_scale = max(0.0, min(MAX_BREATHE_SCALE, float(ly.get("breathe_scale", 0.0))))
+        breathe_period = max(1.2, float(ly.get("breathe_period", 3.8)))
+        breathe_phase = float(ly.get("breathe_phase", 0.0))
         loaded.append({
             "role": role,
             "img": img,
             "depth": depth,
             "opacity": opacity,
             "offset": (float(off[0]), float(off[1])),
+            "breathe_y": breathe_y,
+            "breathe_scale": breathe_scale,
+            "breathe_period": breathe_period,
+            "breathe_phase": breathe_phase,
         })
 
     cam_preset = PARALLAX_CAMERA_PRESETS.get(str(px.get("camera", "push_in")), PARALLAX_CAMERA_PRESETS["push_in"])
@@ -308,8 +323,9 @@ def prepare_parallax(ep, sc: dict, W: int, H: int, oversample: float) -> dict[st
     focus = px.get("focus", [0.5, 0.5])
 
     max_depth = max(ly["depth"] for ly in loaded)
+    max_by = max(abs(ly["breathe_y"]) for ly in loaded)
     max_sx = max(abs(float(shift_x[0])), abs(float(shift_x[1]))) * max_depth * strength
-    max_sy = max(abs(float(shift_y[0])), abs(float(shift_y[1]))) * max_depth * strength
+    max_sy = max(abs(float(shift_y[0])), abs(float(shift_y[1]))) * max_depth * strength + max_by
     need_scale = max(
         1.02,
         1.0 / max(0.80, 1.0 - 2.0 * (max_sx / W) - 0.01),
@@ -341,9 +357,11 @@ def _transform_layer(src: Image.Image, W: int, H: int, scale: float, fx: float, 
 
 
 def render_parallax_frame(px_rt: dict[str, Any], sc: dict, t: float, W: int, H: int,
-                          extra_dx: float = 0.0, extra_dy: float = 0.0) -> Image.Image:
-    """Composite 2–3 depth layers with subtle differential dolly & lateral shift."""
+                          extra_dx: float = 0.0, extra_dy: float = 0.0,
+                          fx_list: list[dict[str, Any]] | None = None) -> Image.Image:
+    """Composite 2–3 depth layers with differential dolly, lateral shift, subtle breathing, and layer-locked FX."""
     s, e = sc["start"], sc["end"]
+    lt = max(0.0, t - s)
     lin_u = (max(s, min(e, t)) - s) / max(e - s, 1e-4)
     u = ease_u(lin_u, px_rt["easing"])
     d0, d1 = px_rt["dolly"]
@@ -359,13 +377,29 @@ def render_parallax_frame(px_rt: dict[str, Any], sc: dict, t: float, W: int, H: 
     os_mul = px_rt["oversample"]
 
     out: Image.Image | None = None
-    for ly in px_rt["layers"]:
+    for idx, ly in enumerate(px_rt["layers"]):
         depth = ly["depth"]
         depth_scale_mul = 0.40 + 0.60 * depth
         sc_l = max(1.01, d_min + excess * depth_scale_mul * strength)
         dx_l = (cur_sx * depth * strength + ly["offset"][0]) * os_mul + extra_dx * depth_scale_mul
         dy_l = (cur_sy * depth * strength + ly["offset"][1]) * os_mul + extra_dy * depth_scale_mul
-        warped = _transform_layer(ly["img"], W, H, sc_l, fx, fy, dx_l, dy_l)
+        if ly["breathe_y"] or ly["breathe_scale"]:
+            b_wave = math.sin(2.0 * math.pi * lt / ly["breathe_period"] + ly["breathe_phase"])
+            dy_l += ly["breathe_y"] * b_wave * os_mul
+            sc_l *= 1.0 + ly["breathe_scale"] * (0.5 + 0.5 * b_wave)
+
+        layer_src = ly["img"]
+        if fx_list:
+            role = ly["role"]
+            layer_fx = [
+                f for f in fx_list
+                if f.get("_stage") == "pre_camera"
+                and (f.get("_layer") == role or f.get("_layer") == idx)
+            ]
+            if layer_fx:
+                layer_src = apply_pre_camera_fx(layer_src, layer_fx, t)
+
+        warped = _transform_layer(layer_src, W, H, sc_l, fx, fy, dx_l, dy_l)
         if out is None:
             out = warped.convert("RGB") if warped.mode != "RGB" else warped
         else:
@@ -404,12 +438,116 @@ def _make_focus_mask(W: int, H: int, cx: float, cy: float, rx: float, ry: float)
     return m.resize((W, H), Image.Resampling.BILINEAR)
 
 
+def _make_roi_patch(ep, img_ref: str, region: list[float], feather_frac: float,
+                    W: int, H: int, tw: int, th: int, shape: str = "rounded") -> tuple[tuple[int, int, int, int], Image.Image, Image.Image] | None:
+    """Load an image, extract ONLY a tiny feathered ROI patch at (tw, th), and immediately release full bitmap."""
+    p = ep.resolve_asset(img_ref)
+    if not p.is_file():
+        return None
+    x0, y0, x1, y1 = [max(0.0, min(1.0, float(v))) for v in region]
+    px0, py0, px1, py1 = int(x0 * tw), int(y0 * th), int(x1 * tw), int(y1 * th)
+    if px1 <= px0 + 2 or py1 <= py0 + 2:
+        return None
+    feather = max(2, min(MAX_REVEAL_FEATHER_PX, int(float(feather_frac) * min(tw, th))))
+    bx0, by0 = max(0, px0 - feather * 2), max(0, py0 - feather * 2)
+    bx1, by1 = min(tw, px1 + feather * 2), min(th, py1 + feather * 2)
+    with Image.open(p) as raw_im:
+        timg = fit_aspect_crop(raw_im.convert("RGB"), W, H).resize((tw, th), Image.Resampling.BILINEAR)
+        roi_img = timg.crop((bx0, by0, bx1, by1))
+        del timg
+    mask = Image.new("L", (bx1 - bx0, by1 - by0), 0)
+    drw = ImageDraw.Draw(mask)
+    if shape == "ellipse":
+        drw.ellipse([px0 - bx0, py0 - by0, px1 - bx0, py1 - by0], fill=255)
+    else:
+        drw.rounded_rectangle([px0 - bx0, py0 - by0, px1 - bx0, py1 - by0], radius=max(4, feather), fill=255)
+    mask = mask.filter(ImageFilter.GaussianBlur(radius=feather))
+    return (bx0, by0, bx1, by1), roi_img, mask
+
+
+def _compute_mouth_timeline(ep, sc: dict, speaker: str | None, line_ids: list[str] | None,
+                            fps: int, thresh_mid: float, thresh_open: float) -> np.ndarray:
+    """Compute lightweight anime-cadence lip-sync states (0=closed, 1=mid, 2=open) directly from real TTS WAVs."""
+    s_sc, e_sc = float(sc["start"]), float(sc["end"])
+    n_steps = max(1, int(math.ceil(max(0.1, e_sc - s_sc) * fps)) + 1)
+    states = np.zeros(n_steps, dtype=np.uint8)
+    tts_p = getattr(ep, "tts_manifest_path", None)
+    if not tts_p or not Path(tts_p).is_file():
+        return states
+    try:
+        tts = json.loads(Path(tts_p).read_text(encoding="utf-8"))
+    except Exception:
+        return states
+
+    wanted_ids = set(line_ids) if line_ids else None
+    for ln in tts.get("lines", []):
+        if wanted_ids is not None and ln.get("line_id") not in wanted_ids:
+            continue
+        if speaker and ln.get("speaker") != speaker:
+            continue
+        ls = float(ln.get("timeline_start_sec", 0.0))
+        le = float(ln.get("timeline_end_sec", ls))
+        if le <= s_sc or ls >= e_sc:
+            continue
+        wp = ep.resolve_asset(ln.get("wav_path", "")) if ln.get("wav_path") else None
+        if not wp or not wp.is_file():
+            wp = ep.tts_dir / f"{ln.get('line_id', '')}.wav"
+        if not wp.is_file():
+            continue
+        try:
+            with wave.open(str(wp), "rb") as wf:
+                sr = wf.getframerate()
+                nch = wf.getnchannels()
+                raw = wf.readframes(wf.getnframes())
+            samples = np.frombuffer(raw, dtype=np.int16).astype(np.float32) / 32768.0
+            if nch > 1:
+                samples = samples.reshape(-1, nch).mean(axis=1)
+        except Exception:
+            continue
+        if samples.size < 64:
+            continue
+
+        hop = max(1, int(round(sr / float(fps))))
+        n_win = max(1, samples.size // hop)
+        trimmed = samples[: n_win * hop].reshape(n_win, hop)
+        rms = np.sqrt(np.mean(trimmed * trimmed, axis=1) + 1e-10)
+        active = rms[rms > 0.012]
+        ref = float(np.percentile(active, 86)) if active.size >= 3 else max(float(rms.max()), 0.05)
+        norm = rms / max(ref, 1e-4)
+
+        run_open = 0
+        for wi in range(n_win):
+            t_cur = ls + (wi + 0.5) / float(fps)
+            if t_cur < s_sc or t_cur >= e_sc:
+                continue
+            si = int((t_cur - s_sc) * fps)
+            if not (0 <= si < n_steps):
+                continue
+            v = float(norm[wi])
+            if v >= thresh_open:
+                run_open += 1
+                # Organic anime articulation: avoid frozen jaw on long steady vowels
+                st = 1 if (run_open % 4 == 0) else 2
+            elif v >= thresh_mid:
+                run_open = 0
+                st = 1
+            else:
+                run_open = 0
+                st = 0
+            if st > states[si]:
+                states[si] = st
+    return states
+
+
 def prepare_detail_fx(ep, sc: dict, W: int, H: int, oversample: float) -> list[dict[str, Any]]:
     """Pre-load and prepare hardware-safe Level C detail FX for the currently active scene."""
     raw_list = sc.get("detail_fx") or []
     if not raw_list:
         return []
     ow, oh = int(W * oversample), int(H * oversample)
+    px_os = min(float(oversample), PARALLAX_OVERSAMPLE_CAP)
+    px_ow, px_oh = int(W * px_os), int(H * px_os)
+    has_px = bool(sc.get("parallax"))
     prepared: list[dict[str, Any]] = []
 
     for idx, fx in enumerate(raw_list):
@@ -425,6 +563,9 @@ def prepare_detail_fx(ep, sc: dict, W: int, H: int, oversample: float) -> list[d
         item: dict[str, Any] = dict(fx)
         item["type"] = ftype
         item["_idx"] = idx
+        target_layer = fx.get("layer")
+        item["_layer"] = str(target_layer).lower() if isinstance(target_layer, str) else target_layer
+        tw_pre, th_pre = (px_ow, px_oh) if (has_px and item["_layer"] is not None) else (ow, oh)
 
         if ftype == "detail_reveal":
             img_ref = fx.get("image")
@@ -434,31 +575,86 @@ def prepare_detail_fx(ep, sc: dict, W: int, H: int, oversample: float) -> list[d
             if not p.is_file():
                 sc.setdefault("_detail_warnings", []).append(f"Thiếu ảnh detail_reveal '{img_ref}' -> bỏ qua hiệu ứng")
                 continue
-            with Image.open(p) as raw_im:
-                timg = fit_aspect_crop(raw_im.convert("RGB"), W, H).resize((ow, oh), Image.Resampling.BILINEAR)
             item["_at"] = _resolve_time(fx.get("at", sc["start"]), sc, rel_time)
             item["_dur"] = max(0.05, float(fx.get("dur", 0.35)))
             item["_revert_at"] = _resolve_time(fx["revert_at"], sc, rel_time) if fx.get("revert_at") is not None else None
             item["_revert_dur"] = max(0.05, float(fx.get("revert_dur", item["_dur"])))
             region = fx.get("region")
             if region and len(region) == 4:
-                x0, y0, x1, y1 = [max(0.0, min(1.0, float(v))) for v in region]
-                px0, py0, px1, py1 = int(x0 * ow), int(y0 * oh), int(x1 * ow), int(y1 * oh)
-                feather = max(2, min(MAX_REVEAL_FEATHER_PX, int(float(fx.get("feather", 0.015)) * min(ow, oh))))
-                bx0, by0 = max(0, px0 - feather * 2), max(0, py0 - feather * 2)
-                bx1, by1 = min(ow, px1 + feather * 2), min(oh, py1 + feather * 2)
-                mask = Image.new("L", (bx1 - bx0, by1 - by0), 0)
-                ImageDraw.Draw(mask).rounded_rectangle(
-                    [px0 - bx0, py0 - by0, px1 - bx0, py1 - by0],
-                    radius=max(4, feather), fill=255
-                )
-                mask = mask.filter(ImageFilter.GaussianBlur(radius=feather))
-                item["_roi_box"] = (bx0, by0, bx1, by1)
-                item["_roi_img"] = timg.crop((bx0, by0, bx1, by1))
-                item["_roi_mask"] = mask
-                del timg
+                patch = _make_roi_patch(ep, img_ref, region, float(fx.get("feather", 0.015)), W, H, tw_pre, th_pre, "rounded")
+                if patch is None:
+                    continue
+                item["_roi_box"], item["_roi_img"], item["_roi_mask"] = patch
             else:
-                item["_full_img"] = timg
+                with Image.open(p) as raw_im:
+                    item["_full_img"] = fit_aspect_crop(raw_im.convert("RGB"), W, H).resize((tw_pre, th_pre), Image.Resampling.BILINEAR)
+            item["_stage"] = "pre_camera"
+            prepared.append(item)
+
+        elif ftype == "eye_blink":
+            img_ref = fx.get("image")
+            region = fx.get("region")
+            if not img_ref or not (region and len(region) == 4):
+                sc.setdefault("_detail_warnings", []).append("eye_blink cần 'image' và 'region' [x0,y0,x1,y1] -> bỏ qua")
+                continue
+            patch = _make_roi_patch(ep, img_ref, region, float(fx.get("feather", 0.010)), W, H, tw_pre, th_pre, "ellipse")
+            if patch is None:
+                sc.setdefault("_detail_warnings", []).append(f"Thiếu ảnh eye_blink '{img_ref}' -> bỏ qua hiệu ứng")
+                continue
+            item["_roi_box"], item["_roi_img"], item["_roi_mask"] = patch
+            item["_close_dur"] = max(0.03, float(fx.get("close_dur", 0.055)))
+            item["_hold_dur"] = max(0.02, float(fx.get("hold_dur", 0.045)))
+            item["_open_dur"] = max(0.04, float(fx.get("open_dur", 0.085)))
+            raw_times = fx.get("times")
+            if raw_times:
+                btimes = sorted(_resolve_time(bt, sc, rel_time) for bt in raw_times)
+            else:
+                interval = max(1.8, float(fx.get("interval", 3.6)))
+                t_cur = float(sc["start"]) + float(fx.get("first_offset", 1.35))
+                btimes = []
+                k = 0
+                while t_cur < float(sc["end"]) - 0.45:
+                    btimes.append(round(t_cur, 3))
+                    jitter = ((k * 37) % 11 - 5) * 0.09
+                    t_cur += max(1.8, interval + jitter)
+                    k += 1
+            item["_blink_times"] = btimes
+            item["_stage"] = "pre_camera"
+            prepared.append(item)
+
+        elif ftype == "mouth_sync":
+            open_ref = fx.get("open_image") or fx.get("image")
+            region = fx.get("region")
+            if not open_ref or not (region and len(region) == 4):
+                sc.setdefault("_detail_warnings", []).append("mouth_sync cần 'open_image' và 'region' [x0,y0,x1,y1] -> bỏ qua")
+                continue
+            feather_f = float(fx.get("feather", 0.010))
+            p_open = _make_roi_patch(ep, open_ref, region, feather_f, W, H, tw_pre, th_pre, "ellipse")
+            if p_open is None:
+                sc.setdefault("_detail_warnings", []).append(f"Thiếu ảnh mouth_sync '{open_ref}' -> bỏ qua hiệu ứng")
+                continue
+            item["_roi_box"], item["_open_img"], item["_roi_mask"] = p_open
+            closed_ref = fx.get("closed_image")
+            mid_ref = fx.get("mid_image")
+            if closed_ref:
+                p_cl = _make_roi_patch(ep, closed_ref, region, feather_f, W, H, tw_pre, th_pre, "ellipse")
+                if p_cl is not None:
+                    item["_closed_img"] = p_cl[1]
+            if mid_ref:
+                p_md = _make_roi_patch(ep, mid_ref, region, feather_f, W, H, tw_pre, th_pre, "ellipse")
+                if p_md is not None:
+                    item["_mid_img"] = p_md[1]
+            mfps = max(6, min(20, int(fx.get("fps", 12))))
+            item["_fps"] = mfps
+            item["_sc_start"] = float(sc["start"])
+            item["_states"] = _compute_mouth_timeline(
+                ep, sc,
+                speaker=fx.get("speaker"),
+                line_ids=fx.get("line_ids"),
+                fps=mfps,
+                thresh_mid=float(fx.get("thresh_mid", 0.16)),
+                thresh_open=float(fx.get("thresh_open", 0.46)),
+            )
             item["_stage"] = "pre_camera"
             prepared.append(item)
 
@@ -571,6 +767,23 @@ def _apply_screen_glow_roi(img: Image.Image, fx: dict[str, Any], t: float) -> Im
     return out
 
 
+def _paste_roi_preserve_alpha(img: Image.Image, roi_img: Image.Image, mask: Image.Image,
+                              box: tuple[int, int, int, int], alpha: float) -> None:
+    """Paste RGB ROI onto RGB or RGBA image while strictly preserving original RGBA transparency."""
+    if alpha <= 0.004:
+        return
+    m = mask if alpha >= 0.995 else mask.point(lambda p, a=alpha: int(p * a))
+    bx0, by0 = box[0], box[1]
+    if img.mode == "RGBA":
+        orig_a = img.crop(box).getchannel("A")
+        img.paste(roi_img, (bx0, by0), m)
+        patched = img.crop(box)
+        patched.putalpha(orig_a)
+        img.paste(patched, (bx0, by0))
+    else:
+        img.paste(roi_img, (bx0, by0), m)
+
+
 def apply_pre_camera_fx(base_img: Image.Image, fx_list: list[dict[str, Any]], t: float) -> Image.Image:
     """Apply scene-space Level C effects BEFORE camera transform so they stay 100% camera-locked."""
     img = base_img
@@ -593,12 +806,7 @@ def apply_pre_camera_fx(base_img: Image.Image, fx_list: list[dict[str, Any]], t:
                 if not copied:
                     img = img.copy()
                     copied = True
-                bx0, by0, bx1, by1 = fx["_roi_box"]
-                mask = fx["_roi_mask"]
-                if alpha < 0.995:
-                    a_mul = alpha
-                    mask = mask.point(lambda p, m=a_mul: int(p * m))
-                img.paste(fx["_roi_img"], (bx0, by0), mask)
+                _paste_roi_preserve_alpha(img, fx["_roi_img"], fx["_roi_mask"], fx["_roi_box"], alpha)
             else:
                 if alpha >= 0.995:
                     img = fx["_full_img"]
@@ -606,6 +814,54 @@ def apply_pre_camera_fx(base_img: Image.Image, fx_list: list[dict[str, Any]], t:
                 else:
                     img = Image.blend(img, fx["_full_img"], alpha)
                     copied = True
+
+        elif ftype == "eye_blink":
+            c_dur, h_dur, o_dur = fx["_close_dur"], fx["_hold_dur"], fx["_open_dur"]
+            tot = c_dur + h_dur + o_dur
+            alpha = 0.0
+            for bt in fx["_blink_times"]:
+                dt = t - bt
+                if 0.0 <= dt <= tot:
+                    if dt < c_dur:
+                        alpha = ease_u(dt / c_dur, "ease_in")
+                    elif dt < c_dur + h_dur:
+                        alpha = 1.0
+                    else:
+                        alpha = 1.0 - ease_u((dt - c_dur - h_dur) / o_dur, "ease_out")
+                    break
+            if alpha > 0.004:
+                if not copied:
+                    img = img.copy()
+                    copied = True
+                _paste_roi_preserve_alpha(img, fx["_roi_img"], fx["_roi_mask"], fx["_roi_box"], alpha)
+
+        elif ftype == "mouth_sync":
+            states = fx["_states"]
+            mfps = fx["_fps"]
+            fpos = (t - fx["_sc_start"]) * mfps
+            if fpos < 0.0:
+                st = 0
+            else:
+                si = min(len(states) - 1, int(fpos))
+                st = int(states[si])
+            patch_img = None
+            patch_alpha = 1.0
+            if st == 0:
+                patch_img = fx.get("_closed_img")
+            elif st == 1:
+                if "_mid_img" in fx:
+                    patch_img = fx["_mid_img"]
+                else:
+                    patch_img = fx["_open_img"]
+                    patch_alpha = 0.52
+            else:
+                patch_img = fx["_open_img"]
+            if patch_img is not None:
+                if not copied:
+                    img = img.copy()
+                    copied = True
+                _paste_roi_preserve_alpha(img, patch_img, fx["_roi_mask"], fx["_roi_box"], patch_alpha)
+
         elif ftype == "screen_glow":
             img = _apply_screen_glow_roi(img, fx, t)
             copied = True
@@ -898,10 +1154,18 @@ def audit_episode_motion(ep) -> dict[str, Any]:
                 errors.append(f"Cảnh {sid}: detail_fx type '{ft}' không hỗ trợ (hỗ trợ: {', '.join(DETAIL_FX_TYPES)})")
                 continue
             rel_t = bool(fx.get("relative", False))
-            if ft in ("detail_reveal", "detail_layer"):
+            if ft in ("detail_reveal", "detail_layer", "eye_blink"):
                 ip = fx.get("image")
                 if not ip or not ep.resolve_asset(ip).is_file():
                     errors.append(f"Cảnh {sid}: detail_fx '{ft}' thiếu ảnh '{ip}'")
+            elif ft == "mouth_sync":
+                op = fx.get("open_image") or fx.get("image")
+                if not op or not ep.resolve_asset(op).is_file():
+                    errors.append(f"Cảnh {sid}: detail_fx 'mouth_sync' thiếu ảnh mở miệng '{op}'")
+                for k_opt in ("closed_image", "mid_image"):
+                    vp_opt = fx.get(k_opt)
+                    if vp_opt and not ep.resolve_asset(vp_opt).is_file():
+                        errors.append(f"Cảnh {sid}: detail_fx 'mouth_sync' thiếu ảnh {k_opt} '{vp_opt}'")
             if ft == "cursor_click":
                 ct = _resolve_time(fx.get("click_at", sc.get("start", 0.0)), sc, rel_t)
                 check_sfx_near(f"{sid}:cursor_click", ct)

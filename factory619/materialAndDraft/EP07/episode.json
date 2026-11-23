@@ -2,7 +2,8 @@
   "episode_id": "EP07",
   "slug": "BayMuaLeHoi",
   "title": "Mạo danh Ngày hội & Đêm văn hóa – Lộ tẩy ở tên tài khoản nhận",
-  "version": "v2",
+  "version": "v3-level2-abc",
+  "motion_upgrade": "level2",
   "scam_family": "ON-09",
   "duration_sec": 52.31,
   "hook": {
@@ -17,10 +18,14 @@
       "image": "assets/scene1.jpg",
       "start": 0.0,
       "end": 5.21,
+      "beat_type": "establishing",
+      "motion_level": "C",
+      "motion_intent": "Đẩy chậm vào Cô Tư đang áp máy nghe giọng giục gấp: Cô Tư chớp mắt lo lắng, khung tối kẻ gian sáng xanh theo nhịp nói l1 và ánh vàng màn hình điện thoại",
       "motion": {
+        "preset": "slow_push_in",
         "scale": [
-          1.05,
-          1.14
+          1.04,
+          1.12
         ],
         "focus": [
           [
@@ -32,31 +37,193 @@
             0.46
           ]
         ],
-        "wobble": "tense"
-      }
+        "wobble": "breathe",
+        "easing": "ease_out"
+      },
+      "detail_fx": [
+        {
+          "type": "eye_blink",
+          "image": "assets/scene1_cotu_blink.jpg",
+          "region": [
+            0.431,
+            0.4,
+            0.607,
+            0.444
+          ],
+          "feather": 0.008,
+          "times": [
+            1.85,
+            4.2
+          ],
+          "close_dur": 0.055,
+          "hold_dur": 0.045,
+          "open_dur": 0.085
+        },
+        {
+          "type": "screen_glow",
+          "pos": [
+            0.27,
+            0.3
+          ],
+          "radius": [
+            0.16,
+            0.14
+          ],
+          "color": [
+            75,
+            210,
+            255
+          ],
+          "intensity": 0.24,
+          "mode": "pulse",
+          "start": 0.35,
+          "end": 5.05,
+          "fade": 0.25
+        },
+        {
+          "type": "screen_glow",
+          "pos": [
+            0.43,
+            0.46
+          ],
+          "radius": [
+            0.11,
+            0.09
+          ],
+          "color": [
+            255,
+            195,
+            95
+          ],
+          "intensity": 0.22,
+          "mode": "turn_on",
+          "start": 0.05,
+          "end": 5.21,
+          "fade": 0.25
+        }
+      ]
     },
     {
       "id": "s2_moi_nhu",
       "image": "assets/scene2.jpg",
       "start": 5.21,
       "end": 14.6,
+      "beat_type": "normal",
+      "motion_level": "C",
+      "motion_intent": "Quét ngang phải theo mạch song thoại (Cô Tư l2 -> Bé Na l3), cả 2 chớp mắt & mouth_sync luân phiên khớp WAV + ánh sáng sân khấu nhấp nháy trên máy Bé Na lúc thông báo 9.93s",
       "motion": {
+        "preset": "pan_right",
         "scale": [
-          1.03,
-          1.11
+          1.06,
+          1.06
         ],
         "focus": [
           [
-            0.5,
-            0.5
+            0.46,
+            0.45
           ],
           [
-            0.48,
+            0.54,
             0.45
           ]
         ],
-        "wobble": "calm"
+        "wobble": "breathe",
+        "easing": "smoothstep"
       },
+      "detail_fx": [
+        {
+          "type": "eye_blink",
+          "image": "assets/scene2_cotu_blink.jpg",
+          "region": [
+            0.272,
+            0.401,
+            0.457,
+            0.444
+          ],
+          "feather": 0.008,
+          "times": [
+            7.6,
+            12.4
+          ],
+          "close_dur": 0.055,
+          "hold_dur": 0.045,
+          "open_dur": 0.085
+        },
+        {
+          "type": "eye_blink",
+          "image": "assets/scene2_na_blink.jpg",
+          "region": [
+            0.528,
+            0.399,
+            0.728,
+            0.447
+          ],
+          "feather": 0.009,
+          "times": [
+            6.45,
+            11.45,
+            13.85
+          ],
+          "close_dur": 0.055,
+          "hold_dur": 0.045,
+          "open_dur": 0.085
+        },
+        {
+          "type": "mouth_sync",
+          "speaker": "co_tu",
+          "region": [
+            0.291,
+            0.451,
+            0.426,
+            0.503
+          ],
+          "feather": 0.008,
+          "closed_image": "assets/scene2_cotu_mouth_closed.jpg",
+          "mid_image": "assets/scene2.jpg",
+          "open_image": "assets/scene2_cotu_mouth_open.jpg",
+          "fps": 12,
+          "thresh_mid": 0.14,
+          "thresh_open": 0.68
+        },
+        {
+          "type": "mouth_sync",
+          "speaker": "be_na",
+          "region": [
+            0.565,
+            0.45,
+            0.691,
+            0.504
+          ],
+          "feather": 0.008,
+          "closed_image": "assets/scene2_na_mouth_closed.jpg",
+          "mid_image": "assets/scene2.jpg",
+          "open_image": "assets/scene2_na_mouth_open.jpg",
+          "fps": 12,
+          "thresh_mid": 0.14,
+          "thresh_open": 0.68
+        },
+        {
+          "type": "screen_glow",
+          "pos": [
+            0.84,
+            0.51
+          ],
+          "radius": [
+            0.14,
+            0.14
+          ],
+          "color": [
+            160,
+            210,
+            255
+          ],
+          "intensity": 0.28,
+          "mode": "pulse",
+          "start": 9.88,
+          "end": 14.55,
+          "fade": 0.25
+        }
+      ],
       "transition_in": {
         "type": "dissolve",
         "dur": 0.3
@@ -67,23 +234,133 @@
       "image": "assets/scene3.jpg",
       "start": 14.6,
       "end": 25.71,
+      "beat_type": "suspicion",
+      "motion_level": "C",
+      "motion_intent": "Đẩy căng dồn nhịp theo tiếng tim đập: Ông Bảy giơ tay chặn nói l4 -> Bé Na hỏi dồn l5 (song thoại mouth_sync), cả 3 nhân vật chớp mắt tự nhiên + viền tối tập trung vào bàn tay chặn",
       "motion": {
+        "preset": "tense_push",
         "scale": [
-          1.04,
-          1.14
+          1.03,
+          1.11
         ],
         "focus": [
           [
-            0.5,
-            0.48
+            0.52,
+            0.46
           ],
           [
             0.5,
-            0.44
+            0.43
           ]
         ],
-        "wobble": "handheld"
+        "wobble": "tense",
+        "easing": "ease_in"
       },
+      "detail_fx": [
+        {
+          "type": "eye_blink",
+          "image": "assets/scene3_cotu_blink.jpg",
+          "region": [
+            0.281,
+            0.405,
+            0.465,
+            0.45
+          ],
+          "feather": 0.008,
+          "times": [
+            17.4,
+            22.9
+          ],
+          "close_dur": 0.055,
+          "hold_dur": 0.045,
+          "open_dur": 0.085
+        },
+        {
+          "type": "eye_blink",
+          "image": "assets/scene3_na_blink.jpg",
+          "region": [
+            0.526,
+            0.403,
+            0.722,
+            0.45
+          ],
+          "feather": 0.009,
+          "times": [
+            16.5,
+            21.8,
+            24.75
+          ],
+          "close_dur": 0.055,
+          "hold_dur": 0.045,
+          "open_dur": 0.085
+        },
+        {
+          "type": "eye_blink",
+          "image": "assets/scene3_bay_blink.jpg",
+          "region": [
+            0.73,
+            0.397,
+            0.896,
+            0.443
+          ],
+          "feather": 0.008,
+          "times": [
+            18.9,
+            23.8
+          ],
+          "close_dur": 0.055,
+          "hold_dur": 0.045,
+          "open_dur": 0.085
+        },
+        {
+          "type": "mouth_sync",
+          "speaker": "ong_bay",
+          "region": [
+            0.754,
+            0.448,
+            0.885,
+            0.504
+          ],
+          "feather": 0.008,
+          "mid_image": "assets/scene3_bay_mouth_mid.jpg",
+          "open_image": "assets/scene3_bay_mouth_open.jpg",
+          "fps": 12,
+          "thresh_mid": 0.14,
+          "thresh_open": 0.68
+        },
+        {
+          "type": "mouth_sync",
+          "speaker": "be_na",
+          "region": [
+            0.58,
+            0.452,
+            0.693,
+            0.505
+          ],
+          "feather": 0.008,
+          "closed_image": "assets/scene3_na_mouth_closed.jpg",
+          "mid_image": "assets/scene3.jpg",
+          "open_image": "assets/scene3_na_mouth_open.jpg",
+          "fps": 12,
+          "thresh_mid": 0.14,
+          "thresh_open": 0.68
+        },
+        {
+          "type": "focus_highlight",
+          "pos": [
+            0.54,
+            0.46
+          ],
+          "radius": [
+            0.46,
+            0.36
+          ],
+          "dim_outer": 0.18,
+          "start": 15.2,
+          "end": 25.65,
+          "fade": 0.45
+        }
+      ],
       "transition_in": {
         "type": "dissolve",
         "dur": 0.28
@@ -94,23 +371,234 @@
       "image": "assets/scene4.jpg",
       "start": 25.71,
       "end": 40.72,
+      "beat_type": "climax",
+      "motion_level": "B",
+      "motion_intent": "Cao trào 2.5D 3 lớp (nền phố lễ hội · 3 nhân vật thở nhẹ & tam thoại mouth_sync l6 Ông Bảy -> l7 Bé Na -> l8 Cô Tư khóa cứng trên layer subject · quầy nước tiền cảnh đứng vững) + flash impact & ánh đỏ tam giác cảnh báo",
       "motion": {
+        "preset": "slow_pull_out",
         "scale": [
-          1.13,
-          1.03
+          1.1,
+          1.02
         ],
         "focus": [
           [
             0.5,
-            0.46
+            0.72
           ],
           [
             0.5,
-            0.5
+            0.72
           ]
         ],
-        "wobble": "handheld"
+        "wobble": "none"
       },
+      "parallax": {
+        "camera": "pull_out",
+        "dolly": [
+          1.1,
+          1.02
+        ],
+        "shift_x": [
+          0.0,
+          0.0
+        ],
+        "shift_y": [
+          0.0,
+          0.0
+        ],
+        "focus": [
+          0.5,
+          0.72
+        ],
+        "strength": 0.85,
+        "easing": "smoothstep",
+        "layers": [
+          {
+            "role": "bg",
+            "image": "assets/s4_bg.jpg",
+            "depth": 0.42,
+            "blur": 0.7
+          },
+          {
+            "role": "subject",
+            "image": "assets/s4_mid.png",
+            "depth": 1.12,
+            "breathe_y": 1.5,
+            "breathe_period": 3.8
+          },
+          {
+            "role": "fg",
+            "image": "assets/s4_counter_fg.png",
+            "depth": 1.24
+          }
+        ]
+      },
+      "detail_fx": [
+        {
+          "type": "eye_blink",
+          "image": "assets/scene4_bay_blink.jpg",
+          "region": [
+            0.73,
+            0.397,
+            0.896,
+            0.443
+          ],
+          "feather": 0.008,
+          "times": [
+            28.4,
+            33.6,
+            38.4
+          ],
+          "close_dur": 0.055,
+          "hold_dur": 0.045,
+          "open_dur": 0.085,
+          "layer": "subject"
+        },
+        {
+          "type": "eye_blink",
+          "image": "assets/scene4_na_blink.jpg",
+          "region": [
+            0.526,
+            0.403,
+            0.722,
+            0.45
+          ],
+          "feather": 0.009,
+          "times": [
+            27.3,
+            32.1,
+            37.1
+          ],
+          "close_dur": 0.055,
+          "hold_dur": 0.045,
+          "open_dur": 0.085,
+          "layer": "subject"
+        },
+        {
+          "type": "eye_blink",
+          "image": "assets/scene4_cotu_blink.jpg",
+          "region": [
+            0.281,
+            0.405,
+            0.465,
+            0.45
+          ],
+          "feather": 0.008,
+          "times": [
+            29.7,
+            34.4,
+            39.25
+          ],
+          "close_dur": 0.055,
+          "hold_dur": 0.045,
+          "open_dur": 0.085,
+          "layer": "subject"
+        },
+        {
+          "type": "mouth_sync",
+          "speaker": "ong_bay",
+          "region": [
+            0.754,
+            0.448,
+            0.885,
+            0.505
+          ],
+          "feather": 0.008,
+          "closed_image": "assets/scene4_bay_mouth_closed.jpg",
+          "mid_image": "assets/scene4.jpg",
+          "open_image": "assets/scene4_bay_mouth_open.jpg",
+          "fps": 12,
+          "thresh_mid": 0.14,
+          "thresh_open": 0.68,
+          "layer": "subject"
+        },
+        {
+          "type": "mouth_sync",
+          "speaker": "be_na",
+          "region": [
+            0.58,
+            0.452,
+            0.693,
+            0.506
+          ],
+          "feather": 0.008,
+          "closed_image": "assets/scene4_na_mouth_closed.jpg",
+          "mid_image": "assets/scene4.jpg",
+          "open_image": "assets/scene4_na_mouth_open.jpg",
+          "fps": 12,
+          "thresh_mid": 0.14,
+          "thresh_open": 0.68,
+          "layer": "subject"
+        },
+        {
+          "type": "mouth_sync",
+          "speaker": "co_tu",
+          "region": [
+            0.311,
+            0.452,
+            0.435,
+            0.506
+          ],
+          "feather": 0.008,
+          "closed_image": "assets/scene4_cotu_mouth_closed.jpg",
+          "mid_image": "assets/scene4.jpg",
+          "open_image": "assets/scene4_cotu_mouth_open.jpg",
+          "fps": 12,
+          "thresh_mid": 0.14,
+          "thresh_open": 0.68,
+          "layer": "subject"
+        },
+        {
+          "type": "screen_glow",
+          "space": "frame",
+          "pos": [
+            0.54,
+            0.56
+          ],
+          "radius": [
+            0.24,
+            0.15
+          ],
+          "color": [
+            255,
+            65,
+            60
+          ],
+          "intensity": 0.24,
+          "mode": "pulse",
+          "start": 25.8,
+          "end": 40.65,
+          "fade": 0.3
+        },
+        {
+          "type": "light_shift",
+          "at": 25.81,
+          "dur": 0.08,
+          "end": 26.15,
+          "end_dur": 0.25,
+          "brightness": 1.12,
+          "tint_rgb": [
+            255,
+            80,
+            75
+          ],
+          "tint_strength": 0.12
+        },
+        {
+          "type": "light_shift",
+          "at": 35.36,
+          "dur": 0.07,
+          "end": 35.6,
+          "end_dur": 0.18,
+          "brightness": 1.08,
+          "tint_rgb": [
+            255,
+            110,
+            95
+          ],
+          "tint_strength": 0.08
+        }
+      ],
       "transition_in": {
         "type": "flash_white",
         "dur": 0.25
@@ -127,23 +615,109 @@
       "image": "assets/scene5.jpg",
       "start": 40.72,
       "end": 46.21,
+      "beat_type": "information",
+      "motion_level": "B",
+      "motion_intent": "Parallax 2.5D bóc trần: tách kẻ áo trùm cùng kính lúp đỏ soi mồi từ thiện/sự kiện & dòng xu vàng nổi bồng bềnh trước mạng mạch xanh dương + nhịp sáng đỏ/vàng",
       "motion": {
+        "preset": "slow_push_in",
         "scale": [
           1.02,
-          1.09
+          1.1
         ],
         "focus": [
           [
             0.5,
-            0.5
+            0.48
           ],
           [
             0.5,
-            0.46
+            0.45
           ]
         ],
-        "wobble": "calm"
+        "wobble": "none"
       },
+      "parallax": {
+        "camera": "push_in",
+        "dolly": [
+          1.02,
+          1.1
+        ],
+        "shift_x": [
+          0.0,
+          0.0
+        ],
+        "shift_y": [
+          0.0,
+          -5.0
+        ],
+        "focus": [
+          0.5,
+          0.48
+        ],
+        "strength": 0.9,
+        "easing": "ease_out",
+        "layers": [
+          {
+            "role": "bg",
+            "image": "assets/s5_bg.jpg",
+            "depth": 0.38,
+            "blur": 0.4
+          },
+          {
+            "role": "fg",
+            "image": "assets/s5_fg.png",
+            "depth": 1.28,
+            "breathe_y": 2.2,
+            "breathe_period": 3.4
+          }
+        ]
+      },
+      "detail_fx": [
+        {
+          "type": "screen_glow",
+          "space": "frame",
+          "pos": [
+            0.5,
+            0.35
+          ],
+          "radius": [
+            0.28,
+            0.17
+          ],
+          "color": [
+            255,
+            70,
+            95
+          ],
+          "intensity": 0.24,
+          "mode": "pulse",
+          "start": 40.85,
+          "end": 46.15,
+          "fade": 0.3
+        },
+        {
+          "type": "screen_glow",
+          "space": "frame",
+          "pos": [
+            0.5,
+            0.67
+          ],
+          "radius": [
+            0.18,
+            0.14
+          ],
+          "color": [
+            255,
+            205,
+            75
+          ],
+          "intensity": 0.22,
+          "mode": "pulse",
+          "start": 41.3,
+          "end": 46.15,
+          "fade": 0.35
+        }
+      ],
       "transition_in": {
         "type": "glitch",
         "dur": 0.3
@@ -154,22 +728,11 @@
       "image": "assets/scene6.jpg",
       "start": 46.21,
       "end": 52.31,
+      "beat_type": "ending",
+      "motion_level": "A",
+      "motion_intent": "Giữ tĩnh sạch sẽ tuyệt đối cho bảng Nhớ kỹ & Lưu ý cuối phim",
       "motion": {
-        "scale": [
-          1.02,
-          1.06
-        ],
-        "focus": [
-          [
-            0.5,
-            0.5
-          ],
-          [
-            0.5,
-            0.5
-          ]
-        ],
-        "wobble": "none"
+        "preset": "static_hold"
       },
       "transition_in": {
         "type": "fade_black",
@@ -386,6 +949,6 @@
     ],
     "category": "Education (Giáo dục)",
     "playlist": "Bóc Trần Lừa Đảo – Kỹ Năng Cảnh Giác & An Toàn Đời Thực",
-    "thumbnail_sec": 26.91
+    "thumbnail_sec": 35.38
   }
 }

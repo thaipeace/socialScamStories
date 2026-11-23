@@ -7,9 +7,9 @@
   },
   "4": {
     "status": "PASS",
-    "by": "Antigravity Staging Visual QA",
-    "note": "Da kiem tra 6 anh v5: chia man hinh goi hang loat, video deepfake con la khoc, 2 phu nu Chi Ba va Chi Tu gap nhau o cong truong, khong chu sai chinh ta, khong mau me",
-    "at": "2026-11-04T22:47:49+07:00"
+    "by": "User",
+    "note": "Duyet ban nang cap v7-level2-abc (A=1 B=2 C=10, 13 canh sac net, khau hinh mieng tiet che) len Production",
+    "at": "2026-11-22T22:22:16+07:00"
   },
   "5": {
     "status": "PASS",

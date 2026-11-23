@@ -1,8 +1,9 @@
 {
   "episode_id": "EP03",
+  "factory": "factory619",
   "gate": "GATE_5_RENDER_AND_QA",
-  "staging_mp4_path": "factory/staging/EP03/EP03_CapCuuGiaMao_56s_staging.mp4",
-  "file_size_mb": 51.63,
+  "staging_mp4_path": "factory619/staging/EP03/EP03_CapCuuGiaMao_56s_staging.mp4",
+  "file_size_mb": 38.42,
   "stream_probe": {
     "programs": [],
     "stream_groups": [],
@@ -24,7 +25,7 @@
     ],
     "format": {
       "duration": "56.000000",
-      "size": "54143040"
+      "size": "40288663"
     }
   },
   "all_8_points_passed": true,
@@ -49,9 +50,9 @@
     },
     {
       "id": 4,
-      "name": "Hình ảnh an toàn: không máu me/khỏa thân, không logo – giao diện – sắc phục thật",
+      "name": "Hình ảnh & chuyển động an toàn: không logo/giao diện/sắc phục thật, không máu me, motion mượt đúng nhịp & giữ continuity (QC 11 điểm)",
       "status": "PASS",
-      "evidence": "Người duyệt: Antigravity Staging Visual QA. Da kiem tra 6 anh v5: chia man hinh goi hang loat, video deepfake con la khoc, 2 phu nu Chi Ba va Chi Tu gap nhau o cong truong, khong chu sai chinh ta, khong mau me"
+      "evidence": "Người duyệt: User. Duyet ban nang cap v7-level2-abc (A=1 B=2 C=10, 13 canh sac net, khau hinh mieng tiet che) len Production"
     },
     {
       "id": 5,
@@ -67,7 +68,7 @@
     },
     {
       "id": 7,
-      "name": "Safe Zone + Disclaimer + Thẻ Dấu hiệu nhận biết",
+      "name": "Safe Zone (9:16) + Disclaimer + Thẻ Dấu hiệu nhận biết",
       "status": "PASS",
       "evidence": "Overlay trong Safe Zone: True; disclaimer: 1; thẻ dấu hiệu: 3 ý"
     },
@@ -77,5 +78,44 @@
       "status": "PASS",
       "evidence": "Hook bắt đầu 0.2s; thời lượng 56.0s (file 56.00s)"
     }
-  ]
+  ],
+  "motion_qc": {
+    "is_level2": true,
+    "effective_level_counts": {
+      "A": 1,
+      "B": 2,
+      "C": 10,
+      "D": 0
+    },
+    "declared_level_counts": {
+      "A": 1,
+      "B": 2,
+      "C": 10,
+      "D": 0
+    },
+    "has_highlights": true,
+    "zoom_repetition_streaks": [],
+    "shake_scenes": 3,
+    "fallbacks": [],
+    "sfx_sync": {
+      "synced": [
+        "s1b_hoang_loan:shake@2.80s",
+        "s1b_hoang_loan:light_shift@2.80s",
+        "s2a_deepfake_cry:shake@6.20s",
+        "s2a_deepfake_cry:screen_glow@6.00s",
+        "s2b_deepfake_glitch:shake@11.85s",
+        "s2b_deepfake_glitch:light_shift@11.80s",
+        "s3a_chuyen_tien:screen_glow@19.25s",
+        "s3b_khoa_may_nghi_ngo:screen_glow@23.40s",
+        "s3b_khoa_may_nghi_ngo:light_shift@20.20s",
+        "s3c_an_toan_xac_thuc:screen_glow@27.15s",
+        "s4b_hang_loat_bi_goi:screen_glow@36.45s",
+        "s5b_vach_tran_deepfake:light_shift@44.20s",
+        "s6a_xoa_anh_bao_mat:screen_glow@48.55s"
+      ],
+      "unsynced": []
+    },
+    "warnings": [],
+    "point4_human_signed": true
+  }
 }

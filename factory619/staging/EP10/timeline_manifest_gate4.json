@@ -19,52 +19,266 @@
     "platform_ui_bottom_y": 1440,
     "all_overlays_compliant": true
   },
+  "motion_summary": {
+    "hardware_profile": "low_ram_cpu_l480",
+    "safe_motion_mode": false,
+    "is_level2": true,
+    "declared_level_counts": {
+      "A": 2,
+      "B": 2,
+      "C": 5,
+      "D": 0
+    },
+    "effective_level_counts": {
+      "A": 2,
+      "B": 2,
+      "C": 5,
+      "D": 0
+    },
+    "fallbacks": [],
+    "detail_warnings": [],
+    "zoom_streaks": [],
+    "shake_scenes": 1,
+    "sfx_sync": {
+      "synced": [
+        "s1_hai_mang_trung_ten_tiem_doi_dien:screen_glow@0.25s",
+        "s2_cam_thoai_bam_cai_goi_ket_noi:screen_glow@5.80s",
+        "s2_cam_thoai_bam_cai_goi_ket_noi:light_shift@7.55s",
+        "s4_cao_trao_tu_dien_so_tien_tat_nguon:shake@20.68s",
+        "s4_cao_trao_tu_dien_so_tien_tat_nguon:shake@20.88s",
+        "s4_cao_trao_tu_dien_so_tien_tat_nguon:light_shift@20.72s",
+        "s4_cao_trao_tu_dien_so_tien_tat_nguon:light_shift@26.75s"
+      ],
+      "unsynced": []
+    },
+    "warnings": []
+  },
   "scenes": [
     {
       "id": "s1_hai_mang_trung_ten_tiem_doi_dien",
       "image": "assets/scene1.jpg",
       "start": 0.0,
       "end": 5.7,
+      "beat_type": "establishing",
+      "motion_level": "C",
+      "motion_intent": "Mở sảnh khách sạn đẩy nhẹ sang phải kèm Tùng nói khớp WAV l1, cả 2 chị em chớp mắt tự nhiên, đèn Wi-Fi xanh & đèn LED đỏ trên ba lô kẻ gian nhấp nháy ngầm",
       "motion": {
+        "preset": "subtle_push_right",
         "scale": [
-          1.0,
-          1.06
+          1.01,
+          1.07
         ],
         "focus": [
           [
-            0.52,
-            0.48
+            0.5,
+            0.49
           ],
           [
-            0.58,
-            0.46
+            0.56,
+            0.47
           ]
         ],
-        "wobble": "handheld"
-      }
+        "wobble": "breathe",
+        "easing": "ease_out"
+      },
+      "detail_fx": [
+        {
+          "type": "eye_blink",
+          "image": "assets/scene1_tung_blink.jpg",
+          "region": [
+            0.68,
+            0.419,
+            0.785,
+            0.452
+          ],
+          "feather": 0.008,
+          "times": [
+            2.25,
+            4.95
+          ],
+          "close_dur": 0.055,
+          "hold_dur": 0.045,
+          "open_dur": 0.085
+        },
+        {
+          "type": "eye_blink",
+          "image": "assets/scene1_chihai_blink.jpg",
+          "region": [
+            0.228,
+            0.447,
+            0.333,
+            0.481
+          ],
+          "feather": 0.008,
+          "times": [
+            3.35
+          ],
+          "close_dur": 0.055,
+          "hold_dur": 0.045,
+          "open_dur": 0.085
+        },
+        {
+          "type": "mouth_sync",
+          "speaker": "thang_tun",
+          "region": [
+            0.7,
+            0.456,
+            0.778,
+            0.493
+          ],
+          "feather": 0.007,
+          "closed_image": "assets/scene1_tung_mouth_closed.jpg",
+          "mid_image": "assets/scene1.jpg",
+          "open_image": "assets/scene1_tung_mouth_open.jpg",
+          "fps": 12,
+          "thresh_mid": 0.14,
+          "thresh_open": 0.68
+        },
+        {
+          "type": "screen_glow",
+          "pos": [
+            0.56,
+            0.54
+          ],
+          "radius": [
+            0.11,
+            0.08
+          ],
+          "color": [
+            110,
+            245,
+            145
+          ],
+          "intensity": 0.22,
+          "mode": "turn_on",
+          "start": 0.25,
+          "end": 5.7,
+          "fade": 0.3
+        },
+        {
+          "type": "screen_glow",
+          "pos": [
+            0.54,
+            0.68
+          ],
+          "radius": [
+            0.06,
+            0.05
+          ],
+          "color": [
+            255,
+            65,
+            65
+          ],
+          "intensity": 0.3,
+          "mode": "pulse",
+          "start": 0.6,
+          "end": 5.7,
+          "fade": 0.3
+        }
+      ]
     },
     {
       "id": "s2_cam_thoai_bam_cai_goi_ket_noi",
       "image": "assets/scene2.jpg",
       "start": 5.7,
       "end": 9.2,
+      "beat_type": "suspicion",
+      "motion_level": "B",
+      "motion_intent": "Parallax 2.5D hai lớp qua vai Tùng bấm cài gói kết nối lạ kèm nhịp thở tay/vai, ánh sáng nút đồng ý và chớp sáng khớp message_send",
       "motion": {
+        "preset": "slow_push_in",
         "scale": [
-          1.04,
-          1.14
+          1.03,
+          1.09
         ],
         "focus": [
           [
-            0.5,
-            0.46
+            0.46,
+            0.5
           ],
           [
-            0.5,
-            0.42
+            0.46,
+            0.48
           ]
         ],
-        "wobble": "tense"
+        "wobble": "none"
       },
+      "parallax": {
+        "camera": "push_in",
+        "dolly": [
+          1.03,
+          1.09
+        ],
+        "shift_x": [
+          0.0,
+          0.0
+        ],
+        "shift_y": [
+          0.0,
+          -4.0
+        ],
+        "focus": [
+          0.46,
+          0.5
+        ],
+        "strength": 0.85,
+        "easing": "ease_out",
+        "layers": [
+          {
+            "role": "bg",
+            "image": "assets/s2_bg.jpg",
+            "depth": 0.45,
+            "blur": 0.8
+          },
+          {
+            "role": "fg",
+            "image": "assets/s2_fg.png",
+            "depth": 1.24,
+            "breathe_y": 1.8,
+            "breathe_scale": 0.004,
+            "breathe_period": 3.4
+          }
+        ]
+      },
+      "detail_fx": [
+        {
+          "type": "screen_glow",
+          "space": "frame",
+          "pos": [
+            0.65,
+            0.57
+          ],
+          "radius": [
+            0.22,
+            0.16
+          ],
+          "color": [
+            255,
+            185,
+            95
+          ],
+          "intensity": 0.24,
+          "mode": "turn_on",
+          "start": 5.8,
+          "end": 9.2,
+          "fade": 0.25
+        },
+        {
+          "type": "light_shift",
+          "at": 7.55,
+          "dur": 0.12,
+          "end": 7.85,
+          "end_dur": 0.2,
+          "brightness": 1.12,
+          "tint_rgb": [
+            150,
+            240,
+            255
+          ],
+          "tint_strength": 0.08
+        }
+      ],
       "transition_in": {
         "type": "dissolve",
         "dur": 0.24
@@ -75,23 +289,119 @@
       "image": "assets/scene3.jpg",
       "start": 9.2,
       "end": 19.8,
+      "beat_type": "anomaly",
+      "motion_level": "C",
+      "motion_intent": "Quét ngang trái đổi nhịp dẫn từ Tùng sang Chị Hai kèm song thoại mouth_sync riêng từng người (l2 Tùng -> l3 Chị Hai), cả 2 chớp mắt lo lắng và ánh sáng màn hình nhảy loạn",
       "motion": {
+        "preset": "pan_left",
         "scale": [
-          1.0,
+          1.05,
           1.06
         ],
         "focus": [
           [
-            0.52,
+            0.54,
             0.47
           ],
           [
-            0.56,
-            0.45
+            0.47,
+            0.46
           ]
         ],
-        "wobble": "tense"
+        "wobble": "breathe",
+        "easing": "smoothstep"
       },
+      "detail_fx": [
+        {
+          "type": "eye_blink",
+          "image": "assets/scene3_tung_blink.jpg",
+          "region": [
+            0.513,
+            0.44,
+            0.646,
+            0.478
+          ],
+          "feather": 0.008,
+          "times": [
+            11.35,
+            16.45
+          ],
+          "close_dur": 0.055,
+          "hold_dur": 0.045,
+          "open_dur": 0.08
+        },
+        {
+          "type": "eye_blink",
+          "image": "assets/scene3_chihai_blink.jpg",
+          "region": [
+            0.28,
+            0.457,
+            0.413,
+            0.495
+          ],
+          "feather": 0.008,
+          "times": [
+            13.1,
+            17.85
+          ],
+          "close_dur": 0.055,
+          "hold_dur": 0.045,
+          "open_dur": 0.08
+        },
+        {
+          "type": "mouth_sync",
+          "speaker": "thang_tun",
+          "region": [
+            0.541,
+            0.475,
+            0.624,
+            0.511
+          ],
+          "feather": 0.008,
+          "closed_image": "assets/scene3_tung_mouth_closed.jpg",
+          "mid_image": "assets/scene3.jpg",
+          "open_image": "assets/scene3_tung_mouth_open.jpg",
+          "fps": 12,
+          "thresh_mid": 0.14,
+          "thresh_open": 0.68
+        },
+        {
+          "type": "mouth_sync",
+          "speaker": "chi_hai",
+          "region": [
+            0.306,
+            0.493,
+            0.385,
+            0.529
+          ],
+          "feather": 0.008,
+          "open_image": "assets/scene3_chihai_mouth_open.jpg",
+          "fps": 12,
+          "thresh_mid": 0.14,
+          "thresh_open": 0.68
+        },
+        {
+          "type": "screen_glow",
+          "pos": [
+            0.51,
+            0.6
+          ],
+          "radius": [
+            0.16,
+            0.11
+          ],
+          "color": [
+            115,
+            225,
+            255
+          ],
+          "intensity": 0.28,
+          "mode": "flicker",
+          "start": 9.25,
+          "end": 19.8,
+          "fade": 0.25
+        }
+      ],
       "transition_in": {
         "type": "dissolve",
         "dur": 0.25
@@ -102,10 +412,14 @@
       "image": "assets/scene4.jpg",
       "start": 19.8,
       "end": 27.4,
+      "beat_type": "climax",
+      "motion_level": "C",
+      "motion_intent": "Cao trào chia khung: 2 cú shake + chớp đỏ khớp impact, Chị Hai nói gấp khớp l4 & chớp mắt sững người, ánh sáng chùng tắt đúng tiếng call_end tắt nguồn",
       "motion": {
+        "preset": "tense_push",
         "scale": [
-          1.08,
-          1.16
+          1.06,
+          1.15
         ],
         "focus": [
           [
@@ -117,8 +431,92 @@
             0.7
           ]
         ],
-        "wobble": "tense"
+        "wobble": "tense",
+        "easing": "ease_in"
       },
+      "detail_fx": [
+        {
+          "type": "eye_blink",
+          "image": "assets/scene4_chihai_blink.jpg",
+          "region": [
+            0.283,
+            0.643,
+            0.487,
+            0.689
+          ],
+          "feather": 0.01,
+          "times": [
+            23.85
+          ],
+          "close_dur": 0.055,
+          "hold_dur": 0.045,
+          "open_dur": 0.085
+        },
+        {
+          "type": "mouth_sync",
+          "speaker": "chi_hai",
+          "region": [
+            0.335,
+            0.7,
+            0.443,
+            0.747
+          ],
+          "feather": 0.009,
+          "closed_image": "assets/scene4_chihai_mouth_closed.jpg",
+          "mid_image": "assets/scene4.jpg",
+          "open_image": "assets/scene4_chihai_mouth_open.jpg",
+          "fps": 12,
+          "thresh_mid": 0.14,
+          "thresh_open": 0.68
+        },
+        {
+          "type": "screen_glow",
+          "pos": [
+            0.57,
+            0.85
+          ],
+          "radius": [
+            0.22,
+            0.14
+          ],
+          "color": [
+            255,
+            70,
+            70
+          ],
+          "intensity": 0.3,
+          "mode": "flicker",
+          "start": 20.65,
+          "end": 26.75,
+          "fade": 0.15
+        },
+        {
+          "type": "light_shift",
+          "at": 20.72,
+          "dur": 0.08,
+          "end": 21.05,
+          "end_dur": 0.2,
+          "brightness": 1.15,
+          "tint_rgb": [
+            255,
+            85,
+            85
+          ],
+          "tint_strength": 0.14
+        },
+        {
+          "type": "light_shift",
+          "at": 26.75,
+          "dur": 0.25,
+          "brightness": 0.86,
+          "tint_rgb": [
+            180,
+            200,
+            225
+          ],
+          "tint_strength": 0.08
+        }
+      ],
       "transition_in": {
         "type": "flash_red",
         "dur": 0.24
@@ -139,23 +537,99 @@
       "image": "assets/scene5.jpg",
       "start": 27.4,
       "end": 37.8,
+      "beat_type": "information",
+      "motion_level": "C",
+      "motion_intent": "Lùi chậm mở không gian tiệm sửa máy kèm song thoại mouth_sync luân phiên Anh Thợ (l5, l7) ↔ Tùng (l6) và nhịp chớp mắt tự nhiên",
       "motion": {
+        "preset": "slow_pull_out",
         "scale": [
           1.08,
           1.02
         ],
         "focus": [
           [
-            0.5,
-            0.47
+            0.48,
+            0.45
           ],
           [
             0.5,
-            0.49
+            0.48
           ]
         ],
-        "wobble": "calm"
+        "wobble": "breathe",
+        "easing": "smoothstep"
       },
+      "detail_fx": [
+        {
+          "type": "eye_blink",
+          "image": "assets/scene5_anhtho_blink.jpg",
+          "region": [
+            0.239,
+            0.36,
+            0.37,
+            0.394
+          ],
+          "feather": 0.008,
+          "times": [
+            29.35,
+            33.45,
+            36.75
+          ],
+          "close_dur": 0.055,
+          "hold_dur": 0.045,
+          "open_dur": 0.085
+        },
+        {
+          "type": "eye_blink",
+          "image": "assets/scene5_tung_blink.jpg",
+          "region": [
+            0.561,
+            0.36,
+            0.676,
+            0.393
+          ],
+          "feather": 0.008,
+          "times": [
+            31.65,
+            35.4
+          ],
+          "close_dur": 0.055,
+          "hold_dur": 0.045,
+          "open_dur": 0.085
+        },
+        {
+          "type": "mouth_sync",
+          "speaker": "anh_hai",
+          "region": [
+            0.254,
+            0.401,
+            0.352,
+            0.438
+          ],
+          "feather": 0.008,
+          "mid_image": "assets/scene5_anhtho_mouth_mid.jpg",
+          "open_image": "assets/scene5_anhtho_mouth_open.jpg",
+          "fps": 12,
+          "thresh_mid": 0.14,
+          "thresh_open": 0.68
+        },
+        {
+          "type": "mouth_sync",
+          "speaker": "thang_tun",
+          "region": [
+            0.578,
+            0.397,
+            0.661,
+            0.431
+          ],
+          "feather": 0.007,
+          "mid_image": "assets/scene5_tung_mouth_mid.jpg",
+          "open_image": "assets/scene5_tung_mouth_open.jpg",
+          "fps": 12,
+          "thresh_mid": 0.14,
+          "thresh_open": 0.68
+        }
+      ],
       "transition_in": {
         "type": "flash_white",
         "dur": 0.25
@@ -166,10 +640,14 @@
       "image": "assets/scene6.jpg",
       "start": 37.8,
       "end": 46.8,
+      "beat_type": "information",
+      "motion_level": "C",
+      "motion_intent": "Đẩy chậm vào sơ đồ đối chiếu Wi-Fi thật/giả kèm nhịp sáng đỏ từ bộ phát trong ba lô và lá chắn xanh 4G/5G",
       "motion": {
+        "preset": "slow_push_in",
         "scale": [
-          1.03,
-          1.11
+          1.02,
+          1.09
         ],
         "focus": [
           [
@@ -181,8 +659,53 @@
             0.42
           ]
         ],
-        "wobble": "calm"
+        "wobble": "none",
+        "easing": "ease_out"
       },
+      "detail_fx": [
+        {
+          "type": "screen_glow",
+          "pos": [
+            0.74,
+            0.56
+          ],
+          "radius": [
+            0.2,
+            0.16
+          ],
+          "color": [
+            255,
+            75,
+            75
+          ],
+          "intensity": 0.24,
+          "mode": "pulse",
+          "start": 38.0,
+          "end": 46.6,
+          "fade": 0.35
+        },
+        {
+          "type": "screen_glow",
+          "pos": [
+            0.26,
+            0.6
+          ],
+          "radius": [
+            0.22,
+            0.18
+          ],
+          "color": [
+            95,
+            245,
+            195
+          ],
+          "intensity": 0.22,
+          "mode": "pulse",
+          "start": 41.5,
+          "end": 46.6,
+          "fade": 0.4
+        }
+      ],
       "transition_in": {
         "type": "glitch",
         "dur": 0.3
@@ -193,22 +716,11 @@
       "image": "assets/scene7.jpg",
       "start": 46.8,
       "end": 50.5,
+      "beat_type": "ending",
+      "motion_level": "A",
+      "motion_intent": "Giữ tĩnh tuyệt đối để người xem đọc gọn 3 ý thẻ Nhớ kỹ",
       "motion": {
-        "scale": [
-          1.02,
-          1.05
-        ],
-        "focus": [
-          [
-            0.5,
-            0.48
-          ],
-          [
-            0.5,
-            0.48
-          ]
-        ],
-        "wobble": "none"
+        "preset": "static_hold"
       },
       "transition_in": {
         "type": "fade_black",
@@ -220,23 +732,96 @@
       "image": "assets/scene8.jpg",
       "start": 50.5,
       "end": 55.0,
+      "beat_type": "climax",
+      "motion_level": "B",
+      "motion_intent": "Cú lật 4.5 giây kết mở 2.5D: tách Anh Thợ + quầy kính cầm tờ 200k khỏi cô gái hoảng hốt chạy vô cửa, kèm 1 cái chớp mắt lạnh điềm nhiên khớp nhịp tim",
       "motion": {
+        "preset": "slow_push_in",
         "scale": [
-          1.06,
-          1.15
+          1.02,
+          1.09
         ],
         "focus": [
           [
-            0.54,
-            0.58
+            0.46,
+            0.66
           ],
           [
-            0.58,
-            0.54
+            0.46,
+            0.66
           ]
         ],
-        "wobble": "calm"
+        "wobble": "none"
       },
+      "parallax": {
+        "camera": "push_in",
+        "dolly": [
+          1.02,
+          1.09
+        ],
+        "shift_x": [
+          0.0,
+          0.0
+        ],
+        "shift_y": [
+          0.0,
+          0.0
+        ],
+        "focus": [
+          0.46,
+          0.66
+        ],
+        "strength": 0.85,
+        "easing": "ease_out",
+        "layers": [
+          {
+            "role": "bg",
+            "image": "assets/s8_bg.jpg",
+            "depth": 0.52,
+            "blur": 0.5
+          },
+          {
+            "role": "fg",
+            "image": "assets/s8_fg.png",
+            "depth": 1.26
+          }
+        ]
+      },
+      "detail_fx": [
+        {
+          "type": "eye_blink",
+          "image": "assets/scene8_anhtho_blink.jpg",
+          "region": [
+            0.239,
+            0.355,
+            0.372,
+            0.391
+          ],
+          "feather": 0.009,
+          "times": [
+            52.55
+          ],
+          "close_dur": 0.075,
+          "hold_dur": 0.075,
+          "open_dur": 0.12,
+          "layer": "fg"
+        },
+        {
+          "type": "focus_highlight",
+          "pos": [
+            0.46,
+            0.5
+          ],
+          "radius": [
+            0.44,
+            0.38
+          ],
+          "dim_outer": 0.22,
+          "start": 51.4,
+          "end": 55.0,
+          "fade": 0.45
+        }
+      ],
       "transition_in": {
         "type": "cut",
         "dur": 0.0
@@ -247,22 +832,11 @@
       "image": "assets/scene9_black.jpg",
       "start": 55.0,
       "end": 57.6,
+      "beat_type": "ending",
+      "motion_level": "A",
+      "motion_intent": "Cắt đen tĩnh tuyệt đối cho bảng Lưu ý cuối video",
       "motion": {
-        "scale": [
-          1.0,
-          1.02
-        ],
-        "focus": [
-          [
-            0.5,
-            0.5
-          ],
-          [
-            0.5,
-            0.5
-          ]
-        ],
-        "wobble": "none"
+        "preset": "static_hold"
       },
       "transition_in": {
         "type": "cut",
@@ -288,9 +862,9 @@
       "type": "text_hook",
       "text": "HAI MẠNG WI-FI TRÙNG TÊN — Thấy Wi-Fi khách sạn, sân bay không mật khẩu: Bấm lẹ coi chừng bị điều khiển máy!",
       "bbox_px": [
-        81,
+        89,
         170,
-        919,
+        911,
         416
       ],
       "safe_zone_compliant": true
@@ -307,9 +881,9 @@
         "luôn nè!"
       ],
       "bbox_px": [
-        124,
+        131,
         1268,
-        876,
+        870,
         1380
       ],
       "safe_zone_compliant": true
@@ -326,9 +900,9 @@
         "nha!"
       ],
       "bbox_px": [
-        131,
+        134,
         1268,
-        869,
+        867,
         1380
       ],
       "safe_zone_compliant": true
@@ -364,9 +938,9 @@
         "Đưa chị coi…"
       ],
       "bbox_px": [
-        342,
+        348,
         1324,
-        659,
+        652,
         1380
       ],
       "safe_zone_compliant": true
@@ -379,13 +953,13 @@
       "png_path": "factory619/staging/EP10/overlays/005_sub_l3.png",
       "type": "subtitle",
       "lines": [
-        "Kỳ vậy, sao màn hình tự chạy mà",
-        "bấm thoát không ăn?"
+        "Kỳ vậy, sao màn hình tự chạy mà bấm",
+        "thoát không ăn?"
       ],
       "bbox_px": [
-        138,
+        92,
         1268,
-        863,
+        908,
         1380
       ],
       "safe_zone_compliant": true
@@ -420,7 +994,7 @@
         "kiếm chỗ sửa điện thoại coi!"
       ],
       "bbox_px": [
-        137,
+        136,
         1268,
         864,
         1380
@@ -438,9 +1012,9 @@
         "Máy em bị cài app chạy ngầm rồi."
       ],
       "bbox_px": [
-        137,
+        135,
         1324,
-        864,
+        866,
         1380
       ],
       "safe_zone_compliant": true
@@ -457,9 +1031,9 @@
         "không cần mật khẩu xong là bị liền!"
       ],
       "bbox_px": [
-        113,
+        111,
         1268,
-        888,
+        889,
         1380
       ],
       "safe_zone_compliant": true
@@ -475,9 +1049,9 @@
         "Rồi, gỡ sạch rồi đó."
       ],
       "bbox_px": [
-        278,
+        284,
         1324,
-        722,
+        717,
         1380
       ],
       "safe_zone_compliant": true
@@ -513,9 +1087,9 @@
         "hàng hãy tắt Wi-Fi, dùng 4G, 5G!"
       ],
       "bbox_px": [
-        122,
+        117,
         1212,
-        878,
+        884,
         1380
       ],
       "safe_zone_compliant": true
@@ -530,9 +1104,9 @@
       "style": "warn",
       "text": "CẠM BẪY BẮT ĐẦU — TỰ NHẢY SANG WEB · BẤM \"ĐỒNG Ý\" TẢI GÓI KẾT NỐI LẠ!",
       "bbox_px": [
-        116,
+        80,
         236,
-        884,
+        920,
         444
       ],
       "safe_zone_compliant": true
@@ -547,9 +1121,9 @@
       "style": "danger",
       "text": "MÁY TỰ MỞ NGÂN HÀNG, ĐANG ĐIỀN SỐ TIỀN · TẮT NGUỒN GẤP!",
       "bbox_px": [
-        125,
+        124,
         137,
-        875,
+        876,
         243
       ],
       "safe_zone_compliant": true
@@ -661,6 +1235,16 @@
   ],
   "qa_preview_frames": [
     {
+      "timestamp_sec": 0.75,
+      "clean": "factory619/staging/EP10/preview_frames/qa_00_75s_clean.jpg",
+      "safezone": "factory619/staging/EP10/preview_frames/qa_00_75s_safezone.jpg"
+    },
+    {
+      "timestamp_sec": 1.1,
+      "clean": "factory619/staging/EP10/preview_frames/qa_01_10s_clean.jpg",
+      "safezone": "factory619/staging/EP10/preview_frames/qa_01_10s_safezone.jpg"
+    },
+    {
       "timestamp_sec": 1.25,
       "clean": "factory619/staging/EP10/preview_frames/qa_01_25s_clean.jpg",
       "safezone": "factory619/staging/EP10/preview_frames/qa_01_25s_safezone.jpg"
@@ -671,9 +1255,24 @@
       "safezone": "factory619/staging/EP10/preview_frames/qa_02_85s_safezone.jpg"
     },
     {
+      "timestamp_sec": 6.25,
+      "clean": "factory619/staging/EP10/preview_frames/qa_06_25s_clean.jpg",
+      "safezone": "factory619/staging/EP10/preview_frames/qa_06_25s_safezone.jpg"
+    },
+    {
       "timestamp_sec": 7.45,
       "clean": "factory619/staging/EP10/preview_frames/qa_07_45s_clean.jpg",
       "safezone": "factory619/staging/EP10/preview_frames/qa_07_45s_safezone.jpg"
+    },
+    {
+      "timestamp_sec": 7.82,
+      "clean": "factory619/staging/EP10/preview_frames/qa_07_82s_clean.jpg",
+      "safezone": "factory619/staging/EP10/preview_frames/qa_07_82s_safezone.jpg"
+    },
+    {
+      "timestamp_sec": 9.7,
+      "clean": "factory619/staging/EP10/preview_frames/qa_09_70s_clean.jpg",
+      "safezone": "factory619/staging/EP10/preview_frames/qa_09_70s_safezone.jpg"
     },
     {
       "timestamp_sec": 14.5,
@@ -681,14 +1280,39 @@
       "safezone": "factory619/staging/EP10/preview_frames/qa_14_50s_safezone.jpg"
     },
     {
+      "timestamp_sec": 20.95,
+      "clean": "factory619/staging/EP10/preview_frames/qa_20_95s_clean.jpg",
+      "safezone": "factory619/staging/EP10/preview_frames/qa_20_95s_safezone.jpg"
+    },
+    {
+      "timestamp_sec": 21.0,
+      "clean": "factory619/staging/EP10/preview_frames/qa_21_00s_clean.jpg",
+      "safezone": "factory619/staging/EP10/preview_frames/qa_21_00s_safezone.jpg"
+    },
+    {
       "timestamp_sec": 23.6,
       "clean": "factory619/staging/EP10/preview_frames/qa_23_60s_clean.jpg",
       "safezone": "factory619/staging/EP10/preview_frames/qa_23_60s_safezone.jpg"
     },
     {
+      "timestamp_sec": 27.15,
+      "clean": "factory619/staging/EP10/preview_frames/qa_27_15s_clean.jpg",
+      "safezone": "factory619/staging/EP10/preview_frames/qa_27_15s_safezone.jpg"
+    },
+    {
       "timestamp_sec": 32.6,
       "clean": "factory619/staging/EP10/preview_frames/qa_32_60s_clean.jpg",
       "safezone": "factory619/staging/EP10/preview_frames/qa_32_60s_safezone.jpg"
+    },
+    {
+      "timestamp_sec": 38.55,
+      "clean": "factory619/staging/EP10/preview_frames/qa_38_55s_clean.jpg",
+      "safezone": "factory619/staging/EP10/preview_frames/qa_38_55s_safezone.jpg"
+    },
+    {
+      "timestamp_sec": 42.1,
+      "clean": "factory619/staging/EP10/preview_frames/qa_42_10s_clean.jpg",
+      "safezone": "factory619/staging/EP10/preview_frames/qa_42_10s_safezone.jpg"
     },
     {
       "timestamp_sec": 42.3,

@@ -1,0 +1,74 @@
+{
+  "episode_id": "EP08",
+  "factory": "factory196",
+  "aspect_ratio": "16:9",
+  "title": "Một vòng tiền, hai nửa sự thật",
+  "gate": "GATE_6_PRODUCTION_RELEASE",
+  "status": "PRODUCED_READY_FOR_PUBLISH",
+  "released_at": "2026-11-22T11:00:17.925330+07:00",
+  "master_video": {
+    "path": "factory196/production/EP08/EP08_MotVongTienHaiNuaSuThat_242s.mp4",
+    "mirror": "06_RENDERED_VIDEOS/EP08_MotVongTienHaiNuaSuThat_242s.mp4",
+    "srt": "factory196/production/EP08/EP08_MotVongTienHaiNuaSuThat_242s.srt",
+    "thumbnail_9x16": "factory196/production/EP08/EP08_Thumbnail_9x16.jpg",
+    "thumbnail_16x9": "factory196/production/EP08/EP08_Thumbnail_16x9.jpg",
+    "thumbnail_sec": 175.61,
+    "size_mb": 74.75,
+    "sha256": "b4ce43e63c5aba6c9adc6d1da61c34a92d19c4058b0c10e9908ebb8eecdecfd0"
+  },
+  "youtube_upload": {
+    "primary_title": "Thấy Đúng Mặt, Gọi Đúng Số Thật Vẫn Mất 45 Triệu – Bẫy Người Đứng Giữa | Bóc Trần Lừa Đảo",
+    "primary_title_length": 89,
+    "alternative_titles": [
+      "Một Vòng Tiền, Hai Nửa Sự Thật: Khi Sếp Và Nhân Viên Cùng Tự Tay Chuyển Tiền Cho Kẻ Gian | Bóc Trần Lừa Đảo",
+      "Nick Mới Nhái Y Chang Cách Nói Chuyện Của Sếp – Gọi Số Thật Sao Vẫn Sập Bẫy? | Bóc Trần Lừa Đảo"
+    ],
+    "description": "Thấy đúng mặt sếp qua cuộc gọi hình 3 giây chập chờn, tin nhắn nhái y hệt cách xưng hô thường ngày, rồi chính nhân viên gọi thẳng vào số điện thoại thật của sếp — nhưng 45 triệu đồng vẫn đi trọn một vòng rồi biến mất vào tài khoản lạ.\n\n⏱️ Các hồi trong phim:\n00:00 Mở đầu – Cuộc gọi lần hai & câu hỏi đóng băng\n00:18 Hồi 1 – Cách nói chuyện & kế hoạch phòng tối\n00:57 Hồi 2 – Cuộc gọi hình ghép & nhái giọng sếp\n01:39 Hồi 3 – Dòng tiền đi một vòng\n02:18 Hồi 4 – Nhịp thứ hai & phút vỡ lẽ\n03:08 Hồi 5 – Thứ mất đi không chỉ là tiền\n03:27 Nhớ kỹ – 5 nguyên tắc chặn bẫy người đứng giữa\n\n🎬 ĐÂY LÀ PHIM HOẠT HÌNH DỰNG LẠI TÌNH HUỐNG ĐỂ CẢNH BÁO\nNhân vật, tên gọi, số điện thoại, số tiền trong phim đều là hư cấu nhằm mục đích cảnh báo.\n\n🤖 Hình ảnh và âm thanh được hỗ trợ sản xuất bởi công cụ AI.\n\n#bóctrầnlừađảo #cảnhgiáclừađảo #vạnchuyện",
+    "tags_csv": "cảnh giác lừa đảo, bóc trần lừa đảo, vạn chuyện, lừa đảo người đứng giữa, cuộc gọi hình ghép, giả mạo tài khoản người quen, chuyển tiền đường vòng, an toàn mạng, kỹ năng thoát hiểm, an toàn đời thực, phim hoạt hình cảnh báo, hồ sơ lừa đảo",
+    "tags_list": [
+      "cảnh giác lừa đảo",
+      "bóc trần lừa đảo",
+      "vạn chuyện",
+      "lừa đảo người đứng giữa",
+      "cuộc gọi hình ghép",
+      "giả mạo tài khoản người quen",
+      "chuyển tiền đường vòng",
+      "an toàn mạng",
+      "kỹ năng thoát hiểm",
+      "an toàn đời thực",
+      "phim hoạt hình cảnh báo",
+      "hồ sơ lừa đảo"
+    ],
+    "hashtags": [
+      "#bóctrầnlừađảo",
+      "#cảnhgiáclừađảo",
+      "#vạnchuyện"
+    ],
+    "pinned_comment": "📌 Theo bạn, sau câu nói ở cuối phim trên bàn cà phê, hai anh em có còn làm việc chung với nhau được nữa không? Chia sẻ góc nhìn ở bình luận để mọi người cùng cảnh giác nhé (lưu ý không đăng SĐT, STK hay tên người thật).",
+    "studio_settings": {
+      "playlist": "Hồ Sơ Bóc Trần Lừa Đảo – Phim Dài Chuyên Sâu",
+      "made_for_kids": false,
+      "age_restricted": false,
+      "altered_or_synthetic_content": true,
+      "category": "Education (Giáo dục)",
+      "video_language": "vi",
+      "subtitles_file": "factory196/production/EP08/EP08_MotVongTienHaiNuaSuThat_242s.srt",
+      "comments": "ON_MODERATION_BASIC"
+    },
+    "copy_paste_files": {
+      "title_txt": "factory196/production/EP08/youtube_upload/1_TITLE.txt",
+      "description_txt": "factory196/production/EP08/youtube_upload/2_DESCRIPTION.txt",
+      "tags_txt": "factory196/production/EP08/youtube_upload/3_TAGS.txt",
+      "pinned_comment_txt": "factory196/production/EP08/youtube_upload/4_PINNED_COMMENT.txt",
+      "studio_settings_md": "factory196/production/EP08/youtube_upload/5_YOUTUBE_STUDIO_SETTINGS.md"
+    }
+  },
+  "gate5_reference": "factory196/staging/EP08/qa_audit_report_gate5.json",
+  "compliance_flags": {
+    "no_real_identity": true,
+    "no_how_to_detail": true,
+    "red_flags_card": true,
+    "dramatized_disclaimer": true,
+    "ai_disclosure_required": true
+  }
+}

@@ -1,8 +1,9 @@
 {
   "episode_id": "EP04",
+  "factory": "factory619",
   "gate": "GATE_5_RENDER_AND_QA",
-  "staging_mp4_path": "factory/staging/EP04/EP04_MaQrDanDe_56s_staging.mp4",
-  "file_size_mb": 42.12,
+  "staging_mp4_path": "factory619/staging/EP04/EP04_MaQrDanDe_56s_staging.mp4",
+  "file_size_mb": 43.17,
   "stream_probe": {
     "programs": [],
     "stream_groups": [],
@@ -24,7 +25,7 @@
     ],
     "format": {
       "duration": "56.000000",
-      "size": "44164717"
+      "size": "45268040"
     }
   },
   "all_8_points_passed": true,
@@ -49,9 +50,9 @@
     },
     {
       "id": 4,
-      "name": "Hình ảnh an toàn: không máu me/khỏa thân, không logo – giao diện – sắc phục thật",
+      "name": "Hình ảnh & chuyển động an toàn: không logo/giao diện/sắc phục thật, không máu me, motion mượt đúng nhịp & giữ continuity (QC 11 điểm)",
       "status": "PASS",
-      "evidence": "Người duyệt: Antigravity Staging Visual QA. Da kiem tra 6 anh v4: 2 thanh nien dan de ma QR ban dem, xung dot chu quan va khach buoi sang, Tung chi ra lop decal dan chong, khong chu sai chinh ta"
+      "evidence": "Người duyệt: User. Duyet ban nang cap v5-level2-abc (A=1 B=2 C=4, 2.5D s1+s3, khau hinh mieng tiet che) len Production"
     },
     {
       "id": 5,
@@ -63,11 +64,11 @@
       "id": 6,
       "name": "Âm thanh: thoại rõ, master đúng chuẩn, đã nghe duyệt",
       "status": "PASS",
-      "evidence": "Master peak -1.23 dBFS / 56.0s; thoại vừa cửa sổ: True; đã nghe duyệt: True"
+      "evidence": "Master peak -1.24 dBFS / 56.0s; thoại vừa cửa sổ: True; đã nghe duyệt: True"
     },
     {
       "id": 7,
-      "name": "Safe Zone + Disclaimer + Thẻ Dấu hiệu nhận biết",
+      "name": "Safe Zone (9:16) + Disclaimer + Thẻ Dấu hiệu nhận biết",
       "status": "PASS",
       "evidence": "Overlay trong Safe Zone: True; disclaimer: 1; thẻ dấu hiệu: 3 ý"
     },
@@ -77,5 +78,40 @@
       "status": "PASS",
       "evidence": "Hook bắt đầu 0.2s; thời lượng 56.0s (file 56.00s)"
     }
-  ]
+  ],
+  "motion_qc": {
+    "is_level2": true,
+    "effective_level_counts": {
+      "A": 1,
+      "B": 2,
+      "C": 4,
+      "D": 0
+    },
+    "declared_level_counts": {
+      "A": 1,
+      "B": 2,
+      "C": 4,
+      "D": 0
+    },
+    "has_highlights": true,
+    "zoom_repetition_streaks": [],
+    "shake_scenes": 2,
+    "fallbacks": [],
+    "sfx_sync": {
+      "synced": [
+        "s1_dem_dan_de:screen_glow@0.25s",
+        "s2_xung_dot_sang:shake@13.50s",
+        "s2_xung_dot_sang:screen_glow@13.50s",
+        "s3_tung_phat_hien:screen_glow@24.42s",
+        "s4_lot_decal:shake@29.05s",
+        "s4_lot_decal:screen_glow@29.05s",
+        "s4_lot_decal:light_shift@29.05s",
+        "s5_boc_tran:light_shift@45.30s",
+        "s6a_hop_kinh_loa:screen_glow@48.65s"
+      ],
+      "unsynced": []
+    },
+    "warnings": [],
+    "point4_human_signed": true
+  }
 }

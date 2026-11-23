@@ -1,5 +1,6 @@
 {
   "episode_id": "EP04",
+  "factory": "factory619",
   "gate": "GATE_2_TTS_VOICE",
   "engine": "gemini-3.8-flash-tts",
   "placeholder_mode": false,
@@ -10,6 +11,7 @@
       "line_id": "l1",
       "speaker": "nguoi_boc_tran",
       "speaker_label": "Người Bóc Trần (dẫn chuyện của kênh)",
+      "label_short": "BÓC TRẦN",
       "voice": "Charon",
       "style": "Giọng nam trung niên miền Nam, điềm tĩnh, rõ ràng, ấm và đáng tin như một người anh lớn đang nhắc nhở người nhà; nhịp vừa phải, nhấn chữ quan trọng.",
       "af": "highpass=f=70,equalizer=f=150:width_type=o:width=1.2:g=2.5,acompressor=threshold=-18dB:ratio=2.5:attack=10:release=120:makeup=2dB",
@@ -20,7 +22,7 @@
       "timeline_end_sec": 7.07,
       "timeline_window_sec": 7.05,
       "fits_timeline_window": true,
-      "wav_path": "factory/materialAndDraft/EP04/audio/tts/l1.wav",
+      "wav_path": "factory619/materialAndDraft/EP04/audio/tts/l1.wav",
       "metrics": {
         "sample_rate": 48000,
         "channels": 1,
@@ -29,14 +31,13 @@
         "rms_dbfs": -20.47
       },
       "qa_status": "PASS",
-      "human_listen_check": "PASS",
-      "listen_by": "Antigravity Audio QA",
-      "listen_at": "2026-11-05T20:21:23+07:00"
+      "human_listen_check": "PASS"
     },
     {
       "line_id": "l2",
       "speaker": "co_tu",
       "speaker_label": "Cô Tư – người mẹ/người bán hàng ngoài 50 tuổi",
+      "label_short": "CÔ TƯ",
       "voice": "Kore",
       "style": "Giọng phụ nữ miền Nam Sài Gòn 45 tuổi bán quán nước, phát âm chuẩn phương ngữ miền Nam xuyên suốt mọi câu, giữ cố định một âm sắc rõ chữ, tự nhiên như đời thực, tốc độ vừa phải, tuyệt đối không giả giọng bà già run rẩy.",
       "af": "highpass=f=80,acompressor=threshold=-18dB:ratio=2.5:attack=8:release=100:makeup=2dB",
@@ -47,7 +48,7 @@
       "timeline_end_sec": 13.38,
       "timeline_window_sec": 6.3,
       "fits_timeline_window": true,
-      "wav_path": "factory/materialAndDraft/EP04/audio/tts/l2.wav",
+      "wav_path": "factory619/materialAndDraft/EP04/audio/tts/l2.wav",
       "metrics": {
         "sample_rate": 48000,
         "channels": 1,
@@ -56,14 +57,13 @@
         "rms_dbfs": -17.78
       },
       "qa_status": "PASS",
-      "human_listen_check": "PASS",
-      "listen_by": "Antigravity Audio QA",
-      "listen_at": "2026-11-05T20:21:23+07:00"
+      "human_listen_check": "PASS"
     },
     {
       "line_id": "l3",
       "speaker": "anh_hai",
       "speaker_label": "Anh Hai – lao động/nhân viên/chồng Chị Ba 35 tuổi",
+      "label_short": "ANH HAI",
       "voice": "Orus",
       "style": "Giọng nam miền Nam 35 tuổi, thẳng tính, tỉnh táo, chăm làm, luôn bình tĩnh giữ nhịp cho gia đình.",
       "af": "highpass=f=80,acompressor=threshold=-18dB:ratio=2.5:attack=8:release=100:makeup=2dB",
@@ -74,7 +74,7 @@
       "timeline_end_sec": 18.99,
       "timeline_window_sec": 5.6,
       "fits_timeline_window": true,
-      "wav_path": "factory/materialAndDraft/EP04/audio/tts/l3.wav",
+      "wav_path": "factory619/materialAndDraft/EP04/audio/tts/l3.wav",
       "metrics": {
         "sample_rate": 48000,
         "channels": 1,
@@ -83,14 +83,13 @@
         "rms_dbfs": -19.12
       },
       "qa_status": "PASS",
-      "human_listen_check": "PASS",
-      "listen_by": "Antigravity Audio QA",
-      "listen_at": "2026-11-05T20:21:23+07:00"
+      "human_listen_check": "PASS"
     },
     {
       "line_id": "l4",
       "speaker": "thang_tun",
       "speaker_label": "Tùng – nam thanh niên 18–24 tuổi",
+      "label_short": "TÙNG",
       "voice": "Puck",
       "style": "Giọng nam thanh niên miền Nam 20 tuổi, sôi nổi, nhanh nhảu, hay quét mã thanh toán vội.",
       "af": "highpass=f=80,acompressor=threshold=-18dB:ratio=2.5:attack=8:release=100:makeup=2dB",
@@ -101,7 +100,7 @@
       "timeline_end_sec": 24.35,
       "timeline_window_sec": 5.35,
       "fits_timeline_window": true,
-      "wav_path": "factory/materialAndDraft/EP04/audio/tts/l4.wav",
+      "wav_path": "factory619/materialAndDraft/EP04/audio/tts/l4.wav",
       "metrics": {
         "sample_rate": 48000,
         "channels": 1,
@@ -110,14 +109,13 @@
         "rms_dbfs": -20.22
       },
       "qa_status": "PASS",
-      "human_listen_check": "PASS",
-      "listen_by": "Antigravity Audio QA",
-      "listen_at": "2026-11-05T20:21:23+07:00"
+      "human_listen_check": "PASS"
     },
     {
       "line_id": "l5",
       "speaker": "thang_tun",
       "speaker_label": "Tùng – nam thanh niên 18–24 tuổi",
+      "label_short": "TÙNG",
       "voice": "Puck",
       "style": "Giọng nam thanh niên miền Nam 20 tuổi, sôi nổi, nhanh nhảu, hay quét mã thanh toán vội.",
       "af": "highpass=f=80,acompressor=threshold=-18dB:ratio=2.5:attack=8:release=100:makeup=2dB",
@@ -128,7 +126,7 @@
       "timeline_end_sec": 28.96,
       "timeline_window_sec": 4.6,
       "fits_timeline_window": true,
-      "wav_path": "factory/materialAndDraft/EP04/audio/tts/l5.wav",
+      "wav_path": "factory619/materialAndDraft/EP04/audio/tts/l5.wav",
       "metrics": {
         "sample_rate": 48000,
         "channels": 1,
@@ -137,14 +135,13 @@
         "rms_dbfs": -17.94
       },
       "qa_status": "PASS",
-      "human_listen_check": "PASS",
-      "listen_by": "Antigravity Audio QA",
-      "listen_at": "2026-11-05T20:21:23+07:00"
+      "human_listen_check": "PASS"
     },
     {
       "line_id": "l6",
       "speaker": "co_tu",
       "speaker_label": "Cô Tư – người mẹ/người bán hàng ngoài 50 tuổi",
+      "label_short": "CÔ TƯ",
       "voice": "Kore",
       "style": "Giọng phụ nữ miền Nam Sài Gòn 45 tuổi bán quán nước, phát âm chuẩn phương ngữ miền Nam xuyên suốt mọi câu, giữ cố định một âm sắc rõ chữ, tự nhiên như đời thực, tốc độ vừa phải, tuyệt đối không giả giọng bà già run rẩy.",
       "af": "highpass=f=80,acompressor=threshold=-18dB:ratio=2.5:attack=8:release=100:makeup=2dB",
@@ -155,7 +152,7 @@
       "timeline_end_sec": 36.51,
       "timeline_window_sec": 7.5,
       "fits_timeline_window": true,
-      "wav_path": "factory/materialAndDraft/EP04/audio/tts/l6.wav",
+      "wav_path": "factory619/materialAndDraft/EP04/audio/tts/l6.wav",
       "metrics": {
         "sample_rate": 48000,
         "channels": 1,
@@ -164,14 +161,13 @@
         "rms_dbfs": -18.04
       },
       "qa_status": "PASS",
-      "human_listen_check": "PASS",
-      "listen_by": "Antigravity Audio QA",
-      "listen_at": "2026-11-05T20:21:23+07:00"
+      "human_listen_check": "PASS"
     },
     {
       "line_id": "l7",
       "speaker": "anh_hai",
       "speaker_label": "Anh Hai – lao động/nhân viên/chồng Chị Ba 35 tuổi",
+      "label_short": "ANH HAI",
       "voice": "Orus",
       "style": "Giọng nam miền Nam 35 tuổi, thẳng tính, tỉnh táo, chăm làm, luôn bình tĩnh giữ nhịp cho gia đình.",
       "af": "highpass=f=80,acompressor=threshold=-18dB:ratio=2.5:attack=8:release=100:makeup=2dB",
@@ -182,7 +178,7 @@
       "timeline_end_sec": 42.52,
       "timeline_window_sec": 6.0,
       "fits_timeline_window": true,
-      "wav_path": "factory/materialAndDraft/EP04/audio/tts/l7.wav",
+      "wav_path": "factory619/materialAndDraft/EP04/audio/tts/l7.wav",
       "metrics": {
         "sample_rate": 48000,
         "channels": 1,
@@ -191,14 +187,13 @@
         "rms_dbfs": -19.05
       },
       "qa_status": "PASS",
-      "human_listen_check": "PASS",
-      "listen_by": "Antigravity Audio QA",
-      "listen_at": "2026-11-05T20:21:23+07:00"
+      "human_listen_check": "PASS"
     },
     {
       "line_id": "l8",
       "speaker": "nguoi_boc_tran",
       "speaker_label": "Người Bóc Trần (dẫn chuyện của kênh)",
+      "label_short": "BÓC TRẦN",
       "voice": "Charon",
       "style": "Giọng nam trung niên miền Nam, điềm tĩnh, rõ ràng, ấm và đáng tin như một người anh lớn đang nhắc nhở người nhà; nhịp vừa phải, nhấn chữ quan trọng.",
       "af": "highpass=f=70,equalizer=f=150:width_type=o:width=1.2:g=2.5,acompressor=threshold=-18dB:ratio=2.5:attack=10:release=120:makeup=2dB",
@@ -209,7 +204,7 @@
       "timeline_end_sec": 48.58,
       "timeline_window_sec": 6.05,
       "fits_timeline_window": true,
-      "wav_path": "factory/materialAndDraft/EP04/audio/tts/l8.wav",
+      "wav_path": "factory619/materialAndDraft/EP04/audio/tts/l8.wav",
       "metrics": {
         "sample_rate": 48000,
         "channels": 1,
@@ -218,14 +213,13 @@
         "rms_dbfs": -20.33
       },
       "qa_status": "PASS",
-      "human_listen_check": "PASS",
-      "listen_by": "Antigravity Audio QA",
-      "listen_at": "2026-11-05T20:21:23+07:00"
+      "human_listen_check": "PASS"
     },
     {
       "line_id": "l9",
       "speaker": "co_tu",
       "speaker_label": "Cô Tư – người mẹ/người bán hàng ngoài 50 tuổi",
+      "label_short": "CÔ TƯ",
       "voice": "Kore",
       "style": "Giọng phụ nữ miền Nam Sài Gòn 45 tuổi bán quán nước, phát âm chuẩn phương ngữ miền Nam xuyên suốt mọi câu, giữ cố định một âm sắc rõ chữ, tự nhiên như đời thực, tốc độ vừa phải, tuyệt đối không giả giọng bà già run rẩy.",
       "af": "highpass=f=80,acompressor=threshold=-18dB:ratio=2.5:attack=8:release=100:makeup=2dB",
@@ -236,7 +230,7 @@
       "timeline_end_sec": 55.59,
       "timeline_window_sec": 7.0,
       "fits_timeline_window": true,
-      "wav_path": "factory/materialAndDraft/EP04/audio/tts/l9.wav",
+      "wav_path": "factory619/materialAndDraft/EP04/audio/tts/l9.wav",
       "metrics": {
         "sample_rate": 48000,
         "channels": 1,
@@ -245,9 +239,7 @@
         "rms_dbfs": -18.8
       },
       "qa_status": "PASS",
-      "human_listen_check": "PASS",
-      "listen_by": "Antigravity Audio QA",
-      "listen_at": "2026-11-05T20:21:23+07:00"
+      "human_listen_check": "PASS"
     }
   ],
   "note": "Bắt buộc nghe lại từng câu (dấu thanh, cảm xúc). Đặt human_listen_check = PASS sau khi duyệt."

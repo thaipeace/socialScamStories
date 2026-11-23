@@ -32,8 +32,8 @@
       },
       "qa_status": "PASS",
       "human_listen_check": "PASS",
-      "listen_by": "Ban Biên Tập VCH",
-      "listen_at": "2026-11-13T22:15:50+07:00"
+      "listen_by": "User",
+      "listen_at": "2026-11-22T12:03:47+07:00"
     },
     {
       "line_id": "l2",
@@ -60,8 +60,8 @@
       },
       "qa_status": "PASS",
       "human_listen_check": "PASS",
-      "listen_by": "Ban Biên Tập VCH",
-      "listen_at": "2026-11-13T22:15:50+07:00"
+      "listen_by": "User",
+      "listen_at": "2026-11-22T12:03:47+07:00"
     },
     {
       "line_id": "l3",
@@ -88,8 +88,8 @@
       },
       "qa_status": "PASS",
       "human_listen_check": "PASS",
-      "listen_by": "Ban Biên Tập VCH",
-      "listen_at": "2026-11-13T22:15:50+07:00"
+      "listen_by": "User",
+      "listen_at": "2026-11-22T12:03:47+07:00"
     },
     {
       "line_id": "l4",
@@ -116,8 +116,8 @@
       },
       "qa_status": "PASS",
       "human_listen_check": "PASS",
-      "listen_by": "Ban Biên Tập VCH",
-      "listen_at": "2026-11-13T22:15:50+07:00"
+      "listen_by": "User",
+      "listen_at": "2026-11-22T12:03:47+07:00"
     },
     {
       "line_id": "l5",
@@ -144,8 +144,8 @@
       },
       "qa_status": "PASS",
       "human_listen_check": "PASS",
-      "listen_by": "Ban Biên Tập VCH",
-      "listen_at": "2026-11-13T22:15:50+07:00"
+      "listen_by": "User",
+      "listen_at": "2026-11-22T12:03:47+07:00"
     },
     {
       "line_id": "l6",
@@ -172,8 +172,8 @@
       },
       "qa_status": "PASS",
       "human_listen_check": "PASS",
-      "listen_by": "Ban Biên Tập VCH",
-      "listen_at": "2026-11-13T22:15:50+07:00"
+      "listen_by": "User",
+      "listen_at": "2026-11-22T12:03:47+07:00"
     },
     {
       "line_id": "l7",
@@ -200,8 +200,8 @@
       },
       "qa_status": "PASS",
       "human_listen_check": "PASS",
-      "listen_by": "Ban Biên Tập VCH",
-      "listen_at": "2026-11-13T22:15:50+07:00"
+      "listen_by": "User",
+      "listen_at": "2026-11-22T12:03:47+07:00"
     },
     {
       "line_id": "l8",
@@ -228,8 +228,8 @@
       },
       "qa_status": "PASS",
       "human_listen_check": "PASS",
-      "listen_by": "Ban Biên Tập VCH",
-      "listen_at": "2026-11-13T22:15:50+07:00"
+      "listen_by": "User",
+      "listen_at": "2026-11-22T12:03:47+07:00"
     }
   ],
   "note": "Bắt buộc nghe lại từng câu (dấu thanh, cảm xúc). Đặt human_listen_check = PASS sau khi duyệt."

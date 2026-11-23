@@ -3,7 +3,7 @@
   "factory": "factory196",
   "gate": "GATE_5_RENDER_AND_QA",
   "staging_mp4_path": "factory196/staging/EP04/EP04_BayVeNoiBo300Trieu_265s_staging.mp4",
-  "file_size_mb": 108.36,
+  "file_size_mb": 97.49,
   "stream_probe": {
     "programs": [],
     "stream_groups": [],
@@ -25,7 +25,7 @@
     ],
     "format": {
       "duration": "264.766667",
-      "size": "113622191"
+      "size": "102227600"
     }
   },
   "all_8_points_passed": true,
@@ -50,9 +50,9 @@
     },
     {
       "id": 4,
-      "name": "Hình ảnh an toàn: không máu me/khỏa thân, không logo – giao diện – sắc phục thật",
+      "name": "Hình ảnh & chuyển động an toàn: không logo/giao diện/sắc phục thật, không máu me, motion mượt đúng nhịp & giữ continuity (QC 11 điểm)",
       "status": "PASS",
-      "evidence": "Người duyệt: Antigravity QA. Reviewed 17 scenes, 34 TTS WAVs, safe zones, and 7s red-flag card"
+      "evidence": "Người duyệt: User. Duyet ban Staging v3-level2-abc len Production"
     },
     {
       "id": 5,
@@ -78,5 +78,54 @@
       "status": "PASS",
       "evidence": "Hook bắt đầu 0.4s; thời lượng 264.78s (file 264.77s)"
     }
-  ]
+  ],
+  "motion_qc": {
+    "is_level2": true,
+    "effective_level_counts": {
+      "A": 3,
+      "B": 4,
+      "C": 13,
+      "D": 0
+    },
+    "declared_level_counts": {
+      "A": 3,
+      "B": 4,
+      "C": 13,
+      "D": 0
+    },
+    "has_highlights": true,
+    "zoom_repetition_streaks": [],
+    "shake_scenes": 5,
+    "fallbacks": [],
+    "sfx_sync": {
+      "synced": [
+        "s00_idol_frenzy:shake@0.20s",
+        "s01_hook_panic:shake@8.14s",
+        "s01_hook_panic:screen_glow@8.44s",
+        "s05_sold_out_bait:screen_glow@72.14s",
+        "s05_sold_out_bait:screen_glow@77.76s",
+        "s06_euphoria_collecting:screen_glow@93.81s",
+        "s07_transfer_300m:shake@115.47s",
+        "s07_transfer_300m:screen_glow@115.42s",
+        "s07_transfer_300m:light_shift@115.47s",
+        "s08_chihai_secret_photo:light_shift@118.92s",
+        "s09_blocked_shock:shake@126.22s",
+        "s10a_call_plea:shake@133.07s",
+        "s10b_truth_abyss:light_shift@149.99s",
+        "s15_chihai_conspiracy_call:light_shift@254.20s",
+        "chat1@8.49s",
+        "chat2@26.59s",
+        "chat3@72.14s",
+        "chat5@114.27s",
+        "chat6@115.47s",
+        "chat8@195.16s"
+      ],
+      "unsynced": [
+        "chat4@98.11s",
+        "chat7@186.78s"
+      ]
+    },
+    "warnings": [],
+    "point4_human_signed": true
+  }
 }

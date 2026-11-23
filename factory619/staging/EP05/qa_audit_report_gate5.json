@@ -3,7 +3,7 @@
   "factory": "factory619",
   "gate": "GATE_5_RENDER_AND_QA",
   "staging_mp4_path": "factory619/staging/EP05/EP05_ViecNheLuongCao_56s_staging.mp4",
-  "file_size_mb": 42.43,
+  "file_size_mb": 34.43,
   "stream_probe": {
     "programs": [],
     "stream_groups": [],
@@ -25,7 +25,7 @@
     ],
     "format": {
       "duration": "56.000000",
-      "size": "44487881"
+      "size": "36098044"
     }
   },
   "all_8_points_passed": true,
@@ -40,7 +40,7 @@
       "id": 2,
       "name": "Không hướng dẫn thủ đoạn chi tiết (chỉ bóc trần cơ chế tâm lý & dấu hiệu)",
       "status": "PASS",
-      "evidence": "Người duyệt: Antigravity Staging Visual QA v5. Duyệt v5 13 keyframes + 6 clip 30fps, split-screen đúng cao trào, callout y=585 không che mặt, 100% Safe Zone"
+      "evidence": "Người duyệt: User. Duyet ban nang cap v6-level2-abc (13 canh, 2.5D s2a+s4b, khau hinh mieng tiet che, SFX sync 14/14) len Production"
     },
     {
       "id": 3,
@@ -50,15 +50,15 @@
     },
     {
       "id": 4,
-      "name": "Hình ảnh an toàn: không máu me/khỏa thân, không logo – giao diện – sắc phục thật",
+      "name": "Hình ảnh & chuyển động an toàn: không logo/giao diện/sắc phục thật, không máu me, motion mượt đúng nhịp & giữ continuity (QC 11 điểm)",
       "status": "PASS",
-      "evidence": "Người duyệt: Antigravity Staging Visual QA v5. Duyệt v5 13 keyframes + 6 clip 30fps, split-screen đúng cao trào, callout y=585 không che mặt, 100% Safe Zone"
+      "evidence": "Người duyệt: User. Duyet ban nang cap v6-level2-abc (13 canh, 2.5D s2a+s4b, khau hinh mieng tiet che, SFX sync 14/14) len Production"
     },
     {
       "id": 5,
       "name": "Tôn trọng nạn nhân, không kỳ thị vùng miền / dân tộc / nghề nghiệp / tuổi tác",
       "status": "PASS",
-      "evidence": "Người duyệt: Antigravity Staging Visual QA v5. Duyệt v5 13 keyframes + 6 clip 30fps, split-screen đúng cao trào, callout y=585 không che mặt, 100% Safe Zone"
+      "evidence": "Người duyệt: User. Duyet ban nang cap v6-level2-abc (13 canh, 2.5D s2a+s4b, khau hinh mieng tiet che, SFX sync 14/14) len Production"
     },
     {
       "id": 6,
@@ -78,5 +78,45 @@
       "status": "PASS",
       "evidence": "Hook bắt đầu 0.2s; thời lượng 56.0s (file 56.00s)"
     }
-  ]
+  ],
+  "motion_qc": {
+    "is_level2": true,
+    "effective_level_counts": {
+      "A": 0,
+      "B": 2,
+      "C": 11,
+      "D": 0
+    },
+    "declared_level_counts": {
+      "A": 1,
+      "B": 2,
+      "C": 10,
+      "D": 0
+    },
+    "has_highlights": true,
+    "zoom_repetition_streaks": [],
+    "shake_scenes": 4,
+    "fallbacks": [],
+    "sfx_sync": {
+      "synced": [
+        "s1a_bay_tinh_ai:screen_glow@0.20s",
+        "s2a_khoa_tai_khoan:shake@5.55s",
+        "s2a_khoa_tai_khoan:screen_glow@5.55s",
+        "s2a_khoa_tai_khoan:light_shift@5.55s",
+        "s2b_ep_nap_50tr:shake@11.20s",
+        "s2b_ep_nap_50tr:screen_glow@11.20s",
+        "s3b_chi_ba_giat_may:shake@22.60s",
+        "s3b_chi_ba_giat_may:screen_glow@22.60s",
+        "s3b_chi_ba_giat_may:light_shift@22.60s",
+        "s4b_vo_mat_na_ai:shake@30.85s",
+        "s4b_vo_mat_na_ai:shake@32.30s",
+        "s4b_vo_mat_na_ai:light_shift@30.85s",
+        "s4b_vo_mat_na_ai:light_shift@34.10s",
+        "s5a_hoa_hong_luoi_cau:screen_glow@41.85s"
+      ],
+      "unsynced": []
+    },
+    "warnings": [],
+    "point4_human_signed": true
+  }
 }

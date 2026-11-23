@@ -3,7 +3,7 @@
   "factory": "factory619",
   "gate": "GATE_5_RENDER_AND_QA",
   "staging_mp4_path": "factory619/staging/EP06/EP06_CheckInDuLich_48s_staging.mp4",
-  "file_size_mb": 35.3,
+  "file_size_mb": 29.68,
   "stream_probe": {
     "programs": [],
     "stream_groups": [],
@@ -25,7 +25,7 @@
     ],
     "format": {
       "duration": "47.620000",
-      "size": "37011526"
+      "size": "31125797"
     }
   },
   "all_8_points_passed": true,
@@ -50,9 +50,9 @@
     },
     {
       "id": 4,
-      "name": "Hình ảnh an toàn: không máu me/khỏa thân, không logo – giao diện – sắc phục thật",
+      "name": "Hình ảnh & chuyển động an toàn: không logo/giao diện/sắc phục thật, không máu me, motion mượt đúng nhịp & giữ continuity (QC 11 điểm)",
       "status": "PASS",
-      "evidence": "Người duyệt: Antigravity Staging Visual QA. Da kiem tra 12 anh keyframe + 6 clip 30fps va preview frames EP06 v5: mo dau tren xe xem lai anh check-in, nhip nhanh 47.62s khong cau gio, hinh anh an toan khong logo/sac phuc/bien so that"
+      "evidence": "Người duyệt: Antigravity Visual QC (theo uỷ quyền chủ kênh). Đã soi đủ 27 mảnh mặt, 2 cảnh 2.5D (s4a/s5a), 10 khung render thực tế MP4 và thumbnail 31.93s sạch phụ đề (v6-level2-abc)"
     },
     {
       "id": 5,
@@ -78,5 +78,34 @@
       "status": "PASS",
       "evidence": "Hook bắt đầu 0.25s; thời lượng 47.62s (file 47.62s)"
     }
-  ]
+  ],
+  "motion_qc": {
+    "is_level2": true,
+    "effective_level_counts": {
+      "A": 2,
+      "B": 2,
+      "C": 8,
+      "D": 0
+    },
+    "declared_level_counts": {
+      "A": 2,
+      "B": 2,
+      "C": 8,
+      "D": 0
+    },
+    "has_highlights": true,
+    "zoom_repetition_streaks": [],
+    "shake_scenes": 1,
+    "fallbacks": [],
+    "sfx_sync": {
+      "synced": [
+        "s1a_tren_xe_xem_anh:screen_glow@0.30s",
+        "s4a_tuan_tra_bat_trom:shake@26.84s",
+        "s4a_tuan_tra_bat_trom:light_shift@26.76s"
+      ],
+      "unsynced": []
+    },
+    "warnings": [],
+    "point4_human_signed": true
+  }
 }

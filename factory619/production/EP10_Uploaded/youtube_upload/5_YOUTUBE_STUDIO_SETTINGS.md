@@ -1,16 +1,16 @@
 # HƯỚNG DẪN CÀI ĐẶT YOUTUBE STUDIO (EP10 · 9:16)
 
 ## 1. File tải lên (Upload files)
-- **File Video chính (9:16 MP4)**: [EP10_BayWifiMienPhi_58s.mp4](file:////Users/thainguyendev/projects/socialScamStories/factory619/production/EP10/EP10_BayWifiMienPhi_58s.mp4)
-- **File Phụ đề (SRT)**: [EP10_BayWifiMienPhi_58s.srt](file:////Users/thainguyendev/projects/socialScamStories/factory619/production/EP10/EP10_BayWifiMienPhi_58s.srt)
-- **Ảnh Thumbnail 16:9**: [EP10_Thumbnail_16x9.jpg](file:////Users/thainguyendev/projects/socialScamStories/factory619/production/EP10/EP10_Thumbnail_16x9.jpg) (mốc `21.4s`)
-- **Ảnh Thumbnail 9:16**: [EP10_Thumbnail_9x16.jpg](file:////Users/thainguyendev/projects/socialScamStories/factory619/production/EP10/EP10_Thumbnail_9x16.jpg)
+- **File Video chính (9:16 MP4)**: [EP10_BayWifiMienPhi_58s.mp4](file:///C:/projects/socialScamStories/factory619/production/EP10/EP10_BayWifiMienPhi_58s.mp4)
+- **File Phụ đề (SRT)**: [EP10_BayWifiMienPhi_58s.srt](file:///C:/projects/socialScamStories/factory619/production/EP10/EP10_BayWifiMienPhi_58s.srt)
+- **Ảnh Thumbnail 16:9**: [EP10_Thumbnail_16x9.jpg](file:///C:/projects/socialScamStories/factory619/production/EP10/EP10_Thumbnail_16x9.jpg) (mốc `20.6s`)
+- **Ảnh Thumbnail 9:16**: [EP10_Thumbnail_9x16.jpg](file:///C:/projects/socialScamStories/factory619/production/EP10/EP10_Thumbnail_9x16.jpg)
 
 ## 2. Các ô nội dung Copy – Paste nhanh
-- **Title (Tiêu đề — 119/100 ký tự)**: Mở [1_TITLE.txt](file:////Users/thainguyendev/projects/socialScamStories/factory619/production/EP10/youtube_upload/1_TITLE.txt) (dòng đầu tiên)
-- **Description (Mô tả)**: Mở [2_DESCRIPTION.txt](file:////Users/thainguyendev/projects/socialScamStories/factory619/production/EP10/youtube_upload/2_DESCRIPTION.txt) (`Ctrl+A` → `Ctrl+C`)
-- **Tags (Thẻ từ khóa — 278/500 ký tự)**: Mở [3_TAGS.txt](file:////Users/thainguyendev/projects/socialScamStories/factory619/production/EP10/youtube_upload/3_TAGS.txt) (`Ctrl+A` → `Ctrl+C`)
-- **Pinned Comment (Bình luận ghim sau khi đăng)**: Mở [4_PINNED_COMMENT.txt](file:////Users/thainguyendev/projects/socialScamStories/factory619/production/EP10/youtube_upload/4_PINNED_COMMENT.txt) (`Ctrl+A` → `Ctrl+C`)
+- **Title (Tiêu đề — 119/100 ký tự)**: Mở [1_TITLE.txt](file:///C:/projects/socialScamStories/factory619/production/EP10/youtube_upload/1_TITLE.txt) (dòng đầu tiên)
+- **Description (Mô tả)**: Mở [2_DESCRIPTION.txt](file:///C:/projects/socialScamStories/factory619/production/EP10/youtube_upload/2_DESCRIPTION.txt) (`Ctrl+A` → `Ctrl+C`)
+- **Tags (Thẻ từ khóa — 278/500 ký tự)**: Mở [3_TAGS.txt](file:///C:/projects/socialScamStories/factory619/production/EP10/youtube_upload/3_TAGS.txt) (`Ctrl+A` → `Ctrl+C`)
+- **Pinned Comment (Bình luận ghim sau khi đăng)**: Mở [4_PINNED_COMMENT.txt](file:///C:/projects/socialScamStories/factory619/production/EP10/youtube_upload/4_PINNED_COMMENT.txt) (`Ctrl+A` → `Ctrl+C`)
 
 ## 3. Cấu hình chi tiết từng mục trong YouTube Studio
 | Mục trong YouTube Studio | Giá trị cần chọn | Lý do / Lưu ý quan trọng |

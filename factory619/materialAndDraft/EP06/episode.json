@@ -2,7 +2,8 @@
   "episode_id": "EP06",
   "slug": "CheckInDuLich",
   "title": "Thói quen check-in du lịch thời gian thực mời trộm vào nhà",
-  "version": "v5",
+  "version": "v6-level2-abc",
+  "motion_upgrade": "level2",
   "scam_family": "MIX-05",
   "duration_sec": 47.62,
   "hook": {
@@ -13,15 +14,18 @@
   },
   "scenes": [
     {
-      "id": "s1_hook",
+      "id": "s1a_tren_xe_xem_anh",
       "image": "assets/scene1.jpg",
-      "video": "assets/scene1.mp4",
       "start": 0.0,
-      "end": 9.16,
+      "end": 5.08,
+      "beat_type": "establishing",
+      "motion_level": "C",
+      "motion_intent": "Đẩy nhẹ trong khoang xe đang chạy về nhà: Chị Ba nói khớp WAV l1, hai vợ chồng chớp mắt vui vẻ và ánh điện thoại bật lên đúng tiếng thông báo 0.30s",
       "motion": {
+        "preset": "slow_push_in",
         "scale": [
-          1.05,
-          1.13
+          1.03,
+          1.1
         ],
         "focus": [
           [
@@ -29,92 +33,700 @@
             0.5
           ],
           [
-            0.5,
-            0.47
+            0.48,
+            0.48
           ]
         ],
-        "wobble": "calm"
+        "wobble": "breathe",
+        "easing": "ease_out"
+      },
+      "detail_fx": [
+        {
+          "type": "eye_blink",
+          "image": "assets/s1a_chiba_blink.jpg",
+          "region": [
+            0.375,
+            0.455,
+            0.505,
+            0.497
+          ],
+          "feather": 0.008,
+          "times": [
+            2.15,
+            4.45
+          ],
+          "close_dur": 0.055,
+          "hold_dur": 0.045,
+          "open_dur": 0.085
+        },
+        {
+          "type": "eye_blink",
+          "image": "assets/s1a_anhhai_blink.jpg",
+          "region": [
+            0.664,
+            0.445,
+            0.792,
+            0.485
+          ],
+          "feather": 0.008,
+          "times": [
+            1.35,
+            3.65
+          ],
+          "close_dur": 0.055,
+          "hold_dur": 0.045,
+          "open_dur": 0.085
+        },
+        {
+          "type": "mouth_sync",
+          "speaker": "chi_ba",
+          "region": [
+            0.396,
+            0.485,
+            0.497,
+            0.532
+          ],
+          "feather": 0.008,
+          "closed_image": "assets/s1a_chiba_mouth_closed.jpg",
+          "mid_image": "assets/scene1.jpg",
+          "open_image": "assets/s1a_chiba_mouth_open.jpg",
+          "fps": 12,
+          "thresh_mid": 0.14,
+          "thresh_open": 0.68
+        },
+        {
+          "type": "screen_glow",
+          "pos": [
+            0.56,
+            0.56
+          ],
+          "radius": [
+            0.1,
+            0.08
+          ],
+          "color": [
+            90,
+            235,
+            220
+          ],
+          "intensity": 0.24,
+          "mode": "turn_on",
+          "start": 0.3,
+          "end": 5.08,
+          "fade": 0.22
+        }
+      ]
+    },
+    {
+      "id": "s1b_toi_cong_nha",
+      "image": "assets/scene1_b.jpg",
+      "start": 5.08,
+      "end": 9.16,
+      "beat_type": "normal",
+      "motion_level": "C",
+      "motion_intent": "Lùi khung mở góc nhìn qua kính chắn gió thấy cổng nhà khi Anh Hai nói l1b, màn hình ảnh check-in đi biển sáng nhịp xanh dịu",
+      "motion": {
+        "preset": "slow_pull_out",
+        "scale": [
+          1.09,
+          1.02
+        ],
+        "focus": [
+          [
+            0.5,
+            0.54
+          ],
+          [
+            0.5,
+            0.5
+          ]
+        ],
+        "wobble": "breathe",
+        "easing": "smoothstep"
+      },
+      "detail_fx": [
+        {
+          "type": "screen_glow",
+          "pos": [
+            0.51,
+            0.71
+          ],
+          "radius": [
+            0.24,
+            0.2
+          ],
+          "color": [
+            95,
+            240,
+            230
+          ],
+          "intensity": 0.24,
+          "mode": "pulse",
+          "start": 5.15,
+          "end": 9.1,
+          "fade": 0.25
+        }
+      ],
+      "transition_in": {
+        "type": "dissolve",
+        "dur": 0.26
       }
     },
     {
-      "id": "s2_moi_nhu",
+      "id": "s2a_dem_cay_khoa",
       "image": "assets/scene2.jpg",
-      "video": "assets/scene2.mp4",
       "start": 9.16,
-      "end": 18.46,
+      "end": 13.36,
+      "beat_type": "suspicion",
+      "motion_level": "C",
+      "motion_intent": "Đẩy căng ban đêm vào hai tên trộm cạy ổ khóa: tia lửa ổ khóa nhấp nháy, ánh xanh màn hình ảnh check-in và tên cạy khóa chớp mắt căng thẳng",
       "motion": {
+        "preset": "tense_push",
         "scale": [
           1.04,
-          1.13
+          1.12
         ],
         "focus": [
           [
             0.5,
-            0.5
+            0.54
           ],
           [
-            0.47,
-            0.45
+            0.46,
+            0.56
           ]
         ],
-        "wobble": "tense"
+        "wobble": "tense",
+        "easing": "ease_in"
       },
+      "detail_fx": [
+        {
+          "type": "eye_blink",
+          "image": "assets/s2a_thief1_blink.jpg",
+          "region": [
+            0.424,
+            0.571,
+            0.539,
+            0.615
+          ],
+          "feather": 0.007,
+          "times": [
+            11.2
+          ],
+          "close_dur": 0.055,
+          "hold_dur": 0.045,
+          "open_dur": 0.08
+        },
+        {
+          "type": "screen_glow",
+          "pos": [
+            0.3,
+            0.59
+          ],
+          "radius": [
+            0.16,
+            0.12
+          ],
+          "color": [
+            255,
+            215,
+            95
+          ],
+          "intensity": 0.3,
+          "mode": "flicker",
+          "start": 9.25,
+          "end": 13.3,
+          "fade": 0.2
+        },
+        {
+          "type": "screen_glow",
+          "pos": [
+            0.66,
+            0.68
+          ],
+          "radius": [
+            0.13,
+            0.11
+          ],
+          "color": [
+            90,
+            225,
+            255
+          ],
+          "intensity": 0.24,
+          "mode": "pulse",
+          "start": 9.4,
+          "end": 13.3,
+          "fade": 0.22
+        }
+      ],
       "transition_in": {
         "type": "dissolve",
         "dur": 0.28
       }
     },
     {
-      "id": "s3_leo_thang",
-      "image": "assets/scene3.jpg",
-      "video": "assets/scene3.mp4",
-      "start": 18.46,
-      "end": 26.68,
+      "id": "s2b_ve_thay_o_khoa_xuoc",
+      "image": "assets/scene2_b.jpg",
+      "start": 13.36,
+      "end": 18.46,
+      "beat_type": "anomaly",
+      "motion_level": "C",
+      "motion_intent": "Quét ngang trái dồn về Anh Hai & ổ khóa trầy xước sau tiếng bước chân 13.41s: Anh Hai nói khớp l3, hai vợ chồng chớp mắt hốt hoảng + viền tối tập trung ổ khóa",
       "motion": {
+        "preset": "pan_left",
         "scale": [
-          1.04,
-          1.14
+          1.06,
+          1.06
         ],
         "focus": [
           [
-            0.5,
+            0.54,
             0.48
           ],
           [
-            0.5,
-            0.44
+            0.46,
+            0.48
           ]
         ],
-        "wobble": "handheld"
+        "wobble": "tense",
+        "easing": "smoothstep"
       },
+      "detail_fx": [
+        {
+          "type": "eye_blink",
+          "image": "assets/s2b_anhhai_blink.jpg",
+          "region": [
+            0.198,
+            0.423,
+            0.312,
+            0.464
+          ],
+          "feather": 0.008,
+          "times": [
+            15.4,
+            17.85
+          ],
+          "close_dur": 0.055,
+          "hold_dur": 0.045,
+          "open_dur": 0.085
+        },
+        {
+          "type": "eye_blink",
+          "image": "assets/s2b_chiba_blink.jpg",
+          "region": [
+            0.378,
+            0.455,
+            0.495,
+            0.497
+          ],
+          "feather": 0.008,
+          "times": [
+            14.55,
+            16.95
+          ],
+          "close_dur": 0.055,
+          "hold_dur": 0.045,
+          "open_dur": 0.085
+        },
+        {
+          "type": "mouth_sync",
+          "speaker": "anh_hai",
+          "region": [
+            0.203,
+            0.456,
+            0.297,
+            0.506
+          ],
+          "feather": 0.008,
+          "closed_image": "assets/s2b_anhhai_mouth_closed.jpg",
+          "mid_image": "assets/scene2_b.jpg",
+          "open_image": "assets/s2b_anhhai_mouth_open.jpg",
+          "fps": 12,
+          "thresh_mid": 0.14,
+          "thresh_open": 0.68
+        },
+        {
+          "type": "focus_highlight",
+          "pos": [
+            0.34,
+            0.5
+          ],
+          "radius": [
+            0.42,
+            0.34
+          ],
+          "dim_outer": 0.16,
+          "start": 13.55,
+          "end": 18.4,
+          "fade": 0.35
+        }
+      ],
       "transition_in": {
         "type": "dissolve",
-        "dur": 0.28
+        "dur": 0.26
       }
     },
     {
-      "id": "s4_cu_chot",
-      "image": "assets/scene4.jpg",
-      "video": "assets/scene4.mp4",
-      "start": 26.68,
-      "end": 36.1,
+      "id": "s3a_chi_ba_hoang_hot",
+      "image": "assets/scene3.jpg",
+      "start": 18.46,
+      "end": 22.88,
+      "beat_type": "suspicion",
+      "motion_level": "C",
+      "motion_intent": "Đẩy căng theo nhịp tim đập vào Chị Ba hoảng hốt: Chị Ba nói khớp l4, cả hai vợ chồng chớp mắt + viền tối tập trung",
       "motion": {
+        "preset": "tense_push",
         "scale": [
-          1.13,
-          1.04
+          1.03,
+          1.11
         ],
         "focus": [
           [
-            0.52,
-            0.46
+            0.54,
+            0.48
           ],
           [
-            0.5,
+            0.56,
+            0.46
+          ]
+        ],
+        "wobble": "tense",
+        "easing": "ease_in"
+      },
+      "detail_fx": [
+        {
+          "type": "eye_blink",
+          "image": "assets/s3a_chiba_blink.jpg",
+          "region": [
+            0.643,
+            0.457,
+            0.807,
+            0.505
+          ],
+          "feather": 0.008,
+          "times": [
+            20.4,
+            22.4
+          ],
+          "close_dur": 0.055,
+          "hold_dur": 0.045,
+          "open_dur": 0.085
+        },
+        {
+          "type": "eye_blink",
+          "image": "assets/s3a_anhhai_blink.jpg",
+          "region": [
+            0.198,
+            0.423,
+            0.312,
+            0.464
+          ],
+          "feather": 0.008,
+          "times": [
+            19.65,
+            21.85
+          ],
+          "close_dur": 0.055,
+          "hold_dur": 0.045,
+          "open_dur": 0.085
+        },
+        {
+          "type": "mouth_sync",
+          "speaker": "chi_ba",
+          "region": [
+            0.669,
+            0.496,
+            0.789,
+            0.56
+          ],
+          "feather": 0.008,
+          "closed_image": "assets/s3a_chiba_mouth_closed.jpg",
+          "mid_image": "assets/scene3.jpg",
+          "open_image": "assets/s3a_chiba_mouth_open.jpg",
+          "fps": 12,
+          "thresh_mid": 0.14,
+          "thresh_open": 0.68
+        },
+        {
+          "type": "focus_highlight",
+          "pos": [
+            0.56,
+            0.48
+          ],
+          "radius": [
+            0.46,
+            0.36
+          ],
+          "dim_outer": 0.18,
+          "start": 18.7,
+          "end": 22.82,
+          "fade": 0.35
+        }
+      ],
+      "transition_in": {
+        "type": "dissolve",
+        "dur": 0.26
+      }
+    },
+    {
+      "id": "s3b_ong_bay_buoc_toi",
+      "image": "assets/scene3_b.jpg",
+      "start": 22.88,
+      "end": 26.68,
+      "beat_type": "information",
+      "motion_level": "C",
+      "motion_intent": "Quét ngang phải đón Ông Bảy tổ an ninh bước tới: Ông Bảy nói khớp l5, cả 3 nhân vật chớp mắt tự nhiên + biểu tượng khiên gia đình sáng xanh",
+      "motion": {
+        "preset": "pan_right",
+        "scale": [
+          1.06,
+          1.06
+        ],
+        "focus": [
+          [
+            0.46,
+            0.5
+          ],
+          [
+            0.54,
             0.5
           ]
         ],
-        "wobble": "handheld"
+        "wobble": "breathe",
+        "easing": "smoothstep"
       },
+      "detail_fx": [
+        {
+          "type": "eye_blink",
+          "image": "assets/s3b_ongbay_blink.jpg",
+          "region": [
+            0.674,
+            0.445,
+            0.797,
+            0.488
+          ],
+          "feather": 0.008,
+          "times": [
+            24.65
+          ],
+          "close_dur": 0.055,
+          "hold_dur": 0.045,
+          "open_dur": 0.085
+        },
+        {
+          "type": "eye_blink",
+          "image": "assets/s3b_anhhai_blink.jpg",
+          "region": [
+            0.198,
+            0.423,
+            0.312,
+            0.464
+          ],
+          "feather": 0.008,
+          "times": [
+            23.85
+          ],
+          "close_dur": 0.055,
+          "hold_dur": 0.045,
+          "open_dur": 0.085
+        },
+        {
+          "type": "eye_blink",
+          "image": "assets/s3b_chiba_blink.jpg",
+          "region": [
+            0.378,
+            0.455,
+            0.495,
+            0.497
+          ],
+          "feather": 0.008,
+          "times": [
+            25.45
+          ],
+          "close_dur": 0.055,
+          "hold_dur": 0.045,
+          "open_dur": 0.085
+        },
+        {
+          "type": "mouth_sync",
+          "speaker": "ong_bay",
+          "region": [
+            0.688,
+            0.475,
+            0.792,
+            0.526
+          ],
+          "feather": 0.008,
+          "closed_image": "assets/s3b_ongbay_mouth_closed.jpg",
+          "mid_image": "assets/scene3_b.jpg",
+          "open_image": "assets/s3b_ongbay_mouth_open.jpg",
+          "fps": 12,
+          "thresh_mid": 0.14,
+          "thresh_open": 0.68
+        },
+        {
+          "type": "screen_glow",
+          "pos": [
+            0.59,
+            0.5
+          ],
+          "radius": [
+            0.14,
+            0.12
+          ],
+          "color": [
+            85,
+            245,
+            145
+          ],
+          "intensity": 0.25,
+          "mode": "pulse",
+          "start": 23.0,
+          "end": 26.6,
+          "fade": 0.25
+        }
+      ],
+      "transition_in": {
+        "type": "dissolve",
+        "dur": 0.24
+      }
+    },
+    {
+      "id": "s4a_tuan_tra_bat_trom",
+      "image": "assets/scene4.jpg",
+      "start": 26.68,
+      "end": 32.0,
+      "beat_type": "climax",
+      "motion_level": "B",
+      "motion_intent": "Cao trào 2.5D tuần tra đêm: tách Chú Bảo Vệ & Ông Bảy tiền cảnh khóa trục ngay chóa đèn pin trước hai tên trộm bỏ chạy + flash impact, shake 26.84s, còi 26.90s & chớp mắt khóa trên layer fg",
+      "motion": {
+        "preset": "slow_pull_out",
+        "scale": [
+          1.1,
+          1.02
+        ],
+        "focus": [
+          [
+            0.65,
+            0.61
+          ],
+          [
+            0.65,
+            0.61
+          ]
+        ],
+        "wobble": "none"
+      },
+      "parallax": {
+        "camera": "pull_out",
+        "dolly": [
+          1.1,
+          1.02
+        ],
+        "shift_x": [
+          0.0,
+          0.0
+        ],
+        "shift_y": [
+          0.0,
+          0.0
+        ],
+        "focus": [
+          0.65,
+          0.61
+        ],
+        "strength": 0.85,
+        "easing": "smoothstep",
+        "layers": [
+          {
+            "role": "bg",
+            "image": "assets/s4a_bg.jpg",
+            "depth": 0.48,
+            "blur": 0.5
+          },
+          {
+            "role": "fg",
+            "image": "assets/s4a_fg.png",
+            "depth": 1.24
+          }
+        ]
+      },
+      "detail_fx": [
+        {
+          "type": "eye_blink",
+          "image": "assets/s4a_baove_blink.jpg",
+          "region": [
+            0.678,
+            0.449,
+            0.792,
+            0.488
+          ],
+          "feather": 0.008,
+          "times": [
+            28.7,
+            31.1
+          ],
+          "close_dur": 0.055,
+          "hold_dur": 0.045,
+          "open_dur": 0.085,
+          "layer": "fg"
+        },
+        {
+          "type": "eye_blink",
+          "image": "assets/s4a_ongbay_blink.jpg",
+          "region": [
+            0.858,
+            0.457,
+            0.971,
+            0.497
+          ],
+          "feather": 0.008,
+          "times": [
+            29.85
+          ],
+          "close_dur": 0.055,
+          "hold_dur": 0.045,
+          "open_dur": 0.085,
+          "layer": "fg"
+        },
+        {
+          "type": "screen_glow",
+          "space": "frame",
+          "pos": [
+            0.55,
+            0.58
+          ],
+          "radius": [
+            0.28,
+            0.18
+          ],
+          "color": [
+            255,
+            225,
+            130
+          ],
+          "intensity": 0.24,
+          "mode": "pulse",
+          "start": 26.76,
+          "end": 31.95,
+          "fade": 0.25
+        },
+        {
+          "type": "light_shift",
+          "at": 26.76,
+          "dur": 0.08,
+          "end": 27.12,
+          "end_dur": 0.24,
+          "brightness": 1.14,
+          "tint_rgb": [
+            255,
+            235,
+            175
+          ],
+          "tint_strength": 0.11
+        }
+      ],
       "transition_in": {
         "type": "flash_white",
         "dur": 0.24
@@ -127,47 +739,237 @@
       ]
     },
     {
-      "id": "s5_boc_tran",
-      "image": "assets/scene5.jpg",
-      "video": "assets/scene5.mp4",
-      "start": 36.1,
-      "end": 41.82,
+      "id": "s4b_hu_hon_cam_on",
+      "image": "assets/scene4_b.jpg",
+      "start": 32.0,
+      "end": 36.1,
+      "beat_type": "aftermath",
+      "motion_level": "C",
+      "motion_intent": "Đẩy dịu nhẹ cảm xúc nhẹ nhõm ban ngày: Chị Ba rưng rưng nói khớp l7, Chị Ba cùng hai chú tuần tra chớp mắt ấm áp",
       "motion": {
+        "preset": "slow_push_in",
         "scale": [
           1.02,
-          1.09
+          1.08
         ],
         "focus": [
           [
             0.5,
-            0.5
+            0.49
+          ],
+          [
+            0.48,
+            0.47
+          ]
+        ],
+        "wobble": "breathe",
+        "easing": "ease_out"
+      },
+      "detail_fx": [
+        {
+          "type": "eye_blink",
+          "image": "assets/s4b_chiba_blink.jpg",
+          "region": [
+            0.378,
+            0.455,
+            0.495,
+            0.497
+          ],
+          "feather": 0.008,
+          "times": [
+            33.9
+          ],
+          "close_dur": 0.055,
+          "hold_dur": 0.045,
+          "open_dur": 0.085
+        },
+        {
+          "type": "eye_blink",
+          "image": "assets/s4b_baove_blink.jpg",
+          "region": [
+            0.587,
+            0.447,
+            0.695,
+            0.487
+          ],
+          "feather": 0.008,
+          "times": [
+            33.15
+          ],
+          "close_dur": 0.055,
+          "hold_dur": 0.045,
+          "open_dur": 0.085
+        },
+        {
+          "type": "eye_blink",
+          "image": "assets/s4b_ongbay_blink.jpg",
+          "region": [
+            0.674,
+            0.447,
+            0.797,
+            0.488
+          ],
+          "feather": 0.008,
+          "times": [
+            34.75
+          ],
+          "close_dur": 0.055,
+          "hold_dur": 0.045,
+          "open_dur": 0.085
+        },
+        {
+          "type": "mouth_sync",
+          "speaker": "chi_ba",
+          "region": [
+            0.393,
+            0.483,
+            0.487,
+            0.531
+          ],
+          "feather": 0.008,
+          "closed_image": "assets/s4b_chiba_mouth_closed.jpg",
+          "mid_image": "assets/scene4_b.jpg",
+          "open_image": "assets/s4b_chiba_mouth_open.jpg",
+          "fps": 12,
+          "thresh_mid": 0.14,
+          "thresh_open": 0.68
+        }
+      ],
+      "transition_in": {
+        "type": "dissolve",
+        "dur": 0.24
+      }
+    },
+    {
+      "id": "s5a_boc_tran_kinh_lup",
+      "image": "assets/scene5.jpg",
+      "start": 36.1,
+      "end": 38.91,
+      "beat_type": "information",
+      "motion_level": "B",
+      "motion_intent": "Parallax 2.5D bóc trần: tách kính lúp đỏ, bàn tay bóng tối và điện thoại check-in nổi bồng bềnh trước hẻm tối & cổng sắt ổ khóa kèm nhịp sáng đỏ/vàng",
+      "motion": {
+        "preset": "slow_push_in",
+        "scale": [
+          1.02,
+          1.1
+        ],
+        "focus": [
+          [
+            0.5,
+            0.78
           ],
           [
             0.5,
-            0.46
+            0.75
           ]
         ],
-        "wobble": "calm"
+        "wobble": "none"
       },
+      "parallax": {
+        "camera": "push_in",
+        "dolly": [
+          1.02,
+          1.1
+        ],
+        "shift_x": [
+          0.0,
+          0.0
+        ],
+        "shift_y": [
+          0.0,
+          -4.0
+        ],
+        "focus": [
+          0.5,
+          0.78
+        ],
+        "strength": 0.88,
+        "easing": "ease_out",
+        "layers": [
+          {
+            "role": "bg",
+            "image": "assets/s5a_bg.jpg",
+            "depth": 0.42,
+            "blur": 0.5
+          },
+          {
+            "role": "fg",
+            "image": "assets/s5a_fg.png",
+            "depth": 1.28,
+            "breathe_y": 2.2,
+            "breathe_period": 3.2
+          }
+        ]
+      },
+      "detail_fx": [
+        {
+          "type": "screen_glow",
+          "space": "frame",
+          "pos": [
+            0.52,
+            0.33
+          ],
+          "radius": [
+            0.3,
+            0.19
+          ],
+          "color": [
+            255,
+            75,
+            60
+          ],
+          "intensity": 0.24,
+          "mode": "pulse",
+          "start": 36.15,
+          "end": 38.88,
+          "fade": 0.22
+        },
+        {
+          "type": "screen_glow",
+          "space": "frame",
+          "pos": [
+            0.44,
+            0.58
+          ],
+          "radius": [
+            0.22,
+            0.16
+          ],
+          "color": [
+            255,
+            215,
+            115
+          ],
+          "intensity": 0.22,
+          "mode": "pulse",
+          "start": 36.25,
+          "end": 38.88,
+          "fade": 0.22
+        }
+      ],
       "transition_in": {
         "type": "glitch",
         "dur": 0.3
       }
     },
     {
-      "id": "s6_dau_hieu",
-      "image": "assets/scene6.jpg",
-      "video": "assets/scene6.mp4",
-      "start": 41.82,
-      "end": 47.62,
+      "id": "s5b_ve_nha_dang_anh",
+      "image": "assets/scene5_b.jpg",
+      "start": 38.91,
+      "end": 41.82,
+      "beat_type": "aftermath",
+      "motion_level": "C",
+      "motion_intent": "Lùi êm ấm áp trong phòng khách an toàn sau khi về nhà: Anh Hai & Chị Ba chớp mắt vui vẻ, khiên tích xanh sáng dịu",
       "motion": {
+        "preset": "slow_pull_out",
         "scale": [
-          1.02,
-          1.06
+          1.08,
+          1.02
         ],
         "focus": [
           [
-            0.5,
+            0.48,
             0.5
           ],
           [
@@ -175,22 +977,104 @@
             0.5
           ]
         ],
-        "wobble": "none"
+        "wobble": "breathe",
+        "easing": "smoothstep"
+      },
+      "detail_fx": [
+        {
+          "type": "eye_blink",
+          "image": "assets/s5b_anhhai_blink.jpg",
+          "region": [
+            0.195,
+            0.427,
+            0.312,
+            0.465
+          ],
+          "feather": 0.008,
+          "times": [
+            39.95
+          ],
+          "close_dur": 0.055,
+          "hold_dur": 0.045,
+          "open_dur": 0.085
+        },
+        {
+          "type": "eye_blink",
+          "image": "assets/s5b_chiba_blink.jpg",
+          "region": [
+            0.375,
+            0.449,
+            0.495,
+            0.488
+          ],
+          "feather": 0.008,
+          "times": [
+            40.8
+          ],
+          "close_dur": 0.055,
+          "hold_dur": 0.045,
+          "open_dur": 0.085
+        },
+        {
+          "type": "screen_glow",
+          "pos": [
+            0.59,
+            0.46
+          ],
+          "radius": [
+            0.16,
+            0.13
+          ],
+          "color": [
+            85,
+            245,
+            145
+          ],
+          "intensity": 0.26,
+          "mode": "pulse",
+          "start": 39.0,
+          "end": 41.78,
+          "fade": 0.25
+        }
+      ],
+      "transition_in": {
+        "type": "dissolve",
+        "dur": 0.26
+      }
+    },
+    {
+      "id": "s6a_dau_hieu",
+      "image": "assets/scene6.jpg",
+      "start": 41.82,
+      "end": 44.92,
+      "beat_type": "ending",
+      "motion_level": "A",
+      "motion_intent": "Giữ tĩnh sạch sẽ trên nền cổng nhà khóa an toàn cho bảng Nhớ kỹ cuối phim",
+      "motion": {
+        "preset": "static_hold"
       },
       "transition_in": {
         "type": "fade_black",
         "dur": 0.32
       }
+    },
+    {
+      "id": "s6b_luu_y",
+      "image": "assets/scene6_b.jpg",
+      "start": 44.92,
+      "end": 47.62,
+      "beat_type": "ending",
+      "motion_level": "A",
+      "motion_intent": "Giữ tĩnh ấm áp cảnh bắt tay cảm ơn chú an ninh cho thẻ Lưu ý kết phim",
+      "motion": {
+        "preset": "static_hold"
+      },
+      "transition_in": {
+        "type": "dissolve",
+        "dur": 0.3
+      }
     }
   ],
-  "scene_splits_sec": {
-    "scene1": 5.08,
-    "scene2": 4.2,
-    "scene3": 4.42,
-    "scene4": 5.32,
-    "scene5": 2.81,
-    "scene6": 2.2
-  },
   "dialogue": [
     {
       "id": "l1",
@@ -392,6 +1276,6 @@
     ],
     "category": "Education (Giáo dục)",
     "playlist": "Bóc Trần Lừa Đảo – Kỹ Năng Cảnh Giác & An Toàn Đời Thực",
-    "thumbnail_sec": 27.68
+    "thumbnail_sec": 31.93
   }
 }

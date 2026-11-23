@@ -3,7 +3,7 @@
   "factory": "factory619",
   "gate": "GATE_5_RENDER_AND_QA",
   "staging_mp4_path": "factory619/staging/EP10/EP10_BayWifiMienPhi_58s_staging.mp4",
-  "file_size_mb": 27.45,
+  "file_size_mb": 27.46,
   "stream_probe": {
     "programs": [],
     "stream_groups": [],
@@ -25,7 +25,7 @@
     ],
     "format": {
       "duration": "57.600000",
-      "size": "28780991"
+      "size": "28796335"
     }
   },
   "all_8_points_passed": true,
@@ -50,9 +50,9 @@
     },
     {
       "id": 4,
-      "name": "Hình ảnh an toàn: không máu me/khỏa thân, không logo – giao diện – sắc phục thật",
+      "name": "Hình ảnh & chuyển động an toàn: không logo/giao diện/sắc phục thật, không máu me, motion mượt đúng nhịp & giữ continuity (QC 11 điểm)",
       "status": "PASS",
-      "evidence": "Người duyệt: Thai Nguyen."
+      "evidence": "Người duyệt: User. Duyet ban v8-level2-abc (Living-Character A/B/C + 2.5D) len Production"
     },
     {
       "id": 5,
@@ -78,5 +78,38 @@
       "status": "PASS",
       "evidence": "Hook bắt đầu 0.25s; thời lượng 57.6s (file 57.60s)"
     }
-  ]
+  ],
+  "motion_qc": {
+    "is_level2": true,
+    "effective_level_counts": {
+      "A": 2,
+      "B": 2,
+      "C": 5,
+      "D": 0
+    },
+    "declared_level_counts": {
+      "A": 2,
+      "B": 2,
+      "C": 5,
+      "D": 0
+    },
+    "has_highlights": true,
+    "zoom_repetition_streaks": [],
+    "shake_scenes": 1,
+    "fallbacks": [],
+    "sfx_sync": {
+      "synced": [
+        "s1_hai_mang_trung_ten_tiem_doi_dien:screen_glow@0.25s",
+        "s2_cam_thoai_bam_cai_goi_ket_noi:screen_glow@5.80s",
+        "s2_cam_thoai_bam_cai_goi_ket_noi:light_shift@7.55s",
+        "s4_cao_trao_tu_dien_so_tien_tat_nguon:shake@20.68s",
+        "s4_cao_trao_tu_dien_so_tien_tat_nguon:shake@20.88s",
+        "s4_cao_trao_tu_dien_so_tien_tat_nguon:light_shift@20.72s",
+        "s4_cao_trao_tu_dien_so_tien_tat_nguon:light_shift@26.75s"
+      ],
+      "unsynced": []
+    },
+    "warnings": [],
+    "point4_human_signed": true
+  }
 }

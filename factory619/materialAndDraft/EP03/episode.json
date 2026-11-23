@@ -2,7 +2,8 @@
   "episode_id": "EP03",
   "slug": "CapCuuGiaMao",
   "title": "Con Đang Cấp Cứu, Chuyển Gấp Viện Phí!",
-  "version": "v6",
+  "version": "v7-level2-abc",
+  "motion_upgrade": "level2",
   "scam_family": "ON-03",
   "duration_sec": 56.0,
   "hook": {
@@ -13,101 +14,1290 @@
   },
   "scenes": [
     {
-      "id": "s1_tung_luoi",
+      "id": "s1a_tung_luoi",
       "image": "assets/scene1.jpg",
-      "video": "assets/scene1.mp4",
       "start": 0.0,
-      "end": 6.0,
+      "end": 2.8,
+      "beat_type": "establishing",
+      "motion_level": "C",
+      "motion_intent": "Đẩy chậm mở lưới hàng loạt phụ huynh bị gọi cùng lúc kèm ánh đỏ sóng radar nhấp nhô trên màn hình kẻ gian",
       "motion": {
-        "scale": [1.05, 1.14],
-        "focus": [[0.5, 0.5], [0.5, 0.45]],
-        "wobble": "tense"
-      }
-    },
-    {
-      "id": "s2_deepfake",
-      "image": "assets/scene2.jpg",
-      "video": "assets/scene2.mp4",
-      "start": 6.0,
-      "end": 16.8,
-      "motion": {
-        "scale": [1.04, 1.15],
-        "focus": [[0.5, 0.52], [0.5, 0.46]],
-        "wobble": "handheld"
+        "preset": "slow_push_in",
+        "scale": [
+          1.02,
+          1.09
+        ],
+        "focus": [
+          [
+            0.5,
+            0.48
+          ],
+          [
+            0.5,
+            0.52
+          ]
+        ],
+        "wobble": "calm",
+        "easing": "ease_out"
       },
-      "transition_in": {
-        "type": "glitch",
-        "dur": 0.3
-      },
-      "shakes": [
+      "detail_fx": [
         {
-          "at": 6.2,
-          "amp": 28
+          "type": "screen_glow",
+          "pos": [
+            0.31,
+            0.86
+          ],
+          "radius": [
+            0.26,
+            0.14
+          ],
+          "color": [
+            255,
+            65,
+            65
+          ],
+          "start": 0.0,
+          "end": 2.8,
+          "fade": 0.25,
+          "intensity": 0.3,
+          "mode": "pulse"
         }
       ]
     },
     {
-      "id": "s3_phan_hoa",
-      "image": "assets/scene3.jpg",
-      "video": "assets/scene3.mp4",
-      "start": 16.8,
-      "end": 29.5,
+      "id": "s1b_hoang_loan",
+      "image": "assets/scene1_b.jpg",
+      "start": 2.8,
+      "end": 6.0,
+      "beat_type": "anomaly",
+      "motion_level": "C",
+      "motion_intent": "Cắt đúng nhịp impact 2.8s lùi khung lộ toàn bộ phụ huynh hoảng loạn bật khóc cùng chớp đỏ & sóng màn hình kẻ gian thúc ép",
       "motion": {
-        "scale": [1.03, 1.11],
-        "focus": [[0.5, 0.48], [0.5, 0.52]],
-        "wobble": "calm"
+        "preset": "slow_pull_out",
+        "scale": [
+          1.1,
+          1.02
+        ],
+        "focus": [
+          [
+            0.5,
+            0.52
+          ],
+          [
+            0.5,
+            0.48
+          ]
+        ],
+        "wobble": "tense",
+        "easing": "smoothstep"
       },
       "transition_in": {
         "type": "dissolve",
-        "dur": 0.35
-      }
+        "dur": 0.16
+      },
+      "detail_fx": [
+        {
+          "type": "screen_glow",
+          "pos": [
+            0.31,
+            0.86
+          ],
+          "radius": [
+            0.28,
+            0.15
+          ],
+          "color": [
+            255,
+            55,
+            60
+          ],
+          "start": 2.8,
+          "end": 6.0,
+          "fade": 0.18,
+          "intensity": 0.34,
+          "mode": "flicker"
+        },
+        {
+          "type": "light_shift",
+          "at": 2.8,
+          "dur": 0.1,
+          "end": 3.12,
+          "end_dur": 0.22,
+          "brightness": 1.18,
+          "tint_rgb": [
+            255,
+            80,
+            75
+          ],
+          "tint_strength": 0.14
+        }
+      ],
+      "shakes": [
+        {
+          "at": 2.8,
+          "amp": 14
+        }
+      ]
     },
     {
-      "id": "s4_cong_truong",
-      "image": "assets/scene4.jpg",
-      "video": "assets/scene4.mp4",
-      "start": 29.5,
-      "end": 41.9,
+      "id": "s2a_deepfake_cry",
+      "image": "assets/scene2.jpg",
+      "start": 6.0,
+      "end": 11.8,
+      "beat_type": "climax",
+      "motion_level": "B",
+      "motion_intent": "Hero 2.5D parallax tách Chị Ba & tay run cầm điện thoại Deepfake khỏi văn phòng; chớp mắt + miệng nói tiết chế khớp l2 + nhịp thở gấp khớp heartbeat",
       "motion": {
-        "scale": [1.10, 1.03],
-        "focus": [[0.5, 0.48], [0.5, 0.5]],
-        "wobble": "calm"
+        "preset": "slow_push_in",
+        "scale": [
+          1.02,
+          1.09
+        ],
+        "focus": [
+          [
+            0.5,
+            0.48
+          ],
+          [
+            0.5,
+            0.46
+          ]
+        ],
+        "wobble": "none"
+      },
+      "transition_in": {
+        "type": "glitch",
+        "dur": 0.28
+      },
+      "parallax": {
+        "camera": "push_in",
+        "dolly": [
+          1.02,
+          1.09
+        ],
+        "shift_x": [
+          0.0,
+          0.0
+        ],
+        "shift_y": [
+          0.0,
+          -5.0
+        ],
+        "focus": [
+          0.5,
+          0.48
+        ],
+        "strength": 0.88,
+        "easing": "ease_out",
+        "layers": [
+          {
+            "role": "bg",
+            "image": "assets/s2a_bg.jpg",
+            "depth": 0.42,
+            "blur": 0.6
+          },
+          {
+            "role": "fg",
+            "image": "assets/s2a_fg.png",
+            "depth": 1.24,
+            "breathe_y": 1.8,
+            "breathe_scale": 0.004,
+            "breathe_period": 2.3
+          }
+        ]
+      },
+      "detail_fx": [
+        {
+          "type": "eye_blink",
+          "layer": "fg",
+          "image": "assets/s2a_chiba_blink.jpg",
+          "region": [
+            0.341,
+            0.259,
+            0.674,
+            0.326
+          ],
+          "times": [
+            7.65,
+            10.55
+          ],
+          "close_dur": 0.055,
+          "hold_dur": 0.045,
+          "open_dur": 0.085,
+          "feather": 0.008
+        },
+        {
+          "type": "mouth_sync",
+          "layer": "fg",
+          "speaker": "chi_ba",
+          "line_ids": [
+            "l2"
+          ],
+          "closed_image": "assets/s2a_chiba_mouth_closed.jpg",
+          "mid_image": "assets/scene2.jpg",
+          "open_image": "assets/s2a_chiba_mouth_open.jpg",
+          "region": [
+            0.422,
+            0.347,
+            0.583,
+            0.397
+          ],
+          "fps": 12,
+          "thresh_mid": 0.16,
+          "thresh_open": 0.75,
+          "feather": 0.006
+        },
+        {
+          "type": "screen_glow",
+          "space": "frame",
+          "pos": [
+            0.5,
+            0.64
+          ],
+          "radius": [
+            0.24,
+            0.24
+          ],
+          "color": [
+            95,
+            225,
+            255
+          ],
+          "start": 6.0,
+          "end": 11.8,
+          "fade": 0.28,
+          "intensity": 0.24,
+          "mode": "turn_on"
+        },
+        {
+          "type": "screen_glow",
+          "space": "frame",
+          "pos": [
+            0.24,
+            0.38
+          ],
+          "radius": [
+            0.12,
+            0.1
+          ],
+          "color": [
+            255,
+            70,
+            90
+          ],
+          "start": 6.2,
+          "end": 11.8,
+          "fade": 0.25,
+          "intensity": 0.22,
+          "mode": "pulse"
+        }
+      ],
+      "shakes": [
+        {
+          "at": 6.2,
+          "amp": 16
+        }
+      ]
+    },
+    {
+      "id": "s2b_deepfake_glitch",
+      "image": "assets/scene2_b.jpg",
+      "start": 11.8,
+      "end": 16.8,
+      "beat_type": "suspicion",
+      "motion_level": "C",
+      "motion_intent": "Trượt lên đổi nhịp đúng cú glitch 11.8s lộ khung mặt AI vỡ nét; Chị Ba sững người chớp mắt căng thẳng khi nghe kẻ gian hối thúc l3",
+      "motion": {
+        "preset": "drift_up",
+        "scale": [
+          1.05,
+          1.06
+        ],
+        "focus": [
+          [
+            0.5,
+            0.51
+          ],
+          [
+            0.5,
+            0.45
+          ]
+        ],
+        "wobble": "breathe",
+        "easing": "smoothstep"
+      },
+      "transition_in": {
+        "type": "glitch",
+        "dur": 0.26
+      },
+      "detail_fx": [
+        {
+          "type": "eye_blink",
+          "image": "assets/s2b_chiba_blink.jpg",
+          "region": [
+            0.341,
+            0.259,
+            0.674,
+            0.326
+          ],
+          "times": [
+            13.45,
+            15.85
+          ],
+          "close_dur": 0.05,
+          "hold_dur": 0.04,
+          "open_dur": 0.08,
+          "feather": 0.008
+        },
+        {
+          "type": "screen_glow",
+          "pos": [
+            0.52,
+            0.64
+          ],
+          "radius": [
+            0.24,
+            0.24
+          ],
+          "color": [
+            90,
+            240,
+            255
+          ],
+          "start": 11.8,
+          "end": 16.8,
+          "fade": 0.2,
+          "intensity": 0.28,
+          "mode": "flicker"
+        },
+        {
+          "type": "light_shift",
+          "at": 11.8,
+          "dur": 0.1,
+          "end": 12.12,
+          "end_dur": 0.2,
+          "brightness": 1.18,
+          "tint_rgb": [
+            120,
+            235,
+            255
+          ],
+          "tint_strength": 0.14
+        }
+      ],
+      "shakes": [
+        {
+          "at": 11.85,
+          "amp": 14
+        }
+      ]
+    },
+    {
+      "id": "s3a_chuyen_tien",
+      "image": "assets/scene3.jpg",
+      "start": 16.8,
+      "end": 20.0,
+      "beat_type": "climax",
+      "motion_level": "C",
+      "motion_intent": "Quét ngang nhẹ chia đôi tương phản: trên Chị Ba hoảng loạn nói l4 & bấm chuyển 20 triệu (ánh cam bật đúng bank_ting 19.3s), dưới Chị Tư nghi ngờ",
+      "motion": {
+        "preset": "pan_right",
+        "scale": [
+          1.06,
+          1.06
+        ],
+        "focus": [
+          [
+            0.47,
+            0.46
+          ],
+          [
+            0.53,
+            0.45
+          ]
+        ],
+        "wobble": "breathe",
+        "easing": "smoothstep"
+      },
+      "transition_in": {
+        "type": "dissolve",
+        "dur": 0.25
+      },
+      "detail_fx": [
+        {
+          "type": "eye_blink",
+          "image": "assets/s3a_chiba_blink.jpg",
+          "region": [
+            0.443,
+            0.124,
+            0.641,
+            0.17
+          ],
+          "times": [
+            18.3
+          ],
+          "feather": 0.006
+        },
+        {
+          "type": "mouth_sync",
+          "speaker": "chi_ba",
+          "line_ids": [
+            "l4"
+          ],
+          "closed_image": "assets/s3a_chiba_mouth_closed.jpg",
+          "mid_image": "assets/scene3.jpg",
+          "open_image": "assets/s3a_chiba_mouth_open.jpg",
+          "region": [
+            0.487,
+            0.173,
+            0.617,
+            0.222
+          ],
+          "fps": 12,
+          "thresh_mid": 0.16,
+          "thresh_open": 0.75,
+          "feather": 0.006
+        },
+        {
+          "type": "eye_blink",
+          "image": "assets/s3a_chitu_blink.jpg",
+          "region": [
+            0.451,
+            0.615,
+            0.648,
+            0.656
+          ],
+          "times": [
+            17.75
+          ],
+          "feather": 0.006
+        },
+        {
+          "type": "screen_glow",
+          "pos": [
+            0.4,
+            0.44
+          ],
+          "radius": [
+            0.18,
+            0.1
+          ],
+          "color": [
+            255,
+            165,
+            65
+          ],
+          "start": 19.25,
+          "end": 20.0,
+          "fade": 0.18,
+          "intensity": 0.36,
+          "mode": "turn_on"
+        }
+      ]
+    },
+    {
+      "id": "s3b_khoa_may_nghi_ngo",
+      "image": "assets/s3b_split_base.jpg",
+      "start": 20.0,
+      "end": 27.15,
+      "beat_type": "suspicion",
+      "motion_level": "C",
+      "motion_intent": "Cắt gắt đúng khoảng nghỉ l4 + call_end: trên Chị Ba sững sờ vì khóa máy rồi im lặng, máy trượt xuống dẫn mắt sang Chị Tư nghi ngờ video giả ở l5",
+      "motion": {
+        "preset": "drift_down",
+        "scale": [
+          1.04,
+          1.05
+        ],
+        "focus": [
+          [
+            0.5,
+            0.47
+          ],
+          [
+            0.5,
+            0.51
+          ]
+        ],
+        "wobble": "breathe",
+        "easing": "smoothstep"
+      },
+      "transition_in": {
+        "type": "cut",
+        "dur": 0.0
+      },
+      "detail_fx": [
+        {
+          "type": "eye_blink",
+          "image": "assets/s3b_chiba_blink.jpg",
+          "region": [
+            0.443,
+            0.124,
+            0.641,
+            0.17
+          ],
+          "times": [
+            21.6,
+            25.3
+          ],
+          "feather": 0.006
+        },
+        {
+          "type": "mouth_sync",
+          "speaker": "chi_ba",
+          "line_ids": [
+            "l4"
+          ],
+          "closed_image": "assets/s3b_chiba_mouth_closed.jpg",
+          "mid_image": "assets/s3b_chiba_mouth_mid.jpg",
+          "open_image": "assets/s3b_chiba_mouth_open.jpg",
+          "region": [
+            0.484,
+            0.172,
+            0.622,
+            0.228
+          ],
+          "fps": 12,
+          "thresh_mid": 0.16,
+          "thresh_open": 0.75,
+          "feather": 0.006
+        },
+        {
+          "type": "eye_blink",
+          "image": "assets/s3b_chitu_blink.jpg",
+          "region": [
+            0.451,
+            0.615,
+            0.648,
+            0.656
+          ],
+          "times": [
+            22.4,
+            25.8
+          ],
+          "feather": 0.006
+        },
+        {
+          "type": "mouth_sync",
+          "speaker": "chi_tu",
+          "line_ids": [
+            "l5"
+          ],
+          "closed_image": "assets/s3b_split_base.jpg",
+          "mid_image": "assets/s3b_chitu_mouth_mid.jpg",
+          "open_image": "assets/s3b_chitu_mouth_open.jpg",
+          "region": [
+            0.492,
+            0.664,
+            0.617,
+            0.714
+          ],
+          "fps": 12,
+          "thresh_mid": 0.16,
+          "thresh_open": 0.75,
+          "feather": 0.006
+        },
+        {
+          "type": "screen_glow",
+          "pos": [
+            0.44,
+            0.43
+          ],
+          "radius": [
+            0.16,
+            0.1
+          ],
+          "color": [
+            255,
+            65,
+            65
+          ],
+          "start": 20.1,
+          "end": 23.4,
+          "fade": 0.2,
+          "intensity": 0.34,
+          "mode": "flicker"
+        },
+        {
+          "type": "screen_glow",
+          "pos": [
+            0.24,
+            0.71
+          ],
+          "radius": [
+            0.16,
+            0.12
+          ],
+          "color": [
+            75,
+            240,
+            210
+          ],
+          "start": 23.4,
+          "end": 27.15,
+          "fade": 0.22,
+          "intensity": 0.3,
+          "mode": "turn_on"
+        },
+        {
+          "type": "light_shift",
+          "at": 20.2,
+          "dur": 0.12,
+          "end": 20.6,
+          "end_dur": 0.25,
+          "brightness": 0.88,
+          "tint_rgb": [
+            255,
+            95,
+            85
+          ],
+          "tint_strength": 0.12
+        }
+      ]
+    },
+    {
+      "id": "s3c_an_toan_xac_thuc",
+      "image": "assets/s3c_base.jpg",
+      "start": 27.15,
+      "end": 29.5,
+      "beat_type": "information",
+      "motion_level": "C",
+      "motion_intent": "Chuyển mượt ngay khoảng nghỉ l5: khiên xanh an toàn bật sáng phía Chị Tư sau khi gọi cô chủ nhiệm xác thực, khẩu hình cười nói nhẹ nhàng",
+      "motion": {
+        "preset": "slow_pull_out",
+        "scale": [
+          1.08,
+          1.02
+        ],
+        "focus": [
+          [
+            0.5,
+            0.54
+          ],
+          [
+            0.5,
+            0.5
+          ]
+        ],
+        "wobble": "breathe",
+        "easing": "smoothstep"
+      },
+      "transition_in": {
+        "type": "dissolve",
+        "dur": 0.2
+      },
+      "detail_fx": [
+        {
+          "type": "eye_blink",
+          "image": "assets/s3c_chiba_blink.jpg",
+          "region": [
+            0.443,
+            0.124,
+            0.641,
+            0.17
+          ],
+          "times": [
+            28.1
+          ],
+          "feather": 0.006
+        },
+        {
+          "type": "eye_blink",
+          "image": "assets/s3c_chitu_blink.jpg",
+          "region": [
+            0.451,
+            0.615,
+            0.648,
+            0.656
+          ],
+          "times": [
+            28.35
+          ],
+          "feather": 0.006
+        },
+        {
+          "type": "mouth_sync",
+          "speaker": "chi_tu",
+          "line_ids": [
+            "l5"
+          ],
+          "closed_image": "assets/s3c_chitu_mouth_closed.jpg",
+          "open_image": "assets/s3c_base.jpg",
+          "region": [
+            0.49,
+            0.663,
+            0.622,
+            0.714
+          ],
+          "fps": 12,
+          "thresh_mid": 0.16,
+          "thresh_open": 0.72,
+          "feather": 0.006
+        },
+        {
+          "type": "screen_glow",
+          "pos": [
+            0.26,
+            0.71
+          ],
+          "radius": [
+            0.18,
+            0.13
+          ],
+          "color": [
+            75,
+            255,
+            165
+          ],
+          "start": 27.15,
+          "end": 29.5,
+          "fade": 0.22,
+          "intensity": 0.36,
+          "mode": "turn_on"
+        }
+      ]
+    },
+    {
+      "id": "s4a_cong_truong_om_con",
+      "image": "assets/scene4.jpg",
+      "start": 29.5,
+      "end": 36.4,
+      "beat_type": "aftermath",
+      "motion_level": "C",
+      "motion_intent": "Lùi mở không gian cổng trường ấm áp đón con lành lặn; Chị Ba rưng rưng kể lại (khẩu hình tiết chế l6) trong khi Chị Tư lắng nghe chớp mắt",
+      "motion": {
+        "preset": "slow_pull_out",
+        "scale": [
+          1.09,
+          1.02
+        ],
+        "focus": [
+          [
+            0.46,
+            0.56
+          ],
+          [
+            0.5,
+            0.52
+          ]
+        ],
+        "wobble": "breathe",
+        "easing": "smoothstep"
       },
       "transition_in": {
         "type": "flash_white",
         "dur": 0.25
-      }
+      },
+      "detail_fx": [
+        {
+          "type": "eye_blink",
+          "image": "assets/s4a_chiba_blink.jpg",
+          "region": [
+            0.294,
+            0.522,
+            0.453,
+            0.565
+          ],
+          "times": [
+            31.2,
+            34.8
+          ],
+          "feather": 0.006
+        },
+        {
+          "type": "mouth_sync",
+          "speaker": "chi_ba",
+          "line_ids": [
+            "l6"
+          ],
+          "closed_image": "assets/s4a_chiba_mouth_closed.jpg",
+          "mid_image": "assets/scene4.jpg",
+          "open_image": "assets/s4a_chiba_mouth_open.jpg",
+          "region": [
+            0.323,
+            0.57,
+            0.424,
+            0.615
+          ],
+          "fps": 12,
+          "thresh_mid": 0.16,
+          "thresh_open": 0.75,
+          "feather": 0.006
+        },
+        {
+          "type": "eye_blink",
+          "image": "assets/s4a_chitu_blink.jpg",
+          "region": [
+            0.599,
+            0.522,
+            0.742,
+            0.565
+          ],
+          "times": [
+            32.7,
+            35.6
+          ],
+          "feather": 0.006
+        },
+        {
+          "type": "screen_glow",
+          "pos": [
+            0.54,
+            0.64
+          ],
+          "radius": [
+            0.1,
+            0.08
+          ],
+          "color": [
+            255,
+            85,
+            85
+          ],
+          "start": 29.6,
+          "end": 36.4,
+          "fade": 0.3,
+          "intensity": 0.24,
+          "mode": "pulse"
+        }
+      ]
     },
     {
-      "id": "s5_boc_tran",
-      "image": "assets/scene5.jpg",
-      "video": "assets/scene5.mp4",
-      "start": 41.9,
-      "end": 48.3,
+      "id": "s4b_hang_loat_bi_goi",
+      "image": "assets/scene4_b.jpg",
+      "start": 36.4,
+      "end": 41.9,
+      "beat_type": "information",
+      "motion_level": "C",
+      "motion_intent": "Quét trái đổi nhịp: Chị Tư giơ loạt cảnh báo đỏ trên máy, chớp mắt + nói 3 trạng thái tiết chế khớp l7 an ủi Chị Ba",
       "motion": {
-        "scale": [1.03, 1.10],
-        "focus": [[0.5, 0.5], [0.52, 0.46]],
-        "wobble": "calm"
+        "preset": "pan_left",
+        "scale": [
+          1.06,
+          1.06
+        ],
+        "focus": [
+          [
+            0.53,
+            0.54
+          ],
+          [
+            0.47,
+            0.54
+          ]
+        ],
+        "wobble": "breathe",
+        "easing": "smoothstep"
       },
       "transition_in": {
         "type": "dissolve",
-        "dur": 0.3
-      }
+        "dur": 0.25
+      },
+      "detail_fx": [
+        {
+          "type": "eye_blink",
+          "image": "assets/s4b_chitu_blink.jpg",
+          "region": [
+            0.599,
+            0.522,
+            0.742,
+            0.565
+          ],
+          "times": [
+            38.2,
+            40.9
+          ],
+          "feather": 0.006
+        },
+        {
+          "type": "mouth_sync",
+          "speaker": "chi_tu",
+          "line_ids": [
+            "l7"
+          ],
+          "closed_image": "assets/scene4_b.jpg",
+          "mid_image": "assets/s4b_chitu_mouth_small.jpg",
+          "open_image": "assets/s4b_chitu_mouth_mid.jpg",
+          "region": [
+            0.612,
+            0.568,
+            0.719,
+            0.613
+          ],
+          "fps": 12,
+          "thresh_mid": 0.16,
+          "thresh_open": 0.74,
+          "feather": 0.006
+        },
+        {
+          "type": "screen_glow",
+          "pos": [
+            0.54,
+            0.64
+          ],
+          "radius": [
+            0.11,
+            0.09
+          ],
+          "color": [
+            255,
+            70,
+            75
+          ],
+          "start": 36.45,
+          "end": 41.9,
+          "fade": 0.25,
+          "intensity": 0.3,
+          "mode": "turn_on"
+        }
+      ]
     },
     {
-      "id": "s6_ket_luan",
-      "image": "assets/scene6.jpg",
-      "video": "assets/scene6.mp4",
-      "start": 48.3,
-      "end": 56.0,
+      "id": "s5a_giay_khen_deepfake",
+      "image": "assets/scene5.jpg",
+      "start": 41.9,
+      "end": 44.2,
+      "beat_type": "information",
+      "motion_level": "C",
+      "motion_intent": "Đẩy nhẹ vào màn hình ảnh giấy khen bị quét mặt AI; Chị Tư giải thích nghiêng mặt khớp nửa đầu l8 trong khi Chị Ba bàng hoàng chớp mắt",
       "motion": {
-        "scale": [1.02, 1.06],
-        "focus": [[0.5, 0.48], [0.5, 0.48]],
+        "preset": "slow_push_in",
+        "scale": [
+          1.02,
+          1.08
+        ],
+        "focus": [
+          [
+            0.5,
+            0.52
+          ],
+          [
+            0.52,
+            0.49
+          ]
+        ],
+        "wobble": "breathe",
+        "easing": "ease_out"
+      },
+      "transition_in": {
+        "type": "dissolve",
+        "dur": 0.25
+      },
+      "detail_fx": [
+        {
+          "type": "eye_blink",
+          "image": "assets/s5a_chiba_blink.jpg",
+          "region": [
+            0.62,
+            0.369,
+            0.859,
+            0.435
+          ],
+          "times": [
+            43.1
+          ],
+          "feather": 0.008
+        },
+        {
+          "type": "eye_blink",
+          "image": "assets/s5a_chitu_blink.jpg",
+          "region": [
+            0.367,
+            0.366,
+            0.464,
+            0.422
+          ],
+          "times": [
+            42.65
+          ],
+          "feather": 0.006
+        },
+        {
+          "type": "mouth_sync",
+          "speaker": "chi_tu",
+          "line_ids": [
+            "l8"
+          ],
+          "closed_image": "assets/s5a_chitu_mouth_closed.jpg",
+          "mid_image": "assets/scene5.jpg",
+          "open_image": "assets/s5a_chitu_mouth_open.jpg",
+          "region": [
+            0.365,
+            0.443,
+            0.456,
+            0.497
+          ],
+          "fps": 12,
+          "thresh_mid": 0.16,
+          "thresh_open": 0.75,
+          "feather": 0.006
+        },
+        {
+          "type": "screen_glow",
+          "pos": [
+            0.64,
+            0.6
+          ],
+          "radius": [
+            0.14,
+            0.13
+          ],
+          "color": [
+            85,
+            235,
+            255
+          ],
+          "start": 42.0,
+          "end": 44.2,
+          "fade": 0.25,
+          "intensity": 0.28,
+          "mode": "pulse"
+        }
+      ]
+    },
+    {
+      "id": "s5b_vach_tran_deepfake",
+      "image": "assets/scene5_b.jpg",
+      "start": 44.2,
+      "end": 48.3,
+      "beat_type": "climax",
+      "motion_level": "B",
+      "motion_intent": "Hero 2.5D parallax cắt đúng glitch 44.2s vạch trần sơ đồ ghép mặt Deepfake: tách 2 người mẹ & điện thoại khỏi cổng trường, chớp mắt + miệng nói tiết chế khớp nửa sau l8",
+      "motion": {
+        "preset": "slow_push_in",
+        "scale": [
+          1.02,
+          1.09
+        ],
+        "focus": [
+          [
+            0.5,
+            0.52
+          ],
+          [
+            0.5,
+            0.5
+          ]
+        ],
         "wobble": "none"
       },
       "transition_in": {
-        "type": "fade_black",
-        "dur": 0.3
+        "type": "glitch",
+        "dur": 0.26
+      },
+      "parallax": {
+        "camera": "push_in",
+        "dolly": [
+          1.02,
+          1.09
+        ],
+        "shift_x": [
+          -8.0,
+          8.0
+        ],
+        "shift_y": [
+          0.0,
+          -4.0
+        ],
+        "focus": [
+          0.5,
+          0.52
+        ],
+        "strength": 0.9,
+        "easing": "ease_out",
+        "layers": [
+          {
+            "role": "bg",
+            "image": "assets/s5b_bg.jpg",
+            "depth": 0.42,
+            "blur": 0.7
+          },
+          {
+            "role": "fg",
+            "image": "assets/s5b_fg.png",
+            "depth": 1.26,
+            "breathe_y": 1.8,
+            "breathe_scale": 0.004,
+            "breathe_period": 3.0
+          }
+        ]
+      },
+      "detail_fx": [
+        {
+          "type": "eye_blink",
+          "layer": "fg",
+          "image": "assets/s5b_chiba_blink.jpg",
+          "region": [
+            0.094,
+            0.413,
+            0.419,
+            0.483
+          ],
+          "times": [
+            46.1
+          ],
+          "feather": 0.008
+        },
+        {
+          "type": "eye_blink",
+          "layer": "fg",
+          "image": "assets/s5b_chitu_blink.jpg",
+          "region": [
+            0.62,
+            0.368,
+            0.862,
+            0.429
+          ],
+          "times": [
+            45.35,
+            47.55
+          ],
+          "feather": 0.008
+        },
+        {
+          "type": "mouth_sync",
+          "layer": "fg",
+          "speaker": "chi_tu",
+          "line_ids": [
+            "l8"
+          ],
+          "closed_image": "assets/s5b_chitu_mouth_closed.jpg",
+          "mid_image": "assets/scene5_b.jpg",
+          "open_image": "assets/s5b_chitu_mouth_open.jpg",
+          "region": [
+            0.677,
+            0.443,
+            0.807,
+            0.497
+          ],
+          "fps": 12,
+          "thresh_mid": 0.16,
+          "thresh_open": 0.7,
+          "feather": 0.006
+        },
+        {
+          "type": "screen_glow",
+          "space": "frame",
+          "pos": [
+            0.59,
+            0.72
+          ],
+          "radius": [
+            0.18,
+            0.16
+          ],
+          "color": [
+            85,
+            230,
+            255
+          ],
+          "start": 44.2,
+          "end": 48.3,
+          "fade": 0.22,
+          "intensity": 0.28,
+          "mode": "pulse"
+        },
+        {
+          "type": "light_shift",
+          "at": 44.2,
+          "dur": 0.12,
+          "end": 44.52,
+          "end_dur": 0.22,
+          "brightness": 1.18,
+          "tint_rgb": [
+            120,
+            235,
+            255
+          ],
+          "tint_strength": 0.12
+        }
+      ]
+    },
+    {
+      "id": "s6a_xoa_anh_bao_mat",
+      "image": "assets/scene6.jpg",
+      "start": 48.3,
+      "end": 51.0,
+      "beat_type": "aftermath",
+      "motion_level": "C",
+      "motion_intent": "Lùi nhẹ bình yên khi Chị Ba bấm khóa/xóa ảnh thông tin con trên mạng kèm ánh khiên ổ khóa xanh bật sáng đúng nhịp click 48.6s",
+      "motion": {
+        "preset": "slow_pull_out",
+        "scale": [
+          1.07,
+          1.01
+        ],
+        "focus": [
+          [
+            0.5,
+            0.44
+          ],
+          [
+            0.5,
+            0.48
+          ]
+        ],
+        "wobble": "breathe",
+        "easing": "smoothstep"
+      },
+      "transition_in": {
+        "type": "dissolve",
+        "dur": 0.28
+      },
+      "detail_fx": [
+        {
+          "type": "screen_glow",
+          "pos": [
+            0.53,
+            0.37
+          ],
+          "radius": [
+            0.16,
+            0.12
+          ],
+          "color": [
+            85,
+            240,
+            255
+          ],
+          "start": 48.55,
+          "end": 51.0,
+          "fade": 0.25,
+          "intensity": 0.34,
+          "mode": "turn_on"
+        }
+      ]
+    },
+    {
+      "id": "s6b_nho_ky_an_toan",
+      "image": "assets/scene6_b.jpg",
+      "start": 51.0,
+      "end": 56.0,
+      "beat_type": "ending",
+      "motion_level": "A",
+      "motion_intent": "Giữ khung tĩnh sạch sẽ, bình an phía sau bảng NHỚ KỸ và thẻ Disclaimer",
+      "motion": {
+        "preset": "static_hold",
+        "scale": [
+          1.01,
+          1.02
+        ],
+        "focus": [
+          [
+            0.5,
+            0.48
+          ],
+          [
+            0.5,
+            0.48
+          ]
+        ],
+        "wobble": "none",
+        "easing": "linear"
+      },
+      "transition_in": {
+        "type": "dissolve",
+        "dur": 0.25
       }
     }
   ],
@@ -179,30 +1369,23 @@
   "chat_bubbles": [],
   "callouts": [
     {
-      "text": "Hàng loạt phụ huynh hoảng loạn vì cùng 1 kịch bản cấp cứu!",
+      "text": "Hàng loạt phụ huynh nhận cùng 1 cuộc gọi cấp cứu!",
       "style": "danger",
-      "y": 210,
+      "y": 175,
       "start": 4.35,
       "end": 5.9
     },
     {
-      "text": "Video Deepfake AI bị nhiễu vỡ nét mặt khi con vươn tay!",
+      "text": "Video Deepfake AI vỡ nét mặt khi con vươn tay!",
       "style": "danger",
-      "y": 210,
+      "y": 175,
       "start": 11.9,
       "end": 16.5
     },
     {
-      "text": "Chuyển xong 20 triệu -> Khóa máy! | Gọi cô giáo -> An toàn!",
-      "style": "warn",
-      "y": 210,
-      "start": 20.2,
-      "end": 29.0
-    },
-    {
-      "text": "Lấy ảnh giấy khen trên mạng -> Ghép mặt AI giả cảnh cấp cứu!",
+      "text": "Ảnh giấy khen trên mạng -> Ghép mặt AI giả cấp cứu!",
       "style": "danger",
-      "y": 210,
+      "y": 175,
       "start": 42.2,
       "end": 48.0
     }
@@ -285,6 +1468,11 @@
         "gain_db": 0.0
       },
       {
+        "preset": "notification",
+        "at": 27.15,
+        "gain_db": -3.0
+      },
+      {
         "preset": "school_bell",
         "at": 29.5,
         "dur": 2.2,
@@ -297,10 +1485,25 @@
         "gain_db": 2.0
       },
       {
+        "preset": "notification",
+        "at": 36.45,
+        "gain_db": -4.0
+      },
+      {
+        "preset": "low_accent",
+        "at": 42.0,
+        "gain_db": -3.0
+      },
+      {
         "preset": "glitch",
-        "at": 45.0,
+        "at": 44.2,
         "dur": 0.9,
         "gain_db": 1.5
+      },
+      {
+        "preset": "click",
+        "at": 48.6,
+        "gain_db": -4.0
       }
     ],
     "bgm": [
@@ -318,12 +1521,12 @@
       {
         "preset": "action_climax",
         "start": 29.5,
-        "end": 45.0,
+        "end": 44.2,
         "gain_db": 1.5
       },
       {
         "preset": "warm_outro",
-        "start": 45.0,
+        "start": 44.2,
         "end": 56.0
       }
     ],

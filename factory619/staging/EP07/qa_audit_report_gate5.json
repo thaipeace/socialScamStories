@@ -3,7 +3,7 @@
   "factory": "factory619",
   "gate": "GATE_5_RENDER_AND_QA",
   "staging_mp4_path": "factory619/staging/EP07/EP07_BayMuaLeHoi_52s_staging.mp4",
-  "file_size_mb": 30.25,
+  "file_size_mb": 24.56,
   "stream_probe": {
     "programs": [],
     "stream_groups": [],
@@ -25,7 +25,7 @@
     ],
     "format": {
       "duration": "52.300000",
-      "size": "31720594"
+      "size": "25748828"
     }
   },
   "all_8_points_passed": true,
@@ -50,9 +50,9 @@
     },
     {
       "id": 4,
-      "name": "Hình ảnh an toàn: không máu me/khỏa thân, không logo – giao diện – sắc phục thật",
+      "name": "Hình ảnh & chuyển động an toàn: không logo/giao diện/sắc phục thật, không máu me, motion mượt đúng nhịp & giữ continuity (QC 11 điểm)",
       "status": "PASS",
-      "evidence": "Người duyệt: Chủ kênh. Chủ kênh duyệt staging lên production"
+      "evidence": "Người duyệt: Chủ kênh. Đã duyệt bản Staging nâng cấp v3-level2-abc (A/B/C + 2.5D 3 lớp)"
     },
     {
       "id": 5,
@@ -78,5 +78,35 @@
       "status": "PASS",
       "evidence": "Hook bắt đầu 0.3s; thời lượng 52.31s (file 52.30s)"
     }
-  ]
+  ],
+  "motion_qc": {
+    "is_level2": true,
+    "effective_level_counts": {
+      "A": 1,
+      "B": 2,
+      "C": 3,
+      "D": 0
+    },
+    "declared_level_counts": {
+      "A": 1,
+      "B": 2,
+      "C": 3,
+      "D": 0
+    },
+    "has_highlights": true,
+    "zoom_repetition_streaks": [],
+    "shake_scenes": 1,
+    "fallbacks": [],
+    "sfx_sync": {
+      "synced": [
+        "s1_hook:screen_glow@0.05s",
+        "s4_cu_chot:shake@25.89s",
+        "s4_cu_chot:light_shift@25.81s",
+        "s4_cu_chot:light_shift@35.36s"
+      ],
+      "unsynced": []
+    },
+    "warnings": [],
+    "point4_human_signed": true
+  }
 }

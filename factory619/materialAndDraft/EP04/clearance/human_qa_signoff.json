@@ -7,9 +7,9 @@
   },
   "4": {
     "status": "PASS",
-    "by": "Antigravity Staging Visual QA",
-    "note": "Da kiem tra 6 anh v4: 2 thanh nien dan de ma QR ban dem, xung dot chu quan va khach buoi sang, Tung chi ra lop decal dan chong, khong chu sai chinh ta",
-    "at": "2026-11-05T20:28:36+07:00"
+    "by": "User",
+    "note": "Duyet ban nang cap v5-level2-abc (A=1 B=2 C=4, 2.5D s1+s3, khau hinh mieng tiet che) len Production",
+    "at": "2026-11-22T23:09:11+07:00"
   },
   "5": {
     "status": "PASS",

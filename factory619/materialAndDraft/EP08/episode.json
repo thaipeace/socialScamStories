@@ -2,7 +2,8 @@
   "episode_id": "EP08",
   "slug": "BayBienLaiNghienMang",
   "title": "Biên lai báo nghẽn mạng – Chỉ bấm nhận lương mà trắng tay",
-  "version": "v4",
+  "version": "v5-level2-abc-test",
+  "motion_upgrade": "level2",
   "scam_family": "ON-03",
   "duration_sec": 51.02,
   "hook": {
@@ -17,46 +18,208 @@
       "image": "assets/scene1.jpg",
       "start": 0.0,
       "end": 8.34,
+      "beat_type": "establishing",
+      "motion_level": "C",
+      "motion_intent": "Đẩy chậm tạo nhịp mở đầu kết hợp chớp mắt tự nhiên, miệng nói khớp WAV thật ở câu l2 và ánh sáng biên lai xanh bật lên",
       "motion": {
+        "preset": "slow_push_in",
         "scale": [
-          1.04,
-          1.12
+          1.02,
+          1.09
         ],
         "focus": [
           [
             0.5,
-            0.48
+            0.47
           ],
           [
-            0.5,
-            0.45
+            0.52,
+            0.44
           ]
         ],
-        "wobble": "calm"
-      }
+        "wobble": "breathe",
+        "easing": "ease_out"
+      },
+      "detail_fx": [
+        {
+          "type": "eye_blink",
+          "image": "assets/scene1_blink.jpg",
+          "region": [
+            0.522,
+            0.357,
+            0.698,
+            0.399
+          ],
+          "feather": 0.008,
+          "times": [
+            1.85,
+            4.55,
+            7.65
+          ],
+          "close_dur": 0.055,
+          "hold_dur": 0.045,
+          "open_dur": 0.085
+        },
+        {
+          "type": "mouth_sync",
+          "speaker": "thang_tun",
+          "region": [
+            0.541,
+            0.415,
+            0.663,
+            0.455
+          ],
+          "feather": 0.008,
+          "closed_image": "assets/scene1_mouth_closed.jpg",
+          "mid_image": "assets/scene1.jpg",
+          "open_image": "assets/scene1_mouth_open.jpg",
+          "fps": 12,
+          "thresh_mid": 0.14,
+          "thresh_open": 0.68
+        },
+        {
+          "type": "screen_glow",
+          "pos": [
+            0.68,
+            0.5
+          ],
+          "radius": [
+            0.22,
+            0.14
+          ],
+          "color": [
+            95,
+            245,
+            175
+          ],
+          "intensity": 0.24,
+          "mode": "turn_on",
+          "start": 0.12,
+          "end": 8.34,
+          "fade": 0.35
+        }
+      ]
     },
     {
       "id": "s2_cao_trao_nho_link",
       "image": "assets/scene2.jpg",
       "start": 8.34,
       "end": 14.2,
+      "beat_type": "suspicion",
+      "motion_level": "B",
+      "motion_intent": "Parallax 2.5D hai lớp kết hợp nhịp thở thân trên, chớp mắt khóa cứng theo layer FG và ánh sáng link xanh cyan chớp khi glitch",
       "motion": {
+        "preset": "slow_push_in",
         "scale": [
-          1.04,
-          1.14
+          1.03,
+          1.1
         ],
         "focus": [
           [
             0.5,
-            0.5
+            0.46
           ],
           [
             0.5,
-            0.46
+            0.43
           ]
         ],
-        "wobble": "handheld"
+        "wobble": "none"
       },
+      "parallax": {
+        "camera": "push_in",
+        "dolly": [
+          1.03,
+          1.1
+        ],
+        "shift_x": [
+          0.0,
+          0.0
+        ],
+        "shift_y": [
+          0.0,
+          -6.0
+        ],
+        "focus": [
+          0.5,
+          0.44
+        ],
+        "strength": 0.9,
+        "easing": "ease_out",
+        "layers": [
+          {
+            "role": "bg",
+            "image": "assets/s2_bg.jpg",
+            "depth": 0.42,
+            "blur": 0.8
+          },
+          {
+            "role": "fg",
+            "image": "assets/s2_fg.png",
+            "depth": 1.24,
+            "breathe_y": 2.3,
+            "breathe_scale": 0.005,
+            "breathe_period": 3.6
+          }
+        ]
+      },
+      "detail_fx": [
+        {
+          "type": "eye_blink",
+          "image": "assets/scene2_blink.jpg",
+          "region": [
+            0.307,
+            0.24,
+            0.691,
+            0.297
+          ],
+          "feather": 0.01,
+          "times": [
+            10.14,
+            13.09
+          ],
+          "close_dur": 0.055,
+          "hold_dur": 0.045,
+          "open_dur": 0.085,
+          "layer": "fg"
+        },
+        {
+          "type": "screen_glow",
+          "space": "frame",
+          "pos": [
+            0.56,
+            0.69
+          ],
+          "radius": [
+            0.28,
+            0.18
+          ],
+          "color": [
+            95,
+            235,
+            255
+          ],
+          "intensity": 0.24,
+          "mode": "pulse",
+          "start": 8.59,
+          "end": 14.2,
+          "fade": 0.3
+        },
+        {
+          "type": "light_shift",
+          "at": 13.82,
+          "dur": 0.12,
+          "end": 14.12,
+          "end_dur": 0.12,
+          "brightness": 1.14,
+          "tint_rgb": [
+            140,
+            240,
+            255
+          ],
+          "tint_strength": 0.1
+        }
+      ],
       "transition_in": {
         "type": "dissolve",
         "dur": 0.28
@@ -67,23 +230,86 @@
       "image": "assets/scene3.jpg",
       "start": 14.2,
       "end": 20.18,
+      "beat_type": "anomaly",
+      "motion_level": "C",
+      "motion_intent": "Trượt lên đổi nhịp (tránh lặp zoom-in) kèm chớp mắt căng thẳng, miệng nói gấp khớp câu l5 và ánh sáng đồng hồ đếm ngược đỏ cam",
       "motion": {
+        "preset": "drift_up",
         "scale": [
           1.05,
-          1.15
+          1.06
         ],
         "focus": [
           [
             0.5,
-            0.48
+            0.49
           ],
           [
             0.5,
-            0.43
+            0.44
           ]
         ],
-        "wobble": "tense"
+        "wobble": "breathe",
+        "easing": "smoothstep"
       },
+      "detail_fx": [
+        {
+          "type": "eye_blink",
+          "image": "assets/scene3_blink.jpg",
+          "region": [
+            0.307,
+            0.24,
+            0.691,
+            0.297
+          ],
+          "feather": 0.01,
+          "times": [
+            15.45,
+            17.55
+          ],
+          "close_dur": 0.05,
+          "hold_dur": 0.04,
+          "open_dur": 0.075
+        },
+        {
+          "type": "mouth_sync",
+          "speaker": "thang_tun",
+          "region": [
+            0.376,
+            0.355,
+            0.615,
+            0.414
+          ],
+          "feather": 0.01,
+          "closed_image": "assets/scene3_mouth_closed.jpg",
+          "mid_image": "assets/scene3.jpg",
+          "open_image": "assets/scene3_mouth_open.jpg",
+          "fps": 12,
+          "thresh_mid": 0.14,
+          "thresh_open": 0.68
+        },
+        {
+          "type": "screen_glow",
+          "pos": [
+            0.54,
+            0.77
+          ],
+          "radius": [
+            0.24,
+            0.16
+          ],
+          "color": [
+            255,
+            110,
+            65
+          ],
+          "intensity": 0.28,
+          "mode": "pulse",
+          "start": 14.32,
+          "end": 20.18,
+          "fade": 0.25
+        }
+      ],
       "transition_in": {
         "type": "dissolve",
         "dur": 0.24
@@ -94,10 +320,14 @@
       "image": "assets/scene4.jpg",
       "start": 20.18,
       "end": 25.98,
+      "beat_type": "climax",
+      "motion_level": "B",
+      "motion_intent": "Cao trào câm lặng 2.5D: nhịp thở dồn dập khớp heartbeat, 2 cú shake + chớp đỏ khớp 2 tiếng bank_ting và 1 cái chớp mắt bàng hoàng",
       "motion": {
+        "preset": "tense_push",
         "scale": [
           1.06,
-          1.18
+          1.16
         ],
         "focus": [
           [
@@ -111,6 +341,128 @@
         ],
         "wobble": "tense"
       },
+      "parallax": {
+        "camera": "push_in",
+        "dolly": [
+          1.04,
+          1.13
+        ],
+        "shift_x": [
+          0.0,
+          0.0
+        ],
+        "shift_y": [
+          0.0,
+          -8.0
+        ],
+        "focus": [
+          0.5,
+          0.42
+        ],
+        "strength": 0.95,
+        "easing": "ease_in",
+        "layers": [
+          {
+            "role": "bg",
+            "image": "assets/s4_bg.jpg",
+            "depth": 0.42,
+            "blur": 0.8
+          },
+          {
+            "role": "fg",
+            "image": "assets/s4_fg.png",
+            "depth": 1.28,
+            "breathe_y": 2.2,
+            "breathe_scale": 0.006,
+            "breathe_period": 2.1
+          }
+        ]
+      },
+      "detail_fx": [
+        {
+          "type": "eye_blink",
+          "image": "assets/scene4_blink.jpg",
+          "region": [
+            0.307,
+            0.24,
+            0.691,
+            0.297
+          ],
+          "feather": 0.01,
+          "times": [
+            24.33
+          ],
+          "close_dur": 0.06,
+          "hold_dur": 0.065,
+          "open_dur": 0.11,
+          "layer": "fg"
+        },
+        {
+          "type": "screen_glow",
+          "space": "frame",
+          "pos": [
+            0.55,
+            0.78
+          ],
+          "radius": [
+            0.28,
+            0.18
+          ],
+          "color": [
+            255,
+            75,
+            65
+          ],
+          "intensity": 0.3,
+          "mode": "flicker",
+          "start": 20.96,
+          "end": 25.98,
+          "fade": 0.15
+        },
+        {
+          "type": "light_shift",
+          "at": 20.96,
+          "dur": 0.08,
+          "end": 21.23,
+          "end_dur": 0.18,
+          "brightness": 1.15,
+          "tint_rgb": [
+            255,
+            95,
+            85
+          ],
+          "tint_strength": 0.14
+        },
+        {
+          "type": "light_shift",
+          "at": 22.43,
+          "dur": 0.08,
+          "end": 22.78,
+          "end_dur": 0.22,
+          "brightness": 1.18,
+          "tint_rgb": [
+            255,
+            80,
+            75
+          ],
+          "tint_strength": 0.16
+        },
+        {
+          "type": "focus_highlight",
+          "pos": [
+            0.5,
+            0.45
+          ],
+          "radius": [
+            0.4,
+            0.38
+          ],
+          "dim_outer": 0.22,
+          "start": 20.98,
+          "end": 25.98,
+          "fade": 0.3
+        }
+      ],
       "transition_in": {
         "type": "flash_white",
         "dur": 0.22
@@ -131,23 +483,92 @@
       "image": "assets/scene5.jpg",
       "start": 25.98,
       "end": 32.74,
+      "beat_type": "aftermath",
+      "motion_level": "C",
+      "motion_intent": "Lùi chậm mở không gian phòng trọ lạnh lẽo kèm chớp mắt mệt mỏi, miệng nói thảng thốt khớp l6 và chùng sáng lạnh đúng tiếng call_end",
       "motion": {
+        "preset": "slow_pull_out",
         "scale": [
           1.11,
-          1.03
+          1.02
         ],
         "focus": [
           [
-            0.5,
-            0.46
+            0.54,
+            0.43
           ],
           [
             0.5,
             0.5
           ]
         ],
-        "wobble": "handheld"
+        "wobble": "breathe",
+        "easing": "smoothstep"
       },
+      "detail_fx": [
+        {
+          "type": "eye_blink",
+          "image": "assets/scene5_blink.jpg",
+          "region": [
+            0.522,
+            0.357,
+            0.698,
+            0.399
+          ],
+          "feather": 0.008,
+          "times": [
+            28.33,
+            31.33
+          ],
+          "close_dur": 0.06,
+          "hold_dur": 0.055,
+          "open_dur": 0.095
+        },
+        {
+          "type": "mouth_sync",
+          "speaker": "thang_tun",
+          "region": [
+            0.541,
+            0.415,
+            0.663,
+            0.455
+          ],
+          "feather": 0.008,
+          "closed_image": "assets/scene5_mouth_closed.jpg",
+          "mid_image": "assets/scene5.jpg",
+          "open_image": "assets/scene5_mouth_open.jpg",
+          "fps": 12,
+          "thresh_mid": 0.14,
+          "thresh_open": 0.68
+        },
+        {
+          "type": "light_shift",
+          "at": 30.64,
+          "dur": 0.35,
+          "brightness": 0.88,
+          "tint_rgb": [
+            175,
+            205,
+            235
+          ],
+          "tint_strength": 0.09
+        },
+        {
+          "type": "focus_highlight",
+          "pos": [
+            0.56,
+            0.44
+          ],
+          "radius": [
+            0.38,
+            0.32
+          ],
+          "dim_outer": 0.18,
+          "start": 26.28,
+          "end": 32.74,
+          "fade": 0.45
+        }
+      ],
       "transition_in": {
         "type": "dissolve",
         "dur": 0.3
@@ -158,10 +579,14 @@
       "image": "assets/scene6.jpg",
       "start": 32.74,
       "end": 51.02,
+      "beat_type": "ending",
+      "motion_level": "C",
+      "motion_intent": "Đẩy nhẹ mượt về hình tượng móc câu & biên lai rách kèm ánh sáng cyan nhấp nhô rồi lắng tĩnh sạch sẽ khi thẻ Nhớ kỹ hiện ra",
       "motion": {
+        "preset": "slow_push_in",
         "scale": [
-          1.03,
-          1.1
+          1.02,
+          1.08
         ],
         "focus": [
           [
@@ -173,8 +598,32 @@
             0.42
           ]
         ],
-        "wobble": "calm"
+        "wobble": "none",
+        "easing": "ease_out"
       },
+      "detail_fx": [
+        {
+          "type": "screen_glow",
+          "pos": [
+            0.76,
+            0.34
+          ],
+          "radius": [
+            0.22,
+            0.16
+          ],
+          "color": [
+            110,
+            230,
+            255
+          ],
+          "intensity": 0.22,
+          "mode": "pulse",
+          "start": 32.94,
+          "end": 44.27,
+          "fade": 0.4
+        }
+      ],
       "transition_in": {
         "type": "glitch",
         "dur": 0.3

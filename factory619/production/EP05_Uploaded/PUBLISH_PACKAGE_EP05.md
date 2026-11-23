@@ -1,9 +1,9 @@
 # GÓI XUẤT BẢN YOUTUBE [factory619 · 9:16] – EP05: Bẫy Tình Ái Kết Hợp Nhiệm Vụ Chốt Đơn: Quơ Tay Ngang Mặt, Vỡ Mặt Nạ AI Ngay Trên Sóng!
 
 ## 📦 1. Các File Cần Dùng Khi Upload
-- **Video Master (MP4 9:16)**: [EP05_ViecNheLuongCao_56s.mp4](file:///C:/projects/socialScamStories/factory619/production/EP05/EP05_ViecNheLuongCao_56s.mp4) (42.43 MB, SHA-256 `94da08f5315462c3…`)
+- **Video Master (MP4 9:16)**: [EP05_ViecNheLuongCao_56s.mp4](file:///C:/projects/socialScamStories/factory619/production/EP05/EP05_ViecNheLuongCao_56s.mp4) (34.43 MB, SHA-256 `222be7dc111ee7fd…`)
 - **Phụ đề chuẩn thời gian (SRT)**: [EP05_ViecNheLuongCao_56s.srt](file:///C:/projects/socialScamStories/factory619/production/EP05/EP05_ViecNheLuongCao_56s.srt)
-- **Thumbnail dọc (9:16 — mốc `31.0s`)**: [EP05_Thumbnail_9x16.jpg](file:///C:/projects/socialScamStories/factory619/production/EP05/EP05_Thumbnail_9x16.jpg)
+- **Thumbnail dọc (9:16 — mốc `32.5s`)**: [EP05_Thumbnail_9x16.jpg](file:///C:/projects/socialScamStories/factory619/production/EP05/EP05_Thumbnail_9x16.jpg)
 - **Thumbnail ngang (16:9)**: [EP05_Thumbnail_16x9.jpg](file:///C:/projects/socialScamStories/factory619/production/EP05/EP05_Thumbnail_16x9.jpg)
 - **Bộ file `.txt` sẵn sàng Copy–Paste nhanh**:
   - Tiêu đề: [1_TITLE.txt](file:///C:/projects/socialScamStories/factory619/production/EP05/youtube_upload/1_TITLE.txt)

@@ -19,28 +19,82 @@
     "platform_ui_bottom_y": 980,
     "all_overlays_compliant": true
   },
+  "motion_summary": {
+    "hardware_profile": "low_ram_cpu_l480",
+    "safe_motion_mode": false,
+    "is_level2": true,
+    "declared_level_counts": {
+      "A": 9,
+      "B": 2,
+      "C": 8,
+      "D": 0
+    },
+    "effective_level_counts": {
+      "A": 9,
+      "B": 2,
+      "C": 8,
+      "D": 0
+    },
+    "fallbacks": [],
+    "detail_warnings": [],
+    "zoom_streaks": [],
+    "shake_scenes": 3,
+    "sfx_sync": {
+      "synced": [
+        "s00_hook_call:shake@0.20s",
+        "s01_hook_freeze:shake@15.43s",
+        "s01_hook_freeze:screen_glow@15.73s",
+        "s04_fake_video_call:detail_reveal@66.39s",
+        "s04_fake_video_call:light_shift@66.49s",
+        "s05_fake_step1_dark:detail_reveal@67.26s",
+        "s05_fake_step1_dark:screen_glow@67.34s",
+        "s08_dark_step2_account:detail_reveal@124.92s",
+        "s08_dark_step2_account:screen_glow@124.95s",
+        "s09_khang_transfers:screen_glow@135.22s",
+        "s12_confrontation_desk:shake@154.34s",
+        "s12_confrontation_desk:light_shift@176.27s",
+        "chat1@0.55s",
+        "chat2@15.78s",
+        "chat3@59.22s",
+        "chat4@67.34s",
+        "chat5@118.42s",
+        "chat6@125.00s",
+        "chat7@135.27s",
+        "chat8@139.12s",
+        "chat9@227.42s",
+        "notif1@168.69s"
+      ],
+      "unsynced": []
+    },
+    "warnings": []
+  },
   "scenes": [
     {
       "id": "s00_hook_call",
       "image": "assets/c00.jpg",
       "start": 0.0,
       "end": 15.28,
+      "beat_type": "suspicion",
+      "motion_level": "A",
+      "motion_intent": "Đẩy nhẹ về phía Anh Đạt bên phải khi nghi ngờ cuộc gọi lần 2",
       "motion": {
+        "preset": "subtle_push_right",
         "scale": [
-          1.0,
-          1.16
+          1.02,
+          1.09
         ],
         "focus": [
           [
             0.5,
-            0.5
+            0.49
           ],
           [
-            0.5,
-            0.45
+            0.56,
+            0.48
           ]
         ],
-        "wobble": "calm"
+        "wobble": "none",
+        "easing": "ease_out"
       },
       "shakes": [
         {
@@ -55,22 +109,11 @@
       "image": "assets/c01.jpg",
       "start": 15.28,
       "end": 18.73,
+      "beat_type": "anomaly",
+      "motion_level": "C",
+      "motion_intent": "Giữ tĩnh lạnh sau cú impact, gom ánh sáng vào ánh mắt sốc và ánh điện thoại hắt cằm Khang",
       "motion": {
-        "scale": [
-          1.04,
-          1.14
-        ],
-        "focus": [
-          [
-            0.5,
-            0.5
-          ],
-          [
-            0.48,
-            0.45
-          ]
-        ],
-        "wobble": "tense"
+        "preset": "static_hold"
       },
       "transition_in": {
         "type": "flash_white",
@@ -82,6 +125,44 @@
           "dur": 0.4,
           "amp": 16
         }
+      ],
+      "detail_fx": [
+        {
+          "type": "focus_highlight",
+          "pos": [
+            0.64,
+            0.44
+          ],
+          "radius": [
+            0.3,
+            0.36
+          ],
+          "dim_outer": 0.26,
+          "fade": 0.3,
+          "start": 15.68,
+          "end": 18.73
+        },
+        {
+          "type": "screen_glow",
+          "pos": [
+            0.63,
+            0.45
+          ],
+          "radius": [
+            0.16,
+            0.2
+          ],
+          "color": [
+            115,
+            190,
+            255
+          ],
+          "intensity": 0.22,
+          "mode": "turn_on",
+          "fade": 0.35,
+          "start": 15.73,
+          "end": 18.73
+        }
       ]
     },
     {
@@ -89,22 +170,26 @@
       "image": "assets/c02.jpg",
       "start": 18.73,
       "end": 42.38,
+      "beat_type": "establishing",
+      "motion_level": "A",
+      "motion_intent": "Pan ngang ấm áp mở bối cảnh quán cà phê sáng 2 hôm trước (đối lập với pan_left lúc rạn nứt ở s13)",
       "motion": {
+        "preset": "pan_right",
         "scale": [
-          1.02,
-          1.09
+          1.07,
+          1.07
         ],
         "focus": [
           [
-            0.5,
-            0.5
+            0.46,
+            0.49
           ],
           [
-            0.5,
-            0.47
+            0.54,
+            0.49
           ]
         ],
-        "wobble": "calm"
+        "wobble": "none"
       },
       "transition_in": {
         "type": "fade_black",
@@ -116,88 +201,11 @@
       "image": "assets/c03.jpg",
       "start": 42.38,
       "end": 57.47,
+      "beat_type": "suspicion",
+      "motion_level": "B",
+      "motion_intent": "Parallax 2.5D hai lớp đẩy qua hai bóng lưng kẻ gian tiến sâu vào bàn laptop & 2 điện thoại phòng tối kết hợp nhịp sáng màn hình",
       "motion": {
-        "scale": [
-          1.0,
-          1.16
-        ],
-        "focus": [
-          [
-            0.5,
-            0.5
-          ],
-          [
-            0.5,
-            0.45
-          ]
-        ],
-        "wobble": "calm"
-      },
-      "transition_in": {
-        "type": "fade_black",
-        "dur": 0.4
-      }
-    },
-    {
-      "id": "s04_fake_video_call",
-      "image": "assets/c04.jpg",
-      "start": 57.47,
-      "end": 66.79,
-      "motion": {
-        "scale": [
-          1.04,
-          1.14
-        ],
-        "focus": [
-          [
-            0.5,
-            0.5
-          ],
-          [
-            0.48,
-            0.45
-          ]
-        ],
-        "wobble": "tense"
-      },
-      "transition_in": {
-        "type": "fade_black",
-        "dur": 0.4
-      }
-    },
-    {
-      "id": "s05_fake_step1_dark",
-      "image": "assets/c05.jpg",
-      "start": 66.79,
-      "end": 83.21,
-      "motion": {
-        "scale": [
-          1.04,
-          1.14
-        ],
-        "focus": [
-          [
-            0.5,
-            0.5
-          ],
-          [
-            0.48,
-            0.45
-          ]
-        ],
-        "wobble": "tense"
-      },
-      "transition_in": {
-        "type": "dissolve",
-        "dur": 0.3
-      }
-    },
-    {
-      "id": "s06_office_relay",
-      "image": "assets/c06.jpg",
-      "start": 83.21,
-      "end": 99.05,
-      "motion": {
+        "preset": "slow_push_in",
         "scale": [
           1.02,
           1.09
@@ -208,11 +216,232 @@
             0.5
           ],
           [
-            0.5,
-            0.47
+            0.48,
+            0.55
           ]
         ],
-        "wobble": "calm"
+        "wobble": "none",
+        "easing": "ease_out"
+      },
+      "parallax": {
+        "camera": "push_in",
+        "dolly": [
+          1.02,
+          1.07
+        ],
+        "shift_x": [
+          0.0,
+          0.0
+        ],
+        "shift_y": [
+          0.0,
+          -3.0
+        ],
+        "focus": [
+          0.48,
+          0.56
+        ],
+        "strength": 0.85,
+        "easing": "ease_out",
+        "layers": [
+          {
+            "role": "bg",
+            "image": "assets/s03_bg.jpg",
+            "depth": 0.4,
+            "blur": 0.8
+          },
+          {
+            "role": "fg",
+            "image": "assets/s03_fg.png",
+            "depth": 1.35
+          }
+        ]
+      },
+      "transition_in": {
+        "type": "fade_black",
+        "dur": 0.4
+      },
+      "detail_fx": [
+        {
+          "type": "screen_glow",
+          "space": "frame",
+          "pos": [
+            0.46,
+            0.56
+          ],
+          "radius": [
+            0.24,
+            0.2
+          ],
+          "color": [
+            95,
+            195,
+            245
+          ],
+          "intensity": 0.24,
+          "mode": "pulse",
+          "fade": 0.45,
+          "start": 42.93,
+          "end": 57.47
+        }
+      ]
+    },
+    {
+      "id": "s04_fake_video_call",
+      "image": "assets/c04.jpg",
+      "start": 57.47,
+      "end": 66.79,
+      "beat_type": "anomaly",
+      "motion_level": "C",
+      "motion_intent": "Giữ khung tĩnh để lộ rõ màn hình cuộc gọi hình ghép chớp giật 3 giây rồi tắt tối kính đen đúng nhịp cúp máy",
+      "motion": {
+        "preset": "static_hold"
+      },
+      "transition_in": {
+        "type": "fade_black",
+        "dur": 0.4
+      },
+      "detail_fx": [
+        {
+          "type": "screen_glow",
+          "pos": [
+            0.58,
+            0.51
+          ],
+          "radius": [
+            0.17,
+            0.28
+          ],
+          "color": [
+            110,
+            225,
+            255
+          ],
+          "intensity": 0.26,
+          "mode": "flicker",
+          "fade": 0.2,
+          "start": 59.12,
+          "end": 65.92
+        },
+        {
+          "type": "detail_reveal",
+          "image": "assets/c04_call_off.jpg",
+          "region": [
+            0.47,
+            0.21,
+            0.71,
+            0.83
+          ],
+          "feather": 0.01,
+          "at": 66.39,
+          "dur": 0.16
+        },
+        {
+          "type": "light_shift",
+          "brightness": 0.92,
+          "tint_rgb": [
+            195,
+            215,
+            235
+          ],
+          "tint_strength": 0.07,
+          "at": 66.49,
+          "dur": 0.22
+        }
+      ]
+    },
+    {
+      "id": "s05_fake_step1_dark",
+      "image": "assets/c05_dim.jpg",
+      "start": 66.79,
+      "end": 83.21,
+      "beat_type": "information",
+      "motion_level": "C",
+      "motion_intent": "Pan ngang dịu qua đôi bàn tay phòng tối kèm màn hình điện thoại phải bừng sáng từ trạng thái tối khớp nhịp chạm gửi tin",
+      "motion": {
+        "preset": "pan_left",
+        "scale": [
+          1.06,
+          1.06
+        ],
+        "focus": [
+          [
+            0.54,
+            0.5
+          ],
+          [
+            0.47,
+            0.5
+          ]
+        ],
+        "wobble": "none"
+      },
+      "transition_in": {
+        "type": "dissolve",
+        "dur": 0.3
+      },
+      "detail_fx": [
+        {
+          "type": "detail_reveal",
+          "image": "assets/c05.jpg",
+          "region": [
+            0.515,
+            0.595,
+            0.728,
+            0.705
+          ],
+          "feather": 0.01,
+          "at": 67.26,
+          "dur": 0.28
+        },
+        {
+          "type": "screen_glow",
+          "pos": [
+            0.61,
+            0.65
+          ],
+          "radius": [
+            0.18,
+            0.14
+          ],
+          "color": [
+            115,
+            212,
+            255
+          ],
+          "intensity": 0.28,
+          "mode": "turn_on",
+          "fade": 0.3,
+          "start": 67.34,
+          "end": 83.21
+        }
+      ]
+    },
+    {
+      "id": "s06_office_relay",
+      "image": "assets/c06.jpg",
+      "start": 83.21,
+      "end": 99.05,
+      "beat_type": "normal",
+      "motion_level": "A",
+      "motion_intent": "Lùi nhẹ mở không gian văn phòng ban ngày tự nhiên giữa Khang và Hân",
+      "motion": {
+        "preset": "slow_pull_out",
+        "scale": [
+          1.08,
+          1.02
+        ],
+        "focus": [
+          [
+            0.5,
+            0.48
+          ],
+          [
+            0.5,
+            0.5
+          ]
+        ],
+        "wobble": "none"
       },
       "transition_in": {
         "type": "dissolve",
@@ -224,22 +453,26 @@
       "image": "assets/c07.jpg",
       "start": 99.05,
       "end": 124.45,
+      "beat_type": "normal",
+      "motion_level": "A",
+      "motion_intent": "Quét ngang nhẹ từ mâm cơm trưa sang sự đồng thuận bình thản của vợ chồng Anh Đạt",
       "motion": {
+        "preset": "pan_right",
         "scale": [
-          1.02,
-          1.09
+          1.07,
+          1.07
         ],
         "focus": [
           [
-            0.5,
-            0.5
+            0.46,
+            0.49
           ],
           [
-            0.5,
-            0.47
+            0.54,
+            0.49
           ]
         ],
-        "wobble": "calm"
+        "wobble": "none"
       },
       "transition_in": {
         "type": "fade_black",
@@ -248,140 +481,237 @@
     },
     {
       "id": "s08_dark_step2_account",
-      "image": "assets/c08.jpg",
+      "image": "assets/c08_dim.jpg",
       "start": 124.45,
       "end": 133.82,
+      "beat_type": "information",
+      "motion_level": "C",
+      "motion_intent": "Đẩy nhẹ vào màn hình phải nơi đầu ngón tay gửi STK lạ: màn hình bật sáng từ trạng thái tối khớp click và ánh vàng-xanh",
       "motion": {
+        "preset": "subtle_push_right",
         "scale": [
-          1.0,
-          1.16
+          1.02,
+          1.09
         ],
         "focus": [
           [
             0.5,
-            0.5
+            0.49
           ],
           [
-            0.5,
-            0.45
+            0.56,
+            0.48
           ]
         ],
-        "wobble": "calm"
+        "wobble": "none",
+        "easing": "ease_out"
       },
       "transition_in": {
         "type": "dissolve",
         "dur": 0.35
-      }
+      },
+      "detail_fx": [
+        {
+          "type": "detail_reveal",
+          "image": "assets/c08.jpg",
+          "region": [
+            0.55,
+            0.318,
+            0.768,
+            0.655
+          ],
+          "feather": 0.01,
+          "at": 124.92,
+          "dur": 0.28
+        },
+        {
+          "type": "screen_glow",
+          "pos": [
+            0.66,
+            0.5
+          ],
+          "radius": [
+            0.18,
+            0.22
+          ],
+          "color": [
+            255,
+            205,
+            125
+          ],
+          "intensity": 0.26,
+          "mode": "turn_on",
+          "fade": 0.28,
+          "start": 124.95,
+          "end": 133.82
+        }
+      ]
     },
     {
       "id": "s09_khang_transfers",
       "image": "assets/c09.jpg",
       "start": 133.82,
       "end": 138.47,
+      "beat_type": "climax",
+      "motion_level": "C",
+      "motion_intent": "Giữ tĩnh tương phản ngay khoảnh khắc Khang bấm chuyển 45 triệu, ánh màn hình sáng khớp bank_ting",
       "motion": {
-        "scale": [
-          1.02,
-          1.1
-        ],
-        "focus": [
-          [
-            0.46,
-            0.48
-          ],
-          [
-            0.54,
-            0.46
-          ]
-        ],
-        "wobble": "handheld"
+        "preset": "static_hold"
       },
       "transition_in": {
         "type": "dissolve",
         "dur": 0.3
-      }
+      },
+      "detail_fx": [
+        {
+          "type": "screen_glow",
+          "pos": [
+            0.55,
+            0.58
+          ],
+          "radius": [
+            0.14,
+            0.16
+          ],
+          "color": [
+            130,
+            228,
+            215
+          ],
+          "intensity": 0.28,
+          "mode": "turn_on",
+          "fade": 0.25,
+          "start": 135.22,
+          "end": 138.47
+        },
+        {
+          "type": "focus_highlight",
+          "pos": [
+            0.6,
+            0.46
+          ],
+          "radius": [
+            0.3,
+            0.34
+          ],
+          "dim_outer": 0.2,
+          "fade": 0.35,
+          "start": 134.97,
+          "end": 138.47
+        }
+      ]
     },
     {
       "id": "s10_second_attempt_dark",
       "image": "assets/c10.jpg",
       "start": 138.47,
       "end": 148.17,
+      "beat_type": "suspicion",
+      "motion_level": "C",
+      "motion_intent": "Lùi chậm từ điện thoại đang gõ lộ ra chiếc điện thoại thứ 2 trên bàn tối, màn hình thở sáng theo nhịp",
       "motion": {
+        "preset": "slow_pull_out",
         "scale": [
-          1.04,
-          1.14
+          1.08,
+          1.02
         ],
         "focus": [
           [
-            0.5,
+            0.58,
             0.5
           ],
           [
-            0.48,
-            0.45
+            0.51,
+            0.5
           ]
         ],
-        "wobble": "tense"
+        "wobble": "none"
       },
       "transition_in": {
         "type": "fade_black",
         "dur": 0.4
-      }
+      },
+      "detail_fx": [
+        {
+          "type": "screen_glow",
+          "pos": [
+            0.62,
+            0.49
+          ],
+          "radius": [
+            0.18,
+            0.2
+          ],
+          "color": [
+            115,
+            215,
+            255
+          ],
+          "intensity": 0.26,
+          "mode": "pulse",
+          "fade": 0.35,
+          "start": 139.07,
+          "end": 148.17
+        }
+      ]
     },
     {
       "id": "s11_real_call_suspect",
       "image": "assets/c11.jpg",
       "start": 148.17,
       "end": 154.16,
+      "beat_type": "climax",
+      "motion_level": "A",
+      "motion_intent": "Đẩy gấp tạo xung lực dẫn thẳng vào cảnh đối chất",
       "motion": {
+        "preset": "tense_push",
         "scale": [
-          1.04,
-          1.14
+          1.03,
+          1.1
         ],
         "focus": [
           [
             0.5,
-            0.5
+            0.49
           ],
           [
-            0.48,
+            0.5,
             0.45
           ]
         ],
-        "wobble": "tense"
+        "wobble": "tense",
+        "easing": "ease_in"
       },
       "transition_in": {
         "type": "dissolve",
         "dur": 0.3
-      },
-      "shakes": [
-        {
-          "at": 148.32,
-          "dur": 0.4,
-          "amp": 16
-        }
-      ]
+      }
     },
     {
       "id": "s12_confrontation_desk",
       "image": "assets/c12.jpg",
       "start": 154.16,
       "end": 188.55,
+      "beat_type": "climax",
+      "motion_level": "C",
+      "motion_intent": "Mở khung rộng đối chất Trái–Phải, 2 điện thoại sáng giữa bàn và ánh sáng chùng lạnh đúng giây phát hiện bị chặn",
       "motion": {
+        "preset": "slow_pull_out",
         "scale": [
-          1.04,
-          1.14
+          1.09,
+          1.02
         ],
         "focus": [
           [
             0.5,
-            0.5
+            0.52
           ],
           [
-            0.48,
-            0.45
+            0.5,
+            0.49
           ]
         ],
-        "wobble": "tense"
+        "wobble": "calm"
       },
       "transition_in": {
         "type": "flash_white",
@@ -393,6 +723,41 @@
           "dur": 0.4,
           "amp": 16
         }
+      ],
+      "detail_fx": [
+        {
+          "type": "screen_glow",
+          "pos": [
+            0.5,
+            0.88
+          ],
+          "radius": [
+            0.22,
+            0.1
+          ],
+          "color": [
+            145,
+            215,
+            255
+          ],
+          "intensity": 0.24,
+          "mode": "steady",
+          "fade": 0.4,
+          "start": 154.81,
+          "end": 188.55
+        },
+        {
+          "type": "light_shift",
+          "brightness": 0.9,
+          "tint_rgb": [
+            195,
+            215,
+            240
+          ],
+          "tint_strength": 0.08,
+          "at": 176.27,
+          "dur": 0.45
+        }
       ]
     },
     {
@@ -400,22 +765,26 @@
       "image": "assets/c13.jpg",
       "start": 188.55,
       "end": 206.72,
+      "beat_type": "aftermath",
+      "motion_level": "A",
+      "motion_intent": "Quét ngược chiều (pan_left đối lập s02 pan_right) trên đúng bàn cà phê cũ – ẩn dụ khoảng cách rạn nứt",
       "motion": {
+        "preset": "pan_left",
         "scale": [
-          1.02,
-          1.09
+          1.06,
+          1.06
         ],
         "focus": [
           [
-            0.5,
+            0.54,
             0.5
           ],
           [
-            0.5,
-            0.47
+            0.47,
+            0.5
           ]
         ],
-        "wobble": "calm"
+        "wobble": "none"
       },
       "transition_in": {
         "type": "fade_black",
@@ -427,22 +796,11 @@
       "image": "factory196/materialAndDraft/EP01b/assets/scene18.jpg",
       "start": 206.72,
       "end": 216.11,
+      "beat_type": "ending",
+      "motion_level": "A",
+      "motion_intent": "Giữ tĩnh tuyệt đối để khán giả tập trung đọc thẻ Nhớ kỹ",
       "motion": {
-        "scale": [
-          1.0,
-          1.05
-        ],
-        "focus": [
-          [
-            0.5,
-            0.5
-          ],
-          [
-            0.5,
-            0.5
-          ]
-        ],
-        "wobble": "none"
+        "preset": "static_hold"
       },
       "transition_in": {
         "type": "fade_black",
@@ -454,76 +812,143 @@
       "image": "assets/c14a.jpg",
       "start": 216.11,
       "end": 226.92,
+      "beat_type": "suspicion",
+      "motion_level": "C",
+      "motion_intent": "Đẩy tĩnh lạnh vào ánh mắt dò xét của Anh Đạt bên trái kết hợp gom sáng nhẹ khi bỏ chữ 'cu'",
       "motion": {
+        "preset": "subtle_push_left",
         "scale": [
           1.02,
-          1.16
+          1.09
         ],
         "focus": [
           [
-            0.46,
-            0.46
+            0.42,
+            0.44
           ],
           [
-            0.38,
-            0.38
+            0.36,
+            0.4
           ]
         ],
-        "wobble": "tense"
+        "wobble": "none",
+        "easing": "ease_out"
       },
       "transition_in": {
         "type": "fade_black",
         "dur": 0.5
-      }
+      },
+      "detail_fx": [
+        {
+          "type": "focus_highlight",
+          "pos": [
+            0.35,
+            0.38
+          ],
+          "radius": [
+            0.28,
+            0.36
+          ],
+          "dim_outer": 0.22,
+          "fade": 0.55,
+          "start": 217.26,
+          "end": 226.92
+        }
+      ]
     },
     {
       "id": "s14b_coda_khang_counter",
       "image": "assets/c14b.jpg",
       "start": 226.92,
       "end": 235.05,
+      "beat_type": "climax",
+      "motion_level": "B",
+      "motion_intent": "Parallax 2.5D vượt vai mờ của Anh Đạt tiến thẳng vào đôi mắt lạnh ngang hàng của Khang kèm gom sáng",
       "motion": {
+        "preset": "subtle_push_right",
         "scale": [
           1.02,
-          1.16
+          1.09
         ],
         "focus": [
           [
-            0.54,
-            0.46
+            0.6,
+            0.42
           ],
           [
-            0.62,
+            0.66,
             0.38
           ]
         ],
-        "wobble": "tense"
+        "wobble": "none",
+        "easing": "ease_out"
+      },
+      "parallax": {
+        "camera": "push_in",
+        "dolly": [
+          1.02,
+          1.09
+        ],
+        "shift_x": [
+          -8.0,
+          10.0
+        ],
+        "shift_y": [
+          0.0,
+          -4.0
+        ],
+        "focus": [
+          0.62,
+          0.4
+        ],
+        "strength": 1.0,
+        "easing": "ease_out",
+        "layers": [
+          {
+            "role": "bg",
+            "image": "assets/s14b_bg.jpg",
+            "depth": 0.6
+          },
+          {
+            "role": "fg",
+            "image": "assets/s14b_fg.png",
+            "depth": 1.45,
+            "blur": 1.0
+          }
+        ]
       },
       "transition_in": {
         "type": "dissolve",
         "dur": 0.25
-      }
+      },
+      "detail_fx": [
+        {
+          "type": "focus_highlight",
+          "pos": [
+            0.67,
+            0.36
+          ],
+          "radius": [
+            0.28,
+            0.36
+          ],
+          "dim_outer": 0.24,
+          "fade": 0.55,
+          "start": 227.87,
+          "end": 235.05
+        }
+      ]
     },
     {
       "id": "s15_black_cut",
       "image": "assets/c15.jpg",
       "start": 235.05,
       "end": 237.6,
+      "beat_type": "aftermath",
+      "motion_level": "A",
+      "motion_intent": "Cắt đen tĩnh tuyệt đối tạo khoảng lặng sau cú chốt cuối phim",
       "motion": {
-        "scale": [
-          1.0,
-          1.05
-        ],
-        "focus": [
-          [
-            0.5,
-            0.5
-          ],
-          [
-            0.5,
-            0.5
-          ]
-        ],
-        "wobble": "none"
+        "preset": "static_hold"
       },
       "transition_in": {
         "type": "fade_black",
@@ -535,22 +960,11 @@
       "image": "factory196/materialAndDraft/EP01b/assets/scene18.jpg",
       "start": 237.6,
       "end": 242.15,
+      "beat_type": "ending",
+      "motion_level": "A",
+      "motion_intent": "Giữ tĩnh sạch sẽ cho bảng Lưu ý cuối phim",
       "motion": {
-        "scale": [
-          1.0,
-          1.05
-        ],
-        "focus": [
-          [
-            0.5,
-            0.5
-          ],
-          [
-            0.5,
-            0.5
-          ]
-        ],
-        "wobble": "none"
+        "preset": "static_hold"
       },
       "transition_in": {
         "type": "fade_black",
@@ -1720,7 +2134,7 @@
       "id": "064_chat1",
       "start_sec": 0.55,
       "end_sec": 5.15,
-      "fade_sec": 0.15,
+      "fade_sec": 0.16,
       "png_path": "factory196/staging/EP08/overlays/064_chat1.png",
       "type": "chat_bubble",
       "text": "Lần 2 trong ngày · Xin mượn thêm 30.000.000đ",
@@ -1737,7 +2151,7 @@
       "id": "065_chat2",
       "start_sec": 15.78,
       "end_sec": 18.28,
-      "fade_sec": 0.15,
+      "fade_sec": 0.16,
       "png_path": "factory196/staging/EP08/overlays/065_chat2.png",
       "type": "chat_bubble",
       "text": "Mượn anh thêm 30.000.000đ · Như sáng nay",
@@ -1754,7 +2168,7 @@
       "id": "066_chat3",
       "start_sec": 59.22,
       "end_sec": 64.02,
-      "fade_sec": 0.15,
+      "fade_sec": 0.16,
       "png_path": "factory196/staging/EP08/overlays/066_chat3.png",
       "type": "chat_bubble",
       "text": "Tín hiệu yếu · Đã kết thúc (00:03)",
@@ -1771,7 +2185,7 @@
       "id": "067_chat4",
       "start_sec": 67.34,
       "end_sec": 72.94,
-      "fade_sec": 0.15,
+      "fade_sec": 0.16,
       "png_path": "factory196/staging/EP08/overlays/067_chat4.png",
       "type": "chat_bubble",
       "text": "Gọi số cũ xin ứng 45tr · Giữ bí mật cho chị nhà",
@@ -1788,7 +2202,7 @@
       "id": "068_chat5",
       "start_sec": 118.42,
       "end_sec": 123.22,
-      "fade_sec": 0.15,
+      "fade_sec": 0.16,
       "png_path": "factory196/staging/EP08/overlays/068_chat5.png",
       "type": "chat_bubble",
       "text": "Chuyển sang Khang: -45.000.000đ · ND: Ung luong",
@@ -1805,7 +2219,7 @@
       "id": "069_chat6",
       "start_sec": 125.0,
       "end_sec": 130.2,
-      "fade_sec": 0.15,
+      "fade_sec": 0.16,
       "png_path": "factory196/staging/EP08/overlays/069_chat6.png",
       "type": "chat_bubble",
       "text": "Chuyển 45.000.000đ vô TK cửa hàng này",
@@ -1822,7 +2236,7 @@
       "id": "070_chat7",
       "start_sec": 135.27,
       "end_sec": 138.27,
-      "fade_sec": 0.15,
+      "fade_sec": 0.16,
       "png_path": "factory196/staging/EP08/overlays/070_chat7.png",
       "type": "chat_bubble",
       "text": "Đã chuyển: -45.000.000đ → TK ••••",
@@ -1839,7 +2253,7 @@
       "id": "071_chat8",
       "start_sec": 139.12,
       "end_sec": 144.12,
-      "fade_sec": 0.15,
+      "fade_sec": 0.16,
       "png_path": "factory196/staging/EP08/overlays/071_chat8.png",
       "type": "chat_bubble",
       "text": "Gọi số cũ mượn anh thêm 30.000.000đ",
@@ -1856,7 +2270,7 @@
       "id": "072_chat9",
       "start_sec": 227.42,
       "end_sec": 234.82,
-      "fade_sec": 0.15,
+      "fade_sec": 0.16,
       "png_path": "factory196/staging/EP08/overlays/072_chat9.png",
       "type": "chat_bubble",
       "text": "Anh Đạt → Khang: +45.000.000đ · ND: Ung luong",
@@ -1870,11 +2284,28 @@
       "safe_zone_compliant": true
     },
     {
-      "id": "073_redflags_0",
+      "id": "073_notif1",
+      "start_sec": 168.69,
+      "end_sec": 174.29,
+      "fade_sec": 0.18,
+      "png_path": "factory196/staging/EP08/overlays/073_notif1.png",
+      "type": "notification",
+      "title": "CẢNH BÁO BẢO MẬT",
+      "text": "Phát hiện đăng nhập từ thiết bị lạ · 02:14",
+      "bbox_px": [
+        580,
+        106,
+        1344,
+        221
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "074_redflags_0",
       "start_sec": 207.07,
       "end_sec": 207.52,
       "fade_sec": 0.25,
-      "png_path": "factory196/staging/EP08/overlays/073_redflags_0.png",
+      "png_path": "factory196/staging/EP08/overlays/074_redflags_0.png",
       "type": "red_flags",
       "title": "NHỚ KỸ – BẪY NGƯỜI ĐỨNG GIỮA",
       "lines": [
@@ -1894,11 +2325,11 @@
       "safe_zone_compliant": true
     },
     {
-      "id": "074_redflags_1",
+      "id": "075_redflags_1",
       "start_sec": 207.52,
       "end_sec": 207.97,
       "fade_sec": 0.0,
-      "png_path": "factory196/staging/EP08/overlays/074_redflags_1.png",
+      "png_path": "factory196/staging/EP08/overlays/075_redflags_1.png",
       "type": "red_flags",
       "title": "NHỚ KỸ – BẪY NGƯỜI ĐỨNG GIỮA",
       "lines": [
@@ -1918,11 +2349,11 @@
       "safe_zone_compliant": true
     },
     {
-      "id": "075_redflags_2",
+      "id": "076_redflags_2",
       "start_sec": 207.97,
       "end_sec": 208.42,
       "fade_sec": 0.0,
-      "png_path": "factory196/staging/EP08/overlays/075_redflags_2.png",
+      "png_path": "factory196/staging/EP08/overlays/076_redflags_2.png",
       "type": "red_flags",
       "title": "NHỚ KỸ – BẪY NGƯỜI ĐỨNG GIỮA",
       "lines": [
@@ -1942,11 +2373,11 @@
       "safe_zone_compliant": true
     },
     {
-      "id": "076_redflags_3",
+      "id": "077_redflags_3",
       "start_sec": 208.42,
       "end_sec": 208.87,
       "fade_sec": 0.0,
-      "png_path": "factory196/staging/EP08/overlays/076_redflags_3.png",
+      "png_path": "factory196/staging/EP08/overlays/077_redflags_3.png",
       "type": "red_flags",
       "title": "NHỚ KỸ – BẪY NGƯỜI ĐỨNG GIỮA",
       "lines": [
@@ -1966,11 +2397,11 @@
       "safe_zone_compliant": true
     },
     {
-      "id": "077_redflags_4",
+      "id": "078_redflags_4",
       "start_sec": 208.87,
       "end_sec": 209.32,
       "fade_sec": 0.0,
-      "png_path": "factory196/staging/EP08/overlays/077_redflags_4.png",
+      "png_path": "factory196/staging/EP08/overlays/078_redflags_4.png",
       "type": "red_flags",
       "title": "NHỚ KỸ – BẪY NGƯỜI ĐỨNG GIỮA",
       "lines": [
@@ -1990,11 +2421,11 @@
       "safe_zone_compliant": true
     },
     {
-      "id": "078_redflags_5",
+      "id": "079_redflags_5",
       "start_sec": 209.32,
       "end_sec": 216.11,
       "fade_sec": 0.0,
-      "png_path": "factory196/staging/EP08/overlays/078_redflags_5.png",
+      "png_path": "factory196/staging/EP08/overlays/079_redflags_5.png",
       "type": "red_flags",
       "title": "NHỚ KỸ – BẪY NGƯỜI ĐỨNG GIỮA",
       "lines": [
@@ -2014,11 +2445,11 @@
       "safe_zone_compliant": true
     },
     {
-      "id": "079_disclaimer",
+      "id": "080_disclaimer",
       "start_sec": 237.95,
       "end_sec": 242.15,
       "fade_sec": 0.25,
-      "png_path": "factory196/staging/EP08/overlays/079_disclaimer.png",
+      "png_path": "factory196/staging/EP08/overlays/080_disclaimer.png",
       "type": "disclaimer",
       "text": "Tình huống trong phim được dựng lại nhằm mục đích cảnh báo cộng đồng; nhân vật, tên gọi và số liệu đều là hư cấu. Thông tin nghiệp vụ và pháp lý chỉ mang tính tham khảo — khi gặp sự cố, hãy liên hệ trực tiếp ngân hàng và cơ quan công an nơi gần nhất.",
       "bbox_px": [
@@ -2042,6 +2473,11 @@
       "safezone": "factory196/staging/EP08/preview_frames/qa_07_64s_safezone.jpg"
     },
     {
+      "timestamp_sec": 16.28,
+      "clean": "factory196/staging/EP08/preview_frames/qa_16_28s_clean.jpg",
+      "safezone": "factory196/staging/EP08/preview_frames/qa_16_28s_safezone.jpg"
+    },
+    {
       "timestamp_sec": 17.0,
       "clean": "factory196/staging/EP08/preview_frames/qa_17_00s_clean.jpg",
       "safezone": "factory196/staging/EP08/preview_frames/qa_17_00s_safezone.jpg"
@@ -2052,14 +2488,39 @@
       "safezone": "factory196/staging/EP08/preview_frames/qa_30_55s_safezone.jpg"
     },
     {
+      "timestamp_sec": 43.58,
+      "clean": "factory196/staging/EP08/preview_frames/qa_43_58s_clean.jpg",
+      "safezone": "factory196/staging/EP08/preview_frames/qa_43_58s_safezone.jpg"
+    },
+    {
       "timestamp_sec": 49.92,
       "clean": "factory196/staging/EP08/preview_frames/qa_49_92s_clean.jpg",
       "safezone": "factory196/staging/EP08/preview_frames/qa_49_92s_safezone.jpg"
     },
     {
+      "timestamp_sec": 59.52,
+      "clean": "factory196/staging/EP08/preview_frames/qa_59_52s_clean.jpg",
+      "safezone": "factory196/staging/EP08/preview_frames/qa_59_52s_safezone.jpg"
+    },
+    {
       "timestamp_sec": 62.13,
       "clean": "factory196/staging/EP08/preview_frames/qa_62_13s_clean.jpg",
       "safezone": "factory196/staging/EP08/preview_frames/qa_62_13s_safezone.jpg"
+    },
+    {
+      "timestamp_sec": 66.69,
+      "clean": "factory196/staging/EP08/preview_frames/qa_66_69s_clean.jpg",
+      "safezone": "factory196/staging/EP08/preview_frames/qa_66_69s_safezone.jpg"
+    },
+    {
+      "timestamp_sec": 67.69,
+      "clean": "factory196/staging/EP08/preview_frames/qa_67_69s_clean.jpg",
+      "safezone": "factory196/staging/EP08/preview_frames/qa_67_69s_safezone.jpg"
+    },
+    {
+      "timestamp_sec": 67.84,
+      "clean": "factory196/staging/EP08/preview_frames/qa_67_84s_clean.jpg",
+      "safezone": "factory196/staging/EP08/preview_frames/qa_67_84s_safezone.jpg"
     },
     {
       "timestamp_sec": 75.0,
@@ -2077,14 +2538,34 @@
       "safezone": "factory196/staging/EP08/preview_frames/qa_111_75s_safezone.jpg"
     },
     {
+      "timestamp_sec": 125.35,
+      "clean": "factory196/staging/EP08/preview_frames/qa_125_35s_clean.jpg",
+      "safezone": "factory196/staging/EP08/preview_frames/qa_125_35s_safezone.jpg"
+    },
+    {
+      "timestamp_sec": 125.43,
+      "clean": "factory196/staging/EP08/preview_frames/qa_125_43s_clean.jpg",
+      "safezone": "factory196/staging/EP08/preview_frames/qa_125_43s_safezone.jpg"
+    },
+    {
       "timestamp_sec": 129.13,
       "clean": "factory196/staging/EP08/preview_frames/qa_129_13s_clean.jpg",
       "safezone": "factory196/staging/EP08/preview_frames/qa_129_13s_safezone.jpg"
     },
     {
+      "timestamp_sec": 135.67,
+      "clean": "factory196/staging/EP08/preview_frames/qa_135_67s_clean.jpg",
+      "safezone": "factory196/staging/EP08/preview_frames/qa_135_67s_safezone.jpg"
+    },
+    {
       "timestamp_sec": 136.14,
       "clean": "factory196/staging/EP08/preview_frames/qa_136_14s_clean.jpg",
       "safezone": "factory196/staging/EP08/preview_frames/qa_136_14s_safezone.jpg"
+    },
+    {
+      "timestamp_sec": 139.62,
+      "clean": "factory196/staging/EP08/preview_frames/qa_139_62s_clean.jpg",
+      "safezone": "factory196/staging/EP08/preview_frames/qa_139_62s_safezone.jpg"
     },
     {
       "timestamp_sec": 143.32,
@@ -2097,9 +2578,24 @@
       "safezone": "factory196/staging/EP08/preview_frames/qa_151_16s_safezone.jpg"
     },
     {
+      "timestamp_sec": 155.41,
+      "clean": "factory196/staging/EP08/preview_frames/qa_155_41s_clean.jpg",
+      "safezone": "factory196/staging/EP08/preview_frames/qa_155_41s_safezone.jpg"
+    },
+    {
+      "timestamp_sec": 169.09,
+      "clean": "factory196/staging/EP08/preview_frames/qa_169_09s_clean.jpg",
+      "safezone": "factory196/staging/EP08/preview_frames/qa_169_09s_safezone.jpg"
+    },
+    {
       "timestamp_sec": 171.36,
       "clean": "factory196/staging/EP08/preview_frames/qa_171_36s_clean.jpg",
       "safezone": "factory196/staging/EP08/preview_frames/qa_171_36s_safezone.jpg"
+    },
+    {
+      "timestamp_sec": 176.87,
+      "clean": "factory196/staging/EP08/preview_frames/qa_176_87s_clean.jpg",
+      "safezone": "factory196/staging/EP08/preview_frames/qa_176_87s_safezone.jpg"
     },
     {
       "timestamp_sec": 197.63,

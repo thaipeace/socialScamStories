@@ -3,7 +3,7 @@
 ## 1. File tải lên (Upload files)
 - **File Video chính (9:16 MP4)**: [EP06_CheckInDuLich_48s.mp4](file:///C:/projects/socialScamStories/factory619/production/EP06/EP06_CheckInDuLich_48s.mp4)
 - **File Phụ đề (SRT)**: [EP06_CheckInDuLich_48s.srt](file:///C:/projects/socialScamStories/factory619/production/EP06/EP06_CheckInDuLich_48s.srt)
-- **Ảnh Thumbnail 16:9**: [EP06_Thumbnail_16x9.jpg](file:///C:/projects/socialScamStories/factory619/production/EP06/EP06_Thumbnail_16x9.jpg) (mốc `27.7s`)
+- **Ảnh Thumbnail 16:9**: [EP06_Thumbnail_16x9.jpg](file:///C:/projects/socialScamStories/factory619/production/EP06/EP06_Thumbnail_16x9.jpg) (mốc `31.9s`)
 - **Ảnh Thumbnail 9:16**: [EP06_Thumbnail_9x16.jpg](file:///C:/projects/socialScamStories/factory619/production/EP06/EP06_Thumbnail_9x16.jpg)
 
 ## 2. Các ô nội dung Copy – Paste nhanh

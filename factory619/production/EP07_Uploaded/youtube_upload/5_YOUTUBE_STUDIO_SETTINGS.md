@@ -3,7 +3,7 @@
 ## 1. File tải lên (Upload files)
 - **File Video chính (9:16 MP4)**: [EP07_BayMuaLeHoi_52s.mp4](file:///C:/projects/socialScamStories/factory619/production/EP07/EP07_BayMuaLeHoi_52s.mp4)
 - **File Phụ đề (SRT)**: [EP07_BayMuaLeHoi_52s.srt](file:///C:/projects/socialScamStories/factory619/production/EP07/EP07_BayMuaLeHoi_52s.srt)
-- **Ảnh Thumbnail 16:9**: [EP07_Thumbnail_16x9.jpg](file:///C:/projects/socialScamStories/factory619/production/EP07/EP07_Thumbnail_16x9.jpg) (mốc `26.9s`)
+- **Ảnh Thumbnail 16:9**: [EP07_Thumbnail_16x9.jpg](file:///C:/projects/socialScamStories/factory619/production/EP07/EP07_Thumbnail_16x9.jpg) (mốc `35.4s`)
 - **Ảnh Thumbnail 9:16**: [EP07_Thumbnail_9x16.jpg](file:///C:/projects/socialScamStories/factory619/production/EP07/EP07_Thumbnail_9x16.jpg)
 
 ## 2. Các ô nội dung Copy – Paste nhanh

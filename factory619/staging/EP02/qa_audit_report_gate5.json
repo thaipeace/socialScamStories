@@ -1,8 +1,9 @@
 {
   "episode_id": "EP02",
+  "factory": "factory619",
   "gate": "GATE_5_RENDER_AND_QA",
-  "staging_mp4_path": "factory/staging/EP02/EP02_BayPhongVanHackMay_56s_staging.mp4",
-  "file_size_mb": 48.03,
+  "staging_mp4_path": "factory619/staging/EP02/EP02_BayPhongVanHackMay_56s_staging.mp4",
+  "file_size_mb": 33.64,
   "stream_probe": {
     "programs": [],
     "stream_groups": [],
@@ -24,7 +25,7 @@
     ],
     "format": {
       "duration": "56.000000",
-      "size": "50362325"
+      "size": "35272765"
     }
   },
   "all_8_points_passed": true,
@@ -49,9 +50,9 @@
     },
     {
       "id": 4,
-      "name": "Hình ảnh an toàn: không máu me/khỏa thân, không logo – giao diện – sắc phục thật",
+      "name": "Hình ảnh & chuyển động an toàn: không logo/giao diện/sắc phục thật, không máu me, motion mượt đúng nhịp & giữ continuity (QC 11 điểm)",
       "status": "PASS",
-      "evidence": "Người duyệt: Antigravity Staging Visual QA."
+      "evidence": "Người duyệt: User Approved. Duyet ban nang cap v8-level2-abc (A=2 B=2 C=8 D=0, 12 canh goc, 2.5D s3b+s5a, thumbnail 33.75s)"
     },
     {
       "id": 5,
@@ -67,7 +68,7 @@
     },
     {
       "id": 7,
-      "name": "Safe Zone + Disclaimer + Thẻ Dấu hiệu nhận biết",
+      "name": "Safe Zone (9:16) + Disclaimer + Thẻ Dấu hiệu nhận biết",
       "status": "PASS",
       "evidence": "Overlay trong Safe Zone: True; disclaimer: 1; thẻ dấu hiệu: 2 ý"
     },
@@ -77,5 +78,44 @@
       "status": "PASS",
       "evidence": "Hook bắt đầu 0.3s; thời lượng 56.0s (file 56.00s)"
     }
-  ]
+  ],
+  "motion_qc": {
+    "is_level2": true,
+    "effective_level_counts": {
+      "A": 2,
+      "B": 2,
+      "C": 8,
+      "D": 0
+    },
+    "declared_level_counts": {
+      "A": 2,
+      "B": 2,
+      "C": 8,
+      "D": 0
+    },
+    "has_highlights": true,
+    "zoom_repetition_streaks": [],
+    "shake_scenes": 2,
+    "fallbacks": [],
+    "sfx_sync": {
+      "synced": [
+        "s1a_hook:screen_glow@0.40s",
+        "s1b_hook_bait:screen_glow@2.40s",
+        "s2b_hr_push:screen_glow@11.40s",
+        "s3a_idea_bulb:screen_glow@18.20s",
+        "s3a_idea_bulb:light_shift@18.20s",
+        "s3b_stop_hand:shake@25.20s",
+        "s3b_stop_hand:light_shift@25.20s",
+        "s4a_hidden_malware:shake@34.20s",
+        "s4a_hidden_malware:light_shift@34.40s",
+        "s4b_shield_block:screen_glow@39.60s",
+        "s5a_magnify_trap:light_shift@44.00s",
+        "s5b_ai_shield:screen_glow@47.50s",
+        "s5b_ai_shield:light_shift@47.50s"
+      ],
+      "unsynced": []
+    },
+    "warnings": [],
+    "point4_human_signed": true
+  }
 }

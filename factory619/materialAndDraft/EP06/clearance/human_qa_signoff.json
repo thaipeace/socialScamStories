@@ -7,9 +7,9 @@
   },
   "4": {
     "status": "PASS",
-    "by": "Antigravity Staging Visual QA",
-    "note": "Da kiem tra 12 anh keyframe + 6 clip 30fps va preview frames EP06 v5: mo dau tren xe xem lai anh check-in, nhip nhanh 47.62s khong cau gio, hinh anh an toan khong logo/sac phuc/bien so that",
-    "at": "2026-11-15T22:38:35+07:00"
+    "by": "Antigravity Visual QC (theo uỷ quyền chủ kênh)",
+    "note": "Đã soi đủ 27 mảnh mặt, 2 cảnh 2.5D (s4a/s5a), 10 khung render thực tế MP4 và thumbnail 31.93s sạch phụ đề (v6-level2-abc)",
+    "at": "2026-11-22T16:20:53+07:00"
   },
   "5": {
     "status": "PASS",

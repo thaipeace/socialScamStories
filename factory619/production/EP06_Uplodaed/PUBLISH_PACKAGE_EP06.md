@@ -1,9 +1,9 @@
 # GÓI XUẤT BẢN YOUTUBE [factory619 · 9:16] – EP06: Thói quen check-in du lịch thời gian thực mời trộm vào nhà
 
 ## 📦 1. Các File Cần Dùng Khi Upload
-- **Video Master (MP4 9:16)**: [EP06_CheckInDuLich_48s.mp4](file:///C:/projects/socialScamStories/factory619/production/EP06/EP06_CheckInDuLich_48s.mp4) (35.3 MB, SHA-256 `63893c8118fc7533…`)
+- **Video Master (MP4 9:16)**: [EP06_CheckInDuLich_48s.mp4](file:///C:/projects/socialScamStories/factory619/production/EP06/EP06_CheckInDuLich_48s.mp4) (29.68 MB, SHA-256 `7462b1ae4022d331…`)
 - **Phụ đề chuẩn thời gian (SRT)**: [EP06_CheckInDuLich_48s.srt](file:///C:/projects/socialScamStories/factory619/production/EP06/EP06_CheckInDuLich_48s.srt)
-- **Thumbnail dọc (9:16 — mốc `27.7s`)**: [EP06_Thumbnail_9x16.jpg](file:///C:/projects/socialScamStories/factory619/production/EP06/EP06_Thumbnail_9x16.jpg)
+- **Thumbnail dọc (9:16 — mốc `31.9s`)**: [EP06_Thumbnail_9x16.jpg](file:///C:/projects/socialScamStories/factory619/production/EP06/EP06_Thumbnail_9x16.jpg)
 - **Thumbnail ngang (16:9)**: [EP06_Thumbnail_16x9.jpg](file:///C:/projects/socialScamStories/factory619/production/EP06/EP06_Thumbnail_16x9.jpg)
 - **Bộ file `.txt` sẵn sàng Copy–Paste nhanh**:
   - Tiêu đề: [1_TITLE.txt](file:///C:/projects/socialScamStories/factory619/production/EP06/youtube_upload/1_TITLE.txt)

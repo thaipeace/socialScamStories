@@ -2,7 +2,7 @@
   "episode_id": "EP04",
   "slug": "BayVeNoiBo300Trieu",
   "title": "300 triệu gom vé hộ & Bí mật của Chị Hai",
-  "version": "v2",
+  "version": "v3-level2-abc",
   "scam_family": "MIX-06",
   "duration_sec": 264.78,
   "visual_style_lock": "Horizontal 16:9 widescreen (1920x1080), semi-realistic cinematic 2D anime illustration, contemporary Southern Vietnam urban setting, moody dramatic lighting, clean bottom 15% for subtitles, no text, no letters, no numbers, no logos, no real uniforms",
@@ -44,28 +44,150 @@
       "image": "assets/c00.jpg",
       "start": 0.0,
       "end": 7.94,
+      "motion_level": "B",
+      "beat_type": "establishing",
+      "motion_intent": "3-layer 2.5D concert push-in (crowd/lasers BG + Na & Fan Nam subject w/ breathing & lip-sync + solid metal rail FG)",
       "motion": {
         "scale": [
-          1.04,
-          1.14
+          1.02,
+          1.11
         ],
         "focus": [
           [
-            0.5,
+            0.62,
             0.5
           ],
           [
-            0.48,
-            0.45
+            0.62,
+            0.48
           ]
         ],
-        "wobble": "tense"
+        "wobble": "calm"
       },
+      "parallax": {
+        "camera": "push_in",
+        "dolly": [
+          1.02,
+          1.11
+        ],
+        "shift_x": [
+          0.0,
+          0.0
+        ],
+        "shift_y": [
+          0.0,
+          0.0
+        ],
+        "focus": [
+          0.62,
+          0.5
+        ],
+        "strength": 0.88,
+        "easing": "ease_out",
+        "layers": [
+          {
+            "role": "bg",
+            "image": "assets/s00_bg.jpg",
+            "depth": 0.42,
+            "blur": 0.7
+          },
+          {
+            "role": "subject",
+            "image": "assets/s00_mid.png",
+            "depth": 1.06,
+            "breathe_y": 2.0,
+            "breathe_period": 2.8
+          },
+          {
+            "role": "fg",
+            "image": "assets/s00_rail_fg.png",
+            "depth": 1.38
+          }
+        ]
+      },
+      "detail_fx": [
+        {
+          "type": "eye_blink",
+          "layer": "subject",
+          "image": "assets/c00_na_blink.jpg",
+          "region": [
+            0.541,
+            0.289,
+            0.647,
+            0.365
+          ],
+          "times": [
+            2.25,
+            5.8
+          ],
+          "feather": 0.006
+        },
+        {
+          "type": "eye_blink",
+          "layer": "subject",
+          "image": "assets/c00_fannam_blink.jpg",
+          "region": [
+            0.932,
+            0.409,
+            1.0,
+            0.478
+          ],
+          "times": [
+            3.55,
+            6.75
+          ],
+          "feather": 0.006
+        },
+        {
+          "type": "mouth_sync",
+          "layer": "subject",
+          "speaker": "thang_tun",
+          "line_ids": [
+            "l00_fannam"
+          ],
+          "default_state": "open",
+          "closed_image": "assets/c00_fannam_mouth_closed.jpg",
+          "mid_image": "assets/c00_fannam_mouth_mid.jpg",
+          "open_image": "assets/c00.jpg",
+          "region": [
+            0.949,
+            0.491,
+            1.0,
+            0.567
+          ],
+          "fps": 12,
+          "thresh_mid": 0.14,
+          "thresh_open": 0.68,
+          "feather": 0.006
+        },
+        {
+          "type": "screen_glow",
+          "space": "screen",
+          "pos": [
+            0.35,
+            0.25
+          ],
+          "radius": [
+            0.36,
+            0.26
+          ],
+          "color": [
+            225,
+            95,
+            255
+          ],
+          "start": 0.0,
+          "end": 7.94,
+          "fade": 0.35,
+          "intensity": 0.2,
+          "mode": "pulse"
+        }
+      ],
       "shakes": [
         {
           "at": 0.2,
           "dur": 0.4,
-          "amp": 18
+          "amp": 16
         }
       ]
     },
@@ -74,32 +196,117 @@
       "image": "assets/c01.jpg",
       "start": 7.94,
       "end": 26.14,
+      "motion_level": "C",
+      "beat_type": "climax",
+      "motion_intent": "Slow pull-out revealing panic in room; Na listens closed-mouth during fan accusation l01 then defends herself in l02",
       "motion": {
         "scale": [
-          1.04,
-          1.14
+          1.11,
+          1.02
         ],
         "focus": [
           [
-            0.5,
-            0.5
+            0.52,
+            0.46
           ],
           [
-            0.48,
-            0.45
+            0.5,
+            0.49
           ]
         ],
-        "wobble": "tense"
+        "wobble": "breathe"
       },
       "transition_in": {
         "type": "flash_white",
         "dur": 0.25
       },
+      "detail_fx": [
+        {
+          "type": "eye_blink",
+          "image": "assets/c01_na_blink.jpg",
+          "region": [
+            0.511,
+            0.298,
+            0.65,
+            0.394
+          ],
+          "times": [
+            10.4,
+            14.8,
+            19.35,
+            23.7
+          ],
+          "feather": 0.006
+        },
+        {
+          "type": "mouth_sync",
+          "speaker": "be_na",
+          "line_ids": [
+            "l02_na"
+          ],
+          "default_state": "mid",
+          "closed_image": "assets/c01_na_mouth_closed.jpg",
+          "mid_image": "assets/c01.jpg",
+          "open_image": "assets/c01_na_mouth_open.jpg",
+          "region": [
+            0.547,
+            0.426,
+            0.625,
+            0.526
+          ],
+          "fps": 12,
+          "thresh_mid": 0.14,
+          "thresh_open": 0.68,
+          "feather": 0.006
+        },
+        {
+          "type": "screen_glow",
+          "pos": [
+            0.44,
+            0.56
+          ],
+          "radius": [
+            0.18,
+            0.22
+          ],
+          "color": [
+            110,
+            210,
+            255
+          ],
+          "start": 8.44,
+          "end": 26.14,
+          "fade": 0.3,
+          "intensity": 0.32,
+          "mode": "turn_on"
+        },
+        {
+          "type": "screen_glow",
+          "pos": [
+            0.45,
+            0.42
+          ],
+          "radius": [
+            0.13,
+            0.13
+          ],
+          "color": [
+            255,
+            75,
+            85
+          ],
+          "start": 8.54,
+          "end": 16.2,
+          "fade": 0.25,
+          "intensity": 0.28,
+          "mode": "flicker"
+        }
+      ],
       "shakes": [
         {
           "at": 8.14,
-          "dur": 0.4,
-          "amp": 18
+          "dur": 0.38,
+          "amp": 15
         }
       ]
     },
@@ -108,87 +315,910 @@
       "image": "assets/c02.jpg",
       "start": 26.14,
       "end": 42.41,
+      "motion_level": "B",
+      "beat_type": "suspicion",
+      "motion_intent": "2.5D parallax depth separating stunned Na (fg breathing + blink) from Chị Hai watching silently in doorway (bg blink)",
       "motion": {
         "scale": [
-          1.0,
-          1.16
+          1.02,
+          1.11
         ],
         "focus": [
           [
-            0.5,
-            0.5
+            0.46,
+            0.46
           ],
           [
-            0.5,
-            0.45
+            0.46,
+            0.46
           ]
         ],
-        "wobble": "tense"
+        "wobble": "calm"
       },
       "transition_in": {
         "type": "flash_white",
         "dur": 0.25
-      }
+      },
+      "parallax": {
+        "camera": "push_in",
+        "dolly": [
+          1.02,
+          1.11
+        ],
+        "shift_x": [
+          0.0,
+          0.0
+        ],
+        "shift_y": [
+          0.0,
+          0.0
+        ],
+        "focus": [
+          0.46,
+          0.46
+        ],
+        "strength": 0.86,
+        "easing": "smoothstep",
+        "layers": [
+          {
+            "role": "bg",
+            "image": "assets/s02_bg.jpg",
+            "depth": 0.44,
+            "blur": 0.5
+          },
+          {
+            "role": "fg",
+            "image": "assets/s02_fg.png",
+            "depth": 1.24,
+            "breathe_y": 1.6,
+            "breathe_period": 2.4
+          }
+        ]
+      },
+      "detail_fx": [
+        {
+          "type": "eye_blink",
+          "layer": "bg",
+          "image": "assets/c02_chihai_blink.jpg",
+          "region": [
+            0.186,
+            0.33,
+            0.272,
+            0.389
+          ],
+          "times": [
+            29.8,
+            35.9,
+            40.4
+          ],
+          "feather": 0.006
+        },
+        {
+          "type": "eye_blink",
+          "layer": "fg",
+          "image": "assets/c02_na_blink.jpg",
+          "region": [
+            0.522,
+            0.348,
+            0.689,
+            0.461
+          ],
+          "times": [
+            28.4,
+            33.4,
+            38.6
+          ],
+          "feather": 0.006
+        },
+        {
+          "type": "screen_glow",
+          "space": "screen",
+          "pos": [
+            0.5,
+            0.72
+          ],
+          "radius": [
+            0.24,
+            0.26
+          ],
+          "color": [
+            255,
+            70,
+            65
+          ],
+          "start": 26.2,
+          "end": 42.41,
+          "fade": 0.35,
+          "intensity": 0.22,
+          "mode": "flicker"
+        }
+      ]
     },
     {
       "id": "s03_booth_heat",
       "image": "assets/c03.jpg",
       "start": 42.41,
       "end": 50.3,
+      "motion_level": "C",
+      "beat_type": "establishing",
+      "motion_intent": "Lateral pan across hot outdoor fan booth from complaining Fan Nam (lip-sync l05) toward sweating Na",
       "motion": {
         "scale": [
-          1.02,
-          1.09
+          1.06,
+          1.06
         ],
         "focus": [
           [
-            0.5,
-            0.5
+            0.46,
+            0.47
           ],
           [
-            0.5,
+            0.54,
             0.47
           ]
         ],
-        "wobble": "calm"
+        "wobble": "breathe"
       },
       "transition_in": {
         "type": "fade_black",
         "dur": 0.4
-      }
+      },
+      "detail_fx": [
+        {
+          "type": "eye_blink",
+          "image": "assets/c03_fannam_blink.jpg",
+          "region": [
+            0.224,
+            0.218,
+            0.311,
+            0.281
+          ],
+          "times": [
+            44.6,
+            48.2
+          ],
+          "feather": 0.006
+        },
+        {
+          "type": "mouth_sync",
+          "speaker": "thang_tun",
+          "line_ids": [
+            "l05_fannam"
+          ],
+          "default_state": "mid",
+          "closed_image": "assets/c03_fannam_mouth_closed.jpg",
+          "mid_image": "assets/c03.jpg",
+          "open_image": "assets/c03_fannam_mouth_open.jpg",
+          "region": [
+            0.235,
+            0.283,
+            0.292,
+            0.357
+          ],
+          "fps": 12,
+          "thresh_mid": 0.14,
+          "thresh_open": 0.68,
+          "feather": 0.006
+        },
+        {
+          "type": "eye_blink",
+          "image": "assets/c03_na_blink.jpg",
+          "region": [
+            0.734,
+            0.267,
+            0.83,
+            0.331
+          ],
+          "times": [
+            45.9,
+            49.1
+          ],
+          "feather": 0.006
+        }
+      ]
     },
     {
       "id": "s04_trang_arrival",
       "image": "assets/c04.jpg",
       "start": 50.3,
       "end": 71.69,
+      "motion_level": "C",
+      "beat_type": "normal",
+      "motion_intent": "Dual-speaker dialogue exchange: Trang (l06/l08) and Na (l07) take clean turns with zero overlap, all 3 characters blinking naturally",
       "motion": {
         "scale": [
-          1.02,
-          1.09
+          1.08,
+          1.01
         ],
         "focus": [
           [
             0.5,
-            0.5
+            0.46
           ],
           [
             0.5,
-            0.47
+            0.48
           ]
         ],
-        "wobble": "calm"
+        "wobble": "breathe"
       },
       "transition_in": {
         "type": "dissolve",
         "dur": 0.35
-      }
+      },
+      "detail_fx": [
+        {
+          "type": "eye_blink",
+          "image": "assets/c04_na_blink.jpg",
+          "region": [
+            0.18,
+            0.311,
+            0.268,
+            0.38
+          ],
+          "times": [
+            52.6,
+            58.1,
+            63.4,
+            68.5
+          ],
+          "feather": 0.006
+        },
+        {
+          "type": "mouth_sync",
+          "speaker": "be_na",
+          "line_ids": [
+            "l07_na"
+          ],
+          "default_state": "mid",
+          "closed_image": "assets/c04_na_mouth_closed.jpg",
+          "mid_image": "assets/c04.jpg",
+          "open_image": "assets/c04_na_mouth_open.jpg",
+          "region": [
+            0.206,
+            0.389,
+            0.26,
+            0.465
+          ],
+          "fps": 12,
+          "thresh_mid": 0.14,
+          "thresh_open": 0.68,
+          "feather": 0.006
+        },
+        {
+          "type": "eye_blink",
+          "image": "assets/c04_fannam_blink.jpg",
+          "region": [
+            0.309,
+            0.215,
+            0.402,
+            0.281
+          ],
+          "times": [
+            54.3,
+            60.5,
+            66.2,
+            70.1
+          ],
+          "feather": 0.006
+        },
+        {
+          "type": "eye_blink",
+          "image": "assets/c04_trang_blink.jpg",
+          "region": [
+            0.714,
+            0.211,
+            0.816,
+            0.281
+          ],
+          "times": [
+            53.2,
+            59.4,
+            65.1,
+            69.6
+          ],
+          "feather": 0.006
+        },
+        {
+          "type": "mouth_sync",
+          "speaker": "ke_ngot_ngao_nu",
+          "line_ids": [
+            "l06_trang",
+            "l08_trang"
+          ],
+          "default_state": "mid",
+          "closed_image": "assets/c04_trang_mouth_closed.jpg",
+          "mid_image": "assets/c04.jpg",
+          "open_image": "assets/c04_trang_mouth_open.jpg",
+          "region": [
+            0.727,
+            0.287,
+            0.797,
+            0.372
+          ],
+          "fps": 12,
+          "thresh_mid": 0.14,
+          "thresh_open": 0.68,
+          "feather": 0.006
+        },
+        {
+          "type": "screen_glow",
+          "pos": [
+            0.7,
+            0.7
+          ],
+          "radius": [
+            0.18,
+            0.18
+          ],
+          "color": [
+            255,
+            240,
+            190
+          ],
+          "start": 50.6,
+          "end": 71.4,
+          "fade": 0.45,
+          "intensity": 0.15,
+          "mode": "pulse"
+        }
+      ]
     },
     {
       "id": "s05_sold_out_bait",
       "image": "assets/c05.jpg",
       "start": 71.69,
       "end": 93.16,
+      "motion_level": "C",
+      "beat_type": "anomaly",
+      "motion_intent": "Lateral pan from red sold-out laptop to Na listening eagerly on cyan phone call from Trang",
+      "motion": {
+        "scale": [
+          1.06,
+          1.06
+        ],
+        "focus": [
+          [
+            0.45,
+            0.48
+          ],
+          [
+            0.55,
+            0.47
+          ]
+        ],
+        "wobble": "breathe"
+      },
+      "transition_in": {
+        "type": "fade_black",
+        "dur": 0.35
+      },
+      "detail_fx": [
+        {
+          "type": "eye_blink",
+          "image": "assets/c05_na_blink.jpg",
+          "region": [
+            0.495,
+            0.302,
+            0.649,
+            0.383
+          ],
+          "times": [
+            74.2,
+            79.1,
+            84.3,
+            89.2
+          ],
+          "feather": 0.006
+        },
+        {
+          "type": "screen_glow",
+          "pos": [
+            0.08,
+            0.71
+          ],
+          "radius": [
+            0.16,
+            0.22
+          ],
+          "color": [
+            255,
+            70,
+            80
+          ],
+          "start": 72.14,
+          "end": 93.16,
+          "fade": 0.35,
+          "intensity": 0.34,
+          "mode": "turn_on"
+        },
+        {
+          "type": "screen_glow",
+          "pos": [
+            0.53,
+            0.48
+          ],
+          "radius": [
+            0.14,
+            0.18
+          ],
+          "color": [
+            110,
+            225,
+            255
+          ],
+          "start": 77.76,
+          "end": 93.16,
+          "fade": 0.3,
+          "intensity": 0.34,
+          "mode": "turn_on"
+        }
+      ]
+    },
+    {
+      "id": "s06_euphoria_collecting",
+      "image": "assets/c06.jpg",
+      "start": 93.16,
+      "end": 113.82,
+      "motion_level": "C",
+      "beat_type": "normal",
+      "motion_intent": "Gentle push-in as Na revels in incoming transfers (lip-sync l14) while Chị Hai observes coldly from doorway",
+      "motion": {
+        "scale": [
+          1.01,
+          1.09
+        ],
+        "focus": [
+          [
+            0.52,
+            0.48
+          ],
+          [
+            0.56,
+            0.47
+          ]
+        ],
+        "wobble": "breathe"
+      },
+      "transition_in": {
+        "type": "fade_black",
+        "dur": 0.4
+      },
+      "detail_fx": [
+        {
+          "type": "eye_blink",
+          "image": "assets/c06_chihai_blink.jpg",
+          "region": [
+            0.21,
+            0.227,
+            0.285,
+            0.281
+          ],
+          "times": [
+            96.4,
+            102.3,
+            108.9
+          ],
+          "feather": 0.006
+        },
+        {
+          "type": "mouth_sync",
+          "speaker": "be_na",
+          "line_ids": [
+            "l14_na"
+          ],
+          "default_state": "open",
+          "closed_image": "assets/c06_na_mouth_closed.jpg",
+          "mid_image": "assets/c06_na_mouth_mid.jpg",
+          "open_image": "assets/c06.jpg",
+          "region": [
+            0.686,
+            0.456,
+            0.777,
+            0.557
+          ],
+          "fps": 12,
+          "thresh_mid": 0.14,
+          "thresh_open": 0.68,
+          "feather": 0.006
+        },
+        {
+          "type": "screen_glow",
+          "pos": [
+            0.85,
+            0.65
+          ],
+          "radius": [
+            0.18,
+            0.24
+          ],
+          "color": [
+            85,
+            255,
+            165
+          ],
+          "start": 93.81,
+          "end": 113.82,
+          "fade": 0.35,
+          "intensity": 0.36,
+          "mode": "turn_on"
+        }
+      ]
+    },
+    {
+      "id": "s07_transfer_300m",
+      "image": "assets/c07.jpg",
+      "start": 113.82,
+      "end": 118.17,
+      "motion_level": "C",
+      "beat_type": "anomaly",
+      "motion_intent": "Pan toward fingertip pressing glowing green 300M transfer button synced with emerald confirm burst at bank_ting 115.47s",
+      "motion": {
+        "scale": [
+          1.05,
+          1.05
+        ],
+        "focus": [
+          [
+            0.48,
+            0.52
+          ],
+          [
+            0.56,
+            0.56
+          ]
+        ],
+        "wobble": "calm"
+      },
+      "transition_in": {
+        "type": "dissolve",
+        "dur": 0.3
+      },
+      "detail_fx": [
+        {
+          "type": "screen_glow",
+          "pos": [
+            0.51,
+            0.49
+          ],
+          "radius": [
+            0.22,
+            0.2
+          ],
+          "color": [
+            175,
+            225,
+            255
+          ],
+          "start": 113.82,
+          "end": 118.17,
+          "fade": 0.25,
+          "intensity": 0.18,
+          "mode": "pulse"
+        },
+        {
+          "type": "screen_glow",
+          "pos": [
+            0.648,
+            0.806
+          ],
+          "radius": [
+            0.14,
+            0.14
+          ],
+          "color": [
+            65,
+            255,
+            165
+          ],
+          "start": 113.82,
+          "end": 118.17,
+          "fade": 0.2,
+          "intensity": 0.36,
+          "mode": "pulse"
+        },
+        {
+          "type": "screen_glow",
+          "pos": [
+            0.648,
+            0.806
+          ],
+          "radius": [
+            0.18,
+            0.18
+          ],
+          "color": [
+            120,
+            255,
+            200
+          ],
+          "start": 115.42,
+          "end": 116.5,
+          "fade": 0.18,
+          "intensity": 0.54,
+          "mode": "turn_on"
+        },
+        {
+          "type": "light_shift",
+          "at": 115.47,
+          "dur": 0.12,
+          "end": 115.72,
+          "end_dur": 0.24,
+          "brightness": 1.22,
+          "tint_rgb": [
+            125,
+            255,
+            195
+          ],
+          "tint_strength": 0.12
+        },
+        {
+          "type": "focus_highlight",
+          "pos": [
+            0.63,
+            0.78
+          ],
+          "radius": [
+            0.3,
+            0.28
+          ],
+          "start": 115.1,
+          "end": 118.1,
+          "fade": 0.25,
+          "dim_outer": 0.2
+        }
+      ],
+      "shakes": [
+        {
+          "at": 115.47,
+          "dur": 0.22,
+          "amp": 7
+        }
+      ]
+    },
+    {
+      "id": "s08_chihai_secret_photo",
+      "image": "assets/c08.jpg",
+      "start": 118.17,
+      "end": 125.92,
+      "motion_level": "C",
+      "beat_type": "suspicion",
+      "motion_intent": "Stealth slow pull-out as Chị Hai snaps account evidence (shutter light_shift at 118.92s) and murmurs sharp suspicion (l15)",
+      "motion": {
+        "scale": [
+          1.09,
+          1.01
+        ],
+        "focus": [
+          [
+            0.44,
+            0.45
+          ],
+          [
+            0.48,
+            0.48
+          ]
+        ],
+        "wobble": "breathe"
+      },
+      "transition_in": {
+        "type": "dissolve",
+        "dur": 0.35
+      },
+      "detail_fx": [
+        {
+          "type": "eye_blink",
+          "image": "assets/c08_chihai_blink.jpg",
+          "region": [
+            0.272,
+            0.207,
+            0.366,
+            0.272
+          ],
+          "times": [
+            120.2,
+            124.1
+          ],
+          "feather": 0.006
+        },
+        {
+          "type": "mouth_sync",
+          "speaker": "chi_ba",
+          "line_ids": [
+            "l15_chihai"
+          ],
+          "default_state": "closed",
+          "closed_image": "assets/c08.jpg",
+          "mid_image": "assets/c08_chihai_mouth_mid.jpg",
+          "open_image": "assets/c08_chihai_mouth_open.jpg",
+          "region": [
+            0.285,
+            0.293,
+            0.351,
+            0.372
+          ],
+          "fps": 12,
+          "thresh_mid": 0.14,
+          "thresh_open": 0.68,
+          "feather": 0.006
+        },
+        {
+          "type": "light_shift",
+          "at": 118.92,
+          "dur": 0.12,
+          "end": 119.12,
+          "end_dur": 0.22,
+          "brightness": 1.3,
+          "tint_rgb": [
+            220,
+            245,
+            255
+          ],
+          "tint_strength": 0.14
+        },
+        {
+          "type": "screen_glow",
+          "pos": [
+            0.81,
+            0.76
+          ],
+          "radius": [
+            0.18,
+            0.18
+          ],
+          "color": [
+            90,
+            240,
+            225
+          ],
+          "start": 118.17,
+          "end": 125.92,
+          "fade": 0.3,
+          "intensity": 0.3,
+          "mode": "pulse"
+        },
+        {
+          "type": "screen_glow",
+          "pos": [
+            0.39,
+            0.46
+          ],
+          "radius": [
+            0.1,
+            0.1
+          ],
+          "color": [
+            100,
+            255,
+            190
+          ],
+          "start": 118.17,
+          "end": 125.92,
+          "fade": 0.25,
+          "intensity": 0.22,
+          "mode": "pulse"
+        }
+      ]
+    },
+    {
+      "id": "s09_blocked_shock",
+      "image": "assets/c09.jpg",
+      "start": 125.92,
+      "end": 132.87,
+      "motion_level": "C",
+      "beat_type": "climax",
+      "motion_intent": "Tense push-in as Na discovers Trang blocked her; crimson phone screen flickers on call_end 126.47s",
+      "motion": {
+        "scale": [
+          1.02,
+          1.12
+        ],
+        "focus": [
+          [
+            0.49,
+            0.46
+          ],
+          [
+            0.48,
+            0.44
+          ]
+        ],
+        "wobble": "tense"
+      },
+      "transition_in": {
+        "type": "fade_black",
+        "dur": 0.4
+      },
+      "detail_fx": [
+        {
+          "type": "eye_blink",
+          "image": "assets/c09_na_blink.jpg",
+          "region": [
+            0.405,
+            0.281,
+            0.567,
+            0.396
+          ],
+          "times": [
+            128.1,
+            131.5
+          ],
+          "feather": 0.006
+        },
+        {
+          "type": "mouth_sync",
+          "speaker": "be_na",
+          "line_ids": [
+            "l16_na"
+          ],
+          "default_state": "mid",
+          "closed_image": "assets/c09_na_mouth_closed.jpg",
+          "mid_image": "assets/c09.jpg",
+          "open_image": "assets/c09_na_mouth_open.jpg",
+          "region": [
+            0.443,
+            0.424,
+            0.529,
+            0.55
+          ],
+          "fps": 12,
+          "thresh_mid": 0.14,
+          "thresh_open": 0.68,
+          "feather": 0.006
+        },
+        {
+          "type": "screen_glow",
+          "pos": [
+            0.64,
+            0.65
+          ],
+          "radius": [
+            0.18,
+            0.22
+          ],
+          "color": [
+            255,
+            55,
+            65
+          ],
+          "start": 126.47,
+          "end": 132.87,
+          "fade": 0.25,
+          "intensity": 0.4,
+          "mode": "flicker"
+        },
+        {
+          "type": "focus_highlight",
+          "pos": [
+            0.54,
+            0.5
+          ],
+          "radius": [
+            0.36,
+            0.34
+          ],
+          "start": 126.6,
+          "end": 132.8,
+          "fade": 0.35,
+          "dim_outer": 0.24
+        }
+      ],
+      "shakes": [
+        {
+          "at": 126.22,
+          "dur": 0.38,
+          "amp": 16
+        }
+      ]
+    },
+    {
+      "id": "s10a_call_plea",
+      "image": "assets/c10.jpg",
+      "start": 132.87,
+      "end": 149.9,
+      "motion_level": "C",
+      "beat_type": "climax",
+      "motion_intent": "Tightening push-in during frantic call to real channel: Na begs (l17) then freezes closed-mouth hearing truth (l18)",
       "motion": {
         "scale": [
           1.02,
@@ -196,167 +1226,164 @@
         ],
         "focus": [
           [
-            0.46,
+            0.54,
             0.48
           ],
           [
-            0.54,
-            0.46
-          ]
-        ],
-        "wobble": "handheld"
-      },
-      "transition_in": {
-        "type": "fade_black",
-        "dur": 0.35
-      }
-    },
-    {
-      "id": "s06_euphoria_collecting",
-      "image": "assets/c06.jpg",
-      "start": 93.16,
-      "end": 113.82,
-      "motion": {
-        "scale": [
-          1.02,
-          1.09
-        ],
-        "focus": [
-          [
-            0.5,
-            0.5
-          ],
-          [
-            0.5,
+            0.56,
             0.47
           ]
         ],
-        "wobble": "calm"
-      },
-      "transition_in": {
-        "type": "fade_black",
-        "dur": 0.4
-      }
-    },
-    {
-      "id": "s07_transfer_300m",
-      "image": "assets/c07.jpg",
-      "start": 113.82,
-      "end": 118.17,
-      "motion": {
-        "scale": [
-          1.0,
-          1.16
-        ],
-        "focus": [
-          [
-            0.5,
-            0.5
-          ],
-          [
-            0.5,
-            0.45
-          ]
-        ],
-        "wobble": "tense"
-      },
-      "transition_in": {
-        "type": "dissolve",
-        "dur": 0.3
-      }
-    },
-    {
-      "id": "s08_chihai_secret_photo",
-      "image": "assets/c08.jpg",
-      "start": 118.17,
-      "end": 125.92,
-      "motion": {
-        "scale": [
-          1.0,
-          1.16
-        ],
-        "focus": [
-          [
-            0.5,
-            0.5
-          ],
-          [
-            0.5,
-            0.45
-          ]
-        ],
-        "wobble": "tense"
-      },
-      "transition_in": {
-        "type": "dissolve",
-        "dur": 0.35
-      }
-    },
-    {
-      "id": "s09_blocked_shock",
-      "image": "assets/c09.jpg",
-      "start": 125.92,
-      "end": 132.87,
-      "motion": {
-        "scale": [
-          1.04,
-          1.14
-        ],
-        "focus": [
-          [
-            0.5,
-            0.5
-          ],
-          [
-            0.48,
-            0.45
-          ]
-        ],
-        "wobble": "tense"
-      },
-      "transition_in": {
-        "type": "fade_black",
-        "dur": 0.4
-      },
-      "shakes": [
-        {
-          "at": 126.22,
-          "dur": 0.4,
-          "amp": 18
-        }
-      ]
-    },
-    {
-      "id": "s10_call_channel_abyss",
-      "image": "assets/c10.jpg",
-      "start": 132.87,
-      "end": 176.05,
-      "motion": {
-        "scale": [
-          1.0,
-          1.16
-        ],
-        "focus": [
-          [
-            0.5,
-            0.5
-          ],
-          [
-            0.5,
-            0.45
-          ]
-        ],
-        "wobble": "tense"
+        "wobble": "breathe"
       },
       "transition_in": {
         "type": "flash_red",
         "dur": 0.3
       },
+      "detail_fx": [
+        {
+          "type": "eye_blink",
+          "image": "assets/c10_na_blink.jpg",
+          "region": [
+            0.503,
+            0.296,
+            0.736,
+            0.493
+          ],
+          "times": [
+            135.4,
+            140.2,
+            145.6
+          ],
+          "feather": 0.006
+        },
+        {
+          "type": "mouth_sync",
+          "speaker": "be_na",
+          "line_ids": [
+            "l17_na"
+          ],
+          "default_state": "mid",
+          "closed_image": "assets/c10_na_mouth_closed.jpg",
+          "mid_image": "assets/c10.jpg",
+          "open_image": "assets/c10_na_mouth_open.jpg",
+          "region": [
+            0.53,
+            0.546,
+            0.652,
+            0.68
+          ],
+          "fps": 12,
+          "thresh_mid": 0.14,
+          "thresh_open": 0.68,
+          "feather": 0.006
+        }
+      ],
       "shakes": [
         {
           "at": 133.07,
-          "dur": 0.4,
-          "amp": 18
+          "dur": 0.38,
+          "amp": 15
+        }
+      ]
+    },
+    {
+      "id": "s10b_truth_abyss",
+      "image": "assets/c10.jpg",
+      "start": 149.9,
+      "end": 176.05,
+      "motion_level": "C",
+      "beat_type": "aftermath",
+      "motion_intent": "Reverses camera to desolate pull-out right at 149.99s impact; red shock flash, Na pleads (l19/l19b) then falls numb during l20/l20b",
+      "motion": {
+        "scale": [
+          1.1,
+          1.01
+        ],
+        "focus": [
+          [
+            0.56,
+            0.47
+          ],
+          [
+            0.52,
+            0.5
+          ]
+        ],
+        "wobble": "breathe"
+      },
+      "transition_in": {
+        "type": "dissolve",
+        "dur": 0.12
+      },
+      "detail_fx": [
+        {
+          "type": "eye_blink",
+          "image": "assets/c10_na_blink.jpg",
+          "region": [
+            0.503,
+            0.296,
+            0.736,
+            0.493
+          ],
+          "times": [
+            153.2,
+            159.4,
+            165.8,
+            171.9
+          ],
+          "feather": 0.006
+        },
+        {
+          "type": "mouth_sync",
+          "speaker": "be_na",
+          "line_ids": [
+            "l19_na",
+            "l19b_na"
+          ],
+          "default_state": "mid",
+          "closed_image": "assets/c10_na_mouth_closed.jpg",
+          "mid_image": "assets/c10.jpg",
+          "open_image": "assets/c10_na_mouth_open.jpg",
+          "region": [
+            0.53,
+            0.546,
+            0.652,
+            0.68
+          ],
+          "fps": 12,
+          "thresh_mid": 0.14,
+          "thresh_open": 0.68,
+          "feather": 0.006
+        },
+        {
+          "type": "light_shift",
+          "at": 149.99,
+          "dur": 0.15,
+          "end": 150.28,
+          "end_dur": 0.35,
+          "brightness": 1.22,
+          "tint_rgb": [
+            255,
+            75,
+            75
+          ],
+          "tint_strength": 0.18
+        },
+        {
+          "type": "focus_highlight",
+          "pos": [
+            0.58,
+            0.48
+          ],
+          "radius": [
+            0.34,
+            0.36
+          ],
+          "start": 164.0,
+          "end": 175.8,
+          "fade": 0.8,
+          "dim_outer": 0.26
         }
       ]
     },
@@ -365,91 +1392,305 @@
       "image": "assets/c11.jpg",
       "start": 176.05,
       "end": 194.61,
+      "motion_level": "C",
+      "beat_type": "aftermath",
+      "motion_intent": "Slow pan left across weeping Na (blink only since fist covers mouth) lit by flickering crimson hostile messages",
       "motion": {
         "scale": [
-          1.02,
-          1.1
+          1.06,
+          1.06
         ],
         "focus": [
           [
-            0.46,
+            0.54,
             0.48
           ],
           [
-            0.54,
-            0.46
+            0.46,
+            0.47
           ]
         ],
-        "wobble": "handheld"
+        "wobble": "breathe"
       },
       "transition_in": {
         "type": "dissolve",
         "dur": 0.3
-      }
+      },
+      "detail_fx": [
+        {
+          "type": "eye_blink",
+          "image": "assets/c11_na_blink.jpg",
+          "region": [
+            0.385,
+            0.372,
+            0.549,
+            0.47
+          ],
+          "times": [
+            178.9,
+            184.4,
+            189.8,
+            193.2
+          ],
+          "feather": 0.006
+        },
+        {
+          "type": "screen_glow",
+          "pos": [
+            0.39,
+            0.54
+          ],
+          "radius": [
+            0.14,
+            0.18
+          ],
+          "color": [
+            255,
+            55,
+            60
+          ],
+          "start": 176.5,
+          "end": 194.61,
+          "fade": 0.3,
+          "intensity": 0.36,
+          "mode": "flicker"
+        }
+      ]
     },
     {
       "id": "s12_utter_isolation",
       "image": "assets/c12.jpg",
       "start": 194.61,
       "end": 205.72,
+      "motion_level": "C",
+      "beat_type": "aftermath",
+      "motion_intent": "Cold still pull-out emphasizing total isolation while dropped phone pulses menacing red threats on floor",
       "motion": {
         "scale": [
-          1.12,
-          1.02
+          1.1,
+          1.01
         ],
         "focus": [
           [
             0.5,
-            0.46
+            0.52
           ],
           [
             0.5,
-            0.5
+            0.49
           ]
         ],
-        "wobble": "calm"
+        "wobble": "none"
       },
       "transition_in": {
         "type": "dissolve",
         "dur": 0.35
-      }
+      },
+      "detail_fx": [
+        {
+          "type": "screen_glow",
+          "pos": [
+            0.22,
+            0.89
+          ],
+          "radius": [
+            0.18,
+            0.14
+          ],
+          "color": [
+            255,
+            50,
+            55
+          ],
+          "start": 195.16,
+          "end": 205.72,
+          "fade": 0.35,
+          "intensity": 0.44,
+          "mode": "pulse"
+        }
+      ]
     },
     {
       "id": "s13_chihai_dossier",
       "image": "assets/c13.jpg",
       "start": 205.72,
       "end": 226.03,
+      "motion_level": "B",
+      "beat_type": "information",
+      "motion_intent": "2.5D depth separating Chị Hai + dossier + Na (fg dual-speaker lip-sync & blinks) from dark bedroom/lit hallway BG",
       "motion": {
         "scale": [
           1.0,
-          1.16
+          1.06
         ],
         "focus": [
           [
             0.5,
-            0.5
+            0.22
           ],
           [
             0.5,
-            0.45
+            0.22
           ]
         ],
-        "wobble": "tense"
+        "wobble": "none"
       },
       "transition_in": {
         "type": "fade_black",
         "dur": 0.4
-      }
+      },
+      "parallax": {
+        "camera": "push_in",
+        "dolly": [
+          1.0,
+          1.06
+        ],
+        "shift_x": [
+          0.0,
+          0.0
+        ],
+        "shift_y": [
+          0.0,
+          0.0
+        ],
+        "focus": [
+          0.5,
+          0.22
+        ],
+        "strength": 0.85,
+        "easing": "smoothstep",
+        "layers": [
+          {
+            "role": "bg",
+            "image": "assets/s13_bg.jpg",
+            "depth": 0.44,
+            "blur": 0.6
+          },
+          {
+            "role": "fg",
+            "image": "assets/s13_fg.png",
+            "depth": 1.24
+          }
+        ]
+      },
+      "detail_fx": [
+        {
+          "type": "eye_blink",
+          "layer": "fg",
+          "image": "assets/c13_chihai_blink.jpg",
+          "region": [
+            0.294,
+            0.159,
+            0.39,
+            0.224
+          ],
+          "times": [
+            208.3,
+            214.2,
+            220.4,
+            224.6
+          ],
+          "feather": 0.006
+        },
+        {
+          "type": "mouth_sync",
+          "layer": "fg",
+          "speaker": "chi_ba",
+          "line_ids": [
+            "l24_chihai",
+            "l26_chihai"
+          ],
+          "default_state": "closed",
+          "closed_image": "assets/c13.jpg",
+          "mid_image": "assets/c13_chihai_mouth_mid.jpg",
+          "open_image": "assets/c13_chihai_mouth_open.jpg",
+          "region": [
+            0.309,
+            0.243,
+            0.373,
+            0.324
+          ],
+          "fps": 12,
+          "thresh_mid": 0.14,
+          "thresh_open": 0.68,
+          "feather": 0.006
+        },
+        {
+          "type": "eye_blink",
+          "layer": "fg",
+          "image": "assets/c13_na_blink.jpg",
+          "region": [
+            0.688,
+            0.422,
+            0.78,
+            0.498
+          ],
+          "times": [
+            207.5,
+            212.8,
+            218.9,
+            223.8
+          ],
+          "feather": 0.006
+        },
+        {
+          "type": "mouth_sync",
+          "layer": "fg",
+          "speaker": "be_na",
+          "line_ids": [
+            "l25_na"
+          ],
+          "default_state": "mid",
+          "closed_image": "assets/c13_na_mouth_closed.jpg",
+          "mid_image": "assets/c13.jpg",
+          "open_image": "assets/c13_na_mouth_open.jpg",
+          "region": [
+            0.697,
+            0.5,
+            0.755,
+            0.585
+          ],
+          "fps": 12,
+          "thresh_mid": 0.14,
+          "thresh_open": 0.68,
+          "feather": 0.006
+        },
+        {
+          "type": "screen_glow",
+          "space": "screen",
+          "pos": [
+            0.47,
+            0.78
+          ],
+          "radius": [
+            0.22,
+            0.18
+          ],
+          "color": [
+            255,
+            220,
+            150
+          ],
+          "start": 206.0,
+          "end": 225.8,
+          "fade": 0.45,
+          "intensity": 0.18,
+          "mode": "pulse"
+        }
+      ]
     },
     {
       "id": "s17_red_flags",
       "image": "factory196/materialAndDraft/EP01b/assets/scene18.jpg",
       "start": 226.03,
       "end": 236.36,
+      "motion_level": "A",
+      "beat_type": "information",
+      "motion_intent": "Steady hold for crisp readability of the 3 red-flag warning cards",
       "motion": {
         "scale": [
           1.0,
-          1.05
+          1.01
         ],
         "focus": [
           [
@@ -473,64 +1714,199 @@
       "image": "assets/c14.jpg",
       "start": 236.36,
       "end": 245.59,
+      "motion_level": "C",
+      "beat_type": "aftermath",
+      "motion_intent": "Warm pan right from brooding Chị Hai (blink) toward relieved Na speaking gratefully (l28)",
       "motion": {
         "scale": [
-          1.02,
-          1.09
+          1.05,
+          1.05
         ],
         "focus": [
           [
-            0.5,
-            0.5
+            0.46,
+            0.48
           ],
           [
-            0.5,
-            0.47
+            0.54,
+            0.46
           ]
         ],
-        "wobble": "calm"
+        "wobble": "breathe"
       },
       "transition_in": {
         "type": "fade_black",
         "dur": 0.4
-      }
+      },
+      "detail_fx": [
+        {
+          "type": "eye_blink",
+          "image": "assets/c14_chihai_blink.jpg",
+          "region": [
+            0.214,
+            0.331,
+            0.318,
+            0.398
+          ],
+          "times": [
+            238.5,
+            242.9
+          ],
+          "feather": 0.006
+        },
+        {
+          "type": "mouth_sync",
+          "speaker": "be_na",
+          "line_ids": [
+            "l28_na"
+          ],
+          "default_state": "closed",
+          "closed_image": "assets/c14.jpg",
+          "mid_image": "assets/c14_na_mouth_mid.jpg",
+          "open_image": "assets/c14_na_mouth_open.jpg",
+          "region": [
+            0.759,
+            0.37,
+            0.833,
+            0.459
+          ],
+          "fps": 12,
+          "thresh_mid": 0.14,
+          "thresh_open": 0.68,
+          "feather": 0.006
+        }
+      ]
     },
     {
       "id": "s15_chihai_conspiracy_call",
       "image": "assets/c15.jpg",
       "start": 245.59,
       "end": 256.08,
+      "motion_level": "B",
+      "beat_type": "ending",
+      "motion_intent": "Chilling 2.5D push-in isolating Chị Hai in foreground (breathing, blink, icy 'Cứ để đó!' lip-sync l30) while blurred Na drifts into sunlit street BG",
       "motion": {
         "scale": [
-          1.0,
-          1.16
+          1.02,
+          1.12
         ],
         "focus": [
           [
-            0.5,
-            0.5
+            0.32,
+            0.45
           ],
           [
-            0.5,
+            0.32,
             0.45
           ]
         ],
-        "wobble": "tense"
+        "wobble": "calm"
       },
       "transition_in": {
         "type": "dissolve",
         "dur": 0.35
-      }
+      },
+      "parallax": {
+        "camera": "push_in",
+        "dolly": [
+          1.02,
+          1.12
+        ],
+        "shift_x": [
+          0.0,
+          0.0
+        ],
+        "shift_y": [
+          0.0,
+          0.0
+        ],
+        "focus": [
+          0.32,
+          0.45
+        ],
+        "strength": 0.88,
+        "easing": "ease_out",
+        "layers": [
+          {
+            "role": "bg",
+            "image": "assets/s15_bg.jpg",
+            "depth": 0.42,
+            "blur": 0.5
+          },
+          {
+            "role": "fg",
+            "image": "assets/s15_fg.png",
+            "depth": 1.28,
+            "breathe_y": 1.4,
+            "breathe_period": 3.8
+          }
+        ]
+      },
+      "detail_fx": [
+        {
+          "type": "eye_blink",
+          "layer": "fg",
+          "image": "assets/c15_chihai_blink.jpg",
+          "region": [
+            0.185,
+            0.361,
+            0.419,
+            0.478
+          ],
+          "times": [
+            248.4,
+            252.8
+          ],
+          "feather": 0.006
+        },
+        {
+          "type": "mouth_sync",
+          "layer": "fg",
+          "speaker": "chi_ba",
+          "line_ids": [
+            "l30_chihai"
+          ],
+          "default_state": "closed",
+          "closed_image": "assets/c15.jpg",
+          "mid_image": "assets/c15_chihai_mouth_mid.jpg",
+          "open_image": "assets/c15_chihai_mouth_open.jpg",
+          "region": [
+            0.248,
+            0.548,
+            0.372,
+            0.687
+          ],
+          "fps": 12,
+          "thresh_mid": 0.14,
+          "thresh_open": 0.68,
+          "feather": 0.006
+        },
+        {
+          "type": "light_shift",
+          "at": 254.2,
+          "dur": 0.3,
+          "brightness": 0.86,
+          "tint_rgb": [
+            95,
+            130,
+            185
+          ],
+          "tint_strength": 0.16
+        }
+      ]
     },
     {
       "id": "s16_black_cut",
       "image": "assets/c16.jpg",
       "start": 256.08,
       "end": 259.93,
+      "motion_level": "A",
+      "beat_type": "ending",
+      "motion_intent": "Hard black cut hold for final twist question card",
       "motion": {
         "scale": [
           1.0,
-          1.05
+          1.01
         ],
         "focus": [
           [
@@ -554,10 +1930,13 @@
       "image": "factory196/materialAndDraft/EP01b/assets/scene18.jpg",
       "start": 259.93,
       "end": 264.78,
+      "motion_level": "A",
+      "beat_type": "ending",
+      "motion_intent": "Steady hold for closing legal/community disclaimer",
       "motion": {
         "scale": [
           1.0,
-          1.05
+          1.01
         ],
         "focus": [
           [
@@ -1431,6 +2810,7 @@
     ],
     "category": "Education (Giáo dục)",
     "playlist": "Hồ Sơ Bóc Trần Lừa Đảo – Phim Dài Chuyên Sâu",
-    "thumbnail_sec": 150.49
-  }
+    "thumbnail_sec": 253.85
+  },
+  "motion_upgrade": "level2"
 }

@@ -1,11 +1,13 @@
 {
   "episode_id": "EP02",
+  "factory": "factory619",
   "gate": "GATE_4_TIMELINE_SAFE_ZONE",
   "preview_only": false,
   "canvas": {
     "width": 1080,
     "height": 1920,
     "fps": 30,
+    "aspect_ratio": "9:16",
     "total_frames": 1680,
     "total_duration_sec": 56.0
   },
@@ -17,131 +19,864 @@
     "platform_ui_bottom_y": 1440,
     "all_overlays_compliant": true
   },
+  "motion_summary": {
+    "hardware_profile": "low_ram_cpu_l480",
+    "safe_motion_mode": false,
+    "is_level2": true,
+    "declared_level_counts": {
+      "A": 2,
+      "B": 2,
+      "C": 8,
+      "D": 0
+    },
+    "effective_level_counts": {
+      "A": 2,
+      "B": 2,
+      "C": 8,
+      "D": 0
+    },
+    "fallbacks": [],
+    "detail_warnings": [],
+    "zoom_streaks": [],
+    "shake_scenes": 2,
+    "sfx_sync": {
+      "synced": [
+        "s1a_hook:screen_glow@0.40s",
+        "s1b_hook_bait:screen_glow@2.40s",
+        "s2b_hr_push:screen_glow@11.40s",
+        "s3a_idea_bulb:screen_glow@18.20s",
+        "s3a_idea_bulb:light_shift@18.20s",
+        "s3b_stop_hand:shake@25.20s",
+        "s3b_stop_hand:light_shift@25.20s",
+        "s4a_hidden_malware:shake@34.20s",
+        "s4a_hidden_malware:light_shift@34.40s",
+        "s4b_shield_block:screen_glow@39.60s",
+        "s5a_magnify_trap:light_shift@44.00s",
+        "s5b_ai_shield:screen_glow@47.50s",
+        "s5b_ai_shield:light_shift@47.50s"
+      ],
+      "unsynced": []
+    },
+    "warnings": []
+  },
   "scenes": [
     {
-      "id": "s1_hook",
+      "id": "s1a_hook",
       "image": "assets/scene1.jpg",
-      "video": "assets/scene1.mp4",
       "start": 0.0,
+      "end": 2.4,
+      "motion_level": "C",
+      "beat_type": "establishing",
+      "motion_intent": "Crisp opening push-in as HR pitches $90/hr job (lip-sync l1) while gold coin stack & folder glow on notification 0.4s",
+      "motion": {
+        "scale": [
+          1.01,
+          1.07
+        ],
+        "focus": [
+          [
+            0.5,
+            0.5
+          ],
+          [
+            0.5,
+            0.48
+          ]
+        ],
+        "wobble": "breathe"
+      },
+      "detail_fx": [
+        {
+          "type": "eye_blink",
+          "image": "assets/s1a_anhhai_blink.jpg",
+          "region": [
+            0.536,
+            0.384,
+            0.695,
+            0.429
+          ],
+          "times": [
+            1.25
+          ],
+          "feather": 0.006
+        },
+        {
+          "type": "eye_blink",
+          "image": "assets/s1a_hr_blink.jpg",
+          "region": [
+            0.229,
+            0.589,
+            0.362,
+            0.632
+          ],
+          "times": [
+            1.8
+          ],
+          "feather": 0.006
+        },
+        {
+          "type": "mouth_sync",
+          "speaker": "ke_ngot_ngao_nu",
+          "line_ids": [
+            "l1"
+          ],
+          "default_state": "mid",
+          "closed_image": "assets/s1a_hr_mouth_closed.jpg",
+          "mid_image": "assets/scene1.jpg",
+          "open_image": "assets/s1a_hr_mouth_open.jpg",
+          "region": [
+            0.253,
+            0.622,
+            0.352,
+            0.67
+          ],
+          "fps": 12,
+          "thresh_mid": 0.14,
+          "thresh_open": 0.68,
+          "feather": 0.006
+        },
+        {
+          "type": "screen_glow",
+          "pos": [
+            0.65,
+            0.65
+          ],
+          "radius": [
+            0.22,
+            0.16
+          ],
+          "color": [
+            255,
+            210,
+            90
+          ],
+          "start": 0.4,
+          "end": 2.4,
+          "fade": 0.25,
+          "intensity": 0.3,
+          "mode": "turn_on"
+        }
+      ]
+    },
+    {
+      "id": "s1b_hook_bait",
+      "image": "assets/scene1_b.jpg",
+      "start": 2.4,
       "end": 5.0,
+      "motion_level": "C",
+      "beat_type": "normal",
+      "motion_intent": "Cut on message_send (2.3s) to coin shower & excited Anh Hai reaching for mouse while HR finishes l1",
+      "motion": {
+        "scale": [
+          1.08,
+          1.01
+        ],
+        "focus": [
+          [
+            0.49,
+            0.47
+          ],
+          [
+            0.5,
+            0.5
+          ]
+        ],
+        "wobble": "breathe"
+      },
+      "transition_in": {
+        "type": "dissolve",
+        "dur": 0.18
+      },
+      "detail_fx": [
+        {
+          "type": "eye_blink",
+          "image": "assets/s1b_anhhai_blink.jpg",
+          "region": [
+            0.526,
+            0.384,
+            0.695,
+            0.429
+          ],
+          "times": [
+            3.85
+          ],
+          "feather": 0.006
+        },
+        {
+          "type": "eye_blink",
+          "image": "assets/s1b_hr_blink.jpg",
+          "region": [
+            0.188,
+            0.352,
+            0.32,
+            0.395
+          ],
+          "times": [
+            3.2
+          ],
+          "feather": 0.006
+        },
+        {
+          "type": "mouth_sync",
+          "speaker": "ke_ngot_ngao_nu",
+          "line_ids": [
+            "l1"
+          ],
+          "default_state": "mid",
+          "closed_image": "assets/s1b_hr_mouth_closed.jpg",
+          "mid_image": "assets/scene1_b.jpg",
+          "open_image": "assets/s1b_hr_mouth_open.jpg",
+          "region": [
+            0.208,
+            0.385,
+            0.307,
+            0.432
+          ],
+          "fps": 12,
+          "thresh_mid": 0.14,
+          "thresh_open": 0.68,
+          "feather": 0.006
+        },
+        {
+          "type": "screen_glow",
+          "pos": [
+            0.48,
+            0.48
+          ],
+          "radius": [
+            0.24,
+            0.24
+          ],
+          "color": [
+            255,
+            215,
+            95
+          ],
+          "start": 2.4,
+          "end": 5.0,
+          "fade": 0.25,
+          "intensity": 0.32,
+          "mode": "turn_on"
+        }
+      ]
+    },
+    {
+      "id": "s2a_scan_clean",
+      "image": "assets/s2a_base.jpg",
+      "start": 5.0,
+      "end": 11.2,
+      "motion_level": "C",
+      "beat_type": "normal",
+      "motion_intent": "Gentle lateral pan as worried Anh Hai speaks l2 (HR closed listening on screen) beside glowing green antivirus shield",
       "motion": {
         "scale": [
           1.06,
-          1.15
+          1.06
         ],
         "focus": [
           [
-            0.5,
-            0.5
+            0.47,
+            0.49
+          ],
+          [
+            0.53,
+            0.48
+          ]
+        ],
+        "wobble": "breathe"
+      },
+      "transition_in": {
+        "type": "dissolve",
+        "dur": 0.25
+      },
+      "detail_fx": [
+        {
+          "type": "eye_blink",
+          "image": "assets/s2a_anhhai_blink.jpg",
+          "region": [
+            0.536,
+            0.384,
+            0.701,
+            0.429
+          ],
+          "times": [
+            6.8,
+            10.1
+          ],
+          "feather": 0.006
+        },
+        {
+          "type": "eye_blink",
+          "image": "assets/s2a_hr_blink.jpg",
+          "region": [
+            0.232,
+            0.59,
+            0.367,
+            0.634
+          ],
+          "times": [
+            8.1
+          ],
+          "feather": 0.006
+        },
+        {
+          "type": "mouth_sync",
+          "speaker": "anh_hai",
+          "line_ids": [
+            "l2"
+          ],
+          "default_state": "closed",
+          "closed_image": "assets/s2a_base.jpg",
+          "mid_image": "assets/s2a_anhhai_mouth_mid.jpg",
+          "open_image": "assets/s2a_anhhai_mouth_open.jpg",
+          "region": [
+            0.568,
+            0.433,
+            0.685,
+            0.483
+          ],
+          "fps": 12,
+          "thresh_mid": 0.14,
+          "thresh_open": 0.68,
+          "feather": 0.006
+        },
+        {
+          "type": "screen_glow",
+          "pos": [
+            0.6,
+            0.63
+          ],
+          "radius": [
+            0.2,
+            0.16
+          ],
+          "color": [
+            90,
+            255,
+            175
+          ],
+          "start": 5.2,
+          "end": 11.2,
+          "fade": 0.35,
+          "intensity": 0.32,
+          "mode": "pulse"
+        }
+      ]
+    },
+    {
+      "id": "s2b_hr_push",
+      "image": "assets/scene2_b.jpg",
+      "start": 11.2,
+      "end": 18.0,
+      "motion_level": "C",
+      "beat_type": "suspicion",
+      "motion_intent": "Tightening over-the-shoulder push-in: sweating Anh Hai hesitates on mouse while HR urges screen-share (l3)",
+      "motion": {
+        "scale": [
+          1.01,
+          1.09
+        ],
+        "focus": [
+          [
+            0.48,
+            0.49
+          ],
+          [
+            0.52,
+            0.48
+          ]
+        ],
+        "wobble": "breathe"
+      },
+      "transition_in": {
+        "type": "dissolve",
+        "dur": 0.25
+      },
+      "detail_fx": [
+        {
+          "type": "eye_blink",
+          "image": "assets/s2b_anhhai_blink.jpg",
+          "region": [
+            0.432,
+            0.298,
+            0.651,
+            0.349
+          ],
+          "times": [
+            13.2,
+            16.5
+          ],
+          "feather": 0.006
+        },
+        {
+          "type": "mouth_sync",
+          "speaker": "ke_ngot_ngao_nu",
+          "line_ids": [
+            "l3"
+          ],
+          "default_state": "mid",
+          "closed_image": "assets/s2b_hr_mouth_closed.jpg",
+          "mid_image": "assets/scene2_b.jpg",
+          "open_image": "assets/s2b_hr_mouth_open.jpg",
+          "region": [
+            0.81,
+            0.483,
+            0.893,
+            0.526
+          ],
+          "fps": 12,
+          "thresh_mid": 0.14,
+          "thresh_open": 0.68,
+          "feather": 0.006
+        },
+        {
+          "type": "screen_glow",
+          "pos": [
+            0.62,
+            0.62
+          ],
+          "radius": [
+            0.14,
+            0.11
+          ],
+          "color": [
+            85,
+            255,
+            170
+          ],
+          "start": 11.2,
+          "end": 18.0,
+          "fade": 0.3,
+          "intensity": 0.24,
+          "mode": "pulse"
+        },
+        {
+          "type": "screen_glow",
+          "pos": [
+            0.76,
+            0.62
+          ],
+          "radius": [
+            0.16,
+            0.13
+          ],
+          "color": [
+            255,
+            75,
+            85
+          ],
+          "start": 11.4,
+          "end": 18.0,
+          "fade": 0.25,
+          "intensity": 0.34,
+          "mode": "turn_on"
+        }
+      ]
+    },
+    {
+      "id": "s3a_idea_bulb",
+      "image": "assets/s3a_base.jpg",
+      "start": 18.0,
+      "end": 25.0,
+      "motion_level": "C",
+      "beat_type": "anomaly",
+      "motion_intent": "Pull-out as golden lightbulb flashes on heartbeat 18.2s; alert Anh Hai decides to let AI read code safely (l4) while HR glares",
+      "motion": {
+        "scale": [
+          1.09,
+          1.01
+        ],
+        "focus": [
+          [
+            0.54,
+            0.46
           ],
           [
             0.5,
-            0.46
+            0.49
           ]
         ],
-        "wobble": "tense"
-      }
+        "wobble": "breathe"
+      },
+      "transition_in": {
+        "type": "dissolve",
+        "dur": 0.25
+      },
+      "detail_fx": [
+        {
+          "type": "eye_blink",
+          "image": "assets/s3a_anhhai_blink.jpg",
+          "region": [
+            0.542,
+            0.388,
+            0.711,
+            0.435
+          ],
+          "times": [
+            20.1,
+            23.6
+          ],
+          "feather": 0.006
+        },
+        {
+          "type": "eye_blink",
+          "image": "assets/s3a_hr_blink.jpg",
+          "region": [
+            0.201,
+            0.35,
+            0.328,
+            0.392
+          ],
+          "times": [
+            21.8
+          ],
+          "feather": 0.006
+        },
+        {
+          "type": "mouth_sync",
+          "speaker": "anh_hai",
+          "line_ids": [
+            "l4"
+          ],
+          "default_state": "mid",
+          "closed_image": "assets/s3a_anhhai_mouth_closed.jpg",
+          "mid_image": "assets/s3a_base.jpg",
+          "open_image": "assets/s3a_anhhai_mouth_open.jpg",
+          "region": [
+            0.573,
+            0.439,
+            0.695,
+            0.494
+          ],
+          "fps": 12,
+          "thresh_mid": 0.14,
+          "thresh_open": 0.68,
+          "feather": 0.006
+        },
+        {
+          "type": "screen_glow",
+          "pos": [
+            0.89,
+            0.41
+          ],
+          "radius": [
+            0.18,
+            0.16
+          ],
+          "color": [
+            255,
+            230,
+            110
+          ],
+          "start": 18.2,
+          "end": 25.0,
+          "fade": 0.22,
+          "intensity": 0.44,
+          "mode": "turn_on"
+        },
+        {
+          "type": "light_shift",
+          "at": 18.2,
+          "dur": 0.15,
+          "end": 18.55,
+          "end_dur": 0.3,
+          "brightness": 1.18,
+          "tint_rgb": [
+            255,
+            235,
+            165
+          ],
+          "tint_strength": 0.1
+        }
+      ]
     },
     {
-      "id": "s2_moi_nhu",
-      "image": "assets/scene2.jpg",
-      "video": "assets/scene2.mp4",
-      "start": 5.0,
-      "end": 18.0,
+      "id": "s3b_stop_hand",
+      "image": "assets/scene3_b.jpg",
+      "start": 25.0,
+      "end": 34.0,
+      "motion_level": "B",
+      "beat_type": "climax",
+      "motion_intent": "2.5D parallax push-in separating firm Anh Hai raising STOP hand + AI cyan scanner + yelling HR (fg) from sunlit office room (bg)",
       "motion": {
         "scale": [
-          1.03,
-          1.12
+          1.02,
+          1.11
         ],
         "focus": [
           [
-            0.5,
-            0.5
+            0.46,
+            0.48
           ],
           [
             0.46,
-            0.44
+            0.48
           ]
         ],
         "wobble": "calm"
       },
       "transition_in": {
         "type": "dissolve",
-        "dur": 0.3
-      }
-    },
-    {
-      "id": "s3_leo_thang",
-      "image": "assets/scene3.jpg",
-      "video": "assets/scene3.mp4",
-      "start": 18.0,
-      "end": 34.0,
-      "motion": {
-        "scale": [
-          1.04,
-          1.15
+        "dur": 0.22
+      },
+      "parallax": {
+        "camera": "push_in",
+        "dolly": [
+          1.02,
+          1.11
+        ],
+        "shift_x": [
+          0.0,
+          0.0
+        ],
+        "shift_y": [
+          0.0,
+          0.0
         ],
         "focus": [
-          [
-            0.5,
-            0.48
+          0.46,
+          0.48
+        ],
+        "strength": 0.88,
+        "easing": "smoothstep",
+        "layers": [
+          {
+            "role": "bg",
+            "image": "assets/s3b_bg.jpg",
+            "depth": 0.42,
+            "blur": 0.6
+          },
+          {
+            "role": "fg",
+            "image": "assets/s3b_fg.png",
+            "depth": 1.24,
+            "breathe_y": 1.5,
+            "breathe_period": 2.8
+          }
+        ]
+      },
+      "detail_fx": [
+        {
+          "type": "eye_blink",
+          "layer": "fg",
+          "image": "assets/s3b_anhhai_blink.jpg",
+          "region": [
+            0.456,
+            0.295,
+            0.661,
+            0.346
           ],
-          [
-            0.5,
-            0.42
-          ]
-        ],
-        "wobble": "handheld"
-      },
-      "transition_in": {
-        "type": "dissolve",
-        "dur": 0.35
-      }
-    },
-    {
-      "id": "s4_cu_chot",
-      "image": "assets/scene4.jpg",
-      "video": "assets/scene4.mp4",
-      "start": 34.0,
-      "end": 44.0,
-      "motion": {
-        "scale": [
-          1.14,
-          1.04
-        ],
-        "focus": [
-          [
-            0.52,
-            0.46
+          "times": [
+            27.3,
+            31.6
           ],
-          [
-            0.5,
-            0.5
-          ]
-        ],
-        "wobble": "handheld"
-      },
-      "transition_in": {
-        "type": "flash_white",
-        "dur": 0.25
-      },
+          "feather": 0.006
+        },
+        {
+          "type": "eye_blink",
+          "layer": "fg",
+          "image": "assets/s3b_hr_blink.jpg",
+          "region": [
+            0.799,
+            0.467,
+            0.909,
+            0.506
+          ],
+          "times": [
+            28.4,
+            32.4
+          ],
+          "feather": 0.006
+        },
+        {
+          "type": "mouth_sync",
+          "layer": "fg",
+          "speaker": "ke_ngot_ngao_nu",
+          "line_ids": [
+            "l5"
+          ],
+          "default_state": "open",
+          "closed_image": "assets/s3b_hr_mouth_closed.jpg",
+          "mid_image": "assets/s3b_hr_mouth_mid.jpg",
+          "open_image": "assets/scene3_b.jpg",
+          "region": [
+            0.807,
+            0.487,
+            0.898,
+            0.529
+          ],
+          "fps": 12,
+          "thresh_mid": 0.14,
+          "thresh_open": 0.68,
+          "feather": 0.006
+        },
+        {
+          "type": "screen_glow",
+          "space": "screen",
+          "pos": [
+            0.76,
+            0.63
+          ],
+          "radius": [
+            0.24,
+            0.18
+          ],
+          "color": [
+            75,
+            235,
+            255
+          ],
+          "start": 25.0,
+          "end": 34.0,
+          "fade": 0.3,
+          "intensity": 0.34,
+          "mode": "pulse"
+        },
+        {
+          "type": "light_shift",
+          "at": 25.2,
+          "dur": 0.14,
+          "end": 25.48,
+          "end_dur": 0.25,
+          "brightness": 1.18,
+          "tint_rgb": [
+            255,
+            85,
+            85
+          ],
+          "tint_strength": 0.12
+        }
+      ],
       "shakes": [
         {
-          "at": 34.2,
-          "amp": 32
+          "at": 25.2,
+          "dur": 0.28,
+          "amp": 12
         }
       ]
     },
     {
-      "id": "s5_boc_tran",
-      "image": "assets/scene5.jpg",
-      "video": "assets/scene5.mp4",
-      "start": 44.0,
-      "end": 51.0,
+      "id": "s4a_hidden_malware",
+      "image": "assets/scene4.jpg",
+      "start": 34.0,
+      "end": 39.5,
+      "motion_level": "C",
+      "beat_type": "climax",
+      "motion_intent": "Split-screen pan left on impact 34.1s: Anh Hai exclaims relief (l6) seeing hidden bug/hook while hacker theft lightning flickers",
       "motion": {
         "scale": [
-          1.02,
-          1.09
+          1.06,
+          1.06
+        ],
+        "focus": [
+          [
+            0.53,
+            0.49
+          ],
+          [
+            0.47,
+            0.48
+          ]
+        ],
+        "wobble": "tense"
+      },
+      "transition_in": {
+        "type": "flash_white",
+        "dur": 0.22
+      },
+      "detail_fx": [
+        {
+          "type": "eye_blink",
+          "image": "assets/s4a_anhhai_blink.jpg",
+          "region": [
+            0.193,
+            0.378,
+            0.357,
+            0.427
+          ],
+          "times": [
+            36.2,
+            38.7
+          ],
+          "feather": 0.006
+        },
+        {
+          "type": "mouth_sync",
+          "speaker": "anh_hai",
+          "line_ids": [
+            "l6"
+          ],
+          "default_state": "closed",
+          "closed_image": "assets/scene4.jpg",
+          "mid_image": "assets/s4a_anhhai_mouth_mid.jpg",
+          "open_image": "assets/s4a_anhhai_mouth_open.jpg",
+          "region": [
+            0.203,
+            0.427,
+            0.318,
+            0.48
+          ],
+          "fps": 12,
+          "thresh_mid": 0.14,
+          "thresh_open": 0.68,
+          "feather": 0.006
+        },
+        {
+          "type": "screen_glow",
+          "pos": [
+            0.64,
+            0.62
+          ],
+          "radius": [
+            0.28,
+            0.18
+          ],
+          "color": [
+            255,
+            55,
+            65
+          ],
+          "start": 34.1,
+          "end": 39.5,
+          "fade": 0.2,
+          "intensity": 0.38,
+          "mode": "flicker"
+        },
+        {
+          "type": "light_shift",
+          "at": 34.4,
+          "dur": 0.12,
+          "end": 34.62,
+          "end_dur": 0.22,
+          "brightness": 1.24,
+          "tint_rgb": [
+            255,
+            70,
+            75
+          ],
+          "tint_strength": 0.16
+        }
+      ],
+      "shakes": [
+        {
+          "at": 34.2,
+          "dur": 0.35,
+          "amp": 22
+        }
+      ]
+    },
+    {
+      "id": "s4b_shield_block",
+      "image": "assets/scene4_b.jpg",
+      "start": 39.5,
+      "end": 44.0,
+      "motion_level": "C",
+      "beat_type": "aftermath",
+      "motion_intent": "Cut on call_end (39.6s): emerald shield bursts protecting Anh Hai's piggy bank while scammer panics in red X defeat",
+      "motion": {
+        "scale": [
+          1.09,
+          1.01
         ],
         "focus": [
           [
@@ -150,26 +885,272 @@
           ],
           [
             0.5,
-            0.45
+            0.48
+          ]
+        ],
+        "wobble": "breathe"
+      },
+      "transition_in": {
+        "type": "dissolve",
+        "dur": 0.18
+      },
+      "detail_fx": [
+        {
+          "type": "eye_blink",
+          "image": "assets/s4b_anhhai_blink.jpg",
+          "region": [
+            0.188,
+            0.376,
+            0.357,
+            0.427
+          ],
+          "times": [
+            41.4
+          ],
+          "feather": 0.006
+        },
+        {
+          "type": "screen_glow",
+          "pos": [
+            0.56,
+            0.62
+          ],
+          "radius": [
+            0.24,
+            0.18
+          ],
+          "color": [
+            70,
+            255,
+            185
+          ],
+          "start": 39.6,
+          "end": 44.0,
+          "fade": 0.22,
+          "intensity": 0.4,
+          "mode": "turn_on"
+        },
+        {
+          "type": "screen_glow",
+          "pos": [
+            0.85,
+            0.62
+          ],
+          "radius": [
+            0.18,
+            0.24
+          ],
+          "color": [
+            255,
+            55,
+            65
+          ],
+          "start": 39.6,
+          "end": 44.0,
+          "fade": 0.2,
+          "intensity": 0.32,
+          "mode": "flicker"
+        }
+      ]
+    },
+    {
+      "id": "s5a_magnify_trap",
+      "image": "assets/scene5.jpg",
+      "start": 44.0,
+      "end": 47.4,
+      "motion_level": "B",
+      "beat_type": "information",
+      "motion_intent": "Hero 2.5D showcase: translucent metallic red magnifying glass sweeps across hidden folder & red phishing hook over dark hacker BG",
+      "motion": {
+        "scale": [
+          1.02,
+          1.11
+        ],
+        "focus": [
+          [
+            0.52,
+            0.42
+          ],
+          [
+            0.52,
+            0.42
           ]
         ],
         "wobble": "calm"
       },
       "transition_in": {
         "type": "glitch",
-        "dur": 0.35
-      }
+        "dur": 0.32
+      },
+      "parallax": {
+        "camera": "push_in",
+        "dolly": [
+          1.02,
+          1.11
+        ],
+        "shift_x": [
+          -10.0,
+          12.0
+        ],
+        "shift_y": [
+          3.0,
+          -3.0
+        ],
+        "focus": [
+          0.52,
+          0.42
+        ],
+        "strength": 0.9,
+        "easing": "ease_out",
+        "layers": [
+          {
+            "role": "bg",
+            "image": "assets/s5a_bg.jpg",
+            "depth": 0.44,
+            "blur": 0.3
+          },
+          {
+            "role": "fg",
+            "image": "assets/s5a_fg.png",
+            "depth": 1.42,
+            "breathe_y": 2.2,
+            "breathe_period": 2.6
+          }
+        ]
+      },
+      "detail_fx": [
+        {
+          "type": "screen_glow",
+          "space": "screen",
+          "pos": [
+            0.54,
+            0.56
+          ],
+          "radius": [
+            0.18,
+            0.16
+          ],
+          "color": [
+            255,
+            65,
+            90
+          ],
+          "start": 44.0,
+          "end": 47.4,
+          "fade": 0.25,
+          "intensity": 0.34,
+          "mode": "pulse"
+        },
+        {
+          "type": "light_shift",
+          "at": 44.0,
+          "dur": 0.14,
+          "end": 44.3,
+          "end_dur": 0.25,
+          "brightness": 1.22,
+          "tint_rgb": [
+            120,
+            225,
+            255
+          ],
+          "tint_strength": 0.14
+        }
+      ]
     },
     {
-      "id": "s6_dau_hieu",
-      "image": "assets/scene6.jpg",
-      "video": "assets/scene6.mp4",
-      "start": 51.0,
-      "end": 56.0,
+      "id": "s5b_ai_shield",
+      "image": "assets/scene5_b.jpg",
+      "start": 47.4,
+      "end": 51.0,
+      "motion_level": "C",
+      "beat_type": "information",
+      "motion_intent": "Cut on bank_ting (47.5s) to emerald AI cyber-shield neutralizing the hidden red phishing hook & bug",
       "motion": {
         "scale": [
-          1.03,
-          1.07
+          1.09,
+          1.01
+        ],
+        "focus": [
+          [
+            0.52,
+            0.48
+          ],
+          [
+            0.5,
+            0.46
+          ]
+        ],
+        "wobble": "calm"
+      },
+      "transition_in": {
+        "type": "dissolve",
+        "dur": 0.2
+      },
+      "detail_fx": [
+        {
+          "type": "screen_glow",
+          "pos": [
+            0.54,
+            0.56
+          ],
+          "radius": [
+            0.3,
+            0.22
+          ],
+          "color": [
+            75,
+            255,
+            175
+          ],
+          "start": 47.5,
+          "end": 51.0,
+          "fade": 0.22,
+          "intensity": 0.42,
+          "mode": "turn_on"
+        },
+        {
+          "type": "light_shift",
+          "at": 47.5,
+          "dur": 0.14,
+          "end": 47.82,
+          "end_dur": 0.28,
+          "brightness": 1.2,
+          "tint_rgb": [
+            110,
+            255,
+            195
+          ],
+          "tint_strength": 0.12
+        },
+        {
+          "type": "focus_highlight",
+          "pos": [
+            0.54,
+            0.56
+          ],
+          "radius": [
+            0.36,
+            0.28
+          ],
+          "start": 47.6,
+          "end": 50.9,
+          "fade": 0.3,
+          "dim_outer": 0.22
+        }
+      ]
+    },
+    {
+      "id": "s6a_delete_relief",
+      "image": "assets/scene6.jpg",
+      "start": 51.0,
+      "end": 53.5,
+      "motion_level": "A",
+      "beat_type": "ending",
+      "motion_intent": "Clean steady hold behind NHỚ KỸ red-flag card showing Anh Hai relieved after trashing malicious folder",
+      "motion": {
+        "scale": [
+          1.01,
+          1.02
         ],
         "focus": [
           [
@@ -185,12 +1166,42 @@
       },
       "transition_in": {
         "type": "fade_black",
-        "dur": 0.35
+        "dur": 0.3
+      }
+    },
+    {
+      "id": "s6b_safe_victory",
+      "image": "assets/scene6_b.jpg",
+      "start": 53.5,
+      "end": 56.0,
+      "motion_level": "A",
+      "beat_type": "ending",
+      "motion_intent": "Clean steady hold behind closing disclaimer showing Anh Hai safe with golden piggy bank & green check",
+      "motion": {
+        "scale": [
+          1.01,
+          1.02
+        ],
+        "focus": [
+          [
+            0.5,
+            0.5
+          ],
+          [
+            0.5,
+            0.5
+          ]
+        ],
+        "wobble": "none"
+      },
+      "transition_in": {
+        "type": "dissolve",
+        "dur": 0.25
       }
     }
   ],
-  "subtitle_srt": "factory/staging/EP02/subtitles/EP02.srt",
-  "video_track_noaudio": "factory/staging/EP02/timeline_video_gate4.mp4",
+  "subtitle_srt": "factory619/staging/EP02/subtitles/EP02.srt",
+  "video_track_noaudio": "factory619/staging/EP02/timeline_video_gate4.mp4",
   "channel_branding": {
     "type": "channel_branding",
     "logo_text": "VCH",
@@ -199,320 +1210,320 @@
   },
   "overlays": [
     {
-      "id": "00_hook",
+      "id": "000_hook",
       "start_sec": 0.3,
       "end_sec": 4.2,
       "fade_sec": 0.3,
-      "png_path": "factory/staging/EP02/overlays/00_hook.png",
+      "png_path": "factory619/staging/EP02/overlays/000_hook.png",
       "type": "text_hook",
       "text": "BẪY PHỎNG VẤN 90 ĐÔ MỘT GIỜ — Đang cần việc gặp lời mời 90 đô/giờ, quét virus báo sạch… suýt bấm chuột mất trắng!",
       "bbox_px": [
-        100,
+        98,
         170,
-        901,
+        903,
         416
       ],
       "safe_zone_compliant": true
     },
     {
-      "id": "01_sub_l1",
+      "id": "001_sub_l1",
       "start_sec": 0.4,
       "end_sec": 1.967,
       "fade_sec": 0.1,
-      "png_path": "factory/staging/EP02/overlays/01_sub_l1.png",
+      "png_path": "factory619/staging/EP02/overlays/001_sub_l1.png",
       "type": "subtitle",
       "lines": [
         "Việc 90 đô một giờ nè!"
       ],
       "bbox_px": [
-        251,
+        249,
         1324,
-        750,
+        752,
         1380
       ],
       "safe_zone_compliant": true
     },
     {
-      "id": "02_sub_l1",
+      "id": "002_sub_l1",
       "start_sec": 1.967,
       "end_sec": 4.032,
       "fade_sec": 0.1,
-      "png_path": "factory/staging/EP02/overlays/02_sub_l1.png",
+      "png_path": "factory619/staging/EP02/overlays/002_sub_l1.png",
       "type": "subtitle",
       "lines": [
         "Tải bài kiểm tra mở liền nha!"
       ],
       "bbox_px": [
-        187,
+        185,
         1324,
-        813,
+        815,
         1380
       ],
       "safe_zone_compliant": true
     },
     {
-      "id": "03_sub_l2",
+      "id": "003_sub_l2",
       "start_sec": 5.5,
       "end_sec": 7.879,
       "fade_sec": 0.1,
-      "png_path": "factory/staging/EP02/overlays/03_sub_l2.png",
+      "png_path": "factory619/staging/EP02/overlays/003_sub_l2.png",
       "type": "subtitle",
       "lines": [
         "Đang thất nghiệp rất cần việc..."
       ],
       "bbox_px": [
-        162,
+        160,
         1324,
-        839,
+        841,
         1380
       ],
       "safe_zone_compliant": true
     },
     {
-      "id": "04_sub_l2",
+      "id": "004_sub_l2",
       "start_sec": 7.879,
       "end_sec": 10.48,
       "fade_sec": 0.1,
-      "png_path": "factory/staging/EP02/overlays/04_sub_l2.png",
+      "png_path": "factory619/staging/EP02/overlays/004_sub_l2.png",
       "type": "subtitle",
       "lines": [
         "tự quét phần mềm cũng báo sạch rồi."
       ],
       "bbox_px": [
-        99,
+        97,
         1324,
-        902,
+        904,
         1380
       ],
       "safe_zone_compliant": true
     },
     {
-      "id": "05_sub_l3",
+      "id": "005_sub_l3",
       "start_sec": 11.4,
       "end_sec": 13.115,
       "fade_sec": 0.1,
-      "png_path": "factory/staging/EP02/overlays/05_sub_l3.png",
+      "png_path": "factory619/staging/EP02/overlays/005_sub_l3.png",
       "type": "subtitle",
       "lines": [
         "Lương 90 đô một giờ đó!"
       ],
       "bbox_px": [
-        225,
+        223,
         1324,
-        775,
+        777,
         1380
       ],
       "safe_zone_compliant": true
     },
     {
-      "id": "06_sub_l3",
+      "id": "006_sub_l3",
       "start_sec": 13.115,
       "end_sec": 15.352,
       "fade_sec": 0.1,
-      "png_path": "factory/staging/EP02/overlays/06_sub_l3.png",
+      "png_path": "factory619/staging/EP02/overlays/006_sub_l3.png",
       "type": "subtitle",
       "lines": [
         "Chia sẻ màn hình chạy liền đi!"
       ],
       "bbox_px": [
-        178,
+        176,
         1324,
-        823,
+        825,
         1380
       ],
       "safe_zone_compliant": true
     },
     {
-      "id": "07_sub_l4",
+      "id": "007_sub_l4",
       "start_sec": 18.2,
       "end_sec": 20.588,
       "fade_sec": 0.1,
-      "png_path": "factory/staging/EP02/overlays/07_sub_l4.png",
+      "png_path": "factory619/staging/EP02/overlays/007_sub_l4.png",
       "type": "subtitle",
       "lines": [
         "Khoan, lương cao bất thường quá!"
       ],
       "bbox_px": [
-        128,
+        126,
         1324,
-        873,
+        875,
         1380
       ],
       "safe_zone_compliant": true
     },
     {
-      "id": "08_sub_l4",
+      "id": "008_sub_l4",
       "start_sec": 20.588,
       "end_sec": 24.02,
       "fade_sec": 0.1,
-      "png_path": "factory/staging/EP02/overlays/08_sub_l4.png",
+      "png_path": "factory619/staging/EP02/overlays/008_sub_l4.png",
       "type": "subtitle",
       "lines": [
         "Nhờ AI chỉ đọc code chứ không chạy",
         "là an toàn!"
       ],
       "bbox_px": [
-        107,
+        105,
         1268,
-        893,
+        895,
         1380
       ],
       "safe_zone_compliant": true
     },
     {
-      "id": "09_sub_l5",
+      "id": "009_sub_l5",
       "start_sec": 25.2,
       "end_sec": 27.244,
       "fade_sec": 0.1,
-      "png_path": "factory/staging/EP02/overlays/09_sub_l5.png",
+      "png_path": "factory619/staging/EP02/overlays/009_sub_l5.png",
       "type": "subtitle",
       "lines": [
         "Bấm nút chạy thôi mà hẹn mai!"
       ],
       "bbox_px": [
-        163,
+        161,
         1324,
-        838,
+        840,
         1380
       ],
       "safe_zone_compliant": true
     },
     {
-      "id": "10_sub_l5",
+      "id": "010_sub_l5",
       "start_sec": 27.244,
       "end_sec": 29.712,
       "fade_sec": 0.1,
-      "png_path": "factory/staging/EP02/overlays/10_sub_l5.png",
+      "png_path": "factory619/staging/EP02/overlays/010_sub_l5.png",
       "type": "subtitle",
       "lines": [
         "Không mở liền là hủy phỏng vấn nha!"
       ],
       "bbox_px": [
-        96,
+        94,
         1324,
-        905,
+        907,
         1380
       ],
       "safe_zone_compliant": true
     },
     {
-      "id": "11_sub_l6",
+      "id": "011_sub_l6",
       "start_sec": 34.2,
       "end_sec": 34.78,
       "fade_sec": 0.1,
-      "png_path": "factory/staging/EP02/overlays/11_sub_l6.png",
+      "png_path": "factory619/staging/EP02/overlays/011_sub_l6.png",
       "type": "subtitle",
       "lines": [
         "Hú hồn!"
       ],
       "bbox_px": [
-        402,
+        400,
         1324,
-        599,
+        601,
         1380
       ],
       "safe_zone_compliant": true
     },
     {
-      "id": "12_sub_l6",
+      "id": "012_sub_l6",
       "start_sec": 34.78,
       "end_sec": 39.34,
       "fade_sec": 0.1,
-      "png_path": "factory/staging/EP02/overlays/12_sub_l6.png",
+      "png_path": "factory619/staging/EP02/overlays/012_sub_l6.png",
       "type": "subtitle",
       "lines": [
         "Nhờ AI đọc thư mục ẩn mới thấy lệnh",
         "ngầm cướp mật khẩu!"
       ],
       "bbox_px": [
-        96,
+        94,
         1268,
-        905,
+        907,
         1380
       ],
       "safe_zone_compliant": true
     },
     {
-      "id": "13_sub_l7",
+      "id": "013_sub_l7",
       "start_sec": 39.6,
       "end_sec": 39.89,
       "fade_sec": 0.1,
-      "png_path": "factory/staging/EP02/overlays/13_sub_l7.png",
+      "png_path": "factory619/staging/EP02/overlays/013_sub_l7.png",
       "type": "subtitle",
       "lines": [
         "Alo!"
       ],
       "bbox_px": [
-        443,
+        441,
         1324,
-        558,
+        560,
         1380
       ],
       "safe_zone_compliant": true
     },
     {
-      "id": "14_sub_l7",
+      "id": "014_sub_l7",
       "start_sec": 39.89,
       "end_sec": 42.792,
       "fade_sec": 0.1,
-      "png_path": "factory/staging/EP02/overlays/14_sub_l7.png",
+      "png_path": "factory619/staging/EP02/overlays/014_sub_l7.png",
       "type": "subtitle",
       "lines": [
         "Sao tắt màn hình, bấm chạy bài kiểm",
         "tra!"
       ],
       "bbox_px": [
-        103,
+        101,
         1268,
-        898,
+        900,
         1380
       ],
       "safe_zone_compliant": true
     },
     {
-      "id": "15_sub_l8",
+      "id": "015_sub_l8",
       "start_sec": 44.5,
       "end_sec": 47.316,
       "fade_sec": 0.1,
-      "png_path": "factory/staging/EP02/overlays/15_sub_l8.png",
+      "png_path": "factory619/staging/EP02/overlays/015_sub_l8.png",
       "type": "subtitle",
       "lines": [
         "Gặp mồi lương cao bất thường, hãy",
         "nhờ AI chỉ đọc code"
       ],
       "bbox_px": [
-        116,
+        114,
         1268,
-        884,
+        886,
         1380
       ],
       "safe_zone_compliant": true
     },
     {
-      "id": "16_sub_l8",
+      "id": "016_sub_l8",
       "start_sec": 47.316,
       "end_sec": 49.92,
       "fade_sec": 0.1,
-      "png_path": "factory/staging/EP02/overlays/16_sub_l8.png",
+      "png_path": "factory619/staging/EP02/overlays/016_sub_l8.png",
       "type": "subtitle",
       "lines": [
         "(không chạy code) để phát hiện lệnh",
         "ngầm an toàn!"
       ],
       "bbox_px": [
-        107,
+        105,
         1268,
-        893,
+        895,
         1380
       ],
       "safe_zone_compliant": true
     },
     {
-      "id": "17_callout1",
+      "id": "017_callout1",
       "start_sec": 11.4,
       "end_sec": 17.5,
       "fade_sec": 0.2,
-      "png_path": "factory/staging/EP02/overlays/17_callout1.png",
+      "png_path": "factory619/staging/EP02/overlays/017_callout1.png",
       "type": "callout",
       "style": "warn",
       "text": "Quét ngoài báo sạch -> HR hối chia sẻ màn hình & bấm chạy ngay!",
@@ -525,11 +1536,11 @@
       "safe_zone_compliant": true
     },
     {
-      "id": "18_callout2",
+      "id": "018_callout2",
       "start_sec": 18.4,
       "end_sec": 24.8,
       "fade_sec": 0.2,
-      "png_path": "factory/staging/EP02/overlays/18_callout2.png",
+      "png_path": "factory619/staging/EP02/overlays/018_callout2.png",
       "type": "callout",
       "style": "safe",
       "text": "Dừng tay kịp lúc: Nhờ AI chỉ đọc code (không chạy code)!",
@@ -542,11 +1553,11 @@
       "safe_zone_compliant": true
     },
     {
-      "id": "19_callout3",
+      "id": "019_callout3",
       "start_sec": 25.3,
       "end_sec": 33.5,
       "fade_sec": 0.2,
-      "png_path": "factory/staging/EP02/overlays/19_callout3.png",
+      "png_path": "factory619/staging/EP02/overlays/019_callout3.png",
       "type": "callout",
       "style": "danger",
       "text": "Xin kiểm tra kỹ -> HR lập tức cáu gắt, dọa hủy phỏng vấn!",
@@ -559,11 +1570,11 @@
       "safe_zone_compliant": true
     },
     {
-      "id": "20_callout4",
+      "id": "020_callout4",
       "start_sec": 34.3,
       "end_sec": 43.5,
       "fade_sec": 0.2,
-      "png_path": "factory/staging/EP02/overlays/20_callout4.png",
+      "png_path": "factory619/staging/EP02/overlays/020_callout4.png",
       "type": "callout",
       "style": "danger",
       "text": "Thư mục ẩn chứa lệnh ngầm chờ cướp sạch mật khẩu & ví!",
@@ -576,11 +1587,11 @@
       "safe_zone_compliant": true
     },
     {
-      "id": "21_redflags_0",
+      "id": "021_redflags_0",
       "start_sec": 51.0,
       "end_sec": 51.4,
       "fade_sec": 0.25,
-      "png_path": "factory/staging/EP02/overlays/21_redflags_0.png",
+      "png_path": "factory619/staging/EP02/overlays/021_redflags_0.png",
       "type": "red_flags",
       "title": "NHỚ KỸ",
       "lines": [
@@ -597,11 +1608,11 @@
       "safe_zone_compliant": true
     },
     {
-      "id": "22_redflags_1",
+      "id": "022_redflags_1",
       "start_sec": 51.4,
       "end_sec": 51.8,
       "fade_sec": 0.0,
-      "png_path": "factory/staging/EP02/overlays/22_redflags_1.png",
+      "png_path": "factory619/staging/EP02/overlays/022_redflags_1.png",
       "type": "red_flags",
       "title": "NHỚ KỸ",
       "lines": [
@@ -618,11 +1629,11 @@
       "safe_zone_compliant": true
     },
     {
-      "id": "23_redflags_2",
+      "id": "023_redflags_2",
       "start_sec": 51.8,
       "end_sec": 53.5,
       "fade_sec": 0.0,
-      "png_path": "factory/staging/EP02/overlays/23_redflags_2.png",
+      "png_path": "factory619/staging/EP02/overlays/023_redflags_2.png",
       "type": "red_flags",
       "title": "NHỚ KỸ",
       "lines": [
@@ -639,11 +1650,11 @@
       "safe_zone_compliant": true
     },
     {
-      "id": "24_disclaimer",
+      "id": "024_disclaimer",
       "start_sec": 53.5,
       "end_sec": 56.0,
       "fade_sec": 0.25,
-      "png_path": "factory/staging/EP02/overlays/24_disclaimer.png",
+      "png_path": "factory619/staging/EP02/overlays/024_disclaimer.png",
       "type": "disclaimer",
       "text": "Tình huống được dựng lại để cảnh báo. Nhân vật, tên, số liệu đều là hư cấu.",
       "bbox_px": [
@@ -657,49 +1668,154 @@
   ],
   "qa_preview_frames": [
     {
+      "timestamp_sec": 0.85,
+      "clean": "factory619/staging/EP02/preview_frames/qa_00_85s_clean.jpg",
+      "safezone": "factory619/staging/EP02/preview_frames/qa_00_85s_safezone.jpg"
+    },
+    {
+      "timestamp_sec": 1.2,
+      "clean": "factory619/staging/EP02/preview_frames/qa_01_20s_clean.jpg",
+      "safezone": "factory619/staging/EP02/preview_frames/qa_01_20s_safezone.jpg"
+    },
+    {
       "timestamp_sec": 1.3,
-      "clean": "factory/staging/EP02/preview_frames/qa_01_30s_clean.jpg",
-      "safezone": "factory/staging/EP02/preview_frames/qa_01_30s_safezone.jpg"
+      "clean": "factory619/staging/EP02/preview_frames/qa_01_30s_clean.jpg",
+      "safezone": "factory619/staging/EP02/preview_frames/qa_01_30s_safezone.jpg"
     },
     {
-      "timestamp_sec": 2.5,
-      "clean": "factory/staging/EP02/preview_frames/qa_02_50s_clean.jpg",
-      "safezone": "factory/staging/EP02/preview_frames/qa_02_50s_safezone.jpg"
+      "timestamp_sec": 2.85,
+      "clean": "factory619/staging/EP02/preview_frames/qa_02_85s_clean.jpg",
+      "safezone": "factory619/staging/EP02/preview_frames/qa_02_85s_safezone.jpg"
     },
     {
-      "timestamp_sec": 11.5,
-      "clean": "factory/staging/EP02/preview_frames/qa_11_50s_clean.jpg",
-      "safezone": "factory/staging/EP02/preview_frames/qa_11_50s_safezone.jpg"
+      "timestamp_sec": 3.7,
+      "clean": "factory619/staging/EP02/preview_frames/qa_03_70s_clean.jpg",
+      "safezone": "factory619/staging/EP02/preview_frames/qa_03_70s_safezone.jpg"
     },
     {
-      "timestamp_sec": 26.0,
-      "clean": "factory/staging/EP02/preview_frames/qa_26_00s_clean.jpg",
-      "safezone": "factory/staging/EP02/preview_frames/qa_26_00s_safezone.jpg"
+      "timestamp_sec": 5.75,
+      "clean": "factory619/staging/EP02/preview_frames/qa_05_75s_clean.jpg",
+      "safezone": "factory619/staging/EP02/preview_frames/qa_05_75s_safezone.jpg"
     },
     {
-      "timestamp_sec": 39.0,
-      "clean": "factory/staging/EP02/preview_frames/qa_39_00s_clean.jpg",
-      "safezone": "factory/staging/EP02/preview_frames/qa_39_00s_safezone.jpg"
+      "timestamp_sec": 8.1,
+      "clean": "factory619/staging/EP02/preview_frames/qa_08_10s_clean.jpg",
+      "safezone": "factory619/staging/EP02/preview_frames/qa_08_10s_safezone.jpg"
     },
     {
-      "timestamp_sec": 47.5,
-      "clean": "factory/staging/EP02/preview_frames/qa_47_50s_clean.jpg",
-      "safezone": "factory/staging/EP02/preview_frames/qa_47_50s_safezone.jpg"
+      "timestamp_sec": 11.7,
+      "clean": "factory619/staging/EP02/preview_frames/qa_11_70s_clean.jpg",
+      "safezone": "factory619/staging/EP02/preview_frames/qa_11_70s_safezone.jpg"
+    },
+    {
+      "timestamp_sec": 11.85,
+      "clean": "factory619/staging/EP02/preview_frames/qa_11_85s_clean.jpg",
+      "safezone": "factory619/staging/EP02/preview_frames/qa_11_85s_safezone.jpg"
+    },
+    {
+      "timestamp_sec": 14.6,
+      "clean": "factory619/staging/EP02/preview_frames/qa_14_60s_clean.jpg",
+      "safezone": "factory619/staging/EP02/preview_frames/qa_14_60s_safezone.jpg"
+    },
+    {
+      "timestamp_sec": 18.5,
+      "clean": "factory619/staging/EP02/preview_frames/qa_18_50s_clean.jpg",
+      "safezone": "factory619/staging/EP02/preview_frames/qa_18_50s_safezone.jpg"
+    },
+    {
+      "timestamp_sec": 18.62,
+      "clean": "factory619/staging/EP02/preview_frames/qa_18_62s_clean.jpg",
+      "safezone": "factory619/staging/EP02/preview_frames/qa_18_62s_safezone.jpg"
+    },
+    {
+      "timestamp_sec": 21.5,
+      "clean": "factory619/staging/EP02/preview_frames/qa_21_50s_clean.jpg",
+      "safezone": "factory619/staging/EP02/preview_frames/qa_21_50s_safezone.jpg"
+    },
+    {
+      "timestamp_sec": 25.5,
+      "clean": "factory619/staging/EP02/preview_frames/qa_25_50s_clean.jpg",
+      "safezone": "factory619/staging/EP02/preview_frames/qa_25_50s_safezone.jpg"
+    },
+    {
+      "timestamp_sec": 29.5,
+      "clean": "factory619/staging/EP02/preview_frames/qa_29_50s_clean.jpg",
+      "safezone": "factory619/staging/EP02/preview_frames/qa_29_50s_safezone.jpg"
+    },
+    {
+      "timestamp_sec": 34.5,
+      "clean": "factory619/staging/EP02/preview_frames/qa_34_50s_clean.jpg",
+      "safezone": "factory619/staging/EP02/preview_frames/qa_34_50s_safezone.jpg"
+    },
+    {
+      "timestamp_sec": 34.67,
+      "clean": "factory619/staging/EP02/preview_frames/qa_34_67s_clean.jpg",
+      "safezone": "factory619/staging/EP02/preview_frames/qa_34_67s_safezone.jpg"
+    },
+    {
+      "timestamp_sec": 36.75,
+      "clean": "factory619/staging/EP02/preview_frames/qa_36_75s_clean.jpg",
+      "safezone": "factory619/staging/EP02/preview_frames/qa_36_75s_safezone.jpg"
+    },
+    {
+      "timestamp_sec": 40.0,
+      "clean": "factory619/staging/EP02/preview_frames/qa_40_00s_clean.jpg",
+      "safezone": "factory619/staging/EP02/preview_frames/qa_40_00s_safezone.jpg"
+    },
+    {
+      "timestamp_sec": 40.02,
+      "clean": "factory619/staging/EP02/preview_frames/qa_40_02s_clean.jpg",
+      "safezone": "factory619/staging/EP02/preview_frames/qa_40_02s_safezone.jpg"
+    },
+    {
+      "timestamp_sec": 41.75,
+      "clean": "factory619/staging/EP02/preview_frames/qa_41_75s_clean.jpg",
+      "safezone": "factory619/staging/EP02/preview_frames/qa_41_75s_safezone.jpg"
+    },
+    {
+      "timestamp_sec": 44.29,
+      "clean": "factory619/staging/EP02/preview_frames/qa_44_29s_clean.jpg",
+      "safezone": "factory619/staging/EP02/preview_frames/qa_44_29s_safezone.jpg"
+    },
+    {
+      "timestamp_sec": 44.45,
+      "clean": "factory619/staging/EP02/preview_frames/qa_44_45s_clean.jpg",
+      "safezone": "factory619/staging/EP02/preview_frames/qa_44_45s_safezone.jpg"
+    },
+    {
+      "timestamp_sec": 45.7,
+      "clean": "factory619/staging/EP02/preview_frames/qa_45_70s_clean.jpg",
+      "safezone": "factory619/staging/EP02/preview_frames/qa_45_70s_safezone.jpg"
+    },
+    {
+      "timestamp_sec": 47.79,
+      "clean": "factory619/staging/EP02/preview_frames/qa_47_79s_clean.jpg",
+      "safezone": "factory619/staging/EP02/preview_frames/qa_47_79s_safezone.jpg"
+    },
+    {
+      "timestamp_sec": 47.92,
+      "clean": "factory619/staging/EP02/preview_frames/qa_47_92s_clean.jpg",
+      "safezone": "factory619/staging/EP02/preview_frames/qa_47_92s_safezone.jpg"
+    },
+    {
+      "timestamp_sec": 49.2,
+      "clean": "factory619/staging/EP02/preview_frames/qa_49_20s_clean.jpg",
+      "safezone": "factory619/staging/EP02/preview_frames/qa_49_20s_safezone.jpg"
+    },
+    {
+      "timestamp_sec": 52.25,
+      "clean": "factory619/staging/EP02/preview_frames/qa_52_25s_clean.jpg",
+      "safezone": "factory619/staging/EP02/preview_frames/qa_52_25s_safezone.jpg"
     },
     {
       "timestamp_sec": 53.0,
-      "clean": "factory/staging/EP02/preview_frames/qa_53_00s_clean.jpg",
-      "safezone": "factory/staging/EP02/preview_frames/qa_53_00s_safezone.jpg"
-    },
-    {
-      "timestamp_sec": 53.5,
-      "clean": "factory/staging/EP02/preview_frames/qa_53_50s_clean.jpg",
-      "safezone": "factory/staging/EP02/preview_frames/qa_53_50s_safezone.jpg"
+      "clean": "factory619/staging/EP02/preview_frames/qa_53_00s_clean.jpg",
+      "safezone": "factory619/staging/EP02/preview_frames/qa_53_00s_safezone.jpg"
     },
     {
       "timestamp_sec": 54.75,
-      "clean": "factory/staging/EP02/preview_frames/qa_54_75s_clean.jpg",
-      "safezone": "factory/staging/EP02/preview_frames/qa_54_75s_safezone.jpg"
+      "clean": "factory619/staging/EP02/preview_frames/qa_54_75s_clean.jpg",
+      "safezone": "factory619/staging/EP02/preview_frames/qa_54_75s_safezone.jpg"
     }
   ]
 }

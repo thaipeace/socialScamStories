@@ -8,8 +8,8 @@
   "4": {
     "status": "PASS",
     "by": "Chủ kênh",
-    "note": "Chủ kênh duyệt staging lên production",
-    "at": "2026-11-13T21:36:31+07:00"
+    "note": "Đã duyệt bản Staging nâng cấp v3-level2-abc (A/B/C + 2.5D 3 lớp)",
+    "at": "2026-11-22T15:33:59+07:00"
   },
   "5": {
     "status": "PASS",

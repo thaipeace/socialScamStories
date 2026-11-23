@@ -1,16 +1,16 @@
-# GÓI XUẤT BẢN YOUTUBE – EP04: Dán Đè Mã QR Ban Đêm: Khách Đã Trừ Tiền Mà Chủ Quán Trắng Tay!
+# GÓI XUẤT BẢN YOUTUBE [factory619 · 9:16] – EP04: Dán Đè Mã QR Ban Đêm: Khách Đã Trừ Tiền Mà Chủ Quán Trắng Tay!
 
 ## 📦 1. Các File Cần Dùng Khi Upload
-- **Video Master (MP4 9:16)**: [EP04_MaQrDanDe_56s.mp4](file:///C:/projects/socialScamStories/factory/production/EP04/EP04_MaQrDanDe_56s.mp4) (42.12 MB, SHA-256 `9957abe903a13540…`)
-- **Phụ đề chuẩn thời gian (SRT)**: [EP04_MaQrDanDe_56s.srt](file:///C:/projects/socialScamStories/factory/production/EP04/EP04_MaQrDanDe_56s.srt)
-- **Thumbnail dọc (9:16 — mốc `32.0s`)**: [EP04_Thumbnail_9x16.jpg](file:///C:/projects/socialScamStories/factory/production/EP04/EP04_Thumbnail_9x16.jpg)
-- **Thumbnail ngang (16:9 — dùng trên YouTube Studio Web)**: [EP04_Thumbnail_16x9.jpg](file:///C:/projects/socialScamStories/factory/production/EP04/EP04_Thumbnail_16x9.jpg)
+- **Video Master (MP4 9:16)**: [EP04_MaQrDanDe_56s.mp4](file:///C:/projects/socialScamStories/factory619/production/EP04/EP04_MaQrDanDe_56s.mp4) (43.17 MB, SHA-256 `920ddc5aad35ad95…`)
+- **Phụ đề chuẩn thời gian (SRT)**: [EP04_MaQrDanDe_56s.srt](file:///C:/projects/socialScamStories/factory619/production/EP04/EP04_MaQrDanDe_56s.srt)
+- **Thumbnail dọc (9:16 — mốc `32.0s`)**: [EP04_Thumbnail_9x16.jpg](file:///C:/projects/socialScamStories/factory619/production/EP04/EP04_Thumbnail_9x16.jpg)
+- **Thumbnail ngang (16:9)**: [EP04_Thumbnail_16x9.jpg](file:///C:/projects/socialScamStories/factory619/production/EP04/EP04_Thumbnail_16x9.jpg)
 - **Bộ file `.txt` sẵn sàng Copy–Paste nhanh**:
-  - Tiêu đề: [1_TITLE.txt](file:///C:/projects/socialScamStories/factory/production/EP04/youtube_upload/1_TITLE.txt)
-  - Mô tả (Description): [2_DESCRIPTION.txt](file:///C:/projects/socialScamStories/factory/production/EP04/youtube_upload/2_DESCRIPTION.txt)
-  - Thẻ từ khóa (Tags): [3_TAGS.txt](file:///C:/projects/socialScamStories/factory/production/EP04/youtube_upload/3_TAGS.txt)
-  - Bình luận ghim (Pinned Comment): [4_PINNED_COMMENT.txt](file:///C:/projects/socialScamStories/factory/production/EP04/youtube_upload/4_PINNED_COMMENT.txt)
-  - Hướng dẫn cài đặt YouTube Studio: [5_YOUTUBE_STUDIO_SETTINGS.md](file:///C:/projects/socialScamStories/factory/production/EP04/youtube_upload/5_YOUTUBE_STUDIO_SETTINGS.md)
+  - Tiêu đề: [1_TITLE.txt](file:///C:/projects/socialScamStories/factory619/production/EP04/youtube_upload/1_TITLE.txt)
+  - Mô tả (Description): [2_DESCRIPTION.txt](file:///C:/projects/socialScamStories/factory619/production/EP04/youtube_upload/2_DESCRIPTION.txt)
+  - Thẻ từ khóa (Tags): [3_TAGS.txt](file:///C:/projects/socialScamStories/factory619/production/EP04/youtube_upload/3_TAGS.txt)
+  - Bình luận ghim (Pinned Comment): [4_PINNED_COMMENT.txt](file:///C:/projects/socialScamStories/factory619/production/EP04/youtube_upload/4_PINNED_COMMENT.txt)
+  - Hướng dẫn cài đặt YouTube Studio: [5_YOUTUBE_STUDIO_SETTINGS.md](file:///C:/projects/socialScamStories/factory619/production/EP04/youtube_upload/5_YOUTUBE_STUDIO_SETTINGS.md)
 
 ---
 
@@ -55,15 +55,3 @@ bóc trần lừa đảo, lừa đảo mã qr, dán đè mã qr, thanh toán kh�
 ```text
 📌 Dựa trên vụ việc có thật: Chỉ vài miếng decal dán đè ban đêm lên 20 cửa hàng, kẻ gian đã chiếm đoạt tiền của 86 lượt khách mua hàng! Chủ quán nhớ kiểm tra bảng mã mỗi sáng, khách mua nhớ nhìn kỹ tên người nhận trước khi bấm chuyển nhé!
 ```
-
----
-
-## ⚙️ 6. Bảng Cài Đặt Nhanh Trong YouTube Studio
-| Hạng mục | Thao tác chọn trên YouTube Studio | Trạng thái |
-| :--- | :--- | :---: |
-| **Danh sách phát (Playlist)** | `Bóc Trần Lừa Đảo – Kỹ Năng Cảnh Giác & An Toàn Đời Thực` | ☐ |
-| **Đối tượng (Audience – Made for kids)** | Chọn **No, it's not made for kids** *(Không dành cho trẻ em – để mở bình luận ghim & tiếp cận phụ huynh)* | ☐ |
-| **Khai báo nội dung AI (Altered content)** | Chọn **Yes** *(Có sử dụng hình ảnh/âm thanh tổng hợp)* | ☐ |
-| **Ngôn ngữ & Phụ đề (Language & Subtitles)** | Ngôn ngữ: **Tiếng Việt** · Tải lên file `EP04_MaQrDanDe_56s.srt` | ☐ |
-| **Danh mục (Category)** | `Education (Giáo dục)` | ☐ |
-| **Kiểm tra trước khi Public** | Đăng **Unlisted** → xem thử trên điện thoại → ghim bình luận → bật **Public** | ☐ |

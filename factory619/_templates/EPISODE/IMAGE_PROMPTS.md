@@ -17,5 +17,8 @@ no real police/bank uniforms or insignia, no blood, no gore.
 | 5 | Bóc trần | `C` (`focus_highlight`) | (kẻ lừa: bóng tối/ánh màn hình, KHÔNG lộ mặt rõ) | | ☐ |
 | 6 | Nền thẻ dấu hiệu | `A` (`static_hold`, không rung) | ảnh dịu, ít chi tiết | | ☐ |
 
-Ảnh duyệt xong lưu `assets/scene1.jpg … scene6.jpg`. Với cảnh **Level B**, lưu thêm lớp `assets/sX_bg.jpg`, `assets/sX_mid.png` (và `assets/sX_fg.png` nếu có); với cảnh **Level C (`detail_reveal`)**, lưu thêm ảnh đồng khung `assets/sX_b.jpg`; với cảnh **Level D**, luôn giữ ảnh gốc `sceneX.jpg` bên cạnh clip `.mp4` để hạ cấp an toàn nếu cần.
+Ảnh duyệt xong lưu `assets/scene1.jpg … scene6.jpg`.
+- **Living-Character A/B/C chọn lọc (mặc định cho 2–4 cảnh cận rõ mặt):** tạo thêm biến thể khóa khung `assets/sceneX_blink.jpg` (chớp mắt), và với cảnh cận có thoại trực diện tạo thêm `assets/sceneX_mouth_closed.jpg`, `assets/sceneX_mouth_open.jpg` (xử lý căn pixel + cân màu da qua `03_ENGINE/face_roi_prep.py` và duyệt bảng QC cận mặt trước khi render).
+- **Level B (2.5D + Breathing):** lưu thêm `assets/sX_bg.jpg`, `assets/sX_fg.png` (có thể gắn `breathe_y`/`breathe_period` và khóa `eye_blink` theo `layer: "fg"`).
+- **Level C (`detail_reveal`):** lưu thêm ảnh đồng khung `assets/sX_b.jpg`. **Level D:** luôn giữ ảnh gốc `sceneX.jpg` bên cạnh clip `.mp4` để hạ cấp an toàn nếu cần.
 

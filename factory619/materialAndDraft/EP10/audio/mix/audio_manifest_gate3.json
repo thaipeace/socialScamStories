@@ -358,7 +358,7 @@
         "channels": 2,
         "sample_rate": 48000,
         "peak_dbfs": -15.0,
-        "rms_dbfs": -28.47
+        "rms_dbfs": -28.46
       },
       {
         "name": "bgm_05_tension_drone",
@@ -521,7 +521,7 @@
       "channels": 2,
       "sample_rate": 48000,
       "peak_dbfs": -14.0,
-      "rms_dbfs": -32.98
+      "rms_dbfs": -32.97
     }
   },
   "master": {

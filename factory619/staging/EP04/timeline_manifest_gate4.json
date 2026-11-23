@@ -1,11 +1,13 @@
 {
   "episode_id": "EP04",
+  "factory": "factory619",
   "gate": "GATE_4_TIMELINE_SAFE_ZONE",
   "preview_only": false,
   "canvas": {
     "width": 1080,
     "height": 1920,
     "fps": 30,
+    "aspect_ratio": "9:16",
     "total_frames": 1680,
     "total_duration_sec": 56.0
   },
@@ -17,60 +19,335 @@
     "platform_ui_bottom_y": 1440,
     "all_overlays_compliant": true
   },
+  "motion_summary": {
+    "hardware_profile": "low_ram_cpu_l480",
+    "safe_motion_mode": false,
+    "is_level2": true,
+    "declared_level_counts": {
+      "A": 1,
+      "B": 2,
+      "C": 4,
+      "D": 0
+    },
+    "effective_level_counts": {
+      "A": 1,
+      "B": 2,
+      "C": 4,
+      "D": 0
+    },
+    "fallbacks": [],
+    "detail_warnings": [],
+    "zoom_streaks": [],
+    "shake_scenes": 2,
+    "sfx_sync": {
+      "synced": [
+        "s1_dem_dan_de:screen_glow@0.25s",
+        "s2_xung_dot_sang:shake@13.50s",
+        "s2_xung_dot_sang:screen_glow@13.50s",
+        "s3_tung_phat_hien:screen_glow@24.42s",
+        "s4_lot_decal:shake@29.05s",
+        "s4_lot_decal:screen_glow@29.05s",
+        "s4_lot_decal:light_shift@29.05s",
+        "s5_boc_tran:light_shift@45.30s",
+        "s6a_hop_kinh_loa:screen_glow@48.65s"
+      ],
+      "unsynced": []
+    },
+    "warnings": []
+  },
   "scenes": [
     {
       "id": "s1_dem_dan_de",
       "image": "assets/scene1.jpg",
       "start": 0.0,
       "end": 7.1,
+      "beat_type": "establishing",
+      "motion_level": "B",
+      "motion_intent": "Hero 2.5D parallax đêm khuya tách kẻ gian áo trùm & xe đẩy khỏi con hẻm có đồng bọn cảnh giới; chớp mắt + ánh đèn đường vàng & đỏ mã QR giả bật sáng",
       "motion": {
+        "preset": "slow_push_in",
         "scale": [
-          1.05,
-          1.14
+          1.02,
+          1.09
         ],
         "focus": [
           [
             0.5,
-            0.5
+            0.52
           ],
           [
             0.5,
-            0.45
+            0.56
           ]
         ],
-        "wobble": "tense"
-      }
+        "wobble": "none"
+      },
+      "parallax": {
+        "camera": "push_in",
+        "dolly": [
+          1.02,
+          1.09
+        ],
+        "shift_x": [
+          -8.0,
+          8.0
+        ],
+        "shift_y": [
+          0.0,
+          -4.0
+        ],
+        "focus": [
+          0.5,
+          0.52
+        ],
+        "strength": 0.88,
+        "easing": "ease_out",
+        "layers": [
+          {
+            "role": "bg",
+            "image": "assets/s1_bg.jpg",
+            "depth": 0.42,
+            "blur": 0.6
+          },
+          {
+            "role": "fg",
+            "image": "assets/s1_fg.png",
+            "depth": 1.24,
+            "breathe_y": 1.6,
+            "breathe_scale": 0.004,
+            "breathe_period": 3.4
+          }
+        ]
+      },
+      "detail_fx": [
+        {
+          "type": "eye_blink",
+          "layer": "fg",
+          "image": "assets/s1_scammer_blink.jpg",
+          "region": [
+            0.607,
+            0.449,
+            0.766,
+            0.5
+          ],
+          "times": [
+            2.15,
+            5.35
+          ],
+          "feather": 0.007
+        },
+        {
+          "type": "eye_blink",
+          "layer": "bg",
+          "image": "assets/s1_lookout_blink.jpg",
+          "region": [
+            0.32,
+            0.347,
+            0.427,
+            0.385
+          ],
+          "times": [
+            3.6
+          ],
+          "feather": 0.006
+        },
+        {
+          "type": "screen_glow",
+          "space": "frame",
+          "pos": [
+            0.38,
+            0.09
+          ],
+          "radius": [
+            0.24,
+            0.14
+          ],
+          "color": [
+            255,
+            215,
+            115
+          ],
+          "start": 0.0,
+          "end": 7.1,
+          "fade": 0.4,
+          "intensity": 0.22,
+          "mode": "pulse"
+        },
+        {
+          "type": "screen_glow",
+          "space": "frame",
+          "pos": [
+            0.52,
+            0.8
+          ],
+          "radius": [
+            0.18,
+            0.12
+          ],
+          "color": [
+            255,
+            75,
+            75
+          ],
+          "start": 0.25,
+          "end": 7.1,
+          "fade": 0.25,
+          "intensity": 0.3,
+          "mode": "turn_on"
+        }
+      ]
     },
     {
       "id": "s2_xung_dot_sang",
       "image": "assets/scene2.jpg",
       "start": 7.1,
       "end": 19.0,
+      "beat_type": "suspicion",
+      "motion_level": "C",
+      "motion_intent": "Quét ngang trái->phải theo đối đáp 2 tuyến: Cô Tư hốt hoảng nói l2 (7.1-13.4s) rồi khép miệng, Anh Hai bức xúc đáp l3 (13.5-19.0s) kèm màn hình tích xanh bật sáng",
       "motion": {
+        "preset": "pan_right",
         "scale": [
-          1.04,
-          1.14
+          1.07,
+          1.07
         ],
         "focus": [
           [
-            0.5,
+            0.46,
             0.5
           ],
           [
-            0.5,
-            0.46
+            0.54,
+            0.48
           ]
         ],
-        "wobble": "handheld"
+        "wobble": "breathe",
+        "easing": "smoothstep"
       },
       "transition_in": {
         "type": "dissolve",
-        "dur": 0.3
+        "dur": 0.28
       },
+      "detail_fx": [
+        {
+          "type": "eye_blink",
+          "image": "assets/s2_cotu_blink.jpg",
+          "region": [
+            0.268,
+            0.413,
+            0.432,
+            0.47
+          ],
+          "times": [
+            9.1,
+            12.8,
+            16.7
+          ],
+          "feather": 0.006
+        },
+        {
+          "type": "mouth_sync",
+          "speaker": "co_tu",
+          "line_ids": [
+            "l2"
+          ],
+          "closed_image": "assets/s2_cotu_mouth_closed.jpg",
+          "mid_image": "assets/scene2.jpg",
+          "open_image": "assets/s2_cotu_mouth_open.jpg",
+          "region": [
+            0.315,
+            0.468,
+            0.411,
+            0.515
+          ],
+          "fps": 12,
+          "thresh_mid": 0.16,
+          "thresh_open": 0.75,
+          "feather": 0.006
+        },
+        {
+          "type": "eye_blink",
+          "image": "assets/s2_anhhai_blink.jpg",
+          "region": [
+            0.615,
+            0.34,
+            0.763,
+            0.387
+          ],
+          "times": [
+            10.4,
+            14.9,
+            18.1
+          ],
+          "feather": 0.006
+        },
+        {
+          "type": "mouth_sync",
+          "speaker": "anh_hai",
+          "line_ids": [
+            "l3"
+          ],
+          "closed_image": "assets/s2_anhhai_mouth_closed.jpg",
+          "mid_image": "assets/scene2.jpg",
+          "open_image": "assets/s2_anhhai_mouth_open.jpg",
+          "region": [
+            0.625,
+            0.385,
+            0.727,
+            0.432
+          ],
+          "fps": 12,
+          "thresh_mid": 0.16,
+          "thresh_open": 0.75,
+          "feather": 0.006
+        },
+        {
+          "type": "screen_glow",
+          "pos": [
+            0.19,
+            0.59
+          ],
+          "radius": [
+            0.16,
+            0.14
+          ],
+          "color": [
+            255,
+            90,
+            85
+          ],
+          "start": 7.2,
+          "end": 13.4,
+          "fade": 0.25,
+          "intensity": 0.26,
+          "mode": "pulse"
+        },
+        {
+          "type": "screen_glow",
+          "pos": [
+            0.82,
+            0.54
+          ],
+          "radius": [
+            0.14,
+            0.12
+          ],
+          "color": [
+            75,
+            255,
+            165
+          ],
+          "start": 13.5,
+          "end": 19.0,
+          "fade": 0.2,
+          "intensity": 0.34,
+          "mode": "turn_on"
+        }
+      ],
       "shakes": [
         {
           "at": 13.5,
-          "amp": 24
+          "amp": 14
         }
       ]
     },
@@ -79,58 +356,309 @@
       "image": "assets/scene3.jpg",
       "start": 19.0,
       "end": 29.0,
+      "beat_type": "anomaly",
+      "motion_level": "B",
+      "motion_intent": "Hero 2.5D parallax tách 3 nhân vật & quầy phở khỏi con phố sáng; Tùng nói tiết chế khớp l4-l5, cả 3 người chớp mắt, ánh đỏ cảnh báo & xanh mép decal bong bật sáng đúng 24.42s",
       "motion": {
+        "preset": "slow_push_in",
         "scale": [
-          1.03,
-          1.12
+          1.02,
+          1.09
         ],
         "focus": [
           [
             0.5,
-            0.48
+            0.5
           ],
           [
             0.5,
             0.52
           ]
         ],
-        "wobble": "handheld"
+        "wobble": "none"
       },
       "transition_in": {
         "type": "dissolve",
-        "dur": 0.3
-      }
+        "dur": 0.28
+      },
+      "parallax": {
+        "camera": "push_in",
+        "dolly": [
+          1.02,
+          1.09
+        ],
+        "shift_x": [
+          0.0,
+          0.0
+        ],
+        "shift_y": [
+          0.0,
+          -5.0
+        ],
+        "focus": [
+          0.5,
+          0.51
+        ],
+        "strength": 0.88,
+        "easing": "smoothstep",
+        "layers": [
+          {
+            "role": "bg",
+            "image": "assets/s3_bg.jpg",
+            "depth": 0.42,
+            "blur": 0.7
+          },
+          {
+            "role": "fg",
+            "image": "assets/s3_fg.png",
+            "depth": 1.24,
+            "breathe_y": 1.6,
+            "breathe_scale": 0.004,
+            "breathe_period": 3.2
+          }
+        ]
+      },
+      "detail_fx": [
+        {
+          "type": "eye_blink",
+          "layer": "fg",
+          "image": "assets/s3_tung_blink.jpg",
+          "region": [
+            0.414,
+            0.278,
+            0.617,
+            0.323
+          ],
+          "times": [
+            20.8,
+            24.4,
+            27.6
+          ],
+          "feather": 0.007
+        },
+        {
+          "type": "mouth_sync",
+          "layer": "fg",
+          "speaker": "thang_tun",
+          "line_ids": [
+            "l4",
+            "l5"
+          ],
+          "closed_image": "assets/scene3.jpg",
+          "mid_image": "assets/s3_tung_mouth_mid.jpg",
+          "open_image": "assets/s3_tung_mouth_open.jpg",
+          "region": [
+            0.461,
+            0.328,
+            0.573,
+            0.376
+          ],
+          "fps": 12,
+          "thresh_mid": 0.16,
+          "thresh_open": 0.74,
+          "feather": 0.006
+        },
+        {
+          "type": "eye_blink",
+          "layer": "fg",
+          "image": "assets/s3_cotu_blink.jpg",
+          "region": [
+            0.112,
+            0.358,
+            0.292,
+            0.404
+          ],
+          "times": [
+            21.9,
+            26.2
+          ],
+          "feather": 0.006
+        },
+        {
+          "type": "eye_blink",
+          "layer": "fg",
+          "image": "assets/s3_anhhai_blink.jpg",
+          "region": [
+            0.745,
+            0.267,
+            0.914,
+            0.314
+          ],
+          "times": [
+            22.6,
+            26.8
+          ],
+          "feather": 0.006
+        },
+        {
+          "type": "screen_glow",
+          "space": "frame",
+          "pos": [
+            0.38,
+            0.48
+          ],
+          "radius": [
+            0.15,
+            0.14
+          ],
+          "color": [
+            255,
+            65,
+            70
+          ],
+          "start": 19.05,
+          "end": 29.0,
+          "fade": 0.25,
+          "intensity": 0.3,
+          "mode": "pulse"
+        },
+        {
+          "type": "screen_glow",
+          "space": "frame",
+          "pos": [
+            0.52,
+            0.62
+          ],
+          "radius": [
+            0.16,
+            0.14
+          ],
+          "color": [
+            95,
+            230,
+            255
+          ],
+          "start": 24.42,
+          "end": 29.0,
+          "fade": 0.22,
+          "intensity": 0.32,
+          "mode": "turn_on"
+        }
+      ]
     },
     {
       "id": "s4_lot_decal",
       "image": "assets/scene4.jpg",
       "start": 29.0,
       "end": 42.6,
+      "beat_type": "climax",
+      "motion_level": "C",
+      "motion_intent": "Lùi mở từ miếng decal mã QR giả đang bị lột phăng: Cô Tư che miệng bàng hoàng chớp mắt, Tùng chớp mắt nghiêng mặt, Anh Hai thở phào nói tiết chế khớp l7",
       "motion": {
+        "preset": "slow_pull_out",
         "scale": [
-          1.12,
-          1.03
+          1.1,
+          1.02
         ],
         "focus": [
           [
             0.5,
-            0.48
+            0.52
           ],
           [
             0.5,
-            0.5
+            0.48
           ]
         ],
-        "wobble": "calm"
+        "wobble": "breathe",
+        "easing": "smoothstep"
       },
       "transition_in": {
         "type": "flash_white",
         "dur": 0.25
       },
+      "detail_fx": [
+        {
+          "type": "eye_blink",
+          "image": "assets/s4_cotu_blink.jpg",
+          "region": [
+            0.422,
+            0.266,
+            0.617,
+            0.314
+          ],
+          "times": [
+            31.4,
+            35.2,
+            39.6
+          ],
+          "feather": 0.007
+        },
+        {
+          "type": "eye_blink",
+          "image": "assets/s4_tung_blink.jpg",
+          "region": [
+            0.146,
+            0.424,
+            0.242,
+            0.478
+          ],
+          "times": [
+            32.9,
+            37.8
+          ],
+          "feather": 0.006
+        },
+        {
+          "type": "mouth_sync",
+          "speaker": "anh_hai",
+          "line_ids": [
+            "l7"
+          ],
+          "closed_image": "assets/s4_anhhai_mouth_closed.jpg",
+          "mid_image": "assets/scene4.jpg",
+          "open_image": "assets/s4_anhhai_mouth_open.jpg",
+          "region": [
+            0.773,
+            0.323,
+            0.888,
+            0.375
+          ],
+          "fps": 12,
+          "thresh_mid": 0.16,
+          "thresh_open": 0.75,
+          "feather": 0.006
+        },
+        {
+          "type": "screen_glow",
+          "pos": [
+            0.52,
+            0.62
+          ],
+          "radius": [
+            0.18,
+            0.15
+          ],
+          "color": [
+            255,
+            75,
+            80
+          ],
+          "start": 29.05,
+          "end": 42.6,
+          "fade": 0.22,
+          "intensity": 0.34,
+          "mode": "turn_on"
+        },
+        {
+          "type": "light_shift",
+          "at": 29.05,
+          "dur": 0.12,
+          "end": 29.4,
+          "end_dur": 0.25,
+          "brightness": 1.18,
+          "tint_rgb": [
+            255,
+            120,
+            100
+          ],
+          "tint_strength": 0.12
+        }
+      ],
       "shakes": [
         {
-          "at": 29.1,
-          "amp": 28
+          "at": 29.05,
+          "amp": 16
         }
       ]
     },
@@ -139,58 +667,264 @@
       "image": "assets/scene5.jpg",
       "start": 42.6,
       "end": 48.6,
+      "beat_type": "information",
+      "motion_level": "C",
+      "motion_intent": "Trượt dọc xuống từ hai kẻ gian cười gom tiền qua mã giả đến khoảnh khắc còng số tám khóa chặt kèm đèn còi đỏ/xanh nhấp nháy",
       "motion": {
+        "preset": "drift_down",
         "scale": [
-          1.03,
-          1.1
+          1.06,
+          1.07
         ],
         "focus": [
           [
             0.5,
-            0.5
+            0.44
           ],
           [
             0.5,
-            0.45
+            0.55
           ]
         ],
-        "wobble": "calm"
+        "wobble": "calm",
+        "easing": "smoothstep"
       },
       "transition_in": {
         "type": "glitch",
-        "dur": 0.3
-      }
+        "dur": 0.28
+      },
+      "detail_fx": [
+        {
+          "type": "screen_glow",
+          "pos": [
+            0.48,
+            0.35
+          ],
+          "radius": [
+            0.26,
+            0.16
+          ],
+          "color": [
+            255,
+            65,
+            85
+          ],
+          "start": 42.6,
+          "end": 46.2,
+          "fade": 0.25,
+          "intensity": 0.3,
+          "mode": "pulse"
+        },
+        {
+          "type": "screen_glow",
+          "pos": [
+            0.14,
+            0.76
+          ],
+          "radius": [
+            0.18,
+            0.12
+          ],
+          "color": [
+            70,
+            160,
+            255
+          ],
+          "start": 45.2,
+          "end": 48.6,
+          "fade": 0.2,
+          "intensity": 0.34,
+          "mode": "flicker"
+        },
+        {
+          "type": "screen_glow",
+          "pos": [
+            0.86,
+            0.76
+          ],
+          "radius": [
+            0.18,
+            0.12
+          ],
+          "color": [
+            255,
+            65,
+            80
+          ],
+          "start": 45.2,
+          "end": 48.6,
+          "fade": 0.2,
+          "intensity": 0.34,
+          "mode": "flicker"
+        },
+        {
+          "type": "light_shift",
+          "at": 45.3,
+          "dur": 0.1,
+          "end": 45.6,
+          "end_dur": 0.2,
+          "brightness": 1.18,
+          "tint_rgb": [
+            255,
+            225,
+            135
+          ],
+          "tint_strength": 0.12
+        }
+      ]
     },
     {
-      "id": "s6_ket_luan",
+      "id": "s6a_hop_kinh_loa",
       "image": "assets/scene6.jpg",
       "start": 48.6,
-      "end": 56.0,
+      "end": 51.0,
+      "beat_type": "aftermath",
+      "motion_level": "C",
+      "motion_intent": "Lùi nhẹ ấm áp khi quán Cô Tư khóa mã QR trong hộp kính kèm loa báo số dư bật sáng xanh đúng tiếng bank_ting 48.7s; Cô Tư cười nói nhẹ khớp l9",
       "motion": {
+        "preset": "slow_pull_out",
         "scale": [
-          1.02,
-          1.06
+          1.07,
+          1.01
         ],
         "focus": [
           [
             0.5,
-            0.48
+            0.46
           ],
           [
             0.5,
-            0.48
+            0.49
           ]
         ],
-        "wobble": "none"
+        "wobble": "breathe",
+        "easing": "smoothstep"
       },
       "transition_in": {
-        "type": "fade_black",
-        "dur": 0.3
+        "type": "dissolve",
+        "dur": 0.28
+      },
+      "detail_fx": [
+        {
+          "type": "eye_blink",
+          "image": "assets/s6a_cotu_blink.jpg",
+          "region": [
+            0.12,
+            0.355,
+            0.292,
+            0.4
+          ],
+          "times": [
+            49.9
+          ],
+          "feather": 0.006
+        },
+        {
+          "type": "mouth_sync",
+          "speaker": "co_tu",
+          "line_ids": [
+            "l9"
+          ],
+          "closed_image": "assets/s6a_cotu_mouth_closed.jpg",
+          "mid_image": "assets/scene6.jpg",
+          "open_image": "assets/s6a_cotu_mouth_open.jpg",
+          "region": [
+            0.138,
+            0.404,
+            0.273,
+            0.456
+          ],
+          "fps": 12,
+          "thresh_mid": 0.16,
+          "thresh_open": 0.75,
+          "feather": 0.006
+        },
+        {
+          "type": "eye_blink",
+          "image": "assets/s6a_tung_blink.jpg",
+          "region": [
+            0.411,
+            0.278,
+            0.615,
+            0.323
+          ],
+          "times": [
+            49.55
+          ],
+          "feather": 0.006
+        },
+        {
+          "type": "eye_blink",
+          "image": "assets/s6a_anhhai_blink.jpg",
+          "region": [
+            0.734,
+            0.27,
+            0.906,
+            0.315
+          ],
+          "times": [
+            50.2
+          ],
+          "feather": 0.006
+        },
+        {
+          "type": "screen_glow",
+          "pos": [
+            0.74,
+            0.65
+          ],
+          "radius": [
+            0.2,
+            0.14
+          ],
+          "color": [
+            80,
+            255,
+            175
+          ],
+          "start": 48.65,
+          "end": 51.0,
+          "fade": 0.22,
+          "intensity": 0.34,
+          "mode": "turn_on"
+        }
+      ]
+    },
+    {
+      "id": "s6b_nho_ky_an_toan",
+      "image": "assets/scene6.jpg",
+      "start": 51.0,
+      "end": 56.0,
+      "beat_type": "ending",
+      "motion_level": "A",
+      "motion_intent": "Giữ khung tĩnh sạch sẽ, bình an phía sau bảng NHỚ KỸ và thẻ Disclaimer",
+      "motion": {
+        "preset": "static_hold",
+        "scale": [
+          1.01,
+          1.02
+        ],
+        "focus": [
+          [
+            0.5,
+            0.49
+          ],
+          [
+            0.5,
+            0.49
+          ]
+        ],
+        "wobble": "none",
+        "easing": "linear"
+      },
+      "transition_in": {
+        "type": "cut",
+        "dur": 0.0
       }
     }
   ],
-  "subtitle_srt": "factory/staging/EP04/subtitles/EP04.srt",
-  "video_track_noaudio": "factory/staging/EP04/timeline_video_gate4.mp4",
+  "subtitle_srt": "factory619/staging/EP04/subtitles/EP04.srt",
+  "video_track_noaudio": "factory619/staging/EP04/timeline_video_gate4.mp4",
   "channel_branding": {
     "type": "channel_branding",
     "logo_text": "VCH",
@@ -199,27 +933,27 @@
   },
   "overlays": [
     {
-      "id": "00_hook",
+      "id": "000_hook",
       "start_sec": 0.2,
       "end_sec": 4.2,
       "fade_sec": 0.3,
-      "png_path": "factory/staging/EP04/overlays/00_hook.png",
+      "png_path": "factory619/staging/EP04/overlays/000_hook.png",
       "type": "text_hook",
       "text": "DÁN ĐÈ MÃ QR HÀNG LOẠT QUÁN ĂN BAN ĐÊM — Khách quét mã đã trừ tiền mà chủ quán không nhận được đồng nào… Suýt cãi nhau to!",
       "bbox_px": [
-        84,
+        82,
         170,
-        916,
+        918,
         416
       ],
       "safe_zone_compliant": true
     },
     {
-      "id": "01_sub_l1",
+      "id": "001_sub_l1",
       "start_sec": 0.05,
       "end_sec": 7.07,
       "fade_sec": 0.1,
-      "png_path": "factory/staging/EP04/overlays/01_sub_l1.png",
+      "png_path": "factory619/staging/EP04/overlays/001_sub_l1.png",
       "type": "subtitle",
       "lines": [
         "Đêm khuya kẻ gian rảo khắp phố, lén",
@@ -227,249 +961,7 @@
         "hàng chục quán ăn!"
       ],
       "bbox_px": [
-        99,
-        1212,
-        902,
-        1380
-      ],
-      "safe_zone_compliant": true
-    },
-    {
-      "id": "02_sub_l2",
-      "start_sec": 7.12,
-      "end_sec": 8.233,
-      "fade_sec": 0.1,
-      "png_path": "factory/staging/EP04/overlays/02_sub_l2.png",
-      "type": "subtitle",
-      "lines": [
-        "Khoan đã anh ơi!"
-      ],
-      "bbox_px": [
-        309,
-        1324,
-        692,
-        1380
-      ],
-      "safe_zone_compliant": true
-    },
-    {
-      "id": "03_sub_l2",
-      "start_sec": 8.233,
-      "end_sec": 13.38,
-      "fade_sec": 0.1,
-      "png_path": "factory/staging/EP04/overlays/03_sub_l2.png",
-      "type": "subtitle",
-      "lines": [
-        "Sáng giờ mấy chục khách báo chuyển",
-        "rồi mà máy tôi chưa nhận được đồng",
-        "nào!"
-      ],
-      "bbox_px": [
-        98,
-        1212,
-        903,
-        1380
-      ],
-      "safe_zone_compliant": true
-    },
-    {
-      "id": "04_sub_l3",
-      "start_sec": 13.45,
-      "end_sec": 14.416,
-      "fade_sec": 0.1,
-      "png_path": "factory/staging/EP04/overlays/04_sub_l3.png",
-      "type": "subtitle",
-      "lines": [
-        "Cô nói kỳ vậy?!"
-      ],
-      "bbox_px": [
-        330,
-        1324,
-        671,
-        1380
-      ],
-      "safe_zone_compliant": true
-    },
-    {
-      "id": "05_sub_l3",
-      "start_sec": 14.416,
-      "end_sec": 18.99,
-      "fade_sec": 0.1,
-      "png_path": "factory/staging/EP04/overlays/05_sub_l3.png",
-      "type": "subtitle",
-      "lines": [
-        "Tôi quét đúng bảng mã trên quầy cô,",
-        "trừ tiền thành công rõ ràng đây nè!"
-      ],
-      "bbox_px": [
-        100,
-        1268,
-        901,
-        1380
-      ],
-      "safe_zone_compliant": true
-    },
-    {
-      "id": "06_sub_l4",
-      "start_sec": 19.05,
-      "end_sec": 20.529,
-      "fade_sec": 0.1,
-      "png_path": "factory/staging/EP04/overlays/06_sub_l4.png",
-      "type": "subtitle",
-      "lines": [
-        "Hai người đừng cãi nhau!"
-      ],
-      "bbox_px": [
-        220,
-        1324,
-        780,
-        1380
-      ],
-      "safe_zone_compliant": true
-    },
-    {
-      "id": "07_sub_l4",
-      "start_sec": 20.529,
-      "end_sec": 24.35,
-      "fade_sec": 0.1,
-      "png_path": "factory/staging/EP04/overlays/07_sub_l4.png",
-      "type": "subtitle",
-      "lines": [
-        "Em vừa quét thử nè, sao quán Cô Tư",
-        "mà tên người nhận lạ hoắc?!"
-      ],
-      "bbox_px": [
-        110,
-        1268,
-        891,
-        1380
-      ],
-      "safe_zone_compliant": true
-    },
-    {
-      "id": "08_sub_l5",
-      "start_sec": 24.42,
-      "end_sec": 25.702,
-      "fade_sec": 0.1,
-      "png_path": "factory/staging/EP04/overlays/08_sub_l5.png",
-      "type": "subtitle",
-      "lines": [
-        "Nhìn sát vô bảng mã kìa!"
-      ],
-      "bbox_px": [
-        227,
-        1324,
-        774,
-        1380
-      ],
-      "safe_zone_compliant": true
-    },
-    {
-      "id": "09_sub_l5",
-      "start_sec": 25.702,
-      "end_sec": 28.96,
-      "fade_sec": 0.1,
-      "png_path": "factory/staging/EP04/overlays/09_sub_l5.png",
-      "type": "subtitle",
-      "lines": [
-        "Có nguyên một miếng decal mới tinh",
-        "vừa bị ai dán đè lên trên!"
-      ],
-      "bbox_px": [
-        100,
-        1268,
-        900,
-        1380
-      ],
-      "safe_zone_compliant": true
-    },
-    {
-      "id": "10_sub_l6",
-      "start_sec": 29.05,
-      "end_sec": 30.067,
-      "fade_sec": 0.1,
-      "png_path": "factory/staging/EP04/overlays/10_sub_l6.png",
-      "type": "subtitle",
-      "lines": [
-        "Trời đất ơi!"
-      ],
-      "bbox_px": [
-        369,
-        1324,
-        632,
-        1380
-      ],
-      "safe_zone_compliant": true
-    },
-    {
-      "id": "11_sub_l6",
-      "start_sec": 30.067,
-      "end_sec": 32.356,
-      "fade_sec": 0.1,
-      "png_path": "factory/staging/EP04/overlays/11_sub_l6.png",
-      "type": "subtitle",
-      "lines": [
-        "Bị dán đè mã giả thiệt rồi!"
-      ],
-      "bbox_px": [
-        215,
-        1324,
-        785,
-        1380
-      ],
-      "safe_zone_compliant": true
-    },
-    {
-      "id": "12_sub_l6",
-      "start_sec": 32.356,
-      "end_sec": 36.51,
-      "fade_sec": 0.1,
-      "png_path": "factory/staging/EP04/overlays/12_sub_l6.png",
-      "type": "subtitle",
-      "lines": [
-        "Hèn gì sáng giờ tiền khách chuyển",
-        "bay đi đâu hết!"
-      ],
-      "bbox_px": [
-        128,
-        1268,
-        872,
-        1380
-      ],
-      "safe_zone_compliant": true
-    },
-    {
-      "id": "13_sub_l7",
-      "start_sec": 36.58,
-      "end_sec": 37.075,
-      "fade_sec": 0.1,
-      "png_path": "factory/staging/EP04/overlays/13_sub_l7.png",
-      "type": "subtitle",
-      "lines": [
-        "Hú hồn!"
-      ],
-      "bbox_px": [
-        402,
-        1324,
-        599,
-        1380
-      ],
-      "safe_zone_compliant": true
-    },
-    {
-      "id": "14_sub_l7",
-      "start_sec": 37.075,
-      "end_sec": 42.52,
-      "fade_sec": 0.1,
-      "png_path": "factory/staging/EP04/overlays/14_sub_l7.png",
-      "type": "subtitle",
-      "lines": [
-        "May mà em trai nhìn kỹ tên, không là",
-        "tôi vừa mất tiền vừa mang tiếng quỵt",
-        "nợ!"
-      ],
-      "bbox_px": [
-        96,
+        97,
         1212,
         904,
         1380
@@ -477,11 +969,253 @@
       "safe_zone_compliant": true
     },
     {
-      "id": "15_sub_l8",
+      "id": "002_sub_l2",
+      "start_sec": 7.12,
+      "end_sec": 8.233,
+      "fade_sec": 0.1,
+      "png_path": "factory619/staging/EP04/overlays/002_sub_l2.png",
+      "type": "subtitle",
+      "lines": [
+        "Khoan đã anh ơi!"
+      ],
+      "bbox_px": [
+        307,
+        1324,
+        694,
+        1380
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "003_sub_l2",
+      "start_sec": 8.233,
+      "end_sec": 13.38,
+      "fade_sec": 0.1,
+      "png_path": "factory619/staging/EP04/overlays/003_sub_l2.png",
+      "type": "subtitle",
+      "lines": [
+        "Sáng giờ mấy chục khách báo chuyển",
+        "rồi mà máy tôi chưa nhận được đồng",
+        "nào!"
+      ],
+      "bbox_px": [
+        96,
+        1212,
+        905,
+        1380
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "004_sub_l3",
+      "start_sec": 13.45,
+      "end_sec": 14.416,
+      "fade_sec": 0.1,
+      "png_path": "factory619/staging/EP04/overlays/004_sub_l3.png",
+      "type": "subtitle",
+      "lines": [
+        "Cô nói kỳ vậy?!"
+      ],
+      "bbox_px": [
+        328,
+        1324,
+        673,
+        1380
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "005_sub_l3",
+      "start_sec": 14.416,
+      "end_sec": 18.99,
+      "fade_sec": 0.1,
+      "png_path": "factory619/staging/EP04/overlays/005_sub_l3.png",
+      "type": "subtitle",
+      "lines": [
+        "Tôi quét đúng bảng mã trên quầy cô,",
+        "trừ tiền thành công rõ ràng đây nè!"
+      ],
+      "bbox_px": [
+        98,
+        1268,
+        903,
+        1380
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "006_sub_l4",
+      "start_sec": 19.05,
+      "end_sec": 20.529,
+      "fade_sec": 0.1,
+      "png_path": "factory619/staging/EP04/overlays/006_sub_l4.png",
+      "type": "subtitle",
+      "lines": [
+        "Hai người đừng cãi nhau!"
+      ],
+      "bbox_px": [
+        218,
+        1324,
+        782,
+        1380
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "007_sub_l4",
+      "start_sec": 20.529,
+      "end_sec": 24.35,
+      "fade_sec": 0.1,
+      "png_path": "factory619/staging/EP04/overlays/007_sub_l4.png",
+      "type": "subtitle",
+      "lines": [
+        "Em vừa quét thử nè, sao quán Cô Tư",
+        "mà tên người nhận lạ hoắc?!"
+      ],
+      "bbox_px": [
+        108,
+        1268,
+        893,
+        1380
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "008_sub_l5",
+      "start_sec": 24.42,
+      "end_sec": 25.702,
+      "fade_sec": 0.1,
+      "png_path": "factory619/staging/EP04/overlays/008_sub_l5.png",
+      "type": "subtitle",
+      "lines": [
+        "Nhìn sát vô bảng mã kìa!"
+      ],
+      "bbox_px": [
+        225,
+        1324,
+        776,
+        1380
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "009_sub_l5",
+      "start_sec": 25.702,
+      "end_sec": 28.96,
+      "fade_sec": 0.1,
+      "png_path": "factory619/staging/EP04/overlays/009_sub_l5.png",
+      "type": "subtitle",
+      "lines": [
+        "Có nguyên một miếng decal mới tinh",
+        "vừa bị ai dán đè lên trên!"
+      ],
+      "bbox_px": [
+        98,
+        1268,
+        902,
+        1380
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "010_sub_l6",
+      "start_sec": 29.05,
+      "end_sec": 30.067,
+      "fade_sec": 0.1,
+      "png_path": "factory619/staging/EP04/overlays/010_sub_l6.png",
+      "type": "subtitle",
+      "lines": [
+        "Trời đất ơi!"
+      ],
+      "bbox_px": [
+        367,
+        1324,
+        634,
+        1380
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "011_sub_l6",
+      "start_sec": 30.067,
+      "end_sec": 32.356,
+      "fade_sec": 0.1,
+      "png_path": "factory619/staging/EP04/overlays/011_sub_l6.png",
+      "type": "subtitle",
+      "lines": [
+        "Bị dán đè mã giả thiệt rồi!"
+      ],
+      "bbox_px": [
+        213,
+        1324,
+        787,
+        1380
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "012_sub_l6",
+      "start_sec": 32.356,
+      "end_sec": 36.51,
+      "fade_sec": 0.1,
+      "png_path": "factory619/staging/EP04/overlays/012_sub_l6.png",
+      "type": "subtitle",
+      "lines": [
+        "Hèn gì sáng giờ tiền khách chuyển",
+        "bay đi đâu hết!"
+      ],
+      "bbox_px": [
+        126,
+        1268,
+        874,
+        1380
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "013_sub_l7",
+      "start_sec": 36.58,
+      "end_sec": 37.075,
+      "fade_sec": 0.1,
+      "png_path": "factory619/staging/EP04/overlays/013_sub_l7.png",
+      "type": "subtitle",
+      "lines": [
+        "Hú hồn!"
+      ],
+      "bbox_px": [
+        400,
+        1324,
+        601,
+        1380
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "014_sub_l7",
+      "start_sec": 37.075,
+      "end_sec": 42.52,
+      "fade_sec": 0.1,
+      "png_path": "factory619/staging/EP04/overlays/014_sub_l7.png",
+      "type": "subtitle",
+      "lines": [
+        "May mà em trai nhìn kỹ tên, không là",
+        "tôi vừa mất tiền vừa mang tiếng quỵt",
+        "nợ!"
+      ],
+      "bbox_px": [
+        94,
+        1212,
+        906,
+        1380
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "015_sub_l8",
       "start_sec": 42.6,
       "end_sec": 48.58,
       "fade_sec": 0.1,
-      "png_path": "factory/staging/EP04/overlays/15_sub_l8.png",
+      "png_path": "factory619/staging/EP04/overlays/015_sub_l8.png",
       "type": "subtitle",
       "lines": [
         "Chỉ vài miếng decal dán trộm ban",
@@ -489,27 +1223,7 @@
         "hàng chục người mua vội!"
       ],
       "bbox_px": [
-        109,
-        1212,
-        892,
-        1380
-      ],
-      "safe_zone_compliant": true
-    },
-    {
-      "id": "16_sub_l9",
-      "start_sec": 48.65,
-      "end_sec": 55.59,
-      "fade_sec": 0.1,
-      "png_path": "factory/staging/EP04/overlays/16_sub_l9.png",
-      "type": "subtitle",
-      "lines": [
-        "Nhớ nha: Chủ quán phải kiểm tra",
-        "bảng mã mỗi sáng, còn khách phải",
-        "nhìn đúng tên chủ quán hãy chuyển!"
-      ],
-      "bbox_px": [
-        106,
+        107,
         1212,
         894,
         1380
@@ -517,11 +1231,31 @@
       "safe_zone_compliant": true
     },
     {
-      "id": "17_redflags_0",
+      "id": "016_sub_l9",
+      "start_sec": 48.65,
+      "end_sec": 55.59,
+      "fade_sec": 0.1,
+      "png_path": "factory619/staging/EP04/overlays/016_sub_l9.png",
+      "type": "subtitle",
+      "lines": [
+        "Nhớ nha: Chủ quán phải kiểm tra",
+        "bảng mã mỗi sáng, còn khách phải",
+        "nhìn đúng tên chủ quán hãy chuyển!"
+      ],
+      "bbox_px": [
+        104,
+        1212,
+        896,
+        1380
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "017_redflags_0",
       "start_sec": 51.0,
       "end_sec": 51.4,
       "fade_sec": 0.25,
-      "png_path": "factory/staging/EP04/overlays/17_redflags_0.png",
+      "png_path": "factory619/staging/EP04/overlays/017_redflags_0.png",
       "type": "red_flags",
       "title": "NHỚ KỸ",
       "lines": [
@@ -539,11 +1273,11 @@
       "safe_zone_compliant": true
     },
     {
-      "id": "18_redflags_1",
+      "id": "018_redflags_1",
       "start_sec": 51.4,
       "end_sec": 51.8,
       "fade_sec": 0.0,
-      "png_path": "factory/staging/EP04/overlays/18_redflags_1.png",
+      "png_path": "factory619/staging/EP04/overlays/018_redflags_1.png",
       "type": "red_flags",
       "title": "NHỚ KỸ",
       "lines": [
@@ -561,11 +1295,11 @@
       "safe_zone_compliant": true
     },
     {
-      "id": "19_redflags_2",
+      "id": "019_redflags_2",
       "start_sec": 51.8,
       "end_sec": 52.2,
       "fade_sec": 0.0,
-      "png_path": "factory/staging/EP04/overlays/19_redflags_2.png",
+      "png_path": "factory619/staging/EP04/overlays/019_redflags_2.png",
       "type": "red_flags",
       "title": "NHỚ KỸ",
       "lines": [
@@ -583,11 +1317,11 @@
       "safe_zone_compliant": true
     },
     {
-      "id": "20_redflags_3",
+      "id": "020_redflags_3",
       "start_sec": 52.2,
       "end_sec": 53.5,
       "fade_sec": 0.0,
-      "png_path": "factory/staging/EP04/overlays/20_redflags_3.png",
+      "png_path": "factory619/staging/EP04/overlays/020_redflags_3.png",
       "type": "red_flags",
       "title": "NHỚ KỸ",
       "lines": [
@@ -605,67 +1339,127 @@
       "safe_zone_compliant": true
     },
     {
-      "id": "21_disclaimer",
+      "id": "021_disclaimer",
       "start_sec": 53.5,
       "end_sec": 56.0,
       "fade_sec": 0.25,
-      "png_path": "factory/staging/EP04/overlays/21_disclaimer.png",
+      "png_path": "factory619/staging/EP04/overlays/021_disclaimer.png",
       "type": "disclaimer",
       "text": "Tình huống được dựng lại để cảnh báo. Nhân vật, tên, số liệu đều là hư cấu.",
       "bbox_px": [
         80,
-        1260,
+        210,
         920,
-        1390
+        340
       ],
       "safe_zone_compliant": true
     }
   ],
   "qa_preview_frames": [
     {
+      "timestamp_sec": 0.6,
+      "clean": "factory619/staging/EP04/preview_frames/qa_00_60s_clean.jpg",
+      "safezone": "factory619/staging/EP04/preview_frames/qa_00_60s_safezone.jpg"
+    },
+    {
+      "timestamp_sec": 0.7,
+      "clean": "factory619/staging/EP04/preview_frames/qa_00_70s_clean.jpg",
+      "safezone": "factory619/staging/EP04/preview_frames/qa_00_70s_safezone.jpg"
+    },
+    {
       "timestamp_sec": 1.2,
-      "clean": "factory/staging/EP04/preview_frames/qa_01_20s_clean.jpg",
-      "safezone": "factory/staging/EP04/preview_frames/qa_01_20s_safezone.jpg"
+      "clean": "factory619/staging/EP04/preview_frames/qa_01_20s_clean.jpg",
+      "safezone": "factory619/staging/EP04/preview_frames/qa_01_20s_safezone.jpg"
     },
     {
       "timestamp_sec": 3.55,
-      "clean": "factory/staging/EP04/preview_frames/qa_03_55s_clean.jpg",
-      "safezone": "factory/staging/EP04/preview_frames/qa_03_55s_safezone.jpg"
+      "clean": "factory619/staging/EP04/preview_frames/qa_03_55s_clean.jpg",
+      "safezone": "factory619/staging/EP04/preview_frames/qa_03_55s_safezone.jpg"
+    },
+    {
+      "timestamp_sec": 7.65,
+      "clean": "factory619/staging/EP04/preview_frames/qa_07_65s_clean.jpg",
+      "safezone": "factory619/staging/EP04/preview_frames/qa_07_65s_safezone.jpg"
     },
     {
       "timestamp_sec": 13.05,
-      "clean": "factory/staging/EP04/preview_frames/qa_13_05s_clean.jpg",
-      "safezone": "factory/staging/EP04/preview_frames/qa_13_05s_safezone.jpg"
+      "clean": "factory619/staging/EP04/preview_frames/qa_13_05s_clean.jpg",
+      "safezone": "factory619/staging/EP04/preview_frames/qa_13_05s_safezone.jpg"
+    },
+    {
+      "timestamp_sec": 13.9,
+      "clean": "factory619/staging/EP04/preview_frames/qa_13_90s_clean.jpg",
+      "safezone": "factory619/staging/EP04/preview_frames/qa_13_90s_safezone.jpg"
+    },
+    {
+      "timestamp_sec": 19.5,
+      "clean": "factory619/staging/EP04/preview_frames/qa_19_50s_clean.jpg",
+      "safezone": "factory619/staging/EP04/preview_frames/qa_19_50s_safezone.jpg"
     },
     {
       "timestamp_sec": 24.0,
-      "clean": "factory/staging/EP04/preview_frames/qa_24_00s_clean.jpg",
-      "safezone": "factory/staging/EP04/preview_frames/qa_24_00s_safezone.jpg"
+      "clean": "factory619/staging/EP04/preview_frames/qa_24_00s_clean.jpg",
+      "safezone": "factory619/staging/EP04/preview_frames/qa_24_00s_safezone.jpg"
+    },
+    {
+      "timestamp_sec": 24.84,
+      "clean": "factory619/staging/EP04/preview_frames/qa_24_84s_clean.jpg",
+      "safezone": "factory619/staging/EP04/preview_frames/qa_24_84s_safezone.jpg"
+    },
+    {
+      "timestamp_sec": 29.32,
+      "clean": "factory619/staging/EP04/preview_frames/qa_29_32s_clean.jpg",
+      "safezone": "factory619/staging/EP04/preview_frames/qa_29_32s_safezone.jpg"
+    },
+    {
+      "timestamp_sec": 29.47,
+      "clean": "factory619/staging/EP04/preview_frames/qa_29_47s_clean.jpg",
+      "safezone": "factory619/staging/EP04/preview_frames/qa_29_47s_safezone.jpg"
     },
     {
       "timestamp_sec": 35.8,
-      "clean": "factory/staging/EP04/preview_frames/qa_35_80s_clean.jpg",
-      "safezone": "factory/staging/EP04/preview_frames/qa_35_80s_safezone.jpg"
+      "clean": "factory619/staging/EP04/preview_frames/qa_35_80s_clean.jpg",
+      "safezone": "factory619/staging/EP04/preview_frames/qa_35_80s_safezone.jpg"
+    },
+    {
+      "timestamp_sec": 43.05,
+      "clean": "factory619/staging/EP04/preview_frames/qa_43_05s_clean.jpg",
+      "safezone": "factory619/staging/EP04/preview_frames/qa_43_05s_safezone.jpg"
+    },
+    {
+      "timestamp_sec": 45.55,
+      "clean": "factory619/staging/EP04/preview_frames/qa_45_55s_clean.jpg",
+      "safezone": "factory619/staging/EP04/preview_frames/qa_45_55s_safezone.jpg"
     },
     {
       "timestamp_sec": 45.6,
-      "clean": "factory/staging/EP04/preview_frames/qa_45_60s_clean.jpg",
-      "safezone": "factory/staging/EP04/preview_frames/qa_45_60s_safezone.jpg"
+      "clean": "factory619/staging/EP04/preview_frames/qa_45_60s_clean.jpg",
+      "safezone": "factory619/staging/EP04/preview_frames/qa_45_60s_safezone.jpg"
     },
     {
-      "timestamp_sec": 52.3,
-      "clean": "factory/staging/EP04/preview_frames/qa_52_30s_clean.jpg",
-      "safezone": "factory/staging/EP04/preview_frames/qa_52_30s_safezone.jpg"
+      "timestamp_sec": 49.07,
+      "clean": "factory619/staging/EP04/preview_frames/qa_49_07s_clean.jpg",
+      "safezone": "factory619/staging/EP04/preview_frames/qa_49_07s_safezone.jpg"
+    },
+    {
+      "timestamp_sec": 49.8,
+      "clean": "factory619/staging/EP04/preview_frames/qa_49_80s_clean.jpg",
+      "safezone": "factory619/staging/EP04/preview_frames/qa_49_80s_safezone.jpg"
     },
     {
       "timestamp_sec": 53.0,
-      "clean": "factory/staging/EP04/preview_frames/qa_53_00s_clean.jpg",
-      "safezone": "factory/staging/EP04/preview_frames/qa_53_00s_safezone.jpg"
+      "clean": "factory619/staging/EP04/preview_frames/qa_53_00s_clean.jpg",
+      "safezone": "factory619/staging/EP04/preview_frames/qa_53_00s_safezone.jpg"
+    },
+    {
+      "timestamp_sec": 53.5,
+      "clean": "factory619/staging/EP04/preview_frames/qa_53_50s_clean.jpg",
+      "safezone": "factory619/staging/EP04/preview_frames/qa_53_50s_safezone.jpg"
     },
     {
       "timestamp_sec": 54.75,
-      "clean": "factory/staging/EP04/preview_frames/qa_54_75s_clean.jpg",
-      "safezone": "factory/staging/EP04/preview_frames/qa_54_75s_safezone.jpg"
+      "clean": "factory619/staging/EP04/preview_frames/qa_54_75s_clean.jpg",
+      "safezone": "factory619/staging/EP04/preview_frames/qa_54_75s_safezone.jpg"
     }
   ]
 }

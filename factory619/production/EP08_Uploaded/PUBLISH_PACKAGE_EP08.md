@@ -1,7 +1,7 @@
 # GÓI XUẤT BẢN YOUTUBE [factory619 · 9:16] – EP08: Biên lai báo nghẽn mạng – Chỉ bấm nhận lương mà trắng tay
 
 ## 📦 1. Các File Cần Dùng Khi Upload
-- **Video Master (MP4 9:16)**: [EP08_BayBienLaiNghienMang_51s.mp4](file:///C:/projects/socialScamStories/factory619/production/EP08/EP08_BayBienLaiNghienMang_51s.mp4) (23.46 MB, SHA-256 `9fe4f2bf78fc87c6…`)
+- **Video Master (MP4 9:16)**: [EP08_BayBienLaiNghienMang_51s.mp4](file:///C:/projects/socialScamStories/factory619/production/EP08/EP08_BayBienLaiNghienMang_51s.mp4) (24.12 MB, SHA-256 `ded55fc874512549…`)
 - **Phụ đề chuẩn thời gian (SRT)**: [EP08_BayBienLaiNghienMang_51s.srt](file:///C:/projects/socialScamStories/factory619/production/EP08/EP08_BayBienLaiNghienMang_51s.srt)
 - **Thumbnail dọc (9:16 — mốc `22.6s`)**: [EP08_Thumbnail_9x16.jpg](file:///C:/projects/socialScamStories/factory619/production/EP08/EP08_Thumbnail_9x16.jpg)
 - **Thumbnail ngang (16:9)**: [EP08_Thumbnail_16x9.jpg](file:///C:/projects/socialScamStories/factory619/production/EP08/EP08_Thumbnail_16x9.jpg)

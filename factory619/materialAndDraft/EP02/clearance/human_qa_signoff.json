@@ -7,9 +7,9 @@
   },
   "4": {
     "status": "PASS",
-    "by": "Antigravity Staging Visual QA",
-    "note": "",
-    "at": "2026-11-03T22:45:53+07:00"
+    "by": "User Approved",
+    "note": "Duyet ban nang cap v8-level2-abc (A=2 B=2 C=8 D=0, 12 canh goc, 2.5D s3b+s5a, thumbnail 33.75s)",
+    "at": "2026-11-22T21:39:33+07:00"
   },
   "5": {
     "status": "PASS",

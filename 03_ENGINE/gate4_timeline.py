@@ -485,6 +485,7 @@ def plate_disclaimer(cv: Canvas, header: str, lines: list[str]) -> tuple[Image.I
 # ----------------------------------------------------------------------------
 WOBBLE = {
     "none": (0.0, 0.0, 0.0, 0.0),
+    "breathe": (0.0, 0.0, 1.8, 0.25),
     "calm": (4.0, 0.18, 6.0, 0.25),
     "handheld": (6.0, 1.3, 8.0, 1.8),
     "tense": (3.0, 2.6, 4.0, 3.1),
@@ -590,7 +591,7 @@ def scene_frame(sc: dict, t: float, W: int, H: int) -> Image.Image:
     # Level B — Lightweight 2.5D Multi-Layer Parallax (max 2–3 layers)
     if sc.get("_parallax"):
         try:
-            frame = render_parallax_frame(sc["_parallax"], sc, t, W, H, extra_dx=dx, extra_dy=dy)
+            frame = render_parallax_frame(sc["_parallax"], sc, t, W, H, extra_dx=dx, extra_dy=dy, fx_list=dfx)
             return apply_post_camera_fx(frame, dfx, t, W, H) if dfx else frame
         except Exception as exc:
             if sc.get("_img") is None:

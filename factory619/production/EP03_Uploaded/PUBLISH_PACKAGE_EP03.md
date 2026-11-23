@@ -1,16 +1,16 @@
-# GÓI XUẤT BẢN YOUTUBE – EP03: Con Đang Cấp Cứu, Chuyển Gấp Viện Phí!
+# GÓI XUẤT BẢN YOUTUBE [factory619 · 9:16] – EP03: Con Đang Cấp Cứu, Chuyển Gấp Viện Phí!
 
 ## 📦 1. Các File Cần Dùng Khi Upload
-- **Video Master (MP4 9:16)**: [EP03_CapCuuGiaMao_56s.mp4](file:///C:/projects/socialScamStories/factory/production/EP03/EP03_CapCuuGiaMao_56s.mp4) (51.63 MB, SHA-256 `b1239ed531734476…`)
-- **Phụ đề chuẩn thời gian (SRT)**: [EP03_CapCuuGiaMao_56s.srt](file:///C:/projects/socialScamStories/factory/production/EP03/EP03_CapCuuGiaMao_56s.srt)
-- **Thumbnail dọc (9:16 — mốc `8.0s`)**: [EP03_Thumbnail_9x16.jpg](file:///C:/projects/socialScamStories/factory/production/EP03/EP03_Thumbnail_9x16.jpg)
-- **Thumbnail ngang (16:9 — dùng trên YouTube Studio Web)**: [EP03_Thumbnail_16x9.jpg](file:///C:/projects/socialScamStories/factory/production/EP03/EP03_Thumbnail_16x9.jpg)
+- **Video Master (MP4 9:16)**: [EP03_CapCuuGiaMao_56s.mp4](file:///C:/projects/socialScamStories/factory619/production/EP03/EP03_CapCuuGiaMao_56s.mp4) (38.42 MB, SHA-256 `9eb5a4a9bec0327a…`)
+- **Phụ đề chuẩn thời gian (SRT)**: [EP03_CapCuuGiaMao_56s.srt](file:///C:/projects/socialScamStories/factory619/production/EP03/EP03_CapCuuGiaMao_56s.srt)
+- **Thumbnail dọc (9:16 — mốc `8.0s`)**: [EP03_Thumbnail_9x16.jpg](file:///C:/projects/socialScamStories/factory619/production/EP03/EP03_Thumbnail_9x16.jpg)
+- **Thumbnail ngang (16:9)**: [EP03_Thumbnail_16x9.jpg](file:///C:/projects/socialScamStories/factory619/production/EP03/EP03_Thumbnail_16x9.jpg)
 - **Bộ file `.txt` sẵn sàng Copy–Paste nhanh**:
-  - Tiêu đề: [1_TITLE.txt](file:///C:/projects/socialScamStories/factory/production/EP03/youtube_upload/1_TITLE.txt)
-  - Mô tả (Description): [2_DESCRIPTION.txt](file:///C:/projects/socialScamStories/factory/production/EP03/youtube_upload/2_DESCRIPTION.txt)
-  - Thẻ từ khóa (Tags): [3_TAGS.txt](file:///C:/projects/socialScamStories/factory/production/EP03/youtube_upload/3_TAGS.txt)
-  - Bình luận ghim (Pinned Comment): [4_PINNED_COMMENT.txt](file:///C:/projects/socialScamStories/factory/production/EP03/youtube_upload/4_PINNED_COMMENT.txt)
-  - Hướng dẫn cài đặt YouTube Studio: [5_YOUTUBE_STUDIO_SETTINGS.md](file:///C:/projects/socialScamStories/factory/production/EP03/youtube_upload/5_YOUTUBE_STUDIO_SETTINGS.md)
+  - Tiêu đề: [1_TITLE.txt](file:///C:/projects/socialScamStories/factory619/production/EP03/youtube_upload/1_TITLE.txt)
+  - Mô tả (Description): [2_DESCRIPTION.txt](file:///C:/projects/socialScamStories/factory619/production/EP03/youtube_upload/2_DESCRIPTION.txt)
+  - Thẻ từ khóa (Tags): [3_TAGS.txt](file:///C:/projects/socialScamStories/factory619/production/EP03/youtube_upload/3_TAGS.txt)
+  - Bình luận ghim (Pinned Comment): [4_PINNED_COMMENT.txt](file:///C:/projects/socialScamStories/factory619/production/EP03/youtube_upload/4_PINNED_COMMENT.txt)
+  - Hướng dẫn cài đặt YouTube Studio: [5_YOUTUBE_STUDIO_SETTINGS.md](file:///C:/projects/socialScamStories/factory619/production/EP03/youtube_upload/5_YOUTUBE_STUDIO_SETTINGS.md)
 
 ---
 
@@ -51,15 +51,3 @@ bóc trần lừa đảo, lừa đảo con cấp cứu, deepfake lừa đảo, a
 ```text
 Cha mẹ tuyệt đối đừng đăng công khai ảnh giấy khen, bảng tên, trường lớp của con lên mạng xã hội, và nhớ nguyên tắc: Chưa gọi cô chủ nhiệm xác thực thì tuyệt đối không chuyển tiền!
 ```
-
----
-
-## ⚙️ 6. Bảng Cài Đặt Nhanh Trong YouTube Studio
-| Hạng mục | Thao tác chọn trên YouTube Studio | Trạng thái |
-| :--- | :--- | :---: |
-| **Danh sách phát (Playlist)** | `Bóc Trần Lừa Đảo – Kỹ Năng Cảnh Giác & An Toàn Đời Thực` | ☐ |
-| **Đối tượng (Audience – Made for kids)** | Chọn **No, it's not made for kids** *(Không dành cho trẻ em – để mở bình luận ghim & tiếp cận phụ huynh)* | ☐ |
-| **Khai báo nội dung AI (Altered content)** | Chọn **Yes** *(Có sử dụng hình ảnh/âm thanh tổng hợp)* | ☐ |
-| **Ngôn ngữ & Phụ đề (Language & Subtitles)** | Ngôn ngữ: **Tiếng Việt** · Tải lên file `EP03_CapCuuGiaMao_56s.srt` | ☐ |
-| **Danh mục (Category)** | `Education (Giáo dục)` | ☐ |
-| **Kiểm tra trước khi Public** | Đăng **Unlisted** → xem thử trên điện thoại → ghim bình luận → bật **Public** | ☐ |

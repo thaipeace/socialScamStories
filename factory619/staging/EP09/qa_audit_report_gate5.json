@@ -3,7 +3,7 @@
   "factory": "factory619",
   "gate": "GATE_5_RENDER_AND_QA",
   "staging_mp4_path": "factory619/staging/EP09/EP09_BayCuocGoiNho_46s_staging.mp4",
-  "file_size_mb": 23.1,
+  "file_size_mb": 19.65,
   "stream_probe": {
     "programs": [],
     "stream_groups": [],
@@ -25,7 +25,7 @@
     ],
     "format": {
       "duration": "45.500000",
-      "size": "24225864"
+      "size": "20606077"
     }
   },
   "all_8_points_passed": true,
@@ -50,9 +50,9 @@
     },
     {
       "id": 4,
-      "name": "Hình ảnh an toàn: không máu me/khỏa thân, không logo – giao diện – sắc phục thật",
+      "name": "Hình ảnh & chuyển động an toàn: không logo/giao diện/sắc phục thật, không máu me, motion mượt đúng nhịp & giữ continuity (QC 11 điểm)",
       "status": "PASS",
-      "evidence": "Người duyệt: Chủ kênh. Đã duyệt bản Staging v3 (45.5s)"
+      "evidence": "Người duyệt: Chủ kênh. Đã duyệt bản Staging nâng cấp v4-level2-abc (A/B/C + 2.5D)"
     },
     {
       "id": 5,
@@ -78,5 +78,36 @@
       "status": "PASS",
       "evidence": "Hook bắt đầu 0.25s; thời lượng 45.5s (file 45.50s)"
     }
-  ]
+  ],
+  "motion_qc": {
+    "is_level2": true,
+    "effective_level_counts": {
+      "A": 1,
+      "B": 2,
+      "C": 4,
+      "D": 0
+    },
+    "declared_level_counts": {
+      "A": 1,
+      "B": 2,
+      "C": 4,
+      "D": 0
+    },
+    "has_highlights": true,
+    "zoom_repetition_streaks": [],
+    "shake_scenes": 2,
+    "fallbacks": [],
+    "sfx_sync": {
+      "synced": [
+        "s1_nho_may_goi_lai:shake@0.78s",
+        "s1_nho_may_goi_lai:screen_glow@0.08s",
+        "s3_cao_trao_het_tien:shake@10.35s",
+        "s3_cao_trao_het_tien:shake@11.25s",
+        "s3_cao_trao_het_tien:light_shift@11.24s"
+      ],
+      "unsynced": []
+    },
+    "warnings": [],
+    "point4_human_signed": true
+  }
 }
