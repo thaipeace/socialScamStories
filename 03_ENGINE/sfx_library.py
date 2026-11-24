@@ -440,6 +440,29 @@ def fx_low_accent(dur: float = 1.6, seed: int = 45) -> np.ndarray:
     return normalize_to_dbfs(fade_in_out(st, 0.035, 0.25), -11.5)
 
 
+def fx_marker_draw(dur: float = 0.48, seed: int = 46) -> np.ndarray:
+    """Tiếng bút dạ quang / khoanh đỏ sột soạt gọn – khớp Level 3 red_circle_draw / highlighter_sweep."""
+    rng = np.random.default_rng(seed)
+    n = max(256, int(SR * dur))
+    tt = _t(n)
+    env = np.sin(np.pi * np.clip(tt / max(dur, 1e-3), 0.0, 1.0)) ** 0.7
+    tex = 0.72 + 0.28 * np.sin(2 * np.pi * 34.0 * tt + rng.uniform(0, 6.28))
+    swish = fft_bandpass(pink_noise(n, rng), 1400, 6200) * env * tex * 0.85
+    body = fft_bandpass(rng.standard_normal(n), 600, 1800) * env * 0.30
+    sig = swish + body
+    return normalize_to_dbfs(fade_in_out(stereo_pan(sig, 0.06), 0.015, 0.06), -11.5)
+
+
+def fx_counter_tick(dur: float = 0.14, seed: int = 47) -> np.ndarray:
+    """Tiếng tick số điện tử gọn – khớp Level 3 animated_counter (đếm ngược / biến động số dư)."""
+    rng = np.random.default_rng(seed)
+    n = max(128, int(SR * dur))
+    tt = _t(n)
+    tone = np.sin(2 * np.pi * 1580.0 * tt) * np.exp(-tt * 75.0) * 0.75
+    click = fft_bandpass(rng.standard_normal(n), 2200, 7500) * np.exp(-tt * 220.0) * 0.45
+    return normalize_to_dbfs(fade_in_out(stereo_pan(tone + click, 0.0), 0.002, 0.02), -10.5)
+
+
 # ============================================================================
 # LAYER 3 – BGM (nhạc nền)
 # ============================================================================
@@ -601,6 +624,8 @@ FOLEY: dict[str, Callable[..., np.ndarray]] = {
     "click": fx_click,
     "light_switch": fx_light_switch,
     "low_accent": fx_low_accent,
+    "marker_draw": fx_marker_draw,
+    "counter_tick": fx_counter_tick,
     "door_knock": fx_door_knock,
     "footsteps": fx_footsteps,
     "heartbeat": fx_heartbeat,
@@ -624,6 +649,7 @@ BGM: dict[str, Callable[..., np.ndarray]] = {
 FOLEY_DEFAULT_DUR = {
     "phone_ring": 4.0, "phone_vibrate": 2.4, "notification": 0.8, "bank_ting": 1.4, "message_send": 0.5,
     "typing": 2.0, "keyboard": 1.8, "click": 0.18, "light_switch": 0.25, "low_accent": 1.6,
+    "marker_draw": 0.48, "counter_tick": 0.14,
     "door_knock": 1.2, "footsteps": 2.0, "heartbeat": 4.0, "impact": 2.0, "riser": 3.0,
     "glitch": 0.9, "call_end": 1.6, "whistle": 1.6, "school_bell": 3.0, "chapter_sting": 2.2,
 }

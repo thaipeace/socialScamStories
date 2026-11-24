@@ -22,8 +22,8 @@ no logos, no brand names, no real app interface, no real police/bank uniforms or
 | 09 | Hồi 4 – Bóc trần cơ chế | 04:10–04:40 | `A` (`slow_push_in`) | (kẻ lừa trong bóng tối/ánh màn hình, không lộ mặt rõ) | | ☐ |
 | 10 | Hồi 5 – Nền thẻ dấu hiệu | 04:40–05:00+ | `A` (`static_hold`, không rung) | Ảnh bối cảnh bình yên, dịu, ít chi tiết | | ☐ |
 
-Ảnh duyệt xong lưu `assets/scene01.jpg … scene10.jpg` (hoặc thêm `scene11..18.jpg` tùy độ dài phim).
-- **Living-Character A/B/C chọn lọc (mặc định cho 3–5 cảnh cận/trung cận thoại đắt giá):** tạo thêm biến thể khóa khung `assets/sceneXX_blink.jpg` (chớp mắt), và với cảnh cận có thoại trực diện tạo thêm `assets/sceneXX_mouth_closed.jpg`, `assets/sceneXX_mouth_open.jpg` (xử lý căn pixel + cân màu da qua `03_ENGINE/face_roi_prep.py` và duyệt bảng QC cận mặt trước khi render).
-- **Level B (2.5D + Breathing):** lưu thêm `assets/sXX_bg.jpg`, `assets/sXX_fg.png` (gắn `breathe_y`/`breathe_period` và khóa `eye_blink`/`mouth_sync` theo `layer` nếu phù hợp).
-- **Level C (`detail_reveal`):** lưu thêm ảnh đồng khung `assets/sXX_b.jpg`. **Level D:** luôn giữ ảnh gốc `sceneXX.jpg` bên cạnh clip `.mp4` để hạ cấp an toàn nếu cần.
+Ảnh duyệt xong lưu `assets/scene01.jpg … scene10.jpg` (hoặc thêm `scene11..18.jpg` tùy độ dài phim). **BẮT BUỘC đủ tài nguyên CHECK 2 + CHECK 3 (Luật kế thừa cộng dồn `Level 3 ⊃ Level 2 ⊃ Level 1`):**
+- **Living-Character 2.5 (Bắt buộc tối thiểu `eye_blink ≥ 3` và `mouth_sync ≥ 3`, khuyến nghị 3–6+ cảnh cận thoại):** tạo biến thể khóa khung `assets/sceneXX_blink.jpg`, `assets/sceneXX_mouth_closed.jpg`, `assets/sceneXX_mouth_open.jpg` (tùy chọn thêm `*_mouth_round.jpg` cho 4 trạng thái & `*_gaze.jpg`/`*_expr.jpg`) → xử lý căn pixel + cân màu da qua `03_ENGINE/face_roi_prep.py` và duyệt bảng Face QC cận mặt trước khi render.
+- **Level B (2.5D + Breathing + Rack Focus + Head Micro-Tilt — Bắt buộc tối thiểu `≥ 1` cảnh, khuyến nghị 2–4 cảnh):** lưu thêm `assets/sXX_bg.jpg`, `assets/sXX_fg.png` (gắn `breathe_y`/`breathe_period`, `blur_from/blur_to <= 8.0px`, `head_tilt_deg <= 2.2°` và khóa `eye_blink`/`mouth_sync` theo `layer: "fg"`).
+- **Level C (`detail_reveal` + Level 3 FX):** lưu thêm ảnh đồng khung `assets/sXX_b.jpg`; nếu dùng `split_screen` 16:9 trái–phải thì ưu tiên gắn thêm `eye_blink`/`mouth_sync` trực tiếp trên panel (`region_space: "source"`). **Level D:** luôn giữ ảnh gốc `sceneXX.jpg` bên cạnh clip `.mp4` dựng ngoài.
 

@@ -12,7 +12,7 @@
 2. [Harness Pháp lý & An toàn nội dung](00_HARNESS_GUIDELINES/CONTENT_LEGAL_SAFETY_HARNESS.md) – 5 nguyên tắc vàng
 3. [Quy chuẩn định dạng Short 70s (`factory619`)](00_HARNESS_GUIDELINES/SHORT_FORMAT_SPEC.md) · [Quy chuẩn định dạng Phim dài 16:9 4–5+ phút (`factory196`)](00_HARNESS_GUIDELINES/LONG_FORMAT_196_SPEC.md)
 4. [Hình tượng nhân vật & phong cách hình ảnh](00_HARNESS_GUIDELINES/CAST_AND_VISUAL_STYLE.md) · [cast.json](02_CAST/cast.json)
-5. **[Harness Chuyển động Hình ảnh – Visual Motion Upgrade Level 2 (MẶC ĐỊNH)](00_HARNESS_GUIDELINES/VISUAL_MOTION_HARNESS.md)**
+5. **[Harness Chuyển động Hình ảnh – Visual Motion Upgrade Level 3 + Living-Character 2.5 (MẶC ĐỊNH)](00_HARNESS_GUIDELINES/VISUAL_MOTION_HARNESS.md)**
 6. [Harness quy trình sản xuất (Gate 0 → 6)](00_HARNESS_GUIDELINES/EPISODE_PRODUCTION_HARNESS.md)
 7. [Bản đồ Thư viện 3 lớp & phủ sóng biến thể (dùng cho tập mới)](01_SCAM_MAP/VIGILANCE_LIBRARY_MAP.md) · [Bản đồ chiêu trò gốc](01_SCAM_MAP/SCAM_MAP_ONLINE_TO_OFFLINE.md) · [Kho kịch bản & Lịch phát sóng Tháng 11](01_SCAM_MAP/KHO_KICH_BAN_THANG_11.md)
 8. [Bộ từ cấm / cảnh báo tự động](00_HARNESS_GUIDELINES/policy_wordlists.json)
@@ -48,10 +48,12 @@ factory619/              NHÀ MÁY VIDEO NGẮN DỌC 9:16 (1080x1920, Shorts/Re
 3. **Mạch chuyện tự nhiên như phim, không làm kiểu "bài giáo án":** Không dùng hộp đen `callouts` giữa phim; phụ đề là chữ viền điện ảnh trong suốt (boxless outline); thời lượng gọn (~55–58s), kết nhanh dứt khoát.
 4. **Logic không gian & hướng nhìn nhân vật chuẩn xác:** Cảnh đối đầu/giải cứu phải bố cục cắt ngang Trái – Phải rõ ràng (người bảo vệ đứng ngay cổng đón nạn nhân và quay mặt nhìn nghi ngờ thẳng về phía kẻ gian); kẻ dụ dỗ có vẻ ngoài hiền lành, lịch sự.
 5. **Chuẩn riêng cho Phim dài 16:9 (`factory196`, 4–5+ phút / `≥ 240s`):** Giữ tỷ lệ `~80%` kịch đời sống xoay quanh 1 nhân vật chính có chiều sâu đời tư / `~20%` sơ đồ & Người Bóc Trần; phản biện đa chiều pháp lý & logic trước khi dựng; lời thoại ngắn gọn (`≤ 26 từ/câu`, `~120–140 từ/phút`); phân tách rõ âm sắc các giọng cùng giới tính; cắt cảnh lên hình trước giọng nói (`0.25–0.4s`) và căn lại timeline theo độ dài WAV thật sau Gate 2.
-6. **DEFAULT RULE — Visual Motion Upgrade (Level 2 + Living-Character A/B/C) cho mọi video mới ([VISUAL_MOTION_HARNESS.md](00_HARNESS_GUIDELINES/VISUAL_MOTION_HARNESS.md)):**
-   - **Bắt buộc lập Visual Motion Plan trước khi render** (khai báo `"motion_upgrade": "level2"`, phân loại `beat_type` và `motion_level` `A/B/C/D` cho từng cảnh; kiểm trước bằng `run.py motion-check <EP>` và `gate0`).
-   - **Ken Burns là nền tảng (Level A) + Living-Character chọn lọc (A/B/C):** đa dạng hóa nhịp camera (`slow_push_in`, `slow_pull_out`, `pan_left/right`, `static_hold` — cấm lặp zoom-in máy móc ≥ 3 cảnh liền và cấm rung tùy tiện); kết hợp có tiết chế **Level B (2.5D parallax ~2–4 cảnh + `breathing`)**, **Level C (`detail_reveal`, `screen_glow`, `light_shift`, `notifications`, `chat_bubbles`)**, và **tổ hợp Living-Character mặc định trên các cảnh cận rõ mặt** (**`eye_blink` + `mouth_sync` 3 trạng thái khớp `.wav` thật + `breathing`**, khóa pixel bằng `03_ENGINE/face_roi_prep.py`, `2–4 cảnh` cho Short / `3–5 cảnh` cho Long).
-   - **QC đủ 11 điểm Visual Motion ở Gate 5:** kiểm bảng cận mặt trước render; hiệu ứng lỗi phải hạ cấp về Level A; cảnh tĩnh sạch sẽ luôn tốt hơn cảnh chuyển động lỗi.
+6. **DEFAULT RULE — Visual Motion Level 3 + Tiến trình Check 1 → 2 → 3 Bắt Buộc (`Level 3 ⊃ Level 2 ⊃ Level 1`) ([VISUAL_MOTION_HARNESS.md](00_HARNESS_GUIDELINES/VISUAL_MOTION_HARNESS.md)):**
+   - **Áp dụng cứng cho MỌI tập làm mới, chỉnh sửa hoặc nâng cấp (update):** Tuyệt đối **CẤM nhảy cóc bỏ qua nền Level 2** để chỉ dán hiệu ứng Level 3 lên ảnh tĩnh phẳng. Engine khóa tự động ở `motion-check`, `gate0`, `gate4` và `gate5`:
+     - **CHECK 1 (Level 1):** Đủ nền kịch bản/thoại/Safe Zone/pháp lý, bảo toàn 100% dữ liệu gốc khi sửa/update, đồng bộ `source/build_draft.py`.
+     - **CHECK 2 (Kế thừa Level 2 — Bắt buộc):** Đủ `beat_type` + `motion_level`, 2.5D Parallax (`≥ 1` cảnh) + `breathing` (`≥ 1` lớp), Living-Character khóa pixel qua `03_ENGINE/face_roi_prep.py` gồm **`eye_blink` + `mouth_sync` khớp `.wav` thật** (`≥ 3` cho 16:9 / `≥ 2` cho 9:16). Thiếu → **CHẶN CỨNG** (nếu lỗi API sinh ảnh 503 phải dừng báo chủ kênh, cấm tự render thiếu).
+     - **CHECK 3 (Level 3 — Chỉ PASS khi CHECK 1 & 2 đều PASS):** Hiệu ứng Nhóm 1/2/3.7/chuyển cảnh L3 trên profile `dual16gb_cpu_l480` (`cv2`, 4 worker, `--encoder auto|x264|qsv`), cộng cơ chế **tự hủy chữ ký duyệt cũ (`human_qa_signoff.json`)** mỗi khi sửa/render lại để bắt buộc duyệt mới ở Gate 5 trước Gate 6.
+   - **QC đủ Bảng Check 1–2–3 + 11 điểm Visual Motion ở Gate 5:** kiểm bảng cận mặt trước render; không bao giờ đánh đổi chép miệng/chớp mắt/2.5D hay bỏ qua lỗi hiển thị.
 
 ## BẮT ĐẦU NHANH
 ```powershell
@@ -73,5 +75,5 @@ python factory619/_engine/run.py gate0 EP01
 python factory619/_engine/run.py all EP01
 ```
 
-**Yêu cầu**: Python 3.10+, `numpy`, `Pillow`, FFmpeg (tự dùng `C:\projects\HaizFlow-main\runtime\bin` nếu có), Gemini API key (biến `GEMINI_API_KEY` hoặc file keys của HaizFlow).
+**Yêu cầu**: Python 3.10+, `numpy`, `Pillow`, `opencv-python-headless` (tăng tốc Level 3, tự fallback Pillow nếu thiếu), FFmpeg (tự dùng `C:\projects\HaizFlow-main\runtime\bin` nếu có), Gemini API key (biến `GEMINI_API_KEY` hoặc file keys của HaizFlow).
 

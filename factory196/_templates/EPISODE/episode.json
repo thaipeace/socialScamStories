@@ -5,7 +5,7 @@
   "version": "v1",
   "scam_family": "<mã nhóm trong 01_SCAM_MAP, ví dụ ON-01>",
   "duration_sec": 300.0,
-  "motion_upgrade": "level2",
+  "motion_upgrade": "level3",
 
   "hook": {
     "kicker": "HỒ SƠ BÓC TRẦN LỪA ĐẢO",

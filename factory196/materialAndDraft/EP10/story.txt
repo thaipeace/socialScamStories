@@ -1,0 +1,36 @@
+# EP10 – GIÁM ĐỐC 100 AGENT – SUẤT CUỐI GIẢM 80% *(Cơn bão FOMO AI & Vũ trụ Chị Hai `EP04 ↔ EP06 ↔ EP08b ↔ EP10`)*
+
+## 1. Cốt lõi thực dụng & Độ mới thời sự 2026
+`EP10` bóc trần một dạng phễu lừa đảo công nghệ đang nở rộ theo cơn sốt AI: **khóa học "Công ty một người thời AI" giảm sốc 80% trong 10 phút đếm ngược**, dùng phông bạt siêu xe – hội trường thuê theo ngày – chim mồi đóng vai tiểu thương bình dân chốt suất đầu, rồi tặng một **"Văn phòng ảo bay lơ lửng trên không gian với 100 AI agent sáng đèn báo lãi từng giây"** gắn thẳng tên nạn nhân làm **`GIÁM ĐỐC`** để bơm ảo giác làm sếp và dẫn dụ nạp tiếp các gói **"trạm máy chủ kích hoạt"**.
+
+- **Hình ảnh biểu tượng đối lập điện ảnh:** Chiếc **"Văn phòng kính bay giữa vũ trụ đầy sao, 100 AI agent phát sáng tấp nập gọi tên *Sếp Tuấn chốt lãi*"** đặt cạnh **căn tiệm đồ gia dụng nhỏ chật chội, hàng tồn chất cao và cuốn sổ thu chi giấy cũ**.
+- **Cú lật thực chiến 2 hiệp cực căng:** Thay vì chỉ than vãn, **Hương** (vợ Tuấn) hỏi thẳng *"tụi nó bán món hàng gì, bán cho ai?"* khiến Tuấn lúng túng không trả lời nổi; đến khi sập bẫy khóa cổng (nhà sạch nhẵn `240tr`, Tuấn phải hạ mình cầu xin trừ cấn và chạy tới tòa nhà trống dưới mưa nhận ra sự **nô lệ hóa**), Hương **bật Chế độ Máy bay** quay clip thả nhóm kín VIP 300 người. Bị quản trị viên lập tức phản pháo bằng chiêu *"tính năng chạy ngoại tuyến không gián đoạn"*, Hương tung tiếp **đòn bóc trần không thể chối cãi**: mở mục cài đặt dữ liệu mạng cả tháng của app (**`0 KB`** — chưa từng kết nối máy chủ một giây nào) và chỉnh ngày máy về **năm 2000** vẫn thấy nhảy đơn mới tinh → nhóm VIP vỡ trận hủy cọc đồng loạt.
+- **Kết mở hội tụ vũ trụ (`EP04 ↔ EP06 ↔ EP08b ↔ EP10`) mà 95% thân phim vẫn độc lập 100%:** Chính đoạn clip `0 KB` + Chế độ Máy bay đó xuất hiện trên màn hình của **Thầy Quang** và **Chị Hai** (người phụ nữ bí ẩn giấu mặt từ `EP04` & `EP08b`), lột trần tay viết app văn phòng bay chính là **ông bạn cũ IT giấu mặt từ `EP06` (*Bạn Thân 4.0*)** — đợt trước mềm lòng tha bạn cũ (`#410 · Nam`), nay lại làm ẩu qua mặt tổ chức → **Chị Hai** lạnh lùng tắt phụt màn hình và ra lệnh ngắn gọn: ***"Đóng app. Rút hết đoàn. Còn tay đó… làm đi."***
+
+## 2. Phân tầng Thư viện Cảnh giác 3 lớp (`STRAT-VIGILANCE-LIB-V1`)
+- **Góc quan sát (Format):** **`A`** *(Giải phẫu toàn bộ cơ chế phễu khóa học công nghệ AI 2026 từ cơn bão FOMO → hội trường neo giá 80% → ảo giác làm giám đốc → lãi mồi thật 3 triệu → ngắt mạng lột tẩy & cảnh báo cộng đồng)*.
+- **Lớp 1 – Biến thể mới (`VAR-FUNNEL-01` / `VAR-AI-01`):** Phễu khóa học "Công ty một người 100 AI agent" giảm giá ảo 80% trong 10 phút + chim mồi hội trường + tặng giao diện văn phòng ảo chạy hoạt ảnh vẽ sẵn ngoại tuyến để dụ nạp các tầng "trạm máy chủ kích hoạt".
+- **Lớp 2 – Điểm dễ mắc (`COND`):** `COND-01` (tiệm gia dụng ế hàng, sợ bị làn sóng AI đào thải) · `COND-02` (tin phông bạt siêu xe, hội nghị khách sạn lớn & giao diện 100 agent sáng đèn) · `COND-03` (rút được `3 triệu` lãi mồi thật từ gói máy chủ thử) · `COND-05` (đếm ngược 10 phút + "còn 3 suất trạm máy chủ cuối") · `COND-07` (sĩ diện trụ cột, giấu vợ tự xoay) · `COND-08` (say ảo giác làm *"Giám đốc 100 agent"* + thấy chị bán vải chốt trước).
+- **Lớp 3 – Ứng phó thực chiến (`RESP`):** `RESP-01` (dừng cắt lỗ ngay, tuyệt đối không nạp `40 triệu` mở cổng) · `RESP-03` (hỏi câu gốc *"hàng gì, bán cho ai?"*, kiểm chứng pháp nhân & thử ngắt mạng kiểm tra ứng dụng lạ) · `RESP-04` (quay bằng chứng cảnh báo kịp nhóm học viên khác, gom sao kê biên nhận trình báo công an) · `RESP-06` (chặn bẫy lừa lần hai "hội thu hồi vốn").
+- **1 câu neo ký ức (`Recall Anchor`):**
+  > *"Khóa học giảm sốc 80% tặng văn phòng ảo 100 agent tự đẻ lãi chỉ là hoạt ảnh mồi — hỏi xem nó bán hàng gì, cho ai trước khi xuống tiền!"*
+
+## 3. Nhân vật & Bậc thang dòng tiền (100% hư cấu)
+- **Tuấn (35t, `anh_hai` / `Orus`):** Chủ tiệm đồ gia dụng nhỏ đang ế hàng, ám ảnh nỗi sợ tụt hậu trong cơn bão AI.
+- **Hương (33t, `chi_hai` / `Sulafat`):** Vợ Tuấn, thực tế, khẳng định AI chỉ là công cụ phụ bán hàng thật; người trực tiếp đặt câu hỏi gốc, bật Chế độ Máy bay quay clip thả nhóm VIP và chặn bẫy "thu hồi vốn".
+- **Thầy Quang (38t, `chu_no` / `Algieba`):** Diễn giả công nghệ lịch lãm trên sân khấu; đến Kết mở lộ diện chỉ là nhánh điều phối dưới quyền Chị Hai.
+- **Trợ lý Khánh (27t, `ke_ngot_ngao_nam` / `Achird`):** Điều phối VIP, mượt mà gọi *"Sếp Tuấn"* lúc bàn giao văn phòng bay, lạnh vô cảm khi ép nạp `40 triệu` mở cổng.
+- **Chị Lan (44t, `co_hanh` / `Despina`):** Chim mồi đóng vai chủ sạp vải ngoài chợ mù công nghệ, bật dậy chốt suất đầu tiên cực thuyết phục và khoe lãi trong nhóm VIP.
+- **MC Hội trường (28t, `ke_ban_hang` / `Zephyr`):** Đẩy nhịp FOMO đếm ngược 10 phút.
+- **Chú Bảo Vệ (55t, `ong_bay` / `Algenib`):** Bảo vệ sảnh tòa nhà, lột mác hội trường thuê theo ngày & siêu xe trắng thuê 4 tiếng.
+- **Chị Hai – Người phụ nữ bí ẩn (`EP04` & `EP08b`) (`chi_ba` / `Kore`):** Giấu mặt 100%, tóc bob đen uốn cụp, áo lụa xanh ngọc lục bảo trầm, khoang sau xe đen đêm mưa.
+- **Người Bóc Trần (`nguoi_boc_tran` / `Charon`):** Đúng 1 câu (22 từ, `< 8s`) ở thẻ `NHỚ KỸ`.
+- **Dòng tiền sạch toán học:** Vé nghe thử `299.000đ` → Gói VIP niêm yết `300.000.000đ` giảm 80% còn `60.000.000đ` *(cọc `10tr` + `50tr` hôm sau)* → Máy chủ thử `20.000.000đ` *(rút mồi thật `3.000.000đ`)* → Trạm máy chủ Kim Cương `160.000.000đ` → Tổng chuyển `240.000.000đ` *(thiệt hại ròng `237tr`; app khóa cổng đòi thêm `40.000.000đ`)*.
+
+## 4. Bản đồ Cài – Trả điện ảnh
+| Cài ở | Chi tiết điện ảnh | Trả ở |
+| :--- | :--- | :--- |
+| **`s02` (Hồi 1)** | Cơn bão tin AI sa thải + lời Hương: *"AI chỉ là công cụ phụ mình quay clip, gom đơn đàng hoàng"* | **`s14` (Hồi 5):** Cất văn phòng ảo, hai vợ chồng đặt điện thoại lên chân đế tự quay clip giới thiệu hàng thật bên cuốn sổ thu chi giấy cũ |
+| **`s04` (Hồi 1)** | **Chiếc xe thể thao trắng** bóng loáng trước sảnh khách sạn hội nghị công nghệ | **`s12` (Hồi 4):** Chú Bảo Vệ tiết lộ: *"Hội trường thuê theo ngày, chiếc xe trắng thuê đậu chụp hình bốn tiếng!"* |
+| **`s08–s09` (Hồi 3)** | **Văn phòng bay trên không gian với 100 agent sáng đèn báo *"Sếp Tuấn chốt lãi"*** + câu hỏi *"bán hàng gì, cho ai?"* | **`s13` (Hồi 4):** Hương bật **Chế độ Máy bay**, quay clip 100 agent vẫn chạy báo lãi quăng thẳng vô nhóm kín VIP làm nổ tung chiến dịch |
+| **`s13` (Hồi 4)** | Đoạn clip quay màn hình Chế độ Máy bay lan rộng trong nhóm kín VIP | **`s16a–s16b` (Kết mở):** Chính đoạn clip đó xuất hiện trên màn hình của **Thầy Quang** & **Chị Hai** đặt cạnh ảnh hồ sơ phòng tối `[ CHỐT KHÁCH ]` (`EP06`), chốt cả 2 tội *"mềm lòng tha bạn cũ dễ làm lộ"* + *"gạt ngược tổ chức"* → lệnh **"loại thẳng"** |

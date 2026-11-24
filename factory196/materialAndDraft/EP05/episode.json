@@ -2,7 +2,7 @@
   "episode_id": "EP05",
   "slug": "ToNamTramVaSauGiayNhinThang",
   "title": "Tờ năm trăm và sáu giây nhìn thẳng",
-  "version": "v3-staging",
+  "version": "v4-level3-cinematic-staging",
   "scam_family": "MIX – Dàn cảnh 2 chốt thu căn cước & quay lén 6 giây khuôn mặt sống + kết mở đường dây ngầm",
   "duration_sec": 262.08,
   "visual_style_lock": "Horizontal 16:9 widescreen (1920x1080), semi-realistic cinematic 2D anime illustration, contemporary Southern Vietnam urban setting, naturalistic dramatic lighting, clean bottom 15% for subtitles, no text, no letters, no numbers, no license plates, no logos, no real app interface, no real uniforms",
@@ -51,27 +51,109 @@
       "start": 0.0,
       "end": 13.92,
       "motion": {
+        "preset": "slow_push_in",
         "scale": [
-          1.0,
-          1.16
+          1.02,
+          1.09
         ],
         "focus": [
           [
-            0.5,
-            0.5
+            0.52,
+            0.48
           ],
           [
-            0.5,
-            0.45
+            0.56,
+            0.44
           ]
         ],
-        "wobble": "calm"
+        "wobble": "breathe",
+        "easing": "ease_out"
       },
       "shakes": [
         {
           "at": 0.2,
           "dur": 0.4,
           "amp": 16
+        }
+      ],
+      "beat_type": "climax",
+      "motion_level": "C",
+      "motion_intent": "Mở màn đêm khuya: ánh sáng điện thoại hắt lên mặt Anh Hai + cú sốc Chromatic Pulse khi tin tiền lạ nổ + sóng âm kẻ đòi nợ đầu dây kia + bộ đếm ép trả 6.000.000đ",
+      "detail_fx": [
+        {
+          "type": "chromatic_pulse",
+          "at": 0.5,
+          "dur": 0.28,
+          "shift_px": 6,
+          "zoom_blur": 0.02
+        },
+        {
+          "type": "screen_glow",
+          "space": "frame",
+          "pos": [
+            0.73,
+            0.38
+          ],
+          "radius": [
+            0.16,
+            0.18
+          ],
+          "color": [
+            130,
+            200,
+            255
+          ],
+          "intensity": 0.26,
+          "mode": "pulse",
+          "start": 0.5,
+          "end": 13.9,
+          "fade": 0.3
+        },
+        {
+          "type": "phone_waveform",
+          "speaker": "chu_no",
+          "line_ids": [
+            "l02_cn"
+          ],
+          "start": 5.5,
+          "end": 10.8,
+          "pos": [
+            0.24,
+            0.58
+          ],
+          "size": [
+            0.25,
+            0.06
+          ],
+          "color": [
+            255,
+            95,
+            85
+          ],
+          "label": "SỐ LẠ · ĐÒI NỢ"
+        },
+        {
+          "type": "animated_counter",
+          "start": 5.85,
+          "end": 13.7,
+          "count_dur": 2.2,
+          "from_val": 3500000,
+          "to_val": 6000000,
+          "fmt": "vnd",
+          "label": "HỢP ĐỒNG ÉP TRẢ",
+          "pos": [
+            0.24,
+            0.34
+          ],
+          "style": "danger",
+          "easing": "ease_out"
+        },
+        {
+          "type": "color_mood",
+          "mood": "cold_suspicion",
+          "strength": 0.48,
+          "vignette": 0.22,
+          "grain": 0.012
         }
       ]
     },
@@ -81,31 +163,111 @@
       "start": 13.92,
       "end": 31.38,
       "motion": {
+        "preset": "static_hold",
         "scale": [
-          1.04,
-          1.14
+          1.03,
+          1.05
         ],
         "focus": [
           [
-            0.5,
-            0.5
+            0.52,
+            0.46
           ],
           [
-            0.48,
-            0.45
+            0.54,
+            0.44
           ]
         ],
         "wobble": "tense"
       },
       "transition_in": {
-        "type": "flash_white",
-        "dur": 0.25
+        "type": "zoom_punch",
+        "dur": 0.28
       },
       "shakes": [
         {
           "at": 14.07,
           "dur": 0.4,
           "amp": 16
+        }
+      ],
+      "beat_type": "climax",
+      "motion_level": "C",
+      "motion_intent": "Cú nổ zoom_punch + Chromatic Pulse khi tệp clip quay lén bật lên + ánh sáng xanh điện thoại + sóng âm clip đe dọa",
+      "detail_fx": [
+        {
+          "type": "chromatic_pulse",
+          "at": 14.27,
+          "dur": 0.34,
+          "shift_px": 8,
+          "zoom_blur": 0.03
+        },
+        {
+          "type": "screen_glow",
+          "pos": [
+            0.55,
+            0.6
+          ],
+          "radius": [
+            0.22,
+            0.24
+          ],
+          "color": [
+            95,
+            225,
+            255
+          ],
+          "intensity": 0.3,
+          "mode": "flicker",
+          "start": 14.4,
+          "end": 31.2,
+          "fade": 0.25
+        },
+        {
+          "type": "phone_waveform",
+          "speaker": "chu_no",
+          "line_ids": [
+            "l04_ah_clip",
+            "l05_cn"
+          ],
+          "start": 14.6,
+          "end": 28.6,
+          "pos": [
+            0.23,
+            0.56
+          ],
+          "size": [
+            0.25,
+            0.06
+          ],
+          "color": [
+            255,
+            90,
+            85
+          ],
+          "label": "CLIP ĐE DỌA · 00:06"
+        },
+        {
+          "type": "focus_highlight",
+          "pos": [
+            0.6,
+            0.44
+          ],
+          "radius": [
+            0.36,
+            0.36
+          ],
+          "dim_outer": 0.24,
+          "start": 14.5,
+          "end": 31.3,
+          "fade": 0.4
+        },
+        {
+          "type": "color_mood",
+          "mood": "high_tension",
+          "strength": 0.52,
+          "vignette": 0.24,
+          "grain": 0.014
         }
       ]
     },
@@ -115,26 +277,71 @@
       "start": 31.38,
       "end": 49.73,
       "motion": {
+        "preset": "pan_right",
         "scale": [
-          1.02,
-          1.09
+          1.05,
+          1.05
         ],
         "focus": [
           [
-            0.5,
+            0.47,
             0.5
           ],
           [
-            0.5,
-            0.47
+            0.53,
+            0.5
           ]
         ],
-        "wobble": "calm"
+        "wobble": "none",
+        "easing": "smoothstep"
       },
       "transition_in": {
-        "type": "fade_black",
+        "type": "film_burn",
         "dur": 0.45
-      }
+      },
+      "beat_type": "establishing",
+      "motion_level": "C",
+      "motion_intent": "Chuyển hồi Film Burn về 4 ngày trước: khoanh đỏ vẽ tay đúng tấm thẻ Căn Cước đang trao tay + hạt nắng nhẹ đời thường",
+      "detail_fx": [
+        {
+          "type": "red_circle_draw",
+          "region": [
+            0.53,
+            0.458,
+            0.595,
+            0.548
+          ],
+          "at": 38.2,
+          "dur": 0.55,
+          "end": 46.8,
+          "style": "circle",
+          "width": 6,
+          "color": [
+            242,
+            48,
+            52
+          ]
+        },
+        {
+          "type": "ambient_particles",
+          "count": 20,
+          "opacity": 0.3,
+          "color": [
+            255,
+            236,
+            185
+          ],
+          "drift_dir": "float",
+          "seed": 52
+        },
+        {
+          "type": "color_mood",
+          "mood": "warm_daily",
+          "strength": 0.65,
+          "vignette": 0.08,
+          "grain": 0.0
+        }
+      ]
     },
     {
       "id": "s03_parking_approach",
@@ -142,26 +349,71 @@
       "start": 49.73,
       "end": 67.56,
       "motion": {
+        "preset": "slow_pull_out",
         "scale": [
-          1.02,
-          1.09
+          1.08,
+          1.02
         ],
         "focus": [
           [
-            0.5,
-            0.5
+            0.52,
+            0.48
           ],
           [
             0.5,
-            0.47
+            0.5
           ]
         ],
-        "wobble": "calm"
+        "wobble": "none",
+        "easing": "smoothstep"
       },
       "transition_in": {
-        "type": "dissolve",
-        "dur": 0.4
-      }
+        "type": "whip_pan_left",
+        "dur": 0.28
+      },
+      "beat_type": "normal",
+      "motion_level": "C",
+      "motion_intent": "Hồi 2 bãi giữ xe: khoanh hộp đỏ vẽ tay vào tờ 500 nghìn tiền thật làm mồi lòng tốt + bụi nắng sân xe",
+      "detail_fx": [
+        {
+          "type": "red_circle_draw",
+          "region": [
+            0.505,
+            0.472,
+            0.58,
+            0.566
+          ],
+          "at": 56.8,
+          "dur": 0.55,
+          "end": 65.2,
+          "style": "box",
+          "width": 6,
+          "color": [
+            242,
+            48,
+            52
+          ]
+        },
+        {
+          "type": "ambient_particles",
+          "count": 22,
+          "opacity": 0.32,
+          "color": [
+            255,
+            234,
+            175
+          ],
+          "drift_dir": "float",
+          "seed": 53
+        },
+        {
+          "type": "color_mood",
+          "mood": "warm_daily",
+          "strength": 0.58,
+          "vignette": 0.1,
+          "grain": 0.0
+        }
+      ]
     },
     {
       "id": "s04_six_seconds_face",
@@ -169,26 +421,104 @@
       "start": 67.56,
       "end": 90.85,
       "motion": {
+        "preset": "slow_push_in",
         "scale": [
           1.02,
-          1.1
+          1.09
         ],
         "focus": [
           [
-            0.46,
-            0.48
+            0.5,
+            0.46
           ],
           [
-            0.54,
-            0.46
+            0.5,
+            0.42
           ]
         ],
-        "wobble": "handheld"
+        "wobble": "breathe",
+        "easing": "ease_out"
       },
       "transition_in": {
-        "type": "dissolve",
-        "dur": 0.35
-      }
+        "type": "zoom_punch",
+        "dur": 0.28
+      },
+      "beat_type": "anomaly",
+      "motion_level": "C",
+      "motion_intent": "Cảnh điểm nhấn tên phim 'Sáu giây nhìn thẳng': khung đỏ camera nhận diện quanh mặt Anh Hai + đồng hồ quay lén đếm 00:00 → 00:06 + gom sáng & ánh điện thoại",
+      "detail_fx": [
+        {
+          "type": "screen_glow",
+          "pos": [
+            0.5,
+            0.58
+          ],
+          "radius": [
+            0.2,
+            0.22
+          ],
+          "color": [
+            110,
+            220,
+            255
+          ],
+          "intensity": 0.28,
+          "mode": "turn_on",
+          "start": 74.8,
+          "end": 84.8,
+          "fade": 0.4
+        },
+        {
+          "type": "red_circle_draw",
+          "region": [
+            0.415,
+            0.085,
+            0.585,
+            0.445
+          ],
+          "at": 76.2,
+          "dur": 0.55,
+          "end": 84.2,
+          "style": "box",
+          "width": 5,
+          "color": [
+            245,
+            50,
+            52
+          ]
+        },
+        {
+          "type": "animated_counter",
+          "start": 76.2,
+          "end": 84.2,
+          "count_dur": 6.0,
+          "from_val": 0,
+          "to_val": 6,
+          "fmt": "mmss",
+          "label": "QUAY LÉN KHUÔN MẶT",
+          "pos": [
+            0.14,
+            0.21
+          ],
+          "style": "danger",
+          "easing": "linear"
+        },
+        {
+          "type": "focus_highlight",
+          "pos": [
+            0.5,
+            0.36
+          ],
+          "radius": [
+            0.34,
+            0.36
+          ],
+          "dim_outer": 0.26,
+          "start": 75.5,
+          "end": 84.8,
+          "fade": 0.45
+        }
+      ]
     },
     {
       "id": "s05_home_noon",
@@ -196,26 +526,52 @@
       "start": 90.85,
       "end": 107.16,
       "motion": {
+        "preset": "pan_left",
         "scale": [
-          1.02,
-          1.09
+          1.06,
+          1.06
         ],
         "focus": [
           [
-            0.5,
+            0.53,
             0.5
           ],
           [
-            0.5,
-            0.47
+            0.47,
+            0.5
           ]
         ],
-        "wobble": "calm"
+        "wobble": "none",
+        "easing": "smoothstep"
       },
       "transition_in": {
-        "type": "fade_black",
-        "dur": 0.4
-      }
+        "type": "film_burn",
+        "dur": 0.45
+      },
+      "beat_type": "normal",
+      "motion_level": "C",
+      "motion_intent": "Bữa cơm trưa ấm áp + hạt bụi nắng xuyên cửa sổ bếp tạo tương phản trước cú lật tẩy",
+      "detail_fx": [
+        {
+          "type": "ambient_particles",
+          "count": 24,
+          "opacity": 0.34,
+          "color": [
+            255,
+            232,
+            165
+          ],
+          "drift_dir": "float",
+          "seed": 55
+        },
+        {
+          "type": "color_mood",
+          "mood": "warm_daily",
+          "strength": 0.72,
+          "vignette": 0.08,
+          "grain": 0.0
+        }
+      ]
     },
     {
       "id": "s06_glasses_off",
@@ -223,26 +579,68 @@
       "start": 107.16,
       "end": 118.31,
       "motion": {
+        "preset": "slow_push_in",
         "scale": [
-          1.0,
-          1.16
+          1.02,
+          1.1
         ],
         "focus": [
           [
-            0.5,
-            0.5
+            0.58,
+            0.46
           ],
           [
-            0.5,
-            0.45
+            0.64,
+            0.4
           ]
         ],
-        "wobble": "calm"
+        "wobble": "none",
+        "easing": "ease_in"
       },
       "transition_in": {
-        "type": "fade_black",
-        "dur": 0.4
-      }
+        "type": "luma_wipe",
+        "dur": 0.36
+      },
+      "beat_type": "suspicion",
+      "motion_level": "C",
+      "motion_intent": "Cú lật mặt lạnh gáy khi bà cô tháo kính: bong bóng '...' đang nhập trước tin gửi nhánh ngoài + ánh sáng điện thoại + chuyển tông xanh lạnh",
+      "detail_fx": [
+        {
+          "type": "typing_indicator",
+          "start": 107.9,
+          "end": 109.25,
+          "side": "left",
+          "y": 265
+        },
+        {
+          "type": "screen_glow",
+          "pos": [
+            0.56,
+            0.56
+          ],
+          "radius": [
+            0.16,
+            0.16
+          ],
+          "color": [
+            115,
+            215,
+            255
+          ],
+          "intensity": 0.24,
+          "mode": "pulse",
+          "start": 107.5,
+          "end": 118.2,
+          "fade": 0.35
+        },
+        {
+          "type": "color_mood",
+          "mood": "cold_suspicion",
+          "strength": 0.66,
+          "vignette": 0.24,
+          "grain": 0.012
+        }
+      ]
     },
     {
       "id": "s07_midnight_temptation",
@@ -250,26 +648,84 @@
       "start": 118.31,
       "end": 146.46,
       "motion": {
+        "preset": "slow_pull_out",
         "scale": [
-          1.04,
-          1.14
+          1.09,
+          1.02
         ],
         "focus": [
           [
-            0.5,
-            0.5
+            0.6,
+            0.46
           ],
           [
-            0.48,
-            0.45
+            0.54,
+            0.48
           ]
         ],
-        "wobble": "tense"
+        "wobble": "breathe",
+        "easing": "smoothstep"
       },
       "transition_in": {
-        "type": "fade_black",
-        "dur": 0.45
-      }
+        "type": "film_burn",
+        "dur": 0.42
+      },
+      "beat_type": "suspicion",
+      "motion_level": "C",
+      "motion_intent": "Hồi 3 nửa đêm giằng co 28s: typing indicator trước tin đòi tất toán + ánh sáng điện thoại + bộ đếm 6.000.000đ áp lực + tông high_tension",
+      "detail_fx": [
+        {
+          "type": "typing_indicator",
+          "start": 122.2,
+          "end": 123.5,
+          "side": "left",
+          "y": 270
+        },
+        {
+          "type": "screen_glow",
+          "pos": [
+            0.51,
+            0.66
+          ],
+          "radius": [
+            0.16,
+            0.18
+          ],
+          "color": [
+            125,
+            225,
+            255
+          ],
+          "intensity": 0.26,
+          "mode": "pulse",
+          "start": 118.6,
+          "end": 146.2,
+          "fade": 0.35
+        },
+        {
+          "type": "animated_counter",
+          "start": 129.0,
+          "end": 145.8,
+          "count_dur": 2.4,
+          "from_val": 3500000,
+          "to_val": 6000000,
+          "fmt": "vnd",
+          "label": "ĐÒI TẤT TOÁN TRƯỚC 23H",
+          "pos": [
+            0.22,
+            0.34
+          ],
+          "style": "danger",
+          "easing": "ease_out"
+        },
+        {
+          "type": "color_mood",
+          "mood": "high_tension",
+          "strength": 0.5,
+          "vignette": 0.24,
+          "grain": 0.012
+        }
+      ]
     },
     {
       "id": "s08_lockdown_first_strike",
@@ -277,26 +733,68 @@
       "start": 146.46,
       "end": 158.57,
       "motion": {
+        "preset": "pan_right",
         "scale": [
-          1.02,
-          1.09
+          1.06,
+          1.06
         ],
         "focus": [
           [
-            0.5,
-            0.5
+            0.47,
+            0.48
           ],
           [
-            0.5,
-            0.47
+            0.53,
+            0.48
           ]
         ],
-        "wobble": "calm"
+        "wobble": "none",
+        "easing": "smoothstep"
       },
       "transition_in": {
-        "type": "dissolve",
-        "dur": 0.35
-      }
+        "type": "whip_pan_right",
+        "dur": 0.26
+      },
+      "beat_type": "information",
+      "motion_level": "C",
+      "motion_intent": "Phản ứng khóa thẻ & nhắn báo trước nhóm xưởng: typing indicator bên phải + ánh điện thoại bàn + tông Noir Evidence",
+      "detail_fx": [
+        {
+          "type": "screen_glow",
+          "pos": [
+            0.49,
+            0.88
+          ],
+          "radius": [
+            0.18,
+            0.12
+          ],
+          "color": [
+            130,
+            225,
+            255
+          ],
+          "intensity": 0.28,
+          "mode": "pulse",
+          "start": 146.7,
+          "end": 158.4,
+          "fade": 0.25
+        },
+        {
+          "type": "typing_indicator",
+          "start": 153.2,
+          "end": 154.5,
+          "side": "right",
+          "y": 290
+        },
+        {
+          "type": "color_mood",
+          "mood": "noir_evidence",
+          "strength": 0.46,
+          "vignette": 0.22,
+          "grain": 0.01
+        }
+      ]
     },
     {
       "id": "s09_bank_counter",
@@ -304,53 +802,262 @@
       "start": 158.57,
       "end": 180.04,
       "motion": {
+        "preset": "pan_left",
         "scale": [
-          1.02,
-          1.09
+          1.05,
+          1.05
         ],
         "focus": [
           [
-            0.5,
-            0.5
+            0.52,
+            0.48
           ],
           [
-            0.5,
-            0.47
+            0.48,
+            0.48
           ]
         ],
-        "wobble": "calm"
+        "wobble": "none",
+        "easing": "smoothstep"
       },
       "transition_in": {
-        "type": "fade_black",
-        "dur": 0.45
-      }
+        "type": "film_burn",
+        "dur": 0.44
+      },
+      "beat_type": "information",
+      "motion_level": "C",
+      "motion_intent": "Hồi 4 sáng hôm sau tại ngân hàng: khoanh tròn đỏ thẻ CCCD chip trên quầy + huy hiệu xanh khoanh giữ 3.500.000đ + nắng sáng văn phòng",
+      "detail_fx": [
+        {
+          "type": "red_circle_draw",
+          "region": [
+            0.432,
+            0.748,
+            0.496,
+            0.82
+          ],
+          "at": 161.2,
+          "dur": 0.55,
+          "end": 168.5,
+          "style": "circle",
+          "width": 5,
+          "color": [
+            45,
+            205,
+            125
+          ]
+        },
+        {
+          "type": "animated_counter",
+          "start": 172.6,
+          "end": 179.6,
+          "count_dur": 1.6,
+          "from_val": 0,
+          "to_val": 3500000,
+          "fmt": "vnd",
+          "label": "NGÂN HÀNG KHOANH GIỮ",
+          "pos": [
+            0.24,
+            0.22
+          ],
+          "style": "safe",
+          "easing": "ease_out"
+        },
+        {
+          "type": "ambient_particles",
+          "count": 18,
+          "opacity": 0.26,
+          "color": [
+            255,
+            240,
+            200
+          ],
+          "drift_dir": "float",
+          "seed": 59
+        },
+        {
+          "type": "color_mood",
+          "mood": "warm_daily",
+          "strength": 0.55,
+          "vignette": 0.06,
+          "grain": 0.0
+        }
+      ]
     },
     {
-      "id": "s10_police_gate_call",
+      "id": "s10a_split_counterstrike",
       "image": "assets/c10.jpg",
       "start": 180.04,
+      "end": 201.8,
+      "beat_type": "climax",
+      "motion_level": "C",
+      "transition_in": {
+        "type": "whip_pan_left",
+        "dur": 0.28
+      },
+      "motion_intent": "Đột phá Split-Screen cuộc gọi phản đòn trước cổng Công an: Phe đòi nợ (trái) đối đầu Anh Hai ôm biên bản (phải), tự sáng viền vàng & nhảy sóng âm đúng người đang nói",
+      "split_screen": {
+        "layout": "vertical",
+        "ratio": 0.5,
+        "divider_width": 6,
+        "divider_rgb": [
+          242,
+          246,
+          255
+        ],
+        "active_glow_rgb": [
+          255,
+          205,
+          70
+        ],
+        "inactive_dim": 0.22,
+        "slide_in_dur": 0.3,
+        "panels": [
+          {
+            "image": "assets/c06.jpg",
+            "crop_x": 0.72,
+            "speaker": "chu_no",
+            "line_ids": [
+              "l24_cn"
+            ],
+            "label": "SỐ LẠ · ĐÒI NỢ",
+            "label_rgb": [
+              240,
+              62,
+              62
+            ],
+            "waveform": true,
+            "waveform_rgb": [
+              255,
+              95,
+              85
+            ],
+            "motion": {
+              "preset": "slow_push_in",
+              "scale": [
+                1.04,
+                1.11
+              ],
+              "focus": [
+                [
+                  0.5,
+                  0.44
+                ],
+                [
+                  0.5,
+                  0.42
+                ]
+              ],
+              "wobble": "none"
+            }
+          },
+          {
+            "image": "assets/c10.jpg",
+            "crop_x": 0.72,
+            "speaker": "anh_hai",
+            "line_ids": [
+              "l25_ah",
+              "l26_ah"
+            ],
+            "label": "ANH HAI · CỔNG CÔNG AN",
+            "label_rgb": [
+              45,
+              205,
+              130
+            ],
+            "waveform": true,
+            "waveform_rgb": [
+              85,
+              225,
+              165
+            ],
+            "motion": {
+              "preset": "slow_pull_out",
+              "scale": [
+                1.09,
+                1.02
+              ],
+              "focus": [
+                [
+                  0.5,
+                  0.46
+                ],
+                [
+                  0.5,
+                  0.48
+                ]
+              ],
+              "wobble": "none"
+            }
+          }
+        ]
+      },
+      "detail_fx": [
+        {
+          "type": "animated_counter",
+          "start": 187.4,
+          "end": 201.4,
+          "count_dur": 1.4,
+          "from_val": 0,
+          "to_val": 3500000,
+          "fmt": "vnd",
+          "label": "ĐÃ LẬP BIÊN BẢN CÔNG AN",
+          "pos": [
+            0.5,
+            0.16
+          ],
+          "style": "safe",
+          "easing": "ease_out"
+        }
+      ]
+    },
+    {
+      "id": "s10b_scammer_blocked",
+      "image": "assets/c10.jpg",
+      "start": 201.8,
       "end": 205.92,
+      "beat_type": "aftermath",
+      "motion_level": "C",
+      "transition_in": {
+        "type": "whip_pan_right",
+        "dur": 0.24
+      },
       "motion": {
+        "preset": "slow_pull_out",
         "scale": [
-          1.02,
-          1.09
+          1.07,
+          1.02
         ],
         "focus": [
           [
-            0.5,
-            0.5
+            0.62,
+            0.46
           ],
           [
-            0.5,
-            0.47
+            0.54,
+            0.5
           ]
         ],
-        "wobble": "calm"
+        "wobble": "none",
+        "easing": "ease_out"
       },
-      "transition_in": {
-        "type": "fade_black",
-        "dur": 0.4
-      }
+      "motion_intent": "Kẻ lừa cúp máy chặn số — mở toàn khung Anh Hai bình tĩnh trước cổng cơ quan Công an sáng rực",
+      "detail_fx": [
+        {
+          "type": "chromatic_pulse",
+          "at": 201.92,
+          "dur": 0.24,
+          "shift_px": 5,
+          "zoom_blur": 0.018
+        },
+        {
+          "type": "color_mood",
+          "mood": "warm_daily",
+          "strength": 0.55,
+          "vignette": 0.08,
+          "grain": 0.0
+        }
+      ]
     },
     {
       "id": "s11_school_pickup",
@@ -358,26 +1065,52 @@
       "start": 205.92,
       "end": 232.03,
       "motion": {
+        "preset": "pan_right",
         "scale": [
-          1.02,
-          1.09
+          1.05,
+          1.05
         ],
         "focus": [
           [
-            0.5,
-            0.5
+            0.47,
+            0.48
           ],
           [
-            0.5,
-            0.47
+            0.53,
+            0.48
           ]
         ],
-        "wobble": "calm"
+        "wobble": "none",
+        "easing": "smoothstep"
       },
       "transition_in": {
-        "type": "fade_black",
-        "dur": 0.5
-      }
+        "type": "film_burn",
+        "dur": 0.48
+      },
+      "beat_type": "aftermath",
+      "motion_level": "C",
+      "motion_intent": "Hồi 5 chiều tan học ấm áp: chuyển cảnh Film Burn + hạt nắng chiều vàng ấm bên hai cha con",
+      "detail_fx": [
+        {
+          "type": "ambient_particles",
+          "count": 26,
+          "opacity": 0.36,
+          "color": [
+            255,
+            226,
+            150
+          ],
+          "drift_dir": "float",
+          "seed": 61
+        },
+        {
+          "type": "color_mood",
+          "mood": "warm_daily",
+          "strength": 0.78,
+          "vignette": 0.08,
+          "grain": 0.0
+        }
+      ]
     },
     {
       "id": "s12_red_flags",
@@ -385,26 +1118,16 @@
       "start": 232.03,
       "end": 240.66,
       "motion": {
-        "scale": [
-          1.0,
-          1.05
-        ],
-        "focus": [
-          [
-            0.5,
-            0.5
-          ],
-          [
-            0.5,
-            0.5
-          ]
-        ],
-        "wobble": "none"
+        "preset": "static_hold"
       },
       "transition_in": {
-        "type": "fade_black",
+        "type": "dissolve",
         "dur": 0.4
-      }
+      },
+      "beat_type": "ending",
+      "motion_level": "A",
+      "motion_intent": "Khung tĩnh sạch tuyệt đối để khán giả đọc 5 dấu hiệu bảo vệ căn cước & khuôn mặt",
+      "detail_fx": []
     },
     {
       "id": "s13_backseat_boss",
@@ -412,26 +1135,112 @@
       "start": 240.66,
       "end": 255.18,
       "motion": {
+        "preset": "slow_push_in",
         "scale": [
-          1.0,
-          1.16
+          1.02,
+          1.11
         ],
         "focus": [
           [
-            0.5,
-            0.5
+            0.62,
+            0.46
           ],
           [
-            0.5,
-            0.45
+            0.66,
+            0.4
           ]
         ],
-        "wobble": "calm"
+        "wobble": "breathe",
+        "easing": "ease_in"
       },
       "transition_in": {
-        "type": "fade_black",
-        "dur": 0.45
-      }
+        "type": "luma_wipe",
+        "dur": 0.38
+      },
+      "beat_type": "climax",
+      "motion_level": "C",
+      "motion_intent": "Coda phim hình sự trong xe đêm mưa: mưa rơi ngoài kính + đèn phố quét ngang khoang xe + sóng âm nhánh ngoài báo cáo + ánh sáng tablet hắt lạnh lên Dì Lành + Chromatic Pulse cú cắt đen",
+      "detail_fx": [
+        {
+          "type": "rain_layer",
+          "opacity": 0.3,
+          "density": 0.9,
+          "angle_deg": -16.0,
+          "speed": 1180.0,
+          "seed": 63
+        },
+        {
+          "type": "light_sweep",
+          "mode": "light",
+          "color": [
+            255,
+            210,
+            145
+          ],
+          "intensity": 0.2,
+          "width": 0.2,
+          "angle_deg": -20.0,
+          "repeat": 2
+        },
+        {
+          "type": "phone_waveform",
+          "speaker": "ke_ngot_ngao_nam",
+          "line_ids": [
+            "l31_sub"
+          ],
+          "start": 242.3,
+          "end": 248.4,
+          "pos": [
+            0.24,
+            0.38
+          ],
+          "size": [
+            0.25,
+            0.058
+          ],
+          "color": [
+            255,
+            100,
+            90
+          ],
+          "label": "NHÁNH NGOÀI · BÁO CÁO"
+        },
+        {
+          "type": "screen_glow",
+          "pos": [
+            0.56,
+            0.72
+          ],
+          "radius": [
+            0.2,
+            0.18
+          ],
+          "color": [
+            125,
+            205,
+            235
+          ],
+          "intensity": 0.22,
+          "mode": "pulse",
+          "start": 241.0,
+          "end": 255.1,
+          "fade": 0.4
+        },
+        {
+          "type": "chromatic_pulse",
+          "at": 254.9,
+          "dur": 0.28,
+          "shift_px": 7,
+          "zoom_blur": 0.025
+        },
+        {
+          "type": "color_mood",
+          "mood": "noir_evidence",
+          "strength": 0.72,
+          "vignette": 0.3,
+          "grain": 0.02
+        }
+      ]
     },
     {
       "id": "s14_black_cut",
@@ -439,26 +1248,16 @@
       "start": 255.18,
       "end": 257.53,
       "motion": {
-        "scale": [
-          1.0,
-          1.05
-        ],
-        "focus": [
-          [
-            0.5,
-            0.5
-          ],
-          [
-            0.5,
-            0.5
-          ]
-        ],
-        "wobble": "none"
+        "preset": "static_hold"
       },
       "transition_in": {
-        "type": "fade_black",
-        "dur": 0.08
-      }
+        "type": "cut",
+        "dur": 0.0
+      },
+      "beat_type": "ending",
+      "motion_level": "A",
+      "motion_intent": "Cú cắt đen đột ngột giữ dư âm lạnh sau câu chốt của Dì Lành",
+      "detail_fx": []
     },
     {
       "id": "s15_disclaimer",
@@ -466,26 +1265,16 @@
       "start": 257.53,
       "end": 262.08,
       "motion": {
-        "scale": [
-          1.0,
-          1.05
-        ],
-        "focus": [
-          [
-            0.5,
-            0.5
-          ],
-          [
-            0.5,
-            0.5
-          ]
-        ],
-        "wobble": "none"
+        "preset": "static_hold"
       },
       "transition_in": {
         "type": "fade_black",
-        "dur": 0.35
-      }
+        "dur": 0.4
+      },
+      "beat_type": "ending",
+      "motion_level": "A",
+      "motion_intent": "Khung tĩnh sạch hiển thị lưu ý miễn trừ trách nhiệm cuối phim",
+      "detail_fx": []
     }
   ],
   "dialogue": [
@@ -1055,6 +1844,11 @@
         "dur": 1.4
       },
       {
+        "preset": "counter_tick",
+        "at": 5.85,
+        "gain_db": -5.5
+      },
+      {
         "preset": "impact",
         "at": 14.27,
         "gain_db": -3
@@ -1081,6 +1875,11 @@
         "gain_db": -5
       },
       {
+        "preset": "marker_draw",
+        "at": 38.2,
+        "gain_db": -4.0
+      },
+      {
         "preset": "notification",
         "at": 48.63,
         "gain_db": -6
@@ -1089,6 +1888,11 @@
         "preset": "chapter_sting",
         "at": 49.98,
         "gain_db": -5
+      },
+      {
+        "preset": "marker_draw",
+        "at": 56.8,
+        "gain_db": -4.0
       },
       {
         "preset": "typing",
@@ -1100,6 +1904,21 @@
         "preset": "bank_ting",
         "at": 66.96,
         "gain_db": -4
+      },
+      {
+        "preset": "low_accent",
+        "at": 74.8,
+        "gain_db": -5.5
+      },
+      {
+        "preset": "marker_draw",
+        "at": 76.2,
+        "gain_db": -3.8
+      },
+      {
+        "preset": "counter_tick",
+        "at": 76.25,
+        "gain_db": -5.0
       },
       {
         "preset": "message_send",
@@ -1128,6 +1947,11 @@
         "dur": 1.6
       },
       {
+        "preset": "counter_tick",
+        "at": 129.0,
+        "gain_db": -5.5
+      },
+      {
         "preset": "typing",
         "at": 149.43,
         "gain_db": -6,
@@ -1144,10 +1968,25 @@
         "gain_db": -5
       },
       {
+        "preset": "marker_draw",
+        "at": 161.2,
+        "gain_db": -4.2
+      },
+      {
+        "preset": "counter_tick",
+        "at": 172.6,
+        "gain_db": -5.5
+      },
+      {
         "preset": "phone_ring",
         "at": 180.59,
         "gain_db": -4,
         "dur": 1.4
+      },
+      {
+        "preset": "counter_tick",
+        "at": 187.4,
+        "gain_db": -5.5
       },
       {
         "preset": "call_end",
@@ -1322,5 +2161,6 @@
     "category": "Education (Giáo dục)",
     "playlist": "Hồ Sơ Bóc Trần Lừa Đảo – Phim Dài Chuyên Sâu",
     "thumbnail_sec": 76.95
-  }
+  },
+  "motion_upgrade": "level3"
 }

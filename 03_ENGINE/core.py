@@ -9,6 +9,7 @@ còn thông số của từng tập phim nằm trong `<factory>/materialAndDraft
 """
 from __future__ import annotations
 
+import hashlib
 import json
 import os
 import shutil
@@ -271,6 +272,20 @@ class Episode:
         if speaker_id not in self.cast:
             raise GateError(f"Speaker '{speaker_id}' chưa khai báo trong 02_CAST/cast.json")
         return self.cast[speaker_id]
+
+
+def episode_fingerprint(ep: Episode) -> dict[str, Any]:
+    """Build deterministic build fingerprint for stale-signoff invalidation at Gate 5."""
+    cfg_sha = ""
+    if ep.config_path.is_file():
+        cfg_sha = hashlib.sha256(ep.config_path.read_bytes()).hexdigest()[:16]
+    tl_mtime = round(ep.timeline_video_path.stat().st_mtime, 2) if ep.timeline_video_path.is_file() else None
+    return {
+        "episode_version": str(ep.cfg.get("version", "")),
+        "motion_upgrade": str(ep.cfg.get("motion_upgrade", "legacy") or "legacy"),
+        "config_sha256": cfg_sha,
+        "timeline_mtime": tl_mtime,
+    }
 
 
 class PreventSleep:

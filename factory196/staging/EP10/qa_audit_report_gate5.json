@@ -1,0 +1,157 @@
+{
+  "episode_id": "EP10",
+  "factory": "factory196",
+  "gate": "GATE_5_RENDER_AND_QA",
+  "staging_mp4_path": "factory196/staging/EP10/EP10_GiamDoc100Agent_369s_staging.mp4",
+  "file_size_mb": 326.46,
+  "stream_probe": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "codec_name": "h264",
+        "codec_type": "video",
+        "width": 1920,
+        "height": 1080,
+        "r_frame_rate": "30/1"
+      },
+      {
+        "codec_name": "aac",
+        "codec_type": "audio",
+        "sample_rate": "48000",
+        "channels": 2,
+        "r_frame_rate": "0/0"
+      }
+    ],
+    "format": {
+      "duration": "368.800000",
+      "size": "342316350"
+    }
+  },
+  "all_8_points_passed": true,
+  "checklist": [
+    {
+      "id": 1,
+      "name": "Không định danh người / tổ chức / số thật",
+      "status": "PASS",
+      "evidence": "Cấm cứng: 0; cảnh báo: 0; SĐT: 0; URL: 0; dãy số TK: 0"
+    },
+    {
+      "id": 2,
+      "name": "Không hướng dẫn thủ đoạn chi tiết (chỉ bóc trần cơ chế tâm lý & dấu hiệu)",
+      "status": "PASS",
+      "evidence": "Người duyệt: Chủ kênh. Đã duyệt bản Staging Level 3 (v6-level3-cinematic-staging) lên Production"
+    },
+    {
+      "id": 3,
+      "name": "Sạch từ khóa thuật toán (ASR/OCR/metadata)",
+      "status": "PASS",
+      "evidence": "Cấm cứng: 0; cảnh báo: 0"
+    },
+    {
+      "id": 4,
+      "name": "Hình ảnh & chuyển động an toàn: không logo/giao diện/sắc phục thật, không máu me, motion mượt đúng nhịp & giữ continuity (QC 11 điểm)",
+      "status": "PASS",
+      "evidence": "Người duyệt: Chủ kênh. Đã duyệt bản Staging Level 3 (v6-level3-cinematic-staging) lên Production"
+    },
+    {
+      "id": 5,
+      "name": "Tôn trọng nạn nhân, không kỳ thị vùng miền / dân tộc / nghề nghiệp / tuổi tác",
+      "status": "PASS",
+      "evidence": "Người duyệt: Chủ kênh. Đã duyệt bản Staging Level 3 (v6-level3-cinematic-staging) lên Production"
+    },
+    {
+      "id": 6,
+      "name": "Âm thanh: thoại rõ, master đúng chuẩn, đã nghe duyệt",
+      "status": "PASS",
+      "evidence": "Master peak -1.38 dBFS / 368.8s; thoại vừa cửa sổ: True; đã nghe duyệt: True"
+    },
+    {
+      "id": 7,
+      "name": "Safe Zone (16:9) + Disclaimer + Thẻ Dấu hiệu nhận biết",
+      "status": "PASS",
+      "evidence": "Overlay trong Safe Zone: True; disclaimer: 1; thẻ dấu hiệu: 4 ý"
+    },
+    {
+      "id": 8,
+      "name": "Nhịp & Hook",
+      "status": "PASS",
+      "evidence": "Hook bắt đầu 0.4s; thời lượng 368.8s (file 368.80s)"
+    }
+  ],
+  "motion_qc": {
+    "motion_version": "level3",
+    "hardware_profile": "dual16gb_cpu_l480",
+    "is_level2": true,
+    "is_level3": true,
+    "effective_level_counts": {
+      "A": 3,
+      "B": 4,
+      "C": 15,
+      "D": 0
+    },
+    "declared_level_counts": {
+      "A": 3,
+      "B": 4,
+      "C": 15,
+      "D": 0
+    },
+    "has_highlights": true,
+    "zoom_repetition_streaks": [],
+    "shake_scenes": 2,
+    "fallbacks": [],
+    "sfx_sync": {
+      "synced": [
+        "s01_hook_cut_empty:shake@17.33s",
+        "s01_hook_cut_empty:chromatic_pulse@17.54s",
+        "s03_space_office_ad:screen_glow@57.37s",
+        "s06_countdown_space_office:light_shift@100.14s",
+        "s06_countdown_space_office:chromatic_pulse@100.14s",
+        "s07_tuan_swipes_deposit:chromatic_pulse@126.58s",
+        "s09_boss_in_small_shop:screen_glow@156.31s",
+        "s10_fomo_server_all_in:screen_glow@191.70s",
+        "s10_fomo_server_all_in:chromatic_pulse@191.95s",
+        "s11a_lock_shock_reveal:shake@207.38s",
+        "s11a_lock_shock_reveal:detail_reveal@207.69s",
+        "s11a_lock_shock_reveal:light_shift@207.71s",
+        "s11a_lock_shock_reveal:chromatic_pulse@207.71s",
+        "s11a_lock_shock_reveal:red_circle_draw@212.80s",
+        "s13_offline_clip_and_group_expose:detail_reveal@267.89s",
+        "s13_offline_clip_and_group_expose:red_circle_draw@268.30s",
+        "s13b_undeniable_killshot:chromatic_pulse@290.84s",
+        "s13b_undeniable_killshot:red_circle_draw@292.60s",
+        "s13b_undeniable_killshot:red_circle_draw@295.30s",
+        "s14_next_morning_shop:light_shift@316.04s",
+        "s16b_coda_chihai_order:detail_reveal@362.55s",
+        "s16b_coda_chihai_order:light_shift@362.55s",
+        "s16b_coda_chihai_order:chromatic_pulse@362.55s",
+        "chat1@0.60s",
+        "chat2@17.74s",
+        "chat3@57.37s",
+        "chat4@100.14s",
+        "chat5@126.33s",
+        "chat6@156.29s",
+        "chat7@191.70s",
+        "chat8@207.69s",
+        "chat9@334.83s",
+        "chat10@351.34s",
+        "notif1@139.35s",
+        "notif2@267.89s",
+        "notif3@283.47s",
+        "notif4@290.78s",
+        "notif5@299.20s"
+      ],
+      "unsynced": []
+    },
+    "warnings": [],
+    "point4_human_signed": true,
+    "render_stats": {
+      "hardware_profile": "dual16gb_cpu_l480",
+      "encoder": "libx264",
+      "workers": 4,
+      "has_cv2": true,
+      "elapsed_sec": 888.82,
+      "effective_fps": 12.4
+    }
+  }
+}

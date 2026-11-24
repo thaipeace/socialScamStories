@@ -1,6 +1,6 @@
-# KỊCH BẢN NHÁP PHIM DÀI 16:9 (4–5+ PHÚT) – EP09: GIÁM ĐỐC 100 AGENT – SUẤT CUỐI GIẢM 80%
+# KỊCH BẢN NHÁP PHIM DÀI 16:9 (4–5+ PHÚT) – EP10: GIÁM ĐỐC 100 AGENT – SUẤT CUỐI GIẢM 80%
 
-> **Trạng thái:** Bản nháp nâng cấp **`v4-draft`** *(đẩy mạnh cơn bão **FOMO AI 2026** + **văn phòng ảo bay trên không gian 100 agent sáng đèn** gắn tên **"GIÁM ĐỐC: TUẤN"** → **Hương bật Chế độ Máy bay quay clip thả thẳng vào nhóm kín VIP** làm cháy sạch chiến dịch → **Kết mở hội tụ vũ trụ `EP04` ↔ `EP06` ↔ `EP08b` ↔ `EP09`**: bóc trần **ông bạn cũ IT giấu mặt từ `EP06` (*Bạn Thân 4.0*)** từng mềm lòng tha bạn cũ, nay dám gạt ngược tổ chức nhét hoạt ảnh chạy chay — **Chị Hai** lạnh lùng ra lệnh **"loại thẳng"**)*.
+> **Trạng thái:** Bản nháp nâng cấp **`v4-draft`** *(đẩy mạnh cơn bão **FOMO AI 2026** + **văn phòng ảo bay trên không gian 100 agent sáng đèn** gắn tên **"GIÁM ĐỐC: TUẤN"** → **Hương bật Chế độ Máy bay quay clip thả thẳng vào nhóm kín VIP** làm cháy sạch chiến dịch → **Kết mở hội tụ vũ trụ `EP04` ↔ `EP06` ↔ `EP08b` ↔ `EP10`**: bóc trần **ông bạn cũ IT giấu mặt từ `EP06` (*Bạn Thân 4.0*)** từng mềm lòng tha bạn cũ, nay dám gạt ngược tổ chức nhét hoạt ảnh chạy chay — **Chị Hai** lạnh lùng ra lệnh **"loại thẳng"**)*.
 > **Nguồn cảm hứng nội bộ:** Phóng sự VTV24 – *Thật, Giả - Kiểm chứng: Phía sau những lời kêu gọi "làm giàu nhanh"* (`5:30`), kết hợp làn sóng lừa đảo núp bóng **"AI Agent / Công ty 1 người tự động hóa"**, đã được **hư cấu hóa 100%** (không dùng con số 1,5 tỷ → 300 triệu, không ám chỉ cá nhân/tổ chức thật).
 > **Thông số mục tiêu:** Khung ngang `16:9` (`1920x1080 @ 30fps`) · **19 cảnh · 38 câu thoại · ~870 từ (100% câu ≤ 26 từ) · ~5 phút 45 giây (`~345s`, hợp lệ `240s+`)** · Tỷ lệ **~97.5% kịch đời thực / ~2.5% Người Bóc Trần (`1 câu, 22 từ, < 8s`)** theo [LONG_FORMAT_196_SPEC.md](../00_HARNESS_GUIDELINES/LONG_FORMAT_196_SPEC.md) và [STORY_AND_PRODUCTION_HARNESS.md](../00_HARNESS_GUIDELINES/STORY_AND_PRODUCTION_HARNESS.md).
 
@@ -10,7 +10,7 @@
 
 | Mục | Nội dung |
 | :--- | :--- |
-| **Mã tập / Slug dự kiến** | `EP09` (`factory196`) · `GiamDoc100Agent` |
+| **Mã tập / Slug dự kiến** | `EP10` (`factory196`) · `GiamDoc100Agent` |
 | **Góc quan sát (Format `A–F`)** | **`A` – Giải phẫu toàn bộ cơ chế phễu công nghệ 2026** *(Cơn bão FOMO AI sợ bị đào thải → Hội nghị công nghệ neo giá giảm 80% + tặng "Văn phòng ảo bay trên không gian 100 agent" → Bơm ảo giác làm Sếp + lãi mồi thật `3 triệu` → Bật Chế độ Máy bay quay clip thả nhóm kín VIP lột trần hoạt ảnh vẽ sẵn + Kết mở kết nối Chị Hai)* |
 | **Nhóm chiêu & Biến thể Lớp 1 (`VAR`)** | **`VAR-FUNNEL-01` / `VAR-AI-01`** – Phễu khóa học "Công ty một người thời AI" giảm sốc 80% trong 10 phút + chim mồi hội trường + tặng **văn phòng ảo bay ngoài không gian 100 AI agent sáng đèn báo lãi liên tục** *(thực chất là hoạt ảnh vẽ sẵn chạy ngoại tuyến)* để dụ nạp gói "trạm máy chủ kích hoạt" |
 | **Điểm dễ mắc Lớp 2 (`COND`)** | `COND-01` (tiệm gia dụng ế hàng + nỗi sợ bị làn sóng AI đào thải) · `COND-02` (tin vào phông bạt siêu xe, hội nghị công nghệ & giao diện 100 agent sáng đèn) · `COND-03` (rút được `3 triệu` tiền thật từ gói máy chủ thử) · `COND-05` (đồng hồ 10 phút + "còn 3 suất trạm máy chủ cuối") · `COND-07` (sĩ diện trụ cột, giấu vợ tự xoay) · `COND-08` (say ảo giác làm *"Giám đốc 100 agent"* + chim mồi bình dân chốt trước) |
@@ -21,7 +21,7 @@
 | **Đối trọng, Tuyến thao túng & Vũ trụ Chị Hai** | **Hương** (`chi_hai` / `Sulafat`) · **Thầy Quang** (`chu_no` / `Algieba`) · **Trợ lý Khánh** (`ke_ngot_ngao_nam` / `Achird`) · **Chị Lan** (`co_hanh` / `Despina`) · **MC Hội trường** (`ke_ban_hang` / `Zephyr`) · **Chú Bảo Vệ** (`ong_bay` / `Algenib`) · **Chị Hai – Người phụ nữ bí ẩn (`EP04` & `EP08b`)** (`chi_ba` / `Kore`) · *Cameo hình ảnh tĩnh:* **Ông Bạn Cũ IT giấu mặt (`EP06`)** · **Người Bóc Trần** (`nguoi_boc_tran` / `Charon`) |
 
 ### Tự kiểm Pre-Gate 0 (Bộ lọc `4+2`)
-- [x] **Mới:** Đánh thẳng cơn sốt **FOMO AI & "Công ty 100 AI Agent"** 2026 + kết mở bất ngờ *"kẻ lừa bị chính ông bạn cũ IT giấu mặt từ `EP06` gạt ngược"*, nối gọn mạng lưới **Chị Hai (`EP04` ↔ `EP06` ↔ `EP08b` ↔ `EP09`)** mà 95% thân phim vẫn độc lập hoàn toàn với khán giả mới.
+- [x] **Mới:** Đánh thẳng cơn sốt **FOMO AI & "Công ty 100 AI Agent"** 2026 + kết mở bất ngờ *"kẻ lừa bị chính ông bạn cũ IT giấu mặt từ `EP06` gạt ngược"*, nối gọn mạng lưới **Chị Hai (`EP04` ↔ `EP06` ↔ `EP08b` ↔ `EP10`)** mà 95% thân phim vẫn độc lập hoàn toàn với khán giả mới.
 - [x] **Thực dụng:** Cho khán giả 2 bộ lọc thực chiến: hỏi *"agent bán hàng gì, cho ai?"* và quay bằng chứng cảnh báo kịp người cùng nhóm.
 - [x] **Khác biệt:** Thoát hoàn toàn lối mòn đa cấp cũ và lối mòn kết mở "đi lừa tiếp ở tỉnh khác".
 - [x] **Có ích:** Nhúng trọn cắt lỗ, cảnh báo nhóm VIP, chặn bẫy thu hồi vốn và trình báo công an vào hành động kịch.
@@ -185,7 +185,7 @@
 
 ---
 
-### KẾT MỞ SAU THẺ NHỚ KỸ – VŨ TRỤ CHỊ HAI (`EP04` ↔ `EP06` ↔ `EP08b` ↔ `EP09`): SA THẢI TAY IT `EP06`
+### KẾT MỞ SAU THẺ NHỚ KỸ – VŨ TRỤ CHỊ HAI (`EP04` ↔ `EP06` ↔ `EP08b` ↔ `EP10`): SA THẢI TAY IT `EP06`
 
 **`s16a_coda_quang_report`** – **Đêm mưa xám lạnh (`amb: rain`).** Góc phòng tối / ghế lái xe đỗ bên đường của **Thầy Quang** *(mất sạch vẻ hào nhoáng sân khấu, cà vạt nới lỏng, trán căng thẳng)*. Trên màn hình laptop/điện thoại trước mặt đang phát lại **đúng đoạn clip Hương quay màn hình bật Chế độ Máy bay mà 100 agent vẫn bay báo lãi**, phía dưới là hàng loạt tin nhắn từ nhóm VIP nổ loạn hủy cọc và dòng đỏ `"NHÓM ĐÃ BỊ XÓA"`. Thầy Quang vội áp điện thoại gọi lên đầu dây cấp trên:
 - *(Bong bóng trung tính: "CLIP ĐANG LAN TRONG NHÓM VIP: Chế độ máy bay · 100 agent vẫn chốt lãi" · `LỘ TẨY TOÀN BỘ`)*.

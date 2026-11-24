@@ -41,22 +41,26 @@
 
 **Safe Zone** (giữ nguyên chuẩn 779): X 80–920, Y ≤ 1420; cấm vùng phải 15% và đáy 25% (UI của Shorts/TikTok/Reels).
 
-## IV. CHUYỂN CẢNH & CHUYỂN ĐỘNG — VISUAL MOTION UPGRADE (LEVEL 2)
-*Áp dụng mặc định theo [VISUAL_MOTION_HARNESS.md](VISUAL_MOTION_HARNESS.md): mỗi cảnh bắt buộc khai báo `beat_type` và `motion_level` (`A`/`B`/`C`/`D`) trong `episode.json` (`"motion_upgrade": "level2"`).*
+## IV. CHUYỂN CẢNH & CHUYỂN ĐỘNG — VISUAL MOTION LEVEL 3 + TIẾN TRÌNH CHECK 1 → 2 → 3
+*Áp dụng mặc định theo [VISUAL_MOTION_HARNESS.md](VISUAL_MOTION_HARNESS.md) (`HRN-MOTION-L3.0`): mọi tập làm mới, chỉnh sửa hoặc nâng cấp bắt buộc khai báo `"motion_upgrade": "level3"`, đủ `beat_type` + `motion_level` (`A`/`B`/`C`/`D`) và vượt đủ **CHECK 1 → 2 → 3** (`Level 3 ⊃ Level 2 ⊃ Level 1`) tại `motion-check`, `gate0`, `gate4`, `gate5`.*
 
 | `transition_in.type` | Dùng khi |
 | :--- | :--- |
 | `dissolve` (0.3s) | Chuyển nhịp thông thường |
-| `flash_red` (0.25s) | Vào CÚ CHỐT |
+| `whip_pan_left/right` (0.25s), `zoom_punch` (0.28s) | Chuyển cú sốc, cắt vào đối đầu / bóc trần nhanh (Level 3) |
+| `luma_wipe` (0.35s), `film_burn` (0.4s) | Chuyển hồi, chuyển thời điểm hoặc lật mặt (Level 3) |
+| `flash_red` (0.25s), `flash_white` | Vào CÚ CHỐT |
 | `glitch` (0.4s) | Vào BÓC TRẦN / lộ deepfake |
-| `fade_black` (0.4s) | Vào THẺ DẤU HIỆU |
-| `flash_white`, `cut` | Tùy ý (ưu tiên `cut` gọn khi tiết lộ thông tin quan trọng) |
+| `fade_black` (0.4s), `cut` | Vào THẺ DẤU HIỆU / tiết lộ gọn |
 
-- **Phân cấp Motion & Living-Character mặc định cho Short 9:16 (~50–70s):**
-  - **Level A (nền tảng):** Đa dạng hóa `motion.preset` (`slow_push_in`, `slow_pull_out`, `pan_left`, `pan_right`, `drift_up`, `static_hold`) — **cấm lặp zoom-in máy móc ≥ 3 cảnh liên tiếp**; giữ `wobble: "none"` (hoặc `"breathe"` cho cận mặt) ở cảnh thường/kết, chỉ dùng `tense`/`shakes` đúng điểm cao trào khớp foley.
-  - **Level B (2.5D parallax + Breathing):** Chọn 1–2 cảnh cận/trung đắt giá tách 2 lớp (`sX_bg.jpg` + `sX_fg.png`), gắn nhịp thở thân trên (`breathe_y: 2.0–2.5`, `breathe_period: 2.1–3.8`) và khóa cứng `eye_blink` theo `layer: "fg"`.
-  - **Level C (Object/Detail + Living-Character A/B/C chọn lọc):** Trên **2–4 cảnh cận rõ mặt**, áp dụng mặc định tổ hợp **A (`eye_blink`) + B (`mouth_sync` 3 trạng thái theo `.wav` thật khi đúng nhân vật nói) + C (`breathing`)** xử lý khóa pixel qua `03_ENGINE/face_roi_prep.py`, kết hợp `screen_glow`, `detail_reveal`, `light_shift`, `notifications`/`chat_bubbles`, `focus_highlight` khớp VO & foley.
-  - **Level D (AI I2V ngắn tùy chọn):** Tối đa 1 khoảnh khắc phản ứng đặc biệt nếu không biến dạng; có lỗi → hạ cấp ngay bằng `"video_enabled": false`.
+- **Tiến trình Check 1 → 2 → 3 bắt buộc cho Short 9:16 (~50–70s):**
+  - **CHECK 1 (Level 1):** Đủ timeline, thoại ≤ 22 từ/câu & ≤ 110 từ, Safe Zone 9:16, `hook`, `red_flags`, `disclaimer`, `clearance: ĐẠT`; khi sửa/update giữ nguyên dữ liệu cũ và đồng bộ `source/build_draft.py`.
+  - **CHECK 2 (Kế thừa Level 2 — Khóa cứng không được bỏ qua):**
+    - **Level A:** Đa dạng preset (`slow_push_in`, `slow_pull_out`, `pan_left/right`, `drift_up`, `static_hold`) — **cấm lặp zoom-in ≥ 3 cảnh liên tiếp**.
+    - **Level B (2.5D + Breathing — Bắt buộc `≥ 1` cảnh, khuyến nghị `1–2` cảnh):** Tách 2–4 lớp sạch (`sX_bg.jpg` + `sX_fg.png`), gắn `breathe_y`/`breathe_period` (`≥ 1` lớp), hỗ trợ thêm `rack_focus` và `head_micro_tilt <= 2.2°`.
+    - **Living-Character khóa pixel qua `face_roi_prep.py` — Bắt buộc `eye_blink ≥ 2` và `mouth_sync ≥ 2` (khuyến nghị `2–4` cảnh cận rõ mặt):** Chớp mắt + **chép miệng 3–4 trạng thái khớp `.wav` thật** (duyệt bảng Face QC cận mặt), kết hợp `screen_glow`, `detail_reveal`, `light_shift`, `notifications`/`chat_bubbles`, `focus_highlight` khớp foley.
+  - **CHECK 3 (Nâng cấp Level 3 — Chỉ PASS sau khi CHECK 1 & 2 đều PASS):** Áp dụng chọn lọc `split_screen` (`layout: "horizontal"` trên–dưới cho 9:16), `phone_waveform`, `red_circle_draw`, `highlighter_sweep`, `animated_counter`, `typing_indicator`, `rain_layer`, `ambient_particles`, `light_sweep`, `color_mood`, `chromatic_pulse`, `eye_gaze`/`expr_swap`, 4-state `round_image`. Mọi lần sửa/render lại đều tự hủy chữ ký `human_qa_signoff.json` cũ để buộc duyệt lại bản Staging mới.
+  - **Level D (AI I2V ngắn dựng ngoài tùy chọn):** Tối đa 1 khoảnh khắc phản ứng đặc biệt nếu không biến dạng; có lỗi → hạ cấp ngay bằng `"video_enabled": false`.
 
 ## V. ÂM THANH (preset có sẵn – `python factory619/_engine/run.py presets`)
 - **Ambience:** `room_tone`, `night_room`, `office`, `street`, `crowd`, `rain`

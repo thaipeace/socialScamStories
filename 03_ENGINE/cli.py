@@ -18,7 +18,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
-from core import (Episode, GateError, PreventSleep, load_json, rel, resolve_factory_dir, save_json, utf8_stdout)  # noqa: E402
+from core import (Episode, GateError, PreventSleep, episode_fingerprint, load_json, rel, resolve_factory_dir, save_json, utf8_stdout)  # noqa: E402
 
 utf8_stdout()
 
@@ -70,8 +70,12 @@ def gate0(ep: Episode) -> list[str]:
             has_px = len(px_layers) >= 2 and all(
                 bool(ly.get("image")) and ep.resolve_asset(ly["image"]).is_file() for ly in px_layers
             )
-            if not (has_img or has_vid or has_px):
-                errs.append(f"Thiếu ảnh/video/layer 2.5D cho cảnh {sc.get('id', '?')} ({sc.get('image') or sc.get('video')})")
+            sp_panels = (sc.get("split_screen") or {}).get("panels") or []
+            has_sp = len(sp_panels) == 2 and all(
+                bool(pn.get("image")) and ep.resolve_asset(pn["image"]).is_file() for pn in sp_panels
+            )
+            if not (has_img or has_vid or has_px or has_sp):
+                errs.append(f"Thiếu ảnh/video/layer 2.5D/split_screen cho cảnh {sc.get('id', '?')} ({sc.get('image') or sc.get('video')})")
     import motion_fx
     m_audit = motion_fx.audit_episode_motion(ep)
     errs.extend(m_audit["errors"])
@@ -111,19 +115,31 @@ def gate0(ep: Episode) -> list[str]:
 
 
 def cmd_gate0(a) -> None:
+    import motion_fx
     ep = Episode(a.episode, a.factory)
     errs = gate0(ep)
+    ma = motion_fx.audit_episode_motion(ep)
+    fc = ma.get("feature_counts") or {}
+    sc_chk = ma.get("stage_checks") or {}
+    c2_st = (sc_chk.get("check2") or {}).get("status", "LEGACY_SKIP")
+    c3_st = (sc_chk.get("check3") or {}).get("status", "NOT_APPLICABLE")
+    c1_errs = [e for e in errs if e not in ma["errors"]]
+    c1_st = "FAIL" if c1_errs else "PASS"
     if errs:
-        print(f"GATE 0 [{ep.factory_name}] – CHƯA ĐẠT:")
+        print(f"GATE 0 [{ep.factory_name} · {ep.aspect_label}] – CHƯA ĐẠT (CHECK 1={c1_st} | CHECK 2={c2_st} | CHECK 3={c3_st}):")
         for e in errs:
             print("  -", e)
         sys.exit(1)
-    import motion_fx
-    ma = motion_fx.audit_episode_motion(ep)
     lc = ma["level_counts"]
     print(f"GATE 0 [{ep.factory_name} · {ep.aspect_label} · {ep.duration:.0f}s] – ĐẠT. Có thể chạy Gate 2 → 5.")
-    print(f" -> Visual Motion Plan: A={lc['A']} · B={lc['B']} · C={lc['C']} · D={lc['D']}"
-          + (" (Level 2 active)" if ma["is_level2"] else " (legacy mode)"))
+    m_ver = ma.get("motion_version", "level2" if ma["is_level2"] else "legacy").upper()
+    print(f" -> Tiến trình Check 1-2-3: CHECK 1={c1_st} | CHECK 2={c2_st} | CHECK 3={c3_st}")
+    print(f" -> Visual Motion Plan: A={lc['A']} · B={lc['B']} · C={lc['C']} · D={lc['D']} ({m_ver} · {ma['hardware_profile']})")
+    print(
+        f" -> Kế thừa Level 2/3: 2.5D={fc.get('parallax_scenes', 0)} · Breathing={fc.get('breathing_layers', 0)} · "
+        f"Blink={fc.get('eye_blink', 0)} · Mouth={fc.get('mouth_sync', 0)} (4-state={fc.get('mouth_sync_4state', 0)}) · "
+        f"L3_FX={ma.get('l3_feature_total', 0)}"
+    )
     for w in ma["warnings"]:
         print(f"    [motion note] {w}")
 
@@ -133,9 +149,29 @@ def cmd_motion_check(a) -> None:
     ep = Episode(a.episode, a.factory)
     ma = motion_fx.audit_episode_motion(ep)
     lc = ma["level_counts"]
-    mode = "LEVEL 2 ACTIVE" if ma["is_level2"] else "LEGACY (chưa khai báo motion_upgrade: level2)"
-    print(f"=== VISUAL MOTION PLAN [{ep.factory_name} · {ep.aspect_label}] – {ep.id} ({mode}) ===")
+    fc = ma.get("feature_counts") or {}
+    req = ma.get("min_requirements") or {}
+    sc_chk = ma.get("stage_checks") or {}
+    c2_st = (sc_chk.get("check2") or {}).get("status", "LEGACY_SKIP")
+    c3_st = (sc_chk.get("check3") or {}).get("status", "NOT_APPLICABLE")
+    m_ver = ma.get("motion_version", "legacy")
+    mode = (
+        "LEVEL 3 ACTIVE" if m_ver == "level3"
+        else "LEVEL 2 ACTIVE" if m_ver == "level2"
+        else "LEGACY (chưa khai báo motion_upgrade: level2/level3)"
+    )
+    print(f"=== VISUAL MOTION PLAN [{ep.factory_name} · {ep.aspect_label}] – {ep.id} ({mode} · {ma['hardware_profile']}) ===")
     print(f"Phân bổ: Level A={lc['A']} | Level B={lc['B']} | Level C={lc['C']} | Level D={lc['D']} (Tổng {ma['total_scenes']} cảnh)")
+    print(
+        f"Tiến trình Kế thừa: CHECK 2 (Level 2)={c2_st} | CHECK 3 (Level 3)={c3_st}\n"
+        f"  - Level 2 cốt lõi: 2.5D={fc.get('parallax_scenes', 0)}/{req.get('parallax_scenes', 1)}+ · "
+        f"Breathing={fc.get('breathing_layers', 0)}/{req.get('breathing_layers', 1)}+ · "
+        f"EyeBlink={fc.get('eye_blink', 0)}/{req.get('eye_blink', 2)}+ · "
+        f"MouthSync={fc.get('mouth_sync', 0)}/{req.get('mouth_sync', 2)}+ (4-state={fc.get('mouth_sync_4state', 0)})\n"
+        f"  - Level 3 nâng cao: SplitScreen={fc.get('split_screen_scenes', 0)} · RackFocus={fc.get('rack_focus_layers', 0)} · "
+        f"HeadTilt={fc.get('head_tilt_layers', 0)} · Gaze/Expr={fc.get('eye_gaze', 0) + fc.get('expr_swap', 0)} · "
+        f"L3_FX={fc.get('l3_fx', 0)} · L3_Trans={fc.get('l3_transitions', 0)}"
+    )
     print(f"{'Scene':<24} {'Time':<13} {'Beat':<13} {'Lv':<3} {'Pattern':<18} {'Wobble':<9} {'Detail FX'}")
     print("-" * 98)
     for r in ma["scenes"]:
@@ -147,8 +183,12 @@ def cmd_motion_check(a) -> None:
         print(f"\nMotion ↔ SFX Sync: khớp {len(ss['synced'])} · chưa khớp foley (±0.65s): {len(ss['unsynced'])}")
         if ss["unsynced"]:
             print("  - Chưa có foley gần mốc:", ", ".join(ss["unsynced"]))
+    if ma.get("waivers_used"):
+        print("\nWAIVERS ĐÃ KHAI BÁO (chủ kênh cần soát kỹ tại Gate 5):")
+        for wk, wv in ma["waivers_used"].items():
+            print(f"  [WAIVER] {wk}: {wv}")
     if ma["errors"]:
-        print("\nLỖI MOTION PLAN (chặn Gate 0):")
+        print("\nLỖI TIẾN TRÌNH CHECK 1-2-3 / MOTION PLAN (CHẶN GATE 0 & GATE 5):")
         for e in ma["errors"]:
             print("  [ERR]", e)
     if ma["warnings"]:
@@ -168,7 +208,13 @@ def run_gate(ep: Episode, g: int, a) -> None:
         gate3_audio.run(ep)
     elif g == 4:
         import gate4_timeline
-        gate4_timeline.run(ep, preview_only=getattr(a, "preview", False), safe_motion=getattr(a, "safe_motion", False))
+        gate4_timeline.run(
+            ep,
+            preview_only=getattr(a, "preview", False),
+            safe_motion=getattr(a, "safe_motion", False),
+            workers=getattr(a, "workers", 0),
+            encoder=getattr(a, "encoder", "auto"),
+        )
     elif g == 5:
         import gate5_render_audit
         gate5_render_audit.run(ep, skip_render=getattr(a, "skip_render", False))
@@ -209,10 +255,17 @@ def cmd_signoff(a) -> None:
     if a.point:
         p = ep.human_signoff_path
         data = load_json(p) if p.is_file() else {}
+        fp = episode_fingerprint(ep)
         for pt in a.point:
-            data[str(pt)] = {"status": a.status, "by": a.by, "note": a.note or "", "at": stamp}
+            data[str(pt)] = {
+                "status": a.status,
+                "by": a.by,
+                "note": a.note or "",
+                "at": stamp,
+                **fp,
+            }
         save_json(p, data)
-        print(f"Đã ký duyệt điểm {a.point} = {a.status} vào {rel(p)}")
+        print(f"Đã ký duyệt điểm {a.point} = {a.status} (ver={fp['episode_version']} · sha={fp['config_sha256']}) vào {rel(p)}")
 
 
 def cmd_status(a) -> None:
@@ -235,10 +288,13 @@ def cmd_presets(_a) -> None:
     import sfx_library
     for k, v in sfx_library.list_presets().items():
         print(f"{k:14}: {', '.join(v)}")
+    print(f"{'hw_profile':14}: {motion_fx.HARDWARE_PROFILE} (cv2={'ON' if motion_fx.HAS_CV2 else 'OFF'}, default_workers={motion_fx.DEFAULT_RENDER_WORKERS})")
     print(f"{'motion_lvA':14}: {', '.join(sorted(motion_fx.LEVEL_A_PRESETS))}")
-    print(f"{'parallax_cam':14}: {', '.join(sorted(motion_fx.PARALLAX_CAMERA_PRESETS))} (max {motion_fx.MAX_PARALLAX_LAYERS} layers, blur <= {motion_fx.MAX_PARALLAX_BLUR}px)")
+    print(f"{'parallax_cam':14}: {', '.join(sorted(motion_fx.PARALLAX_CAMERA_PRESETS))} (max {motion_fx.MAX_PARALLAX_LAYERS} layers, rack-focus blur <= {motion_fx.MAX_PARALLAX_BLUR}px, head_tilt <= {motion_fx.MAX_HEAD_TILT_DEG}°)")
+    print(f"{'transitions':14}: {', '.join(motion_fx.L3_TRANSITIONS)}")
     print(f"{'detail_fx':14}: {', '.join(motion_fx.DETAIL_FX_TYPES)}")
-    print(f"{'excluded_fx':14}: {', '.join(sorted(motion_fx.EXCLUDED_HEAVY_FX))} (loại trừ theo Hardware Safety Profile L480)")
+    print(f"{'color_moods':14}: {', '.join(sorted(motion_fx.COLOR_MOOD_PRESETS))}")
+    print(f"{'excluded_fx':14}: {', '.join(sorted(motion_fx.EXCLUDED_HEAVY_FX))} (loại trừ do không có GPU rời)")
     print(f"{'beat_types':14}: {', '.join(motion_fx.BEAT_TYPES)}")
 
 
@@ -254,10 +310,15 @@ def main(default_factory: str | Path | None = None) -> None:
     s = sp.add_parser("gate"); s.add_argument("episode"); s.add_argument("number")
     s.add_argument("--placeholder", action="store_true"); s.add_argument("--force", action="store_true")
     s.add_argument("--preview", action="store_true"); s.add_argument("--skip-render", action="store_true")
-    s.add_argument("--safe-motion", action="store_true", help="Hạ cấp an toàn toàn bộ về Level A Ken Burns"); s.set_defaults(f=cmd_gate)
+    s.add_argument("--safe-motion", action="store_true", help="Hạ cấp an toàn toàn bộ về Level A Ken Burns")
+    s.add_argument("--workers", type=int, default=0, help="Số tiến trình render Gate 4 song song (0=tự động, 1..4)")
+    s.add_argument("--encoder", default="auto", choices=["auto", "qsv", "x264"], help="Bộ mã hóa H.264 Gate 4 (auto=ưu tiên Intel QSV)")
+    s.set_defaults(f=cmd_gate)
     s = sp.add_parser("all"); s.add_argument("episode"); s.add_argument("--from", dest="frm", default=2); s.add_argument("--to", default=5)
     s.add_argument("--placeholder", action="store_true"); s.add_argument("--force", action="store_true")
     s.add_argument("--safe-motion", action="store_true", help="Hạ cấp an toàn toàn bộ về Level A Ken Burns")
+    s.add_argument("--workers", type=int, default=0, help="Số tiến trình render Gate 4 song song (0=tự động, 1..4)")
+    s.add_argument("--encoder", default="auto", choices=["auto", "qsv", "x264"], help="Bộ mã hóa H.264 Gate 4 (auto=ưu tiên Intel QSV)")
     s.add_argument("--skip-gate0", action="store_true"); s.set_defaults(f=cmd_all)
     s = sp.add_parser("signoff"); s.add_argument("episode"); s.add_argument("--point", type=int, nargs="*")
     s.add_argument("--status", default="PASS", choices=["PASS", "FAIL", "PENDING"]); s.add_argument("--by", required=True)

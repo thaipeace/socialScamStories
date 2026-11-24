@@ -44,11 +44,10 @@ Bộ tiêu chí ngắn gọn, tổng quát dùng để kiểm tra bắt buộc c
    - **Phân biệt rõ giọng nhân vật cùng giới:** Khi có 2–3 nhân vật nam (hoặc nữ) trong cùng tập, phải chọn `voice` và `style` khác hẳn nhau về độ trầm/sáng và tốc độ nói để nghe phân biệt được ngay.
    - Từ vựng trong lời thoại phải đồng nhất phương ngữ miền Nam; câu thoại gọn, súc tích (`≤ 26 từ/câu`, mật độ phim dài `~120–140 từ/phút`).
    - Bắt buộc **nghe kiểm tra từng file `.mp3`** và dàn lại timeline theo thời lượng WAV thực tế sau `Gate 2`.
-3. **Chuyển động hình ảnh có chủ đích — Visual Motion Upgrade Level 2 ([VISUAL_MOTION_HARNESS.md](VISUAL_MOTION_HARNESS.md)):**
-   - **Bắt buộc lập Visual Motion Plan trước khi render** (`beat_type` + `motion_level` `A/B/C/D` trong `SCRIPT.md`, `IMAGE_PROMPTS.md`, `episode.json`, kiểm bằng `run.py motion-check <EP>`).
-   - Không animate mọi cảnh giống nhau, không lặp zoom-in máy móc ≥ 3 cảnh liền, không dùng rung/shake tùy tiện; chủ động dùng **`static_hold`** ở khoảng lặng/căng thẳng để tạo tương phản.
-   - Ưu tiên kết hợp nền tảng **Level A** với **Level B (2.5D parallax ~2–4 cảnh phù hợp)**, **Level C (animate chi tiết điện thoại/thông báo/ánh sáng/click khớp VO & SFX mà không đổi nội dung chữ/số)** và **Level D (AI I2V ngắn tùy chọn khi không méo hình)**.
-   - Giữ continuity 100%; nếu hiệu ứng nào lỗi/méo/flicker ở Gate 5 QC 11 điểm → **hạ cấp ngay về Level A** (cảnh tĩnh sạch sẽ luôn tốt hơn cảnh chuyển động lỗi).
+3. **Chuyển động hình ảnh có chủ đích — Visual Motion Level 3 + Tiến trình Check 1 → 2 → 3 bắt buộc ([VISUAL_MOTION_HARNESS.md](VISUAL_MOTION_HARNESS.md)):**
+   - **Áp dụng bất chấp làm mới, chỉnh sửa hay update tập cũ:** Phải vượt đủ **CHECK 1 (Level 1 + đồng bộ `source/build_draft.py`) → CHECK 2 (Kế thừa Level 2: `beat_type` + `motion_level`, không lặp zoom-in ≥ 3 cảnh, `2.5D Parallax + breathing`, Living-Character khóa pixel `eye_blink` + `mouth_sync` khớp `.wav` thật) → CHECK 3 (Level 3: `split_screen`, `evidence_fx`, không khí `rain`/`particles`/`color_mood`, `rack_focus`, `head_micro_tilt`, chuyển cảnh điện ảnh, chống stale signoff)** trước khi render Staging.
+   - **CẤM nhảy cóc bỏ qua chép miệng / chớp mắt / 2.5D để chỉ dán hiệu ứng Level 3.** Nếu thiếu tài nguyên do lỗi API sinh ảnh (503) → phải dừng báo chủ kênh ngay, không được tự ý bỏ trống render tiếp.
+   - Giữ continuity 100%; nếu hiệu ứng nào lỗi/méo/flicker ở Gate 5 QC 11 điểm → sửa tài nguyên hoặc hạ cấp có lý do rõ ràng.
 4. **Nhịp dựng & Kỷ luật xuất bản (`Gate 3 → Gate 5`):**
    - Short `9:16`: `≤ 115 từ / 56s`. Phim dài `16:9`: linh hoạt **`4 – 5+ phút` (`240s – 330s`)**, không kéo dài câu chữ lê thê cho đủ phút.
    - Luôn dừng ở **Staging (`Gate 5`)**, kiểm tra đủ 8 điểm QA, 11 điểm Visual Motion QC và các khung hình `preview_frames`, chờ chủ kênh duyệt mới chạy `Gate 6`.

@@ -1,10 +1,35 @@
-# HARNESS CHUYỂN ĐỘNG HÌNH ẢNH — VISUAL MOTION UPGRADE (LEVEL 2 + LIVING-CHARACTER A/B/C)
-*Mã: HRN-MOTION-L2.1 · Áp dụng mặc định cho mọi tập mới của cả `factory196` (16:9) và `factory619` (9:16)*
+# HARNESS CHUYỂN ĐỘNG HÌNH ẢNH — VISUAL MOTION UPGRADE (LEVEL 3 + LIVING-CHARACTER 2.5)
+*Mã: HRN-MOTION-L3.0 · Nâng cấp nền tảng từ HRN-MOTION-L2.1 (24/11/2026) · Áp dụng cho mọi tập mới của cả `factory196` (16:9) và `factory619` (9:16)*
 
 > [!IMPORTANT]
-> **DEFAULT RULE:** Mỗi video Tèo Cảnh Giác từ nay **bắt buộc có Visual Motion Planning trước khi render** (`beat_type` + `motion_level` cho từng cảnh), kết hợp chuẩn **Living-Character Micro-Motion chọn lọc (A: Chớp mắt `eye_blink` + B: Miệng nói theo sóng `.wav` thật `mouth_sync` + C: Nhịp thở `breathing`)** trên các cảnh cận/trung cận rõ mặt (đã kiểm chứng thực chiến trên `factory619/EP08`). Ken Burns vẫn là nền tảng, nhưng **không còn là giải pháp duy nhất**.
+> **DEFAULT RULE:** Mỗi video Vạn Chuyện / Bóc Trần Lừa Đảo **bắt buộc có Visual Motion Planning trước khi render** (`beat_type` + `motion_level` cho từng cảnh), kết hợp **Living-Character Micro-Motion chọn lọc** (`eye_blink` · `mouth_sync` 3–4 trạng thái khớp `.wav` thật · `breathing` · `eye_gaze` / `expr_swap` · `head_micro_tilt`) cùng các hiệu ứng đạo diễn & không khí **Level 3** (chia đôi cuộc gọi `split_screen`, `phone_waveform`, `rack_focus`, đồ họa vật chứng `red_circle_draw` / `highlighter_sweep` / `animated_counter` / `typing_indicator`, môi trường `rain_layer` / `ambient_particles` / `light_sweep` / `color_mood` / `chromatic_pulse`, chuyển cảnh `whip_pan` / `zoom_punch` / `luma_wipe` / `film_burn`).
 >
-> **Nguyên tắc không hồi tố & tương thích ngược:** Không bắt buộc sửa hồi tố các tập cũ đã phát hành (chỉ nâng cấp khi chủ kênh yêu cầu). Engine `03_ENGINE` giữ tương thích ngược 100% với tập cũ chưa khai báo `"motion_upgrade": "level2"`.
+> **Nguyên tắc không hồi tố & tương thích ngược 100%:** Không bắt buộc sửa hồi tố tập cũ chưa chạm tới. Engine `03_ENGINE` giữ tương thích ngược hoàn toàn với cả tập Legacy, `"motion_upgrade": "level2"`, và `"motion_upgrade": "level3"`, đồng thời mọi tập cũ đều tự hưởng tăng tốc OpenCV + render đa nhân mới.
+
+---
+
+## 0. LUẬT KẾ THỪA CỘNG DỒN & TIẾN TRÌNH CHECK 1 → 2 → 3 BẮT BUỘC
+*Áp dụng cứng cho **MỌI TÌNH HUỐNG: LÀM MỚI · CHỈNH SỬA · UPDATE/NÂNG CẤP TẬP CŨ** — được khóa tự động bằng code tại `motion-check`, `gate0`, `gate4` và `gate5` (`03_ENGINE/motion_fx.py`, `gate4_timeline.py`, `gate5_render_audit.py`).*
+
+> [!CAUTION]
+> **LUẬT THÉP (`Level 3 ⊃ Level 2 ⊃ Level 1`):**
+> - **TUYỆT ĐỐI CẤM NHẢY CÓC:** Muốn gắn `"motion_upgrade": "level3"` thì **BẮT BUỘC phải đạt 100% CHECK 1 (Level 1) VÀ 100% CHECK 2 (Level 2 — gồm 2.5D Parallax + Breathing + Chớp mắt `eye_blink` + Chép miệng `mouth_sync` khớp `.wav` thật)** trước khi áp hiệu ứng Level 3.
+> - **CẤM ĐÁNH ĐỔI / LÀM MẤT TÍNH NĂNG CŨ:** Không bao giờ được bỏ chép miệng, chớp mắt, 2.5D, thoại, foley, chat bubble hay safe zone để chỉ dán hiệu ứng mới lên ảnh tĩnh phẳng.
+> - **CẤM LỜ ĐI KHI THIẾU TÀI NGUYÊN / LỖI API (VD: 503):** Nếu công cụ sinh ảnh gặp lỗi hoặc hết hạn mức khiến chưa tạo được bộ `eye_blink` / `mouth_sync` / `2.5D`, **PHẢI DỪNG LẠI BÁO CHỦ KÊNH NGAY** — tuyệt đối không được tự ý bỏ trống rồi render tiếp, và **CẤM tự ý ghi `motion_waivers`** khi chưa được chủ kênh đồng ý.
+
+### Tiến trình Check 1 → 2 → 3 bắt buộc trước mọi lần render Staging
+
+| Giai đoạn | Phạm vi kiểm tra bắt buộc | Ngưỡng khóa cứng trong Engine | Điểm chặn tự động |
+| :--- | :--- | :--- | :--- |
+| **CHECK 1**<br>*(Nền Level 1)* | • Thời lượng hợp lệ, cảnh phủ kín `0 → duration` không hở/chồng<br>• Đủ `hook`, `chapters` (16:9), `dialogue` đúng `cast.json` & trần từ, `red_flags`, `disclaimer`, `clearance: ĐẠT`<br>• Giữ nguyên 100% dữ liệu Level 1 khi **sửa/update** (`dialogue`, `chat_bubbles`, `ambience`, `bgm`, `foley`, `shakes`)<br>• **Nguồn sự thật duy nhất:** nếu tập có `source/build_draft.py`, mọi thay đổi phải được cập nhật vào `build_draft.py` (không chỉ sửa chắp vá `episode.json`)<br>• Safe Zone, Boxless Subtitles, không `asetrate`/`atempo`, sạch từ cấm ASR/OCR | 0 lỗi `gate0` phần đầu vào + 0 lỗi Gate 5 điểm `1, 3, 6, 7, 8`; cảnh báo `[SYNC]` nếu `episode.json` mới hơn `source/build_draft.py` | `gate0`, `gate5` |
+| **CHECK 2**<br>*(Kế thừa Level 2 — Bắt buộc cho cả `level2` & `level3`)* | • **2A. Visual Beat & Nhịp:** 100% cảnh có `beat_type` + `motion_level` (`A/B/C/D`), không chuỗi lặp `≥ 3` `push_in`, không lạm dụng `shakes`<br>• **2B. Chiều sâu 2.5D (`Level B`) + Nhịp thở (`breathing`):** lớp `bg/fg` tách sạch + `breathe_y`/`breathe_scale`<br>• **2C. Living-Character khóa pixel (`face_roi_prep.py`):** chớp mắt (`eye_blink`) + **chép miệng khớp `.wav` thật (`mouth_sync`)** (đếm cả trên cảnh thường, layer `fg` 2.5D và trong `split_screen.panels`)<br>• **2D. Detail Motion nền & Motion↔SFX Sync:** `screen_glow`/`light_shift`/`detail_reveal`/`focus_highlight` khớp foley | • **Phim dài 16:9 (`factory196`):** `2.5D ≥ 1` *(khuyến nghị 2–4)* · `Breathing ≥ 1` · **`eye_blink ≥ 3`** · **`mouth_sync ≥ 3`**<br>• **Short 9:16 (`factory619`):** `2.5D ≥ 1` *(khuyến nghị 1–2)* · `Breathing ≥ 1` · **`eye_blink ≥ 2`** · **`mouth_sync ≥ 2`** | **CHẶN CỨNG** tại `motion-check`, `gate0`, `gate4`, `gate5` (điểm 4 = `FAIL`) |
+| **CHECK 3**<br>*(Nâng cấp Level 3 — Chỉ mở khi CHECK 1 & 2 đều PASS)* | • **3A. Thực chất Level 3:** có ít nhất 1 hiệu ứng/kỹ thuật Level 3 (`split_screen`, `phone_waveform`, `red_circle_draw`, `highlighter_sweep`, `animated_counter`, `typing_indicator`, `rain_layer`, `ambient_particles`, `light_sweep`, `color_mood`, `chromatic_pulse`, `rack_focus`, `head_micro_tilt`, `eye_gaze`/`expr_swap`, 4-state `round_image`, chuyển cảnh L3)<br>• **3B. An toàn phần cứng (`dual16gb_cpu_l480`) & căn ROI:** ≤ 4 lớp 2.5D, blur ≤ 8.0px, `head_tilt_deg ≤ 2.2°`, 0 hiệu ứng cấm cục bộ; panel `split_screen` dùng `crop_x`/`crop_y` tự đồng bộ ROI (`region_space: "source"` nếu dùng tọa độ ảnh gốc)<br>• **3C. Chống Stale Signoff (khi Sửa/Update):** chữ ký duyệt `clearance/human_qa_signoff.json` cũ tự động mất hiệu lực ngay khi `episode.json` đổi `version`/`sha256` hoặc Gate 4 render lại → bắt buộc chủ kênh xem duyệt bản Staging mới trước Gate 6 | • Nếu CHECK 2 = `FAIL` → CHECK 3 tự động **`BLOCKED`**<br>• `L3_total ≥ 1`<br>• Chữ ký duyệt cũ bị tự động chuyển về `⏳ CHỜ NGƯỜI DUYỆT` | **CHẶN CỨNG** tại `motion-check`, `gate0`, `gate4`, `gate5` |
+
+### Quy trình bắt buộc theo từng loại công việc (Làm mới · Sửa · Update)
+1. **Khi LÀM MỚI tập (`run.py new <EP>`):** Thiết kế `episode.json` theo `"motion_upgrade": "level3"` ngay từ đầu → Gate 1 chuẩn bị đủ ảnh nền + 2.5D (`bg/fg`) + bộ Living-Character (`blink` + `mouth_closed/mid/open[/round]` qua `face_roi_prep.py` + duyệt bảng Face QC) → chạy `motion-check` & `gate0` (**phải PASS đủ CHECK 1 → 2 → 3**) → Gate 2 → 3 → 4 → 5 (dừng Staging).
+2. **Khi CHỈNH SỬA tập đã có:** Sửa trực tiếp trong `source/build_draft.py` (nếu có) rồi biên dịch lại `episode.json` → đối chiếu số lượng `2.5D`, `eye_blink`, `mouth_sync`, `L3_FX` trước & sau sửa không bị sụt giảm → chạy lại `motion-check` & `gate0` → render lại Gate 4 → Gate 5 (**chữ ký cũ tự hết hạn, phải duyệt lại Staging**).
+3. **Khi UPDATE / NÂNG CẤP tập cũ (Legacy v1–v3 → Level 3):** Tuyệt đối KHÔNG nhảy thẳng lên Level 3. Phải sao lưu `episode.json` gốc → thực hiện đủ **tầng Level 2 trước** (tách 2.5D + tạo bộ `eye_blink` & `mouth_sync` qua `face_roi_prep.py` + duyệt Face QC) → giữ nguyên toàn bộ dữ liệu Level 1 (đặc biệt KHÔNG re-synth Gate 2 TTS nếu thoại không đổi) → mới áp thêm lớp Level 3 → đồng bộ vào `source/build_draft.py` → vượt đủ **CHECK 1 → 2 → 3** ở `gate0`/`gate4`/`gate5` → dừng Staging chờ duyệt lại.
+4. **Cơ chế ngoại lệ duy nhất (`motion_waivers`):** Chỉ dùng khi **kịch bản thực sự không có cảnh lộ mặt hoặc ảnh đặc thù không thể tách 2.5D** VÀ **đã được chủ kênh đồng ý**. Khai báo tường minh `"motion_waivers": {"mouth_sync": "Lý do cụ thể >= 12 ký tự"}` trong `episode.json`; mọi waiver đều bị in nổi bật `⚠️ WAIVER` ở `motion-check`, `gate0` và `GATE5_QA_REPORT.md` để không bao giờ che giấu được.
 
 ---
 
@@ -38,29 +63,39 @@ Mỗi cảnh trong `episode.json` bắt buộc được phân loại trước kh
 - Sử dụng: Ken Burns có kiểm soát (`slow_push_in`, `slow_pull_out`, `pan_left`, `pan_right`, `drift_up`, `drift_down`, `subtle_push_left`, `subtle_push_right`) và **`static_hold`** (giữ khung tĩnh có chủ đích ở khoảnh khắc im lặng/căng thẳng/kết).
 - **Không dùng rung hình tùy tiện** (`wobble: "none"` mặc định cho Level A; chỉ bật `handheld`/`tense` ở cảnh nghi vấn/cao trào có lý do rõ ràng).
 
-### LEVEL B — DEPTH MOTION / 2.5D PARALLAX (`"motion_level": "B"`)
-Áp dụng cho **~2–4 cảnh nổi bật có chiều sâu không gian** mỗi video khi nguồn hình phù hợp *(không bắt buộc đủ số lượng nếu ảnh không phù hợp)*.
-- Tách cảnh thành 2–3 lớp: **Background (`bg`)** · **Main subject (`subject`/`mid` RGBA)** · **Foreground (`fg` RGBA tùy chọn)**.
-- Tạo chuyển động camera chậm (`push_in`, `pull_out`, `pan_left`, `pan_right`, `drift_push`) để các lớp dịch chuyển theo tốc độ `depth` khác nhau (tùy chọn `blur` nhẹ trên `bg`/`fg` để tạo chiều sâu trường ảnh).
+### LEVEL B — DEPTH MOTION / 2.5D PARALLAX + RACK FOCUS (`"motion_level": "B"`)
+Áp dụng cho **~2–5 cảnh nổi bật có chiều sâu không gian** mỗi video khi nguồn hình phù hợp *(không bắt buộc đủ số lượng nếu ảnh không phù hợp)*.
+- Tách cảnh thành **2–4 lớp**: **Background (`bg`)** · **Mid (`mid` tùy chọn)** · **Main subject (`subject` RGBA)** · **Foreground (`fg` RGBA tùy chọn)**.
+- Tạo chuyển động camera chậm (`push_in`, `pull_out`, `pan_left`, `pan_right`, `drift_push`) để các lớp dịch chuyển theo tốc độ `depth` khác nhau.
+- **Rack Focus (Dynamic DoF — mới ở Level 3):** Thay vì blur tĩnh, có thể khai báo `blur_from` / `blur_to` (`<= 8.0px`), `blur_at`, `blur_dur` ngay trên từng layer để chuyển nét mượt từ tiền cảnh ↔ hậu cảnh (chỉ tính blur 1 lần lúc nạp cảnh rồi blend siêu nhẹ).
+- **Head Micro-Tilt (Living-Character 2.5 — mới ở Level 3):** Trên lớp nhân vật (`fg`/`subject`), có thể bật `head_tilt_deg` (`<= ±2.2°`), `head_pivot` (`[0.5, 0.78]`), và tùy chọn `tilt_speaker` / `tilt_line_ids` để nhân vật nghiêng/gật cực nhẹ theo nhịp nhấn giọng `.wav` thật.
 - **Cấm exaggerate depth**, cấm làm méo cơ thể, gương mặt hoặc vật thể.
 - Nếu nguồn ảnh không đủ sạch để tách lớp không lỗi biên → **giữ Level A**, không cố ép 2.5D.
 
-### LEVEL C — OBJECT / DETAIL MOTION (`"motion_level": "C"`)
-Ưu tiên **animate một chi tiết cụ thể** thay vì animate toàn bộ khung hình.
-- Các dạng được `03_ENGINE` hỗ trợ trực tiếp:
-  - **Màn hình / ánh sáng phản chiếu (`screen_glow`, `light_shift`):** điện thoại sáng màn hình, ánh sáng màn hình hắt lên mặt/bàn tay, đèn bật/tắt.
-  - **Chi tiết thay đổi theo nhịp (`detail_reveal`):** chuyển mượt giữa 2 ảnh đồng khung (toàn khung hoặc vùng `region` có làm mềm biên `feather`), ví dụ: màn hình tối → sáng, đèn tắt → bật, chi tiết vật chứng lộ diện.
-  - **Notification & Tin nhắn theo nhịp kể (`notifications`, `chat_bubbles`):** thanh thông báo trung tính trượt nhẹ từ mép trên Safe Zone, bong bóng tin nhắn trượt lên theo đúng mốc thoại & SFX (tuyệt đối không logo/UI app thật).
-  - **Thao tác chuột / chạm (`cursor_click`):** con trỏ tối giản di chuyển mượt tới tọa độ mục tiêu và tạo vòng sóng click nhẹ đúng mốc `click_at`.
-  - **Bàn tay / vật thể chuyển động nhẹ (`detail_layer`):** lớp RGBA PNG tách riêng dịch chuyển vị trí/scale/opacity gọn nhẹ theo trục có kiểm soát.
-  - **Nhân vật sống động chọn lọc — Living-Character Micro-Motion (Tổ hợp A + B + C mặc định từ HRN-MOTION-L2.1):**
-    - **A · Chớp mắt tự nhiên (`eye_blink`):** Swap vùng elip nhỏ quanh mắt từ ảnh nhắm mắt đồng khung (chỉ nạp miếng ROI `~40 KB`). Nhịp không đều tự nhiên (`3.2–4.8s/lần`, đóng `0.055s` – giữ `0.045s` – mở `0.085s`), có thể hẹn chớp đúng khoảnh khắc sững người/chuyển câu. Hỗ trợ `"layer": "fg"` để khóa cứng 100% theo nhân vật trên cảnh 2.5D Level B.
-    - **B · Miệng nói theo sóng `.wav` thật (`mouth_sync`):** Tự động đọc biên độ RMS từng bước `12 fps` trực tiếp từ các file `audio/tts/<line_id>.wav` của đúng `speaker` đang nói → chuyển mượt 3 trạng thái anime (`closed_image` · `mid_image` · `open_image`, ngưỡng khuyến nghị `thresh_mid: 0.14`, `thresh_open: 0.68`). Miệng **tự ngậm kín tuyệt đối** trong khoảng lặng hoặc khi nhân vật khác nói.
-    - **C · Nhịp thở nhẹ (`breathing`):** Trên cảnh Level B 2.5D, gắn `breathe_y` (`1.8–2.5px`, trần `<= 6.0px`), `breathe_scale` (`0.004–0.006`, trần `<= 0.012`), `breathe_period` (`3.4–4.2s` cảnh thường, `2.0–2.4s` cảnh hoảng loạn/heartbeat) lên lớp nhân vật (`fg`/`subject`). Trên cảnh 1 lớp Level C cận mặt, dùng `"wobble": "breathe"`.
-  - **Dẫn mắt / Không khí nhẹ (`focus_highlight`, `light_shift`):** gom sáng tập trung vào chi tiết quan trọng hoặc đổi tông ánh sáng/độ sáng bằng 1D LUT siêu nhẹ (thay thế hoàn toàn các hiệu ứng hạt/volumetric nặng).
-- **Quy tắc chọn lọc Living-Character (A + B + C) & Chống lỗi cắt dán:**
-  - **Chỉ áp dụng chọn lọc:** `2–4 cảnh` cận/trung cận rõ mặt cho Short 9:16 (`factory619`) và `3–5 cảnh` cận thoại đắt giá cho Phim dài 16:9 (`factory196`). **KHÔNG dùng `mouth_sync`** trên cảnh toàn, cảnh quay lưng, mặt nhỏ, cảnh câm lặng hoặc đồ họa dẫn chuyện của Người Bóc Trần.
-  - **Quy trình tạo ảnh biến thể khóa pixel (`03_ENGINE/face_roi_prep.py`):** CẤM vẽ mắt/miệng bằng hình khối code và CẤM dùng AI lip-sync cục bộ (`Wav2Lip`/`LivePortrait`/`SadTalker`). Bắt buộc tạo ảnh biến thể từ chính ảnh cảnh đã duyệt (giữ khóa 99% khung hình, chỉ đổi mắt/miệng) → chạy `03_ENGINE/face_roi_prep.py` để tự động căn dịch chuyển (`±12px`) + cân màu da viền 14px + hòa trộn elip chỉ vùng mắt/miệng → **kiểm bảng QC cận mặt (`ORIG | BLINK | MOUTH_CLOSED | MOUTH_OPEN`) trước khi render**. Nếu lệch màu/biến dạng → sửa hoặc hạ cấp ngay.
+### LEVEL C — OBJECT / DETAIL MOTION + LIVING-CHARACTER 2.5 + LEVEL 3 FX (`"motion_level": "C"`)
+Ưu tiên **animate chi tiết kể chuyện & tạo không khí có chủ đích** thay vì animate máy móc toàn khung:
+- **Nhóm Đạo diễn & Bóc trần Vật chứng (Level 3 — Nhóm 1):**
+  - **Chia đôi màn hình cuộc gọi (`split_screen`):** Cảnh 2 khung (`layout: "vertical"` mặc định cho 16:9, `"horizontal"` mặc định cho 9:16), mỗi bên chạy camera + `eye_blink` + `mouth_sync` độc lập, tự làm sáng viền & tối nhẹ bên im lặng theo người đang nói (`speaker`), kèm thanh sóng âm điện thoại sống động (`waveform: true`).
+  - **Sóng âm thoại (`phone_waveform`):** Thanh equalizer tối giản chạy theo biên độ `.wav` thật (dùng cho cảnh thoại qua điện thoại `"af": "phone"` hoặc phần phân tích).
+  - **Khoanh đỏ & Bút dạ quang vẽ động (`red_circle_draw`, `highlighter_sweep`):** Khoanh tròn / đóng khung / gạch chân đỏ vẽ nét theo thời gian hoặc quẹt dạ quang vàng trong suốt (giữ rõ chữ nền) trực tiếp lên chi tiết gian dối (số tiền, link lạ, đồng hồ đếm ngược); ghép kèm foley `marker_draw`.
+  - **Số nhảy động (`animated_counter`):** Đếm ngược áp lực thời gian (`fmt: "mmss"`, VD `00:59 → 00:00`) hoặc biến động số dư (`fmt: "vnd"`, VD `0 → -18.000.000đ`); ghép kèm foley `counter_tick`.
+  - **Đang nhập tin nhắn (`typing_indicator`):** Bong bóng `...` trung tính nhấp nhô 1–1.5s ngay trước khi `chat_bubbles` bật lên.
+  - **Chuyển cảnh điện ảnh mới (`transition_in`):** `whip_pan_left`, `whip_pan_right`, `zoom_punch`, `luma_wipe`, `film_burn` (bên cạnh `cut`, `dissolve`, `flash_white`, `flash_red`, `fade_black`, `glitch`).
+- **Nhóm Không khí, Ánh sáng & Màu phim (Level 3 — Nhóm 2):**
+  - **Mưa 2 lớp siêu nhẹ (`rain_layer`, alias `rain`):** Cuộn 2 lớp hạt mưa nghiêng tiền–hậu cảnh mượt mà, rất hợp cảnh đêm/hậu quả (`aftermath`) khớp ambience `rain`.
+  - **Hạt bụi ánh sáng / bokeh (`ambient_particles`):** 15–45 hạt mềm trôi chậm trong không gian (hội trường LED, phòng tối, nắng cửa sổ).
+  - **Vệt sáng / bóng quét (`light_sweep`, alias `shadow_drift`):** Tia sáng đèn xe / ánh đèn quét ngang mềm (tính ở 1/4 res) cho cảnh đêm/nghi vấn.
+  - **Tông màu điện ảnh (`color_mood`):** LUT nhanh + vignette + film grain mịn theo 5 mood sẵn: `warm_daily`, `cold_suspicion`, `high_tension`, `flashback`, `noir_evidence`.
+  - **Cú sốc tách sắc (`chromatic_pulse`):** Tách nhẹ kênh R/B (`4–8px`) + zoom blur nhẹ trong `0.25–0.35s` khớp `impact` / `bank_ting` ở cảnh `climax`.
+- **Nhóm chi tiết nền Level 2 (vẫn dùng đều):** `screen_glow`, `light_shift`, `detail_reveal`, `notifications`, `chat_bubbles`, `cursor_click`, `detail_layer`, `focus_highlight`.
+- **Nhân vật sống động chọn lọc — Living-Character Level 2.5 (Tổ hợp A + B + C + 3.7):**
+  - **A · Chớp mắt (`eye_blink`):** Swap vùng elip nhỏ quanh mắt (~40 KB), hỗ trợ `"layer": "fg"` khóa cứng trên cảnh 2.5D Level B.
+  - **B · Miệng nói theo `.wav` thật (`mouth_sync`, 3 hoặc 4 trạng thái):** Đọc RMS + (tùy chọn) phổ tần số trực tiếp từ `audio/tts/<line_id>.wav`. Hỗ trợ **3 trạng thái** (`closed_image` · `mid_image` · `open_image`) hoặc **4 trạng thái nâng cấp** khi thêm **`round_image`** (tự tách âm tròn môi `O/Ô/U` theo spectral centroid `< 980 Hz`).
+  - **C · Nhịp thở & Nghiêng đầu vi mô (`breathing` + `head_micro_tilt`):** Nhịp thở (`breathe_y`, `breathe_scale`) + nghiêng/gật đầu nhẹ (`head_tilt_deg <= 2.2°`, `tilt_speaker`) trên lớp `fg` 2.5D.
+  - **D · Đảo ánh mắt & Đổi biểu cảm cục bộ (`eye_gaze`, `expr_swap`):** Swap ROI elip khóa pixel có mốc `at` / `dur` / `hold_dur` (hoặc mảng `events`) để nhân vật liếc xuống điện thoại, nhíu mày hoặc sững sờ ngay trong cùng 1 cảnh.
+- **Quy tắc chọn lọc Living-Character & Chống lỗi cắt dán:**
+  - **Chỉ áp dụng chọn lọc:** `2–4 cảnh` cận/trung cận rõ mặt cho Short 9:16 (`factory619`) và `3–6 cảnh` cận thoại đắt giá cho Phim dài 16:9 (`factory196`). **KHÔNG dùng `mouth_sync`** trên cảnh toàn, cảnh quay lưng, mặt nhỏ hoặc cảnh câm lặng.
+  - **Quy trình tạo ảnh biến thể khóa pixel (`03_ENGINE/face_roi_prep.py`):** CẤM vẽ mắt/miệng bằng hình khối code và CẤM dùng AI lip-sync cục bộ (`Wav2Lip`/`LivePortrait`/`SadTalker`). Bắt buộc tạo ảnh biến thể từ chính ảnh cảnh đã duyệt → chạy `03_ENGINE/face_roi_prep.py` → **kiểm bảng QC cận mặt trước khi render**.
 - Chuyển động phải **đúng timing** với voice-over, câu chuyện và sound effect.
 - **Tuyệt đối không tự ý thay đổi nội dung văn bản, UI, số tiền, tên, thông tin hoặc bằng chứng đang hiển thị.**
 
@@ -125,96 +160,129 @@ Khi motion có tương tác vật lý hoặc sự kiện rõ ràng, ghép foley 
 
 ## VI. RÀNG BUỘC AN TOÀN PHẦN CỨNG & NĂNG LỰC KỸ THUẬT (`03_ENGINE`)
 
-> [!WARNING]
-> **HARDWARE SAFETY PROFILE (`low_ram_cpu_l480`) — ThinkPad L480 · Intel i5-8250U · 8GB RAM · iGPU (không GPU rời):**
-> 1. **CẤM dùng trên máy hiện tại (Excluded):** AI image-to-video / diffusion / AI lip-sync (`Wav2Lip`, `LivePortrait`, `SadTalker`, `MuseTalk`) chạy cục bộ, Blender / 3D rendering, model AI cần GPU (`torch`/`rembg`/depth AI), heavy blur (`> 2.0px` hoặc blur theo từng frame), complex masking, optical flow, **particle systems (`rain`)**, **volumetric / full-frame shader sweeps (`shadow_drift`)**, bộ đệm frame lớn, render song song nhiều cảnh cùng lúc và nạp toàn bộ ảnh full-res vào RAM cùng một lúc.
-> 2. **An toàn & Khuyến nghị (Safe & Active):** Giữ nguyên đầu ra 1080p của pipeline hiện hữu, không cài thêm thư viện ngoài `Pillow + NumPy + FFmpeg`; chạy tuần tự từng cảnh với **cơ chế nạp trượt (sliding-window lazy load: tối đa 1–2 cảnh trong RAM tại mọi thời điểm)** và FFmpeg `-threads 4`.
-> 3. **Fallback bắt buộc:** Mọi hiệu ứng nâng cao đều tùy chọn; nếu chậm, lỗi hoặc thiếu tài nguyên, hạ cấp tức thì về Level A Ken Burns (theo từng cảnh bằng `"video_enabled": false` / bỏ `parallax` hoặc toàn tập bằng cờ `--safe-motion`).
-> 4. **Thử ngắn trước khi render dài:** Mọi mẫu motion mới phải thử trên 1 đoạn ngắn `5–10 giây` để kiểm thời gian render, mức RAM và độ mượt trước khi chạy cả tập.
+> [!TIP]
+> **HARDWARE SAFETY PROFILE (`dual16gb_cpu_l480`) — ThinkPad L480 · Intel i5-8250U (4C/8T) · 16GB Dual-Channel DDR4-2400 · Intel UHD 620 (đã nâng cấp 24/11/2026):**
+> 1. **Đã mở khóa & kiểm chứng thực đo:** Tăng tốc xử lý khung bằng **`opencv-python-headless` (`cv2`)**, **render song song đa nhân (`--workers 4`, mặc định tự động `4` worker cho clip `>= 12s`)** kết hợp cơ chế nạp trượt (sliding-window lazy load: tổng RAM 4 worker + FFmpeg chỉ ~`370–550 MB / 16 GB`), tối đa **4 lớp 2.5D**, **Rack Focus blur `<= 8.0px`** (tính 1 lần lúc nạp cảnh), **`head_micro_tilt <= ±2.2°`**, **`split_screen`**, toàn bộ **Level 3 Nhóm 1 + Nhóm 2 + Living-Character 2.5**.
+> 2. **Quy tắc Bộ mã hóa H.264 (`--encoder auto|x264|qsv`):**
+>    - Chế độ đa nhân (`--workers 2..4`, mặc định `--encoder auto`): dùng **`libx264`** (`4 worker`: thực đo **47.0s / 450 frames full Level 3 1080p ~ 9.6 fps** — nhanh hơn gần **2×** bản đơn luồng cũ!).
+>    - Chế độ đơn nhân (`--workers 1 --encoder qsv`): dùng **`h264_qsv`** (Intel Quick Sync, nhanh hơn `1w x264` ~18%, file gọn hơn ~23%). **KHÔNG chạy nhiều worker `h264_qsv` cùng lúc** (UHD 620 bị nghẽn phiên phần cứng khi >1 phiên song song — engine đã tự chặn).
+> 3. **Vẫn CẤM dùng cục bộ (do không có GPU rời):** AI image-to-video / diffusion / AI lip-sync cục bộ (`Wav2Lip`, `LivePortrait`, `SadTalker`, `MuseTalk`), PyTorch nặng, Blender / 3D rendering thời gian thực.
+> 4. **Fallback bắt buộc:** Mọi hiệu ứng nâng cao đều tùy chọn; hạ cấp tức thì về Level A bằng `"video_enabled": false` hoặc cờ `--safe-motion`.
+> 5. **Lộ trình mở rộng sau này (Phase 2 — sẵn sàng khi cần):** Khi cần tách lớp 2.5D tự động hàng loạt, có thể bổ sung tool chuẩn bị asset ngoại tuyến bằng `onnxruntime` CPU + `isnet-anime` (~170MB) hoặc `Depth Anything V2 Small` (~100MB) — hoàn toàn tách khỏi vòng lặp render Gate 4.
+
+### Kết quả Benchmark thực đo trên ThinkPad L480 (16GB Dual-Channel · 15s @ 1920×1080 30fps · 100% cảnh nhồi đầy Level 3 FX)
+| Chế độ | Encoder | Workers | Thời gian | Tốc độ thực | Khung hình | Ghi chú |
+| :--- | :--- | :---: | :---: | :---: | :---: | :--- |
+| Đơn nhân CPU | `libx264` | 1 | 77.85s | 5.8 fps | 450/450 (`yuv420p`) | Baseline sau tối ưu `cv2` |
+| Đơn nhân QSV | `h264_qsv` | 1 | 65.77s | 6.8 fps | 450/450 (`yuv420p`) | File nhẹ hơn (~22.7 MB), chỉ chạy 1 worker |
+| Đa nhân 3w | `libx264` | 3 | 54.28s | 8.3 fps | 450/450 (`yuv420p`) | Ổn định, tổng RAM ~370 MB |
+| **Đa nhân 4w (Mặc định)** | **`libx264`** | **4** | **46.99s** | **9.6 fps** | **450/450 (`yuv420p`)** | **Nhanh nhất (~1.9×), tổng RAM < 550 MB / 16 GB** |
+
+*(Trên tập thật có xen kẽ Level A/B/C, tốc độ thực tế đạt ~14–22 fps; Short 60s render ~1.5–2 phút, Phim dài 5 phút ~7–9 phút).*
 
 | Hạng mục | Trạng thái trong `03_ENGINE` | Ghi chú vận hành & Giới hạn kỹ thuật |
 | :--- | :---: | :--- |
-| **Pre-production Visual Beat & Motion Audit** | ✅ Tự động hóa | `gate0` (chặn nếu thiếu `motion_level`/`beat_type` ở tập Level 2 hoặc vượt quá 3 lớp 2.5D) + lệnh `motion-check <EP>` |
-| **Level A (Static Cinematic + Presets + Easing)** | ✅ Tự động hóa (Nhẹ) | `gate4_timeline.py` + `motion_fx.py`: 11 preset (`static_hold`, `slow_push_in`, `slow_pull_out`, `pan_left/right`, `drift_up/down`...), `smoothstep`/`ease_out`/`ease_in` |
-| **Level B (Simple 2.5D Parallax · max 2–3 lớp + Breathing)** | ✅ Tự động ghép lớp (Nhẹ)<br>⚠️ Tách lớp ngoài | `gate4_timeline.py` ghép tối đa **2–3 lớp** (`bg` + `subject`/`fg` RGBA), hỗ trợ nhịp thở nhẹ (`breathe_y <= 6px`, `breathe_scale <= 0.012`, `breathe_period`) và gắn cứng `eye_blink`/`mouth_sync` theo `layer`, giới hạn `blur <= 2.0px` tính 1 lần lúc nạp cảnh, tự giải phóng RAM ngay khi qua cảnh |
-| **Level C (Lightweight Object / Detail + Living-Character)** | ✅ Tự động hóa (Nhẹ) | Hỗ trợ 8 hiệu ứng nhẹ: `detail_reveal`, **`eye_blink`** (ROI elip `~40 KB`), **`mouth_sync`** (3 trạng thái theo RMS `.wav` thật `12 fps`, `< 120 KB`), `screen_glow` (ROI cục bộ), `light_shift` (1D LUT), `cursor_click`, `focus_highlight`, `detail_layer` + `notifications` & `chat_bubbles` trượt nhẹ + `wobble: "breathe"`. Chuẩn hóa tạo biến thể mặt qua `03_ENGINE/face_roi_prep.py`. **Đã loại trừ:** `rain`, `shadow_drift`, AI lip-sync cục bộ |
-| **Level D (Optional External Clip)** | ✅ Phát & hạ cấp an toàn<br>❌ Không sinh AI cục bộ | Hỗ trợ phát clip `.mp4` dựng ngoài (`natural_hold` + `video_start_offset`) và hạ cấp tức thì bằng `"video_enabled": false` hoặc `--safe-motion`. Tuyệt đối không cài/chạy AI I2V cục bộ |
-| **Sound-Motion Foley Presets** | ✅ Tự động hóa | Đã bổ sung `click`, `keyboard`, `light_switch`, `low_accent` vào `03_ENGINE/sfx_library.py` |
-| **Gate 5 Visual Motion QC (11 điểm)** | ✅ Tự động hóa báo cáo + Human signoff | Tự ghi `motion_qc` vào `qa_audit_report_gate5.json` và xuất đủ bảng 11 điểm vào `GATE5_QA_REPORT.md` gắn với điểm duyệt số 4 |
+| **Pre-production Visual Beat & Motion Audit** | ✅ Tự động hóa | `gate0` + `motion-check <EP>` hỗ trợ cả `level2` và `level3`, kiểm `split_screen`, `rack_focus`, `transitions`, `detail_fx` |
+| **Level A (Static Cinematic + Presets + Easing)** | ✅ Tự động hóa (`cv2`) | `gate4_timeline.py` + `motion_fx.py`: 11 preset + 11 kiểu `transition_in` (thêm `whip_pan_left/right`, `zoom_punch`, `luma_wipe`, `film_burn`) |
+| **Level B (2.5D Parallax · max 4 lớp + Rack Focus + Head Micro-Tilt)** | ✅ Tự động ghép lớp (`cv2`) | `motion_fx.py` + `motion_fx_l3.py`: ghép 2–4 lớp, `blur_from/blur_to <= 8.0px` (pre-baked 1 lần), `breathing`, `head_tilt_deg <= 2.2°` khớp `.wav` |
+| **Level C (Level 2 + Level 3 Nhóm 1 & 2 + Living-Character 2.5)** | ✅ Tự động hóa (`cv2`) | **20 loại `detail_fx` + `split_screen`:** `detail_reveal`, `eye_blink`, `mouth_sync` (3–4 trạng thái gồm `round_image`), `eye_gaze`, `expr_swap`, `screen_glow`, `light_shift`, `cursor_click`, `focus_highlight`, `detail_layer`, `phone_waveform`, `red_circle_draw`, `highlighter_sweep`, `animated_counter`, `typing_indicator`, `rain_layer`, `ambient_particles`, `light_sweep`, `color_mood`, `chromatic_pulse` |
+| **Level D (Optional External Clip)** | ✅ Phát & hạ cấp an toàn<br>❌ Không sinh AI cục bộ | Hỗ trợ phát clip `.mp4` dựng ngoài (`natural_hold` + `video_start_offset`), hạ cấp tức thì bằng `"video_enabled": false` hoặc `--safe-motion` |
+| **Render Engine Đa Nhân + QSV** | ✅ Tự động hóa | `gate4_timeline.py`: mặc định `--workers 4 --encoder auto` (tự nối chunk lossless `-c copy`), hỗ trợ `--workers 1 --encoder qsv` |
+| **Sound-Motion Foley Presets** | ✅ Tự động hóa | Đã bổ sung thêm `marker_draw` và `counter_tick` vào `03_ENGINE/sfx_library.py` |
+| **Gate 5 Visual Motion QC (11 điểm)** | ✅ Tự động hóa báo cáo + Human signoff | Tự ghi `motion_qc` + `render_stats` vào `qa_audit_report_gate5.json` và `GATE5_QA_REPORT.md` |
 
 ---
 
-## VII. THAM CHIẾU CẤU HÌNH `episode.json` (LEVEL 2)
+## VII. THAM CHIẾU CẤU HÌNH `episode.json` (LEVEL 3 — SẴN DÙNG CHO CẢ 16:9 & 9:16)
 
 ```json
 {
-  "motion_upgrade": "level2",
+  "motion_upgrade": "level3",
   "scenes": [
     {
-      "id": "s02_boi_canh",
-      "image": "assets/scene02.jpg",
-      "start": 25.0,
-      "end": 42.0,
+      "id": "s01_parallax_rack_living25",
+      "image": "assets/scene01.jpg",
+      "start": 0.0,
+      "end": 12.0,
       "beat_type": "establishing",
-      "motion_level": "A",
-      "motion_intent": "Quét ngang nhẹ giới thiệu bối cảnh đời thường",
-      "motion": {"preset": "pan_right"}
-    },
-    {
-      "id": "s04_chieu_sau_song_dong",
-      "image": "assets/scene04.jpg",
-      "start": 55.0,
-      "end": 72.0,
-      "beat_type": "suspicion",
       "motion_level": "B",
-      "motion_intent": "2.5D parallax kết hợp nhịp thở thân trên và chớp mắt khóa theo layer nhân vật",
+      "motion_intent": "2.5D parallax + chuyển nét Rack Focus mờ nền + thở + nghiêng đầu nhẹ theo giọng + liếc mắt + khẩu hình 4 trạng thái",
       "parallax": {
         "camera": "push_in",
-        "strength": 0.9,
         "layers": [
-          {"role": "bg", "image": "assets/s04_bg.jpg", "depth": 0.42, "blur": 0.8},
-          {"role": "fg", "image": "assets/s04_fg.png", "depth": 1.24, "breathe_y": 2.2, "breathe_scale": 0.005, "breathe_period": 3.6}
+          {"role": "bg", "image": "assets/s01_bg.jpg", "depth": 0.4, "blur_from": 0.5, "blur_to": 5.5, "blur_at": 2.0, "blur_dur": 2.5},
+          {"role": "fg", "image": "assets/s01_fg.png", "depth": 1.25, "breathe_y": 2.0, "breathe_period": 3.6,
+           "head_tilt_deg": 1.2, "head_pivot": [0.5, 0.78], "tilt_speaker": "thang_tun"}
         ]
       },
       "detail_fx": [
-        {"type": "eye_blink", "image": "assets/scene04_blink.jpg", "region": [0.31, 0.24, 0.69, 0.30], "feather": 0.01, "times": [57.2, 61.8, 67.5], "layer": "fg"}
+        {"type": "eye_blink", "image": "assets/s01_blink.jpg", "region": [0.45, 0.35, 0.58, 0.42], "times": [1.8, 5.4, 9.2], "layer": "fg"},
+        {"type": "eye_gaze", "image": "assets/s01_gaze_down.jpg", "region": [0.45, 0.35, 0.58, 0.42], "at": 3.5, "dur": 0.16, "hold_dur": 1.4, "layer": "fg"},
+        {"type": "mouth_sync", "speaker": "thang_tun", "region": [0.47, 0.43, 0.56, 0.49],
+         "closed_image": "assets/s01_m_closed.jpg", "mid_image": "assets/scene01.jpg",
+         "open_image": "assets/s01_m_open.jpg", "round_image": "assets/s01_m_round.jpg", "layer": "fg"},
+        {"type": "ambient_particles", "count": 26, "opacity": 0.38},
+        {"type": "color_mood", "mood": "warm_daily", "strength": 0.75}
       ]
     },
     {
-      "id": "s05_can_thoai_song_dong",
-      "image": "assets/scene05.jpg",
-      "start": 72.0,
-      "end": 88.0,
+      "id": "s02_split_cuoc_goi",
+      "image": "assets/s02_scammer.jpg",
+      "start": 12.0,
+      "end": 24.0,
+      "beat_type": "suspicion",
+      "motion_level": "C",
+      "motion_intent": "Chia đôi màn hình cuộc gọi (16:9 trái-phải / 9:16 trên-dưới) sáng viền & sóng âm theo người đang nói",
+      "transition_in": {"type": "whip_pan_left", "dur": 0.28},
+      "split_screen": {
+        "layout": "vertical",
+        "ratio": 0.5,
+        "panels": [
+          {"image": "assets/s02_scammer.jpg", "speaker": "ke_gia_danh", "label": "SỐ LẠ", "waveform": true},
+          {"image": "assets/s02_victim.jpg", "speaker": "co_tu", "label": "NẠN NHÂN", "waveform": true}
+        ]
+      }
+    },
+    {
+      "id": "s03_boc_tran_vat_chung",
+      "image": "assets/scene03.jpg",
+      "start": 24.0,
+      "end": 36.0,
       "beat_type": "information",
       "motion_level": "C",
-      "motion_intent": "Cận mặt thoại sống động (chớp mắt + miệng nói 3 trạng thái khớp WAV thật + thở nhẹ + ánh sáng màn hình)",
-      "motion": {"preset": "slow_push_in", "wobble": "breathe"},
+      "motion": {"preset": "slow_push_in"},
+      "transition_in": {"type": "zoom_punch", "dur": 0.28},
       "detail_fx": [
-        {"type": "eye_blink", "image": "assets/scene05_blink.jpg", "region": [0.52, 0.36, 0.70, 0.40], "feather": 0.008, "times": [74.1, 78.9, 84.2]},
-        {"type": "mouth_sync", "speaker": "thang_tun", "region": [0.54, 0.41, 0.66, 0.46], "feather": 0.008, "closed_image": "assets/scene05_mouth_closed.jpg", "mid_image": "assets/scene05.jpg", "open_image": "assets/scene05_mouth_open.jpg", "fps": 12, "thresh_mid": 0.14, "thresh_open": 0.68},
-        {"type": "screen_glow", "start": 73.5, "end": 86.0, "pos": [0.52, 0.62], "radius": [0.22, 0.24], "color": [130, 195, 255], "intensity": 0.28, "mode": "turn_on"}
+        {"type": "red_circle_draw", "region": [0.64, 0.30, 0.88, 0.44], "at": 25.0, "dur": 0.55, "style": "circle"},
+        {"type": "highlighter_sweep", "region": [0.64, 0.48, 0.88, 0.55], "at": 26.2, "dur": 0.45},
+        {"type": "animated_counter", "start": 24.5, "end": 34.5, "count_dur": 2.4, "from_val": 0, "to_val": -18000000,
+         "fmt": "vnd", "label": "SỐ DƯ TÀI KHOẢN", "pos": [0.22, 0.30], "style": "danger"},
+        {"type": "phone_waveform", "speaker": "nguoi_boc_tran", "start": 24.5, "end": 35.5, "pos": [0.22, 0.72], "label": "PHÂN TÍCH"},
+        {"type": "color_mood", "mood": "noir_evidence"}
       ]
     },
     {
-      "id": "s07_phan_ung",
-      "image": "assets/scene07.jpg",
-      "video": "assets/s07_turn.mp4",
-      "video_enabled": true,
-      "video_fit": "natural_hold",
-      "video_start_offset": 0.6,
-      "start": 105.0,
-      "end": 112.0,
-      "beat_type": "anomaly",
-      "motion_level": "D",
-      "motion_intent": "Nhân vật khựng lại khi phát hiện chi tiết lạ (tắt video_enabled nếu lỗi)"
+      "id": "s04_cao_trao_mua_dem",
+      "image": "assets/scene04.jpg",
+      "start": 36.0,
+      "end": 46.0,
+      "beat_type": "climax",
+      "motion_level": "C",
+      "motion": {"preset": "tense_push"},
+      "transition_in": {"type": "film_burn", "dur": 0.4},
+      "detail_fx": [
+        {"type": "rain_layer", "opacity": 0.34, "density": 1.0},
+        {"type": "light_sweep", "mode": "light", "intensity": 0.28, "repeat": 2},
+        {"type": "chromatic_pulse", "at": 38.5, "dur": 0.30, "shift_px": 6, "zoom_blur": 0.025},
+        {"type": "color_mood", "mood": "high_tension"}
+      ],
+      "shakes": [{"at": 38.5, "amp": 26}]
     }
-  ],
-  "notifications": [
-    {"start": 73.5, "end": 77.5, "title": "Tin nhắn mới", "text": "Số lạ: Vui lòng xác nhận trong 5 phút", "stamp": "vừa xong", "style": "danger"}
   ]
 }
 ```
-*Xem nhanh toàn bộ danh sách preset khả dụng bằng:* `python factory196/_engine/run.py presets`
+*Xem nhanh toàn bộ preset & cấu hình phần cứng khả dụng bằng:* `python factory196/_engine/run.py presets`  
+*Lệnh render linh hoạt:* `python factory196/_engine/run.py gate <EP> 4 [--workers 4] [--encoder auto|x264|qsv] [--safe-motion]`
 
 ---
 

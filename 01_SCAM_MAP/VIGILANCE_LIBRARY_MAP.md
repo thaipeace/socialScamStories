@@ -2,7 +2,7 @@
 *Sổ theo dõi sống dùng song hành với [VIGILANCE_LIBRARY_FRAMEWORK.md](../00_HARNESS_GUIDELINES/VIGILANCE_LIBRARY_FRAMEWORK.md) · Bổ sung cho danh mục nhóm chiêu cũ tại [SCAM_MAP_ONLINE_TO_OFFLINE.md](SCAM_MAP_ONLINE_TO_OFFLINE.md).*
 
 > [!NOTE]
-> **Cách dùng cho các tập mới (`factory196: EP09+`, `factory619: EP11+`):**
+> **Cách dùng cho các tập mới (`factory196: EP08b, EP10+` — không dùng mã `EP09`, `factory619: EP11+`):**
 > - Khi gặp một vụ lừa mới, tra bảng dưới để xác định nó thực sự **bổ sung mã biến thể (`VAR`), điều kiện (`COND`) hay ứng phó (`RESP`) nào chưa có** — tránh làm lại tập cũ chỉ bằng cách đổi vỏ.
 > - Bảng Mục I chỉ **lập chỉ mục (read-only)** các tập đã làm để nhìn rõ vùng dày / vùng trống, **không sửa đổi bất kỳ tập cũ nào**.
 
@@ -43,7 +43,7 @@
 
 ## II. BẢN ĐỒ KHOẢNG TRỐNG GỢI Ý CHO CÁC TẬP MỚI (CẬP NHẬT DẦN)
 
-Nhìn từ chỉ mục trên, những nhóm biến thể & lớp tri thức **chưa phủ hoặc còn mỏng** để ưu tiên khai thác ở giai đoạn tới (`EP09+` / `EP11+`):
+Nhìn từ chỉ mục trên, những nhóm biến thể & lớp tri thức **chưa phủ hoặc còn mỏng** để ưu tiên khai thác ở giai đoạn tới (`EP10+` / `EP11+`):
 
 ### 1. Khoảng trống ở Lớp 1 (Biến thể chưa có tập riêng)
 - **Họ Nhiệm vụ / Đầu tư:**
@@ -77,7 +77,7 @@ Nhìn từ chỉ mục trên, những nhóm biến thể & lớp tri thức **ch
 | Tập | Nhà máy | Góc (`A–F`) | Mã mới bổ sung (Lớp 1 / 2 / 3) | 1 câu neo ký ức (`Recall Anchor`) | Đạt bộ lọc `4+2`? | Trạng thái |
 | :-: | :-: | :-: | :--- | :--- | :-: | :---: |
 | `EP08b` | `factory196` | `D+F` | `VAR-MITM-02` / `VAR-COM-04` (nối trực tiếp `45tr` lúc `12:05` từ Khang ở `EP08` → chảy thẳng vào TK người bán xe máy công chứng; bẫy tam giác 2 nạn nhân thật) / `COND-01,02,05` / `RESP-01,03,04,05,06` ("2 Phải – 3 Không" + giữ nguyên tiền xác minh) | Bán xe, bán đất: ai ký hợp đồng thì đúng người đó chuyển tiền, ghi rõ biển số và ngày hợp đồng — lệch tên là dừng ký ngay! | ☑ | Đã lập draft Tầng 1 (`v1-draft`) |
-| `EP09` | `factory196` | | | | ☐ | Chờ chọn |
+| `EP10` | `factory196` | `A` | `VAR-FUNNEL-01` / `VAR-AI-01` (cơn bão FOMO AI 2026 + phễu khóa học giảm sốc 80% trong 10 phút + chim mồi bình dân + tặng công ty ảo đủ bộ phận vận hành tự động dụ nạp máy chủ `240tr` + điểm chạm nô lệ hóa xin trừ cấn → Hương bật Chế độ Máy bay, đập tan phản pháo ngoại tuyến bằng `0 KB` dữ liệu mạng & chỉnh năm `2000` làm vỡ trận nhóm VIP 300 người + kết mở Chị Hai `EP04`/`EP08b` với tay IT `EP06`) / `COND-01,02,03,05,07,08` / `RESP-01,03,04,06` | Khóa học giảm sốc 80% tặng công ty ảo 100 agent tự kiếm tiền chỉ là hoạt ảnh mồi — hỏi xem nó bán hàng gì, cho ai trước khi xuống tiền! | ☑ | Đã hoàn tất **Staging `v5`** (Gate 0–5 · `v5-level2-abc-staging`, `368.8s`, `186.73 MB`, `A=3 · B=4 · C=14`, 22 bộ Living-Char, chờ chủ kênh duyệt trước Gate 6) |
 | `EP12` | `factory196` | `C+F` | `VAR-COM-03` (đặt song song 2 nhánh: chuyển nhầm thật không trả vs. bẫy giả chuyển nhầm) / `COND-05,09` / `RESP-01,02,03,05` | Tiền lạ vô tài khoản: không rút tiêu, không tự chuyển trả theo số lạ — giữ nguyên đó, chỉ hoàn qua ngân hàng hoặc công an! | ☑ | Ghi nháp ý tưởng (`DRAFT_196_EP12`) |
 | `EP11` | `factory619` | `B` | `VAR-OFF-05` (dàn cảnh đám đông ngày hội đa thế hệ/tầng lớp: va chạm – vây chặn nhiều người – hỏi chuyện – giật chuyền tay – tản vào dòng người + kết mở người điều phối trung niên áo polo từ ban công) / `COND-09` / `RESP-01,04` | Chỗ đông người: vừa bị va chạm lại có người lạ áp sát hỏi chuyện — giữ chặt cổ/túi và lùi khỏi dòng chen liền! | ☑ | Đã phát hành Production (Gate 6 · `v4-multigen-festival-level2`, 62.6s) |
 | `EP12` | `factory619` | `A/D` | `VAR-LIVE-01` (livestream mở trai tìm ngọc mồi nhỏ `399k` → bậc thang tâm lý `4 triệu` ký quỹ mở hạn mức thu mua → đòi tiếp `14 triệu` phí đổi ngoại tệ; dựng 100% như cá cắn câu đến phút chụp hình khay ngọc lọt góc hóa đơn bàn bị ông sếp đập bàn thu hồi chặn máy + kết mở Cô Tư đổi sắc lạnh phóng to ảnh kịp chụp màn hình gửi hồ sơ → phòng đèn vòng bị ập vào) / `COND-02,03,05,08` / `RESP-01,05` | Cho tự chọn, thấy tận mắt khiến bạn sợ bỏ lỡ mà cố tin — hễ đòi đóng phí trước là lừa! | ☑ | Hoàn tất Tầng 1 `materialAndDraft` (Gate 0/1/2/3 PASS · `v3-final-level2-abc`, 77.05s WAV thật) |

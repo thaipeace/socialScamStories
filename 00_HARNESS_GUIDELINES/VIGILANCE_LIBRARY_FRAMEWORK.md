@@ -1,5 +1,5 @@
 # KHUNG CHIẾN LƯỢC THƯ VIỆN CẢNH GIÁC – TÈO CẢNH GIÁC
-*Mã: STRAT-VIGILANCE-LIB-V1 · Trạng thái: **Thử nghiệm cố định cho giai đoạn tiếp theo** · Áp dụng từ các tập mới (`factory196: EP09+`, `factory619: EP11+`)*
+*Mã: STRAT-VIGILANCE-LIB-V1 · Trạng thái: **Thử nghiệm cố định cho giai đoạn tiếp theo** · Áp dụng từ các tập mới (`factory196: EP08b, EP10+`, `factory619: EP11+`)*
 
 > [!IMPORTANT]
 > **Nguyên tắc áp dụng & Không hồi tố:**
@@ -122,7 +122,7 @@ Trước khi viết kịch bản (`Gate 0`), chấm ý tưởng theo **4 câu c�
 
 ## VI. PHIẾU TỔNG KẾT ĐÁNH GIÁ KHUNG SAU 1 GIAI ĐOẠN (6–8 TẬP MỚI)
 
-Vì khung chiến lược này được chốt để **thử nghiệm thực tế dài hơi**, sau khi phát hành đủ **6–8 tập mới** theo khung (ví dụ `factory196: EP09–EP14` và/hoặc `factory619: EP11–EP18`), chủ kênh rà soát lại 5 tiêu chí dưới đây để quyết định giữ nguyên hay điều chỉnh:
+Vì khung chiến lược này được chốt để **thử nghiệm thực tế dài hơi**, sau khi phát hành đủ **6–8 tập mới** theo khung (ví dụ `factory196: EP08b, EP10–EP14` và/hoặc `factory619: EP11–EP18`), chủ kênh rà soát lại 5 tiêu chí dưới đây để quyết định giữ nguyên hay điều chỉnh:
 
 | Tiêu chí đánh giá | Cách quan sát thực tế | Câu hỏi chốt sau giai đoạn |
 | :--- | :--- | :--- |

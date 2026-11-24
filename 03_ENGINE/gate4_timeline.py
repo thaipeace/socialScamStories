@@ -10,25 +10,36 @@ Tự động thích ứng tọa độ, kích thước chữ, độ rộng hộp 
 """
 from __future__ import annotations
 
+import concurrent.futures
 import math
+import os
 import re
+import shutil
 import subprocess
+import time
 from pathlib import Path
 
 from PIL import Image, ImageDraw, ImageFont
 
 from core import FFMPEG, Episode, GateError, load_json, rel, save_json
 from motion_fx import (
+    DEFAULT_RENDER_WORKERS,
     HARDWARE_PROFILE,
+    HAS_CV2,
     apply_post_camera_fx,
     apply_pre_camera_fx,
+    apply_transition_l3,
     audit_episode_motion,
     collect_fx_qa_timestamps,
     ease_u,
+    fast_blend,
+    fast_camera_transform,
     fit_aspect_crop,
     prepare_detail_fx,
     prepare_parallax,
+    prepare_split_screen_scene,
     render_parallax_frame,
+    render_split_screen_scene,
     resolve_motion_params,
     unload_scene_runtime,
 )
@@ -493,11 +504,7 @@ WOBBLE = {
 
 
 def camera_frame(src: Image.Image, W: int, H: int, scale: float, fx: float, fy: float, dx: float, dy: float) -> Image.Image:
-    sw, sh = src.size
-    cw, ch = sw / max(scale, 1.001), sh / max(scale, 1.001)
-    left = max(0.0, min(sw - cw, fx * sw + dx - cw * 0.5))
-    top = max(0.0, min(sh - ch, fy * sh + dy - ch * 0.5))
-    return src.transform((W, H), Image.Transform.EXTENT, (left, top, left + cw, top + ch), resample=Image.Resampling.BILINEAR)
+    return fast_camera_transform(src, W, H, scale, fx, fy, dx, dy)
 
 
 class SceneVideoReader:
@@ -588,7 +595,19 @@ def scene_frame(sc: dict, t: float, W: int, H: int) -> Image.Image:
             sc["_vreader"] = None
             sc["_effective_level"] = "A"
 
-    # Level B — Lightweight 2.5D Multi-Layer Parallax (max 2–3 layers)
+    # Level C+ — Dynamic 2-Panel Split-Screen (Level 3)
+    if sc.get("_split_screen"):
+        try:
+            frame = render_split_screen_scene(sc["_split_screen"], sc, t, W, H, extra_dx=dx, extra_dy=dy)
+            return apply_post_camera_fx(frame, dfx, t, W, H) if dfx else frame
+        except Exception as exc:
+            if sc.get("_img") is None:
+                raise
+            print(f"    [motion fallback · {sc.get('id', '?')}] Lỗi split_screen ({exc}) -> hạ cấp Level A")
+            sc["_split_screen"] = None
+            sc["_effective_level"] = "A"
+
+    # Level B — 2.5D Multi-Layer Parallax (max 2–4 layers + Rack Focus + Head Micro-Tilt)
     if sc.get("_parallax"):
         try:
             frame = render_parallax_frame(sc["_parallax"], sc, t, W, H, extra_dx=dx, extra_dy=dy, fx_list=dfx)
@@ -600,7 +619,7 @@ def scene_frame(sc: dict, t: float, W: int, H: int) -> Image.Image:
             sc["_parallax"] = None
             sc["_effective_level"] = "A"
 
-    # Level A / Level C — Static Cinematic Motion + optional lightweight Object/Detail Motion
+    # Level A / Level C — Static Cinematic Motion + optional Object/Detail/Atmosphere Motion
     u = ease_u((max(s, min(e, t)) - s) / max(e - s, 1e-4), mp.get("easing", "smoothstep"))
     s0, s1 = mp["scale"]
     (fx0, fy0), (fx1, fy1) = mp["focus"]
@@ -627,10 +646,14 @@ def _validate_scene_paths(ep: Episode, sc: dict) -> None:
     has_vid = bool(sc.get("video")) and sc.get("video_enabled", True) and ep.resolve_asset(sc["video"]).is_file()
     px_layers = (sc.get("parallax") or {}).get("layers") or []
     has_px = len(px_layers) >= 2 and all(
-        bool(ly.get("image")) and ep.resolve_asset(ly["image"]).is_file() for ly in px_layers[:3]
+        bool(ly.get("image")) and ep.resolve_asset(ly["image"]).is_file() for ly in px_layers[:4]
     )
-    if not (has_img or has_vid or has_px):
-        ref = sc.get("image") or sc.get("video") or "parallax.layers"
+    sp_panels = (sc.get("split_screen") or {}).get("panels") or []
+    has_sp = len(sp_panels) == 2 and all(
+        bool(pn.get("image")) and ep.resolve_asset(pn["image"]).is_file() for pn in sp_panels
+    )
+    if not (has_img or has_vid or has_px or has_sp):
+        ref = sc.get("image") or sc.get("video") or "parallax/split_screen"
         raise GateError(f"Cảnh {sc.get('id', '?')} thiếu tài nguyên hình ảnh/video hợp lệ: {ref}")
 
 
@@ -656,7 +679,7 @@ def _load_scene_runtime(ep: Episode, sc: dict, W: int, H: int, FPS: int, oversam
             with Image.open(ep.resolve_asset(sc["image"])) as raw_im:
                 img = fit_aspect_crop(raw_im.convert("RGB"), W, H)
                 sc["_img"] = img.resize((int(W * oversample), int(H * oversample)), Image.Resampling.BILINEAR)
-            if sc.get("parallax") or sc.get("detail_fx") or (sc.get("video") and sc.get("video_enabled", True)):
+            if sc.get("parallax") or sc.get("split_screen") or sc.get("detail_fx") or (sc.get("video") and sc.get("video_enabled", True)):
                 record_fb("Chế độ --safe-motion -> hạ cấp an toàn về Level A Ken Burns")
             sc["_effective_level"] = "A"
             return
@@ -681,7 +704,17 @@ def _load_scene_runtime(ep: Episode, sc: dict, W: int, H: int, FPS: int, oversam
     elif sc.get("video") and sc.get("image"):
         record_fb(f"Thiếu clip '{sc['video']}' -> hạ cấp an toàn về ảnh tĩnh '{sc['image']}'")
 
-    # Level B — Lightweight 2–3 layer 2.5D parallax
+    # Level 3 — Dynamic 2-panel Split-Screen
+    if sc.get("split_screen"):
+        sp_rt = prepare_split_screen_scene(ep, sc, W, H, oversample)
+        if sp_rt is not None:
+            sc["_split_screen"] = sp_rt
+            sc["_effective_level"] = "C"
+            return
+        elif sc.get("_motion_fallback"):
+            record_fb(sc["_motion_fallback"])
+
+    # Level B — 2–4 layer 2.5D parallax (+ Rack Focus + Head Micro-Tilt)
     if sc.get("parallax"):
         px_rt = prepare_parallax(ep, sc, W, H, oversample)
         if px_rt is not None:
@@ -693,7 +726,7 @@ def _load_scene_runtime(ep: Episode, sc: dict, W: int, H: int, FPS: int, oversam
 
     # Level A / Level C — Base static image
     if not sc.get("image"):
-        raise GateError(f"Cảnh {sid} thiếu cả ảnh lẫn video/parallax hợp lệ.")
+        raise GateError(f"Cảnh {sid} thiếu cả ảnh lẫn video/parallax/split_screen hợp lệ.")
     p = ep.resolve_asset(sc["image"])
     if not p.is_file():
         raise GateError(f"Thiếu ảnh cảnh: {rel(p)}")
@@ -711,19 +744,22 @@ def composite_scene(scenes: list[dict], t: float, W: int, H: int) -> Image.Image
     sc = scenes[idx]
     frame = scene_frame(sc, t, W, H)
     tr = sc.get("transition_in", {"type": "dissolve", "dur": 0.3})
-    ttype, tdur = tr.get("type", "dissolve"), float(tr.get("dur", 0.3))
+    ttype, tdur = str(tr.get("type", "dissolve")).lower(), float(tr.get("dur", 0.3))
     if idx > 0 and ttype != "cut" and t < sc["start"] + tdur:
         u = (t - sc["start"]) / max(tdur, 1e-3)
         prev = scene_frame(scenes[idx - 1], t, W, H)
+        l3_out = apply_transition_l3(prev, frame, ttype, u, W, H)
+        if l3_out is not None:
+            return l3_out
         if ttype == "dissolve":
-            return Image.blend(prev, frame, smoothstep(u))
+            return fast_blend(prev, frame, smoothstep(u))
         if ttype in ("flash_white", "flash_red"):
             col = (255, 255, 255) if ttype == "flash_white" else (200, 20, 30)
             flash = Image.new("RGB", (W, H), col)
-            return Image.blend(flash, frame, smoothstep(u))
+            return fast_blend(flash, frame, smoothstep(u))
         if ttype == "fade_black":
             black = Image.new("RGB", (W, H), (0, 0, 0))
-            return Image.blend(black, frame, smoothstep(u))
+            return fast_blend(black, frame, smoothstep(u))
         if ttype == "glitch":
             k = int(u * 10)
             base = prev if k % 2 == 0 and u < 0.6 else frame
@@ -778,10 +814,208 @@ def _paste_rgba_crop(dst_rgb: Image.Image, crop_rgba: Image.Image, pos: tuple[in
 
 
 # ----------------------------------------------------------------------------
+# Encoder detection & Parallel Chunk Render Engine (`dual16gb_cpu_l480`)
+# ----------------------------------------------------------------------------
+
+_QSV_PROBE_CACHE: bool | None = None
+
+
+def detect_video_encoder(preferred: str = "auto", workers: int = 1) -> str:
+    """Detect fastest reliable H.264 encoder:
+      - Multi-worker (`workers > 1`): uses `libx264` by default (Intel UHD 620 QSV hardware engine
+        stalls severely under concurrent multi-process QSV sessions; benchmarked on ThinkPad L480).
+      - Single-worker (`workers == 1`) or explicit `--encoder qsv`: probes `h264_qsv`, falls back to `libx264`."""
+    pref = str(preferred or "auto").strip().lower()
+    if pref in ("x264", "libx264", "cpu"):
+        return "libx264"
+    if pref == "auto" and workers > 1:
+        return "libx264"
+    global _QSV_PROBE_CACHE
+    if _QSV_PROBE_CACHE is None:
+        try:
+            r = subprocess.run(
+                [
+                    FFMPEG, "-y", "-v", "error", "-f", "lavfi",
+                    "-i", "testsrc=duration=0.2:size=640x360:rate=30",
+                    "-vf", "format=nv12", "-c:v", "h264_qsv", "-preset", "medium",
+                    "-global_quality", "20", "-look_ahead", "0", "-pix_fmt", "nv12",
+                    "-f", "null", "-",
+                ],
+                capture_output=True, text=True, timeout=8,
+            )
+            _QSV_PROBE_CACHE = (r.returncode == 0)
+        except Exception:  # noqa: BLE001
+            _QSV_PROBE_CACHE = False
+    if _QSV_PROBE_CACHE:
+        return "h264_qsv"
+    if pref == "qsv":
+        print("    [encoder warn] h264_qsv không khả dụng -> fallback an toàn sang libx264")
+    return "libx264"
+
+
+def _build_ffmpeg_cmd(W: int, H: int, FPS: int, out_mp4: Path, encoder: str, threads_per_worker: int) -> list[str]:
+    base = [
+        FFMPEG, "-y", "-v", "error", "-f", "rawvideo", "-vcodec", "rawvideo",
+        "-s", f"{W}x{H}", "-pix_fmt", "rgb24", "-r", str(FPS), "-i", "-", "-an",
+    ]
+    if encoder == "h264_qsv":
+        return base + [
+            "-vf", "format=nv12", "-c:v", "h264_qsv", "-preset", "medium",
+            "-profile:v", "high", "-global_quality", "20", "-g", str(FPS * 2),
+            "-look_ahead", "0", "-pix_fmt", "nv12", str(out_mp4),
+        ]
+    return base + [
+        "-c:v", "libx264", "-preset", "fast", "-threads", str(max(1, threads_per_worker)),
+        "-crf", "18", "-g", str(FPS * 2), "-pix_fmt", "yuv420p", str(out_mp4),
+    ]
+
+
+def _render_chunk_worker(task: dict) -> dict:
+    """Top-level spawn-safe worker rendering a contiguous frame slice [start_frame, end_frame)."""
+    t0_wall = time.perf_counter()
+    ep = Episode(task["episode_id"], task["factory_dir"])
+    cv = Canvas(ep)
+    W, H, FPS, DUR = ep.width, ep.height, ep.fps, ep.duration
+    f_start, f_end = int(task["start_frame"]), int(task["end_frame"])
+    oversample = float(task["oversample"])
+    safe_motion = bool(task["safe_motion"])
+    encoder = str(task["encoder"])
+    threads_pw = int(task["threads_per_worker"])
+    out_mp4 = Path(task["out_mp4"])
+    prv_dir = Path(task["prv_dir"])
+    qa_idx: dict[int, float] = {int(k): float(v) for k, v in task["qa_idx"].items()}
+    chunk_idx = int(task["chunk_idx"])
+    total_chunks = int(task["total_chunks"])
+    step_log = int(task["step_log"])
+
+    scenes = []
+    for sc in ep.cfg["scenes"]:
+        sc2 = dict(sc)
+        sc2["start"], sc2["end"] = float(sc["start"]), float(sc["end"])
+        sc2["_motion"] = resolve_motion_params(sc2)
+        sc2["_loaded"] = False
+        sc2["_effective_level"] = "A"
+        scenes.append(sc2)
+    scenes.sort(key=lambda s: s["start"])
+
+    # Load ONLY overlay crops overlapping this chunk's time span
+    t_lo = f_start / FPS - 0.1
+    t_hi = f_end / FPS + 0.1
+    active_events = []
+    for ev in task["events_meta"]:
+        if ev["end_sec"] < t_lo or ev["start_sec"] > t_hi:
+            continue
+        p_ov = Path(ev["abs_png_path"])
+        crop = None
+        if p_ov.is_file():
+            with Image.open(p_ov) as im_ov:
+                rgba = im_ov.convert("RGBA")
+                bbox = rgba.getbbox()
+                if bbox:
+                    crop = rgba.crop(bbox)
+        if crop is not None:
+            ev2 = dict(ev)
+            ev2["_crop"] = crop
+            active_events.append(ev2)
+
+    brand_crop = None
+    brand_pos = tuple(task["brand_pos"])
+    p_brand = Path(task["brand_abs_path"])
+    if p_brand.is_file():
+        with Image.open(p_brand) as im_b:
+            rgba = im_b.convert("RGBA")
+            bbox = rgba.getbbox()
+            if bbox:
+                brand_crop = rgba.crop(bbox)
+
+    cmd = _build_ffmpeg_cmd(W, H, FPS, out_mp4, encoder, threads_pw)
+    proc = subprocess.Popen(cmd, stdin=subprocess.PIPE, stderr=subprocess.PIPE)
+    previews: list[dict] = []
+    fallbacks: list[dict] = []
+    detail_warnings: list[dict] = []
+    loaded_indices: set[int] = set()
+    black_img = Image.new("RGB", (W, H), (0, 0, 0))
+    n_frames = max(0, f_end - f_start)
+
+    try:
+        for fi in range(f_start, f_end):
+            t = fi / FPS
+            idx = 0
+            for i, sc_ in enumerate(scenes):
+                if t >= sc_["start"]:
+                    idx = i
+            sc_cur = scenes[idx]
+            tr = sc_cur.get("transition_in", {"type": "dissolve", "dur": 0.3})
+            need_prev = idx > 0 and str(tr.get("type", "dissolve")).lower() != "cut" and t < sc_cur["start"] + float(tr.get("dur", 0.3))
+            needed = {idx, idx - 1} if need_prev else {idx}
+            for old_i in list(loaded_indices - needed):
+                unload_scene_runtime(scenes[old_i])
+                loaded_indices.discard(old_i)
+            for req_i in sorted(needed):
+                if req_i not in loaded_indices:
+                    _load_scene_runtime(ep, scenes[req_i], W, H, FPS, oversample, safe_motion, fallbacks, detail_warnings)
+                    loaded_indices.add(req_i)
+
+            frame = composite_scene(scenes, t, W, H)
+            for ev in active_events:
+                if ev["start_sec"] <= t < ev["end_sec"]:
+                    fade = ev["fade_sec"]
+                    a = 1.0
+                    if fade > 0:
+                        a = min(1.0, (t - ev["start_sec"]) / fade, (ev["end_sec"] - t) / fade)
+                    px, py = ev["pos"]
+                    if ev["slide_y"] and ev["anim_dur"] > 0:
+                        dt_in = t - ev["start_sec"]
+                        if dt_in < ev["anim_dur"]:
+                            py += int(round(ev["slide_y"] * (1.0 - ease_u(dt_in / ev["anim_dur"], "ease_out"))))
+                    _paste_rgba_crop(frame, ev["_crop"], (px, py), a)
+            if brand_crop is not None:
+                _paste_rgba_crop(frame, brand_crop, brand_pos, 1.0)
+            if t < 0.3:
+                frame = fast_blend(black_img, frame, smoothstep(t / 0.3))
+            elif t > DUR - 0.35:
+                frame = fast_blend(frame, black_img, smoothstep((t - (DUR - 0.35)) / 0.35) * 0.6)
+            if fi in qa_idx:
+                tag = f"qa_{qa_idx[fi]:05.2f}s".replace(".", "_")
+                cp, gp = prv_dir / f"{tag}_clean.jpg", prv_dir / f"{tag}_safezone.jpg"
+                frame.save(cp, quality=92)
+                safe_zone_guide(frame, cv).save(gp, quality=88)
+                previews.append({"timestamp_sec": qa_idx[fi], "clean": rel(cp), "safezone": rel(gp)})
+            proc.stdin.write(frame.tobytes())
+            if total_chunks == 1 and (fi + 1) % step_log == 0:
+                print(f"    ... {fi + 1}/{f_end}")
+    finally:
+        for sc in scenes:
+            unload_scene_runtime(sc)
+        try:
+            proc.stdin.close()
+        except Exception:
+            pass
+    err = proc.stderr.read().decode("utf-8", "replace")
+    if proc.wait() != 0:
+        raise GateError(f"FFmpeg ({encoder}) lỗi ở chunk {chunk_idx + 1}/{total_chunks}: {err}")
+
+    elapsed = time.perf_counter() - t0_wall
+    eff_map = {sc.get("id", f"idx_{i}"): sc.get("_effective_level", "A") for i, sc in enumerate(scenes) if sc.get("_logged_once")}
+    return {
+        "chunk_idx": chunk_idx,
+        "out_mp4": str(out_mp4),
+        "frames": n_frames,
+        "elapsed_sec": round(elapsed, 2),
+        "previews": previews,
+        "effective_levels": eff_map,
+        "fallbacks": fallbacks,
+        "detail_warnings": detail_warnings,
+    }
+
+
+# ----------------------------------------------------------------------------
 # Main
 # ----------------------------------------------------------------------------
 
-def run(ep: Episode, preview_only: bool = False, safe_motion: bool = False) -> dict:
+def run(ep: Episode, preview_only: bool = False, safe_motion: bool = False,
+        workers: int = 0, encoder: str = "auto") -> dict:
+    t0_total = time.perf_counter()
     mode_tag = " · SAFE-MOTION (Level A)" if safe_motion else ""
     print(f"=== GATE 4: TIMELINE & SAFE ZONE [{ep.factory_name} · {ep.aspect_label}{mode_tag}] – {ep.id} ===")
     cfg = ep.cfg
@@ -794,10 +1028,19 @@ def run(ep: Episode, preview_only: bool = False, safe_motion: bool = False) -> d
 
     if not ep.tts_manifest_path.is_file():
         raise GateError("Chưa có manifest Gate 2.")
+    if not preview_only and not safe_motion:
+        ma_pre = audit_episode_motion(ep)
+        if ma_pre["errors"]:
+            raise GateError(
+                "CHẶN RENDER GATE 4 — KHÔNG ĐẠT TIẾN TRÌNH CHECK 1–2–3 (Luật kế thừa cộng dồn):\n  - "
+                + "\n  - ".join(ma_pre["errors"])
+                + "\nChạy `motion-check` để xem chi tiết, hoặc dùng `--preview` để xuất ảnh nháp / `--safe-motion` để hạ cấp Level A."
+            )
     tts = load_json(ep.tts_manifest_path)
 
-    # --- scenes: validate paths ONLY (lazy sliding-window load keeps max 1–2 scenes in RAM) ---
-    is_level2 = str(cfg.get("motion_upgrade", "")).lower() in ("level2", "v2", "2") or bool(cfg.get("motion_plan"))
+    # --- scenes: validate paths ONLY (lazy sliding-window load keeps max 1–2 scenes per worker in RAM) ---
+    mu_raw = str(cfg.get("motion_upgrade", "")).strip().lower()
+    is_level2 = mu_raw in ("level2", "v2", "2", "level3", "v3", "3") or bool(cfg.get("motion_plan"))
     scenes = []
     fallbacks: list[dict] = []
     detail_warnings: list[dict] = []
@@ -825,11 +1068,12 @@ def run(ep: Episode, preview_only: bool = False, safe_motion: bool = False) -> d
         crop = img.crop(bbox) if bbox else None
         pos = (bbox[0], bbox[1]) if bbox else (0, 0)
         events.append({"id": path.stem, "start_sec": round(start, 3), "end_sec": round(end, 3), "fade_sec": fade,
-                       "png_path": rel(path), "_crop": crop, "_pos": pos, "_slide_y": slide_y,
-                       "_anim_dur": anim_dur, **meta})
+                       "png_path": rel(path), "_abs_png_path": str(path.resolve()), "_crop": crop, "_pos": pos,
+                       "_slide_y": slide_y, "_anim_dur": anim_dur, **meta})
 
     brand_img, brand_meta = plate_branding(cv)
-    brand_img.save(ovl_dir / "branding.png")
+    brand_path = ovl_dir / "branding.png"
+    brand_img.save(brand_path)
     brand_bbox = brand_img.getbbox()
     brand_crop = brand_img.crop(brand_bbox) if brand_bbox else None
     brand_pos = (brand_bbox[0], brand_bbox[1]) if brand_bbox else (0, 0)
@@ -913,83 +1157,203 @@ def run(ep: Episode, preview_only: bool = False, safe_motion: bool = False) -> d
     ))
     qa_idx = {int(round(t * FPS)): t for t in qa_times if 0 <= t < DUR}
 
-    # --- render (strict sequential single-scene streaming + sliding-window RAM control) ---
+    # --- render (preview_only OR single/multi-worker chunk-parallel streaming) ---
     out_mp4 = ep.timeline_video_path
     total_frames = ep.total_frames
-    frame_range = sorted(qa_idx) if preview_only else range(total_frames)
-    proc = None
-    if not preview_only:
-        print(f" -> Render {total_frames} frames ({DUR}s @ {FPS}fps, {W}x{H}) -> {out_mp4.name}")
-        proc = subprocess.Popen([FFMPEG, "-y", "-v", "error", "-f", "rawvideo", "-vcodec", "rawvideo", "-s", f"{W}x{H}",
-                                 "-pix_fmt", "rgb24", "-r", str(FPS), "-i", "-", "-an", "-c:v", "libx264", "-preset", "fast",
-                                 "-threads", "4", "-crf", "18", "-pix_fmt", "yuv420p", str(out_mp4)],
-                                stdin=subprocess.PIPE, stderr=subprocess.PIPE)
-    previews = []
     step_log = 900 if cv.is_landscape else 300
-    loaded_indices: set[int] = set()
-    try:
-        for fi in frame_range:
-            t = fi / FPS
-            # Find active scene index & whether previous scene is needed for transition_in
-            idx = 0
-            for i, sc_ in enumerate(scenes):
-                if t >= sc_["start"]:
-                    idx = i
-            sc_cur = scenes[idx]
-            tr = sc_cur.get("transition_in", {"type": "dissolve", "dur": 0.3})
-            need_prev = idx > 0 and tr.get("type", "dissolve") != "cut" and t < sc_cur["start"] + float(tr.get("dur", 0.3))
-            needed = {idx, idx - 1} if need_prev else {idx}
-            # Evict any scene outside the active 1–2 scene window immediately
-            for old_i in list(loaded_indices - needed):
-                unload_scene_runtime(scenes[old_i])
-                loaded_indices.discard(old_i)
-            for req_i in sorted(needed):
-                if req_i not in loaded_indices:
-                    _load_scene_runtime(ep, scenes[req_i], W, H, FPS, oversample, safe_motion, fallbacks, detail_warnings)
-                    loaded_indices.add(req_i)
+    previews: list[dict] = []
+    used_encoder = "preview"
+    used_workers = 1
 
-            frame = composite_scene(scenes, t, W, H)
-            for ev in events:
-                if ev["start_sec"] <= t < ev["end_sec"] and ev.get("_crop") is not None:
-                    fade = ev["fade_sec"]
-                    a = 1.0
-                    if fade > 0:
-                        a = min(1.0, (t - ev["start_sec"]) / fade, (ev["end_sec"] - t) / fade)
-                    px, py = ev["_pos"]
-                    if ev.get("_slide_y") and ev.get("_anim_dur", 0.0) > 0:
-                        dt_in = t - ev["start_sec"]
-                        if dt_in < ev["_anim_dur"]:
-                            py += int(round(ev["_slide_y"] * (1.0 - ease_u(dt_in / ev["_anim_dur"], "ease_out"))))
-                    _paste_rgba_crop(frame, ev["_crop"], (px, py), a)
-            if brand_crop is not None:
-                _paste_rgba_crop(frame, brand_crop, brand_pos, 1.0)
-            if t < 0.3:
-                frame = Image.blend(Image.new("RGB", (W, H)), frame, smoothstep(t / 0.3))
-            elif t > DUR - 0.35:
-                frame = Image.blend(frame, Image.new("RGB", (W, H)), smoothstep((t - (DUR - 0.35)) / 0.35) * 0.6)
-            if fi in qa_idx:
+    if preview_only:
+        loaded_indices: set[int] = set()
+        black_img = Image.new("RGB", (W, H), (0, 0, 0))
+        try:
+            for fi in sorted(qa_idx):
+                t = fi / FPS
+                idx = 0
+                for i, sc_ in enumerate(scenes):
+                    if t >= sc_["start"]:
+                        idx = i
+                sc_cur = scenes[idx]
+                tr = sc_cur.get("transition_in", {"type": "dissolve", "dur": 0.3})
+                need_prev = idx > 0 and str(tr.get("type", "dissolve")).lower() != "cut" and t < sc_cur["start"] + float(tr.get("dur", 0.3))
+                needed = {idx, idx - 1} if need_prev else {idx}
+                for old_i in list(loaded_indices - needed):
+                    unload_scene_runtime(scenes[old_i])
+                    loaded_indices.discard(old_i)
+                for req_i in sorted(needed):
+                    if req_i not in loaded_indices:
+                        _load_scene_runtime(ep, scenes[req_i], W, H, FPS, oversample, safe_motion, fallbacks, detail_warnings)
+                        loaded_indices.add(req_i)
+                frame = composite_scene(scenes, t, W, H)
+                for ev in events:
+                    if ev["start_sec"] <= t < ev["end_sec"] and ev.get("_crop") is not None:
+                        fade = ev["fade_sec"]
+                        a = 1.0
+                        if fade > 0:
+                            a = min(1.0, (t - ev["start_sec"]) / fade, (ev["end_sec"] - t) / fade)
+                        px, py = ev["_pos"]
+                        if ev.get("_slide_y") and ev.get("_anim_dur", 0.0) > 0:
+                            dt_in = t - ev["start_sec"]
+                            if dt_in < ev["_anim_dur"]:
+                                py += int(round(ev["_slide_y"] * (1.0 - ease_u(dt_in / ev["_anim_dur"], "ease_out"))))
+                        _paste_rgba_crop(frame, ev["_crop"], (px, py), a)
+                if brand_crop is not None:
+                    _paste_rgba_crop(frame, brand_crop, brand_pos, 1.0)
+                if t < 0.3:
+                    frame = fast_blend(black_img, frame, smoothstep(t / 0.3))
+                elif t > DUR - 0.35:
+                    frame = fast_blend(frame, black_img, smoothstep((t - (DUR - 0.35)) / 0.35) * 0.6)
                 tag = f"qa_{qa_idx[fi]:05.2f}s".replace(".", "_")
                 cp, gp = prv_dir / f"{tag}_clean.jpg", prv_dir / f"{tag}_safezone.jpg"
                 frame.save(cp, quality=92)
                 safe_zone_guide(frame, cv).save(gp, quality=88)
                 previews.append({"timestamp_sec": qa_idx[fi], "clean": rel(cp), "safezone": rel(gp)})
-            if proc:
-                proc.stdin.write(frame.tobytes())
-                if (fi + 1) % step_log == 0:
-                    print(f"    ... {fi + 1}/{total_frames}")
-    finally:
-        for sc in scenes:
-            unload_scene_runtime(sc)
-        if proc:
-            try:
-                proc.stdin.close()
-            except Exception:
-                pass
-    if proc:
-        err = proc.stderr.read().decode("utf-8", "replace")
-        if proc.wait() != 0:
-            raise GateError(f"FFmpeg lỗi: {err}")
+        finally:
+            for sc in scenes:
+                unload_scene_runtime(sc)
+    else:
+        if workers is None or int(workers) <= 0:
+            used_workers = DEFAULT_RENDER_WORKERS if total_frames >= FPS * 12 else 1
+        else:
+            used_workers = max(1, min(4, int(workers)))
+        if total_frames < FPS * 6:
+            used_workers = 1
+        # Explicit --encoder qsv runs single-worker to avoid UHD 620 multi-session QSV stall
+        if str(encoder or "auto").strip().lower() == "qsv" and used_workers > 1:
+            print("    [encoder note] h264_qsv trên UHD 620 chỉ tối ưu 1 phiên -> tự đặt workers=1 (dùng --encoder auto/x264 cho đa nhân)")
+            used_workers = 1
+        used_encoder = detect_video_encoder(encoder, workers=used_workers)
 
+        cpu_cnt = os.cpu_count() or 4
+        threads_pw = max(2, min(4, cpu_cnt // used_workers))
+        cv_tag = "cv2" if HAS_CV2 else "PIL"
+        print(
+            f" -> Render {total_frames} frames ({DUR}s @ {FPS}fps, {W}x{H}) "
+            f"[{used_encoder} · {used_workers} worker(s) · {cv_tag}] -> {out_mp4.name}"
+        )
+
+        # Serializable overlay table for workers
+        events_meta = [
+            {
+                "abs_png_path": ev["_abs_png_path"],
+                "start_sec": ev["start_sec"],
+                "end_sec": ev["end_sec"],
+                "fade_sec": ev["fade_sec"],
+                "pos": list(ev["_pos"]),
+                "slide_y": ev["_slide_y"],
+                "anim_dur": ev["_anim_dur"],
+            }
+            for ev in events
+            if ev.get("_crop") is not None
+        ]
+
+        if used_workers == 1:
+            res = _render_chunk_worker({
+                "episode_id": ep.id,
+                "factory_dir": str(ep.factory_dir),
+                "chunk_idx": 0,
+                "total_chunks": 1,
+                "start_frame": 0,
+                "end_frame": total_frames,
+                "out_mp4": str(out_mp4),
+                "encoder": used_encoder,
+                "threads_per_worker": min(4, cpu_cnt),
+                "safe_motion": safe_motion,
+                "oversample": oversample,
+                "events_meta": events_meta,
+                "brand_abs_path": str(brand_path.resolve()),
+                "brand_pos": list(brand_pos),
+                "qa_idx": qa_idx,
+                "prv_dir": str(prv_dir),
+                "step_log": step_log,
+            })
+            previews = sorted(res["previews"], key=lambda x: x["timestamp_sec"])
+            fallbacks.extend(res["fallbacks"])
+            detail_warnings.extend(res["detail_warnings"])
+            for sc in scenes:
+                sid = sc.get("id", "")
+                if sid in res["effective_levels"]:
+                    sc["_effective_level"] = res["effective_levels"][sid]
+        else:
+            chunk_dir = stg / "_chunks"
+            shutil.rmtree(chunk_dir, ignore_errors=True)
+            chunk_dir.mkdir(parents=True, exist_ok=True)
+            base_n = total_frames // used_workers
+            tasks = []
+            for wi in range(used_workers):
+                f0 = wi * base_n
+                f1 = total_frames if wi == used_workers - 1 else (wi + 1) * base_n
+                sub_qa = {fi: ts for fi, ts in qa_idx.items() if f0 <= fi < f1}
+                tasks.append({
+                    "episode_id": ep.id,
+                    "factory_dir": str(ep.factory_dir),
+                    "chunk_idx": wi,
+                    "total_chunks": used_workers,
+                    "start_frame": f0,
+                    "end_frame": f1,
+                    "out_mp4": str(chunk_dir / f"part_{wi:02d}.mp4"),
+                    "encoder": used_encoder,
+                    "threads_per_worker": threads_pw,
+                    "safe_motion": safe_motion,
+                    "oversample": oversample,
+                    "events_meta": events_meta,
+                    "brand_abs_path": str(brand_path.resolve()),
+                    "brand_pos": list(brand_pos),
+                    "qa_idx": sub_qa,
+                    "prv_dir": str(prv_dir),
+                    "step_log": step_log,
+                })
+
+            results: list[dict] = []
+            try:
+                with concurrent.futures.ProcessPoolExecutor(max_workers=used_workers) as ex:
+                    futs = [ex.submit(_render_chunk_worker, tk) for tk in tasks]
+                    for fut in concurrent.futures.as_completed(futs):
+                        r = fut.result()
+                        results.append(r)
+                        print(f"    [W{r['chunk_idx'] + 1}/{used_workers}] xong {r['frames']} frames ({r['elapsed_sec']:.1f}s)")
+                results.sort(key=lambda r: r["chunk_idx"])
+                concat_txt = chunk_dir / "concat.txt"
+                concat_txt.write_text(
+                    "\n".join(f"file '{Path(r['out_mp4']).resolve().as_posix()}'" for r in results),
+                    encoding="utf-8",
+                )
+                subprocess.run(
+                    [FFMPEG, "-y", "-v", "error", "-f", "concat", "-safe", "0",
+                     "-i", str(concat_txt), "-c", "copy", str(out_mp4)],
+                    check=True,
+                )
+            finally:
+                shutil.rmtree(chunk_dir, ignore_errors=True)
+
+            seen_fb: set[tuple[str, str]] = set()
+            seen_dw: set[tuple[str, str]] = set()
+            eff_merged: dict[str, str] = {}
+            for r in results:
+                previews.extend(r["previews"])
+                for fb in r["fallbacks"]:
+                    k_fb = (fb["scene_id"], fb["reason"])
+                    if k_fb not in seen_fb:
+                        seen_fb.add(k_fb)
+                        fallbacks.append(fb)
+                for dw in r["detail_warnings"]:
+                    k_dw = (dw["scene_id"], dw["warning"])
+                    if k_dw not in seen_dw:
+                        seen_dw.add(k_dw)
+                        detail_warnings.append(dw)
+                for sid, lv in r["effective_levels"].items():
+                    if sid not in eff_merged or eff_merged[sid] == "A":
+                        eff_merged[sid] = lv
+            previews.sort(key=lambda x: x["timestamp_sec"])
+            for sc in scenes:
+                sid = sc.get("id", "")
+                if sid in eff_merged:
+                    sc["_effective_level"] = eff_merged[sid]
+
+    elapsed_total = round(time.perf_counter() - t0_total, 2)
+    eff_fps = round(total_frames / max(elapsed_total, 0.01), 1) if not preview_only else 0.0
     motion_audit = audit_episode_motion(ep)
     effective_counts = {"A": 0, "B": 0, "C": 0, "D": 0}
     for sc in scenes:
@@ -1003,11 +1367,21 @@ def run(ep: Episode, preview_only: bool = False, safe_motion: bool = False) -> d
         "gate": "GATE_4_TIMELINE_SAFE_ZONE",
         "preview_only": preview_only,
         "canvas": {"width": W, "height": H, "fps": FPS, "aspect_ratio": ep.aspect_label, "total_frames": total_frames, "total_duration_sec": DUR},
+        "render_stats": {
+            "hardware_profile": HARDWARE_PROFILE,
+            "encoder": used_encoder,
+            "workers": used_workers,
+            "has_cv2": HAS_CV2,
+            "elapsed_sec": elapsed_total,
+            "effective_fps": eff_fps,
+        },
         "safe_zone_rules": {**ep.safe, "all_overlays_compliant": all(o.get("safe_zone_compliant", True) for o in overlays)},
         "motion_summary": {
             "hardware_profile": HARDWARE_PROFILE,
+            "motion_version": motion_audit["motion_version"],
             "safe_motion_mode": safe_motion,
             "is_level2": is_level2,
+            "is_level3": motion_audit["is_level3"],
             "declared_level_counts": motion_audit["level_counts"],
             "effective_level_counts": effective_counts,
             "fallbacks": fallbacks,
@@ -1030,6 +1404,8 @@ def run(ep: Episode, preview_only: bool = False, safe_motion: bool = False) -> d
         print(f" !! Overlay tràn Safe Zone: {bad}")
     print(f" -> Motion Level thực thi: A={effective_counts['A']} · B={effective_counts['B']} · C={effective_counts['C']} · D={effective_counts['D']}"
           + (f" (fallback: {len(fallbacks)})" if fallbacks else ""))
+    if not preview_only:
+        print(f" -> Xong trong {elapsed_total}s (~{eff_fps} fps · {used_encoder} · {used_workers} worker)")
     print(f" -> {len(previews)} khung QA tại {rel(prv_dir)}")
     print(f" -> Manifest: {rel(ep.timeline_manifest_path)}")
     return manifest
