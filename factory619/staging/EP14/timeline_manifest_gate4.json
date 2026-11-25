@@ -1,0 +1,1657 @@
+{
+  "episode_id": "EP14",
+  "factory": "factory619",
+  "gate": "GATE_4_TIMELINE_SAFE_ZONE",
+  "preview_only": false,
+  "canvas": {
+    "width": 1080,
+    "height": 1920,
+    "fps": 30,
+    "aspect_ratio": "9:16",
+    "total_frames": 2398,
+    "total_duration_sec": 79.95
+  },
+  "render_stats": {
+    "hardware_profile": "dual16gb_cpu_l480",
+    "encoder": "libx264",
+    "workers": 4,
+    "has_cv2": true,
+    "elapsed_sec": 38.7,
+    "effective_fps": 62.0
+  },
+  "safe_zone_rules": {
+    "left_x": 80,
+    "right_x": 920,
+    "max_y": 1420,
+    "top_hook_y": 170,
+    "platform_ui_bottom_y": 1440,
+    "all_overlays_compliant": true
+  },
+  "motion_summary": {
+    "hardware_profile": "dual16gb_cpu_l480",
+    "motion_version": "level3",
+    "safe_motion_mode": false,
+    "is_level2": true,
+    "is_level3": true,
+    "declared_level_counts": {
+      "A": 2,
+      "B": 2,
+      "C": 6,
+      "D": 0
+    },
+    "effective_level_counts": {
+      "A": 2,
+      "B": 2,
+      "C": 6,
+      "D": 0
+    },
+    "fallbacks": [],
+    "detail_warnings": [],
+    "zoom_streaks": [],
+    "shake_scenes": 1,
+    "sfx_sync": {
+      "synced": [
+        "s2_bam_so_top_dau:red_circle_draw@8.76s",
+        "s5_them_nam_ngay_mat_hut_goi_gao:shake@38.84s",
+        "s5_them_nam_ngay_mat_hut_goi_gao:chromatic_pulse@38.84s",
+        "s6_tho_hang_boc_tran_tem_rach:detail_reveal@51.84s",
+        "s6_tho_hang_boc_tran_tem_rach:red_circle_draw@52.34s",
+        "s7_boc_tran_quang_cao_top_dau:detail_reveal@57.86s",
+        "s7_boc_tran_quang_cao_top_dau:red_circle_draw@58.26s",
+        "s7_boc_tran_quang_cao_top_dau:highlighter_sweep@64.07s"
+      ],
+      "unsynced": []
+    },
+    "warnings": []
+  },
+  "scenes": [
+    {
+      "id": "s1_hook_thao_bung_ca_tuan",
+      "image": "assets/s1.jpg",
+      "start": 0.0,
+      "end": 6.36,
+      "beat_type": "establishing",
+      "motion_level": "C",
+      "motion_intent": "Phòng tối nóng nực, máy lạnh tháo bung trơ dây, Anh Hai cầm biên nhận gọi không ai nghe + animated_counter 7 NGÀY + screen_glow + high_tension",
+      "motion": {
+        "preset": "slow_push_in",
+        "scale": [
+          1.02,
+          1.09
+        ],
+        "focus": [
+          [
+            0.5,
+            0.52
+          ],
+          [
+            0.5,
+            0.48
+          ]
+        ],
+        "wobble": "none",
+        "easing": "ease_out"
+      },
+      "detail_fx": [
+        {
+          "type": "eye_blink",
+          "image": "assets/s1_anhhai_blink.jpg",
+          "region": [
+            0.612,
+            0.593,
+            0.798,
+            0.648
+          ],
+          "feather": 0.008,
+          "times": [
+            1.4,
+            4.4
+          ],
+          "close_dur": 0.055,
+          "hold_dur": 0.045,
+          "open_dur": 0.085
+        },
+        {
+          "type": "mouth_sync",
+          "speaker": "anh_hai",
+          "line_ids": [
+            "l1"
+          ],
+          "region": [
+            0.642,
+            0.653,
+            0.747,
+            0.699
+          ],
+          "feather": 0.008,
+          "closed_image": "assets/s1_anhhai_mouth_closed.jpg",
+          "mid_image": "assets/s1.jpg",
+          "open_image": "assets/s1_anhhai_mouth_open.jpg",
+          "fps": 12,
+          "thresh_mid": 0.14,
+          "thresh_open": 0.64
+        },
+        {
+          "type": "animated_counter",
+          "start": 0.45,
+          "end": 6.21,
+          "count_dur": 2.2,
+          "from_val": 1,
+          "to_val": 7,
+          "fmt": "int",
+          "suffix": " NGÀY",
+          "label": "ÔM BO · NÓNG NGỘP",
+          "pos": [
+            0.26,
+            0.255
+          ],
+          "style": "danger",
+          "easing": "ease_out"
+        },
+        {
+          "type": "screen_glow",
+          "pos": [
+            0.8,
+            0.65
+          ],
+          "radius": [
+            0.18,
+            0.15
+          ],
+          "color": [
+            255,
+            130,
+            80
+          ],
+          "intensity": 0.18,
+          "mode": "pulse",
+          "start": 0.2,
+          "end": 6.26,
+          "fade": 0.25
+        },
+        {
+          "type": "color_mood",
+          "mood": "high_tension",
+          "strength": 0.28,
+          "vignette": 0.18,
+          "grain": 0.008
+        }
+      ]
+    },
+    {
+      "id": "s2_bam_so_top_dau",
+      "image": "assets/s2.jpg",
+      "start": 6.36,
+      "end": 11.88,
+      "beat_type": "normal",
+      "motion_level": "B",
+      "motion_intent": "2.5D Parallax phòng khách ban ngày + Rack Focus mờ máy lạnh báo lỗi nền + Breathing + Head Micro-Tilt + Anh Hai chớp mắt & chép miệng 4 trạng thái (round_image) + red_circle_draw khoanh nhãn quảng cáo top đầu",
+      "motion": {
+        "preset": "slow_push_in",
+        "scale": [
+          1.02,
+          1.08
+        ],
+        "focus": [
+          [
+            0.5,
+            0.48
+          ],
+          [
+            0.5,
+            0.46
+          ]
+        ],
+        "wobble": "none",
+        "easing": "smoothstep"
+      },
+      "parallax": {
+        "camera": "push_in",
+        "dolly": [
+          1.02,
+          1.07
+        ],
+        "shift_x": [
+          0.0,
+          0.0
+        ],
+        "shift_y": [
+          1.5,
+          -2.0
+        ],
+        "focus": [
+          0.5,
+          0.46
+        ],
+        "strength": 0.85,
+        "easing": "smoothstep",
+        "layers": [
+          {
+            "role": "bg",
+            "image": "assets/s2_bg.jpg",
+            "depth": 0.4,
+            "blur_from": 0.4,
+            "blur_to": 3.8,
+            "blur_at": 7.36,
+            "blur_dur": 2.6
+          },
+          {
+            "role": "fg",
+            "image": "assets/s2_fg.png",
+            "depth": 1.24,
+            "breathe_y": 2.0,
+            "breathe_period": 3.6,
+            "head_tilt_deg": 1.0,
+            "head_pivot": [
+              0.74,
+              0.78
+            ],
+            "tilt_speaker": "anh_hai",
+            "tilt_line_ids": [
+              "l2"
+            ]
+          }
+        ]
+      },
+      "detail_fx": [
+        {
+          "type": "eye_blink",
+          "image": "assets/s2_anhhai_blink.jpg",
+          "region": [
+            0.612,
+            0.448,
+            0.839,
+            0.512
+          ],
+          "feather": 0.008,
+          "times": [
+            7.46,
+            10.46
+          ],
+          "close_dur": 0.055,
+          "hold_dur": 0.045,
+          "open_dur": 0.085,
+          "layer": "fg"
+        },
+        {
+          "type": "mouth_sync",
+          "speaker": "anh_hai",
+          "line_ids": [
+            "l2"
+          ],
+          "region": [
+            0.682,
+            0.548,
+            0.803,
+            0.605
+          ],
+          "feather": 0.008,
+          "closed_image": "assets/s2_anhhai_mouth_closed.jpg",
+          "mid_image": "assets/s2.jpg",
+          "open_image": "assets/s2_anhhai_mouth_open.jpg",
+          "round_image": "assets/s2_anhhai_mouth_round.jpg",
+          "fps": 12,
+          "thresh_mid": 0.14,
+          "thresh_open": 0.64,
+          "layer": "fg"
+        },
+        {
+          "type": "red_circle_draw",
+          "region": [
+            0.115,
+            0.705,
+            0.22,
+            0.745
+          ],
+          "at": 8.76,
+          "dur": 0.5,
+          "style": "circle"
+        }
+      ],
+      "transition_in": {
+        "type": "dissolve",
+        "dur": 0.25
+      }
+    },
+    {
+      "id": "s3_nghi_nhung_ngai_duoi",
+      "image": "assets/s3.jpg",
+      "start": 11.88,
+      "end": 24.52,
+      "beat_type": "suspicion",
+      "motion_level": "C",
+      "motion_intent": "Quét trái phòng khách ban ngày: 2 thợ mặc đồ thường tháo máy phía sau, Chị Hai kéo áo thì thầm nghi ngờ và Anh Hai ái ngại lưỡng lự + Living-Char cả 2 vợ chồng",
+      "motion": {
+        "preset": "pan_left",
+        "scale": [
+          1.06,
+          1.06
+        ],
+        "focus": [
+          [
+            0.53,
+            0.5
+          ],
+          [
+            0.47,
+            0.5
+          ]
+        ],
+        "wobble": "none",
+        "easing": "smoothstep"
+      },
+      "detail_fx": [
+        {
+          "type": "eye_blink",
+          "image": "assets/s3_chihai_blink.jpg",
+          "region": [
+            0.257,
+            0.508,
+            0.453,
+            0.572
+          ],
+          "feather": 0.008,
+          "times": [
+            13.18,
+            16.38,
+            19.58,
+            22.78
+          ],
+          "close_dur": 0.055,
+          "hold_dur": 0.045,
+          "open_dur": 0.085
+        },
+        {
+          "type": "mouth_sync",
+          "speaker": "chi_hai",
+          "line_ids": [
+            "l3"
+          ],
+          "region": [
+            0.316,
+            0.578,
+            0.434,
+            0.632
+          ],
+          "feather": 0.008,
+          "closed_image": "assets/s3_chihai_mouth_closed.jpg",
+          "mid_image": "assets/s3.jpg",
+          "open_image": "assets/s3_chihai_mouth_open.jpg",
+          "fps": 12,
+          "thresh_mid": 0.14,
+          "thresh_open": 0.64
+        },
+        {
+          "type": "eye_blink",
+          "image": "assets/s3_anhhai_blink.jpg",
+          "region": [
+            0.577,
+            0.468,
+            0.793,
+            0.523
+          ],
+          "feather": 0.008,
+          "times": [
+            14.08,
+            17.48,
+            20.88
+          ],
+          "close_dur": 0.055,
+          "hold_dur": 0.045,
+          "open_dur": 0.085
+        },
+        {
+          "type": "mouth_sync",
+          "speaker": "anh_hai",
+          "line_ids": [
+            "l4"
+          ],
+          "region": [
+            0.628,
+            0.533,
+            0.773,
+            0.587
+          ],
+          "feather": 0.008,
+          "closed_image": "assets/s3_anhhai_mouth_closed.jpg",
+          "mid_image": "assets/s3.jpg",
+          "open_image": "assets/s3_anhhai_mouth_open.jpg",
+          "fps": 12,
+          "thresh_mid": 0.14,
+          "thresh_open": 0.64
+        },
+        {
+          "type": "color_mood",
+          "mood": "cold_suspicion",
+          "strength": 0.22,
+          "vignette": 0.12,
+          "grain": 0.0
+        }
+      ],
+      "transition_in": {
+        "type": "dissolve",
+        "dur": 0.25
+      }
+    },
+    {
+      "id": "s4_split_bao_gia_ba_trieu",
+      "image": "assets/s4_scammer.jpg",
+      "start": 24.52,
+      "end": 38.49,
+      "beat_type": "climax",
+      "motion_level": "C",
+      "motion_intent": "Level 3 split_screen trên-dưới: sau 2 ngày ôm bo im bặt cho nhà nóng ngộp, kẻ mạo danh mới gọi báo giá 3 triệu hứa làm liền (panel trên) & Anh Hai bỏ hết đề phòng đồng ý đại để có máy xài liền (panel dưới + Living-Char)",
+      "split_screen": {
+        "layout": "horizontal",
+        "ratio": 0.4,
+        "divider_width": 6,
+        "inactive_dim": 0.18,
+        "slide_in_dur": 0.3,
+        "panels": [
+          {
+            "image": "assets/s4_scammer.jpg",
+            "speaker": "ke_gia_danh",
+            "line_ids": [
+              "l5"
+            ],
+            "label": "",
+            "label_rgb": [
+              245,
+              90,
+              95
+            ],
+            "waveform": true,
+            "waveform_rgb": [
+              255,
+              110,
+              110
+            ],
+            "crop_x": 0.5,
+            "crop_y": 0.54,
+            "motion": {
+              "preset": "slow_push_in",
+              "scale": [
+                1.02,
+                1.07
+              ],
+              "focus": [
+                [
+                  0.5,
+                  0.52
+                ],
+                [
+                  0.5,
+                  0.5
+                ]
+              ]
+            },
+            "detail_fx": []
+          },
+          {
+            "image": "assets/s4_anhhai.jpg",
+            "speaker": "anh_hai",
+            "line_ids": [
+              "l6"
+            ],
+            "label": "",
+            "label_rgb": [
+              255,
+              200,
+              95
+            ],
+            "waveform": true,
+            "waveform_rgb": [
+              255,
+              215,
+              120
+            ],
+            "crop_x": 0.5,
+            "crop_y": 0.42,
+            "motion": {
+              "preset": "slow_pull_out",
+              "scale": [
+                1.08,
+                1.03
+              ],
+              "focus": [
+                [
+                  0.5,
+                  0.48
+                ],
+                [
+                  0.5,
+                  0.5
+                ]
+              ]
+            },
+            "detail_fx": [
+              {
+                "type": "eye_blink",
+                "image": "assets/s4_anhhai_blink.jpg",
+                "region": [
+                  0.396,
+                  0.36,
+                  0.6,
+                  0.435
+                ],
+                "region_space": "source",
+                "feather": 0.008,
+                "times": [
+                  26.12,
+                  29.42,
+                  32.72,
+                  36.02
+                ],
+                "close_dur": 0.055,
+                "hold_dur": 0.045,
+                "open_dur": 0.085
+              },
+              {
+                "type": "mouth_sync",
+                "speaker": "anh_hai",
+                "line_ids": [
+                  "l6"
+                ],
+                "region": [
+                  0.45,
+                  0.485,
+                  0.564,
+                  0.555
+                ],
+                "region_space": "source",
+                "feather": 0.008,
+                "closed_image": "assets/s4_anhhai_mouth_closed.jpg",
+                "mid_image": "assets/s4_anhhai.jpg",
+                "open_image": "assets/s4_anhhai_mouth_open.jpg",
+                "fps": 12,
+                "thresh_mid": 0.14,
+                "thresh_open": 0.64
+              }
+            ]
+          }
+        ]
+      },
+      "detail_fx": [
+        {
+          "type": "animated_counter",
+          "start": 25.02,
+          "end": 38.34,
+          "count_dur": 1.8,
+          "from_val": 0,
+          "to_val": 3000000,
+          "fmt": "vnd",
+          "label": "SAU 2 NGÀY IM BẶT",
+          "pos": [
+            0.3,
+            0.15
+          ],
+          "style": "danger",
+          "easing": "ease_out"
+        }
+      ],
+      "transition_in": {
+        "type": "whip_pan_left",
+        "dur": 0.26
+      }
+    },
+    {
+      "id": "s5_them_nam_ngay_mat_hut_goi_gao",
+      "image": "assets/s5.jpg",
+      "start": 38.49,
+      "end": 45.03,
+      "beat_type": "climax",
+      "motion_level": "C",
+      "motion_intent": "Đồng ý 3 triệu xong họ vẫn mất hút thêm 5 ngày (tổng 7 ngày), số biên nhận không ai nghe, Anh Hai phải gọi lại số đầu gào lên đòi ráp gấp + tense_push + chromatic_pulse + shakes + Living-Char Anh Hai",
+      "motion": {
+        "preset": "tense_push",
+        "scale": [
+          1.03,
+          1.11
+        ],
+        "focus": [
+          [
+            0.5,
+            0.52
+          ],
+          [
+            0.5,
+            0.48
+          ]
+        ],
+        "wobble": "breathe",
+        "easing": "ease_out"
+      },
+      "detail_fx": [
+        {
+          "type": "eye_blink",
+          "image": "assets/s5_anhhai_blink.jpg",
+          "region": [
+            0.542,
+            0.463,
+            0.809,
+            0.523
+          ],
+          "feather": 0.008,
+          "times": [
+            39.99,
+            42.89
+          ],
+          "close_dur": 0.055,
+          "hold_dur": 0.045,
+          "open_dur": 0.085
+        },
+        {
+          "type": "mouth_sync",
+          "speaker": "anh_hai",
+          "line_ids": [
+            "l7"
+          ],
+          "region": [
+            0.602,
+            0.548,
+            0.779,
+            0.627
+          ],
+          "feather": 0.008,
+          "closed_image": "assets/s5_anhhai_mouth_closed.jpg",
+          "mid_image": "assets/s5.jpg",
+          "open_image": "assets/s5_anhhai_mouth_open.jpg",
+          "fps": 12,
+          "thresh_mid": 0.14,
+          "thresh_open": 0.64
+        },
+        {
+          "type": "animated_counter",
+          "start": 38.84,
+          "end": 44.88,
+          "count_dur": 2.0,
+          "from_val": 2,
+          "to_val": 7,
+          "fmt": "int",
+          "prefix": "NGÀY THỨ ",
+          "label": "THÊM 5 NGÀY MẤT HÚT",
+          "pos": [
+            0.28,
+            0.18
+          ],
+          "style": "danger",
+          "easing": "linear"
+        },
+        {
+          "type": "chromatic_pulse",
+          "at": 38.84,
+          "dur": 0.3,
+          "shift_px": 7,
+          "zoom_blur": 0.025
+        },
+        {
+          "type": "color_mood",
+          "mood": "high_tension",
+          "strength": 0.45,
+          "vignette": 0.22,
+          "grain": 0.012
+        }
+      ],
+      "shakes": [
+        {
+          "at": 38.84,
+          "amp": 22
+        }
+      ],
+      "transition_in": {
+        "type": "zoom_punch",
+        "dur": 0.28
+      }
+    },
+    {
+      "id": "s6_tho_hang_boc_tran_tem_rach",
+      "image": "assets/s6.jpg",
+      "start": 45.03,
+      "end": 57.21,
+      "beat_type": "anomaly",
+      "motion_level": "C",
+      "motion_intent": "Quét phải ban ngày: kỹ thuật viên chính hãng soi đèn chỉ tem bảo hành bị rách cạnh bo mạch nguyên vẹn + detail_reveal + red_circle_draw + Living-Char vợ chồng Anh Hai – Chị Hai",
+      "motion": {
+        "preset": "pan_right",
+        "scale": [
+          1.06,
+          1.06
+        ],
+        "focus": [
+          [
+            0.47,
+            0.5
+          ],
+          [
+            0.53,
+            0.5
+          ]
+        ],
+        "wobble": "none",
+        "easing": "smoothstep"
+      },
+      "detail_fx": [
+        {
+          "type": "detail_reveal",
+          "image": "assets/s6_reveal.jpg",
+          "at": 51.84,
+          "dur": 0.45
+        },
+        {
+          "type": "red_circle_draw",
+          "region": [
+            0.635,
+            0.068,
+            0.8,
+            0.125
+          ],
+          "at": 52.34,
+          "dur": 0.5,
+          "style": "circle"
+        },
+        {
+          "type": "eye_blink",
+          "image": "assets/s6_chihai_blink.jpg",
+          "region": [
+            0.257,
+            0.513,
+            0.453,
+            0.572
+          ],
+          "feather": 0.008,
+          "times": [
+            46.43,
+            49.63,
+            52.83,
+            56.03
+          ],
+          "close_dur": 0.055,
+          "hold_dur": 0.045,
+          "open_dur": 0.085
+        },
+        {
+          "type": "mouth_sync",
+          "speaker": "chi_hai",
+          "line_ids": [
+            "l8"
+          ],
+          "region": [
+            0.327,
+            0.578,
+            0.434,
+            0.629
+          ],
+          "feather": 0.008,
+          "closed_image": "assets/s6_chihai_mouth_closed.jpg",
+          "mid_image": "assets/s6.jpg",
+          "open_image": "assets/s6_chihai_mouth_open.jpg",
+          "fps": 12,
+          "thresh_mid": 0.14,
+          "thresh_open": 0.64
+        },
+        {
+          "type": "eye_blink",
+          "image": "assets/s6_anhhai_blink.jpg",
+          "region": [
+            0.587,
+            0.448,
+            0.798,
+            0.502
+          ],
+          "feather": 0.008,
+          "times": [
+            47.33,
+            50.73,
+            54.13
+          ],
+          "close_dur": 0.055,
+          "hold_dur": 0.045,
+          "open_dur": 0.085
+        },
+        {
+          "type": "eye_blink",
+          "image": "assets/s6_tech_blink.jpg",
+          "region": [
+            0.587,
+            0.213,
+            0.693,
+            0.255
+          ],
+          "feather": 0.006,
+          "times": [
+            46.93,
+            50.23,
+            53.53
+          ],
+          "close_dur": 0.055,
+          "hold_dur": 0.045,
+          "open_dur": 0.085
+        },
+        {
+          "type": "mouth_sync",
+          "speaker": "thang_tun",
+          "line_ids": [
+            "l9"
+          ],
+          "region": [
+            0.607,
+            0.245,
+            0.688,
+            0.286
+          ],
+          "feather": 0.006,
+          "closed_image": "assets/s6_tech_mouth_closed.jpg",
+          "mid_image": "assets/s6.jpg",
+          "open_image": "assets/s6_tech_mouth_open.jpg",
+          "fps": 12,
+          "thresh_mid": 0.14,
+          "thresh_open": 0.64
+        }
+      ],
+      "transition_in": {
+        "type": "whip_pan_left",
+        "dur": 0.26
+      }
+    },
+    {
+      "id": "s7_boc_tran_quang_cao_top_dau",
+      "image": "assets/s7.jpg",
+      "start": 57.21,
+      "end": 67.75,
+      "beat_type": "anomaly",
+      "motion_level": "C",
+      "motion_intent": "Kính lúp đỏ bóc trần bẫy quảng cáo top đầu vs phiếu bảo hành & tem máy chính hãng + glitch + detail_reveal + red_circle_draw + highlighter_sweep",
+      "motion": {
+        "preset": "slow_push_in",
+        "scale": [
+          1.02,
+          1.09
+        ],
+        "focus": [
+          [
+            0.5,
+            0.48
+          ],
+          [
+            0.5,
+            0.46
+          ]
+        ],
+        "wobble": "none",
+        "easing": "ease_out"
+      },
+      "detail_fx": [
+        {
+          "type": "detail_reveal",
+          "image": "assets/s7_reveal.jpg",
+          "at": 57.86,
+          "dur": 0.55
+        },
+        {
+          "type": "red_circle_draw",
+          "region": [
+            0.155,
+            0.186,
+            0.705,
+            0.256
+          ],
+          "at": 58.26,
+          "dur": 0.5,
+          "style": "circle"
+        },
+        {
+          "type": "highlighter_sweep",
+          "region": [
+            0.505,
+            0.575,
+            0.845,
+            0.825
+          ],
+          "at": 64.07,
+          "dur": 0.5
+        },
+        {
+          "type": "focus_highlight",
+          "pos": [
+            0.5,
+            0.48
+          ],
+          "radius": [
+            0.46,
+            0.38
+          ],
+          "dim_outer": 0.2,
+          "start": 57.86,
+          "end": 67.65,
+          "fade": 0.35
+        },
+        {
+          "type": "color_mood",
+          "mood": "noir_evidence",
+          "strength": 0.42,
+          "vignette": 0.2,
+          "grain": 0.01
+        }
+      ],
+      "transition_in": {
+        "type": "glitch",
+        "dur": 0.34
+      }
+    },
+    {
+      "id": "s8_the_nho_ky",
+      "image": "assets/s8.jpg",
+      "start": 67.75,
+      "end": 72.75,
+      "beat_type": "ending",
+      "motion_level": "A",
+      "motion_intent": "Giữ tĩnh tuyệt đối trên nền phòng khách mát nắng dịu cho Thẻ Nhớ kỹ 4.8s",
+      "motion": {
+        "preset": "static_hold"
+      },
+      "transition_in": {
+        "type": "fade_black",
+        "dur": 0.28
+      }
+    },
+    {
+      "id": "s9_ket_mo_chup_luu_tem_hang",
+      "image": "assets/s9.jpg",
+      "start": 72.75,
+      "end": 77.25,
+      "beat_type": "information",
+      "motion_level": "B",
+      "motion_intent": "Kết mở câm thoại 2.5D Parallax (film_burn): tay Chị Hai tiền cảnh chụp rõ tem tổng đài chính hãng dán hông máy lạnh để lưu danh bạ + Rack Focus + Breathing + ambient_particles + light_sweep",
+      "motion": {
+        "preset": "slow_pull_out",
+        "scale": [
+          1.08,
+          1.02
+        ],
+        "focus": [
+          [
+            0.5,
+            0.48
+          ],
+          [
+            0.5,
+            0.5
+          ]
+        ],
+        "wobble": "none",
+        "easing": "ease_out"
+      },
+      "parallax": {
+        "camera": "pull_out",
+        "dolly": [
+          1.08,
+          1.02
+        ],
+        "shift_x": [
+          0.0,
+          0.0
+        ],
+        "shift_y": [
+          -2.5,
+          2.0
+        ],
+        "focus": [
+          0.5,
+          0.5
+        ],
+        "strength": 0.85,
+        "easing": "ease_out",
+        "layers": [
+          {
+            "role": "bg",
+            "image": "assets/s9_bg.jpg",
+            "depth": 0.42,
+            "blur_from": 3.8,
+            "blur_to": 0.4,
+            "blur_at": 73.75,
+            "blur_dur": 1.4
+          },
+          {
+            "role": "fg",
+            "image": "assets/s9_fg.png",
+            "depth": 1.3,
+            "breathe_y": 1.8,
+            "breathe_period": 3.4
+          }
+        ]
+      },
+      "detail_fx": [
+        {
+          "type": "ambient_particles",
+          "count": 22,
+          "opacity": 0.34,
+          "color": [
+            220,
+            245,
+            255
+          ],
+          "drift_dir": "up"
+        },
+        {
+          "type": "light_sweep",
+          "mode": "light",
+          "color": [
+            255,
+            242,
+            200
+          ],
+          "intensity": 0.22,
+          "repeat": 1,
+          "start": 73.6,
+          "end": 76.95
+        }
+      ],
+      "transition_in": {
+        "type": "film_burn",
+        "dur": 0.36
+      }
+    },
+    {
+      "id": "s10_black_disclaimer",
+      "image": "assets/s10_black.jpg",
+      "start": 77.25,
+      "end": 79.95,
+      "beat_type": "ending",
+      "motion_level": "A",
+      "motion_intent": "Cắt đen tĩnh tuyệt đối cho bảng Lưu ý cuối video",
+      "motion": {
+        "preset": "static_hold"
+      },
+      "transition_in": {
+        "type": "cut",
+        "dur": 0.0
+      }
+    }
+  ],
+  "subtitle_srt": "factory619/staging/EP14/subtitles/EP14.srt",
+  "video_track_noaudio": "factory619/staging/EP14/timeline_video_gate4.mp4",
+  "channel_branding": {
+    "type": "channel_branding",
+    "logo_text": "VCH",
+    "watermark_text": "VẠN CHUYỆN",
+    "safe_zone_compliant": true
+  },
+  "overlays": [
+    {
+      "id": "000_hook",
+      "start_sec": 0.25,
+      "end_sec": 4.85,
+      "fade_sec": 0.3,
+      "png_path": "factory619/staging/EP14/overlays/000_hook.png",
+      "type": "text_hook",
+      "text": "BẪY BẢO HÀNH MÁY LẠNH — Mạo danh trung tâm lớn, giữ bo ép giá!",
+      "bbox_px": [
+        85,
+        170,
+        916,
+        360
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "001_sub_l1",
+      "start_sec": 0.4,
+      "end_sec": 5.81,
+      "fade_sec": 0.1,
+      "png_path": "factory619/staging/EP14/overlays/001_sub_l1.png",
+      "type": "subtitle",
+      "lines": [
+        "Mình ơi, họ ôm bo cả tuần rồi, nhà",
+        "ống nóng ngộp chịu không nổi!"
+      ],
+      "bbox_px": [
+        126,
+        1268,
+        875,
+        1380
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "002_sub_l2",
+      "start_sec": 6.71,
+      "end_sec": 8.563,
+      "fade_sec": 0.1,
+      "png_path": "factory619/staging/EP14/overlays/002_sub_l2.png",
+      "type": "subtitle",
+      "lines": [
+        "Máy mới mua tám tháng cứ ngắt!"
+      ],
+      "bbox_px": [
+        138,
+        1324,
+        863,
+        1380
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "003_sub_l2",
+      "start_sec": 8.563,
+      "end_sec": 11.28,
+      "fade_sec": 0.1,
+      "png_path": "factory619/staging/EP14/overlays/003_sub_l2.png",
+      "type": "subtitle",
+      "lines": [
+        "Để anh tìm trung tâm lớn trên mạng",
+        "gọi liền!"
+      ],
+      "bbox_px": [
+        110,
+        1268,
+        890,
+        1380
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "004_sub_l3",
+      "start_sec": 12.28,
+      "end_sec": 16.645,
+      "fade_sec": 0.1,
+      "png_path": "factory619/staging/EP14/overlays/004_sub_l3.png",
+      "type": "subtitle",
+      "lines": [
+        "Ủa anh ơi, sao họ mặc đồ thường",
+        "chẳng có đồng phục siêu thị?"
+      ],
+      "bbox_px": [
+        132,
+        1268,
+        868,
+        1380
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "005_sub_l3",
+      "start_sec": 16.645,
+      "end_sec": 18.1,
+      "fade_sec": 0.1,
+      "png_path": "factory619/staging/EP14/overlays/005_sub_l3.png",
+      "type": "subtitle",
+      "lines": [
+        "Em thấy nghi nghi..."
+      ],
+      "bbox_px": [
+        275,
+        1324,
+        725,
+        1380
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "006_sub_l4",
+      "start_sec": 18.4,
+      "end_sec": 23.97,
+      "fade_sec": 0.1,
+      "png_path": "factory619/staging/EP14/overlays/006_sub_l4.png",
+      "type": "subtitle",
+      "lines": [
+        "Anh cũng thấy lạ, mà người ta lỡ",
+        "xuống tận nhà rồi, ngại quá chẳng",
+        "dám đuổi!"
+      ],
+      "bbox_px": [
+        127,
+        1212,
+        874,
+        1380
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "007_sub_l5",
+      "start_sec": 24.97,
+      "end_sec": 28.811,
+      "fade_sec": 0.1,
+      "png_path": "factory619/staging/EP14/overlays/007_sub_l5.png",
+      "type": "subtitle",
+      "lines": [
+        "Alo, bo hư nặng lắm, sửa ba triệu nha",
+        "anh!"
+      ],
+      "bbox_px": [
+        89,
+        1268,
+        911,
+        1380
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "008_sub_l5",
+      "start_sec": 28.811,
+      "end_sec": 31.372,
+      "fade_sec": 0.1,
+      "png_path": "factory619/staging/EP14/overlays/008_sub_l5.png",
+      "type": "subtitle",
+      "lines": [
+        "Đồng ý thì tụi tôi làm liền!"
+      ],
+      "bbox_px": [
+        215,
+        1324,
+        786,
+        1380
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "009_sub_l6",
+      "start_sec": 31.72,
+      "end_sec": 34.54,
+      "fade_sec": 0.1,
+      "png_path": "factory619/staging/EP14/overlays/009_sub_l6.png",
+      "type": "subtitle",
+      "lines": [
+        "Im bặt hai ngày nhà nóng ngộp quá!"
+      ],
+      "bbox_px": [
+        107,
+        1324,
+        894,
+        1380
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "010_sub_l6",
+      "start_sec": 34.54,
+      "end_sec": 37.94,
+      "fade_sec": 0.1,
+      "png_path": "factory619/staging/EP14/overlays/010_sub_l6.png",
+      "type": "subtitle",
+      "lines": [
+        "Thôi đồng ý đại, có máy xài liền mình",
+        "ơi!"
+      ],
+      "bbox_px": [
+        96,
+        1268,
+        904,
+        1380
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "011_sub_l7",
+      "start_sec": 38.94,
+      "end_sec": 39.207,
+      "fade_sec": 0.1,
+      "png_path": "factory619/staging/EP14/overlays/011_sub_l7.png",
+      "type": "subtitle",
+      "lines": [
+        "Alo!"
+      ],
+      "bbox_px": [
+        440,
+        1324,
+        560,
+        1380
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "012_sub_l7",
+      "start_sec": 39.207,
+      "end_sec": 41.677,
+      "fade_sec": 0.1,
+      "png_path": "factory619/staging/EP14/overlays/012_sub_l7.png",
+      "type": "subtitle",
+      "lines": [
+        "Đồng ý rồi mà thêm năm ngày mất",
+        "hút?!"
+      ],
+      "bbox_px": [
+        125,
+        1268,
+        875,
+        1380
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "013_sub_l7",
+      "start_sec": 41.677,
+      "end_sec": 44.48,
+      "fade_sec": 0.1,
+      "png_path": "factory619/staging/EP14/overlays/013_sub_l7.png",
+      "type": "subtitle",
+      "lines": [
+        "Gọi biên nhận không ai nghe, đem",
+        "ráp liền!"
+      ],
+      "bbox_px": [
+        126,
+        1268,
+        875,
+        1380
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "014_sub_l8",
+      "start_sec": 45.48,
+      "end_sec": 51.64,
+      "fade_sec": 0.1,
+      "png_path": "factory619/staging/EP14/overlays/014_sub_l8.png",
+      "type": "subtitle",
+      "lines": [
+        "Họ mới xuống ráp lấy ba triệu, hai",
+        "ngày lại ngắt y chang, anh coi kỹ",
+        "giùm em!"
+      ],
+      "bbox_px": [
+        130,
+        1212,
+        870,
+        1380
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "015_sub_l9",
+      "start_sec": 51.99,
+      "end_sec": 54.199,
+      "fade_sec": 0.1,
+      "png_path": "factory619/staging/EP14/overlays/015_sub_l9.png",
+      "type": "subtitle",
+      "lines": [
+        "Bo mạch chẳng hư, họ cũng chưa",
+        "sửa!"
+      ],
+      "bbox_px": [
+        128,
+        1268,
+        873,
+        1380
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "016_sub_l9",
+      "start_sec": 54.199,
+      "end_sec": 56.66,
+      "fade_sec": 0.1,
+      "png_path": "factory619/staging/EP14/overlays/016_sub_l9.png",
+      "type": "subtitle",
+      "lines": [
+        "Chỉ rách tem, mất bảo hành rồi anh",
+        "chị!"
+      ],
+      "bbox_px": [
+        117,
+        1268,
+        883,
+        1380
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "017_sub_l10",
+      "start_sec": 57.61,
+      "end_sec": 63.42,
+      "fade_sec": 0.1,
+      "png_path": "factory619/staging/EP14/overlays/017_sub_l10.png",
+      "type": "subtitle",
+      "lines": [
+        "Mạo danh trung tâm lớn, giữ bo câu",
+        "giờ ép nóng là bạn bỏ hết đề phòng!"
+      ],
+      "bbox_px": [
+        103,
+        1268,
+        897,
+        1380
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "018_sub_l11",
+      "start_sec": 63.72,
+      "end_sec": 67.2,
+      "fade_sec": 0.1,
+      "png_path": "factory619/staging/EP14/overlays/018_sub_l11.png",
+      "type": "subtitle",
+      "lines": [
+        "Gọi bảo hành chỉ lấy số trên phiếu",
+        "hoặc tem máy!"
+      ],
+      "bbox_px": [
+        126,
+        1268,
+        874,
+        1380
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "019_redflags_0",
+      "start_sec": 67.75,
+      "end_sec": 68.13,
+      "fade_sec": 0.25,
+      "png_path": "factory619/staging/EP14/overlays/019_redflags_0.png",
+      "type": "red_flags",
+      "title": "NHỚ KỸ",
+      "lines": [
+        "Cố tình mạo danh trung tâm bảo hành lớn đứng đầu tìm kiếm; thợ tới mặc đồ thường, không thẻ hãng",
+        "Tháo bo mạch giữ lại rồi im bặt 2 ngày giữa trời nóng ngộp, chờ bạn bỏ đề phòng mới báo giá 3 triệu",
+        "Đồng ý xong vẫn câu giờ thêm 5 ngày không nghe số biên nhận, phải gào đòi mới xuống ráp và rách luôn tem hãng",
+        "Chỉ gọi đúng số in trên phiếu bảo hành hoặc tem dán trên thân máy · Sai nhận diện dừng ngay từ cửa — không giao bo mạch cho thợ lạ!"
+      ],
+      "bbox_px": [
+        80,
+        420,
+        920,
+        1188
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "020_redflags_1",
+      "start_sec": 68.13,
+      "end_sec": 68.51,
+      "fade_sec": 0.0,
+      "png_path": "factory619/staging/EP14/overlays/020_redflags_1.png",
+      "type": "red_flags",
+      "title": "NHỚ KỸ",
+      "lines": [
+        "Cố tình mạo danh trung tâm bảo hành lớn đứng đầu tìm kiếm; thợ tới mặc đồ thường, không thẻ hãng",
+        "Tháo bo mạch giữ lại rồi im bặt 2 ngày giữa trời nóng ngộp, chờ bạn bỏ đề phòng mới báo giá 3 triệu",
+        "Đồng ý xong vẫn câu giờ thêm 5 ngày không nghe số biên nhận, phải gào đòi mới xuống ráp và rách luôn tem hãng",
+        "Chỉ gọi đúng số in trên phiếu bảo hành hoặc tem dán trên thân máy · Sai nhận diện dừng ngay từ cửa — không giao bo mạch cho thợ lạ!"
+      ],
+      "bbox_px": [
+        80,
+        420,
+        920,
+        1188
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "021_redflags_2",
+      "start_sec": 68.51,
+      "end_sec": 68.89,
+      "fade_sec": 0.0,
+      "png_path": "factory619/staging/EP14/overlays/021_redflags_2.png",
+      "type": "red_flags",
+      "title": "NHỚ KỸ",
+      "lines": [
+        "Cố tình mạo danh trung tâm bảo hành lớn đứng đầu tìm kiếm; thợ tới mặc đồ thường, không thẻ hãng",
+        "Tháo bo mạch giữ lại rồi im bặt 2 ngày giữa trời nóng ngộp, chờ bạn bỏ đề phòng mới báo giá 3 triệu",
+        "Đồng ý xong vẫn câu giờ thêm 5 ngày không nghe số biên nhận, phải gào đòi mới xuống ráp và rách luôn tem hãng",
+        "Chỉ gọi đúng số in trên phiếu bảo hành hoặc tem dán trên thân máy · Sai nhận diện dừng ngay từ cửa — không giao bo mạch cho thợ lạ!"
+      ],
+      "bbox_px": [
+        80,
+        420,
+        920,
+        1188
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "022_redflags_3",
+      "start_sec": 68.89,
+      "end_sec": 72.75,
+      "fade_sec": 0.0,
+      "png_path": "factory619/staging/EP14/overlays/022_redflags_3.png",
+      "type": "red_flags",
+      "title": "NHỚ KỸ",
+      "lines": [
+        "Cố tình mạo danh trung tâm bảo hành lớn đứng đầu tìm kiếm; thợ tới mặc đồ thường, không thẻ hãng",
+        "Tháo bo mạch giữ lại rồi im bặt 2 ngày giữa trời nóng ngộp, chờ bạn bỏ đề phòng mới báo giá 3 triệu",
+        "Đồng ý xong vẫn câu giờ thêm 5 ngày không nghe số biên nhận, phải gào đòi mới xuống ráp và rách luôn tem hãng",
+        "Chỉ gọi đúng số in trên phiếu bảo hành hoặc tem dán trên thân máy · Sai nhận diện dừng ngay từ cửa — không giao bo mạch cho thợ lạ!"
+      ],
+      "bbox_px": [
+        80,
+        420,
+        920,
+        1188
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "023_disclaimer",
+      "start_sec": 77.25,
+      "end_sec": 79.95,
+      "fade_sec": 0.25,
+      "png_path": "factory619/staging/EP14/overlays/023_disclaimer.png",
+      "type": "disclaimer",
+      "text": "Tình huống được dựng lại để cảnh báo. Nhân vật, tên, số liệu đều là hư cấu.",
+      "bbox_px": [
+        80,
+        210,
+        920,
+        340
+      ],
+      "safe_zone_compliant": true
+    }
+  ],
+  "qa_preview_frames": [
+    {
+      "timestamp_sec": 0.65,
+      "clean": "factory619/staging/EP14/preview_frames/qa_00_65s_clean.jpg",
+      "safezone": "factory619/staging/EP14/preview_frames/qa_00_65s_safezone.jpg"
+    },
+    {
+      "timestamp_sec": 1.05,
+      "clean": "factory619/staging/EP14/preview_frames/qa_01_05s_clean.jpg",
+      "safezone": "factory619/staging/EP14/preview_frames/qa_01_05s_safezone.jpg"
+    },
+    {
+      "timestamp_sec": 1.25,
+      "clean": "factory619/staging/EP14/preview_frames/qa_01_25s_clean.jpg",
+      "safezone": "factory619/staging/EP14/preview_frames/qa_01_25s_safezone.jpg"
+    },
+    {
+      "timestamp_sec": 3.18,
+      "clean": "factory619/staging/EP14/preview_frames/qa_03_18s_clean.jpg",
+      "safezone": "factory619/staging/EP14/preview_frames/qa_03_18s_safezone.jpg"
+    },
+    {
+      "timestamp_sec": 9.12,
+      "clean": "factory619/staging/EP14/preview_frames/qa_09_12s_clean.jpg",
+      "safezone": "factory619/staging/EP14/preview_frames/qa_09_12s_safezone.jpg"
+    },
+    {
+      "timestamp_sec": 9.41,
+      "clean": "factory619/staging/EP14/preview_frames/qa_09_41s_clean.jpg",
+      "safezone": "factory619/staging/EP14/preview_frames/qa_09_41s_safezone.jpg"
+    },
+    {
+      "timestamp_sec": 18.2,
+      "clean": "factory619/staging/EP14/preview_frames/qa_18_20s_clean.jpg",
+      "safezone": "factory619/staging/EP14/preview_frames/qa_18_20s_safezone.jpg"
+    },
+    {
+      "timestamp_sec": 25.62,
+      "clean": "factory619/staging/EP14/preview_frames/qa_25_62s_clean.jpg",
+      "safezone": "factory619/staging/EP14/preview_frames/qa_25_62s_safezone.jpg"
+    },
+    {
+      "timestamp_sec": 31.51,
+      "clean": "factory619/staging/EP14/preview_frames/qa_31_51s_clean.jpg",
+      "safezone": "factory619/staging/EP14/preview_frames/qa_31_51s_safezone.jpg"
+    },
+    {
+      "timestamp_sec": 38.9,
+      "clean": "factory619/staging/EP14/preview_frames/qa_38_90s_clean.jpg",
+      "safezone": "factory619/staging/EP14/preview_frames/qa_38_90s_safezone.jpg"
+    },
+    {
+      "timestamp_sec": 39.44,
+      "clean": "factory619/staging/EP14/preview_frames/qa_39_44s_clean.jpg",
+      "safezone": "factory619/staging/EP14/preview_frames/qa_39_44s_safezone.jpg"
+    },
+    {
+      "timestamp_sec": 41.76,
+      "clean": "factory619/staging/EP14/preview_frames/qa_41_76s_clean.jpg",
+      "safezone": "factory619/staging/EP14/preview_frames/qa_41_76s_safezone.jpg"
+    },
+    {
+      "timestamp_sec": 51.12,
+      "clean": "factory619/staging/EP14/preview_frames/qa_51_12s_clean.jpg",
+      "safezone": "factory619/staging/EP14/preview_frames/qa_51_12s_safezone.jpg"
+    },
+    {
+      "timestamp_sec": 52.44,
+      "clean": "factory619/staging/EP14/preview_frames/qa_52_44s_clean.jpg",
+      "safezone": "factory619/staging/EP14/preview_frames/qa_52_44s_safezone.jpg"
+    },
+    {
+      "timestamp_sec": 52.99,
+      "clean": "factory619/staging/EP14/preview_frames/qa_52_99s_clean.jpg",
+      "safezone": "factory619/staging/EP14/preview_frames/qa_52_99s_safezone.jpg"
+    },
+    {
+      "timestamp_sec": 58.56,
+      "clean": "factory619/staging/EP14/preview_frames/qa_58_56s_clean.jpg",
+      "safezone": "factory619/staging/EP14/preview_frames/qa_58_56s_safezone.jpg"
+    },
+    {
+      "timestamp_sec": 58.91,
+      "clean": "factory619/staging/EP14/preview_frames/qa_58_91s_clean.jpg",
+      "safezone": "factory619/staging/EP14/preview_frames/qa_58_91s_safezone.jpg"
+    },
+    {
+      "timestamp_sec": 62.48,
+      "clean": "factory619/staging/EP14/preview_frames/qa_62_48s_clean.jpg",
+      "safezone": "factory619/staging/EP14/preview_frames/qa_62_48s_safezone.jpg"
+    },
+    {
+      "timestamp_sec": 64.72,
+      "clean": "factory619/staging/EP14/preview_frames/qa_64_72s_clean.jpg",
+      "safezone": "factory619/staging/EP14/preview_frames/qa_64_72s_safezone.jpg"
+    },
+    {
+      "timestamp_sec": 70.25,
+      "clean": "factory619/staging/EP14/preview_frames/qa_70_25s_clean.jpg",
+      "safezone": "factory619/staging/EP14/preview_frames/qa_70_25s_safezone.jpg"
+    },
+    {
+      "timestamp_sec": 72.25,
+      "clean": "factory619/staging/EP14/preview_frames/qa_72_25s_clean.jpg",
+      "safezone": "factory619/staging/EP14/preview_frames/qa_72_25s_safezone.jpg"
+    },
+    {
+      "timestamp_sec": 75.0,
+      "clean": "factory619/staging/EP14/preview_frames/qa_75_00s_clean.jpg",
+      "safezone": "factory619/staging/EP14/preview_frames/qa_75_00s_safezone.jpg"
+    },
+    {
+      "timestamp_sec": 78.6,
+      "clean": "factory619/staging/EP14/preview_frames/qa_78_60s_clean.jpg",
+      "safezone": "factory619/staging/EP14/preview_frames/qa_78_60s_safezone.jpg"
+    }
+  ]
+}

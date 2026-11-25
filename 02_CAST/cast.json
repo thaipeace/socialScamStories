@@ -27,7 +27,7 @@
       "subtitle_rgb": [255, 240, 225]
     },
     "anh_hai": {
-      "label": "Anh Hai – lao động/nhân viên/chồng Chị Ba 35 tuổi",
+      "label": "Anh Hai – lao động/nhân viên, chồng Chị Hai, anh trai ruột Chị Ba (35 tuổi)",
       "label_short": "ANH HAI",
       "model": "gemini-3.8-flash-tts",
       "voice": "Orus",
@@ -35,7 +35,7 @@
       "subtitle_rgb": [255, 240, 225]
     },
     "chi_ba": {
-      "label": "Chị Ba – nhân viên văn phòng/mẹ bé Tom 35 tuổi",
+      "label": "Chị Ba – em gái ruột Anh Hai, nhân viên văn phòng/mẹ bé Tom (35 tuổi; KHÔNG phải vợ Anh Hai)",
       "label_short": "CHỊ BA",
       "model": "gemini-3.8-flash-tts",
       "voice": "Kore",
@@ -148,6 +148,14 @@
       "voice": "Fenrir",
       "style": "Giọng nam miền Nam Sài Gòn 40 tuổi, phát âm chuẩn phương ngữ miền Nam xuyên suốt mọi câu, giữ cố định một âm sắc trầm, đều, lịch sự mà lạnh; không la hét, không dồn dập, nói như chuyện thường ngày nên càng gây áp lực.",
       "subtitle_rgb": [255, 120, 120]
+    },
+    "ong_tam": {
+      "label": "Ông Tám – Phó tướng tâm lý & đối nội của Chị Hai (~60 tuổi, quyền lực mềm; xuất hiện lần đầu ở factory196/EP07)",
+      "label_short": "ÔNG TÁM",
+      "model": "gemini-3.8-flash-tts",
+      "voice": "Algieba",
+      "style": "Giọng nam miền Nam Sài Gòn khoảng 58–60 tuổi, phát âm chuẩn phương ngữ miền Nam xuyên suốt mọi câu, giữ cố định một âm sắc trầm mượt, điềm đạm, trí thức và thong thả như quân sư nhấp trà bàn chiến lược tâm lý; tuyệt đối không gắt gỏng, không giọng giang hồ, toát ra quyền lực mềm lạnh tĩnh.",
+      "subtitle_rgb": [195, 232, 220]
     }
   }
 }
