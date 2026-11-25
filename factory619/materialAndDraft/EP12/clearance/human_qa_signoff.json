@@ -1,0 +1,32 @@
+{
+  "2": {
+    "status": "PASS",
+    "by": "Chủ kênh",
+    "note": "Duyệt Staging EP12 v4-level3-full-abc (Check 1-2-3 PASS)",
+    "at": "2026-11-25T09:52:55+07:00",
+    "episode_version": "v4-level3-full-abc-staging",
+    "motion_upgrade": "level3",
+    "config_sha256": "446e1620fae3a596",
+    "timeline_mtime": 1795574607.89
+  },
+  "4": {
+    "status": "PASS",
+    "by": "Chủ kênh",
+    "note": "Duyệt Staging EP12 v4-level3-full-abc (Check 1-2-3 PASS)",
+    "at": "2026-11-25T09:52:55+07:00",
+    "episode_version": "v4-level3-full-abc-staging",
+    "motion_upgrade": "level3",
+    "config_sha256": "446e1620fae3a596",
+    "timeline_mtime": 1795574607.89
+  },
+  "5": {
+    "status": "PASS",
+    "by": "Chủ kênh",
+    "note": "Duyệt Staging EP12 v4-level3-full-abc (Check 1-2-3 PASS)",
+    "at": "2026-11-25T09:52:55+07:00",
+    "episode_version": "v4-level3-full-abc-staging",
+    "motion_upgrade": "level3",
+    "config_sha256": "446e1620fae3a596",
+    "timeline_mtime": 1795574607.89
+  }
+}

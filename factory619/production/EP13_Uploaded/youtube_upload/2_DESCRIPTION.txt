@@ -1,0 +1,16 @@
+Sát ngày thi thấy đường link chia sẻ đề thi, đề cương ôn tập miễn phí, nhiều bạn học sinh, sinh viên chủ quan bấm vào và nhập lại mật khẩu mạng xã hội dù đang mở sẵn ứng dụng trên máy.
+
+Chi tiết kỹ thuật quan trọng nhiều người chưa biết: các nền tảng mạng xã hội đều áp dụng cơ chế đăng nhập một lần (SSO). Khi bạn đang dùng sẵn ứng dụng trên máy, hệ thống KHÔNG BAO GIỜ mở trang web lạ bắt bạn nhập lại mật khẩu — bạn chỉ đăng nhập lại khi ở trong chính app của mạng xã hội đó! Nguy hiểm hơn, nhiều tệp giả dạng tài liệu còn giấu mã độc chạy ngầm lấy sạch mật khẩu và ảnh riêng tư để uy hiếp ép chuyển tiền.
+
+✅ Nhớ kỹ để không sập bẫy mùa thi:
+1. Mạng xã hội đang dùng không bao giờ bắt đăng nhập lại qua link ngoài (cơ chế SSO) — chỉ đăng nhập trong chính app mạng xã hội đó.
+2. Tài liệu sạch không bao giờ đòi nhập mật khẩu hay bắt tải tệp chạy lạ.
+3. Bật xác thực hai lớp (2FA), thường xuyên kiểm tra và đăng xuất thiết bị lạ.
+4. Lỡ mất tài khoản phải báo ngay cho gia đình, nhóm lớp; tuyệt đối không chuyển tiền khi bị uy hiếp — lưu link, tin nhắn làm bằng chứng và trình báo cơ quan công an ngay.
+
+🎬 ĐÂY LÀ PHIM HOẠT HÌNH DỰNG LẠI TÌNH HUỐNG ĐỂ CẢNH BÁO
+Nhân vật, tên gọi, số điện thoại, số tiền trong phim đều là hư cấu nhằm mục đích cảnh báo.
+
+🤖 Hình ảnh và âm thanh được hỗ trợ sản xuất bởi công cụ AI.
+
+#shorts #bóctrầnlừađảo #cảnhgiáclừađảo

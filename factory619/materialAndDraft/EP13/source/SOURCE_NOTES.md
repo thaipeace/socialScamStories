@@ -1,0 +1,17 @@
+# GHI CHÚ NGUỒN CẢM HỨNG (NỘI BỘ — KHÔNG PHÁT HÀNH CÔNG KHAI)
+
+- **Nguồn báo chí / truyền hình tham khảo:**
+  - Phóng sự VTV24 — *Thật - Giả, Kiểm chứng: Thủ đoạn lừa đảo bằng tài liệu miễn phí* (`https://www.youtube.com/watch?v=2zs3HPL_k6w`, thời lượng 4:50).
+  - Các cảnh báo trong phóng sự từ Công an TP. Đà Nẵng, Công an tỉnh Quảng Ninh và chuyên gia Học viện Cảnh sát Nhân dân (phối hợp Ban Thời sự VTV & Cục An ninh mạng và phòng, chống tội phạm sử dụng công nghệ cao).
+- **Tóm tắt 2 thủ đoạn cốt lõi & hậu quả từ nguồn VTV24:**
+  1. **Link giả mạo bắt đăng nhập (Phishing):** Lập bài đăng chia sẻ đề thi, đề cương ôn tập miễn phí (nhắm vào học sinh, sinh viên mùa thi), không cho tải trực tiếp mà gắn đường link dẫn sang tên miền lạ không chính thống (ví dụ đuôi `.xyz`) rồi hiện khung bắt đăng nhập tài khoản mạng xã hội + mật khẩu → chiếm đoạt tài khoản ngay sau khi người dùng bấm xác nhận.
+  2. **Tệp tài liệu ngụy trang mã độc (Malware/Trojan):** Phát tán tệp giả dạng tài liệu học tập quen thuộc (Word, Excel, PDF) nhưng thực chất gắn mã độc mang đuôi tệp thực thi nguy hiểm (`.exe`, `.scr`, `.dll`, `.ps1`) → xâm nhập thiết bị, đánh cắp mật khẩu, dữ liệu và hình ảnh cá nhân.
+  3. **Hậu quả thực tế:** Tài khoản bị chiếm quyền lập tức bị dùng để mạo danh nhắn vay tiền người thân/bạn bè; đồng thời kẻ gian sao lưu ảnh cá nhân & tin nhắn để uy hiếp, ép chuyển tiền ngay cả khi nạn nhân cố lấy lại hoặc đổi mật khẩu.
+  4. **Khuyến cáo chính thức trong phóng sự:** Không bấm đường link chia sẻ tài liệu không rõ nguồn gốc và không nhập mật khẩu tài khoản cá nhân; bật xác thực 2 yếu tố (2FA) và kiểm tra/đăng xuất thiết bị lạ; khi bị mất quyền phải khôi phục qua kênh chính thức, đổi mật khẩu email liên kết, tuyệt đối không chuyển tiền khi bị uy hiếp, lưu giữ toàn bộ bằng chứng (ảnh chụp màn hình, link, tin nhắn) và trình báo cơ quan công an.
+- **Định hướng hư cấu hóa & dựng phim riêng cho `factory619/EP13`:**
+  - Hư cấu hóa hoàn toàn qua hai nhân vật cố định của vũ trụ Vạn Chuyện: **Bé Na (`be_na`)** — sinh viên thức khuya ôn thi sát giờ, và **Chị Ba (`chi_ba`)** — chị họ tỉnh táo nhận ra tin nhắn vay tiền bất thường nên gọi điện kiểm chứng kịp lúc.
+  - Bổ sung điểm kỹ thuật cốt lõi theo yêu cầu chủ kênh (**SSO — Single Sign-On / đăng nhập một lần**): các nền tảng mạng xã hội đã thiết kế cơ chế SSO để người dùng đang đăng nhập sẵn trên app không bao giờ phải nhập lại mật khẩu trên đường link bên ngoài — chỉ đăng nhập lại khi ở trong chính app của mạng xã hội đó! Nhấn mạnh trực diện trong `l2`, `l9`, Thẻ `NHỚ KỸ`, `description` và `pinned_comment`.
+  - Khóa chuẩn pháp lý & thuật toán (`HRN-LEGAL-SCAM-V1` + `policy_wordlists.json`): loại bỏ 100% tên người thật, tên trường học, địa danh, tên mạng xã hội/ngân hàng cụ thể và từ khóa nhạy cảm (`soft_warn`/`hard_block`).
+  - Thiết kế chuẩn **Visual Motion Level 3 + Living-Character 2.5 (`HRN-MOTION-L3.0`)**: đủ 2 cảnh 2.5D Parallax (`s2` + `s9`) kèm Rack Focus + Breathing + Head Micro-Tilt, `split_screen` cuộc gọi 2 chiều (`s4`), 5 rig `eye_blink` + 5 rig `mouth_sync` (gồm 4 trạng thái `round_image` ở `s2`), cùng `red_circle_draw`, `highlighter_sweep`, `animated_counter`, `phone_waveform`, `typing_indicator`, `chromatic_pulse`, `ambient_particles`, `light_sweep`, `color_mood`.
+- **Mục tiêu Thư viện Cảnh giác (`STRAT-VIGILANCE-LIB-V1`):**
+  - Bổ sung mã biến thể mới **`VAR-DOC-01`** theo góc quan sát **`A/D`** trên nhà máy `factory619`.

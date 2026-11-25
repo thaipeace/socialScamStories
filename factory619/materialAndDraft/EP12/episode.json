@@ -2,9 +2,9 @@
   "episode_id": "EP12",
   "slug": "MoTraiTimNgoc",
   "title": "Mở trai tìm ngọc trên livestream – Ai cũng biết chuyển trước là lừa, sao vẫn cố tin?",
-  "version": "v3-final-level2-abc",
+  "version": "v4-level3-full-abc-staging",
   "scam_family": "VAR-LIVE-01",
-  "motion_upgrade": "level2",
+  "motion_upgrade": "level3",
   "duration_sec": 77.05,
   "hook": {
     "kicker": "AI CŨNG BIẾT CHUYỂN TRƯỚC LÀ LỪA",
@@ -20,7 +20,7 @@
       "end": 5.35,
       "beat_type": "establishing",
       "motion_level": "C",
-      "motion_intent": "POV trực diện màn hình livestream tách sống con trai lộ 4 viên ngọc sáng rực kèm screen_glow ánh ngọc khớp l1",
+      "motion_intent": "POV trực diện màn hình livestream tách sống con trai lộ 4 viên ngọc sáng rực kèm screen_glow ánh ngọc + bụi sáng ngọc trai + vệt sáng kính màn hình khớp l1",
       "motion": {
         "preset": "slow_push_in",
         "scale": [1.02, 1.09],
@@ -39,6 +39,33 @@
           "start": 0.15,
           "end": 5.25,
           "fade": 0.25
+        },
+        {
+          "type": "ambient_particles",
+          "count": 22,
+          "opacity": 0.34,
+          "color": [255, 244, 210],
+          "drift_dir": "up",
+          "size_px": 5,
+          "seed": 1201
+        },
+        {
+          "type": "light_sweep",
+          "mode": "light",
+          "color": [255, 246, 220],
+          "intensity": 0.16,
+          "width": 0.22,
+          "angle_deg": -20.0,
+          "repeat": 1,
+          "start": 0.5,
+          "end": 4.8
+        },
+        {
+          "type": "color_mood",
+          "mood": "warm_daily",
+          "strength": 0.45,
+          "vignette": 0.14,
+          "grain": 0.0
         }
       ]
     },
@@ -49,7 +76,7 @@
       "end": 12.15,
       "beat_type": "normal",
       "motion_level": "C",
-      "motion_intent": "Quét ngang nhẹ phòng khách tối ấm, Cô Tư ôm 1 chiếc điện thoại mừng rỡ thật lòng khớp Living-Character A/B/C (chớp mắt + miệng nói l2 + nhịp thở) & tiếng chim mồi tranh mua",
+      "motion_intent": "Quét ngang nhẹ phòng khách tối ấm, Cô Tư ôm 1 chiếc điện thoại mừng rỡ thật lòng khớp Living-Character A/B/C (chớp mắt + miệng nói l2 + nhịp thở) & tông ấm trước khi chuyển sang lạnh",
       "motion": {
         "preset": "pan_right",
         "scale": [1.06, 1.06],
@@ -90,6 +117,22 @@
           "start": 5.45,
           "end": 12.05,
           "fade": 0.3
+        },
+        {
+          "type": "ambient_particles",
+          "count": 14,
+          "opacity": 0.20,
+          "color": [255, 232, 185],
+          "drift_dir": "float",
+          "size_px": 4,
+          "seed": 1202
+        },
+        {
+          "type": "color_mood",
+          "mood": "warm_daily",
+          "strength": 0.55,
+          "vignette": 0.14,
+          "grain": 0.008
         }
       ],
       "transition_in": {"type": "cut", "dur": 0.0}
@@ -101,7 +144,7 @@
       "end": 34.95,
       "beat_type": "suspicion",
       "motion_level": "C",
-      "motion_intent": "Kéo lùi chậm khi ánh xanh cuộc gọi lấn đèn vàng, Cô Tư đắn đo hỏi thẳng l4 rồi mềm lòng chốt chuyển 4 triệu ở l6 khớp Living-Character A/B/C (chớp mắt + miệng nói riêng lúc Cô Tư thoại)",
+      "motion_intent": "Kéo lùi chậm khi ánh xanh cuộc gọi lấn đèn vàng, sóng âm thoại thật của Đầu dây lạ (l3, l5) + Living-Character A/B/C Cô Tư (chớp mắt + miệng nói l4, l6) + chuyển sắc lạnh cold_suspicion",
       "motion": {
         "preset": "slow_pull_out",
         "scale": [1.09, 1.02],
@@ -142,6 +185,27 @@
           "start": 12.35,
           "end": 34.85,
           "fade": 0.35
+        },
+        {
+          "type": "phone_waveform",
+          "speaker": "ke_gia_danh",
+          "line_ids": ["l3", "l5"],
+          "start": 12.35,
+          "end": 29.35,
+          "pos": [0.58, 0.145],
+          "size": [0.46, 0.036],
+          "color": [110, 215, 255],
+          "label": "ĐẦU DÂY LẠ"
+        },
+        {
+          "type": "color_mood",
+          "mood": "cold_suspicion",
+          "strength": 0.50,
+          "vignette": 0.22,
+          "grain": 0.012,
+          "start": 12.35,
+          "end": 34.95,
+          "fade": 1.0
         }
       ],
       "transition_in": {"type": "dissolve", "dur": 0.25}
@@ -153,7 +217,7 @@
       "end": 37.55,
       "beat_type": "climax",
       "motion_level": "C",
-      "motion_intent": "Câm thoại 2.6s cận ngón tay bấm nút xác nhận chuyển 4 triệu kèm chớp sáng xanh và cú rung khớp bank_ting",
+      "motion_intent": "Câm thoại 2.6s zoom_punch vào ngón tay bấm xác nhận chuyển 4 triệu, số nhảy động -4.000.000đ + chromatic_pulse + shakes khớp chính xác bank_ting",
       "motion": {
         "preset": "pan_left",
         "scale": [1.07, 1.07],
@@ -172,10 +236,37 @@
           "start": 35.1,
           "end": 37.45,
           "fade": 0.15
+        },
+        {
+          "type": "animated_counter",
+          "start": 35.40,
+          "end": 37.50,
+          "count_dur": 0.75,
+          "from_val": 0,
+          "to_val": -4000000,
+          "fmt": "vnd",
+          "label": "CHUYỂN KÝ QUỸ",
+          "pos": [0.46, 0.685],
+          "style": "danger",
+          "easing": "ease_out"
+        },
+        {
+          "type": "chromatic_pulse",
+          "at": 36.05,
+          "dur": 0.30,
+          "shift_px": 7,
+          "zoom_blur": 0.028
+        },
+        {
+          "type": "color_mood",
+          "mood": "high_tension",
+          "strength": 0.42,
+          "vignette": 0.24,
+          "grain": 0.015
         }
       ],
       "shakes": [{"at": 36.05, "amp": 18}],
-      "transition_in": {"type": "cut", "dur": 0.0}
+      "transition_in": {"type": "zoom_punch", "dur": 0.22}
     },
     {
       "id": "s5_doi_14_trieu_cau_chup_lien",
@@ -184,7 +275,7 @@
       "end": 50.45,
       "beat_type": "suspicion",
       "motion_level": "C",
-      "motion_intent": "Đẩy căng chậm cận gương mặt Cô Tư lo lắng thật sự trước đòn đòi tiếp 14 triệu (l7) và năn nỉ chụp liền khay ngọc (l8) khớp Living-Character A/B/C",
+      "motion_intent": "Đẩy căng chậm cận gương mặt Cô Tư lo lắng trước đòn đòi tiếp 14 triệu (sóng âm thoại l7) và năn nỉ chụp liền khay ngọc (l8) khớp Living-Character A/B/C + bóng quét lạnh",
       "motion": {
         "preset": "tense_push",
         "scale": [1.02, 1.10],
@@ -225,6 +316,34 @@
           "start": 37.75,
           "end": 50.35,
           "fade": 0.25
+        },
+        {
+          "type": "phone_waveform",
+          "speaker": "ke_gia_danh",
+          "line_ids": ["l7"],
+          "start": 37.75,
+          "end": 43.35,
+          "pos": [0.63, 0.108],
+          "size": [0.42, 0.032],
+          "color": [255, 110, 95],
+          "label": "ĐẦU DÂY LẠ"
+        },
+        {
+          "type": "light_sweep",
+          "mode": "shadow",
+          "intensity": 0.16,
+          "width": 0.26,
+          "angle_deg": -16.0,
+          "repeat": 1,
+          "start": 38.0,
+          "end": 50.2
+        },
+        {
+          "type": "color_mood",
+          "mood": "cold_suspicion",
+          "strength": 0.65,
+          "vignette": 0.28,
+          "grain": 0.016
         }
       ],
       "transition_in": {"type": "cut", "dur": 0.0}
@@ -236,7 +355,7 @@
       "end": 55.25,
       "beat_type": "climax",
       "motion_level": "C",
-      "motion_intent": "Câm thoại 4.8s phía ổ lừa đảo: chụp vội khay ngọc lộ tờ hóa đơn rìa bàn (detail_reveal), ông sếp đập bàn giật máy thu hồi & chặn rụp (shakes + light_shift)",
+      "motion_intent": "whip_pan_left cắt sang ổ lừa đảo câm thoại 4.8s: chụp vội lộ tờ hóa đơn (detail_reveal), ông sếp đập bàn giật máy (chromatic_pulse + shakes + light_shift) & ánh đèn vòng quét lạnh",
       "motion": {
         "preset": "pan_right",
         "scale": [1.06, 1.06],
@@ -258,10 +377,35 @@
           "brightness": 0.88,
           "tint_rgb": [255, 110, 110],
           "tint_strength": 0.12
+        },
+        {
+          "type": "chromatic_pulse",
+          "at": 52.85,
+          "dur": 0.34,
+          "shift_px": 8,
+          "zoom_blur": 0.032
+        },
+        {
+          "type": "light_sweep",
+          "mode": "light",
+          "color": [215, 235, 255],
+          "intensity": 0.18,
+          "width": 0.20,
+          "angle_deg": 18.0,
+          "repeat": 1,
+          "start": 50.6,
+          "end": 52.8
+        },
+        {
+          "type": "color_mood",
+          "mood": "high_tension",
+          "strength": 0.55,
+          "vignette": 0.28,
+          "grain": 0.018
         }
       ],
       "shakes": [{"at": 52.85, "amp": 28}],
-      "transition_in": {"type": "cut", "dur": 0.0}
+      "transition_in": {"type": "whip_pan_left", "dur": 0.24}
     },
     {
       "id": "s7_boc_tran_1_cau_duy_nhat",
@@ -270,7 +414,7 @@
       "end": 62.65,
       "beat_type": "information",
       "motion_level": "C",
-      "motion_intent": "1 khung lật mặt duy nhất: đèn vòng nứt vỡ bật lộ vòng bẫy tâm lý khớp đúng 1 câu chốt l9 của Người Bóc Trần",
+      "motion_intent": "1 khung lật mặt duy nhất: đèn vòng nứt vỡ + chromatic_pulse + sóng âm Bóc Trần (l9) + vẽ khoanh đỏ động quanh dây xích bẫy khớp marker_draw + bụi ánh sáng noir_evidence",
       "motion": {
         "preset": "slow_push_in",
         "scale": [1.02, 1.08],
@@ -293,6 +437,50 @@
           "start": 56.1,
           "end": 62.55,
           "fade": 0.35
+        },
+        {
+          "type": "chromatic_pulse",
+          "at": 55.35,
+          "dur": 0.30,
+          "shift_px": 7,
+          "zoom_blur": 0.025
+        },
+        {
+          "type": "phone_waveform",
+          "speaker": "nguoi_boc_tran",
+          "line_ids": ["l9"],
+          "start": 55.55,
+          "end": 62.45,
+          "pos": [0.46, 0.135],
+          "size": [0.44, 0.034],
+          "color": [255, 196, 55],
+          "label": "BÓC TRẦN"
+        },
+        {
+          "type": "red_circle_draw",
+          "region": [0.45, 0.465, 0.77, 0.622],
+          "at": 60.20,
+          "dur": 0.55,
+          "end": 62.55,
+          "style": "circle",
+          "color": [238, 48, 52],
+          "width": 6
+        },
+        {
+          "type": "ambient_particles",
+          "count": 22,
+          "opacity": 0.30,
+          "color": [175, 210, 255],
+          "drift_dir": "up",
+          "size_px": 4,
+          "seed": 1207
+        },
+        {
+          "type": "color_mood",
+          "mood": "noir_evidence",
+          "strength": 0.50,
+          "vignette": 0.25,
+          "grain": 0.015
         }
       ],
       "transition_in": {"type": "glitch", "dur": 0.32}
@@ -315,7 +503,7 @@
       "end": 70.85,
       "beat_type": "anomaly",
       "motion_level": "C",
-      "motion_intent": "Cú lật thân phận câm thoại 3.9s: ánh mắt Cô Tư đổi sắc lạnh tĩnh táo, chớp mắt chậm cực ngầu & bật detail_reveal khoanh sáng góc tờ hóa đơn trên ảnh kịp chụp màn hình",
+      "motion_intent": "Cú lật thân phận câm thoại 3.9s: cắt lạnh sang sắc noir_evidence, Cô Tư chớp mắt chậm cực ngầu + detail_reveal + chromatic_pulse khóa vật chứng + vệt sáng xanh lạnh quét qua màn hình",
       "motion": {
         "preset": "slow_pull_out",
         "scale": [1.08, 1.01],
@@ -348,6 +536,31 @@
           "start": 68.1,
           "end": 70.8,
           "fade": 0.35
+        },
+        {
+          "type": "chromatic_pulse",
+          "at": 68.15,
+          "dur": 0.25,
+          "shift_px": 5,
+          "zoom_blur": 0.018
+        },
+        {
+          "type": "light_sweep",
+          "mode": "light",
+          "color": [120, 215, 255],
+          "intensity": 0.18,
+          "width": 0.18,
+          "angle_deg": -24.0,
+          "repeat": 1,
+          "start": 68.10,
+          "end": 70.40
+        },
+        {
+          "type": "color_mood",
+          "mood": "noir_evidence",
+          "strength": 0.62,
+          "vignette": 0.30,
+          "grain": 0.018
         }
       ],
       "transition_in": {"type": "cut", "dur": 0.0}
@@ -359,7 +572,7 @@
       "end": 74.35,
       "beat_type": "climax",
       "motion_level": "B",
-      "motion_intent": "Kết mở 2.5D push_in câm thoại 3.5s: ánh đèn chớp xanh-đỏ quét qua rèm cửa bật tung, ông sếp & nhân viên giật bắn, tiền cảnh tách lớp rơi con dao & 4 viên ngọc lăn tung tóe",
+      "motion_intent": "Kết mở film_burn + 2.5D push_in + Rack Focus giật nét từ khay ngọc sang cánh cửa bật tung + chromatic_pulse + vệt đèn chớp xanh-đỏ + hạt bụi văng & cú rung khớp door_burst",
       "motion": {
         "preset": "slow_push_in",
         "scale": [1.01, 1.09],
@@ -375,8 +588,23 @@
         "strength": 0.88,
         "easing": "ease_out",
         "layers": [
-          {"role": "bg", "image": "assets/s9b_bg.jpg", "depth": 0.45, "blur": 0.9},
-          {"role": "fg", "image": "assets/s9b_fg.png", "depth": 1.32, "blur": 0.15}
+          {
+            "role": "bg",
+            "image": "assets/s9b_bg.jpg",
+            "depth": 0.45,
+            "blur_from": 2.8,
+            "blur_to": 0.3,
+            "blur_at": 71.05,
+            "blur_dur": 1.15
+          },
+          {
+            "role": "fg",
+            "image": "assets/s9b_fg.png",
+            "depth": 1.32,
+            "blur": 0.15,
+            "breathe_y": 1.5,
+            "breathe_period": 2.6
+          }
         ]
       },
       "detail_fx": [
@@ -399,10 +627,44 @@
           "brightness": 1.12,
           "tint_rgb": [65, 145, 255],
           "tint_strength": 0.18
+        },
+        {
+          "type": "chromatic_pulse",
+          "at": 71.05,
+          "dur": 0.34,
+          "shift_px": 9,
+          "zoom_blur": 0.035
+        },
+        {
+          "type": "ambient_particles",
+          "count": 28,
+          "opacity": 0.36,
+          "color": [220, 235, 255],
+          "drift_dir": "down",
+          "size_px": 4,
+          "seed": 1209
+        },
+        {
+          "type": "light_sweep",
+          "mode": "light",
+          "color": [95, 165, 255],
+          "intensity": 0.24,
+          "width": 0.24,
+          "angle_deg": -22.0,
+          "repeat": 2,
+          "start": 71.05,
+          "end": 74.25
+        },
+        {
+          "type": "color_mood",
+          "mood": "high_tension",
+          "strength": 0.65,
+          "vignette": 0.32,
+          "grain": 0.022
         }
       ],
       "shakes": [{"at": 71.05, "amp": 26}],
-      "transition_in": {"type": "dissolve", "dur": 0.35}
+      "transition_in": {"type": "film_burn", "dur": 0.38}
     },
     {
       "id": "s10_black_disclaimer",
@@ -536,6 +798,7 @@
       {"preset": "low_accent", "at": 29.25, "dur": 1.0, "gain_db": 0.6},
       {"preset": "click", "at": 35.40, "gain_db": 0.8},
       {"preset": "riser", "at": 35.45, "dur": 0.6, "gain_db": 1.1},
+      {"preset": "counter_tick", "at": 35.68, "gain_db": -2.5},
       {"preset": "bank_ting", "at": 36.05, "gain_db": 1.6},
       {"preset": "notification", "at": 36.85, "gain_db": 0.2},
       {"preset": "click", "at": 51.05, "gain_db": 0.8},
@@ -547,6 +810,7 @@
       {"preset": "glitch", "at": 55.25, "dur": 0.35, "gain_db": 1.2},
       {"preset": "impact", "at": 55.35, "dur": 1.1, "gain_db": 2.0},
       {"preset": "low_accent", "at": 56.05, "dur": 0.9, "gain_db": 0.8},
+      {"preset": "marker_draw", "at": 60.15, "dur": 0.50, "gain_db": -1.5},
       {"preset": "heartbeat", "at": 67.10, "dur": 6.8, "gain_db": -1.0},
       {"preset": "click", "at": 68.10, "gain_db": 0.7},
       {"preset": "message_send", "at": 70.20, "gain_db": 0.8},

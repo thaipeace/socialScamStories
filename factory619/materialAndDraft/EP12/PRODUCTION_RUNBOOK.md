@@ -1,16 +1,16 @@
-# PHIẾU THỰC THI – EP12: Mở trai tìm ngọc trên livestream (V3)
+# PHIẾU THỰC THI – EP12: Mở trai tìm ngọc trên livestream (V4 · Visual Motion Level 3 + Living-Character 2.5)
 
 Lệnh chạy từ thư mục gốc dự án (`/Users/thainguyendev/projects/socialScamStories`).
 
 | Gate | Việc | Lệnh | Xong |
 | :-: | :--- | :--- | :-: |
-| 0 | Kịch bản V3 + **Visual Motion Plan (Level 2: `beat_type`, `motion_level` A/B/C)** + Clearance ĐẠT + đủ ảnh `assets/` + `episode.json` | `python3 factory619/_engine/run.py motion-check EP12` rồi `... gate0 EP12` | ☑ |
+| 0 | Kịch bản V3 + **Visual Motion Plan Level 3 (Check 1 → 2 → 3: `beat_type`, `motion_level` A/B/C + 2.5D Rack Focus + Living-Character + L3 FX)** + Clearance ĐẠT + đủ ảnh `assets/` + `episode.json` | `python3 factory619/_engine/run.py motion-check EP12` rồi `... gate0 EP12` | ☑ |
 | 1 | Duyệt ảnh (đồng nhất Cô Tư & phòng live, không logo/chữ rác/sắc phục thật) + biến thể **Living-Character A/B/C** (`eye_blink`/`mouth_sync` qua `03_ENGINE/face_roi_prep.py` + Face QC sheet), `detail_reveal`, lớp 2.5D `s9b_bg`/`s9b_fg` | `python3 factory619/_engine/run.py gate EP12 4 --preview` | ☑ |
-| 2 | Sinh giọng thật (`gemini-3.8-flash-tts`) + **nghe duyệt từng câu** + dàn lại timeline theo thời lượng WAV thật | `python3 factory619/_engine/run.py gate EP12 2` → `... signoff EP12 --listen PASS --by "Chủ kênh"` | ☑ |
-| 3 | Custom SFX/chatter livestream + BGM + khớp foley với motion Level C/B + trộn master audio | `python3 factory619/_engine/run.py gate EP12 3` | ☑ |
-| 4 | Timeline + Visual Motion Level 2 + overlay + render video staging | `python3 factory619/_engine/run.py gate EP12 4` | ☐ |
-| 5 | Render staging + QA 8 điểm + **Visual Motion QC 11 điểm** → **DỪNG CHỜ DUYỆT STAGING** | `... gate EP12 5` → `... signoff EP12 --point 2 4 5 --by "Chủ kênh"` → `... gate EP12 5 --skip-render` | ☐ |
-| 6 | Đóng gói phát hành (chỉ chạy sau khi chủ kênh duyệt Staging) | `python3 factory619/_engine/run.py gate EP12 6` | ☐ |
+| 2 | Sinh giọng thật (`gemini-3.8-flash-tts`) + **nghe duyệt từng câu** + dàn lại timeline theo thời lượng WAV thật *(bảo toàn nguyên WAV gốc khi nâng cấp Level 3)* | `python3 factory619/_engine/run.py gate EP12 2` → `... signoff EP12 --listen PASS --by "Chủ kênh"` | ☑ |
+| 3 | Custom SFX/chatter livestream + BGM + khớp foley Level 2 & Level 3 (`counter_tick`, `marker_draw`) + trộn master audio | `python3 factory619/_engine/run.py gate EP12 3` | ☑ |
+| 4 | Timeline + **Visual Motion Level 3 + Living-Character 2.5** (`cv2` · 4 worker) + overlay + render video staging | `python3 factory619/_engine/run.py gate EP12 4` | ☑ |
+| 5 | Render staging + QA 8 điểm + **Bảng Check 1–2–3 + Visual Motion QC 11 điểm** → **ĐÃ DUYỆT STAGING (8/8 PASS)** | `... gate EP12 5` → `... signoff EP12 --point 2 4 5 --by "Chủ kênh"` → `... gate EP12 5 --skip-render` | ☑ |
+| 6 | Đóng gói phát hành (chỉ chạy sau khi chủ kênh duyệt Staging) | `python3 factory619/_engine/run.py gate EP12 6` | ☑ |
 
 Ghi chú bản V3:
 - Bậc thang phí tâm lý chuẩn: `399K → 4 triệu (ký quỹ mở hạn mức thu mua) → 14 triệu (phí đổi ngoại tệ)`.

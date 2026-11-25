@@ -111,12 +111,16 @@ def _get_font(size: int, bold: bool = True) -> ImageFont.FreeTypeFont:
             r"C:\Windows\Fonts\segoeuib.ttf",
             r"C:\Windows\Fonts\arialbd.ttf",
             r"C:\Windows\Fonts\tahomabd.ttf",
+            "/System/Library/Fonts/Supplemental/Arial Bold.ttf",
+            "/System/Library/Fonts/Supplemental/Tahoma Bold.ttf",
         ]
         if bold
         else [
             r"C:\Windows\Fonts\segoeui.ttf",
             r"C:\Windows\Fonts\arial.ttf",
             r"C:\Windows\Fonts\tahoma.ttf",
+            "/System/Library/Fonts/Supplemental/Arial.ttf",
+            "/System/Library/Fonts/Supplemental/Tahoma.ttf",
         ]
     )
     f = None
