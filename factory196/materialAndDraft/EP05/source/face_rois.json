@@ -1,0 +1,539 @@
+{
+  "c00": {
+    "anh_hai": {
+      "blink": {
+        "image": "assets/c00_anh_hai_blink.jpg",
+        "region": [
+          0.73,
+          0.223,
+          0.824,
+          0.303
+        ]
+      },
+      "mouth": {
+        "default_state": "mid",
+        "closed_image": "assets/c00_anh_hai_mouth_closed.jpg",
+        "mid_image": "assets/c00.jpg",
+        "open_image": "assets/c00_anh_hai_mouth_open.jpg",
+        "round_image": "assets/c00_anh_hai_mouth_round.jpg",
+        "region": [
+          0.728,
+          0.317,
+          0.812,
+          0.459
+        ]
+      }
+    }
+  },
+  "c01": {
+    "anh_hai": {
+      "blink": {
+        "image": "assets/c01_anh_hai_blink.jpg",
+        "region": [
+          0.569,
+          0.241,
+          0.668,
+          0.334
+        ]
+      }
+    },
+    "chi_hai": {
+      "blink": {
+        "image": "assets/c01_chi_hai_blink.jpg",
+        "region": [
+          0.853,
+          0.369,
+          0.926,
+          0.42
+        ]
+      }
+    }
+  },
+  "c02": {
+    "be_tom": {
+      "blink": {
+        "image": "assets/c02_be_tom_blink.jpg",
+        "region": [
+          0.257,
+          0.473,
+          0.345,
+          0.561
+        ]
+      },
+      "mouth": {
+        "default_state": "mid",
+        "closed_image": "assets/c02_be_tom_mouth_closed.jpg",
+        "mid_image": "assets/c02.jpg",
+        "open_image": "assets/c02_be_tom_mouth_open.jpg",
+        "region": [
+          0.292,
+          0.54,
+          0.336,
+          0.619
+        ]
+      }
+    },
+    "anh_hai": {
+      "blink": {
+        "image": "assets/c02_anh_hai_blink.jpg",
+        "region": [
+          0.355,
+          0.165,
+          0.438,
+          0.244
+        ]
+      },
+      "mouth": {
+        "default_state": "closed",
+        "closed_image": "assets/c02.jpg",
+        "mid_image": "assets/c02_anh_hai_mouth_mid.jpg",
+        "open_image": "assets/c02_anh_hai_mouth_open.jpg",
+        "region": [
+          0.355,
+          0.212,
+          0.439,
+          0.309
+        ]
+      }
+    },
+    "vy": {
+      "blink": {
+        "image": "assets/c02_vy_blink.jpg",
+        "region": [
+          0.67,
+          0.256,
+          0.726,
+          0.315
+        ]
+      },
+      "mouth": {
+        "default_state": "mid",
+        "closed_image": "assets/c02_vy_mouth_closed.jpg",
+        "mid_image": "assets/c02.jpg",
+        "open_image": "assets/c02_vy_mouth_open.jpg",
+        "region": [
+          0.668,
+          0.296,
+          0.732,
+          0.389
+        ]
+      }
+    }
+  },
+  "c03": {
+    "be_tom": {
+      "blink": {
+        "image": "assets/c03_be_tom_blink.jpg",
+        "region": [
+          0.294,
+          0.506,
+          0.323,
+          0.559
+        ]
+      }
+    },
+    "anh_hai": {
+      "blink": {
+        "image": "assets/c03_anh_hai_blink.jpg",
+        "region": [
+          0.39,
+          0.184,
+          0.441,
+          0.226
+        ]
+      },
+      "mouth": {
+        "default_state": "closed",
+        "closed_image": "assets/c03.jpg",
+        "mid_image": "assets/c03_anh_hai_mouth_mid.jpg",
+        "open_image": "assets/c03_anh_hai_mouth_open.jpg",
+        "region": [
+          0.355,
+          0.212,
+          0.439,
+          0.309
+        ]
+      }
+    },
+    "co_lanh": {
+      "blink": {
+        "image": "assets/c03_co_lanh_blink.jpg",
+        "region": [
+          0.647,
+          0.257,
+          0.697,
+          0.328
+        ]
+      },
+      "mouth": {
+        "default_state": "closed",
+        "closed_image": "assets/c03.jpg",
+        "mid_image": "assets/c03_co_lanh_mouth_mid.jpg",
+        "open_image": "assets/c03_co_lanh_mouth_open.jpg",
+        "region": [
+          0.646,
+          0.303,
+          0.745,
+          0.389
+        ]
+      }
+    }
+  },
+  "c04": {
+    "be_tom": {
+      "blink": {
+        "image": "assets/c04_be_tom_blink.jpg",
+        "region": [
+          0.242,
+          0.386,
+          0.326,
+          0.451
+        ]
+      }
+    },
+    "anh_hai": {
+      "blink": {
+        "image": "assets/c04_anh_hai_blink.jpg",
+        "region": [
+          0.449,
+          0.249,
+          0.549,
+          0.325
+        ]
+      },
+      "mouth": {
+        "default_state": "mid",
+        "closed_image": "assets/c04_anh_hai_mouth_closed.jpg",
+        "mid_image": "assets/c04.jpg",
+        "open_image": "assets/c04_anh_hai_mouth_open.jpg",
+        "round_image": "assets/c04_anh_hai_mouth_round.jpg",
+        "region": [
+          0.424,
+          0.362,
+          0.575,
+          0.469
+        ]
+      }
+    },
+    "co_lanh": {
+      "blink": {
+        "image": "assets/c04_co_lanh_blink.jpg",
+        "region": [
+          0.585,
+          0.324,
+          0.665,
+          0.4
+        ]
+      }
+    }
+  },
+  "c05": {
+    "be_tom": {
+      "mouth": {
+        "default_state": "open",
+        "closed_image": "assets/c05_be_tom_mouth_closed.jpg",
+        "mid_image": "assets/c05_be_tom_mouth_mid.jpg",
+        "open_image": "assets/c05.jpg",
+        "region": [
+          0.253,
+          0.481,
+          0.31,
+          0.569
+        ]
+      }
+    },
+    "anh_hai": {
+      "blink": {
+        "image": "assets/c05_anh_hai_blink.jpg",
+        "region": [
+          0.377,
+          0.253,
+          0.438,
+          0.298
+        ]
+      },
+      "mouth": {
+        "default_state": "mid",
+        "closed_image": "assets/c05_anh_hai_mouth_closed.jpg",
+        "mid_image": "assets/c05.jpg",
+        "open_image": "assets/c05_anh_hai_mouth_open.jpg",
+        "region": [
+          0.35,
+          0.293,
+          0.433,
+          0.389
+        ]
+      }
+    },
+    "chi_hai": {
+      "blink": {
+        "image": "assets/c05_chi_hai_blink.jpg",
+        "region": [
+          0.692,
+          0.306,
+          0.736,
+          0.371
+        ]
+      },
+      "mouth": {
+        "default_state": "closed",
+        "closed_image": "assets/c05.jpg",
+        "mid_image": "assets/c05_chi_hai_mouth_mid.jpg",
+        "open_image": "assets/c05_chi_hai_mouth_open.jpg",
+        "region": [
+          0.689,
+          0.353,
+          0.751,
+          0.456
+        ]
+      }
+    }
+  },
+  "c06": {
+    "co_lanh": {
+      "blink": {
+        "image": "assets/c06_co_lanh_blink.jpg",
+        "region": [
+          0.634,
+          0.219,
+          0.703,
+          0.331
+        ]
+      }
+    }
+  },
+  "c07": {
+    "anh_hai": {
+      "blink": {
+        "image": "assets/c07_anh_hai_blink.jpg",
+        "region": [
+          0.667,
+          0.317,
+          0.738,
+          0.376
+        ]
+      },
+      "mouth": {
+        "default_state": "mid",
+        "closed_image": "assets/c07_anh_hai_mouth_closed.jpg",
+        "mid_image": "assets/c07.jpg",
+        "open_image": "assets/c07_anh_hai_mouth_open.jpg",
+        "round_image": "assets/c07_anh_hai_mouth_round.jpg",
+        "region": [
+          0.646,
+          0.401,
+          0.733,
+          0.489
+        ]
+      }
+    },
+    "chi_hai": {
+      "blink": {
+        "image": "assets/c07_chi_hai_blink.jpg",
+        "region": [
+          0.787,
+          0.254,
+          0.841,
+          0.326
+        ]
+      },
+      "mouth": {
+        "default_state": "closed",
+        "closed_image": "assets/c07.jpg",
+        "mid_image": "assets/c07_chi_hai_mouth_mid.jpg",
+        "open_image": "assets/c07_chi_hai_mouth_open.jpg",
+        "region": [
+          0.79,
+          0.304,
+          0.876,
+          0.419
+        ]
+      }
+    }
+  },
+  "c08": {
+    "chi_hai": {
+      "blink": {
+        "image": "assets/c08_chi_hai_blink.jpg",
+        "region": [
+          0.214,
+          0.392,
+          0.273,
+          0.439
+        ]
+      },
+      "mouth": {
+        "default_state": "closed",
+        "closed_image": "assets/c08.jpg",
+        "mid_image": "assets/c08_chi_hai_mouth_mid.jpg",
+        "open_image": "assets/c08_chi_hai_mouth_open.jpg",
+        "region": [
+          0.166,
+          0.42,
+          0.271,
+          0.529
+        ]
+      }
+    },
+    "anh_hai": {
+      "blink": {
+        "image": "assets/c08_anh_hai_blink.jpg",
+        "region": [
+          0.371,
+          0.377,
+          0.444,
+          0.427
+        ]
+      },
+      "mouth": {
+        "default_state": "closed",
+        "closed_image": "assets/c08.jpg",
+        "mid_image": "assets/c08_anh_hai_mouth_mid.jpg",
+        "open_image": "assets/c08_anh_hai_mouth_open.jpg",
+        "region": [
+          0.352,
+          0.419,
+          0.442,
+          0.519
+        ]
+      }
+    }
+  },
+  "c09": {
+    "anh_hai": {
+      "blink": {
+        "image": "assets/c09_anh_hai_blink.jpg",
+        "region": [
+          0.267,
+          0.249,
+          0.32,
+          0.302
+        ]
+      }
+    },
+    "gdv": {
+      "blink": {
+        "image": "assets/c09_gdv_blink.jpg",
+        "region": [
+          0.718,
+          0.205,
+          0.777,
+          0.297
+        ]
+      },
+      "mouth": {
+        "default_state": "mid",
+        "closed_image": "assets/c09_gdv_mouth_closed.jpg",
+        "mid_image": "assets/c09.jpg",
+        "open_image": "assets/c09_gdv_mouth_open.jpg",
+        "round_image": "assets/c09_gdv_mouth_round.jpg",
+        "region": [
+          0.722,
+          0.263,
+          0.798,
+          0.379
+        ]
+      }
+    }
+  },
+  "c10": {
+    "anh_hai": {
+      "blink": {
+        "image": "assets/c10_anh_hai_blink.jpg",
+        "region": [
+          0.678,
+          0.156,
+          0.743,
+          0.228
+        ]
+      },
+      "mouth": {
+        "default_state": "closed",
+        "closed_image": "assets/c10.jpg",
+        "mid_image": "assets/c10_anh_hai_mouth_mid.jpg",
+        "open_image": "assets/c10_anh_hai_mouth_open.jpg",
+        "round_image": "assets/c10_anh_hai_mouth_round.jpg",
+        "region": [
+          0.677,
+          0.23,
+          0.782,
+          0.329
+        ]
+      }
+    }
+  },
+  "c11": {
+    "be_tom": {
+      "blink": {
+        "image": "assets/c11_be_tom_blink.jpg",
+        "region": [
+          0.389,
+          0.263,
+          0.444,
+          0.36
+        ]
+      },
+      "mouth": {
+        "default_state": "closed",
+        "closed_image": "assets/c11.jpg",
+        "mid_image": "assets/c11_be_tom_mouth_mid.jpg",
+        "open_image": "assets/c11_be_tom_mouth_open.jpg",
+        "region": [
+          0.405,
+          0.327,
+          0.452,
+          0.429
+        ]
+      }
+    },
+    "anh_hai": {
+      "blink": {
+        "image": "assets/c11_anh_hai_blink.jpg",
+        "region": [
+          0.535,
+          0.21,
+          0.589,
+          0.305
+        ]
+      },
+      "mouth": {
+        "default_state": "mid",
+        "closed_image": "assets/c11_anh_hai_mouth_closed.jpg",
+        "mid_image": "assets/c11.jpg",
+        "open_image": "assets/c11_anh_hai_mouth_open.jpg",
+        "region": [
+          0.534,
+          0.269,
+          0.632,
+          0.389
+        ]
+      }
+    }
+  },
+  "c12": {
+    "co_lanh": {
+      "blink": {
+        "image": "assets/c12_co_lanh_blink.jpg",
+        "region": [
+          0.632,
+          0.23,
+          0.709,
+          0.295
+        ]
+      },
+      "mouth": {
+        "default_state": "closed",
+        "closed_image": "assets/c12.jpg",
+        "mid_image": "assets/c12_co_lanh_mouth_mid.jpg",
+        "open_image": "assets/c12_co_lanh_mouth_open.jpg",
+        "round_image": "assets/c12_co_lanh_mouth_round.jpg",
+        "region": [
+          0.652,
+          0.336,
+          0.719,
+          0.419
+        ]
+      }
+    }
+  }
+}
