@@ -8,16 +8,16 @@
     "height": 1920,
     "fps": 30,
     "aspect_ratio": "9:16",
-    "total_frames": 2398,
-    "total_duration_sec": 79.95
+    "total_frames": 2326,
+    "total_duration_sec": 77.53
   },
   "render_stats": {
     "hardware_profile": "dual16gb_cpu_l480",
     "encoder": "libx264",
     "workers": 4,
     "has_cv2": true,
-    "elapsed_sec": 38.7,
-    "effective_fps": 62.0
+    "elapsed_sec": 37.17,
+    "effective_fps": 62.6
   },
   "safe_zone_rules": {
     "left_x": 80,
@@ -56,9 +56,9 @@
         "s5_them_nam_ngay_mat_hut_goi_gao:chromatic_pulse@38.84s",
         "s6_tho_hang_boc_tran_tem_rach:detail_reveal@51.84s",
         "s6_tho_hang_boc_tran_tem_rach:red_circle_draw@52.34s",
-        "s7_boc_tran_quang_cao_top_dau:detail_reveal@57.86s",
-        "s7_boc_tran_quang_cao_top_dau:red_circle_draw@58.26s",
-        "s7_boc_tran_quang_cao_top_dau:highlighter_sweep@64.07s"
+        "s7_boc_tran_quang_cao_top_dau:detail_reveal@57.76s",
+        "s7_boc_tran_quang_cao_top_dau:red_circle_draw@58.11s",
+        "s7_boc_tran_quang_cao_top_dau:highlighter_sweep@59.41s"
       ],
       "unsynced": []
     },
@@ -857,7 +857,7 @@
       "id": "s7_boc_tran_quang_cao_top_dau",
       "image": "assets/s7.jpg",
       "start": 57.21,
-      "end": 67.75,
+      "end": 63.81,
       "beat_type": "anomaly",
       "motion_level": "C",
       "motion_intent": "Kính lúp đỏ bóc trần bẫy quảng cáo top đầu vs phiếu bảo hành & tem máy chính hãng + glitch + detail_reveal + red_circle_draw + highlighter_sweep",
@@ -884,8 +884,8 @@
         {
           "type": "detail_reveal",
           "image": "assets/s7_reveal.jpg",
-          "at": 57.86,
-          "dur": 0.55
+          "at": 57.76,
+          "dur": 0.45
         },
         {
           "type": "red_circle_draw",
@@ -895,19 +895,19 @@
             0.705,
             0.256
           ],
-          "at": 58.26,
+          "at": 58.11,
           "dur": 0.5,
           "style": "circle"
         },
         {
           "type": "highlighter_sweep",
           "region": [
-            0.505,
-            0.575,
-            0.845,
-            0.825
+            0.04,
+            0.72,
+            0.47,
+            0.85
           ],
-          "at": 64.07,
+          "at": 59.41,
           "dur": 0.5
         },
         {
@@ -921,9 +921,9 @@
             0.38
           ],
           "dim_outer": 0.2,
-          "start": 57.86,
-          "end": 67.65,
-          "fade": 0.35
+          "start": 57.76,
+          "end": 63.71,
+          "fade": 0.3
         },
         {
           "type": "color_mood",
@@ -941,11 +941,11 @@
     {
       "id": "s8_the_nho_ky",
       "image": "assets/s8.jpg",
-      "start": 67.75,
-      "end": 72.75,
+      "start": 63.81,
+      "end": 68.81,
       "beat_type": "ending",
       "motion_level": "A",
-      "motion_intent": "Giữ tĩnh tuyệt đối trên nền phòng khách mát nắng dịu cho Thẻ Nhớ kỹ 4.8s",
+      "motion_intent": "Giữ tĩnh tuyệt đối trên nền phòng khách mát nắng dịu cho Thẻ Nhớ kỹ 5.0s",
       "motion": {
         "preset": "static_hold"
       },
@@ -955,22 +955,22 @@
       }
     },
     {
-      "id": "s9_ket_mo_chup_luu_tem_hang",
+      "id": "s9_ket_mo_ong_tam_quyen_luc_mem",
       "image": "assets/s9.jpg",
-      "start": 72.75,
-      "end": 77.25,
-      "beat_type": "information",
+      "start": 68.81,
+      "end": 74.83,
+      "beat_type": "suspicion",
       "motion_level": "B",
-      "motion_intent": "Kết mở câm thoại 2.5D Parallax (film_burn): tay Chị Hai tiền cảnh chụp rõ tem tổng đài chính hãng dán hông máy lạnh để lưu danh bạ + Rack Focus + Breathing + ambient_particles + light_sweep",
+      "motion_intent": "Kết mở quyền lực mềm 2.5D Parallax (fade_black): chỉ lộ bóng lưng Ông Tám (tóc muối tiêu, áo polo đen, lắc bạc EP07) bên tách trà & điện thoại ánh xanh ngọc lục bảo (tín hiệu ngầm Chị Hai) + Rack Focus + Breathing + screen_glow + ambient_particles + noir_evidence",
       "motion": {
         "preset": "slow_pull_out",
         "scale": [
-          1.08,
-          1.02
+          1.07,
+          1.01
         ],
         "focus": [
           [
-            0.5,
+            0.52,
             0.48
           ],
           [
@@ -984,16 +984,16 @@
       "parallax": {
         "camera": "pull_out",
         "dolly": [
-          1.08,
-          1.02
+          1.07,
+          1.01
         ],
         "shift_x": [
           0.0,
           0.0
         ],
         "shift_y": [
-          -2.5,
-          2.0
+          -2.0,
+          1.8
         ],
         "focus": [
           0.5,
@@ -1006,56 +1006,71 @@
             "role": "bg",
             "image": "assets/s9_bg.jpg",
             "depth": 0.42,
-            "blur_from": 3.8,
+            "blur_from": 3.6,
             "blur_to": 0.4,
-            "blur_at": 73.75,
-            "blur_dur": 1.4
+            "blur_at": 69.51,
+            "blur_dur": 1.5
           },
           {
             "role": "fg",
             "image": "assets/s9_fg.png",
-            "depth": 1.3,
-            "breathe_y": 1.8,
-            "breathe_period": 3.4
+            "depth": 1.28,
+            "breathe_y": 1.6,
+            "breathe_period": 3.8
           }
         ]
       },
       "detail_fx": [
         {
-          "type": "ambient_particles",
-          "count": 22,
-          "opacity": 0.34,
+          "type": "screen_glow",
+          "pos": [
+            0.41,
+            0.54
+          ],
+          "radius": [
+            0.14,
+            0.1
+          ],
           "color": [
-            220,
-            245,
-            255
+            24,
+            196,
+            142
+          ],
+          "intensity": 0.24,
+          "mode": "pulse",
+          "start": 69.06,
+          "end": 74.73,
+          "fade": 0.3
+        },
+        {
+          "type": "ambient_particles",
+          "count": 18,
+          "opacity": 0.28,
+          "color": [
+            205,
+            238,
+            226
           ],
           "drift_dir": "up"
         },
         {
-          "type": "light_sweep",
-          "mode": "light",
-          "color": [
-            255,
-            242,
-            200
-          ],
-          "intensity": 0.22,
-          "repeat": 1,
-          "start": 73.6,
-          "end": 76.95
+          "type": "color_mood",
+          "mood": "noir_evidence",
+          "strength": 0.3,
+          "vignette": 0.24,
+          "grain": 0.01
         }
       ],
       "transition_in": {
-        "type": "film_burn",
-        "dur": 0.36
+        "type": "fade_black",
+        "dur": 0.35
       }
     },
     {
       "id": "s10_black_disclaimer",
       "image": "assets/s10_black.jpg",
-      "start": 77.25,
-      "end": 79.95,
+      "start": 74.83,
+      "end": 77.53,
       "beat_type": "ending",
       "motion_level": "A",
       "motion_intent": "Cắt đen tĩnh tuyệt đối cho bảng Lưu ý cuối video",
@@ -1396,46 +1411,47 @@
     },
     {
       "id": "017_sub_l10",
-      "start_sec": 57.61,
-      "end_sec": 63.42,
+      "start_sec": 57.56,
+      "end_sec": 63.26,
       "fade_sec": 0.1,
       "png_path": "factory619/staging/EP14/overlays/017_sub_l10.png",
       "type": "subtitle",
       "lines": [
-        "Mạo danh trung tâm lớn, giữ bo câu",
-        "giờ ép nóng là bạn bỏ hết đề phòng!"
+        "Mạo danh trung tâm lớn, giữ bo ép",
+        "nóng, tự bạn gật đầu nên họ thoát",
+        "êm!"
       ],
       "bbox_px": [
-        103,
-        1268,
-        897,
+        120,
+        1212,
+        880,
         1380
       ],
       "safe_zone_compliant": true
     },
     {
       "id": "018_sub_l11",
-      "start_sec": 63.72,
-      "end_sec": 67.2,
+      "start_sec": 69.71,
+      "end_sec": 73.78,
       "fade_sec": 0.1,
       "png_path": "factory619/staging/EP14/overlays/018_sub_l11.png",
       "type": "subtitle",
       "lines": [
-        "Gọi bảo hành chỉ lấy số trên phiếu",
-        "hoặc tem máy!"
+        "Chị thấy không, cũng chỉ là một trò",
+        "chơi tâm lý."
       ],
       "bbox_px": [
-        126,
+        117,
         1268,
-        874,
+        884,
         1380
       ],
       "safe_zone_compliant": true
     },
     {
       "id": "019_redflags_0",
-      "start_sec": 67.75,
-      "end_sec": 68.13,
+      "start_sec": 63.81,
+      "end_sec": 64.19,
       "fade_sec": 0.25,
       "png_path": "factory619/staging/EP14/overlays/019_redflags_0.png",
       "type": "red_flags",
@@ -1456,8 +1472,8 @@
     },
     {
       "id": "020_redflags_1",
-      "start_sec": 68.13,
-      "end_sec": 68.51,
+      "start_sec": 64.19,
+      "end_sec": 64.57,
       "fade_sec": 0.0,
       "png_path": "factory619/staging/EP14/overlays/020_redflags_1.png",
       "type": "red_flags",
@@ -1478,8 +1494,8 @@
     },
     {
       "id": "021_redflags_2",
-      "start_sec": 68.51,
-      "end_sec": 68.89,
+      "start_sec": 64.57,
+      "end_sec": 64.95,
       "fade_sec": 0.0,
       "png_path": "factory619/staging/EP14/overlays/021_redflags_2.png",
       "type": "red_flags",
@@ -1500,8 +1516,8 @@
     },
     {
       "id": "022_redflags_3",
-      "start_sec": 68.89,
-      "end_sec": 72.75,
+      "start_sec": 64.95,
+      "end_sec": 68.81,
       "fade_sec": 0.0,
       "png_path": "factory619/staging/EP14/overlays/022_redflags_3.png",
       "type": "red_flags",
@@ -1522,8 +1538,8 @@
     },
     {
       "id": "023_disclaimer",
-      "start_sec": 77.25,
-      "end_sec": 79.95,
+      "start_sec": 74.83,
+      "end_sec": 77.53,
       "fade_sec": 0.25,
       "png_path": "factory619/staging/EP14/overlays/023_disclaimer.png",
       "type": "disclaimer",
@@ -1614,44 +1630,49 @@
       "safezone": "factory619/staging/EP14/preview_frames/qa_52_99s_safezone.jpg"
     },
     {
-      "timestamp_sec": 58.56,
-      "clean": "factory619/staging/EP14/preview_frames/qa_58_56s_clean.jpg",
-      "safezone": "factory619/staging/EP14/preview_frames/qa_58_56s_safezone.jpg"
+      "timestamp_sec": 58.36,
+      "clean": "factory619/staging/EP14/preview_frames/qa_58_36s_clean.jpg",
+      "safezone": "factory619/staging/EP14/preview_frames/qa_58_36s_safezone.jpg"
     },
     {
-      "timestamp_sec": 58.91,
-      "clean": "factory619/staging/EP14/preview_frames/qa_58_91s_clean.jpg",
-      "safezone": "factory619/staging/EP14/preview_frames/qa_58_91s_safezone.jpg"
+      "timestamp_sec": 58.76,
+      "clean": "factory619/staging/EP14/preview_frames/qa_58_76s_clean.jpg",
+      "safezone": "factory619/staging/EP14/preview_frames/qa_58_76s_safezone.jpg"
     },
     {
-      "timestamp_sec": 62.48,
-      "clean": "factory619/staging/EP14/preview_frames/qa_62_48s_clean.jpg",
-      "safezone": "factory619/staging/EP14/preview_frames/qa_62_48s_safezone.jpg"
+      "timestamp_sec": 60.06,
+      "clean": "factory619/staging/EP14/preview_frames/qa_60_06s_clean.jpg",
+      "safezone": "factory619/staging/EP14/preview_frames/qa_60_06s_safezone.jpg"
     },
     {
-      "timestamp_sec": 64.72,
-      "clean": "factory619/staging/EP14/preview_frames/qa_64_72s_clean.jpg",
-      "safezone": "factory619/staging/EP14/preview_frames/qa_64_72s_safezone.jpg"
+      "timestamp_sec": 60.51,
+      "clean": "factory619/staging/EP14/preview_frames/qa_60_51s_clean.jpg",
+      "safezone": "factory619/staging/EP14/preview_frames/qa_60_51s_safezone.jpg"
     },
     {
-      "timestamp_sec": 70.25,
-      "clean": "factory619/staging/EP14/preview_frames/qa_70_25s_clean.jpg",
-      "safezone": "factory619/staging/EP14/preview_frames/qa_70_25s_safezone.jpg"
+      "timestamp_sec": 66.31,
+      "clean": "factory619/staging/EP14/preview_frames/qa_66_31s_clean.jpg",
+      "safezone": "factory619/staging/EP14/preview_frames/qa_66_31s_safezone.jpg"
     },
     {
-      "timestamp_sec": 72.25,
-      "clean": "factory619/staging/EP14/preview_frames/qa_72_25s_clean.jpg",
-      "safezone": "factory619/staging/EP14/preview_frames/qa_72_25s_safezone.jpg"
+      "timestamp_sec": 68.31,
+      "clean": "factory619/staging/EP14/preview_frames/qa_68_31s_clean.jpg",
+      "safezone": "factory619/staging/EP14/preview_frames/qa_68_31s_safezone.jpg"
     },
     {
-      "timestamp_sec": 75.0,
-      "clean": "factory619/staging/EP14/preview_frames/qa_75_00s_clean.jpg",
-      "safezone": "factory619/staging/EP14/preview_frames/qa_75_00s_safezone.jpg"
+      "timestamp_sec": 69.56,
+      "clean": "factory619/staging/EP14/preview_frames/qa_69_56s_clean.jpg",
+      "safezone": "factory619/staging/EP14/preview_frames/qa_69_56s_safezone.jpg"
     },
     {
-      "timestamp_sec": 78.6,
-      "clean": "factory619/staging/EP14/preview_frames/qa_78_60s_clean.jpg",
-      "safezone": "factory619/staging/EP14/preview_frames/qa_78_60s_safezone.jpg"
+      "timestamp_sec": 71.82,
+      "clean": "factory619/staging/EP14/preview_frames/qa_71_82s_clean.jpg",
+      "safezone": "factory619/staging/EP14/preview_frames/qa_71_82s_safezone.jpg"
+    },
+    {
+      "timestamp_sec": 76.18,
+      "clean": "factory619/staging/EP14/preview_frames/qa_76_18s_clean.jpg",
+      "safezone": "factory619/staging/EP14/preview_frames/qa_76_18s_safezone.jpg"
     }
   ]
 }

@@ -665,7 +665,7 @@ def build() -> dict:
                     },
                     {
                         "type": "highlighter_sweep",
-                        "region": [0.06, 0.54, 0.48, 0.85],
+                        "region": [0.04, 0.72, 0.47, 0.85],
                         "at": r2(l10_start + 1.85),
                         "dur": 0.50,
                     },
@@ -744,10 +744,10 @@ def build() -> dict:
                 "detail_fx": [
                     {
                         "type": "screen_glow",
-                        "pos": [0.34, 0.54],
-                        "radius": [0.16, 0.12],
+                        "pos": [0.41, 0.54],
+                        "radius": [0.14, 0.10],
                         "color": [24, 196, 142],
-                        "intensity": 0.22,
+                        "intensity": 0.24,
                         "mode": "pulse",
                         "start": r2(s9_start + 0.25),
                         "end": r2(s9_end - 0.10),
@@ -939,9 +939,9 @@ def build() -> dict:
         "forbidden_terms": [],
         "publish": {
             "titles": [
-                "Bẫy bảo hành máy lạnh giả: Mạo danh trung tâm lớn, giữ bo câu giờ ép bỏ đề phòng! #shorts #bóctrầnlừađảo",
-                "Cố tình mạo danh trung tâm bảo hành lớn: Im 2 ngày báo giá 3 triệu, câu thêm 5 ngày mới ráp! #shorts #cảnhgiáclừađảo",
-                "Gọi bảo hành điện máy mà bấm số đầu trên mạng coi chừng dính bẫy cầm bo mạch câu giờ! #shorts #vạnchuyện",
+                "Bẫy bảo hành máy lạnh giả: Mạo danh trung tâm lớn, giữ bo ép giá! #shorts #bóctrầnlừađảo",
+                "Giả trung tâm lớn: Im 2 ngày đòi 3tr, câu thêm 5 ngày mới ráp! #shorts #cảnhgiáclừađảo",
+                "Gọi bảo hành mà bấm số đầu trên mạng coi chừng dính bẫy ôm bo mạch! #shorts #vạnchuyện",
             ],
             "description": (
                 "Máy lạnh mới mua 8 tháng tự ngắt điện, nhiều gia đình lên mạng gõ tìm trung tâm bảo hành lớn rồi bấm ngay kết quả đứng đầu tiên mà không biết đó là trang cố tình mạo danh chạy quảng cáo.\n\n"
@@ -970,7 +970,7 @@ def build() -> dict:
             ],
             "category": "Education (Giáo dục)",
             "playlist": "Bóc Trần Lừa Đảo – Kỹ Năng Cảnh Giác & An Toàn Đời Thực",
-            "thumbnail_sec": r2(s5_start + 0.50),
+            "thumbnail_sec": r2(s5_start + 2.55),
         },
     }
 

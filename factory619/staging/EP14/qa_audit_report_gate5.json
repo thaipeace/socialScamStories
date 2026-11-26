@@ -2,8 +2,8 @@
   "episode_id": "EP14",
   "factory": "factory619",
   "gate": "GATE_5_RENDER_AND_QA",
-  "staging_mp4_path": "factory619/staging/EP14/EP14_BayBaoHanhMayLanh_80s_staging.mp4",
-  "file_size_mb": 44.13,
+  "staging_mp4_path": "factory619/staging/EP14/EP14_BayBaoHanhMayLanh_78s_staging.mp4",
+  "file_size_mb": 42.07,
   "stream_probe": {
     "programs": [],
     "stream_groups": [],
@@ -24,11 +24,11 @@
       }
     ],
     "format": {
-      "duration": "79.933333",
-      "size": "46275130"
+      "duration": "77.530000",
+      "size": "44109306"
     }
   },
-  "all_8_points_passed": false,
+  "all_8_points_passed": true,
   "checklist": [
     {
       "id": 1,
@@ -39,8 +39,8 @@
     {
       "id": 2,
       "name": "Không hướng dẫn thủ đoạn chi tiết (chỉ bóc trần cơ chế tâm lý & dấu hiệu)",
-      "status": "PENDING_HUMAN",
-      "evidence": "Người duyệt: —."
+      "status": "PASS",
+      "evidence": "Người duyệt: Chủ kênh (duyệt Staging V5)."
     },
     {
       "id": 3,
@@ -51,20 +51,20 @@
     {
       "id": 4,
       "name": "Hình ảnh & chuyển động an toàn: không logo/giao diện/sắc phục thật, không máu me, motion mượt đúng nhịp & giữ continuity (QC 11 điểm)",
-      "status": "PENDING_HUMAN",
-      "evidence": "Người duyệt: —."
+      "status": "PASS",
+      "evidence": "Người duyệt: Chủ kênh (duyệt Staging V5)."
     },
     {
       "id": 5,
       "name": "Tôn trọng nạn nhân, không kỳ thị vùng miền / dân tộc / nghề nghiệp / tuổi tác",
-      "status": "PENDING_HUMAN",
-      "evidence": "Người duyệt: —."
+      "status": "PASS",
+      "evidence": "Người duyệt: Chủ kênh (duyệt Staging V5)."
     },
     {
       "id": 6,
       "name": "Âm thanh: thoại rõ, master đúng chuẩn, đã nghe duyệt",
       "status": "PASS",
-      "evidence": "Master peak -1.17 dBFS / 79.95s; thoại vừa cửa sổ: True; đã nghe duyệt: True"
+      "evidence": "Master peak -1.18 dBFS / 77.53s; thoại vừa cửa sổ: True; đã nghe duyệt: True"
     },
     {
       "id": 7,
@@ -76,7 +76,7 @@
       "id": 8,
       "name": "Nhịp & Hook",
       "status": "PASS",
-      "evidence": "Hook bắt đầu 0.25s; thời lượng 79.95s (file 79.93s)"
+      "evidence": "Hook bắt đầu 0.25s; thời lượng 77.53s (file 77.53s)"
     }
   ],
   "motion_qc": {
@@ -107,9 +107,9 @@
       "mouth_sync_4state": 1,
       "eye_gaze": 0,
       "expr_swap": 0,
-      "l2_detail_fx": 4,
+      "l2_detail_fx": 5,
       "l3_fx": 14,
-      "l3_transitions": 4
+      "l3_transitions": 3
     },
     "min_requirements": {
       "parallax_scenes": 1,
@@ -117,7 +117,7 @@
       "eye_blink": 2,
       "mouth_sync": 2
     },
-    "l3_feature_total": 23,
+    "l3_feature_total": 22,
     "stage_checks": {
       "check1": {
         "status": "PASS"
@@ -136,10 +136,10 @@
     "waivers_used": {},
     "stale_signoff_reasons": {},
     "fingerprint": {
-      "episode_version": "v4-level3-2day-5day-real-tts",
+      "episode_version": "v5-level3-ongtam-coda-real-tts",
       "motion_upgrade": "level3",
-      "config_sha256": "138af780690f4008",
-      "timeline_mtime": 1795604244.67
+      "config_sha256": "7dcbc420cde0ee12",
+      "timeline_mtime": 1795655899.92
     },
     "has_highlights": true,
     "zoom_repetition_streaks": [],
@@ -152,22 +152,22 @@
         "s5_them_nam_ngay_mat_hut_goi_gao:chromatic_pulse@38.84s",
         "s6_tho_hang_boc_tran_tem_rach:detail_reveal@51.84s",
         "s6_tho_hang_boc_tran_tem_rach:red_circle_draw@52.34s",
-        "s7_boc_tran_quang_cao_top_dau:detail_reveal@57.86s",
-        "s7_boc_tran_quang_cao_top_dau:red_circle_draw@58.26s",
-        "s7_boc_tran_quang_cao_top_dau:highlighter_sweep@64.07s"
+        "s7_boc_tran_quang_cao_top_dau:detail_reveal@57.76s",
+        "s7_boc_tran_quang_cao_top_dau:red_circle_draw@58.11s",
+        "s7_boc_tran_quang_cao_top_dau:highlighter_sweep@59.41s"
       ],
       "unsynced": []
     },
     "errors": [],
     "warnings": [],
-    "point4_human_signed": false,
+    "point4_human_signed": true,
     "render_stats": {
       "hardware_profile": "dual16gb_cpu_l480",
       "encoder": "libx264",
       "workers": 4,
       "has_cv2": true,
-      "elapsed_sec": 38.7,
-      "effective_fps": 62.0
+      "elapsed_sec": 37.17,
+      "effective_fps": 62.6
     }
   }
 }
