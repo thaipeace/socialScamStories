@@ -1,0 +1,32 @@
+{
+  "2": {
+    "status": "PASS",
+    "by": "Chủ kênh (duyệt Staging V4)",
+    "note": "",
+    "at": "2026-11-27T14:29:59+07:00",
+    "episode_version": "v4-level3-silent-coda-real-tts",
+    "motion_upgrade": "level3",
+    "config_sha256": "55fc2ae1cf99b2f1",
+    "timeline_mtime": 1795763472.64
+  },
+  "4": {
+    "status": "PASS",
+    "by": "Chủ kênh (duyệt Staging V4)",
+    "note": "",
+    "at": "2026-11-27T14:29:59+07:00",
+    "episode_version": "v4-level3-silent-coda-real-tts",
+    "motion_upgrade": "level3",
+    "config_sha256": "55fc2ae1cf99b2f1",
+    "timeline_mtime": 1795763472.64
+  },
+  "5": {
+    "status": "PASS",
+    "by": "Chủ kênh (duyệt Staging V4)",
+    "note": "",
+    "at": "2026-11-27T14:29:59+07:00",
+    "episode_version": "v4-level3-silent-coda-real-tts",
+    "motion_upgrade": "level3",
+    "config_sha256": "55fc2ae1cf99b2f1",
+    "timeline_mtime": 1795763472.64
+  }
+}

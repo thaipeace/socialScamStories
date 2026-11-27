@@ -1,0 +1,1784 @@
+{
+  "episode_id": "EP15",
+  "factory": "factory619",
+  "gate": "GATE_4_TIMELINE_SAFE_ZONE",
+  "preview_only": false,
+  "canvas": {
+    "width": 1080,
+    "height": 1920,
+    "fps": 30,
+    "aspect_ratio": "9:16",
+    "total_frames": 2353,
+    "total_duration_sec": 78.42
+  },
+  "render_stats": {
+    "hardware_profile": "dual16gb_cpu_l480",
+    "encoder": "libx264",
+    "workers": 4,
+    "has_cv2": true,
+    "elapsed_sec": 56.13,
+    "effective_fps": 41.9
+  },
+  "safe_zone_rules": {
+    "left_x": 80,
+    "right_x": 920,
+    "max_y": 1420,
+    "top_hook_y": 170,
+    "platform_ui_bottom_y": 1440,
+    "all_overlays_compliant": true
+  },
+  "motion_summary": {
+    "hardware_profile": "dual16gb_cpu_l480",
+    "motion_version": "level3",
+    "safe_motion_mode": false,
+    "is_level2": true,
+    "is_level3": true,
+    "declared_level_counts": {
+      "A": 2,
+      "B": 2,
+      "C": 8,
+      "D": 0
+    },
+    "effective_level_counts": {
+      "A": 2,
+      "B": 2,
+      "C": 8,
+      "D": 0
+    },
+    "fallbacks": [],
+    "detail_warnings": [],
+    "zoom_streaks": [],
+    "shake_scenes": 1,
+    "sfx_sync": {
+      "synced": [
+        "s3_co_tu_chan_lai_may_im_ru:detail_reveal@12.06s",
+        "s3_co_tu_chan_lai_may_im_ru:red_circle_draw@12.36s",
+        "s5_co_tu_phan_don_song_phang:detail_reveal@36.96s",
+        "s6a_lo_app_gia_gian_doi:shake@45.59s",
+        "s6a_lo_app_gia_gian_doi:detail_reveal@45.59s",
+        "s6a_lo_app_gia_gian_doi:chromatic_pulse@45.59s",
+        "s7_boc_tran_app_ngan_hang_gia:detail_reveal@56.18s",
+        "s7_boc_tran_app_ngan_hang_gia:red_circle_draw@56.58s",
+        "s7_boc_tran_app_ngan_hang_gia:highlighter_sweep@58.18s"
+      ],
+      "unsynced": []
+    },
+    "warnings": []
+  },
+  "scenes": [
+    {
+      "id": "s1_hook_bam_chuyen_tan_mat",
+      "image": "assets/s1.jpg",
+      "start": 0.0,
+      "end": 4.5,
+      "beat_type": "establishing",
+      "motion_level": "C",
+      "motion_intent": "Chợ sáng đông đúc: khách lịch sự chìa màn hình bấm tích xanh Thành công trước mặt Bé Na + animated_counter 4.500.000đ + screen_glow xanh lá + Living-Char khách & Bé Na",
+      "motion": {
+        "preset": "slow_push_in",
+        "scale": [
+          1.02,
+          1.09
+        ],
+        "focus": [
+          [
+            0.5,
+            0.52
+          ],
+          [
+            0.5,
+            0.48
+          ]
+        ],
+        "wobble": "none",
+        "easing": "ease_out"
+      },
+      "detail_fx": [
+        {
+          "type": "eye_blink",
+          "image": "assets/s1_scammer_blink.jpg",
+          "region": [
+            0.311,
+            0.28,
+            0.444,
+            0.333
+          ],
+          "feather": 0.008,
+          "times": [
+            1.4
+          ],
+          "close_dur": 0.055,
+          "hold_dur": 0.045,
+          "open_dur": 0.085
+        },
+        {
+          "type": "mouth_sync",
+          "speaker": "ke_ngot_ngao_nam",
+          "line_ids": [
+            "l1"
+          ],
+          "region": [
+            0.316,
+            0.338,
+            0.414,
+            0.383
+          ],
+          "feather": 0.008,
+          "closed_image": "assets/s1_scammer_mouth_closed.jpg",
+          "mid_image": "assets/s1.jpg",
+          "open_image": "assets/s1_scammer_mouth_open.jpg",
+          "fps": 12,
+          "thresh_mid": 0.14,
+          "thresh_open": 0.64
+        },
+        {
+          "type": "eye_blink",
+          "image": "assets/s1_bena_blink.jpg",
+          "region": [
+            0.656,
+            0.347,
+            0.824,
+            0.401
+          ],
+          "feather": 0.008,
+          "times": [
+            2.2
+          ],
+          "close_dur": 0.055,
+          "hold_dur": 0.045,
+          "open_dur": 0.085
+        },
+        {
+          "type": "animated_counter",
+          "start": 0.45,
+          "end": 4.35,
+          "count_dur": 1.8,
+          "from_val": 0,
+          "to_val": 4500000,
+          "fmt": "vnd",
+          "label": "MÀN HÌNH KHÁCH BÁO",
+          "pos": [
+            0.68,
+            0.215
+          ],
+          "style": "safe",
+          "easing": "ease_out"
+        },
+        {
+          "type": "screen_glow",
+          "pos": [
+            0.595,
+            0.465
+          ],
+          "radius": [
+            0.18,
+            0.15
+          ],
+          "color": [
+            45,
+            225,
+            130
+          ],
+          "intensity": 0.22,
+          "mode": "pulse",
+          "start": 0.25,
+          "end": 4.4,
+          "fade": 0.25
+        },
+        {
+          "type": "color_mood",
+          "mood": "warm_daily",
+          "strength": 0.22,
+          "vignette": 0.1,
+          "grain": 0.0
+        }
+      ]
+    },
+    {
+      "id": "s2_na_suyt_tin_bam_tren_app",
+      "image": "assets/s2.jpg",
+      "start": 4.5,
+      "end": 10.91,
+      "beat_type": "normal",
+      "motion_level": "B",
+      "motion_intent": "2.5D Parallax quầy chợ sáng + Rack Focus mờ dãy sạp nền + Breathing + Head Micro-Tilt + Bé Na chớp mắt & chép miệng 4 trạng thái (round_image)",
+      "motion": {
+        "preset": "slow_push_in",
+        "scale": [
+          1.02,
+          1.07
+        ],
+        "focus": [
+          [
+            0.5,
+            0.48
+          ],
+          [
+            0.5,
+            0.46
+          ]
+        ],
+        "wobble": "none",
+        "easing": "smoothstep"
+      },
+      "parallax": {
+        "camera": "push_in",
+        "dolly": [
+          1.02,
+          1.07
+        ],
+        "shift_x": [
+          0.0,
+          0.0
+        ],
+        "shift_y": [
+          1.5,
+          -2.0
+        ],
+        "focus": [
+          0.5,
+          0.46
+        ],
+        "strength": 0.85,
+        "easing": "smoothstep",
+        "layers": [
+          {
+            "role": "bg",
+            "image": "assets/s2_bg.jpg",
+            "depth": 0.4,
+            "blur_from": 0.4,
+            "blur_to": 3.8,
+            "blur_at": 5.4,
+            "blur_dur": 2.4
+          },
+          {
+            "role": "fg",
+            "image": "assets/s2_fg.png",
+            "depth": 1.24,
+            "breathe_y": 2.0,
+            "breathe_period": 3.5,
+            "head_tilt_deg": 1.0,
+            "head_pivot": [
+              0.72,
+              0.5
+            ],
+            "tilt_speaker": "be_na",
+            "tilt_line_ids": [
+              "l2"
+            ]
+          }
+        ]
+      },
+      "detail_fx": [
+        {
+          "type": "eye_blink",
+          "image": "assets/s2_bena_blink.jpg",
+          "region": [
+            0.586,
+            0.337,
+            0.774,
+            0.391
+          ],
+          "feather": 0.008,
+          "times": [
+            5.6,
+            8.6
+          ],
+          "close_dur": 0.055,
+          "hold_dur": 0.045,
+          "open_dur": 0.085,
+          "layer": "fg"
+        },
+        {
+          "type": "mouth_sync",
+          "speaker": "be_na",
+          "line_ids": [
+            "l2"
+          ],
+          "region": [
+            0.616,
+            0.393,
+            0.734,
+            0.44
+          ],
+          "feather": 0.008,
+          "closed_image": "assets/s2_bena_mouth_closed.jpg",
+          "mid_image": "assets/s2.jpg",
+          "open_image": "assets/s2_bena_mouth_open.jpg",
+          "round_image": "assets/s2_bena_mouth_round.jpg",
+          "fps": 12,
+          "thresh_mid": 0.14,
+          "thresh_open": 0.64,
+          "layer": "fg"
+        }
+      ],
+      "transition_in": {
+        "type": "dissolve",
+        "dur": 0.25
+      }
+    },
+    {
+      "id": "s3_co_tu_chan_lai_may_im_ru",
+      "image": "assets/s3.jpg",
+      "start": 10.91,
+      "end": 18.24,
+      "beat_type": "suspicion",
+      "motion_level": "C",
+      "motion_intent": "Quét trái giữ hàng: Cô Tư chỉ điện thoại trống thông báo & loa báo số dư im ru trên quầy + detail_reveal + red_circle_draw + Living-Char Cô Tư",
+      "motion": {
+        "preset": "pan_left",
+        "scale": [
+          1.06,
+          1.06
+        ],
+        "focus": [
+          [
+            0.53,
+            0.5
+          ],
+          [
+            0.47,
+            0.5
+          ]
+        ],
+        "wobble": "none",
+        "easing": "smoothstep"
+      },
+      "detail_fx": [
+        {
+          "type": "detail_reveal",
+          "image": "assets/s3_reveal.jpg",
+          "at": 12.06,
+          "dur": 0.45
+        },
+        {
+          "type": "red_circle_draw",
+          "region": [
+            0.06,
+            0.76,
+            0.71,
+            0.94
+          ],
+          "at": 12.36,
+          "dur": 0.5,
+          "style": "circle"
+        },
+        {
+          "type": "eye_blink",
+          "image": "assets/s3_cotu_blink.jpg",
+          "region": [
+            0.42,
+            0.18,
+            0.594,
+            0.231
+          ],
+          "feather": 0.008,
+          "times": [
+            12.11,
+            15.21
+          ],
+          "close_dur": 0.055,
+          "hold_dur": 0.045,
+          "open_dur": 0.085
+        },
+        {
+          "type": "mouth_sync",
+          "speaker": "co_tu",
+          "line_ids": [
+            "l3"
+          ],
+          "region": [
+            0.435,
+            0.235,
+            0.559,
+            0.287
+          ],
+          "feather": 0.008,
+          "closed_image": "assets/s3_cotu_mouth_closed.jpg",
+          "mid_image": "assets/s3.jpg",
+          "open_image": "assets/s3_cotu_mouth_open.jpg",
+          "fps": 12,
+          "thresh_mid": 0.14,
+          "thresh_open": 0.64
+        },
+        {
+          "type": "color_mood",
+          "mood": "cold_suspicion",
+          "strength": 0.2,
+          "vignette": 0.12,
+          "grain": 0.0
+        }
+      ],
+      "transition_in": {
+        "type": "dissolve",
+        "dur": 0.25
+      }
+    },
+    {
+      "id": "s4_split_twist_tra_hai_lan",
+      "image": "assets/s4_scammer.jpg",
+      "start": 18.24,
+      "end": 35.36,
+      "beat_type": "climax",
+      "motion_level": "C",
+      "motion_intent": "Level 3 split_screen trên-dưới: khách phản công kì kèo sợ trả tiền mặt thành hai lần (panel trên) & Bé Na nghe có lý nên khựng tay nao núng thật sự (panel dưới) + Living-Char cả 2 panel",
+      "split_screen": {
+        "layout": "horizontal",
+        "ratio": 0.48,
+        "divider_width": 6,
+        "inactive_dim": 0.2,
+        "slide_in_dur": 0.28,
+        "panels": [
+          {
+            "image": "assets/s4_scammer.jpg",
+            "speaker": "ke_ngot_ngao_nam",
+            "line_ids": [
+              "l4",
+              "l4b"
+            ],
+            "label": "",
+            "label_rgb": [
+              245,
+              90,
+              95
+            ],
+            "waveform": false,
+            "crop_x": 0.5,
+            "crop_y": 0.44,
+            "motion": {
+              "preset": "slow_push_in",
+              "scale": [
+                1.02,
+                1.07
+              ],
+              "focus": [
+                [
+                  0.5,
+                  0.48
+                ],
+                [
+                  0.5,
+                  0.46
+                ]
+              ]
+            },
+            "detail_fx": [
+              {
+                "type": "eye_blink",
+                "image": "assets/s4_scammer_blink.jpg",
+                "region": [
+                  0.386,
+                  0.261,
+                  0.564,
+                  0.355
+                ],
+                "region_space": "source",
+                "feather": 0.008,
+                "times": [
+                  19.44,
+                  22.54,
+                  25.64,
+                  28.74,
+                  31.84
+                ],
+                "close_dur": 0.055,
+                "hold_dur": 0.045,
+                "open_dur": 0.085
+              },
+              {
+                "type": "mouth_sync",
+                "speaker": "ke_ngot_ngao_nam",
+                "line_ids": [
+                  "l4",
+                  "l4b"
+                ],
+                "region": [
+                  0.416,
+                  0.395,
+                  0.53,
+                  0.471
+                ],
+                "region_space": "source",
+                "feather": 0.008,
+                "closed_image": "assets/s4_scammer_mouth_closed.jpg",
+                "mid_image": "assets/s4_scammer.jpg",
+                "open_image": "assets/s4_scammer_mouth_open.jpg",
+                "fps": 12,
+                "thresh_mid": 0.14,
+                "thresh_open": 0.64
+              }
+            ]
+          },
+          {
+            "image": "assets/s4_bena.jpg",
+            "speaker": "be_na",
+            "line_ids": [
+              "l5"
+            ],
+            "label": "",
+            "label_rgb": [
+              255,
+              215,
+              120
+            ],
+            "waveform": false,
+            "crop_x": 0.5,
+            "crop_y": 0.44,
+            "motion": {
+              "preset": "slow_pull_out",
+              "scale": [
+                1.07,
+                1.02
+              ],
+              "focus": [
+                [
+                  0.5,
+                  0.46
+                ],
+                [
+                  0.5,
+                  0.48
+                ]
+              ]
+            },
+            "detail_fx": [
+              {
+                "type": "eye_blink",
+                "image": "assets/s4_bena_blink.jpg",
+                "region": [
+                  0.366,
+                  0.245,
+                  0.539,
+                  0.33
+                ],
+                "region_space": "source",
+                "feather": 0.008,
+                "times": [
+                  20.24,
+                  23.44,
+                  26.64,
+                  29.84,
+                  33.04
+                ],
+                "close_dur": 0.055,
+                "hold_dur": 0.045,
+                "open_dur": 0.085
+              },
+              {
+                "type": "mouth_sync",
+                "speaker": "be_na",
+                "line_ids": [
+                  "l5"
+                ],
+                "region": [
+                  0.395,
+                  0.343,
+                  0.489,
+                  0.414
+                ],
+                "region_space": "source",
+                "feather": 0.008,
+                "closed_image": "assets/s4_bena_mouth_closed.jpg",
+                "mid_image": "assets/s4_bena.jpg",
+                "open_image": "assets/s4_bena_mouth_open.jpg",
+                "fps": 12,
+                "thresh_mid": 0.14,
+                "thresh_open": 0.64
+              }
+            ]
+          }
+        ]
+      },
+      "detail_fx": [
+        {
+          "type": "color_mood",
+          "mood": "cold_suspicion",
+          "strength": 0.2,
+          "vignette": 0.14,
+          "grain": 0.006
+        }
+      ],
+      "transition_in": {
+        "type": "whip_pan_left",
+        "dur": 0.26
+      }
+    },
+    {
+      "id": "s5_co_tu_phan_don_song_phang",
+      "image": "assets/s5.jpg",
+      "start": 35.36,
+      "end": 45.24,
+      "beat_type": "climax",
+      "motion_level": "C",
+      "motion_intent": "Quét phải dứt khoát: Cô Tư đặt sổ ký giấy nhận tiền mặt hoàn lại + chìa lịch sử máy mình trống trơn đòi coi lịch sử trừ số dư hoặc đứng chờ + detail_reveal + Living-Char Cô Tư",
+      "motion": {
+        "preset": "pan_right",
+        "scale": [
+          1.06,
+          1.06
+        ],
+        "focus": [
+          [
+            0.47,
+            0.5
+          ],
+          [
+            0.53,
+            0.5
+          ]
+        ],
+        "wobble": "none",
+        "easing": "smoothstep"
+      },
+      "detail_fx": [
+        {
+          "type": "detail_reveal",
+          "image": "assets/s5_reveal.jpg",
+          "at": 36.96,
+          "dur": 0.45
+        },
+        {
+          "type": "eye_blink",
+          "image": "assets/s5_cotu_blink.jpg",
+          "region": [
+            0.326,
+            0.26,
+            0.514,
+            0.317
+          ],
+          "feather": 0.008,
+          "times": [
+            36.76,
+            39.86,
+            42.96
+          ],
+          "close_dur": 0.055,
+          "hold_dur": 0.045,
+          "open_dur": 0.085
+        },
+        {
+          "type": "mouth_sync",
+          "speaker": "co_tu",
+          "line_ids": [
+            "l6",
+            "l7"
+          ],
+          "region": [
+            0.37,
+            0.325,
+            0.484,
+            0.37
+          ],
+          "feather": 0.008,
+          "closed_image": "assets/s5_cotu_mouth_closed.jpg",
+          "mid_image": "assets/s5.jpg",
+          "open_image": "assets/s5_cotu_mouth_open.jpg",
+          "fps": 12,
+          "thresh_mid": 0.14,
+          "thresh_open": 0.64
+        },
+        {
+          "type": "color_mood",
+          "mood": "warm_daily",
+          "strength": 0.24,
+          "vignette": 0.1,
+          "grain": 0.0
+        }
+      ],
+      "transition_in": {
+        "type": "whip_pan_left",
+        "dur": 0.26
+      }
+    },
+    {
+      "id": "s6a_lo_app_gia_gian_doi",
+      "image": "assets/s6.jpg",
+      "start": 45.24,
+      "end": 49.16,
+      "beat_type": "climax",
+      "motion_level": "C",
+      "motion_intent": "Cú lật 1: gã khách cứng họng trượt tay lộ khung nhập giả đỏ rực, giả bộ giận dỗi đòi bỏ mua + zoom_punch + tense_push + detail_reveal + chromatic_pulse + shakes + Living-Char khách & Bé Na",
+      "motion": {
+        "preset": "tense_push",
+        "scale": [
+          1.03,
+          1.1
+        ],
+        "focus": [
+          [
+            0.46,
+            0.5
+          ],
+          [
+            0.44,
+            0.47
+          ]
+        ],
+        "wobble": "breathe",
+        "easing": "ease_out"
+      },
+      "detail_fx": [
+        {
+          "type": "detail_reveal",
+          "image": "assets/s6_reveal.jpg",
+          "at": 45.59,
+          "dur": 0.4
+        },
+        {
+          "type": "chromatic_pulse",
+          "at": 45.59,
+          "dur": 0.3,
+          "shift_px": 7,
+          "zoom_blur": 0.025
+        },
+        {
+          "type": "eye_blink",
+          "image": "assets/s6_scammer_blink.jpg",
+          "region": [
+            0.206,
+            0.275,
+            0.349,
+            0.33
+          ],
+          "feather": 0.008,
+          "times": [
+            46.44
+          ],
+          "close_dur": 0.055,
+          "hold_dur": 0.045,
+          "open_dur": 0.085
+        },
+        {
+          "type": "mouth_sync",
+          "speaker": "ke_ngot_ngao_nam",
+          "line_ids": [
+            "l8"
+          ],
+          "region": [
+            0.241,
+            0.333,
+            0.334,
+            0.375
+          ],
+          "feather": 0.008,
+          "closed_image": "assets/s6_scammer_mouth_closed.jpg",
+          "mid_image": "assets/s6.jpg",
+          "open_image": "assets/s6_scammer_mouth_open.jpg",
+          "fps": 12,
+          "thresh_mid": 0.14,
+          "thresh_open": 0.64
+        },
+        {
+          "type": "eye_blink",
+          "image": "assets/s6_bena_blink.jpg",
+          "region": [
+            0.666,
+            0.343,
+            0.844,
+            0.397
+          ],
+          "feather": 0.008,
+          "times": [
+            47.14
+          ],
+          "close_dur": 0.055,
+          "hold_dur": 0.045,
+          "open_dur": 0.085
+        },
+        {
+          "type": "color_mood",
+          "mood": "high_tension",
+          "strength": 0.34,
+          "vignette": 0.18,
+          "grain": 0.01
+        }
+      ],
+      "shakes": [
+        {
+          "at": 45.59,
+          "amp": 20
+        }
+      ],
+      "transition_in": {
+        "type": "zoom_punch",
+        "dur": 0.28
+      }
+    },
+    {
+      "id": "s6b_bo_hang_leo_xe_vot_mat",
+      "image": "assets/s6b.jpg",
+      "start": 49.16,
+      "end": 55.63,
+      "beat_type": "climax",
+      "motion_level": "C",
+      "motion_intent": "Cú lật 2 (đúng logic không gian): trước quầy trống trơn còn nguyên 2 túi hàng, phía xa gã khách đã leo xe máy phóng vọt ra lối chợ, Bé Na sững sờ chỉ theo nói với Cô Tư + whip_pan_right + slow_pull_out + Living-Char Bé Na & Cô Tư",
+      "motion": {
+        "preset": "slow_pull_out",
+        "scale": [
+          1.08,
+          1.02
+        ],
+        "focus": [
+          [
+            0.5,
+            0.48
+          ],
+          [
+            0.5,
+            0.5
+          ]
+        ],
+        "wobble": "none",
+        "easing": "ease_out"
+      },
+      "detail_fx": [
+        {
+          "type": "eye_blink",
+          "image": "assets/s6b_bena_blink.jpg",
+          "region": [
+            0.631,
+            0.347,
+            0.799,
+            0.401
+          ],
+          "feather": 0.008,
+          "times": [
+            50.46,
+            53.46
+          ],
+          "close_dur": 0.055,
+          "hold_dur": 0.045,
+          "open_dur": 0.085
+        },
+        {
+          "type": "mouth_sync",
+          "speaker": "be_na",
+          "line_ids": [
+            "l9"
+          ],
+          "region": [
+            0.67,
+            0.4,
+            0.769,
+            0.453
+          ],
+          "feather": 0.008,
+          "closed_image": "assets/s6b_bena_mouth_closed.jpg",
+          "mid_image": "assets/s6b.jpg",
+          "open_image": "assets/s6b_bena_mouth_open.jpg",
+          "fps": 12,
+          "thresh_mid": 0.14,
+          "thresh_open": 0.64
+        },
+        {
+          "type": "eye_blink",
+          "image": "assets/s6b_cotu_blink.jpg",
+          "region": [
+            0.831,
+            0.343,
+            0.934,
+            0.393
+          ],
+          "feather": 0.008,
+          "times": [
+            51.36,
+            54.56
+          ],
+          "close_dur": 0.055,
+          "hold_dur": 0.045,
+          "open_dur": 0.085
+        },
+        {
+          "type": "color_mood",
+          "mood": "warm_daily",
+          "strength": 0.2,
+          "vignette": 0.12,
+          "grain": 0.0
+        }
+      ],
+      "transition_in": {
+        "type": "whip_pan_right",
+        "dur": 0.25
+      }
+    },
+    {
+      "id": "s7_boc_tran_app_ngan_hang_gia",
+      "image": "assets/s7.jpg",
+      "start": 55.63,
+      "end": 63.42,
+      "beat_type": "anomaly",
+      "motion_level": "C",
+      "motion_intent": "Kính lúp đỏ soi vỡ vỏ tích xanh app ngân hàng giả vs điện thoại chính chủ + loa báo số dư + khiên bảo vệ xanh + glitch + detail_reveal + red_circle_draw + highlighter_sweep",
+      "motion": {
+        "preset": "slow_push_in",
+        "scale": [
+          1.02,
+          1.09
+        ],
+        "focus": [
+          [
+            0.5,
+            0.48
+          ],
+          [
+            0.5,
+            0.46
+          ]
+        ],
+        "wobble": "none",
+        "easing": "ease_out"
+      },
+      "detail_fx": [
+        {
+          "type": "detail_reveal",
+          "image": "assets/s7_reveal.jpg",
+          "at": 56.18,
+          "dur": 0.45
+        },
+        {
+          "type": "red_circle_draw",
+          "region": [
+            0.26,
+            0.13,
+            0.74,
+            0.39
+          ],
+          "at": 56.58,
+          "dur": 0.5,
+          "style": "circle"
+        },
+        {
+          "type": "highlighter_sweep",
+          "region": [
+            0.52,
+            0.58,
+            0.96,
+            0.83
+          ],
+          "at": 58.18,
+          "dur": 0.5
+        },
+        {
+          "type": "focus_highlight",
+          "pos": [
+            0.5,
+            0.48
+          ],
+          "radius": [
+            0.46,
+            0.38
+          ],
+          "dim_outer": 0.2,
+          "start": 56.18,
+          "end": 63.32,
+          "fade": 0.3
+        },
+        {
+          "type": "color_mood",
+          "mood": "noir_evidence",
+          "strength": 0.4,
+          "vignette": 0.2,
+          "grain": 0.01
+        }
+      ],
+      "transition_in": {
+        "type": "glitch",
+        "dur": 0.34
+      }
+    },
+    {
+      "id": "s8_the_nho_ky",
+      "image": "assets/s8.jpg",
+      "start": 63.42,
+      "end": 68.42,
+      "beat_type": "ending",
+      "motion_level": "A",
+      "motion_intent": "Giữ tĩnh tuyệt đối trên nền sạp chợ nắng ấm dịu mắt cho Thẻ Nhớ kỹ 5.0s",
+      "motion": {
+        "preset": "static_hold"
+      },
+      "transition_in": {
+        "type": "fade_black",
+        "dur": 0.28
+      }
+    },
+    {
+      "id": "s9a_ket_mo_co_tu_an_y",
+      "image": "assets/s9a_cotu_mouth_closed.jpg",
+      "start": 68.42,
+      "end": 71.92,
+      "beat_type": "suspicion",
+      "motion_level": "C",
+      "motion_intent": "Kết mở 100% câm thoại (cùng nhân vật Cô Tư EP12 — không thoại ra lệnh, an toàn pháp lý): tắt vẻ hiền hậu, khép môi ánh mắt lạnh sắc áp điện thoại báo kín + 1 cái chớp mắt chậm + slow_pull_out + noir_evidence",
+      "motion": {
+        "preset": "slow_pull_out",
+        "scale": [
+          1.08,
+          1.02
+        ],
+        "focus": [
+          [
+            0.48,
+            0.44
+          ],
+          [
+            0.5,
+            0.48
+          ]
+        ],
+        "wobble": "none",
+        "easing": "ease_out"
+      },
+      "detail_fx": [
+        {
+          "type": "eye_blink",
+          "image": "assets/s9a_cotu_blink.jpg",
+          "region": [
+            0.381,
+            0.29,
+            0.605,
+            0.35
+          ],
+          "feather": 0.008,
+          "times": [
+            69.57
+          ],
+          "close_dur": 0.07,
+          "hold_dur": 0.065,
+          "open_dur": 0.11
+        },
+        {
+          "type": "color_mood",
+          "mood": "noir_evidence",
+          "strength": 0.36,
+          "vignette": 0.24,
+          "grain": 0.01
+        }
+      ],
+      "transition_in": {
+        "type": "fade_black",
+        "dur": 0.32
+      }
+    },
+    {
+      "id": "s9b_ket_mo_hai_bong_lung_bi_an",
+      "image": "assets/s9b.jpg",
+      "start": 71.92,
+      "end": 75.72,
+      "beat_type": "climax",
+      "motion_level": "B",
+      "motion_intent": "Kết mở 2.5D Parallax 100% câm thoại bí ẩn: dưới bóng râm cổng chợ, hai bóng lưng đội nón bảo hiểm kính râm (không lộ rõ mặt, không sắc phục) tắt máy điện thoại khẽ ra tín hiệu rồi hòa vào dòng xe phía sau bóng áo xanh + Rack Focus + Breathing + light_sweep + ambient_particles",
+      "motion": {
+        "preset": "slow_push_in",
+        "scale": [
+          1.02,
+          1.08
+        ],
+        "focus": [
+          [
+            0.5,
+            0.5
+          ],
+          [
+            0.5,
+            0.46
+          ]
+        ],
+        "wobble": "none",
+        "easing": "ease_out"
+      },
+      "parallax": {
+        "camera": "push_in",
+        "dolly": [
+          1.02,
+          1.08
+        ],
+        "shift_x": [
+          0.0,
+          0.0
+        ],
+        "shift_y": [
+          1.8,
+          -2.0
+        ],
+        "focus": [
+          0.5,
+          0.48
+        ],
+        "strength": 0.85,
+        "easing": "ease_out",
+        "layers": [
+          {
+            "role": "bg",
+            "image": "assets/s9b_bg.jpg",
+            "depth": 0.42,
+            "blur_from": 3.4,
+            "blur_to": 0.4,
+            "blur_at": 72.57,
+            "blur_dur": 1.6
+          },
+          {
+            "role": "fg",
+            "image": "assets/s9b_fg.png",
+            "depth": 1.26,
+            "breathe_y": 1.6,
+            "breathe_period": 3.4
+          }
+        ]
+      },
+      "detail_fx": [
+        {
+          "type": "ambient_particles",
+          "count": 18,
+          "opacity": 0.28,
+          "color": [
+            230,
+            240,
+            255
+          ],
+          "drift_dir": "up"
+        },
+        {
+          "type": "light_sweep",
+          "mode": "light",
+          "intensity": 0.22,
+          "repeat": 1
+        },
+        {
+          "type": "color_mood",
+          "mood": "cold_suspicion",
+          "strength": 0.3,
+          "vignette": 0.22,
+          "grain": 0.008
+        }
+      ],
+      "transition_in": {
+        "type": "dissolve",
+        "dur": 0.25
+      }
+    },
+    {
+      "id": "s10_black_disclaimer",
+      "image": "assets/s10_black.jpg",
+      "start": 75.72,
+      "end": 78.42,
+      "beat_type": "ending",
+      "motion_level": "A",
+      "motion_intent": "Cắt đen tĩnh tuyệt đối cho bảng Lưu ý cuối video",
+      "motion": {
+        "preset": "static_hold"
+      },
+      "transition_in": {
+        "type": "cut",
+        "dur": 0.0
+      }
+    }
+  ],
+  "subtitle_srt": "factory619/staging/EP15/subtitles/EP15.srt",
+  "video_track_noaudio": "factory619/staging/EP15/timeline_video_gate4.mp4",
+  "channel_branding": {
+    "type": "channel_branding",
+    "logo_text": "VCH",
+    "watermark_text": "VẠN CHUYỆN",
+    "safe_zone_compliant": true
+  },
+  "overlays": [
+    {
+      "id": "000_hook",
+      "start_sec": 0.25,
+      "end_sec": 4.15,
+      "fade_sec": 0.3,
+      "png_path": "factory619/staging/EP15/overlays/000_hook.png",
+      "type": "text_hook",
+      "text": "BẪY APP NGÂN HÀNG GIẢ — Thấy tận mắt bấm chuyển, tiền vẫn bằng không!",
+      "bbox_px": [
+        82,
+        170,
+        919,
+        360
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "001_sub_l1",
+      "start_sec": 0.4,
+      "end_sec": 2.285,
+      "fade_sec": 0.1,
+      "png_path": "factory619/staging/EP15/overlays/001_sub_l1.png",
+      "type": "subtitle",
+      "lines": [
+        "Chuyển bốn triệu rưỡi thành công rồi",
+        "nè em!"
+      ],
+      "bbox_px": [
+        92,
+        1268,
+        908,
+        1380
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "002_sub_l1",
+      "start_sec": 2.285,
+      "end_sec": 3.95,
+      "fade_sec": 0.1,
+      "png_path": "factory619/staging/EP15/overlays/002_sub_l1.png",
+      "type": "subtitle",
+      "lines": [
+        "Xe đậu ngoài đường, giao hàng lẹ",
+        "giùm!"
+      ],
+      "bbox_px": [
+        130,
+        1268,
+        871,
+        1380
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "003_sub_l2",
+      "start_sec": 4.85,
+      "end_sec": 7.054,
+      "fade_sec": 0.1,
+      "png_path": "factory619/staging/EP15/overlays/003_sub_l2.png",
+      "type": "subtitle",
+      "lines": [
+        "Cô Tư yên tâm, đâu phải hình chụp!"
+      ],
+      "bbox_px": [
+        109,
+        1324,
+        891,
+        1380
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "004_sub_l2",
+      "start_sec": 7.054,
+      "end_sec": 10.36,
+      "fade_sec": 0.1,
+      "png_path": "factory619/staging/EP15/overlays/004_sub_l2.png",
+      "type": "subtitle",
+      "lines": [
+        "Con đứng nhìn tận mắt ảnh bấm",
+        "chuyển trên app luôn!"
+      ],
+      "bbox_px": [
+        145,
+        1268,
+        855,
+        1380
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "005_sub_l3",
+      "start_sec": 11.31,
+      "end_sec": 12.373,
+      "fade_sec": 0.1,
+      "png_path": "factory619/staging/EP15/overlays/005_sub_l3.png",
+      "type": "subtitle",
+      "lines": [
+        "Khoan đã Na!"
+      ],
+      "bbox_px": [
+        342,
+        1324,
+        659,
+        1380
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "006_sub_l3",
+      "start_sec": 12.373,
+      "end_sec": 17.69,
+      "fade_sec": 0.1,
+      "png_path": "factory619/staging/EP15/overlays/006_sub_l3.png",
+      "type": "subtitle",
+      "lines": [
+        "Máy cô im ru chưa báo tiền vô, anh",
+        "chờ tiền nổi rồi hãy lấy!"
+      ],
+      "bbox_px": [
+        118,
+        1268,
+        883,
+        1380
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "007_sub_l4",
+      "start_sec": 18.69,
+      "end_sec": 21.078,
+      "fade_sec": 0.1,
+      "png_path": "factory619/staging/EP15/overlays/007_sub_l4.png",
+      "type": "subtitle",
+      "lines": [
+        "Trời ơi, máy tôi báo trừ tiền rồi!"
+      ],
+      "bbox_px": [
+        154,
+        1324,
+        846,
+        1380
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "008_sub_l4",
+      "start_sec": 21.078,
+      "end_sec": 24.59,
+      "fade_sec": 0.1,
+      "png_path": "factory619/staging/EP15/overlays/008_sub_l4.png",
+      "type": "subtitle",
+      "lines": [
+        "Giờ trả tiền mặt, lát tiền nổi thành hai",
+        "lần sao?!"
+      ],
+      "bbox_px": [
+        96,
+        1268,
+        905,
+        1380
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "009_sub_l4b",
+      "start_sec": 24.84,
+      "end_sec": 28.86,
+      "fade_sec": 0.1,
+      "png_path": "factory619/staging/EP15/overlays/009_sub_l4b.png",
+      "type": "subtitle",
+      "lines": [
+        "Lừa cả trăm cả tỷ, ai lừa mấy đồng",
+        "bạc cô ơi!"
+      ],
+      "bbox_px": [
+        123,
+        1268,
+        877,
+        1380
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "010_sub_l5",
+      "start_sec": 29.21,
+      "end_sec": 29.824,
+      "fade_sec": 0.1,
+      "png_path": "factory619/staging/EP15/overlays/010_sub_l5.png",
+      "type": "subtitle",
+      "lines": [
+        "Cô ơi..."
+      ],
+      "bbox_px": [
+        408,
+        1324,
+        592,
+        1380
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "011_sub_l5",
+      "start_sec": 29.824,
+      "end_sec": 34.81,
+      "fade_sec": 0.1,
+      "png_path": "factory619/staging/EP15/overlays/011_sub_l5.png",
+      "type": "subtitle",
+      "lines": [
+        "lỡ nghẽn mạng thiệt, ảnh trả tiền mặt",
+        "rồi lát tiền vô nữa sao cô?"
+      ],
+      "bbox_px": [
+        98,
+        1268,
+        903,
+        1380
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "012_sub_l6",
+      "start_sec": 35.76,
+      "end_sec": 37.782,
+      "fade_sec": 0.1,
+      "png_path": "factory619/staging/EP15/overlays/012_sub_l6.png",
+      "type": "subtitle",
+      "lines": [
+        "Sạp cô ngồi đây có chạy đâu!"
+      ],
+      "bbox_px": [
+        176,
+        1324,
+        824,
+        1380
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "013_sub_l6",
+      "start_sec": 37.782,
+      "end_sec": 41.32,
+      "fade_sec": 0.1,
+      "png_path": "factory619/staging/EP15/overlays/013_sub_l6.png",
+      "type": "subtitle",
+      "lines": [
+        "Anh đưa tiền mặt cô ký giấy, tiền nổi",
+        "cô hoàn đủ!"
+      ],
+      "bbox_px": [
+        102,
+        1268,
+        899,
+        1380
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "014_sub_l7",
+      "start_sec": 41.62,
+      "end_sec": 44.69,
+      "fade_sec": 0.1,
+      "png_path": "factory619/staging/EP15/overlays/014_sub_l7.png",
+      "type": "subtitle",
+      "lines": [
+        "Hay đọc số tài khoản, cô gọi ngân",
+        "hàng hỏi!"
+      ],
+      "bbox_px": [
+        130,
+        1268,
+        871,
+        1380
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "015_sub_l8",
+      "start_sec": 45.69,
+      "end_sec": 46.182,
+      "fade_sec": 0.1,
+      "png_path": "factory619/staging/EP15/overlays/015_sub_l8.png",
+      "type": "subtitle",
+      "lines": [
+        "Thôi..."
+      ],
+      "bbox_px": [
+        419,
+        1324,
+        582,
+        1380
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "016_sub_l8",
+      "start_sec": 46.182,
+      "end_sec": 48.71,
+      "fade_sec": 0.1,
+      "png_path": "factory619/staging/EP15/overlays/016_sub_l8.png",
+      "type": "subtitle",
+      "lines": [
+        "bán buôn khó khăn quá, khỏi mua",
+        "nữa!"
+      ],
+      "bbox_px": [
+        129,
+        1268,
+        871,
+        1380
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "017_sub_l9",
+      "start_sec": 49.56,
+      "end_sec": 49.949,
+      "fade_sec": 0.1,
+      "png_path": "factory619/staging/EP15/overlays/017_sub_l9.png",
+      "type": "subtitle",
+      "lines": [
+        "Ủa..."
+      ],
+      "bbox_px": [
+        437,
+        1324,
+        563,
+        1380
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "018_sub_l9",
+      "start_sec": 49.949,
+      "end_sec": 55.08,
+      "fade_sec": 0.1,
+      "png_path": "factory619/staging/EP15/overlays/018_sub_l9.png",
+      "type": "subtitle",
+      "lines": [
+        "tiền chuyển rồi mà ảnh bỏ luôn hàng,",
+        "leo xe vọt thẳng luôn kìa cô!"
+      ],
+      "bbox_px": [
+        95,
+        1268,
+        905,
+        1380
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "019_sub_l10",
+      "start_sec": 55.98,
+      "end_sec": 62.87,
+      "fade_sec": 0.1,
+      "png_path": "factory619/staging/EP15/overlays/019_sub_l10.png",
+      "type": "subtitle",
+      "lines": [
+        "Không còn ảnh cắt ghép: app ngân",
+        "hàng giả bấm thành công như thật,",
+        "nhưng tiền không về máy bạn!"
+      ],
+      "bbox_px": [
+        116,
+        1212,
+        884,
+        1380
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "020_redflags_0",
+      "start_sec": 63.42,
+      "end_sec": 63.8,
+      "fade_sec": 0.25,
+      "png_path": "factory619/staging/EP15/overlays/020_redflags_0.png",
+      "type": "red_flags",
+      "title": "NHỚ KỸ",
+      "lines": [
+        "Khách chủ động chìa màn hình cho nhìn tận mắt bấm “Thành công” bằng app ngân hàng giả giống thật",
+        "Kì kèo “trả tiền mặt thành hai lần sao”, “ai lừa mấy đồng bạc” để đánh vào tâm lý cả nể",
+        "App giả dựng được cả màn hình lịch sử — hễ đòi đọc STK gọi ngân hàng hỏi hoặc ký giấy nhận tiền mặt là bỏ chạy",
+        "Nguyên tắc “Kiểm trước, tin sau”: tiền chưa nổi trên máy mình hoặc loa báo số dư thì chưa giao hàng · Khách vội cứ nhận tiền mặt có giấy hẹn hoàn hoặc xin STK gọi tổng đài ngân hàng tra soát!"
+      ],
+      "bbox_px": [
+        80,
+        420,
+        920,
+        1272
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "021_redflags_1",
+      "start_sec": 63.8,
+      "end_sec": 64.18,
+      "fade_sec": 0.0,
+      "png_path": "factory619/staging/EP15/overlays/021_redflags_1.png",
+      "type": "red_flags",
+      "title": "NHỚ KỸ",
+      "lines": [
+        "Khách chủ động chìa màn hình cho nhìn tận mắt bấm “Thành công” bằng app ngân hàng giả giống thật",
+        "Kì kèo “trả tiền mặt thành hai lần sao”, “ai lừa mấy đồng bạc” để đánh vào tâm lý cả nể",
+        "App giả dựng được cả màn hình lịch sử — hễ đòi đọc STK gọi ngân hàng hỏi hoặc ký giấy nhận tiền mặt là bỏ chạy",
+        "Nguyên tắc “Kiểm trước, tin sau”: tiền chưa nổi trên máy mình hoặc loa báo số dư thì chưa giao hàng · Khách vội cứ nhận tiền mặt có giấy hẹn hoàn hoặc xin STK gọi tổng đài ngân hàng tra soát!"
+      ],
+      "bbox_px": [
+        80,
+        420,
+        920,
+        1272
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "022_redflags_2",
+      "start_sec": 64.18,
+      "end_sec": 64.56,
+      "fade_sec": 0.0,
+      "png_path": "factory619/staging/EP15/overlays/022_redflags_2.png",
+      "type": "red_flags",
+      "title": "NHỚ KỸ",
+      "lines": [
+        "Khách chủ động chìa màn hình cho nhìn tận mắt bấm “Thành công” bằng app ngân hàng giả giống thật",
+        "Kì kèo “trả tiền mặt thành hai lần sao”, “ai lừa mấy đồng bạc” để đánh vào tâm lý cả nể",
+        "App giả dựng được cả màn hình lịch sử — hễ đòi đọc STK gọi ngân hàng hỏi hoặc ký giấy nhận tiền mặt là bỏ chạy",
+        "Nguyên tắc “Kiểm trước, tin sau”: tiền chưa nổi trên máy mình hoặc loa báo số dư thì chưa giao hàng · Khách vội cứ nhận tiền mặt có giấy hẹn hoàn hoặc xin STK gọi tổng đài ngân hàng tra soát!"
+      ],
+      "bbox_px": [
+        80,
+        420,
+        920,
+        1272
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "023_redflags_3",
+      "start_sec": 64.56,
+      "end_sec": 68.42,
+      "fade_sec": 0.0,
+      "png_path": "factory619/staging/EP15/overlays/023_redflags_3.png",
+      "type": "red_flags",
+      "title": "NHỚ KỸ",
+      "lines": [
+        "Khách chủ động chìa màn hình cho nhìn tận mắt bấm “Thành công” bằng app ngân hàng giả giống thật",
+        "Kì kèo “trả tiền mặt thành hai lần sao”, “ai lừa mấy đồng bạc” để đánh vào tâm lý cả nể",
+        "App giả dựng được cả màn hình lịch sử — hễ đòi đọc STK gọi ngân hàng hỏi hoặc ký giấy nhận tiền mặt là bỏ chạy",
+        "Nguyên tắc “Kiểm trước, tin sau”: tiền chưa nổi trên máy mình hoặc loa báo số dư thì chưa giao hàng · Khách vội cứ nhận tiền mặt có giấy hẹn hoàn hoặc xin STK gọi tổng đài ngân hàng tra soát!"
+      ],
+      "bbox_px": [
+        80,
+        420,
+        920,
+        1272
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "024_disclaimer",
+      "start_sec": 75.72,
+      "end_sec": 78.42,
+      "fade_sec": 0.25,
+      "png_path": "factory619/staging/EP15/overlays/024_disclaimer.png",
+      "type": "disclaimer",
+      "text": "Tình huống được dựng lại để cảnh báo. Nhân vật, tên, số liệu đều là hư cấu.",
+      "bbox_px": [
+        80,
+        210,
+        920,
+        340
+      ],
+      "safe_zone_compliant": true
+    }
+  ],
+  "qa_preview_frames": [
+    {
+      "timestamp_sec": 0.7,
+      "clean": "factory619/staging/EP15/preview_frames/qa_00_70s_clean.jpg",
+      "safezone": "factory619/staging/EP15/preview_frames/qa_00_70s_safezone.jpg"
+    },
+    {
+      "timestamp_sec": 1.05,
+      "clean": "factory619/staging/EP15/preview_frames/qa_01_05s_clean.jpg",
+      "safezone": "factory619/staging/EP15/preview_frames/qa_01_05s_safezone.jpg"
+    },
+    {
+      "timestamp_sec": 1.25,
+      "clean": "factory619/staging/EP15/preview_frames/qa_01_25s_clean.jpg",
+      "safezone": "factory619/staging/EP15/preview_frames/qa_01_25s_safezone.jpg"
+    },
+    {
+      "timestamp_sec": 2.25,
+      "clean": "factory619/staging/EP15/preview_frames/qa_02_25s_clean.jpg",
+      "safezone": "factory619/staging/EP15/preview_frames/qa_02_25s_safezone.jpg"
+    },
+    {
+      "timestamp_sec": 7.71,
+      "clean": "factory619/staging/EP15/preview_frames/qa_07_71s_clean.jpg",
+      "safezone": "factory619/staging/EP15/preview_frames/qa_07_71s_safezone.jpg"
+    },
+    {
+      "timestamp_sec": 12.66,
+      "clean": "factory619/staging/EP15/preview_frames/qa_12_66s_clean.jpg",
+      "safezone": "factory619/staging/EP15/preview_frames/qa_12_66s_safezone.jpg"
+    },
+    {
+      "timestamp_sec": 13.01,
+      "clean": "factory619/staging/EP15/preview_frames/qa_13_01s_clean.jpg",
+      "safezone": "factory619/staging/EP15/preview_frames/qa_13_01s_safezone.jpg"
+    },
+    {
+      "timestamp_sec": 14.57,
+      "clean": "factory619/staging/EP15/preview_frames/qa_14_57s_clean.jpg",
+      "safezone": "factory619/staging/EP15/preview_frames/qa_14_57s_safezone.jpg"
+    },
+    {
+      "timestamp_sec": 26.8,
+      "clean": "factory619/staging/EP15/preview_frames/qa_26_80s_clean.jpg",
+      "safezone": "factory619/staging/EP15/preview_frames/qa_26_80s_safezone.jpg"
+    },
+    {
+      "timestamp_sec": 37.56,
+      "clean": "factory619/staging/EP15/preview_frames/qa_37_56s_clean.jpg",
+      "safezone": "factory619/staging/EP15/preview_frames/qa_37_56s_safezone.jpg"
+    },
+    {
+      "timestamp_sec": 40.3,
+      "clean": "factory619/staging/EP15/preview_frames/qa_40_30s_clean.jpg",
+      "safezone": "factory619/staging/EP15/preview_frames/qa_40_30s_safezone.jpg"
+    },
+    {
+      "timestamp_sec": 45.65,
+      "clean": "factory619/staging/EP15/preview_frames/qa_45_65s_clean.jpg",
+      "safezone": "factory619/staging/EP15/preview_frames/qa_45_65s_safezone.jpg"
+    },
+    {
+      "timestamp_sec": 46.14,
+      "clean": "factory619/staging/EP15/preview_frames/qa_46_14s_clean.jpg",
+      "safezone": "factory619/staging/EP15/preview_frames/qa_46_14s_safezone.jpg"
+    },
+    {
+      "timestamp_sec": 47.2,
+      "clean": "factory619/staging/EP15/preview_frames/qa_47_20s_clean.jpg",
+      "safezone": "factory619/staging/EP15/preview_frames/qa_47_20s_safezone.jpg"
+    },
+    {
+      "timestamp_sec": 52.39,
+      "clean": "factory619/staging/EP15/preview_frames/qa_52_39s_clean.jpg",
+      "safezone": "factory619/staging/EP15/preview_frames/qa_52_39s_safezone.jpg"
+    },
+    {
+      "timestamp_sec": 56.78,
+      "clean": "factory619/staging/EP15/preview_frames/qa_56_78s_clean.jpg",
+      "safezone": "factory619/staging/EP15/preview_frames/qa_56_78s_safezone.jpg"
+    },
+    {
+      "timestamp_sec": 57.23,
+      "clean": "factory619/staging/EP15/preview_frames/qa_57_23s_clean.jpg",
+      "safezone": "factory619/staging/EP15/preview_frames/qa_57_23s_safezone.jpg"
+    },
+    {
+      "timestamp_sec": 58.83,
+      "clean": "factory619/staging/EP15/preview_frames/qa_58_83s_clean.jpg",
+      "safezone": "factory619/staging/EP15/preview_frames/qa_58_83s_safezone.jpg"
+    },
+    {
+      "timestamp_sec": 59.53,
+      "clean": "factory619/staging/EP15/preview_frames/qa_59_53s_clean.jpg",
+      "safezone": "factory619/staging/EP15/preview_frames/qa_59_53s_safezone.jpg"
+    },
+    {
+      "timestamp_sec": 65.92,
+      "clean": "factory619/staging/EP15/preview_frames/qa_65_92s_clean.jpg",
+      "safezone": "factory619/staging/EP15/preview_frames/qa_65_92s_safezone.jpg"
+    },
+    {
+      "timestamp_sec": 67.92,
+      "clean": "factory619/staging/EP15/preview_frames/qa_67_92s_clean.jpg",
+      "safezone": "factory619/staging/EP15/preview_frames/qa_67_92s_safezone.jpg"
+    },
+    {
+      "timestamp_sec": 70.17,
+      "clean": "factory619/staging/EP15/preview_frames/qa_70_17s_clean.jpg",
+      "safezone": "factory619/staging/EP15/preview_frames/qa_70_17s_safezone.jpg"
+    },
+    {
+      "timestamp_sec": 73.82,
+      "clean": "factory619/staging/EP15/preview_frames/qa_73_82s_clean.jpg",
+      "safezone": "factory619/staging/EP15/preview_frames/qa_73_82s_safezone.jpg"
+    },
+    {
+      "timestamp_sec": 77.07,
+      "clean": "factory619/staging/EP15/preview_frames/qa_77_07s_clean.jpg",
+      "safezone": "factory619/staging/EP15/preview_frames/qa_77_07s_safezone.jpg"
+    }
+  ]
+}
