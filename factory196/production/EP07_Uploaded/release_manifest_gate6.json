@@ -5,7 +5,7 @@
   "title": "Sau hai trăm triệu",
   "gate": "GATE_6_PRODUCTION_RELEASE",
   "status": "PRODUCED_READY_FOR_PUBLISH",
-  "released_at": "2026-11-20T19:45:35.675025+07:00",
+  "released_at": "2026-11-27T08:31:01.390763+07:00",
   "master_video": {
     "path": "factory196/production/EP07/EP07_SauHaiTramTrieu_464s.mp4",
     "mirror": "06_RENDERED_VIDEOS/EP07_SauHaiTramTrieu_464s.mp4",
@@ -13,8 +13,8 @@
     "thumbnail_9x16": "factory196/production/EP07/EP07_Thumbnail_9x16.jpg",
     "thumbnail_16x9": "factory196/production/EP07/EP07_Thumbnail_16x9.jpg",
     "thumbnail_sec": 312.03,
-    "size_mb": 184.97,
-    "sha256": "a96c8a19150a359484282f8061530c5658048f15c642fcaf7101e78c16097c3b"
+    "size_mb": 266.89,
+    "sha256": "65a335a5754f33bea5b516069ed664a3f1429edf429a42e3e3de866fa258fdd0"
   },
   "youtube_upload": {
     "primary_title": "Mất 200 Triệu Tiền Dưỡng Già, Rồi Mất Thêm 60 Triệu Để 'Lấy Lại' – Bẫy Lừa Lần Hai | Bóc Trần Lừa Đảo",

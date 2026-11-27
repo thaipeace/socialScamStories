@@ -1,0 +1,399 @@
+{
+  "c00": {
+    "dat": {
+      "blink": {
+        "image": "assets/c00_dat_blink.jpg",
+        "region": [
+          0.599,
+          0.236,
+          0.719,
+          0.343
+        ]
+      },
+      "mouth": {
+        "default_state": "closed",
+        "closed_image": "assets/c00.jpg",
+        "mid_image": "assets/c00_dat_mouth_mid.jpg",
+        "open_image": "assets/c00_dat_mouth_open.jpg",
+        "round_image": "assets/c00_dat_mouth_round.jpg",
+        "region": [
+          0.625,
+          0.347,
+          0.703,
+          0.44
+        ]
+      }
+    }
+  },
+  "c01": {
+    "khang": {
+      "blink": {
+        "image": "assets/c01_khang_blink.jpg",
+        "region": [
+          0.599,
+          0.218,
+          0.758,
+          0.347
+        ]
+      }
+    }
+  },
+  "c02": {
+    "dat": {
+      "blink": {
+        "image": "assets/c02_dat_blink.jpg",
+        "region": [
+          0.305,
+          0.222,
+          0.393,
+          0.315
+        ]
+      },
+      "mouth": {
+        "default_state": "mid",
+        "mid_image": "assets/c02.jpg",
+        "closed_image": "assets/c02_dat_mouth_closed.jpg",
+        "open_image": "assets/c02_dat_mouth_open.jpg",
+        "region": [
+          0.32,
+          0.31,
+          0.391,
+          0.398
+        ]
+      }
+    },
+    "khang": {
+      "blink": {
+        "image": "assets/c02_khang_blink.jpg",
+        "region": [
+          0.617,
+          0.227,
+          0.706,
+          0.319
+        ]
+      },
+      "mouth": {
+        "default_state": "mid",
+        "mid_image": "assets/c02.jpg",
+        "closed_image": "assets/c02_khang_mouth_closed.jpg",
+        "open_image": "assets/c02_khang_mouth_open.jpg",
+        "region": [
+          0.62,
+          0.31,
+          0.693,
+          0.403
+        ]
+      }
+    }
+  },
+  "c04": {
+    "khang": {
+      "blink": {
+        "image": "assets/c04_khang_blink.jpg",
+        "region": [
+          0.732,
+          0.25,
+          0.799,
+          0.343
+        ]
+      }
+    },
+    "fake_dat": {
+      "mouth": {
+        "default_state": "closed",
+        "closed_image": "assets/c04.jpg",
+        "mid_image": "assets/c04_fake_dat_mouth_mid.jpg",
+        "open_image": "assets/c04_fake_dat_mouth_open.jpg",
+        "region": [
+          0.552,
+          0.472,
+          0.622,
+          0.56
+        ]
+      }
+    }
+  },
+  "c06": {
+    "khang": {
+      "blink": {
+        "image": "assets/c06_khang_blink.jpg",
+        "region": [
+          0.281,
+          0.31,
+          0.365,
+          0.398
+        ]
+      },
+      "mouth": {
+        "default_state": "closed",
+        "closed_image": "assets/c06.jpg",
+        "mid_image": "assets/c06_khang_mouth_mid.jpg",
+        "open_image": "assets/c06_khang_mouth_open.jpg",
+        "region": [
+          0.289,
+          0.384,
+          0.357,
+          0.472
+        ]
+      }
+    },
+    "han": {
+      "blink": {
+        "image": "assets/c06_han_blink.jpg",
+        "region": [
+          0.664,
+          0.366,
+          0.747,
+          0.454
+        ]
+      },
+      "mouth": {
+        "default_state": "closed",
+        "closed_image": "assets/c06.jpg",
+        "mid_image": "assets/c06_han_mouth_mid.jpg",
+        "open_image": "assets/c06_han_mouth_open.jpg",
+        "region": [
+          0.672,
+          0.44,
+          0.737,
+          0.523
+        ]
+      }
+    }
+  },
+  "c07": {
+    "dat": {
+      "blink": {
+        "image": "assets/c07_dat_blink.jpg",
+        "region": [
+          0.602,
+          0.245,
+          0.701,
+          0.343
+        ]
+      },
+      "mouth": {
+        "default_state": "mid",
+        "mid_image": "assets/c07.jpg",
+        "closed_image": "assets/c07_dat_mouth_closed.jpg",
+        "open_image": "assets/c07_dat_mouth_open.jpg",
+        "region": [
+          0.615,
+          0.333,
+          0.693,
+          0.426
+        ]
+      }
+    },
+    "quyen": {
+      "blink": {
+        "image": "assets/c07_quyen_blink.jpg",
+        "region": [
+          0.805,
+          0.31,
+          0.885,
+          0.403
+        ]
+      },
+      "mouth": {
+        "default_state": "closed",
+        "closed_image": "assets/c07.jpg",
+        "mid_image": "assets/c07_quyen_mouth_mid.jpg",
+        "open_image": "assets/c07_quyen_mouth_open.jpg",
+        "region": [
+          0.807,
+          0.389,
+          0.872,
+          0.477
+        ]
+      }
+    }
+  },
+  "c09": {
+    "khang": {
+      "blink": {
+        "image": "assets/c09_khang_blink.jpg",
+        "region": [
+          0.612,
+          0.208,
+          0.729,
+          0.324
+        ]
+      }
+    }
+  },
+  "c11": {
+    "dat": {
+      "blink": {
+        "image": "assets/c11_dat_blink.jpg",
+        "region": [
+          0.487,
+          0.213,
+          0.599,
+          0.319
+        ]
+      },
+      "mouth": {
+        "default_state": "closed",
+        "closed_image": "assets/c11.jpg",
+        "mid_image": "assets/c11_dat_mouth_mid.jpg",
+        "open_image": "assets/c11_dat_mouth_open.jpg",
+        "round_image": "assets/c11_dat_mouth_round.jpg",
+        "region": [
+          0.513,
+          0.31,
+          0.589,
+          0.403
+        ]
+      }
+    }
+  },
+  "c12": {
+    "dat": {
+      "blink": {
+        "image": "assets/c12_dat_blink.jpg",
+        "region": [
+          0.344,
+          0.255,
+          0.43,
+          0.347
+        ]
+      },
+      "mouth": {
+        "default_state": "closed",
+        "closed_image": "assets/c12.jpg",
+        "mid_image": "assets/c12_dat_mouth_mid.jpg",
+        "open_image": "assets/c12_dat_mouth_open.jpg",
+        "region": [
+          0.357,
+          0.338,
+          0.422,
+          0.431
+        ]
+      }
+    },
+    "khang": {
+      "blink": {
+        "image": "assets/c12_khang_blink.jpg",
+        "region": [
+          0.594,
+          0.25,
+          0.68,
+          0.343
+        ]
+      },
+      "mouth": {
+        "default_state": "mid",
+        "mid_image": "assets/c12.jpg",
+        "closed_image": "assets/c12_khang_mouth_closed.jpg",
+        "open_image": "assets/c12_khang_mouth_open.jpg",
+        "region": [
+          0.599,
+          0.338,
+          0.672,
+          0.435
+        ]
+      }
+    }
+  },
+  "c13": {
+    "dat": {
+      "blink": {
+        "image": "assets/c13_dat_blink.jpg",
+        "region": [
+          0.305,
+          0.218,
+          0.393,
+          0.31
+        ]
+      },
+      "mouth": {
+        "default_state": "closed",
+        "closed_image": "assets/c13.jpg",
+        "mid_image": "assets/c13_dat_mouth_mid.jpg",
+        "open_image": "assets/c13_dat_mouth_open.jpg",
+        "region": [
+          0.32,
+          0.306,
+          0.391,
+          0.394
+        ]
+      }
+    },
+    "khang": {
+      "blink": {
+        "image": "assets/c13_khang_blink.jpg",
+        "region": [
+          0.612,
+          0.245,
+          0.701,
+          0.338
+        ]
+      },
+      "mouth": {
+        "default_state": "closed",
+        "closed_image": "assets/c13.jpg",
+        "mid_image": "assets/c13_khang_mouth_mid.jpg",
+        "open_image": "assets/c13_khang_mouth_open.jpg",
+        "region": [
+          0.62,
+          0.329,
+          0.69,
+          0.421
+        ]
+      }
+    }
+  },
+  "c14a": {
+    "dat": {
+      "blink": {
+        "image": "assets/c14a_dat_blink.jpg",
+        "region": [
+          0.253,
+          0.278,
+          0.419,
+          0.412
+        ]
+      },
+      "mouth": {
+        "default_state": "closed",
+        "closed_image": "assets/c14a.jpg",
+        "mid_image": "assets/c14a_dat_mouth_mid.jpg",
+        "open_image": "assets/c14a_dat_mouth_open.jpg",
+        "round_image": "assets/c14a_dat_mouth_round.jpg",
+        "region": [
+          0.284,
+          0.426,
+          0.388,
+          0.542
+        ]
+      }
+    }
+  },
+  "c14b": {
+    "khang": {
+      "blink": {
+        "image": "assets/c14b_khang_blink.jpg",
+        "region": [
+          0.581,
+          0.213,
+          0.742,
+          0.347
+        ]
+      },
+      "mouth": {
+        "default_state": "closed",
+        "closed_image": "assets/s14b_bg.jpg",
+        "mid_image": "assets/c14b_khang_mouth_mid.jpg",
+        "open_image": "assets/c14b_khang_mouth_open.jpg",
+        "round_image": "assets/c14b_khang_mouth_round.jpg",
+        "region": [
+          0.596,
+          0.366,
+          0.701,
+          0.481
+        ]
+      }
+    }
+  }
+}

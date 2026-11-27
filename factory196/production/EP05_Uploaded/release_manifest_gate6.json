@@ -5,7 +5,7 @@
   "title": "Tờ năm trăm và sáu giây nhìn thẳng",
   "gate": "GATE_6_PRODUCTION_RELEASE",
   "status": "PRODUCED_READY_FOR_PUBLISH",
-  "released_at": "2026-11-19T00:16:57.789604+07:00",
+  "released_at": "2026-11-25T08:07:52.538295+07:00",
   "master_video": {
     "path": "factory196/production/EP05/EP05_ToNamTramVaSauGiayNhinThang_262s.mp4",
     "mirror": "06_RENDERED_VIDEOS/EP05_ToNamTramVaSauGiayNhinThang_262s.mp4",
@@ -13,8 +13,8 @@
     "thumbnail_9x16": "factory196/production/EP05/EP05_Thumbnail_9x16.jpg",
     "thumbnail_16x9": "factory196/production/EP05/EP05_Thumbnail_16x9.jpg",
     "thumbnail_sec": 76.95,
-    "size_mb": 108.43,
-    "sha256": "1af761fdafdcf25ad6cb720c9809b8ca9d0b69291ae44d5ca2d1a9e605d7ebfc"
+    "size_mb": 202.9,
+    "sha256": "565fcff863f166336960e3d257e9500b53d1149ad7ed3713705a5ebe2a0b7371"
   },
   "youtube_upload": {
     "primary_title": "Đọc Giùm Dòng Chữ 6 Giây Ngoài Bãi Xe – Đêm Khuya Lộ Diện Chiếc Xe Đen | Bóc Trần Lừa Đảo",

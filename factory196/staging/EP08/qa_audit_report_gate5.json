@@ -3,7 +3,7 @@
   "factory": "factory196",
   "gate": "GATE_5_RENDER_AND_QA",
   "staging_mp4_path": "factory196/staging/EP08/EP08_MotVongTienHaiNuaSuThat_242s_staging.mp4",
-  "file_size_mb": 74.75,
+  "file_size_mb": 142.25,
   "stream_probe": {
     "programs": [],
     "stream_groups": [],
@@ -25,7 +25,7 @@
     ],
     "format": {
       "duration": "242.133333",
-      "size": "78378683"
+      "size": "149162156"
     }
   },
   "all_8_points_passed": true,
@@ -40,7 +40,7 @@
       "id": 2,
       "name": "Không hướng dẫn thủ đoạn chi tiết (chỉ bóc trần cơ chế tâm lý & dấu hiệu)",
       "status": "PASS",
-      "evidence": "Người duyệt: User. Duyet ban Staging v5-level2-full-staging len Production"
+      "evidence": "Người duyệt: Chu kenh. Duyet Staging v6-level3-full-abc (17 blink, 15 mouth_sync 100% canh noi, 3x 2.5D, 61 L3 FX)"
     },
     {
       "id": 3,
@@ -52,19 +52,19 @@
       "id": 4,
       "name": "Hình ảnh & chuyển động an toàn: không logo/giao diện/sắc phục thật, không máu me, motion mượt đúng nhịp & giữ continuity (QC 11 điểm)",
       "status": "PASS",
-      "evidence": "Người duyệt: User. Duyet ban Staging v5-level2-full-staging len Production"
+      "evidence": "Người duyệt: Chu kenh. Duyet Staging v6-level3-full-abc (17 blink, 15 mouth_sync 100% canh noi, 3x 2.5D, 61 L3 FX)"
     },
     {
       "id": 5,
       "name": "Tôn trọng nạn nhân, không kỳ thị vùng miền / dân tộc / nghề nghiệp / tuổi tác",
       "status": "PASS",
-      "evidence": "Người duyệt: User. Duyet ban Staging v5-level2-full-staging len Production"
+      "evidence": "Người duyệt: Chu kenh. Duyet Staging v6-level3-full-abc (17 blink, 15 mouth_sync 100% canh noi, 3x 2.5D, 61 L3 FX)"
     },
     {
       "id": 6,
       "name": "Âm thanh: thoại rõ, master đúng chuẩn, đã nghe duyệt",
       "status": "PASS",
-      "evidence": "Master peak -1.48 dBFS / 242.15s; thoại vừa cửa sổ: True; đã nghe duyệt: True"
+      "evidence": "Master peak -1.52 dBFS / 242.15s; thoại vừa cửa sổ: True; đã nghe duyệt: True"
     },
     {
       "id": 7,
@@ -80,18 +80,66 @@
     }
   ],
   "motion_qc": {
+    "motion_version": "level3",
+    "hardware_profile": "dual16gb_cpu_l480",
     "is_level2": true,
+    "is_level3": true,
     "effective_level_counts": {
-      "A": 9,
-      "B": 2,
-      "C": 8,
+      "A": 3,
+      "B": 3,
+      "C": 13,
       "D": 0
     },
     "declared_level_counts": {
-      "A": 9,
-      "B": 2,
-      "C": 8,
+      "A": 3,
+      "B": 3,
+      "C": 13,
       "D": 0
+    },
+    "feature_counts": {
+      "parallax_scenes": 3,
+      "breathing_layers": 5,
+      "rack_focus_layers": 3,
+      "head_tilt_layers": 1,
+      "split_screen_scenes": 0,
+      "eye_blink": 17,
+      "mouth_sync": 15,
+      "mouth_sync_4state": 4,
+      "eye_gaze": 0,
+      "expr_swap": 0,
+      "l2_detail_fx": 17,
+      "l3_fx": 40,
+      "l3_transitions": 13
+    },
+    "min_requirements": {
+      "parallax_scenes": 1,
+      "breathing_layers": 1,
+      "eye_blink": 3,
+      "mouth_sync": 3
+    },
+    "l3_feature_total": 61,
+    "stage_checks": {
+      "check1": {
+        "status": "PASS"
+      },
+      "check2": {
+        "status": "PASS",
+        "blockers": [],
+        "waived": []
+      },
+      "check3": {
+        "status": "PASS",
+        "blockers": [],
+        "waived": []
+      }
+    },
+    "waivers_used": {},
+    "stale_signoff_reasons": {},
+    "fingerprint": {
+      "episode_version": "v6-level3-full-abc-staging",
+      "motion_upgrade": "level3",
+      "config_sha256": "7c2f8ef11d3667fd",
+      "timeline_mtime": 1795791118.93
     },
     "has_highlights": true,
     "zoom_repetition_streaks": [],
@@ -100,17 +148,26 @@
     "sfx_sync": {
       "synced": [
         "s00_hook_call:shake@0.20s",
+        "s00_hook_call:chromatic_pulse@0.25s",
         "s01_hook_freeze:shake@15.43s",
+        "s01_hook_freeze:chromatic_pulse@15.45s",
         "s01_hook_freeze:screen_glow@15.73s",
+        "s04_fake_video_call:red_circle_draw@59.30s",
+        "s04_fake_video_call:chromatic_pulse@59.15s",
         "s04_fake_video_call:detail_reveal@66.39s",
         "s04_fake_video_call:light_shift@66.49s",
         "s05_fake_step1_dark:detail_reveal@67.26s",
         "s05_fake_step1_dark:screen_glow@67.34s",
         "s08_dark_step2_account:detail_reveal@124.92s",
         "s08_dark_step2_account:screen_glow@124.95s",
+        "s09_khang_transfers:chromatic_pulse@135.25s",
         "s09_khang_transfers:screen_glow@135.22s",
+        "s11_real_call_suspect:chromatic_pulse@148.55s",
         "s12_confrontation_desk:shake@154.34s",
+        "s12_confrontation_desk:red_circle_draw@162.20s",
+        "s12_confrontation_desk:chromatic_pulse@175.35s",
         "s12_confrontation_desk:light_shift@176.27s",
+        "s14b_coda_khang_counter:chromatic_pulse@234.65s",
         "chat1@0.55s",
         "chat2@15.78s",
         "chat3@59.22s",
@@ -124,7 +181,16 @@
       ],
       "unsynced": []
     },
+    "errors": [],
     "warnings": [],
-    "point4_human_signed": true
+    "point4_human_signed": true,
+    "render_stats": {
+      "hardware_profile": "dual16gb_cpu_l480",
+      "encoder": "libx264",
+      "workers": 4,
+      "has_cv2": true,
+      "elapsed_sec": 703.41,
+      "effective_fps": 10.3
+    }
   }
 }

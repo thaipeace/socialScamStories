@@ -1,20 +1,32 @@
 {
   "2": {
     "status": "PASS",
-    "by": "User",
-    "note": "Duyet ban Staging v5-level2-full-staging len Production",
-    "at": "2026-11-22T10:57:52+07:00"
+    "by": "Chu kenh",
+    "note": "Duyet Staging v6-level3-full-abc (17 blink, 15 mouth_sync 100% canh noi, 3x 2.5D, 61 L3 FX)",
+    "at": "2026-11-27T21:58:22+07:00",
+    "episode_version": "v6-level3-full-abc-staging",
+    "motion_upgrade": "level3",
+    "config_sha256": "7c2f8ef11d3667fd",
+    "timeline_mtime": 1795791118.93
   },
   "4": {
     "status": "PASS",
-    "by": "User",
-    "note": "Duyet ban Staging v5-level2-full-staging len Production",
-    "at": "2026-11-22T10:57:52+07:00"
+    "by": "Chu kenh",
+    "note": "Duyet Staging v6-level3-full-abc (17 blink, 15 mouth_sync 100% canh noi, 3x 2.5D, 61 L3 FX)",
+    "at": "2026-11-27T21:58:22+07:00",
+    "episode_version": "v6-level3-full-abc-staging",
+    "motion_upgrade": "level3",
+    "config_sha256": "7c2f8ef11d3667fd",
+    "timeline_mtime": 1795791118.93
   },
   "5": {
     "status": "PASS",
-    "by": "User",
-    "note": "Duyet ban Staging v5-level2-full-staging len Production",
-    "at": "2026-11-22T10:57:52+07:00"
+    "by": "Chu kenh",
+    "note": "Duyet Staging v6-level3-full-abc (17 blink, 15 mouth_sync 100% canh noi, 3x 2.5D, 61 L3 FX)",
+    "at": "2026-11-27T21:58:22+07:00",
+    "episode_version": "v6-level3-full-abc-staging",
+    "motion_upgrade": "level3",
+    "config_sha256": "7c2f8ef11d3667fd",
+    "timeline_mtime": 1795791118.93
   }
 }

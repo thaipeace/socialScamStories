@@ -5,7 +5,7 @@
   "title": "Ba triệu tám trên màn hình",
   "gate": "GATE_6_PRODUCTION_RELEASE",
   "status": "PRODUCED_READY_FOR_PUBLISH",
-  "released_at": "2026-11-20T07:44:17.705952+07:00",
+  "released_at": "2026-11-26T20:17:13.760071+07:00",
   "master_video": {
     "path": "factory196/production/EP06/EP06_BaTrieuTamTrenManHinh_242s.mp4",
     "mirror": "06_RENDERED_VIDEOS/EP06_BaTrieuTamTrenManHinh_242s.mp4",
@@ -13,8 +13,8 @@
     "thumbnail_9x16": "factory196/production/EP06/EP06_Thumbnail_9x16.jpg",
     "thumbnail_16x9": "factory196/production/EP06/EP06_Thumbnail_16x9.jpg",
     "thumbnail_sec": 175.27,
-    "size_mb": 97.84,
-    "sha256": "bcb36c9393c73d5c706884f4ec0ce939fdd86d9ff102bcd610b08cc9516704e3"
+    "size_mb": 189.16,
+    "sha256": "3209197c8d5b6a85c06652af026fca8863c5c8fc84170ca6aa8c957baa14c914"
   },
   "youtube_upload": {
     "primary_title": "App Mua Hàng Hộ 'Bạn Thân 4.0' & Nhóm Chat Cảm Ơn Rối Rít: Cú Khóa Rút 3 Triệu 8 | Bóc Trần Lừa Đảo",

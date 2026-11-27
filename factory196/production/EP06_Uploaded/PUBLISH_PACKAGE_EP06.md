@@ -1,7 +1,7 @@
 # GÓI XUẤT BẢN YOUTUBE [factory196 · 16:9] – EP06: Ba triệu tám trên màn hình
 
 ## 📦 1. Các File Cần Dùng Khi Upload
-- **Video Master (MP4 16:9)**: [EP06_BaTrieuTamTrenManHinh_242s.mp4](file:///C:/projects/socialScamStories/factory196/production/EP06/EP06_BaTrieuTamTrenManHinh_242s.mp4) (97.84 MB, SHA-256 `bcb36c9393c73d5c…`)
+- **Video Master (MP4 16:9)**: [EP06_BaTrieuTamTrenManHinh_242s.mp4](file:///C:/projects/socialScamStories/factory196/production/EP06/EP06_BaTrieuTamTrenManHinh_242s.mp4) (189.16 MB, SHA-256 `3209197c8d5b6a85…`)
 - **Phụ đề chuẩn thời gian (SRT)**: [EP06_BaTrieuTamTrenManHinh_242s.srt](file:///C:/projects/socialScamStories/factory196/production/EP06/EP06_BaTrieuTamTrenManHinh_242s.srt)
 - **Thumbnail dọc (9:16 — mốc `175.3s`)**: [EP06_Thumbnail_9x16.jpg](file:///C:/projects/socialScamStories/factory196/production/EP06/EP06_Thumbnail_9x16.jpg)
 - **Thumbnail ngang (16:9)**: [EP06_Thumbnail_16x9.jpg](file:///C:/projects/socialScamStories/factory196/production/EP06/EP06_Thumbnail_16x9.jpg)

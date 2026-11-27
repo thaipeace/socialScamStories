@@ -1,7 +1,7 @@
 # GÓI XUẤT BẢN YOUTUBE [factory196 · 16:9] – EP07: Sau hai trăm triệu
 
 ## 📦 1. Các File Cần Dùng Khi Upload
-- **Video Master (MP4 16:9)**: [EP07_SauHaiTramTrieu_464s.mp4](file:///C:/projects/socialScamStories/factory196/production/EP07/EP07_SauHaiTramTrieu_464s.mp4) (184.97 MB, SHA-256 `a96c8a19150a3594…`)
+- **Video Master (MP4 16:9)**: [EP07_SauHaiTramTrieu_464s.mp4](file:///C:/projects/socialScamStories/factory196/production/EP07/EP07_SauHaiTramTrieu_464s.mp4) (266.89 MB, SHA-256 `65a335a5754f33be…`)
 - **Phụ đề chuẩn thời gian (SRT)**: [EP07_SauHaiTramTrieu_464s.srt](file:///C:/projects/socialScamStories/factory196/production/EP07/EP07_SauHaiTramTrieu_464s.srt)
 - **Thumbnail dọc (9:16 — mốc `312.0s`)**: [EP07_Thumbnail_9x16.jpg](file:///C:/projects/socialScamStories/factory196/production/EP07/EP07_Thumbnail_9x16.jpg)
 - **Thumbnail ngang (16:9)**: [EP07_Thumbnail_16x9.jpg](file:///C:/projects/socialScamStories/factory196/production/EP07/EP07_Thumbnail_16x9.jpg)

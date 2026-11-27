@@ -1,7 +1,7 @@
 # GÓI XUẤT BẢN YOUTUBE [factory196 · 16:9] – EP05: Tờ năm trăm và sáu giây nhìn thẳng
 
 ## 📦 1. Các File Cần Dùng Khi Upload
-- **Video Master (MP4 16:9)**: [EP05_ToNamTramVaSauGiayNhinThang_262s.mp4](file:///C:/projects/socialScamStories/factory196/production/EP05/EP05_ToNamTramVaSauGiayNhinThang_262s.mp4) (108.43 MB, SHA-256 `1af761fdafdcf25a…`)
+- **Video Master (MP4 16:9)**: [EP05_ToNamTramVaSauGiayNhinThang_262s.mp4](file:///C:/projects/socialScamStories/factory196/production/EP05/EP05_ToNamTramVaSauGiayNhinThang_262s.mp4) (202.9 MB, SHA-256 `565fcff863f16633…`)
 - **Phụ đề chuẩn thời gian (SRT)**: [EP05_ToNamTramVaSauGiayNhinThang_262s.srt](file:///C:/projects/socialScamStories/factory196/production/EP05/EP05_ToNamTramVaSauGiayNhinThang_262s.srt)
 - **Thumbnail dọc (9:16 — mốc `77.0s`)**: [EP05_Thumbnail_9x16.jpg](file:///C:/projects/socialScamStories/factory196/production/EP05/EP05_Thumbnail_9x16.jpg)
 - **Thumbnail ngang (16:9)**: [EP05_Thumbnail_16x9.jpg](file:///C:/projects/socialScamStories/factory196/production/EP05/EP05_Thumbnail_16x9.jpg)

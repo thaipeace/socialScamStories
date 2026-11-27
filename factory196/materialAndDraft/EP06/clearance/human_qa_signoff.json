@@ -1,20 +1,32 @@
 {
   "2": {
     "status": "PASS",
-    "by": "Chủ kênh",
+    "by": "ChuKenh",
     "note": "",
-    "at": "2026-11-20T07:44:15+07:00"
+    "at": "2026-11-26T20:17:11+07:00",
+    "episode_version": "v3-level3-full-abc-staging",
+    "motion_upgrade": "level3",
+    "config_sha256": "7ed856f04e01e818",
+    "timeline_mtime": 1795698614.18
   },
   "4": {
     "status": "PASS",
-    "by": "Chủ kênh",
+    "by": "ChuKenh",
     "note": "",
-    "at": "2026-11-20T07:44:15+07:00"
+    "at": "2026-11-26T20:17:11+07:00",
+    "episode_version": "v3-level3-full-abc-staging",
+    "motion_upgrade": "level3",
+    "config_sha256": "7ed856f04e01e818",
+    "timeline_mtime": 1795698614.18
   },
   "5": {
     "status": "PASS",
-    "by": "Chủ kênh",
+    "by": "ChuKenh",
     "note": "",
-    "at": "2026-11-20T07:44:15+07:00"
+    "at": "2026-11-26T20:17:11+07:00",
+    "episode_version": "v3-level3-full-abc-staging",
+    "motion_upgrade": "level3",
+    "config_sha256": "7ed856f04e01e818",
+    "timeline_mtime": 1795698614.18
   }
 }
