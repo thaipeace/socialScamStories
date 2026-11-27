@@ -33,7 +33,9 @@
         "rms_dbfs": -19.32
       },
       "qa_status": "PASS",
-      "human_listen_check": "PENDING"
+      "human_listen_check": "PASS",
+      "listen_by": "Chu kenh",
+      "listen_at": "2026-11-27T22:28:44+07:00"
     },
     {
       "line_id": "l02_minh",
@@ -61,7 +63,9 @@
         "rms_dbfs": -16.25
       },
       "qa_status": "PASS",
-      "human_listen_check": "PENDING"
+      "human_listen_check": "PASS",
+      "listen_by": "Chu kenh",
+      "listen_at": "2026-11-27T22:28:44+07:00"
     },
     {
       "line_id": "l03_bank_p",
@@ -87,7 +91,9 @@
         "rms_dbfs": -19.33
       },
       "qa_status": "PASS",
-      "human_listen_check": "PENDING"
+      "human_listen_check": "PASS",
+      "listen_by": "Chu kenh",
+      "listen_at": "2026-11-27T22:28:44+07:00"
     },
     {
       "line_id": "l04_nam",
@@ -115,7 +121,9 @@
         "rms_dbfs": -20.74
       },
       "qa_status": "PASS",
-      "human_listen_check": "PENDING"
+      "human_listen_check": "PASS",
+      "listen_by": "Chu kenh",
+      "listen_at": "2026-11-27T22:28:44+07:00"
     },
     {
       "line_id": "l05_minh",
@@ -143,7 +151,9 @@
         "rms_dbfs": -16.89
       },
       "qa_status": "PASS",
-      "human_listen_check": "PENDING"
+      "human_listen_check": "PASS",
+      "listen_by": "Chu kenh",
+      "listen_at": "2026-11-27T22:28:44+07:00"
     },
     {
       "line_id": "l06_thao",
@@ -169,7 +179,9 @@
         "rms_dbfs": -17.15
       },
       "qa_status": "PASS",
-      "human_listen_check": "PENDING"
+      "human_listen_check": "PASS",
+      "listen_by": "Chu kenh",
+      "listen_at": "2026-11-27T22:28:44+07:00"
     },
     {
       "line_id": "l07_minh",
@@ -195,7 +207,9 @@
         "rms_dbfs": -20.51
       },
       "qa_status": "PASS",
-      "human_listen_check": "PENDING"
+      "human_listen_check": "PASS",
+      "listen_by": "Chu kenh",
+      "listen_at": "2026-11-27T22:28:44+07:00"
     },
     {
       "line_id": "l08_nam",
@@ -221,7 +235,9 @@
         "rms_dbfs": -22.75
       },
       "qa_status": "PASS",
-      "human_listen_check": "PENDING"
+      "human_listen_check": "PASS",
+      "listen_by": "Chu kenh",
+      "listen_at": "2026-11-27T22:28:44+07:00"
     },
     {
       "line_id": "l09_buyer_msg",
@@ -247,7 +263,9 @@
         "rms_dbfs": -21.86
       },
       "qa_status": "PASS",
-      "human_listen_check": "PENDING"
+      "human_listen_check": "PASS",
+      "listen_by": "Chu kenh",
+      "listen_at": "2026-11-27T22:28:44+07:00"
     },
     {
       "line_id": "l10_buyer_msg",
@@ -275,7 +293,9 @@
         "rms_dbfs": -19.71
       },
       "qa_status": "PASS",
-      "human_listen_check": "PENDING"
+      "human_listen_check": "PASS",
+      "listen_by": "Chu kenh",
+      "listen_at": "2026-11-27T22:28:44+07:00"
     },
     {
       "line_id": "l11_long",
@@ -301,7 +321,9 @@
         "rms_dbfs": -18.91
       },
       "qa_status": "PASS",
-      "human_listen_check": "PENDING"
+      "human_listen_check": "PASS",
+      "listen_by": "Chu kenh",
+      "listen_at": "2026-11-27T22:28:44+07:00"
     },
     {
       "line_id": "l12_thao",
@@ -327,7 +349,9 @@
         "rms_dbfs": -15.89
       },
       "qa_status": "PASS",
-      "human_listen_check": "PENDING"
+      "human_listen_check": "PASS",
+      "listen_by": "Chu kenh",
+      "listen_at": "2026-11-27T22:28:44+07:00"
     },
     {
       "line_id": "l13_long",
@@ -353,7 +377,9 @@
         "rms_dbfs": -21.4
       },
       "qa_status": "PASS",
-      "human_listen_check": "PENDING"
+      "human_listen_check": "PASS",
+      "listen_by": "Chu kenh",
+      "listen_at": "2026-11-27T22:28:44+07:00"
     },
     {
       "line_id": "l14_minh",
@@ -381,7 +407,9 @@
         "rms_dbfs": -18.02
       },
       "qa_status": "PASS",
-      "human_listen_check": "PENDING"
+      "human_listen_check": "PASS",
+      "listen_by": "Chu kenh",
+      "listen_at": "2026-11-27T22:28:44+07:00"
     },
     {
       "line_id": "l15_thao",
@@ -407,7 +435,9 @@
         "rms_dbfs": -17.67
       },
       "qa_status": "PASS",
-      "human_listen_check": "PENDING"
+      "human_listen_check": "PASS",
+      "listen_by": "Chu kenh",
+      "listen_at": "2026-11-27T22:28:44+07:00"
     },
     {
       "line_id": "l16_long",
@@ -433,7 +463,9 @@
         "rms_dbfs": -19.0
       },
       "qa_status": "PASS",
-      "human_listen_check": "PENDING"
+      "human_listen_check": "PASS",
+      "listen_by": "Chu kenh",
+      "listen_at": "2026-11-27T22:28:44+07:00"
     },
     {
       "line_id": "l17_long",
@@ -459,7 +491,9 @@
         "rms_dbfs": -18.72
       },
       "qa_status": "PASS",
-      "human_listen_check": "PENDING"
+      "human_listen_check": "PASS",
+      "listen_by": "Chu kenh",
+      "listen_at": "2026-11-27T22:28:44+07:00"
     },
     {
       "line_id": "l18_minh",
@@ -485,7 +519,9 @@
         "rms_dbfs": -17.92
       },
       "qa_status": "PASS",
-      "human_listen_check": "PENDING"
+      "human_listen_check": "PASS",
+      "listen_by": "Chu kenh",
+      "listen_at": "2026-11-27T22:28:44+07:00"
     },
     {
       "line_id": "l19_thao",
@@ -511,7 +547,9 @@
         "rms_dbfs": -18.26
       },
       "qa_status": "PASS",
-      "human_listen_check": "PENDING"
+      "human_listen_check": "PASS",
+      "listen_by": "Chu kenh",
+      "listen_at": "2026-11-27T22:28:44+07:00"
     },
     {
       "line_id": "l20_minh",
@@ -539,7 +577,9 @@
         "rms_dbfs": -19.2
       },
       "qa_status": "PASS",
-      "human_listen_check": "PENDING"
+      "human_listen_check": "PASS",
+      "listen_by": "Chu kenh",
+      "listen_at": "2026-11-27T22:28:44+07:00"
     },
     {
       "line_id": "l20b_khang_echo",
@@ -567,7 +607,9 @@
         "rms_dbfs": -18.88
       },
       "qa_status": "PASS",
-      "human_listen_check": "PENDING"
+      "human_listen_check": "PASS",
+      "listen_by": "Chu kenh",
+      "listen_at": "2026-11-27T22:28:44+07:00"
     },
     {
       "line_id": "l21_thao",
@@ -593,7 +635,9 @@
         "rms_dbfs": -19.37
       },
       "qa_status": "PASS",
-      "human_listen_check": "PENDING"
+      "human_listen_check": "PASS",
+      "listen_by": "Chu kenh",
+      "listen_at": "2026-11-27T22:28:44+07:00"
     },
     {
       "line_id": "l22_minh",
@@ -619,7 +663,9 @@
         "rms_dbfs": -19.26
       },
       "qa_status": "PASS",
-      "human_listen_check": "PENDING"
+      "human_listen_check": "PASS",
+      "listen_by": "Chu kenh",
+      "listen_at": "2026-11-27T22:28:44+07:00"
     },
     {
       "line_id": "l23_buyer_room",
@@ -647,7 +693,9 @@
         "rms_dbfs": -19.91
       },
       "qa_status": "PASS",
-      "human_listen_check": "PENDING"
+      "human_listen_check": "PASS",
+      "listen_by": "Chu kenh",
+      "listen_at": "2026-11-27T22:28:44+07:00"
     },
     {
       "line_id": "l24_buyer_room",
@@ -673,7 +721,9 @@
         "rms_dbfs": -22.47
       },
       "qa_status": "PASS",
-      "human_listen_check": "PENDING"
+      "human_listen_check": "PASS",
+      "listen_by": "Chu kenh",
+      "listen_at": "2026-11-27T22:28:44+07:00"
     },
     {
       "line_id": "l25_minh",
@@ -701,7 +751,9 @@
         "rms_dbfs": -17.37
       },
       "qa_status": "PASS",
-      "human_listen_check": "PENDING"
+      "human_listen_check": "PASS",
+      "listen_by": "Chu kenh",
+      "listen_at": "2026-11-27T22:28:44+07:00"
     },
     {
       "line_id": "l26_thao",
@@ -727,7 +779,9 @@
         "rms_dbfs": -17.81
       },
       "qa_status": "PASS",
-      "human_listen_check": "PENDING"
+      "human_listen_check": "PASS",
+      "listen_by": "Chu kenh",
+      "listen_at": "2026-11-27T22:28:44+07:00"
     },
     {
       "line_id": "l27_minh",
@@ -753,7 +807,9 @@
         "rms_dbfs": -20.66
       },
       "qa_status": "PASS",
-      "human_listen_check": "PENDING"
+      "human_listen_check": "PASS",
+      "listen_by": "Chu kenh",
+      "listen_at": "2026-11-27T22:28:44+07:00"
     },
     {
       "line_id": "l28_nam",
@@ -779,7 +835,9 @@
         "rms_dbfs": -19.4
       },
       "qa_status": "PASS",
-      "human_listen_check": "PENDING"
+      "human_listen_check": "PASS",
+      "listen_by": "Chu kenh",
+      "listen_at": "2026-11-27T22:28:44+07:00"
     },
     {
       "line_id": "l29_minh_p",
@@ -807,7 +865,9 @@
         "rms_dbfs": -19.36
       },
       "qa_status": "PASS",
-      "human_listen_check": "PENDING"
+      "human_listen_check": "PASS",
+      "listen_by": "Chu kenh",
+      "listen_at": "2026-11-27T22:28:44+07:00"
     },
     {
       "line_id": "l30_minh",
@@ -833,7 +893,9 @@
         "rms_dbfs": -17.59
       },
       "qa_status": "PASS",
-      "human_listen_check": "PENDING"
+      "human_listen_check": "PASS",
+      "listen_by": "Chu kenh",
+      "listen_at": "2026-11-27T22:28:44+07:00"
     },
     {
       "line_id": "l31_minh",
@@ -859,7 +921,9 @@
         "rms_dbfs": -18.69
       },
       "qa_status": "PASS",
-      "human_listen_check": "PENDING"
+      "human_listen_check": "PASS",
+      "listen_by": "Chu kenh",
+      "listen_at": "2026-11-27T22:28:44+07:00"
     },
     {
       "line_id": "l32_nam",
@@ -885,7 +949,9 @@
         "rms_dbfs": -20.21
       },
       "qa_status": "PASS",
-      "human_listen_check": "PENDING"
+      "human_listen_check": "PASS",
+      "listen_by": "Chu kenh",
+      "listen_at": "2026-11-27T22:28:44+07:00"
     },
     {
       "line_id": "l33_proxy_nu",
@@ -911,7 +977,9 @@
         "rms_dbfs": -16.87
       },
       "qa_status": "PASS",
-      "human_listen_check": "PENDING"
+      "human_listen_check": "PASS",
+      "listen_by": "Chu kenh",
+      "listen_at": "2026-11-27T22:28:44+07:00"
     },
     {
       "line_id": "l34_nam",
@@ -937,7 +1005,9 @@
         "rms_dbfs": -19.85
       },
       "qa_status": "PASS",
-      "human_listen_check": "PENDING"
+      "human_listen_check": "PASS",
+      "listen_by": "Chu kenh",
+      "listen_at": "2026-11-27T22:28:44+07:00"
     },
     {
       "line_id": "l35_proxy_nu",
@@ -963,7 +1033,9 @@
         "rms_dbfs": -18.95
       },
       "qa_status": "PASS",
-      "human_listen_check": "PENDING"
+      "human_listen_check": "PASS",
+      "listen_by": "Chu kenh",
+      "listen_at": "2026-11-27T22:28:44+07:00"
     },
     {
       "line_id": "l36_nam",
@@ -989,7 +1061,9 @@
         "rms_dbfs": -19.38
       },
       "qa_status": "PASS",
-      "human_listen_check": "PENDING"
+      "human_listen_check": "PASS",
+      "listen_by": "Chu kenh",
+      "listen_at": "2026-11-27T22:28:44+07:00"
     },
     {
       "line_id": "l37_narr",
@@ -1015,7 +1089,9 @@
         "rms_dbfs": -19.9
       },
       "qa_status": "PASS",
-      "human_listen_check": "PENDING"
+      "human_listen_check": "PASS",
+      "listen_by": "Chu kenh",
+      "listen_at": "2026-11-27T22:28:44+07:00"
     },
     {
       "line_id": "l38a_ke_p",
@@ -1041,7 +1117,9 @@
         "rms_dbfs": -23.58
       },
       "qa_status": "PASS",
-      "human_listen_check": "PENDING"
+      "human_listen_check": "PASS",
+      "listen_by": "Chu kenh",
+      "listen_at": "2026-11-27T22:28:44+07:00"
     },
     {
       "line_id": "l38b_long_p",
@@ -1067,7 +1145,9 @@
         "rms_dbfs": -21.43
       },
       "qa_status": "PASS",
-      "human_listen_check": "PENDING"
+      "human_listen_check": "PASS",
+      "listen_by": "Chu kenh",
+      "listen_at": "2026-11-27T22:28:44+07:00"
     },
     {
       "line_id": "l38c_proxy_p",
@@ -1093,7 +1173,9 @@
         "rms_dbfs": -19.18
       },
       "qa_status": "PASS",
-      "human_listen_check": "PENDING"
+      "human_listen_check": "PASS",
+      "listen_by": "Chu kenh",
+      "listen_at": "2026-11-27T22:28:44+07:00"
     },
     {
       "line_id": "l39_boss_nu",
@@ -1119,7 +1201,9 @@
         "rms_dbfs": -20.85
       },
       "qa_status": "PASS",
-      "human_listen_check": "PENDING"
+      "human_listen_check": "PASS",
+      "listen_by": "Chu kenh",
+      "listen_at": "2026-11-27T22:28:44+07:00"
     }
   ],
   "note": "Bắt buộc nghe lại từng câu (dấu thanh, cảm xúc). Đặt human_listen_check = PASS sau khi duyệt."
