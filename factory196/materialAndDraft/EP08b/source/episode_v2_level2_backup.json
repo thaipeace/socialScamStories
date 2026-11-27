@@ -1,0 +1,3228 @@
+{
+  "episode_id": "EP08b",
+  "slug": "TienNoiRoiTenLaiKhac",
+  "title": "Tiền nổi rồi, tên lại khác",
+  "version": "v2-level2-abc-staging",
+  "motion_upgrade": "level2",
+  "scam_family": "VAR-MITM-02 / VAR-COM-04 · TRIANGULATION-PAYMENT-MISMATCH – Nửa bên kia dòng tiền 45 triệu từ EP08: bẫy tam giác đẩy tiền của nạn nhân vụ lừa khác vào tài khoản người bán xe máy công chứng",
+  "duration_sec": 260.13,
+  "visual_style_lock": "Horizontal 16:9 widescreen (1920x1080), semi-realistic cinematic 2D anime illustration, contemporary Southern Vietnam urban setting, naturalistic dramatic lighting, clean bottom 15% for subtitles, no text, no letters, no numbers, no license plates, no logos, no real app interface, no real uniforms",
+  "hook": {
+    "kicker": "12:05 TRƯA · CÔNG CHỨNG THẬT",
+    "title": "TIỀN NỔI RỒI, TÊN LẠI KHÁC",
+    "start": 0.4,
+    "end": 5.0
+  },
+  "chapters": [
+    {
+      "kicker": "HỒI 1 · BA HÔM TRƯỚC",
+      "title": "KHÁCH CHỐT KHÔNG MẶC CẢ",
+      "start": 24.22,
+      "end": 28.62
+    },
+    {
+      "kicker": "HỒI 2 · TRƯA HÔM SAU",
+      "title": "TIỀN ĐÃ NỔI TRONG TÀI KHOẢN",
+      "start": 69.01,
+      "end": 73.41
+    },
+    {
+      "kicker": "HỒI 3 · HAI NGÀY SAU",
+      "title": "NICK ĐÃ XÓA, XE ĐÃ SANG TAY",
+      "start": 102.0,
+      "end": 106.4
+    },
+    {
+      "kicker": "HỒI 4 · LỘ DIỆN CƠ CHẾ",
+      "title": "TAM GIÁC LỆCH DÒNG TIỀN",
+      "start": 142.7,
+      "end": 147.1
+    },
+    {
+      "kicker": "HỒI 5 · HAI TUẦN SAU",
+      "title": "NGUYÊN TẮC HAI PHẢI, BA KHÔNG",
+      "start": 175.95,
+      "end": 180.35
+    }
+  ],
+  "scenes": [
+    {
+      "id": "s00a_pulse_1205",
+      "image": "assets/c00a.jpg",
+      "start": 0.0,
+      "end": 2.65,
+      "beat_type": "establishing",
+      "motion_level": "C",
+      "motion_intent": "Quét ngang theo dải sáng dòng tiền cyan-amber nối tay chuyển tiền (EP08) sang điện thoại Anh Minh",
+      "motion": {
+        "preset": "pan_right",
+        "scale": [
+          1.06,
+          1.06
+        ],
+        "focus": [
+          [
+            0.46,
+            0.49
+          ],
+          [
+            0.54,
+            0.49
+          ]
+        ],
+        "wobble": "none"
+      },
+      "detail_fx": [
+        {
+          "type": "screen_glow",
+          "pos": [
+            0.32,
+            0.56
+          ],
+          "radius": [
+            0.18,
+            0.2
+          ],
+          "color": [
+            105,
+            220,
+            255
+          ],
+          "intensity": 0.28,
+          "mode": "pulse",
+          "fade": 0.25,
+          "start": 0.4,
+          "end": 2.65
+        },
+        {
+          "type": "screen_glow",
+          "pos": [
+            0.73,
+            0.5
+          ],
+          "radius": [
+            0.2,
+            0.22
+          ],
+          "color": [
+            255,
+            205,
+            110
+          ],
+          "intensity": 0.38,
+          "mode": "turn_on",
+          "fade": 0.22,
+          "start": 1.3,
+          "end": 2.65
+        },
+        {
+          "type": "light_shift",
+          "end": 1.83,
+          "end_dur": 0.22,
+          "brightness": 1.14,
+          "tint_rgb": [
+            255,
+            220,
+            150
+          ],
+          "tint_strength": 0.1,
+          "at": 1.55,
+          "dur": 0.1
+        }
+      ]
+    },
+    {
+      "id": "s00b_hook_call",
+      "image": "assets/c00.jpg",
+      "start": 2.65,
+      "end": 21.77,
+      "beat_type": "suspicion",
+      "motion_level": "C",
+      "motion_intent": "Đẩy nhẹ kèm nhịp thở, chớp mắt và khẩu hình thật khi Anh Minh sững người nghe ngân hàng báo 45 triệu từ vụ lừa",
+      "motion": {
+        "preset": "subtle_push_right",
+        "scale": [
+          1.02,
+          1.09
+        ],
+        "focus": [
+          [
+            0.51,
+            0.48
+          ],
+          [
+            0.55,
+            0.46
+          ]
+        ],
+        "wobble": "breathe",
+        "easing": "ease_out"
+      },
+      "transition_in": {
+        "type": "flash_white",
+        "dur": 0.2
+      },
+      "shakes": [
+        {
+          "at": 2.83,
+          "dur": 0.4,
+          "amp": 16
+        }
+      ],
+      "detail_fx": [
+        {
+          "type": "eye_blink",
+          "image": "assets/c00_minh_blink.jpg",
+          "region": [
+            0.476,
+            0.193,
+            0.63,
+            0.357
+          ],
+          "times": [
+            4.55,
+            8.3,
+            12.33,
+            16.64,
+            20.46
+          ],
+          "feather": 0.006,
+          "close_dur": 0.055,
+          "hold_dur": 0.045,
+          "open_dur": 0.085
+        },
+        {
+          "type": "mouth_sync",
+          "speaker": "anh_hai",
+          "line_ids": [
+            "l02_minh"
+          ],
+          "default_state": "mid",
+          "closed_image": "assets/c00_minh_mouth_closed.jpg",
+          "mid_image": "assets/c00.jpg",
+          "open_image": "assets/c00_minh_mouth_open.jpg",
+          "region": [
+            0.511,
+            0.306,
+            0.63,
+            0.45
+          ],
+          "fps": 12,
+          "thresh_mid": 0.14,
+          "thresh_open": 0.68,
+          "feather": 0.006
+        }
+      ]
+    },
+    {
+      "id": "s01_hook_freeze",
+      "image": "assets/c01.jpg",
+      "start": 21.77,
+      "end": 24.02,
+      "beat_type": "anomaly",
+      "motion_level": "C",
+      "motion_intent": "Giữ tĩnh lạnh sau cú impact, gom sáng vào ánh mắt sững sờ (chớp mắt 1 nhịp) và ánh màn hình sao kê",
+      "motion": {
+        "preset": "static_hold"
+      },
+      "transition_in": {
+        "type": "flash_white",
+        "dur": 0.22
+      },
+      "shakes": [
+        {
+          "at": 21.92,
+          "dur": 0.4,
+          "amp": 16
+        }
+      ],
+      "detail_fx": [
+        {
+          "type": "eye_blink",
+          "image": "assets/c01_minh_blink.jpg",
+          "region": [
+            0.603,
+            0.206,
+            0.764,
+            0.343
+          ],
+          "times": [
+            22.92
+          ],
+          "feather": 0.006,
+          "close_dur": 0.055,
+          "hold_dur": 0.045,
+          "open_dur": 0.085
+        },
+        {
+          "type": "focus_highlight",
+          "pos": [
+            0.66,
+            0.48
+          ],
+          "radius": [
+            0.32,
+            0.38
+          ],
+          "dim_outer": 0.26,
+          "fade": 0.3,
+          "start": 22.17,
+          "end": 24.02
+        },
+        {
+          "type": "screen_glow",
+          "pos": [
+            0.57,
+            0.72
+          ],
+          "radius": [
+            0.18,
+            0.2
+          ],
+          "color": [
+            110,
+            225,
+            255
+          ],
+          "intensity": 0.28,
+          "mode": "turn_on",
+          "fade": 0.3,
+          "start": 22.22,
+          "end": 24.02
+        }
+      ]
+    },
+    {
+      "id": "s02_sell_bike_cafe",
+      "image": "assets/c02.jpg",
+      "start": 24.02,
+      "end": 55.23,
+      "beat_type": "establishing",
+      "motion_level": "C",
+      "motion_intent": "Pan ngang nắng sáng quán trà đá + Living-Character 3 nhân vật (Minh, Thảo, Nam chớp mắt lệch nhịp & khẩu hình đối thoại thật)",
+      "motion": {
+        "preset": "pan_right",
+        "scale": [
+          1.06,
+          1.06
+        ],
+        "focus": [
+          [
+            0.46,
+            0.49
+          ],
+          [
+            0.54,
+            0.49
+          ]
+        ],
+        "wobble": "breathe"
+      },
+      "transition_in": {
+        "type": "fade_black",
+        "dur": 0.45
+      },
+      "detail_fx": [
+        {
+          "type": "eye_blink",
+          "image": "assets/c02_minh_blink.jpg",
+          "region": [
+            0.365,
+            0.266,
+            0.471,
+            0.373
+          ],
+          "times": [
+            26.12,
+            30.07,
+            34.3,
+            38.81,
+            42.83,
+            47.13,
+            51.71
+          ],
+          "feather": 0.006,
+          "close_dur": 0.055,
+          "hold_dur": 0.045,
+          "open_dur": 0.085
+        },
+        {
+          "type": "eye_blink",
+          "image": "assets/c02_thao_blink.jpg",
+          "region": [
+            0.54,
+            0.305,
+            0.644,
+            0.444
+          ],
+          "times": [
+            27.42,
+            31.67,
+            36.2,
+            41.01,
+            45.33,
+            49.93
+          ],
+          "feather": 0.006,
+          "close_dur": 0.055,
+          "hold_dur": 0.045,
+          "open_dur": 0.085
+        },
+        {
+          "type": "eye_blink",
+          "image": "assets/c02_nam_blink.jpg",
+          "region": [
+            0.719,
+            0.278,
+            0.841,
+            0.419
+          ],
+          "times": [
+            25.52,
+            29.07,
+            32.9,
+            37.01,
+            40.63,
+            44.53,
+            48.71,
+            52.4
+          ],
+          "feather": 0.006,
+          "close_dur": 0.055,
+          "hold_dur": 0.045,
+          "open_dur": 0.085
+        },
+        {
+          "type": "mouth_sync",
+          "speaker": "anh_hai",
+          "line_ids": [
+            "l05_minh",
+            "l07_minh"
+          ],
+          "default_state": "mid",
+          "closed_image": "assets/c02_minh_mouth_closed.jpg",
+          "mid_image": "assets/c02.jpg",
+          "open_image": "assets/c02_minh_mouth_open.jpg",
+          "region": [
+            0.367,
+            0.348,
+            0.462,
+            0.481
+          ],
+          "fps": 12,
+          "thresh_mid": 0.14,
+          "thresh_open": 0.68,
+          "feather": 0.006
+        },
+        {
+          "type": "mouth_sync",
+          "speaker": "chi_hai",
+          "line_ids": [
+            "l06_thao"
+          ],
+          "default_state": "closed",
+          "closed_image": "assets/c02.jpg",
+          "mid_image": "assets/c02_thao_mouth_mid.jpg",
+          "open_image": "assets/c02_thao_mouth_open.jpg",
+          "region": [
+            0.541,
+            0.395,
+            0.63,
+            0.511
+          ],
+          "fps": 12,
+          "thresh_mid": 0.14,
+          "thresh_open": 0.68,
+          "feather": 0.006
+        },
+        {
+          "type": "mouth_sync",
+          "speaker": "thang_tun",
+          "line_ids": [
+            "l04_nam",
+            "l08_nam"
+          ],
+          "default_state": "mid",
+          "closed_image": "assets/c02_nam_mouth_closed.jpg",
+          "mid_image": "assets/c02.jpg",
+          "open_image": "assets/c02_nam_mouth_open.jpg",
+          "region": [
+            0.732,
+            0.371,
+            0.849,
+            0.512
+          ],
+          "fps": 12,
+          "thresh_mid": 0.14,
+          "thresh_open": 0.68,
+          "feather": 0.006
+        }
+      ]
+    },
+    {
+      "id": "s03_buyer_chat_dark",
+      "image": "assets/c03_dim.jpg",
+      "start": 55.23,
+      "end": 68.81,
+      "beat_type": "information",
+      "motion_level": "C",
+      "motion_intent": "Pan trái lạnh qua hai điện thoại phòng tối EP08 kèm màn hình phải bừng sáng (detail_reveal + screen_glow) đúng nhịp gõ tin",
+      "motion": {
+        "preset": "pan_left",
+        "scale": [
+          1.06,
+          1.06
+        ],
+        "focus": [
+          [
+            0.54,
+            0.49
+          ],
+          [
+            0.46,
+            0.49
+          ]
+        ],
+        "wobble": "none"
+      },
+      "transition_in": {
+        "type": "fade_black",
+        "dur": 0.4
+      },
+      "detail_fx": [
+        {
+          "type": "detail_reveal",
+          "image": "assets/c03.jpg",
+          "at": 55.8,
+          "dur": 0.3
+        },
+        {
+          "type": "screen_glow",
+          "pos": [
+            0.61,
+            0.66
+          ],
+          "radius": [
+            0.2,
+            0.16
+          ],
+          "color": [
+            115,
+            215,
+            255
+          ],
+          "intensity": 0.28,
+          "mode": "turn_on",
+          "fade": 0.3,
+          "start": 55.9,
+          "end": 68.81
+        }
+      ]
+    },
+    {
+      "id": "s04_notary_meeting",
+      "image": "assets/c04.jpg",
+      "start": 68.81,
+      "end": 83.73,
+      "beat_type": "normal",
+      "motion_level": "C",
+      "motion_intent": "Lùi nhẹ mở không gian phòng công chứng đông người + Living-Character 3 nhân vật (Minh, Thảo, Long chớp mắt & đối thoại khớp WAV)",
+      "motion": {
+        "preset": "slow_pull_out",
+        "scale": [
+          1.08,
+          1.02
+        ],
+        "focus": [
+          [
+            0.5,
+            0.47
+          ],
+          [
+            0.5,
+            0.5
+          ]
+        ],
+        "wobble": "breathe"
+      },
+      "transition_in": {
+        "type": "fade_black",
+        "dur": 0.4
+      },
+      "detail_fx": [
+        {
+          "type": "eye_blink",
+          "image": "assets/c04_minh_blink.jpg",
+          "region": [
+            0.191,
+            0.218,
+            0.291,
+            0.352
+          ],
+          "times": [
+            71.41,
+            75.56,
+            79.99
+          ],
+          "feather": 0.006,
+          "close_dur": 0.055,
+          "hold_dur": 0.045,
+          "open_dur": 0.085
+        },
+        {
+          "type": "eye_blink",
+          "image": "assets/c04_thao_blink.jpg",
+          "region": [
+            0.373,
+            0.271,
+            0.462,
+            0.404
+          ],
+          "times": [
+            70.61,
+            74.36,
+            78.39,
+            82.7
+          ],
+          "feather": 0.006,
+          "close_dur": 0.055,
+          "hold_dur": 0.045,
+          "open_dur": 0.085
+        },
+        {
+          "type": "eye_blink",
+          "image": "assets/c04_long_blink.jpg",
+          "region": [
+            0.715,
+            0.241,
+            0.817,
+            0.349
+          ],
+          "times": [
+            72.01,
+            76.06,
+            80.39
+          ],
+          "feather": 0.006,
+          "close_dur": 0.055,
+          "hold_dur": 0.045,
+          "open_dur": 0.085
+        },
+        {
+          "type": "mouth_sync",
+          "speaker": "chi_hai",
+          "line_ids": [
+            "l12_thao"
+          ],
+          "default_state": "closed",
+          "closed_image": "assets/c04.jpg",
+          "mid_image": "assets/c04_thao_mouth_mid.jpg",
+          "open_image": "assets/c04_thao_mouth_open.jpg",
+          "region": [
+            0.377,
+            0.348,
+            0.46,
+            0.476
+          ],
+          "fps": 12,
+          "thresh_mid": 0.14,
+          "thresh_open": 0.68,
+          "feather": 0.006
+        },
+        {
+          "type": "mouth_sync",
+          "speaker": "ke_ngot_ngao_nam",
+          "line_ids": [
+            "l11_long",
+            "l13_long"
+          ],
+          "default_state": "mid",
+          "closed_image": "assets/c04_long_mouth_closed.jpg",
+          "mid_image": "assets/c04.jpg",
+          "open_image": "assets/c04_long_mouth_open.jpg",
+          "region": [
+            0.727,
+            0.332,
+            0.818,
+            0.461
+          ],
+          "fps": 12,
+          "thresh_mid": 0.14,
+          "thresh_open": 0.68,
+          "feather": 0.006
+        }
+      ]
+    },
+    {
+      "id": "s05_money_arrives_mismatch",
+      "image": "assets/c05.jpg",
+      "start": 83.73,
+      "end": 96.87,
+      "beat_type": "anomaly",
+      "motion_level": "C",
+      "motion_intent": "Đẩy nhẹ nhịp 12:05 khi tiếng ting vang lên + ánh sáng cyan-amber hắt màn hình + đối thoại 3 nhân vật khớp WAV thật",
+      "motion": {
+        "preset": "slow_push_in",
+        "scale": [
+          1.02,
+          1.09
+        ],
+        "focus": [
+          [
+            0.5,
+            0.48
+          ],
+          [
+            0.52,
+            0.46
+          ]
+        ],
+        "wobble": "breathe",
+        "easing": "ease_out"
+      },
+      "transition_in": {
+        "type": "dissolve",
+        "dur": 0.3
+      },
+      "detail_fx": [
+        {
+          "type": "eye_blink",
+          "image": "assets/c05_thao_blink.jpg",
+          "region": [
+            0.221,
+            0.329,
+            0.303,
+            0.444
+          ],
+          "times": [
+            86.13,
+            89.98,
+            94.11
+          ],
+          "feather": 0.006,
+          "close_dur": 0.055,
+          "hold_dur": 0.045,
+          "open_dur": 0.085
+        },
+        {
+          "type": "eye_blink",
+          "image": "assets/c05_minh_blink.jpg",
+          "region": [
+            0.389,
+            0.227,
+            0.485,
+            0.366
+          ],
+          "times": [
+            85.23,
+            88.78,
+            92.61
+          ],
+          "feather": 0.006,
+          "close_dur": 0.055,
+          "hold_dur": 0.045,
+          "open_dur": 0.085
+        },
+        {
+          "type": "eye_blink",
+          "image": "assets/c05_long_blink.jpg",
+          "region": [
+            0.715,
+            0.243,
+            0.817,
+            0.38
+          ],
+          "times": [
+            86.83,
+            90.98,
+            95.41
+          ],
+          "feather": 0.006,
+          "close_dur": 0.055,
+          "hold_dur": 0.045,
+          "open_dur": 0.085
+        },
+        {
+          "type": "mouth_sync",
+          "speaker": "chi_hai",
+          "line_ids": [
+            "l15_thao"
+          ],
+          "default_state": "closed",
+          "closed_image": "assets/c05.jpg",
+          "mid_image": "assets/c05_thao_mouth_mid.jpg",
+          "open_image": "assets/c05_thao_mouth_open.jpg",
+          "region": [
+            0.219,
+            0.399,
+            0.301,
+            0.531
+          ],
+          "fps": 12,
+          "thresh_mid": 0.14,
+          "thresh_open": 0.68,
+          "feather": 0.006
+        },
+        {
+          "type": "mouth_sync",
+          "speaker": "anh_hai",
+          "line_ids": [
+            "l14_minh"
+          ],
+          "default_state": "closed",
+          "closed_image": "assets/c05.jpg",
+          "mid_image": "assets/c05_minh_mouth_mid.jpg",
+          "open_image": "assets/c05_minh_mouth_open.jpg",
+          "region": [
+            0.376,
+            0.347,
+            0.479,
+            0.463
+          ],
+          "fps": 12,
+          "thresh_mid": 0.14,
+          "thresh_open": 0.68,
+          "feather": 0.006
+        },
+        {
+          "type": "mouth_sync",
+          "speaker": "ke_ngot_ngao_nam",
+          "line_ids": [
+            "l16_long"
+          ],
+          "default_state": "mid",
+          "closed_image": "assets/c05_long_mouth_closed.jpg",
+          "mid_image": "assets/c05.jpg",
+          "open_image": "assets/c05_long_mouth_open.jpg",
+          "region": [
+            0.727,
+            0.331,
+            0.817,
+            0.457
+          ],
+          "fps": 12,
+          "thresh_mid": 0.14,
+          "thresh_open": 0.68,
+          "feather": 0.006
+        },
+        {
+          "type": "screen_glow",
+          "pos": [
+            0.5,
+            0.58
+          ],
+          "radius": [
+            0.18,
+            0.18
+          ],
+          "color": [
+            255,
+            210,
+            115
+          ],
+          "intensity": 0.32,
+          "mode": "turn_on",
+          "fade": 0.25,
+          "start": 84.23,
+          "end": 96.87
+        },
+        {
+          "type": "light_shift",
+          "end": 84.53,
+          "end_dur": 0.25,
+          "brightness": 1.12,
+          "tint_rgb": [
+            255,
+            225,
+            165
+          ],
+          "tint_strength": 0.09,
+          "at": 84.23,
+          "dur": 0.1
+        }
+      ]
+    },
+    {
+      "id": "s06_sign_handover",
+      "image": "assets/c06.jpg",
+      "start": 96.87,
+      "end": 101.8,
+      "beat_type": "normal",
+      "motion_level": "A",
+      "motion_intent": "Pan ngang sáng trưa từ Long nhận xe tay ga xám bạc hướng về Minh & Thảo vẫy tay trước sảnh công chứng",
+      "motion": {
+        "preset": "pan_left",
+        "scale": [
+          1.06,
+          1.06
+        ],
+        "focus": [
+          [
+            0.54,
+            0.49
+          ],
+          [
+            0.46,
+            0.49
+          ]
+        ],
+        "wobble": "none"
+      },
+      "transition_in": {
+        "type": "dissolve",
+        "dur": 0.35
+      }
+    },
+    {
+      "id": "s07_call_blocked",
+      "image": "assets/c07.jpg",
+      "start": 101.8,
+      "end": 123.03,
+      "beat_type": "climax",
+      "motion_level": "C",
+      "motion_intent": "Lùi căng thẳng khi mất dấu cả hai + ánh đỏ điện thoại nhấp nháy khớp call_end + chớp mắt & khẩu hình Minh/Thảo",
+      "motion": {
+        "preset": "slow_pull_out",
+        "scale": [
+          1.09,
+          1.02
+        ],
+        "focus": [
+          [
+            0.56,
+            0.47
+          ],
+          [
+            0.51,
+            0.49
+          ]
+        ],
+        "wobble": "breathe"
+      },
+      "transition_in": {
+        "type": "fade_black",
+        "dur": 0.4
+      },
+      "shakes": [
+        {
+          "at": 101.95,
+          "dur": 0.4,
+          "amp": 16
+        }
+      ],
+      "detail_fx": [
+        {
+          "type": "eye_blink",
+          "image": "assets/c07_minh_blink.jpg",
+          "region": [
+            0.54,
+            0.347,
+            0.647,
+            0.452
+          ],
+          "times": [
+            103.9,
+            107.35,
+            111.08,
+            115.09,
+            118.61,
+            122.41
+          ],
+          "feather": 0.006,
+          "close_dur": 0.055,
+          "hold_dur": 0.045,
+          "open_dur": 0.085
+        },
+        {
+          "type": "eye_blink",
+          "image": "assets/c07_thao_blink.jpg",
+          "region": [
+            0.733,
+            0.274,
+            0.841,
+            0.39
+          ],
+          "times": [
+            105.0,
+            109.05,
+            113.38,
+            117.99,
+            122.11
+          ],
+          "feather": 0.006,
+          "close_dur": 0.055,
+          "hold_dur": 0.045,
+          "open_dur": 0.085
+        },
+        {
+          "type": "mouth_sync",
+          "speaker": "anh_hai",
+          "line_ids": [
+            "l18_minh",
+            "l20_minh"
+          ],
+          "default_state": "mid",
+          "closed_image": "assets/c07_minh_mouth_closed.jpg",
+          "mid_image": "assets/c07.jpg",
+          "open_image": "assets/c07_minh_mouth_open.jpg",
+          "region": [
+            0.546,
+            0.44,
+            0.652,
+            0.581
+          ],
+          "fps": 12,
+          "thresh_mid": 0.14,
+          "thresh_open": 0.68,
+          "feather": 0.006
+        },
+        {
+          "type": "mouth_sync",
+          "speaker": "chi_hai",
+          "line_ids": [
+            "l19_thao"
+          ],
+          "default_state": "closed",
+          "closed_image": "assets/c07.jpg",
+          "mid_image": "assets/c07_thao_mouth_mid.jpg",
+          "open_image": "assets/c07_thao_mouth_open.jpg",
+          "region": [
+            0.737,
+            0.369,
+            0.843,
+            0.503
+          ],
+          "fps": 12,
+          "thresh_mid": 0.14,
+          "thresh_open": 0.68,
+          "feather": 0.006
+        },
+        {
+          "type": "screen_glow",
+          "pos": [
+            0.56,
+            0.73
+          ],
+          "radius": [
+            0.18,
+            0.14
+          ],
+          "color": [
+            255,
+            65,
+            70
+          ],
+          "intensity": 0.34,
+          "mode": "flicker",
+          "fade": 0.22,
+          "start": 103.1,
+          "end": 123.03
+        }
+      ]
+    },
+    {
+      "id": "s08a_ep08_twist",
+      "image": "assets/c08a.jpg",
+      "start": 123.03,
+      "end": 129.69,
+      "beat_type": "climax",
+      "motion_level": "C",
+      "motion_intent": "Cú nổ twist nối trực tiếp EP08: hồi ức Khang & Anh Đạt với khẩu hình Khang khớp giọng Puck + ánh 2 điện thoại bàn gỗ",
+      "motion": {
+        "preset": "slow_push_in",
+        "scale": [
+          1.02,
+          1.09
+        ],
+        "focus": [
+          [
+            0.5,
+            0.48
+          ],
+          [
+            0.52,
+            0.46
+          ]
+        ],
+        "wobble": "breathe",
+        "easing": "ease_out"
+      },
+      "transition_in": {
+        "type": "flash_white",
+        "dur": 0.22
+      },
+      "shakes": [
+        {
+          "at": 123.21,
+          "dur": 0.4,
+          "amp": 16
+        }
+      ],
+      "detail_fx": [
+        {
+          "type": "eye_blink",
+          "image": "assets/c08a_dat_blink.jpg",
+          "region": [
+            0.35,
+            0.238,
+            0.454,
+            0.358
+          ],
+          "times": [
+            125.33,
+            129.18
+          ],
+          "feather": 0.006,
+          "close_dur": 0.055,
+          "hold_dur": 0.045,
+          "open_dur": 0.085
+        },
+        {
+          "type": "eye_blink",
+          "image": "assets/c08a_khang_blink.jpg",
+          "region": [
+            0.577,
+            0.231,
+            0.682,
+            0.357
+          ],
+          "times": [
+            124.43,
+            127.68
+          ],
+          "feather": 0.006,
+          "close_dur": 0.055,
+          "hold_dur": 0.045,
+          "open_dur": 0.085
+        },
+        {
+          "type": "mouth_sync",
+          "speaker": "thang_tun",
+          "line_ids": [
+            "l20b_khang_echo"
+          ],
+          "default_state": "mid",
+          "closed_image": "assets/c08a_khang_mouth_closed.jpg",
+          "mid_image": "assets/c08a.jpg",
+          "open_image": "assets/c08a_khang_mouth_open.jpg",
+          "region": [
+            0.602,
+            0.329,
+            0.692,
+            0.459
+          ],
+          "fps": 12,
+          "thresh_mid": 0.14,
+          "thresh_open": 0.68,
+          "feather": 0.006
+        },
+        {
+          "type": "screen_glow",
+          "pos": [
+            0.5,
+            0.88
+          ],
+          "radius": [
+            0.24,
+            0.14
+          ],
+          "color": [
+            115,
+            210,
+            255
+          ],
+          "intensity": 0.26,
+          "mode": "pulse",
+          "fade": 0.3,
+          "start": 123.53,
+          "end": 129.69
+        }
+      ]
+    },
+    {
+      "id": "s08b_paper_trap",
+      "image": "assets/c08.jpg",
+      "start": 129.69,
+      "end": 142.5,
+      "beat_type": "information",
+      "motion_level": "C",
+      "motion_intent": "Lùi chậm cận bàn phòng khách phơi bày khoảng cách giữa bìa hợp đồng công chứng và sao kê điện thoại",
+      "motion": {
+        "preset": "slow_pull_out",
+        "scale": [
+          1.08,
+          1.02
+        ],
+        "focus": [
+          [
+            0.5,
+            0.48
+          ],
+          [
+            0.5,
+            0.5
+          ]
+        ],
+        "wobble": "none"
+      },
+      "transition_in": {
+        "type": "dissolve",
+        "dur": 0.35
+      },
+      "detail_fx": [
+        {
+          "type": "focus_highlight",
+          "pos": [
+            0.54,
+            0.5
+          ],
+          "radius": [
+            0.42,
+            0.36
+          ],
+          "dim_outer": 0.22,
+          "fade": 0.45,
+          "start": 130.24,
+          "end": 142.5
+        },
+        {
+          "type": "screen_glow",
+          "pos": [
+            0.85,
+            0.53
+          ],
+          "radius": [
+            0.14,
+            0.18
+          ],
+          "color": [
+            125,
+            220,
+            255
+          ],
+          "intensity": 0.26,
+          "mode": "pulse",
+          "fade": 0.35,
+          "start": 130.29,
+          "end": 142.5
+        }
+      ]
+    },
+    {
+      "id": "s09_triangle_reveal",
+      "image": "assets/c09.jpg",
+      "start": 142.5,
+      "end": 157.3,
+      "beat_type": "information",
+      "motion_level": "B",
+      "motion_intent": "Parallax 2.5D hai lớp phòng tối tách bóng lưng kẻ đứng giữa (nhịp thở nhẹ) trước hai điện thoại & tam giác dòng tiền phát sáng",
+      "motion": {
+        "preset": "slow_push_in",
+        "scale": [
+          1.02,
+          1.09
+        ],
+        "focus": [
+          [
+            0.5,
+            0.49
+          ],
+          [
+            0.5,
+            0.46
+          ]
+        ],
+        "wobble": "none",
+        "easing": "ease_out"
+      },
+      "transition_in": {
+        "type": "flash_white",
+        "dur": 0.22
+      },
+      "shakes": [
+        {
+          "at": 142.64,
+          "dur": 0.4,
+          "amp": 16
+        }
+      ],
+      "parallax": {
+        "camera": "push_in",
+        "dolly": [
+          1.02,
+          1.08
+        ],
+        "shift_x": [
+          0.0,
+          0.0
+        ],
+        "shift_y": [
+          0.0,
+          -4.0
+        ],
+        "focus": [
+          0.54,
+          0.52
+        ],
+        "strength": 0.88,
+        "easing": "ease_out",
+        "layers": [
+          {
+            "role": "bg",
+            "image": "assets/s09_bg.jpg",
+            "depth": 0.42,
+            "blur": 0.6
+          },
+          {
+            "role": "fg",
+            "image": "assets/s09_fg.png",
+            "depth": 1.28,
+            "breathe_y": 1.6,
+            "breathe_period": 3.8
+          }
+        ]
+      },
+      "detail_fx": [
+        {
+          "type": "screen_glow",
+          "space": "frame",
+          "pos": [
+            0.5,
+            0.64
+          ],
+          "radius": [
+            0.24,
+            0.24
+          ],
+          "color": [
+            105,
+            215,
+            255
+          ],
+          "intensity": 0.26,
+          "mode": "pulse",
+          "fade": 0.4,
+          "start": 143.05,
+          "end": 157.3
+        }
+      ]
+    },
+    {
+      "id": "s10_response_action",
+      "image": "assets/c10.jpg",
+      "start": 157.3,
+      "end": 175.75,
+      "beat_type": "aftermath",
+      "motion_level": "C",
+      "motion_intent": "Pan ngang sáng sớm giữ mạch đối thoại cản rút tiền giữa Minh & Thảo (Living-Character chớp mắt + khẩu hình đôi)",
+      "motion": {
+        "preset": "pan_right",
+        "scale": [
+          1.06,
+          1.06
+        ],
+        "focus": [
+          [
+            0.46,
+            0.49
+          ],
+          [
+            0.54,
+            0.49
+          ]
+        ],
+        "wobble": "breathe"
+      },
+      "transition_in": {
+        "type": "fade_black",
+        "dur": 0.4
+      },
+      "detail_fx": [
+        {
+          "type": "eye_blink",
+          "image": "assets/c10_minh_blink.jpg",
+          "region": [
+            0.321,
+            0.169,
+            0.439,
+            0.311
+          ],
+          "times": [
+            159.1,
+            162.85,
+            166.88,
+            171.19,
+            175.01
+          ],
+          "feather": 0.006,
+          "close_dur": 0.055,
+          "hold_dur": 0.045,
+          "open_dur": 0.085
+        },
+        {
+          "type": "eye_blink",
+          "image": "assets/c10_thao_blink.jpg",
+          "region": [
+            0.619,
+            0.223,
+            0.72,
+            0.346
+          ],
+          "times": [
+            160.2,
+            164.35,
+            168.78,
+            173.49
+          ],
+          "feather": 0.006,
+          "close_dur": 0.055,
+          "hold_dur": 0.045,
+          "open_dur": 0.085
+        },
+        {
+          "type": "mouth_sync",
+          "speaker": "anh_hai",
+          "line_ids": [
+            "l25_minh",
+            "l27_minh"
+          ],
+          "default_state": "mid",
+          "closed_image": "assets/c10_minh_mouth_closed.jpg",
+          "mid_image": "assets/c10.jpg",
+          "open_image": "assets/c10_minh_mouth_open.jpg",
+          "region": [
+            0.327,
+            0.29,
+            0.421,
+            0.422
+          ],
+          "fps": 12,
+          "thresh_mid": 0.14,
+          "thresh_open": 0.68,
+          "feather": 0.006
+        },
+        {
+          "type": "mouth_sync",
+          "speaker": "chi_hai",
+          "line_ids": [
+            "l26_thao"
+          ],
+          "default_state": "closed",
+          "closed_image": "assets/c10.jpg",
+          "mid_image": "assets/c10_thao_mouth_mid.jpg",
+          "open_image": "assets/c10_thao_mouth_open.jpg",
+          "region": [
+            0.627,
+            0.316,
+            0.713,
+            0.442
+          ],
+          "fps": 12,
+          "thresh_mid": 0.14,
+          "thresh_open": 0.68,
+          "feather": 0.006
+        }
+      ]
+    },
+    {
+      "id": "s11_nam_calls_notary",
+      "image": "assets/c11.jpg",
+      "start": 175.75,
+      "end": 188.22,
+      "beat_type": "establishing",
+      "motion_level": "B",
+      "motion_intent": "Parallax 2.5D tách Nam tiền cảnh (nhịp thở, chớp mắt & khẩu hình khóa cứng theo layer FG) với người mua hộ nữ chờ sẵn ở sảnh sau",
+      "motion": {
+        "preset": "slow_push_in",
+        "scale": [
+          1.02,
+          1.09
+        ],
+        "focus": [
+          [
+            0.5,
+            0.49
+          ],
+          [
+            0.5,
+            0.46
+          ]
+        ],
+        "wobble": "none",
+        "easing": "ease_out"
+      },
+      "transition_in": {
+        "type": "fade_black",
+        "dur": 0.45
+      },
+      "parallax": {
+        "camera": "push_in",
+        "dolly": [
+          1.02,
+          1.08
+        ],
+        "shift_x": [
+          0.0,
+          0.0
+        ],
+        "shift_y": [
+          0.0,
+          -3.0
+        ],
+        "focus": [
+          0.36,
+          0.46
+        ],
+        "strength": 0.86,
+        "easing": "ease_out",
+        "layers": [
+          {
+            "role": "bg",
+            "image": "assets/s11_bg.jpg",
+            "depth": 0.42,
+            "blur": 0.6
+          },
+          {
+            "role": "fg",
+            "image": "assets/s11_fg.png",
+            "depth": 1.26,
+            "breathe_y": 1.8,
+            "breathe_period": 3.4
+          }
+        ]
+      },
+      "detail_fx": [
+        {
+          "type": "eye_blink",
+          "image": "assets/c11_nam_blink.jpg",
+          "region": [
+            0.147,
+            0.197,
+            0.309,
+            0.359
+          ],
+          "times": [
+            177.45,
+            181.0,
+            184.83
+          ],
+          "feather": 0.006,
+          "close_dur": 0.055,
+          "hold_dur": 0.045,
+          "open_dur": 0.085,
+          "layer": "fg"
+        },
+        {
+          "type": "mouth_sync",
+          "speaker": "thang_tun",
+          "line_ids": [
+            "l28_nam"
+          ],
+          "default_state": "mid",
+          "closed_image": "assets/c11_nam_mouth_closed.jpg",
+          "mid_image": "assets/c11.jpg",
+          "open_image": "assets/c11_nam_mouth_open.jpg",
+          "region": [
+            0.191,
+            0.33,
+            0.311,
+            0.48
+          ],
+          "fps": 12,
+          "thresh_mid": 0.14,
+          "thresh_open": 0.68,
+          "feather": 0.006,
+          "layer": "fg"
+        }
+      ]
+    },
+    {
+      "id": "s12_minh_warns_rule",
+      "image": "assets/c12.jpg",
+      "start": 188.22,
+      "end": 200.74,
+      "beat_type": "climax",
+      "motion_level": "C",
+      "motion_intent": "Trượt lên nhấn cử chỉ giơ 2 ngón tay dặn nguyên tắc 2 Phải của Anh Minh (chớp mắt + khẩu hình gấp khớp WAV + foley low_accent)",
+      "motion": {
+        "preset": "drift_up",
+        "scale": [
+          1.05,
+          1.06
+        ],
+        "focus": [
+          [
+            0.52,
+            0.51
+          ],
+          [
+            0.52,
+            0.45
+          ]
+        ],
+        "wobble": "breathe",
+        "easing": "smoothstep"
+      },
+      "transition_in": {
+        "type": "dissolve",
+        "dur": 0.3
+      },
+      "detail_fx": [
+        {
+          "type": "eye_blink",
+          "image": "assets/c12_minh_blink.jpg",
+          "region": [
+            0.635,
+            0.192,
+            0.791,
+            0.344
+          ],
+          "times": [
+            189.82,
+            193.27,
+            197.0
+          ],
+          "feather": 0.006,
+          "close_dur": 0.055,
+          "hold_dur": 0.045,
+          "open_dur": 0.085
+        },
+        {
+          "type": "mouth_sync",
+          "speaker": "anh_hai",
+          "line_ids": [
+            "l30_minh",
+            "l31_minh"
+          ],
+          "default_state": "mid",
+          "closed_image": "assets/c12_minh_mouth_closed.jpg",
+          "mid_image": "assets/c12.jpg",
+          "open_image": "assets/c12_minh_mouth_open.jpg",
+          "region": [
+            0.659,
+            0.309,
+            0.781,
+            0.46
+          ],
+          "fps": 12,
+          "thresh_mid": 0.14,
+          "thresh_open": 0.68,
+          "feather": 0.006
+        }
+      ]
+    },
+    {
+      "id": "s13_nam_tests_proxy",
+      "image": "assets/c13.jpg",
+      "start": 200.74,
+      "end": 218.74,
+      "beat_type": "climax",
+      "motion_level": "B",
+      "motion_intent": "Cảnh đối mặt đinh (Thumbnail): 2.5D Parallax tách bàn công chứng + Nam & người mua hộ nữ khỏi sảnh đông kèm khẩu hình đôi & chớp mắt khóa trên layer FG",
+      "motion": {
+        "preset": "slow_push_in",
+        "scale": [
+          1.02,
+          1.09
+        ],
+        "focus": [
+          [
+            0.5,
+            0.49
+          ],
+          [
+            0.5,
+            0.46
+          ]
+        ],
+        "wobble": "none",
+        "easing": "ease_out"
+      },
+      "transition_in": {
+        "type": "dissolve",
+        "dur": 0.3
+      },
+      "parallax": {
+        "camera": "push_in",
+        "dolly": [
+          1.01,
+          1.07
+        ],
+        "shift_x": [
+          0.0,
+          0.0
+        ],
+        "shift_y": [
+          0.0,
+          0.0
+        ],
+        "focus": [
+          0.5,
+          0.44
+        ],
+        "strength": 0.84,
+        "easing": "smoothstep",
+        "layers": [
+          {
+            "role": "bg",
+            "image": "assets/s13_bg.jpg",
+            "depth": 0.44,
+            "blur": 0.6
+          },
+          {
+            "role": "fg",
+            "image": "assets/s13_fg.png",
+            "depth": 1.22
+          }
+        ]
+      },
+      "detail_fx": [
+        {
+          "type": "eye_blink",
+          "image": "assets/c13_nam_blink.jpg",
+          "region": [
+            0.231,
+            0.161,
+            0.354,
+            0.291
+          ],
+          "times": [
+            202.84,
+            206.79,
+            211.02,
+            215.53
+          ],
+          "feather": 0.006,
+          "close_dur": 0.055,
+          "hold_dur": 0.045,
+          "open_dur": 0.085,
+          "layer": "fg"
+        },
+        {
+          "type": "eye_blink",
+          "image": "assets/c13_proxy_blink.jpg",
+          "region": [
+            0.737,
+            0.265,
+            0.839,
+            0.365
+          ],
+          "times": [
+            202.14,
+            205.59,
+            209.32,
+            213.33,
+            216.85
+          ],
+          "feather": 0.006,
+          "close_dur": 0.055,
+          "hold_dur": 0.045,
+          "open_dur": 0.085,
+          "layer": "fg"
+        },
+        {
+          "type": "mouth_sync",
+          "speaker": "thang_tun",
+          "line_ids": [
+            "l32_nam",
+            "l34_nam"
+          ],
+          "default_state": "mid",
+          "closed_image": "assets/c13_nam_mouth_closed.jpg",
+          "mid_image": "assets/c13.jpg",
+          "open_image": "assets/c13_nam_mouth_open.jpg",
+          "region": [
+            0.248,
+            0.272,
+            0.337,
+            0.407
+          ],
+          "fps": 12,
+          "thresh_mid": 0.14,
+          "thresh_open": 0.68,
+          "feather": 0.006,
+          "layer": "fg"
+        },
+        {
+          "type": "mouth_sync",
+          "speaker": "ke_ngot_ngao_nu",
+          "line_ids": [
+            "l33_proxy_nu"
+          ],
+          "default_state": "closed",
+          "closed_image": "assets/c13.jpg",
+          "mid_image": "assets/c13_proxy_mouth_mid.jpg",
+          "open_image": "assets/c13_proxy_mouth_open.jpg",
+          "region": [
+            0.742,
+            0.35,
+            0.832,
+            0.469
+          ],
+          "fps": 12,
+          "thresh_mid": 0.14,
+          "thresh_open": 0.68,
+          "feather": 0.006,
+          "layer": "fg"
+        }
+      ]
+    },
+    {
+      "id": "s14_scammer_flees",
+      "image": "assets/c14.jpg",
+      "start": 218.74,
+      "end": 228.6,
+      "beat_type": "aftermath",
+      "motion_level": "C",
+      "motion_intent": "Lùi sáng sủa giải tỏa căng thẳng khi người mua hộ vội rút lui (l35) và Nam thở phào nhẹ nhõm (l36) với khẩu hình + chớp mắt đôi",
+      "motion": {
+        "preset": "slow_pull_out",
+        "scale": [
+          1.08,
+          1.02
+        ],
+        "focus": [
+          [
+            0.5,
+            0.47
+          ],
+          [
+            0.5,
+            0.5
+          ]
+        ],
+        "wobble": "breathe"
+      },
+      "transition_in": {
+        "type": "flash_white",
+        "dur": 0.2
+      },
+      "shakes": [
+        {
+          "at": 218.88,
+          "dur": 0.4,
+          "amp": 16
+        }
+      ],
+      "detail_fx": [
+        {
+          "type": "eye_blink",
+          "image": "assets/c14_nam_blink.jpg",
+          "region": [
+            0.151,
+            0.192,
+            0.309,
+            0.319
+          ],
+          "times": [
+            220.94,
+            224.79
+          ],
+          "feather": 0.006,
+          "close_dur": 0.055,
+          "hold_dur": 0.045,
+          "open_dur": 0.085
+        },
+        {
+          "type": "eye_blink",
+          "image": "assets/c14_proxy_blink.jpg",
+          "region": [
+            0.764,
+            0.307,
+            0.846,
+            0.426
+          ],
+          "times": [
+            220.04,
+            223.39,
+            227.02
+          ],
+          "feather": 0.006,
+          "close_dur": 0.055,
+          "hold_dur": 0.045,
+          "open_dur": 0.085
+        },
+        {
+          "type": "mouth_sync",
+          "speaker": "ke_ngot_ngao_nu",
+          "line_ids": [
+            "l35_proxy_nu"
+          ],
+          "default_state": "mid",
+          "closed_image": "assets/c14_proxy_mouth_closed.jpg",
+          "mid_image": "assets/c14.jpg",
+          "open_image": "assets/c14_proxy_mouth_open.jpg",
+          "region": [
+            0.764,
+            0.367,
+            0.838,
+            0.468
+          ],
+          "fps": 12,
+          "thresh_mid": 0.14,
+          "thresh_open": 0.68,
+          "feather": 0.006
+        },
+        {
+          "type": "mouth_sync",
+          "speaker": "thang_tun",
+          "line_ids": [
+            "l36_nam"
+          ],
+          "default_state": "closed",
+          "closed_image": "assets/c14.jpg",
+          "mid_image": "assets/c14_nam_mouth_mid.jpg",
+          "open_image": "assets/c14_nam_mouth_open.jpg",
+          "region": [
+            0.185,
+            0.327,
+            0.307,
+            0.48
+          ],
+          "fps": 12,
+          "thresh_mid": 0.14,
+          "thresh_open": 0.68,
+          "feather": 0.006
+        }
+      ]
+    },
+    {
+      "id": "s15_outro_still",
+      "image": "assets/c15.jpg",
+      "start": 228.6,
+      "end": 229.75,
+      "beat_type": "aftermath",
+      "motion_level": "A",
+      "motion_intent": "Khoảng lặng tĩnh trên bàn tiệm điện lạnh chuyển nhịp sang thẻ tổng kết",
+      "motion": {
+        "preset": "static_hold"
+      },
+      "transition_in": {
+        "type": "fade_black",
+        "dur": 0.4
+      }
+    },
+    {
+      "id": "s16_red_flags",
+      "image": "factory196/materialAndDraft/EP01b/assets/scene18.jpg",
+      "start": 229.75,
+      "end": 238.4,
+      "beat_type": "information",
+      "motion_level": "A",
+      "motion_intent": "Giữ khung tĩnh sạch để người xem đọc trọn vẹn bảng 5 nguyên tắc 2 Phải – 3 Không",
+      "motion": {
+        "preset": "static_hold"
+      },
+      "transition_in": {
+        "type": "fade_black",
+        "dur": 0.4
+      }
+    },
+    {
+      "id": "s17a_syndicate_grid",
+      "image": "assets/c16a.jpg",
+      "start": 238.4,
+      "end": 249.44,
+      "beat_type": "suspicion",
+      "motion_level": "C",
+      "motion_intent": "Đẩy chậm trên lưới 4 ô đêm mưa hội tụ đường dây EP08 & EP08b kèm nhịp ánh xanh màn hình laptop & máy tính bảng",
+      "motion": {
+        "preset": "slow_push_in",
+        "scale": [
+          1.02,
+          1.09
+        ],
+        "focus": [
+          [
+            0.5,
+            0.49
+          ],
+          [
+            0.5,
+            0.46
+          ]
+        ],
+        "wobble": "none",
+        "easing": "ease_out"
+      },
+      "transition_in": {
+        "type": "fade_black",
+        "dur": 0.4
+      },
+      "detail_fx": [
+        {
+          "type": "screen_glow",
+          "pos": [
+            0.21,
+            0.35
+          ],
+          "radius": [
+            0.14,
+            0.14
+          ],
+          "color": [
+            95,
+            210,
+            255
+          ],
+          "intensity": 0.24,
+          "mode": "pulse",
+          "fade": 0.35,
+          "start": 238.9,
+          "end": 249.44
+        },
+        {
+          "type": "screen_glow",
+          "pos": [
+            0.68,
+            0.83
+          ],
+          "radius": [
+            0.16,
+            0.12
+          ],
+          "color": [
+            95,
+            225,
+            255
+          ],
+          "intensity": 0.26,
+          "mode": "pulse",
+          "fade": 0.35,
+          "start": 239.0,
+          "end": 249.44
+        }
+      ]
+    },
+    {
+      "id": "s17b_boss_order",
+      "image": "assets/c16b.jpg",
+      "start": 249.44,
+      "end": 254.13,
+      "beat_type": "ending",
+      "motion_level": "B",
+      "motion_intent": "Kết mở 2.5D lạnh sống lưng tách bóng lưng Người phụ nữ bí ẩn (tóc bob đen & cổ áo xanh ngọc lục bảo, thở chậm) trước cửa kính đêm mưa",
+      "motion": {
+        "preset": "slow_push_in",
+        "scale": [
+          1.02,
+          1.09
+        ],
+        "focus": [
+          [
+            0.5,
+            0.49
+          ],
+          [
+            0.5,
+            0.46
+          ]
+        ],
+        "wobble": "none",
+        "easing": "ease_out"
+      },
+      "transition_in": {
+        "type": "dissolve",
+        "dur": 0.25
+      },
+      "parallax": {
+        "camera": "push_in",
+        "dolly": [
+          1.02,
+          1.1
+        ],
+        "shift_x": [
+          0.0,
+          0.0
+        ],
+        "shift_y": [
+          0.0,
+          -3.0
+        ],
+        "focus": [
+          0.62,
+          0.44
+        ],
+        "strength": 0.88,
+        "easing": "ease_out",
+        "layers": [
+          {
+            "role": "bg",
+            "image": "assets/s16b_bg.jpg",
+            "depth": 0.42,
+            "blur": 0.5
+          },
+          {
+            "role": "fg",
+            "image": "assets/s16b_fg.png",
+            "depth": 1.28,
+            "breathe_y": 1.4,
+            "breathe_period": 3.8
+          }
+        ]
+      },
+      "detail_fx": [
+        {
+          "type": "screen_glow",
+          "space": "frame",
+          "pos": [
+            0.31,
+            0.79
+          ],
+          "radius": [
+            0.16,
+            0.14
+          ],
+          "color": [
+            95,
+            210,
+            235
+          ],
+          "intensity": 0.22,
+          "mode": "pulse",
+          "fade": 0.3,
+          "start": 249.84,
+          "end": 254.13
+        },
+        {
+          "type": "light_shift",
+          "brightness": 0.88,
+          "tint_rgb": [
+            95,
+            145,
+            195
+          ],
+          "tint_strength": 0.14,
+          "at": 249.99,
+          "dur": 0.5
+        }
+      ]
+    },
+    {
+      "id": "s18_black_cut",
+      "image": "assets/c17.jpg",
+      "start": 254.13,
+      "end": 255.78,
+      "beat_type": "ending",
+      "motion_level": "A",
+      "motion_intent": "Cú cắt đen đột ngột giữ dư âm lạnh sau 3 nhịp mệnh lệnh",
+      "motion": {
+        "preset": "static_hold"
+      },
+      "transition_in": {
+        "type": "fade_black",
+        "dur": 0.08
+      }
+    },
+    {
+      "id": "s19_disclaimer",
+      "image": "factory196/materialAndDraft/EP01b/assets/scene18.jpg",
+      "start": 255.78,
+      "end": 260.13,
+      "beat_type": "ending",
+      "motion_level": "A",
+      "motion_intent": "Khung tĩnh sạch hiển thị lưu ý miễn trừ trách nhiệm cuối phim",
+      "motion": {
+        "preset": "static_hold"
+      },
+      "transition_in": {
+        "type": "fade_black",
+        "dur": 0.35
+      }
+    }
+  ],
+  "dialogue": [
+    {
+      "id": "l01_bank_p",
+      "speaker": "chi_tu",
+      "voice": "Zephyr",
+      "label_short": "NGÂN HÀNG",
+      "speaker_label": "Nhân viên ngân hàng 29 tuổi gọi xác minh dòng tiền 45 triệu từ đơn trình báo của Khang",
+      "af": "phone",
+      "style": "Giọng nữ miền Nam Sài Gòn 29 tuổi, phát âm chuẩn phương ngữ miền Nam xuyên suốt mọi câu, giữ cố định một âm sắc rõ ràng, chuẩn mực, điềm tĩnh kiểu tổng đài viên ngân hàng, tuyệt đối không giả giọng ông già hay bà già run rẩy, không kéo dài chữ, không cải lương. Sắc thái câu này: chuẩn mực, bình tĩnh qua điện thoại.",
+      "start": 3.85,
+      "window": 8.96,
+      "text": "Chào anh Minh. Có đơn trình báo vụ lừa bốn lăm triệu, tiền chảy thẳng vô tài khoản anh.",
+      "subtitle": [
+        "Chào anh Minh. Có đơn trình báo vụ lừa 45 triệu, tiền chảy thẳng vô tài khoản anh."
+      ]
+    },
+    {
+      "id": "l02_minh",
+      "speaker": "anh_hai",
+      "voice": "Orus",
+      "label_short": "ANH MINH",
+      "speaker_label": "Anh Minh – chủ tiệm điện lạnh 39 tuổi, thẳng tính, bán chiếc xe máy tay ga 45 triệu",
+      "style": "Giọng nam miền Nam Sài Gòn 39 tuổi, phát âm chuẩn phương ngữ miền Nam xuyên suốt mọi câu, giữ cố định một âm sắc trầm chắc, thẳng tính, đời thường, nói gọn rõ chữ, tự nhiên như đời thực, tuyệt đối không giả giọng ông già hay bà già run rẩy, không kéo dài chữ, không cải lương. Sắc thái câu này: sững người, giọng gấp gáp khó tin.",
+      "start": 10.11,
+      "window": 9.3,
+      "text": "Khoan chị! Bốn lăm triệu đó khách mua xe máy chuyển tại phòng công chứng mà! Tôi giao xe rồi!",
+      "subtitle": [
+        "Khoan chị! 45 triệu đó khách mua xe máy chuyển tại phòng công chứng mà! Tôi giao xe rồi!"
+      ]
+    },
+    {
+      "id": "l03_bank_p",
+      "speaker": "chi_tu",
+      "voice": "Zephyr",
+      "label_short": "NGÂN HÀNG",
+      "speaker_label": "Nhân viên ngân hàng 29 tuổi gọi xác minh dòng tiền 45 triệu từ đơn trình báo của Khang",
+      "af": "phone",
+      "style": "Giọng nữ miền Nam Sài Gòn 29 tuổi, phát âm chuẩn phương ngữ miền Nam xuyên suốt mọi câu, giữ cố định một âm sắc rõ ràng, chuẩn mực, điềm tĩnh kiểu tổng đài viên ngân hàng, tuyệt đối không giả giọng ông già hay bà già run rẩy, không kéo dài chữ, không cải lương. Sắc thái câu này: rõ ràng, dứt khoát đúng nghiệp vụ.",
+      "start": 15.83,
+      "window": 8.62,
+      "text": "Nhưng người chuyển báo bị lừa, không mua xe của anh. Nội dung cũng không ghi mua xe."
+    },
+    {
+      "id": "l04_nam",
+      "speaker": "thang_tun",
+      "voice": "Achird",
+      "label_short": "NAM",
+      "speaker_label": "Nam – em họ 28 tuổi, thật thà, phản ứng nhanh khi được nhắc kịp thời",
+      "style": "Giọng nam thanh niên miền Nam Sài Gòn 28 tuổi, phát âm chuẩn phương ngữ miền Nam xuyên suốt mọi câu, giữ cố định một âm sắc gọn, sáng vừa, nhanh nhẹn, thật thà gần gũi, rõ chữ, tự nhiên như đời thực, tuyệt đối không giả giọng ông già hay bà già run rẩy, không kéo dài chữ, không cải lương. Sắc thái câu này: uống trà đá nói chuyện thoải mái.",
+      "start": 24.92,
+      "window": 8.62,
+      "text": "Chiếc tay ga rao bốn lăm triệu cả tuần, thợ trả bốn chục. Chắc bớt chút mới trôi.",
+      "subtitle": [
+        "Chiếc tay ga rao 45 triệu cả tuần, thợ trả 40. Chắc bớt chút mới trôi."
+      ]
+    },
+    {
+      "id": "l05_minh",
+      "speaker": "anh_hai",
+      "voice": "Orus",
+      "label_short": "ANH MINH",
+      "speaker_label": "Anh Minh – chủ tiệm điện lạnh 39 tuổi, thẳng tính, bán chiếc xe máy tay ga 45 triệu",
+      "style": "Giọng nam miền Nam Sài Gòn 39 tuổi, phát âm chuẩn phương ngữ miền Nam xuyên suốt mọi câu, giữ cố định một âm sắc trầm chắc, thẳng tính, đời thường, nói gọn rõ chữ, tự nhiên như đời thực, tuyệt đối không giả giọng ông già hay bà già run rẩy, không kéo dài chữ, không cải lương. Sắc thái câu này: mừng rỡ khoe với em họ và vợ.",
+      "start": 30.48,
+      "window": 9.3,
+      "text": "Sáng nay có anh Hùng hỏi mua. Coi hình xong chốt thẳng bốn lăm triệu, hông trả giá một đồng!",
+      "subtitle": [
+        "Sáng nay có anh Hùng hỏi mua. Coi hình xong chốt thẳng 45 triệu, hông trả giá một đồng!"
+      ]
+    },
+    {
+      "id": "l06_thao",
+      "speaker": "chi_hai",
+      "voice": "Sulafat",
+      "label_short": "CHỊ THẢO",
+      "speaker_label": "Chị Thảo – vợ Anh Minh 36 tuổi, tinh ý, thực tế, bình tĩnh xử lý đúng luật",
+      "style": "Giọng phụ nữ miền Nam Sài Gòn 36 tuổi, phát âm chuẩn phương ngữ miền Nam xuyên suốt mọi câu, giữ cố định một âm sắc ấm, trầm vừa, cẩn thận thực tế, nói gọn chắc, tự nhiên như đời thực, tuyệt đối không giả giọng ông già hay bà già run rẩy, không kéo dài chữ, không cải lương. Sắc thái câu này: nhíu mày nhẹ, đặt câu hỏi thực tế.",
+      "start": 36.6,
+      "window": 7.6,
+      "text": "Nghe dễ quá cũng lạ nha anh. Sao ổng hông qua coi xe trực tiếp?"
+    },
+    {
+      "id": "l07_minh",
+      "speaker": "anh_hai",
+      "voice": "Orus",
+      "label_short": "ANH MINH",
+      "speaker_label": "Anh Minh – chủ tiệm điện lạnh 39 tuổi, thẳng tính, bán chiếc xe máy tay ga 45 triệu",
+      "style": "Giọng nam miền Nam Sài Gòn 39 tuổi, phát âm chuẩn phương ngữ miền Nam xuyên suốt mọi câu, giữ cố định một âm sắc trầm chắc, thẳng tính, đời thường, nói gọn rõ chữ, tự nhiên như đời thực, tuyệt đối không giả giọng ông già hay bà già run rẩy, không kéo dài chữ, không cải lương. Sắc thái câu này: xua tay tự tin tuyệt đối vào quy tắc cũ.",
+      "start": 42.16,
+      "window": 9.98,
+      "text": "Ổng công tác xa, thấy xe hợp màu nên chốt. Tiền nổi vô tài khoản anh mới ký công chứng, sợ gì!"
+    },
+    {
+      "id": "l08_nam",
+      "speaker": "thang_tun",
+      "voice": "Achird",
+      "label_short": "NAM",
+      "speaker_label": "Nam – em họ 28 tuổi, thật thà, phản ứng nhanh khi được nhắc kịp thời",
+      "style": "Giọng nam thanh niên miền Nam Sài Gòn 28 tuổi, phát âm chuẩn phương ngữ miền Nam xuyên suốt mọi câu, giữ cố định một âm sắc gọn, sáng vừa, nhanh nhẹn, thật thà gần gũi, rõ chữ, tự nhiên như đời thực, tuyệt đối không giả giọng ông già hay bà già run rẩy, không kéo dài chữ, không cải lương. Sắc thái câu này: cười trầm trồ thật thà.",
+      "start": 49.08,
+      "window": 8.62,
+      "text": "Gặp khách sộp vậy sướng ha! Ít bữa em bán xe máy chắc cũng lên nhóm rao thử."
+    },
+    {
+      "id": "l09_buyer_msg",
+      "speaker": "chu_no",
+      "voice": "Fenrir",
+      "label_short": "KHÁCH MUA",
+      "speaker_label": "Kẻ đứng giữa (từ EP08) đóng vai nick 'Anh Hùng' nhắn chốt mua xe máy 45 triệu",
+      "af": "phone",
+      "style": "Giọng nam miền Nam Sài Gòn 40 tuổi, phát âm chuẩn phương ngữ miền Nam xuyên suốt mọi câu, giữ cố định một âm sắc trầm đều, lịch sự mà lạnh tĩnh như kẻ cầm quân cờ, không la hét, tuyệt đối không giả giọng ông già hay bà già run rẩy, không kéo dài chữ, không cải lương. Sắc thái câu này: lịch sự, bình thản đầy tin cậy.",
+      "start": 56.08,
+      "window": 9.64,
+      "text": "Anh bận công tác xa chưa về kịp, nên nhờ em họ tên Long ra công chứng đứng tên mua hộ."
+    },
+    {
+      "id": "l10_buyer_msg",
+      "speaker": "chu_no",
+      "voice": "Fenrir",
+      "label_short": "KHÁCH MUA",
+      "speaker_label": "Kẻ đứng giữa (từ EP08) đóng vai nick 'Anh Hùng' nhắn chốt mua xe máy 45 triệu",
+      "af": "phone",
+      "style": "Giọng nam miền Nam Sài Gòn 40 tuổi, phát âm chuẩn phương ngữ miền Nam xuyên suốt mọi câu, giữ cố định một âm sắc trầm đều, lịch sự mà lạnh tĩnh như kẻ cầm quân cờ, không la hét, tuyệt đối không giả giọng ông già hay bà già run rẩy, không kéo dài chữ, không cải lương. Sắc thái câu này: chủ động trấn an để hạ cảnh giác.",
+      "start": 62.61,
+      "window": 8.96,
+      "text": "Chú yên tâm. Bao giờ tiền nổi đủ bốn lăm triệu trong tài khoản rồi hẵng ký giao xe!",
+      "subtitle": [
+        "Chú yên tâm. Bao giờ tiền nổi đủ 45 triệu trong tài khoản rồi hẵng ký giao xe!"
+      ]
+    },
+    {
+      "id": "l11_long",
+      "speaker": "ke_ngot_ngao_nam",
+      "voice": "Algieba",
+      "label_short": "LONG",
+      "speaker_label": "Long – người 32 tuổi lịch sự đứng tên mua hộ (khớp giọng Algieba ở EP08 s08)",
+      "af": "default",
+      "style": "Giọng nam miền Nam Sài Gòn 32 tuổi, phát âm chuẩn phương ngữ miền Nam xuyên suốt mọi câu, giữ cố định một âm sắc sáng vừa, mượt mà, lịch sự khéo léo kiểu dân văn phòng, nói nhanh gọn, tuyệt đối không giả giọng ông già hay bà già run rẩy, không kéo dài chữ, không cải lương. Sắc thái câu này: cười lịch sự, gọn gàng giữa sảnh công chứng đông người.",
+      "start": 69.7,
+      "window": 8.62,
+      "text": "Em là Long, em họ anh Hùng. Hồ sơ nộp quầy rồi, chờ gọi tên thôi anh chị."
+    },
+    {
+      "id": "l12_thao",
+      "speaker": "chi_hai",
+      "voice": "Sulafat",
+      "label_short": "CHỊ THẢO",
+      "speaker_label": "Chị Thảo – vợ Anh Minh 36 tuổi, tinh ý, thực tế, bình tĩnh xử lý đúng luật",
+      "style": "Giọng phụ nữ miền Nam Sài Gòn 36 tuổi, phát âm chuẩn phương ngữ miền Nam xuyên suốt mọi câu, giữ cố định một âm sắc ấm, trầm vừa, cẩn thận thực tế, nói gọn chắc, tự nhiên như đời thực, tuyệt đối không giả giọng ông già hay bà già run rẩy, không kéo dài chữ, không cải lương. Sắc thái câu này: hỏi xã giao bình thường, không chút căng thẳng.",
+      "start": 75.22,
+      "window": 6.58,
+      "text": "Rồi chút nữa bên anh Hùng chuyển thẳng qua luôn hả cậu?"
+    },
+    {
+      "id": "l13_long",
+      "speaker": "ke_ngot_ngao_nam",
+      "voice": "Algieba",
+      "label_short": "LONG",
+      "speaker_label": "Long – người 32 tuổi lịch sự đứng tên mua hộ (khớp giọng Algieba ở EP08 s08)",
+      "af": "default",
+      "style": "Giọng nam miền Nam Sài Gòn 32 tuổi, phát âm chuẩn phương ngữ miền Nam xuyên suốt mọi câu, giữ cố định một âm sắc sáng vừa, mượt mà, lịch sự khéo léo kiểu dân văn phòng, nói nhanh gọn, tuyệt đối không giả giọng ông già hay bà già run rẩy, không kéo dài chữ, không cải lương. Sắc thái câu này: trấn an nhẹ nhàng, hoàn toàn tự nhiên.",
+      "start": 79.06,
+      "window": 7.26,
+      "text": "Dạ ảnh đang bấm chuyển đó chị, tiền vô là mình vô ký gọn."
+    },
+    {
+      "id": "l14_minh",
+      "speaker": "anh_hai",
+      "voice": "Orus",
+      "label_short": "ANH MINH",
+      "speaker_label": "Anh Minh – chủ tiệm điện lạnh 39 tuổi, thẳng tính, bán chiếc xe máy tay ga 45 triệu",
+      "style": "Giọng nam miền Nam Sài Gòn 39 tuổi, phát âm chuẩn phương ngữ miền Nam xuyên suốt mọi câu, giữ cố định một âm sắc trầm chắc, thẳng tính, đời thường, nói gọn rõ chữ, tự nhiên như đời thực, tuyệt đối không giả giọng ông già hay bà già run rẩy, không kéo dài chữ, không cải lương. Sắc thái câu này: nhìn thoáng số dư, giọng nhẹ hẳn xuống đầy yên tâm và kiệm lời.",
+      "start": 84.68,
+      "window": 5.56,
+      "text": "Đủ bốn lăm triệu rồi. Ra ký đi em.",
+      "subtitle": [
+        "Đủ 45 triệu rồi. Ra ký đi em."
+      ]
+    },
+    {
+      "id": "l15_thao",
+      "speaker": "chi_hai",
+      "voice": "Sulafat",
+      "label_short": "CHỊ THẢO",
+      "speaker_label": "Chị Thảo – vợ Anh Minh 36 tuổi, tinh ý, thực tế, bình tĩnh xử lý đúng luật",
+      "style": "Giọng phụ nữ miền Nam Sài Gòn 36 tuổi, phát âm chuẩn phương ngữ miền Nam xuyên suốt mọi câu, giữ cố định một âm sắc ấm, trầm vừa, cẩn thận thực tế, nói gọn chắc, tự nhiên như đời thực, tuyệt đối không giả giọng ông già hay bà già run rẩy, không kéo dài chữ, không cải lương. Sắc thái câu này: liếc màn hình đúng nửa giây, khựng nhẹ hỏi nhỏ.",
+      "start": 88.28,
+      "window": 5.56,
+      "text": "Ủa… người gửi sao tên Khang lạ vậy anh?"
+    },
+    {
+      "id": "l16_long",
+      "speaker": "ke_ngot_ngao_nam",
+      "voice": "Algieba",
+      "label_short": "LONG",
+      "speaker_label": "Long – người 32 tuổi lịch sự đứng tên mua hộ (khớp giọng Algieba ở EP08 s08)",
+      "af": "default",
+      "style": "Giọng nam miền Nam Sài Gòn 32 tuổi, phát âm chuẩn phương ngữ miền Nam xuyên suốt mọi câu, giữ cố định một âm sắc sáng vừa, mượt mà, lịch sự khéo léo kiểu dân văn phòng, nói nhanh gọn, tuyệt đối không giả giọng ông già hay bà già run rẩy, không kéo dài chữ, không cải lương. Sắc thái câu này: cười nhẹ lịch sự, gật gọn tự nhiên hướng về quầy công chứng.",
+      "start": 91.72,
+      "window": 7.6,
+      "text": "Kế toán bên công ty ảnh chuyển đó chị. Tới số mình vô ký rồi."
+    },
+    {
+      "id": "l17_long",
+      "speaker": "ke_ngot_ngao_nam",
+      "voice": "Algieba",
+      "label_short": "LONG",
+      "speaker_label": "Long – người 32 tuổi lịch sự đứng tên mua hộ (khớp giọng Algieba ở EP08 s08)",
+      "af": "default",
+      "style": "Giọng nam miền Nam Sài Gòn 32 tuổi, phát âm chuẩn phương ngữ miền Nam xuyên suốt mọi câu, giữ cố định một âm sắc sáng vừa, mượt mà, lịch sự khéo léo kiểu dân văn phòng, nói nhanh gọn, tuyệt đối không giả giọng ông già hay bà già run rẩy, không kéo dài chữ, không cải lương. Sắc thái câu này: tươi cười nhận chìa khóa, nổ máy chạy chiếc tay ga đi.",
+      "start": 97.72,
+      "window": 6.92,
+      "text": "Cảm ơn anh chị nha. Em chạy xe về nhà anh Hùng đây!"
+    },
+    {
+      "id": "l18_minh",
+      "speaker": "anh_hai",
+      "voice": "Orus",
+      "label_short": "ANH MINH",
+      "speaker_label": "Anh Minh – chủ tiệm điện lạnh 39 tuổi, thẳng tính, bán chiếc xe máy tay ga 45 triệu",
+      "style": "Giọng nam miền Nam Sài Gòn 39 tuổi, phát âm chuẩn phương ngữ miền Nam xuyên suốt mọi câu, giữ cố định một âm sắc trầm chắc, thẳng tính, đời thường, nói gọn rõ chữ, tự nhiên như đời thực, tuyệt đối không giả giọng ông già hay bà già run rẩy, không kéo dài chữ, không cải lương. Sắc thái câu này: tái mặt hoảng hốt, giọng run lên.",
+      "start": 103.15,
+      "window": 7.94,
+      "text": "Trời đất ơi! Nick ông Hùng xóa rồi! Gọi số thằng Long cũng tắt máy luôn!"
+    },
+    {
+      "id": "l19_thao",
+      "speaker": "chi_hai",
+      "voice": "Sulafat",
+      "label_short": "CHỊ THẢO",
+      "speaker_label": "Chị Thảo – vợ Anh Minh 36 tuổi, tinh ý, thực tế, bình tĩnh xử lý đúng luật",
+      "style": "Giọng phụ nữ miền Nam Sài Gòn 36 tuổi, phát âm chuẩn phương ngữ miền Nam xuyên suốt mọi câu, giữ cố định một âm sắc ấm, trầm vừa, cẩn thận thực tế, nói gọn chắc, tự nhiên như đời thực, tuyệt đối không giả giọng ông già hay bà già run rẩy, không kéo dài chữ, không cải lương. Sắc thái câu này: sững người lo lắng, chợt nhớ lại khoảnh khắc hôm công chứng.",
+      "start": 108.63,
+      "window": 8.62,
+      "text": "Lúc ký em thoáng thấy tên Khang lạ mà tưởng tiền vô là xong… Người đó là ai?"
+    },
+    {
+      "id": "l20_minh",
+      "speaker": "anh_hai",
+      "voice": "Orus",
+      "label_short": "ANH MINH",
+      "speaker_label": "Anh Minh – chủ tiệm điện lạnh 39 tuổi, thẳng tính, bán chiếc xe máy tay ga 45 triệu",
+      "style": "Giọng nam miền Nam Sài Gòn 39 tuổi, phát âm chuẩn phương ngữ miền Nam xuyên suốt mọi câu, giữ cố định một âm sắc trầm chắc, thẳng tính, đời thường, nói gọn rõ chữ, tự nhiên như đời thực, tuyệt đối không giả giọng ông già hay bà già run rẩy, không kéo dài chữ, không cải lương. Sắc thái câu này: giọng trầm nặng, bàng hoàng không tin nổi.",
+      "start": 115.79,
+      "window": 10.32,
+      "text": "Công an nói anh Khang bị giả sếp nhờ mua quà kỷ niệm cho vợ, lừa chuyển bốn lăm triệu vô máy mình!",
+      "subtitle": [
+        "Công an nói anh Khang bị giả sếp nhờ mua quà kỷ niệm cho vợ, lừa chuyển 45 triệu vô máy mình!"
+      ]
+    },
+    {
+      "id": "l20b_khang_echo",
+      "speaker": "thang_tun",
+      "voice": "Puck",
+      "label_short": "KHANG (EP08)",
+      "speaker_label": "Khang (EP08) – tiếng vọng hồi ức từ khoảnh khắc chuyển 45 triệu sang tài khoản lạ",
+      "af": "memory",
+      "style": "Giọng nam thanh niên miền Nam Sài Gòn 26 tuổi, phát âm chuẩn phương ngữ miền Nam xuyên suốt mọi câu, giữ cố định một âm sắc sáng trẻ, nhịp nhanh gọn, thật thà lễ phép, rõ chữ, tự nhiên như đời thực, tuyệt đối không giả giọng ông già hay bà già run rẩy, không kéo dài chữ, không cải lương. Sắc thái câu này: tái mặt nghẹn giọng — trích nguyên khoảnh khắc vỡ lẽ từ EP08 (voice Puck).",
+      "start": 123.73,
+      "window": 8.96,
+      "text": "Nó chặn mất rồi anh Đạt ơi… Bốn mươi lăm triệu em vừa chuyển qua tài khoản lạ rồi!",
+      "subtitle": [
+        "Nó chặn mất rồi anh Đạt ơi… 45 triệu em vừa chuyển qua tài khoản lạ rồi!"
+      ]
+    },
+    {
+      "id": "l21_thao",
+      "speaker": "chi_hai",
+      "voice": "Sulafat",
+      "label_short": "CHỊ THẢO",
+      "speaker_label": "Chị Thảo – vợ Anh Minh 36 tuổi, tinh ý, thực tế, bình tĩnh xử lý đúng luật",
+      "style": "Giọng phụ nữ miền Nam Sài Gòn 36 tuổi, phát âm chuẩn phương ngữ miền Nam xuyên suốt mọi câu, giữ cố định một âm sắc ấm, trầm vừa, cẩn thận thực tế, nói gọn chắc, tự nhiên như đời thực, tuyệt đối không giả giọng ông già hay bà già run rẩy, không kéo dài chữ, không cải lương. Sắc thái câu này: đặt hai tờ giấy cạnh nhau trên bàn, giọng trầm căng.",
+      "start": 130.39,
+      "window": 8.28,
+      "text": "Hợp đồng bán xe cho Long ghi nhận đủ, còn tiền lại từ anh Khang bị lừa!"
+    },
+    {
+      "id": "l22_minh",
+      "speaker": "anh_hai",
+      "voice": "Orus",
+      "label_short": "ANH MINH",
+      "speaker_label": "Anh Minh – chủ tiệm điện lạnh 39 tuổi, thẳng tính, bán chiếc xe máy tay ga 45 triệu",
+      "style": "Giọng nam miền Nam Sài Gòn 39 tuổi, phát âm chuẩn phương ngữ miền Nam xuyên suốt mọi câu, giữ cố định một âm sắc trầm chắc, thẳng tính, đời thường, nói gọn rõ chữ, tự nhiên như đời thực, tuyệt đối không giả giọng ông già hay bà già run rẩy, không kéo dài chữ, không cải lương. Sắc thái câu này: ôm trán bàng hoàng nhận ra cái bẫy kế trùng kế.",
+      "start": 135.43,
+      "window": 8.96,
+      "text": "Nội dung chỉ ghi chuyển tiền, không biển số, không ngày hợp đồng… Cả hai đều là nạn nhân!"
+    },
+    {
+      "id": "l23_buyer_room",
+      "speaker": "chu_no",
+      "voice": "Fenrir",
+      "label_short": "KẺ ĐỨNG GIỮA",
+      "speaker_label": "Kẻ đứng giữa giấu mặt trong phòng tối – khớp giọng và bối cảnh 2 điện thoại của EP08",
+      "af": "default",
+      "style": "Giọng nam miền Nam Sài Gòn 40 tuổi, phát âm chuẩn phương ngữ miền Nam xuyên suốt mọi câu, giữ cố định một âm sắc trầm đều, lịch sự mà lạnh tĩnh như kẻ cầm quân cờ, không la hét, tuyệt đối không giả giọng ông già hay bà già run rẩy, không kéo dài chữ, không cải lương. Sắc thái câu này: trầm lạnh điềm nhiên từ phòng tối hai điện thoại.",
+      "start": 143.35,
+      "window": 8.96,
+      "text": "Đầu kia lừa thằng Khang đẩy bốn lăm triệu. Đầu này cho Long công chứng hốt chiếc xe máy.",
+      "subtitle": [
+        "Đầu kia lừa thằng Khang đẩy 45 triệu. Đầu này cho Long công chứng hốt chiếc xe máy."
+      ]
+    },
+    {
+      "id": "l24_buyer_room",
+      "speaker": "chu_no",
+      "voice": "Fenrir",
+      "label_short": "KẺ ĐỨNG GIỮA",
+      "speaker_label": "Kẻ đứng giữa giấu mặt trong phòng tối – khớp giọng và bối cảnh 2 điện thoại của EP08",
+      "af": "default",
+      "style": "Giọng nam miền Nam Sài Gòn 40 tuổi, phát âm chuẩn phương ngữ miền Nam xuyên suốt mọi câu, giữ cố định một âm sắc trầm đều, lịch sự mà lạnh tĩnh như kẻ cầm quân cờ, không la hét, tuyệt đối không giả giọng ông già hay bà già run rẩy, không kéo dài chữ, không cải lương. Sắc thái câu này: lạnh tĩnh chốt gọn ván cờ hai đầu dây.",
+      "start": 150.55,
+      "window": 8.62,
+      "text": "Tiền bẩn đổi ra xe thật trong một buổi trưa. Hai nạn nhân tự giải trình với nhau!"
+    },
+    {
+      "id": "l25_minh",
+      "speaker": "anh_hai",
+      "voice": "Orus",
+      "label_short": "ANH MINH",
+      "speaker_label": "Anh Minh – chủ tiệm điện lạnh 39 tuổi, thẳng tính, bán chiếc xe máy tay ga 45 triệu",
+      "style": "Giọng nam miền Nam Sài Gòn 39 tuổi, phát âm chuẩn phương ngữ miền Nam xuyên suốt mọi câu, giữ cố định một âm sắc trầm chắc, thẳng tính, đời thường, nói gọn rõ chữ, tự nhiên như đời thực, tuyệt đối không giả giọng ông già hay bà già run rẩy, không kéo dài chữ, không cải lương. Sắc thái câu này: sốt ruột định làm theo phản xạ.",
+      "start": 157.95,
+      "window": 8.28,
+      "text": "Hay anh rút bốn lăm triệu cất trước, chừng nào kiếm lại được xe rồi mới tính?",
+      "subtitle": [
+        "Hay anh rút 45 triệu cất trước, chừng nào kiếm lại được xe rồi mới tính?"
+      ]
+    },
+    {
+      "id": "l26_thao",
+      "speaker": "chi_hai",
+      "voice": "Sulafat",
+      "label_short": "CHỊ THẢO",
+      "speaker_label": "Chị Thảo – vợ Anh Minh 36 tuổi, tinh ý, thực tế, bình tĩnh xử lý đúng luật",
+      "style": "Giọng phụ nữ miền Nam Sài Gòn 36 tuổi, phát âm chuẩn phương ngữ miền Nam xuyên suốt mọi câu, giữ cố định một âm sắc ấm, trầm vừa, cẩn thận thực tế, nói gọn chắc, tự nhiên như đời thực, tuyệt đối không giả giọng ông già hay bà già run rẩy, không kéo dài chữ, không cải lương. Sắc thái câu này: cản ngay lập tức, giọng điềm tĩnh kiên quyết.",
+      "start": 162.19,
+      "window": 9.98,
+      "text": "Khoan! Đừng rút hay chuyển đi đâu! Tiền đang xác minh vụ án mà tự tẩu tán còn rắc rối nặng hơn!"
+    },
+    {
+      "id": "l27_minh",
+      "speaker": "anh_hai",
+      "voice": "Orus",
+      "label_short": "ANH MINH",
+      "speaker_label": "Anh Minh – chủ tiệm điện lạnh 39 tuổi, thẳng tính, bán chiếc xe máy tay ga 45 triệu",
+      "style": "Giọng nam miền Nam Sài Gòn 39 tuổi, phát âm chuẩn phương ngữ miền Nam xuyên suốt mọi câu, giữ cố định một âm sắc trầm chắc, thẳng tính, đời thường, nói gọn rõ chữ, tự nhiên như đời thực, tuyệt đối không giả giọng ông già hay bà già run rẩy, không kéo dài chữ, không cải lương. Sắc thái câu này: hít sâu lấy lại bình tĩnh, gật đầu dứt khoát.",
+      "start": 169.27,
+      "window": 9.3,
+      "text": "Vậy giữ nguyên tiền trong tài khoản, gom hợp đồng, sao kê với tin nhắn trình báo công an liền!"
+    },
+    {
+      "id": "l28_nam",
+      "speaker": "thang_tun",
+      "voice": "Achird",
+      "label_short": "NAM",
+      "speaker_label": "Nam – em họ 28 tuổi, thật thà, phản ứng nhanh khi được nhắc kịp thời",
+      "style": "Giọng nam thanh niên miền Nam Sài Gòn 28 tuổi, phát âm chuẩn phương ngữ miền Nam xuyên suốt mọi câu, giữ cố định một âm sắc gọn, sáng vừa, nhanh nhẹn, thật thà gần gũi, rõ chữ, tự nhiên như đời thực, tuyệt đối không giả giọng ông già hay bà già run rẩy, không kéo dài chữ, không cải lương. Sắc thái câu này: vui vẻ gọi khoe anh họ ngay trước khi ký.",
+      "start": 177.05,
+      "window": 8.96,
+      "text": "Alo anh Minh! Em đang công chứng bán xe máy. Khách chốt nhanh, nhờ người thân đứng tên hộ!"
+    },
+    {
+      "id": "l29_minh_p",
+      "speaker": "anh_hai",
+      "voice": "Orus",
+      "label_short": "ANH MINH",
+      "speaker_label": "Anh Minh gọi qua điện thoại cản gấp Nam ở phòng công chứng",
+      "af": "phone",
+      "style": "Giọng nam miền Nam Sài Gòn 39 tuổi, phát âm chuẩn phương ngữ miền Nam xuyên suốt mọi câu, giữ cố định một âm sắc trầm chắc, thẳng tính, đời thường, nói gọn rõ chữ, tự nhiên như đời thực, tuyệt đối không giả giọng ông già hay bà già run rẩy, không kéo dài chữ, không cải lương. Sắc thái câu này: quát gấp qua điện thoại để chặn ngay lập tức.",
+      "start": 182.85,
+      "window": 8.62,
+      "text": "Khoan ký! Dừng lại liền! Anh mới dính bẫy tam giác kẹt cứng bốn lăm triệu đây nè!",
+      "subtitle": [
+        "Khoan ký! Dừng lại liền! Anh mới dính bẫy tam giác kẹt cứng 45 triệu đây nè!"
+      ]
+    },
+    {
+      "id": "l30_minh",
+      "speaker": "anh_hai",
+      "voice": "Orus",
+      "label_short": "ANH MINH",
+      "speaker_label": "Anh Minh – chủ tiệm điện lạnh 39 tuổi, thẳng tính, bán chiếc xe máy tay ga 45 triệu",
+      "style": "Giọng nam miền Nam Sài Gòn 39 tuổi, phát âm chuẩn phương ngữ miền Nam xuyên suốt mọi câu, giữ cố định một âm sắc trầm chắc, thẳng tính, đời thường, nói gọn rõ chữ, tự nhiên như đời thực, tuyệt đối không giả giọng ông già hay bà già run rẩy, không kéo dài chữ, không cải lương. Sắc thái câu này: dặn nhanh, rõ từng chữ đầy khẩn thiết.",
+      "start": 188.87,
+      "window": 8.96,
+      "text": "Ai ký hợp đồng chính người đó chuyển tiền. Tuyệt đối không nhận tài khoản thứ ba chuyển giùm!"
+    },
+    {
+      "id": "l31_minh",
+      "speaker": "anh_hai",
+      "voice": "Orus",
+      "label_short": "ANH MINH",
+      "speaker_label": "Anh Minh – chủ tiệm điện lạnh 39 tuổi, thẳng tính, bán chiếc xe máy tay ga 45 triệu",
+      "style": "Giọng nam miền Nam Sài Gòn 39 tuổi, phát âm chuẩn phương ngữ miền Nam xuyên suốt mọi câu, giữ cố định một âm sắc trầm chắc, thẳng tính, đời thường, nói gọn rõ chữ, tự nhiên như đời thực, tuyệt đối không giả giọng ông già hay bà già run rẩy, không kéo dài chữ, không cải lương. Sắc thái câu này: nhấn mạnh nguyên tắc sống còn.",
+      "start": 194.11,
+      "window": 8.96,
+      "text": "Nội dung ghi rõ họ tên, mua xe, biển số và ngày hợp đồng. Lệch tên là dừng ký!"
+    },
+    {
+      "id": "l32_nam",
+      "speaker": "thang_tun",
+      "voice": "Achird",
+      "label_short": "NAM",
+      "speaker_label": "Nam – em họ 28 tuổi, thật thà, phản ứng nhanh khi được nhắc kịp thời",
+      "style": "Giọng nam thanh niên miền Nam Sài Gòn 28 tuổi, phát âm chuẩn phương ngữ miền Nam xuyên suốt mọi câu, giữ cố định một âm sắc gọn, sáng vừa, nhanh nhẹn, thật thà gần gũi, rõ chữ, tự nhiên như đời thực, tuyệt đối không giả giọng ông già hay bà già run rẩy, không kéo dài chữ, không cải lương. Sắc thái câu này: bình tĩnh dứt khoát, nhìn thẳng đối phương.",
+      "start": 201.39,
+      "window": 9.98,
+      "text": "Hợp đồng tên chị nên chị dùng đúng tài khoản tên chị chuyển, ghi rõ biển số với ngày hợp đồng nha!"
+    },
+    {
+      "id": "l33_proxy_nu",
+      "speaker": "ke_ngot_ngao_nu",
+      "voice": "Aoede",
+      "label_short": "NGƯỜI MUA HỘ",
+      "speaker_label": "Người phụ nữ 31 tuổi lịch sự đóng vai đứng tên mua hộ ở Hồi 5",
+      "af": "default",
+      "style": "Giọng nữ miền Nam Sài Gòn 31 tuổi, phát âm chuẩn phương ngữ miền Nam xuyên suốt mọi câu, giữ cố định một âm sắc ngọt ngào lịch sự nhưng nhanh chóng chột dạ lúng túng khi bị chặn, tuyệt đối không giả giọng ông già hay bà già run rẩy, không kéo dài chữ, không cải lương. Sắc thái câu này: hơi khựng lại nhưng cố cười trấn an.",
+      "start": 207.39,
+      "window": 7.94,
+      "text": "Ủa… chồng chị ở xa chuyển giùm cho nhanh, tiền vô rồi cần gì rắc rối?"
+    },
+    {
+      "id": "l34_nam",
+      "speaker": "thang_tun",
+      "voice": "Achird",
+      "label_short": "NAM",
+      "speaker_label": "Nam – em họ 28 tuổi, thật thà, phản ứng nhanh khi được nhắc kịp thời",
+      "style": "Giọng nam thanh niên miền Nam Sài Gòn 28 tuổi, phát âm chuẩn phương ngữ miền Nam xuyên suốt mọi câu, giữ cố định một âm sắc gọn, sáng vừa, nhanh nhẹn, thật thà gần gũi, rõ chữ, tự nhiên như đời thực, tuyệt đối không giả giọng ông già hay bà già run rẩy, không kéo dài chữ, không cải lương. Sắc thái câu này: kiên quyết đóng chặt mọi kẽ hở.",
+      "start": 212.71,
+      "window": 9.64,
+      "text": "Không được chị. Lệch tên hay mập mờ em không ký, tiền lỡ vô em cũng ra ngân hàng hoàn lại."
+    },
+    {
+      "id": "l35_proxy_nu",
+      "speaker": "ke_ngot_ngao_nu",
+      "voice": "Aoede",
+      "label_short": "NGƯỜI MUA HỘ",
+      "speaker_label": "Người phụ nữ 31 tuổi lịch sự đóng vai đứng tên mua hộ ở Hồi 5",
+      "af": "default",
+      "style": "Giọng nữ miền Nam Sài Gòn 31 tuổi, phát âm chuẩn phương ngữ miền Nam xuyên suốt mọi câu, giữ cố định một âm sắc ngọt ngào lịch sự nhưng nhanh chóng chột dạ lúng túng khi bị chặn, tuyệt đối không giả giọng ông già hay bà già run rẩy, không kéo dài chữ, không cải lương. Sắc thái câu này: lúng túng chột dạ, vội gom giấy đứng dậy đi thẳng.",
+      "start": 219.44,
+      "window": 6.58,
+      "text": "À… thôi để chị ra ngoài gọi hỏi lại chồng chút nha!"
+    },
+    {
+      "id": "l36_nam",
+      "speaker": "thang_tun",
+      "voice": "Achird",
+      "label_short": "NAM",
+      "speaker_label": "Nam – em họ 28 tuổi, thật thà, phản ứng nhanh khi được nhắc kịp thời",
+      "style": "Giọng nam thanh niên miền Nam Sài Gòn 28 tuổi, phát âm chuẩn phương ngữ miền Nam xuyên suốt mọi câu, giữ cố định một âm sắc gọn, sáng vừa, nhanh nhẹn, thật thà gần gũi, rõ chữ, tự nhiên như đời thực, tuyệt đối không giả giọng ông già hay bà già run rẩy, không kéo dài chữ, không cải lương. Sắc thái câu này: thở phào nhẹ nhõm nhìn theo bóng người kia rời khỏi cửa.",
+      "start": 222.96,
+      "window": 7.94,
+      "text": "Đi mất tiêu rồi! May gọi kịp anh Minh… suýt chút nữa mất trắng chiếc xe!"
+    },
+    {
+      "id": "l37_narr",
+      "speaker": "nguoi_boc_tran",
+      "start": 230.1,
+      "window": 9.06,
+      "text": "Tiền nổi rồi vẫn mất nếu lệch tên. Ai ký hợp đồng người đó chuyển, ghi rõ mục đích."
+    },
+    {
+      "id": "l38a_ke_p",
+      "speaker": "chu_no",
+      "voice": "Fenrir",
+      "label_short": "KHÁCH MUA",
+      "speaker_label": "Kẻ đứng giữa (từ EP08) đóng vai nick 'Anh Hùng' nhắn chốt mua xe máy 45 triệu",
+      "af": "phone",
+      "style": "Giọng nam miền Nam Sài Gòn 40 tuổi, phát âm chuẩn phương ngữ miền Nam xuyên suốt mọi câu, giữ cố định một âm sắc trầm đều, lịch sự mà lạnh tĩnh như kẻ cầm quân cờ, không la hét, tuyệt đối không giả giọng ông già hay bà già run rẩy, không kéo dài chữ, không cải lương. Sắc thái câu này: báo cáo cộc gọn, lạnh tĩnh qua điện thoại từ phòng tối EP08.",
+      "start": 239.05,
+      "window": 5.56,
+      "text": "Bên ông Đạt với Khang… công an vào cuộc."
+    },
+    {
+      "id": "l38b_long_p",
+      "speaker": "ke_ngot_ngao_nam",
+      "voice": "Algieba",
+      "label_short": "LONG",
+      "speaker_label": "Long báo cáo qua cuộc gọi nhóm đường dây ngầm ở kết mở",
+      "af": "phone",
+      "style": "Giọng nam miền Nam Sài Gòn 32 tuổi, phát âm chuẩn phương ngữ miền Nam xuyên suốt mọi câu, giữ cố định một âm sắc sáng vừa, mượt mà, gọn gàng kiểu tay chân báo cáo sếp, tuyệt đối không giả giọng ông già hay bà già run rẩy, không kéo dài chữ, không cải lương. Sắc thái câu này: ngắn gọn, dứt khoát qua điện thoại.",
+      "start": 242.78,
+      "window": 5.22,
+      "text": "Chiếc tay ga đẩy xong. Số hủy sạch."
+    },
+    {
+      "id": "l38c_proxy_p",
+      "speaker": "ke_ngot_ngao_nu",
+      "voice": "Aoede",
+      "label_short": "NGƯỜI MUA HỘ",
+      "speaker_label": "Người mua hộ nữ gọi điện báo động cho bà trùm ở kết mở",
+      "af": "phone",
+      "style": "Giọng nữ miền Nam Sài Gòn 31 tuổi, phát âm chuẩn phương ngữ miền Nam xuyên suốt mọi câu, giữ cố định một âm sắc ngọt ngào lịch sự nhưng nhanh chóng chột dạ lúng túng khi bị chặn, tuyệt đối không giả giọng ông già hay bà già run rẩy, không kéo dài chữ, không cải lương. Sắc thái câu này: gấp gáp, cộc gọn báo động qua điện thoại.",
+      "start": 246.2,
+      "window": 5.56,
+      "text": "Khu này động. Chủ xe đòi chính chủ chuyển."
+    },
+    {
+      "id": "l39_boss_nu",
+      "speaker": "chi_ba",
+      "voice": "Kore",
+      "label_short": "NGƯỜI PHỤ NỮ BÍ ẨN",
+      "speaker_label": "Nhân vật nữ bí mật giấu mặt – hơi liên đới âm sắc & thần thái sắc lạnh kiệm lời của Chị Hai (EP04)",
+      "af": "default",
+      "style": "Giọng phụ nữ miền Nam Sài Gòn 35 tuổi, phát âm chuẩn phương ngữ miền Nam xuyên suốt mọi câu, giữ cố định một âm sắc sắc lạnh, trầm tĩnh, kiệm lời đầy uy quyền, nói ngắn cắt gọn không chút cảm xúc, tuyệt đối không giả giọng ông già hay bà già run rẩy, không kéo dài chữ, không cải lương. Sắc thái câu này: lạnh băng, cắt gọn ba nhịp dứt khoát, không chút cảm xúc — gợi âm hưởng 'Cứ để đó!' ở EP04.",
+      "start": 250.14,
+      "window": 5.1,
+      "text": "Bỏ xe. Dời vùng. Sang kèo đất."
+    }
+  ],
+  "chat_bubbles": [
+    {
+      "sender": "BIẾN ĐỘNG SỐ DƯ · 12:05",
+      "text": "+45.000.000đ · Đã vào tài khoản · Công chứng xong",
+      "side": "left",
+      "y": 260,
+      "stamp": "TIỀN THẬT ĐÃ NỔI",
+      "start": 0.55,
+      "end": 2.75
+    },
+    {
+      "sender": "XÁC MINH DÒNG TIỀN · NGÂN HÀNG",
+      "text": "Đơn trình báo vụ lừa 45.000.000đ · Chảy thẳng vào TK này",
+      "side": "left",
+      "y": 260,
+      "stamp": "YÊU CẦU XÁC MINH",
+      "start": 3.15,
+      "end": 7.65
+    },
+    {
+      "sender": "SAO KÊ NGÂN HÀNG · 12:05",
+      "text": "+45.000.000đ · Từ: TÊN LẠ · ND: Chuyen tien",
+      "side": "left",
+      "y": 260,
+      "stamp": "TIỀN TỪ VỤ LỪA?",
+      "start": 22.27,
+      "end": 24.27
+    },
+    {
+      "sender": "KHÁCH MUA · ANH HÙNG",
+      "text": "Chốt 45tr · Nhờ em họ Long đứng tên mua hộ",
+      "side": "left",
+      "y": 260,
+      "stamp": "MỒI CHỐT NHANH",
+      "start": 55.73,
+      "end": 60.53
+    },
+    {
+      "sender": "NGÂN HÀNG CỦA MINH · 12:05",
+      "text": "+45.000.000đ · Đã vào tài khoản",
+      "side": "left",
+      "y": 108,
+      "stamp": "ĐÃ NHẬN TIỀN",
+      "start": 84.23,
+      "end": 88.44
+    },
+    {
+      "sender": "HỢP ĐỒNG CÔNG CHỨNG",
+      "text": "Bên mua: Long · Đã nhận đủ 45.000.000đ · Đã giao xe",
+      "side": "left",
+      "y": 260,
+      "stamp": "XONG TRÊN GIẤY",
+      "start": 97.37,
+      "end": 101.37
+    },
+    {
+      "sender": "LIÊN HỆ NGƯỜI MUA",
+      "text": "Nick khách mua đã xóa · Số của Long tắt máy",
+      "side": "left",
+      "y": 260,
+      "stamp": "MẤT DẤU CẢ HAI",
+      "start": 102.4,
+      "end": 106.6
+    },
+    {
+      "sender": "12:05 · MẢNH GHÉP",
+      "text": "Khang (-45tr) → TK Anh Minh",
+      "side": "left",
+      "y": 115,
+      "stamp": "CÙNG MỘT VỤ LỪA",
+      "start": 123.53,
+      "end": 128.53
+    },
+    {
+      "sender": "BẪY TAM GIÁC · 12:05 TRƯA",
+      "text": "Khang chuyển 45tr → TK Minh · Long công chứng lấy xe máy",
+      "side": "left",
+      "y": 260,
+      "stamp": "RỬA TIỀN SẠCH",
+      "start": 143.05,
+      "end": 148.25
+    },
+    {
+      "sender": "NGUYÊN TẮC 2 PHẢI",
+      "text": "1. Ai ký HĐ, người đó chuyển · 2. Ghi tên, mua xe, BSX, ngày HĐ",
+      "side": "left",
+      "y": 260,
+      "stamp": "CHẶN BẪY NGAY",
+      "start": 188.72,
+      "end": 193.92
+    }
+  ],
+  "callouts": [],
+  "red_flags": {
+    "title": "NHỚ KỸ – NGUYÊN TẮC 2 PHẢI, 3 KHÔNG",
+    "start": 230.1,
+    "end": 238.4,
+    "stagger_sec": 0.42,
+    "items": [
+      "PHẢI TRÙNG KHỚP 100%: Ai đứng tên ký hợp đồng mua bán thì chính chủ tài khoản đó chuyển tiền",
+      "PHẢI GHI RÕ NỘI DUNG: Họ tên người mua + thanh toán mua xe + biển số + theo hợp đồng ngày ký",
+      "KHÔNG NHẬN NGƯỜI THỨ BA CHUYỂN HỘ: Từ chối mọi lý do tài khoản người thân hay công ty chuyển giùm",
+      "LỆCH TÊN HAY MẬP MỜ LÀ DỪNG KÝ NGAY: Tiền đã lỡ vào thì không giao xe và phối hợp ngân hàng hoàn trả",
+      "CẢNH GIÁC KHÁCH CHỐT QUÁ DỄ: Không mặc cả, né gặp mặt, nhờ người khác đứng tên mua hộ"
+    ],
+    "action": "Nếu đã lỡ giao tài sản và nhận báo tiền từ vụ lừa khác, giữ nguyên tiền trong tài khoản, gom hợp đồng, sao kê và tin nhắn trình báo công an ngay."
+  },
+  "disclaimer": {
+    "header": "LƯU Ý",
+    "start": 256.13,
+    "end": 260.13,
+    "lines": [
+      "Tình huống trong phim được dựng lại nhằm mục đích cảnh báo cộng đồng; nhân vật, tên gọi và số liệu đều là hư cấu.",
+      "Thông tin nghiệp vụ và pháp lý chỉ mang tính tham khảo — khi gặp sự cố, hãy liên hệ trực tiếp ngân hàng và cơ quan công an nơi gần nhất."
+    ]
+  },
+  "audio": {
+    "ambience": [
+      {
+        "preset": "office",
+        "start": 0.0,
+        "end": 2.65,
+        "gain_db": -3.0
+      },
+      {
+        "preset": "room_tone",
+        "start": 2.65,
+        "end": 24.02,
+        "gain_db": -2.5
+      },
+      {
+        "preset": "street",
+        "start": 24.02,
+        "end": 55.23,
+        "gain_db": -5.0
+      },
+      {
+        "preset": "night_room",
+        "start": 55.23,
+        "end": 68.81,
+        "gain_db": -2.8
+      },
+      {
+        "preset": "crowd",
+        "start": 68.81,
+        "end": 83.73,
+        "gain_db": -5.5
+      },
+      {
+        "preset": "crowd",
+        "start": 83.73,
+        "end": 96.87,
+        "gain_db": -5.5
+      },
+      {
+        "preset": "street",
+        "start": 96.87,
+        "end": 101.8,
+        "gain_db": -4.5
+      },
+      {
+        "preset": "room_tone",
+        "start": 101.8,
+        "end": 123.03,
+        "gain_db": -2.5
+      },
+      {
+        "preset": "office",
+        "start": 123.03,
+        "end": 129.69,
+        "gain_db": -4.5
+      },
+      {
+        "preset": "room_tone",
+        "start": 129.69,
+        "end": 142.5,
+        "gain_db": -2.5
+      },
+      {
+        "preset": "night_room",
+        "start": 142.5,
+        "end": 157.3,
+        "gain_db": -2.5
+      },
+      {
+        "preset": "room_tone",
+        "start": 157.3,
+        "end": 175.75,
+        "gain_db": -3.0
+      },
+      {
+        "preset": "crowd",
+        "start": 175.75,
+        "end": 188.22,
+        "gain_db": -5.5
+      },
+      {
+        "preset": "street",
+        "start": 188.22,
+        "end": 200.74,
+        "gain_db": -4.5
+      },
+      {
+        "preset": "crowd",
+        "start": 200.74,
+        "end": 228.6,
+        "gain_db": -5.5
+      },
+      {
+        "preset": "room_tone",
+        "start": 228.6,
+        "end": 229.75,
+        "gain_db": -5.0
+      },
+      {
+        "preset": "room_tone",
+        "start": 229.75,
+        "end": 238.4,
+        "gain_db": -5.0
+      },
+      {
+        "preset": "rain",
+        "start": 238.4,
+        "end": 255.78,
+        "gain_db": -3.2
+      },
+      {
+        "preset": "room_tone",
+        "start": 255.78,
+        "end": 260.13,
+        "gain_db": -6.0
+      }
+    ],
+    "foley": [
+      {
+        "preset": "typing",
+        "at": 0.45,
+        "gain_db": -5,
+        "dur": 0.6
+      },
+      {
+        "preset": "message_send",
+        "at": 1.1,
+        "gain_db": -3
+      },
+      {
+        "preset": "bank_ting",
+        "at": 1.55,
+        "gain_db": -2.5
+      },
+      {
+        "preset": "phone_ring",
+        "at": 3.1,
+        "gain_db": -4,
+        "dur": 0.8
+      },
+      {
+        "preset": "impact",
+        "at": 22.12,
+        "gain_db": -2.5
+      },
+      {
+        "preset": "heartbeat",
+        "at": 22.32,
+        "gain_db": -5,
+        "dur": 1.6
+      },
+      {
+        "preset": "chapter_sting",
+        "at": 24.27,
+        "gain_db": -5
+      },
+      {
+        "preset": "typing",
+        "at": 55.73,
+        "gain_db": -5,
+        "dur": 0.8
+      },
+      {
+        "preset": "message_send",
+        "at": 56.48,
+        "gain_db": -4
+      },
+      {
+        "preset": "chapter_sting",
+        "at": 69.06,
+        "gain_db": -5
+      },
+      {
+        "preset": "bank_ting",
+        "at": 84.23,
+        "gain_db": -2.5
+      },
+      {
+        "preset": "footsteps",
+        "at": 97.37,
+        "gain_db": -5,
+        "dur": 1.0
+      },
+      {
+        "preset": "chapter_sting",
+        "at": 102.05,
+        "gain_db": -5
+      },
+      {
+        "preset": "phone_ring",
+        "at": 102.35,
+        "gain_db": -5,
+        "dur": 0.7
+      },
+      {
+        "preset": "call_end",
+        "at": 103.1,
+        "gain_db": -3
+      },
+      {
+        "preset": "impact",
+        "at": 123.38,
+        "gain_db": -2.0
+      },
+      {
+        "preset": "heartbeat",
+        "at": 130.24,
+        "gain_db": -5,
+        "dur": 1.6
+      },
+      {
+        "preset": "impact",
+        "at": 142.85,
+        "gain_db": -2.5
+      },
+      {
+        "preset": "chapter_sting",
+        "at": 176.0,
+        "gain_db": -5
+      },
+      {
+        "preset": "phone_ring",
+        "at": 176.35,
+        "gain_db": -4,
+        "dur": 0.8
+      },
+      {
+        "preset": "low_accent",
+        "at": 188.72,
+        "gain_db": -4.5
+      },
+      {
+        "preset": "riser",
+        "at": 201.09,
+        "gain_db": -4.5,
+        "dur": 0.8
+      },
+      {
+        "preset": "impact",
+        "at": 219.09,
+        "gain_db": -2.5
+      },
+      {
+        "preset": "footsteps",
+        "at": 219.44,
+        "gain_db": -4,
+        "dur": 1.1
+      },
+      {
+        "preset": "bank_ting",
+        "at": 230.1,
+        "gain_db": -5
+      },
+      {
+        "preset": "phone_vibrate",
+        "at": 238.85,
+        "gain_db": -5,
+        "dur": 0.5
+      },
+      {
+        "preset": "heartbeat",
+        "at": 249.79,
+        "gain_db": -5,
+        "dur": 0.9
+      },
+      {
+        "preset": "impact",
+        "at": 254.13,
+        "gain_db": -1.5
+      }
+    ],
+    "bgm": [
+      {
+        "preset": "suspense_pulse",
+        "start": 0.0,
+        "end": 2.65,
+        "gain_db": -2.5
+      },
+      {
+        "preset": "suspense_pulse",
+        "start": 2.65,
+        "end": 24.02,
+        "gain_db": -2.5
+      },
+      {
+        "preset": "investigative_story",
+        "start": 24.02,
+        "end": 55.23,
+        "gain_db": -3.8
+      },
+      {
+        "preset": "tension_drone",
+        "start": 55.23,
+        "end": 68.81,
+        "gain_db": -3.0
+      },
+      {
+        "preset": "investigative_story",
+        "start": 68.81,
+        "end": 83.73,
+        "gain_db": -4.0
+      },
+      {
+        "preset": "suspense_pulse",
+        "start": 83.73,
+        "end": 96.87,
+        "gain_db": -4.2
+      },
+      {
+        "preset": "investigative_story",
+        "start": 96.87,
+        "end": 101.8,
+        "gain_db": -3.8
+      },
+      {
+        "preset": "tension_drone",
+        "start": 101.8,
+        "end": 123.03,
+        "gain_db": -2.5
+      },
+      {
+        "preset": "tension_drone",
+        "start": 123.03,
+        "end": 129.69,
+        "gain_db": -2.0
+      },
+      {
+        "preset": "tension_drone",
+        "start": 129.69,
+        "end": 142.5,
+        "gain_db": -2.5
+      },
+      {
+        "preset": "suspense_pulse",
+        "start": 142.5,
+        "end": 157.3,
+        "gain_db": -2.5
+      },
+      {
+        "preset": "investigative_story",
+        "start": 157.3,
+        "end": 175.75,
+        "gain_db": -3.6
+      },
+      {
+        "preset": "suspense_pulse",
+        "start": 175.75,
+        "end": 188.22,
+        "gain_db": -3.0
+      },
+      {
+        "preset": "action_climax",
+        "start": 188.22,
+        "end": 200.74,
+        "gain_db": -3.2
+      },
+      {
+        "preset": "action_climax",
+        "start": 200.74,
+        "end": 228.6,
+        "gain_db": -2.5
+      },
+      {
+        "preset": "investigative_story",
+        "start": 228.6,
+        "end": 229.75,
+        "gain_db": -40.0
+      },
+      {
+        "preset": "warm_outro",
+        "start": 229.75,
+        "end": 238.4,
+        "gain_db": -4.2
+      },
+      {
+        "preset": "tension_drone",
+        "start": 238.4,
+        "end": 255.78,
+        "gain_db": -2.4
+      },
+      {
+        "preset": "warm_outro",
+        "start": 255.78,
+        "end": 260.13,
+        "gain_db": -7.5
+      }
+    ],
+    "duck_extra": [
+      {
+        "start": 21.92,
+        "end": 24.52,
+        "bgm_db": -12,
+        "amb_db": -8
+      },
+      {
+        "start": 83.88,
+        "end": 89.08,
+        "bgm_db": -10,
+        "amb_db": -7
+      },
+      {
+        "start": 123.17999999999999,
+        "end": 129.38,
+        "bgm_db": -12,
+        "amb_db": -8
+      },
+      {
+        "start": 129.84,
+        "end": 138.04,
+        "bgm_db": -11,
+        "amb_db": -7
+      },
+      {
+        "start": 142.65,
+        "end": 154.85,
+        "bgm_db": -11,
+        "amb_db": -8
+      },
+      {
+        "start": 200.89000000000001,
+        "end": 215.09,
+        "bgm_db": -11,
+        "amb_db": -7
+      },
+      {
+        "start": 238.55,
+        "end": 255.93,
+        "bgm_db": -10,
+        "amb_db": -7
+      },
+      {
+        "start": 256.13,
+        "end": 260.08
+      }
+    ]
+  },
+  "forbidden_terms": [],
+  "publish": {
+    "titles": [
+      "Tiền Nổi Đủ 45 Triệu Mới Ký Công Chứng Bán Xe Máy – Sao Hai Ngày Sau Vẫn Kẹt Cứng? | Bóc Trần Lừa Đảo",
+      "Tiền Nổi Rồi, Tên Lại Khác: Cái Bẫy Ngay Tại Phòng Công Chứng Đông Người | Bóc Trần Lừa Đảo",
+      "Bán Xe Máy Thấy Tiền Nổi Đủ 45 Triệu Mới Giao Xe – Sự Thật Đằng Sau Dòng Tiền Lạ | Bóc Trần Lừa Đảo"
+    ],
+    "description": "Đúng 12 giờ 05 trưa tại phòng công chứng đông người, chủ xe máy thấy tiền thật nổi đủ 45 triệu trong tài khoản mới đặt bút ký giao xe — vậy mà hai ngày sau lại nhận thông báo khoản tiền đó chảy thẳng từ một vụ lừa đảo khác.\n\nGhi nhớ nguyên tắc 2 Phải – 3 Không khi mua bán xe máy, ô tô, đất đai: ai ký hợp đồng thì chính người đó chuyển tiền, và nội dung chuyển khoản phải ghi rõ họ tên, tài sản/biển số cùng ngày hợp đồng.\n\n⏱️ Các hồi trong phim:\n00:00 Mở đầu – Tiền 45 triệu đã nổi, công chứng rồi sao vẫn mất?\n00:24 Hồi 1 – Khách chốt không mặc cả\n01:08 Hồi 2 – Tiền đã nổi trong tài khoản\n01:41 Hồi 3 – Nick đã xóa, xe đã sang tay\n02:22 Hồi 4 – Tam giác lệch dòng tiền\n02:55 Hồi 5 – Nguyên tắc hai phải, ba không\n03:50 Nhớ kỹ – Nguyên tắc 2 Phải, 3 Không khi bán xe, bán đất",
+    "pinned_comment": "📌 Tới Hồi 3 bạn có giật mình nhận ra cái tên 'Khang' và câu gọi 'anh Đạt ơi' nối thẳng từ tập trước không? Chia sẻ cảm nhận và kinh nghiệm đi công chứng mua bán xe bên dưới nhé!\n⚠️ Lưu ý: Không đăng SĐT, STK hay tên người thật; tuyệt đối cảnh giác mọi bình luận mời chào dịch vụ 'hỗ trợ lấy lại tiền'.",
+    "hashtags": [
+      "#bóctrầnlừađảo",
+      "#cảnhgiáclừađảo",
+      "#vạnchuyện",
+      "#bẫytamgiác",
+      "#muabánxe"
+    ],
+    "tags": [
+      "cảnh giác lừa đảo",
+      "bóc trần lừa đảo",
+      "vạn chuyện",
+      "lừa đảo tam giác",
+      "lệch dòng tiền giao dịch",
+      "lừa đảo mua bán xe công chứng",
+      "nguyên tắc 2 phải 3 không",
+      "rửa tiền mua xe máy",
+      "an toàn giao dịch"
+    ],
+    "category": "Education (Giáo dục)",
+    "playlist": "Hồ Sơ Bóc Trần Lừa Đảo – Phim Dài Chuyên Sâu",
+    "thumbnail_sec": 202.59
+  }
+}

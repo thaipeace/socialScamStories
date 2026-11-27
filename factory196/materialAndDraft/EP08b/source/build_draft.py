@@ -243,12 +243,22 @@ def blink(image: str, region: list[float], first_offset: float = 1.6, interval: 
 def mouth(speaker: str, line_ids: list[str], region: list[float], default_state: str,
           closed_image: str, mid_image: str, open_image: str,
           feather: float = 0.006, layer: str | None = None,
-          thresh_mid: float = 0.14, thresh_open: float = 0.68):
+          thresh_mid: float = 0.11, thresh_open: float = 0.52,
+          round_image: str | None = None):
     E.append(("mouth", dict(
         speaker=speaker, line_ids=line_ids, region=region, default_state=default_state,
         closed_image=closed_image, mid_image=mid_image, open_image=open_image,
         feather=feather, layer=layer, thresh_mid=thresh_mid, thresh_open=thresh_open,
+        round_image=round_image,
     )))
+
+
+def fx(fx_dict: dict):
+    E.append(("fx", fx_dict))
+
+
+def sfx_abs(preset: str, at: float, gain: float = -5.0, dur: float | None = None):
+    E.append(("sfx_abs", dict(preset=preset, at=at, gain=gain, dur=dur)))
 
 
 def line(lid: str, spk: str, text: str, emo: str = "", sub: str | None = None, pause: float = 0.0):
@@ -291,10 +301,16 @@ EP01B = "factory196/materialAndDraft/EP01b/assets/"
 # ---- HOOK · MÔ-TÍP MÀU SẮC 12:05 (CHƯA LỘ TÊN) & CÚ GỌI XÁC MINH 45 TRIỆU ----
 amb("office", -3.0); bgm("suspense_pulse", -2.5)
 scene("s00a_pulse_1205", "assets/c00a.jpg", "pan_right", beat_type="establishing", level="C",
-      intent="Quét ngang theo dải sáng dòng tiền cyan-amber nối tay chuyển tiền (EP08) sang điện thoại Anh Minh")
+      intent="Quét ngang theo dải sáng dòng tiền cyan-amber + bộ đếm +45.000.000đ + Chromatic Pulse nối EP08 sang điện thoại Anh Minh")
 sfx("typing", 0.1, -5, dur=0.6)
 sfx("message_send", 0.75, -3)
 sfx("bank_ting", 1.2, -2.5)
+sfx_abs("counter_tick", 0.55, -5.5)
+fx({"type": "animated_counter", "start": 0.55, "end": 2.55, "count_dur": 1.1,
+    "from_val": 0, "to_val": 45000000, "fmt": "vnd", "label": "TIỀN THẬT ĐÃ NỔI · 12:05",
+    "pos": [0.24, 0.68], "style": "safe", "easing": "ease_out"})
+fx({"type": "chromatic_pulse", "at": 1.20, "dur": 0.25, "shift_px": 5, "zoom_blur": 0.018})
+fx({"type": "color_mood", "mood": "warm_daily", "strength": 0.45, "vignette": 0.10, "grain": 0.006})
 detail("screen_glow", offset_start=0.05, end_scene=True, pos=[0.32, 0.56], radius=[0.18, 0.20],
        color=[105, 220, 255], intensity=0.28, mode="pulse", fade=0.25)
 detail("screen_glow", offset_start=0.95, end_scene=True, pos=[0.73, 0.50], radius=[0.20, 0.22],
@@ -307,12 +323,17 @@ beat(2.3)
 
 amb("room_tone", -2.5); bgm("suspense_pulse", -2.5)
 scene("s00b_hook_call", "assets/c00.jpg", "push_right_breathe", beat_type="suspicion", level="C",
-      intent="Đẩy nhẹ kèm nhịp thở, chớp mắt và khẩu hình thật khi Anh Minh sững người nghe ngân hàng báo 45 triệu từ vụ lừa",
-      tr="flash_white", trd=0.2, shake=0.18)
+      intent="Zoom Punch vào Anh Minh + chớp mắt & chép miệng 4 trạng thái + sóng âm Ngân hàng xác minh 45 triệu + Cold Suspicion",
+      tr="zoom_punch", trd=0.24, shake=0.18)
 sfx("phone_ring", 0.1, -4, dur=0.8)
 blink("assets/c00_minh_blink.jpg", [0.476, 0.193, 0.630, 0.357], first_offset=1.9, interval=4.1)
 mouth("anh_hai", ["l02_minh"], [0.511, 0.306, 0.630, 0.450], "mid",
-      "assets/c00_minh_mouth_closed.jpg", "assets/c00.jpg", "assets/c00_minh_mouth_open.jpg")
+      "assets/c00_minh_mouth_closed.jpg", "assets/c00.jpg", "assets/c00_minh_mouth_open.jpg",
+      round_image="assets/c00_minh_mouth_round.jpg")
+fx({"type": "phone_waveform", "speaker": "chi_tu", "line_ids": ["l01_bank_p", "l03_bank_p"],
+    "start": 3.8, "end": 21.4, "pos": [0.24, 0.56], "size": [0.25, 0.058],
+    "color": [255, 95, 85], "label": "NGÂN HÀNG · XÁC MINH 45TR"})
+fx({"type": "color_mood", "mood": "cold_suspicion", "strength": 0.38, "vignette": 0.16, "grain": 0.008})
 bubble("XÁC MINH DÒNG TIỀN · NGÂN HÀNG", "Đơn trình báo vụ lừa 45.000.000đ · Chảy thẳng vào TK này",
        side="left", y=260, stamp="YÊU CẦU XÁC MINH", dur=4.5, offset=0.15)
 beat(0.85)
@@ -329,11 +350,16 @@ line("l03_bank_p", "BANK_P",
      "rõ ràng, dứt khoát đúng nghiệp vụ")
 
 scene("s01_hook_freeze", "assets/c01.jpg", "static_hold", beat_type="anomaly", level="C",
-      intent="Giữ tĩnh lạnh sau cú impact, gom sáng vào ánh mắt sững sờ (chớp mắt 1 nhịp) và ánh màn hình sao kê",
-      tr="flash_white", trd=0.22, shake=0.15)
+      intent="Zoom Punch đứng hình: Anh Minh chớp mắt sững sờ + khoanh đỏ màn hình sao kê + Chromatic Pulse + High Tension",
+      tr="zoom_punch", trd=0.24, shake=0.15)
 mark("hook_freeze")
 sfx("impact", 0.0, -2.5)
+sfx_abs("marker_draw", 22.10, -5.0)
 blink("assets/c01_minh_blink.jpg", [0.603, 0.206, 0.764, 0.343], first_offset=1.15, interval=3.5)
+fx({"type": "red_circle_draw", "region": [0.51, 0.63, 0.65, 0.84], "at": 22.1, "dur": 0.40, "end": 23.9,
+    "style": "circle", "width": 5, "color": [248, 58, 58]})
+fx({"type": "chromatic_pulse", "at": 21.95, "dur": 0.28, "shift_px": 7, "zoom_blur": 0.024})
+fx({"type": "color_mood", "mood": "high_tension", "strength": 0.50, "vignette": 0.24, "grain": 0.012})
 detail("focus_highlight", offset_start=0.05, end_scene=True, pos=[0.66, 0.48], radius=[0.32, 0.38], dim_outer=0.26, fade=0.30)
 detail("screen_glow", offset_start=0.10, end_scene=True, pos=[0.57, 0.72], radius=[0.18, 0.20],
        color=[110, 225, 255], intensity=0.28, mode="turn_on", fade=0.30)
@@ -345,8 +371,10 @@ beat(1.9)
 # ---- HỒI 1 · BA HÔM TRƯỚC: KHÁCH CHỐT KHÔNG MẶC CẢ ----
 amb("street", -5.0); bgm("investigative_story", -3.8)
 scene("s02_sell_bike_cafe", "assets/c02.jpg", "pan_right_breathe", beat_type="establishing", level="C",
-      intent="Pan ngang nắng sáng quán trà đá + Living-Character 3 nhân vật (Minh, Thảo, Nam chớp mắt lệch nhịp & khẩu hình đối thoại thật)",
-      tr="fade_black", trd=0.45)
+      intent="Chuyển hồi Film Burn về quán trà đá sáng: 3 nhân vật (Minh, Thảo, Nam) chớp mắt & chép miệng + hạt nắng sớm ấm áp",
+      tr="film_burn", trd=0.45)
+fx({"type": "ambient_particles", "count": 20, "opacity": 0.24, "color": [255, 240, 190], "drift_dir": "float", "seed": 82})
+fx({"type": "color_mood", "mood": "warm_daily", "strength": 0.56, "vignette": 0.08, "grain": 0.0})
 chapter("HỒI 1 · BA HÔM TRƯỚC", "KHÁCH CHỐT KHÔNG MẶC CẢ")
 sfx("chapter_sting", -0.1, -5)
 blink("assets/c02_minh_blink.jpg", [0.365, 0.266, 0.471, 0.373], first_offset=2.1, interval=4.3)
@@ -379,8 +407,13 @@ line("l08_nam", "NAM",
 
 amb("night_room", -2.8); bgm("tension_drone", -3.0)
 scene("s03_buyer_chat_dark", "assets/c03_dim.jpg", "pan_left", beat_type="information", level="C",
-      intent="Pan trái lạnh qua hai điện thoại phòng tối EP08 kèm màn hình phải bừng sáng (detail_reveal + screen_glow) đúng nhịp gõ tin",
-      tr="fade_black", trd=0.4)
+      intent="Luma Wipe sang phòng tối EP08: màn hình bừng sáng detail_reveal + typing_indicator + sóng âm khách mua + Noir Evidence",
+      tr="luma_wipe", trd=0.38)
+fx({"type": "typing_indicator", "start": 55.30, "end": 55.70, "side": "left", "y": 260})
+fx({"type": "phone_waveform", "speaker": "chu_no", "line_ids": ["l09_buyer_msg", "l10_buyer_msg"],
+    "start": 56.0, "end": 68.5, "pos": [0.24, 0.56], "size": [0.25, 0.058],
+    "color": [95, 215, 245], "label": "ANH HÙNG · CHỐT MUA NHANH"})
+fx({"type": "color_mood", "mood": "noir_evidence", "strength": 0.52, "vignette": 0.22, "grain": 0.012})
 sfx("typing", 0.15, -5, dur=0.8)
 sfx("message_send", 0.9, -4)
 detail("detail_reveal", offset_at=0.22, dur=0.30, image="assets/c03.jpg")
@@ -401,8 +434,10 @@ line("l10_buyer_msg", "BUYER_MSG",
 # ---- HỒI 2 · 12 GIỜ TRƯA HÔM SAU: PHÒNG CÔNG CHỨNG ĐÔNG ĐÚC & MỘT THOÁNG GỢN LẠ ----
 amb("crowd", -5.5); bgm("investigative_story", -4.0)
 scene("s04_notary_meeting", "assets/c04.jpg", "pull_out_breathe", beat_type="normal", level="C",
-      intent="Lùi nhẹ mở không gian phòng công chứng đông người + Living-Character 3 nhân vật (Minh, Thảo, Long chớp mắt & đối thoại khớp WAV)",
-      tr="fade_black", trd=0.4)
+      intent="Whip Pan sang phòng công chứng đông người + 3 nhân vật (Minh, Thảo, Long) chớp mắt & chép miệng + hạt sáng dịu",
+      tr="whip_pan_right", trd=0.30)
+fx({"type": "ambient_particles", "count": 16, "opacity": 0.20, "color": [255, 242, 205], "drift_dir": "float", "seed": 84})
+fx({"type": "color_mood", "mood": "warm_daily", "strength": 0.45, "vignette": 0.08, "grain": 0.0})
 chapter("HỒI 2 · TRƯA HÔM SAU", "TIỀN ĐÃ NỔI TRONG TÀI KHOẢN")
 sfx("chapter_sting", -0.1, -5)
 blink("assets/c04_minh_blink.jpg", [0.191, 0.218, 0.291, 0.352], first_offset=2.6, interval=4.5)
@@ -425,10 +460,16 @@ line("l13_long", "LONG",
 
 amb("crowd", -5.5); bgm("suspense_pulse", -4.2)
 scene("s05_money_arrives_mismatch", "assets/c05.jpg", "push_in_breathe", beat_type="anomaly", level="C",
-      intent="Đẩy nhẹ nhịp 12:05 khi tiếng ting vang lên + ánh sáng cyan-amber hắt màn hình + đối thoại 3 nhân vật khớp WAV thật",
+      intent="Nhịp 12:05 tiếng ting vang lên + bộ đếm +45.000.000đ lệch tên Khang + Chromatic Pulse + đối thoại 3 nhân vật",
       tr="dissolve", trd=0.3)
 mark("money_mismatch")
 sfx("bank_ting", 0.15, -2.5)
+sfx_abs("counter_tick", 84.30, -5.5)
+fx({"type": "animated_counter", "start": 84.3, "end": 91.2, "count_dur": 1.4,
+    "from_val": 0, "to_val": 45000000, "fmt": "vnd", "label": "NGƯỜI GỬI: KHANG (LỆCH TÊN)",
+    "pos": [0.24, 0.72], "style": "warn", "easing": "ease_out"})
+fx({"type": "chromatic_pulse", "at": 88.35, "dur": 0.26, "shift_px": 5, "zoom_blur": 0.018})
+fx({"type": "color_mood", "mood": "cold_suspicion", "strength": 0.26, "vignette": 0.12, "grain": 0.006})
 blink("assets/c05_thao_blink.jpg", [0.221, 0.329, 0.303, 0.444], first_offset=2.4, interval=4.2)
 blink("assets/c05_minh_blink.jpg", [0.389, 0.227, 0.485, 0.366], first_offset=1.5, interval=3.9)
 blink("assets/c05_long_blink.jpg", [0.715, 0.243, 0.817, 0.380], first_offset=3.1, interval=4.5)
@@ -457,10 +498,15 @@ line("l16_long", "LONG",
      "cười nhẹ lịch sự, gật gọn tự nhiên hướng về quầy công chứng", pause=0.15)
 
 amb("street", -4.5); bgm("investigative_story", -3.8)
-scene("s06_sign_handover", "assets/c06.jpg", "pan_left", beat_type="normal", level="A",
-      intent="Pan ngang sáng trưa từ Long nhận xe tay ga xám bạc hướng về Minh & Thảo vẫy tay trước sảnh công chứng",
+scene("s06_sign_handover", "assets/c06.jpg", "pan_left", beat_type="normal", level="C",
+      intent="Pan ngang sáng trưa trước sảnh công chứng: Long chớp mắt & chép miệng nhận chìa khóa chạy xe đi + hạt nắng trưa",
       tr="dissolve", trd=0.35)
 sfx("footsteps", 0.15, -5, dur=1.0)
+blink("assets/c06_long_blink.jpg", [0.740, 0.208, 0.799, 0.287], first_offset=1.3, interval=3.8)
+mouth("ke_ngot_ngao_nam", ["l17_long"], [0.742, 0.273, 0.799, 0.347], "mid",
+      "assets/c06_long_mouth_closed.jpg", "assets/c06.jpg", "assets/c06_long_mouth_open.jpg")
+fx({"type": "ambient_particles", "count": 18, "opacity": 0.22, "color": [255, 244, 205], "drift_dir": "float", "seed": 86})
+fx({"type": "color_mood", "mood": "warm_daily", "strength": 0.48, "vignette": 0.08, "grain": 0.0})
 bubble("HỢP ĐỒNG CÔNG CHỨNG", "Bên mua: Long · Đã nhận đủ 45.000.000đ · Đã giao xe",
        side="left", y=260, stamp="XONG TRÊN GIẤY", dur=4.0, offset=0.15)
 beat(0.5)
@@ -471,8 +517,10 @@ line("l17_long", "LONG",
 # ---- HỒI 3 · HAI NGÀY SAU: NICK ĐÃ XÓA, DÒNG TIỀN TỪ VỤ LỪA KHÁC ----
 amb("room_tone", -2.5); bgm("tension_drone", -2.5)
 scene("s07_call_blocked", "assets/c07.jpg", "pull_right_breathe", beat_type="climax", level="C",
-      intent="Lùi căng thẳng khi mất dấu cả hai + ánh đỏ điện thoại nhấp nháy khớp call_end + chớp mắt & khẩu hình Minh/Thảo",
-      tr="fade_black", trd=0.4, shake=0.15)
+      intent="Luma Wipe sang 2 ngày sau: mất dấu cả hai + ánh đỏ nhấp nháy + Chromatic Pulse + chớp mắt & chép miệng Minh/Thảo",
+      tr="luma_wipe", trd=0.38, shake=0.15)
+fx({"type": "chromatic_pulse", "at": 103.10, "dur": 0.28, "shift_px": 6, "zoom_blur": 0.022})
+fx({"type": "color_mood", "mood": "high_tension", "strength": 0.48, "vignette": 0.22, "grain": 0.012})
 chapter("HỒI 3 · HAI NGÀY SAU", "NICK ĐÃ XÓA, XE ĐÃ SANG TAY")
 sfx("chapter_sting", -0.1, -5)
 sfx("phone_ring", 0.2, -5, dur=0.7)
@@ -502,8 +550,10 @@ line("l20_minh", "MINH",
 # CÚ NỔ TWIST HỒI 3: Hồi ức trực tiếp mặt Khang & Anh Đạt (EP08) + khẩu hình Khang khớp voice Puck!
 amb("office", -4.5); bgm("tension_drone", -2.0)
 scene("s08a_ep08_twist", "assets/c08a.jpg", "push_in_breathe", beat_type="climax", level="C",
-      intent="Cú nổ twist nối trực tiếp EP08: hồi ức Khang & Anh Đạt với khẩu hình Khang khớp giọng Puck + ánh 2 điện thoại bàn gỗ",
-      tr="flash_white", trd=0.22, shake=0.18)
+      intent="Zoom Punch hồi ức EP08: Khang & Anh Đạt với khẩu hình Khang khớp giọng Puck + Chromatic Pulse + tông Flashback",
+      tr="zoom_punch", trd=0.24, shake=0.18)
+fx({"type": "chromatic_pulse", "at": 123.25, "dur": 0.30, "shift_px": 7, "zoom_blur": 0.025})
+fx({"type": "color_mood", "mood": "flashback", "strength": 0.44, "vignette": 0.20, "grain": 0.014})
 mark("ep08_twist")
 sfx("impact", 0.0, -2.0)
 blink("assets/c08a_dat_blink.jpg", [0.350, 0.238, 0.454, 0.358], first_offset=2.3, interval=4.2)
@@ -522,10 +572,14 @@ line("l20b_khang_echo", "KHANG_ECHO",
 
 amb("room_tone", -2.5); bgm("tension_drone", -2.5)
 scene("s08b_paper_trap", "assets/c08.jpg", "pull_out", beat_type="information", level="C",
-      intent="Lùi chậm cận bàn phòng khách phơi bày khoảng cách giữa bìa hợp đồng công chứng và sao kê điện thoại",
+      intent="Cận bàn phòng khách phơi bày bẫy giấy tờ lệch tên: khoanh đỏ cụm sao kê & điện thoại + Noir Evidence",
       tr="dissolve", trd=0.35)
 mark("paper_trap")
 sfx("heartbeat", 0.2, -5, dur=1.6)
+sfx_abs("marker_draw", 132.00, -4.5)
+fx({"type": "red_circle_draw", "region": [0.64, 0.36, 0.90, 0.68], "at": 132.0, "dur": 0.50, "end": 141.8,
+    "style": "box", "width": 5, "color": [248, 58, 58]})
+fx({"type": "color_mood", "mood": "noir_evidence", "strength": 0.46, "vignette": 0.20, "grain": 0.012})
 detail("focus_highlight", offset_start=0.20, end_scene=True, pos=[0.54, 0.50], radius=[0.42, 0.36], dim_outer=0.22, fade=0.45)
 detail("screen_glow", offset_start=0.25, end_scene=True, pos=[0.85, 0.53], radius=[0.14, 0.18],
        color=[125, 220, 255], intensity=0.26, mode="pulse", fade=0.35)
@@ -540,8 +594,8 @@ line("l22_minh", "MINH",
 # ---- HỒI 4 · LỘ DIỆN CƠ CHẾ: MỘT DÒNG TIỀN, HAI NẠN NHÂN & XỬ LÝ ĐÚNG LUẬT ----
 amb("night_room", -2.5); bgm("suspense_pulse", -2.5)
 scene("s09_triangle_reveal", "assets/c09.jpg", "push_in", beat_type="information", level="B",
-      intent="Parallax 2.5D hai lớp phòng tối tách bóng lưng kẻ đứng giữa (nhịp thở nhẹ) trước hai điện thoại & tam giác dòng tiền phát sáng",
-      tr="flash_white", trd=0.22, shake=0.14,
+      intent="2.5D Parallax phòng tối + Rack Focus + Breathing + bộ đếm 45.000.000đ rửa tiền tam giác + sóng âm kẻ đứng giữa + Noir Evidence",
+      tr="luma_wipe", trd=0.36, shake=0.14,
       parallax={
           "camera": "push_in",
           "dolly": [1.02, 1.08],
@@ -551,10 +605,18 @@ scene("s09_triangle_reveal", "assets/c09.jpg", "push_in", beat_type="information
           "strength": 0.88,
           "easing": "ease_out",
           "layers": [
-              {"role": "bg", "image": "assets/s09_bg.jpg", "depth": 0.42, "blur": 0.6},
+              {"role": "bg", "image": "assets/s09_bg.jpg", "depth": 0.42, "blur_from": 0.4, "blur_to": 3.0, "blur_at": 145.5, "blur_dur": 4.0},
               {"role": "fg", "image": "assets/s09_fg.png", "depth": 1.28, "breathe_y": 1.6, "breathe_period": 3.8},
           ],
       })
+sfx_abs("counter_tick", 145.00, -5.5)
+fx({"type": "animated_counter", "start": 145.0, "end": 156.5, "count_dur": 1.6,
+    "from_val": 0, "to_val": 45000000, "fmt": "vnd", "label": "TIỀN BẨN → XE THẬT (12:05)",
+    "pos": [0.24, 0.56], "style": "danger", "easing": "ease_out"})
+fx({"type": "phone_waveform", "speaker": "chu_no", "line_ids": ["l23_buyer_room", "l24_buyer_room"],
+    "start": 143.2, "end": 156.8, "pos": [0.24, 0.72], "size": [0.25, 0.056],
+    "color": [95, 220, 245], "label": "KẺ ĐỨNG GIỮA · BẪY TAM GIÁC"})
+fx({"type": "color_mood", "mood": "noir_evidence", "strength": 0.58, "vignette": 0.26, "grain": 0.014})
 chapter("HỒI 4 · LỘ DIỆN CƠ CHẾ", "TAM GIÁC LỆCH DÒNG TIỀN")
 mark("triangle_reveal")
 sfx("impact", 0.0, -2.5)
@@ -573,8 +635,10 @@ line("l24_buyer_room", "BUYER_ROOM",
 
 amb("room_tone", -3.0); bgm("investigative_story", -3.6)
 scene("s10_response_action", "assets/c10.jpg", "pan_right_breathe", beat_type="aftermath", level="C",
-      intent="Pan ngang sáng sớm giữ mạch đối thoại cản rút tiền giữa Minh & Thảo (Living-Character chớp mắt + khẩu hình đôi)",
-      tr="fade_black", trd=0.4)
+      intent="Chuyển cảnh Film Burn về sáng sớm: Minh & Thảo chớp mắt + chép miệng cản rút tiền đúng luật + hạt sáng ấm",
+      tr="film_burn", trd=0.45)
+fx({"type": "ambient_particles", "count": 18, "opacity": 0.22, "color": [255, 238, 195], "drift_dir": "float", "seed": 90})
+fx({"type": "color_mood", "mood": "warm_daily", "strength": 0.52, "vignette": 0.10, "grain": 0.0})
 mark("response_action")
 blink("assets/c10_minh_blink.jpg", [0.321, 0.169, 0.439, 0.311], first_offset=1.8, interval=4.1)
 blink("assets/c10_thao_blink.jpg", [0.619, 0.223, 0.720, 0.346], first_offset=2.9, interval=4.5)
@@ -597,8 +661,8 @@ line("l27_minh", "MINH",
 # ---- HỒI 5 · HAI TUẦN SAU: CÚ GỌI CHẶN BẪY & NGUYÊN TẮC 2 PHẢI – 3 KHÔNG ----
 amb("crowd", -5.5); bgm("suspense_pulse", -3.0)
 scene("s11_nam_calls_notary", "assets/c11.jpg", "push_in", beat_type="establishing", level="B",
-      intent="Parallax 2.5D tách Nam tiền cảnh (nhịp thở, chớp mắt & khẩu hình khóa cứng theo layer FG) với người mua hộ nữ chờ sẵn ở sảnh sau",
-      tr="fade_black", trd=0.45,
+      intent="2.5D Parallax tách Nam tiền cảnh + Rack Focus + Breathing + Head Micro-Tilt + Nam chớp mắt & chép miệng 4 trạng thái (fg) + sóng âm Anh Minh cản gấp",
+      tr="luma_wipe", trd=0.42,
       parallax={
           "camera": "push_in",
           "dolly": [1.02, 1.08],
@@ -608,8 +672,9 @@ scene("s11_nam_calls_notary", "assets/c11.jpg", "push_in", beat_type="establishi
           "strength": 0.86,
           "easing": "ease_out",
           "layers": [
-              {"role": "bg", "image": "assets/s11_bg.jpg", "depth": 0.42, "blur": 0.6},
-              {"role": "fg", "image": "assets/s11_fg.png", "depth": 1.26, "breathe_y": 1.8, "breathe_period": 3.4},
+              {"role": "bg", "image": "assets/s11_bg.jpg", "depth": 0.42, "blur_from": 0.4, "blur_to": 2.8, "blur_at": 178.0, "blur_dur": 4.0},
+              {"role": "fg", "image": "assets/s11_fg.png", "depth": 1.26, "breathe_y": 1.8, "breathe_period": 3.4,
+               "head_tilt_deg": 1.0, "head_pivot": [0.25, 0.85], "tilt_speaker": "thang_tun", "tilt_line_ids": ["l28_nam"]},
           ],
       })
 chapter("HỒI 5 · HAI TUẦN SAU", "NGUYÊN TẮC HAI PHẢI, BA KHÔNG")
@@ -617,7 +682,12 @@ sfx("chapter_sting", -0.1, -5)
 sfx("phone_ring", 0.25, -4, dur=0.8)
 blink("assets/c11_nam_blink.jpg", [0.147, 0.197, 0.309, 0.359], first_offset=1.7, interval=3.9, layer="fg")
 mouth("thang_tun", ["l28_nam"], [0.191, 0.330, 0.311, 0.480], "mid",
-      "assets/c11_nam_mouth_closed.jpg", "assets/c11.jpg", "assets/c11_nam_mouth_open.jpg", layer="fg")
+      "assets/c11_nam_mouth_closed.jpg", "assets/c11.jpg", "assets/c11_nam_mouth_open.jpg", layer="fg",
+      round_image="assets/c11_nam_mouth_round.jpg")
+fx({"type": "phone_waveform", "speaker": "anh_hai", "line_ids": ["l29_minh_p"],
+    "start": 182.6, "end": 188.0, "pos": [0.56, 0.72], "size": [0.25, 0.058],
+    "color": [255, 95, 85], "label": "ANH MINH · CẢN KÝ GẤP"})
+fx({"type": "color_mood", "mood": "cold_suspicion", "strength": 0.24, "vignette": 0.12, "grain": 0.006})
 beat(0.95)
 line("l28_nam", "NAM",
      "Alo anh Minh! Em đang công chứng bán xe máy. Khách chốt nhanh, nhờ người thân đứng tên hộ!",
@@ -629,13 +699,16 @@ line("l29_minh_p", "MINH_P",
 
 amb("street", -4.5); bgm("action_climax", -3.2)
 scene("s12_minh_warns_rule", "assets/c12.jpg", "drift_up_breathe", beat_type="climax", level="C",
-      intent="Trượt lên nhấn cử chỉ giơ 2 ngón tay dặn nguyên tắc 2 Phải của Anh Minh (chớp mắt + khẩu hình gấp khớp WAV + foley low_accent)",
-      tr="dissolve", trd=0.3)
+      intent="Whip Pan sang Anh Minh giơ 2 ngón tay dặn nguyên tắc 2 Phải: chớp mắt & chép miệng 4 trạng thái + Chromatic Pulse + High Tension",
+      tr="whip_pan_left", trd=0.28)
 mark("two_musts")
 sfx("low_accent", 0.15, -4.5)
 blink("assets/c12_minh_blink.jpg", [0.635, 0.192, 0.791, 0.344], first_offset=1.6, interval=3.8)
 mouth("anh_hai", ["l30_minh", "l31_minh"], [0.659, 0.309, 0.781, 0.460], "mid",
-      "assets/c12_minh_mouth_closed.jpg", "assets/c12.jpg", "assets/c12_minh_mouth_open.jpg")
+      "assets/c12_minh_mouth_closed.jpg", "assets/c12.jpg", "assets/c12_minh_mouth_open.jpg",
+      round_image="assets/c12_minh_mouth_round.jpg")
+fx({"type": "chromatic_pulse", "at": 188.70, "dur": 0.26, "shift_px": 5, "zoom_blur": 0.018})
+fx({"type": "color_mood", "mood": "high_tension", "strength": 0.32, "vignette": 0.14, "grain": 0.008})
 bubble("NGUYÊN TẮC 2 PHẢI", "1. Ai ký HĐ, người đó chuyển · 2. Ghi tên, mua xe, BSX, ngày HĐ",
        side="left", y=260, stamp="CHẶN BẪY NGAY", dur=5.2, offset=0.15)
 beat(0.3)
@@ -648,8 +721,8 @@ line("l31_minh", "MINH",
 
 amb("crowd", -5.5); bgm("action_climax", -2.5)
 scene("s13_nam_tests_proxy", "assets/c13.jpg", "push_in", beat_type="climax", level="B",
-      intent="Cảnh đối mặt đinh (Thumbnail): 2.5D Parallax tách bàn công chứng + Nam & người mua hộ nữ khỏi sảnh đông kèm khẩu hình đôi & chớp mắt khóa trên layer FG",
-      tr="dissolve", trd=0.3,
+      intent="Cảnh đối mặt đinh: 2.5D Parallax + Rack Focus + Breathing + Nam chép miệng 4 trạng thái & người mua hộ chép miệng đôi trên fg",
+      tr="whip_pan_right", trd=0.28,
       parallax={
           "camera": "push_in",
           "dolly": [1.01, 1.07],
@@ -659,8 +732,8 @@ scene("s13_nam_tests_proxy", "assets/c13.jpg", "push_in", beat_type="climax", le
           "strength": 0.84,
           "easing": "smoothstep",
           "layers": [
-              {"role": "bg", "image": "assets/s13_bg.jpg", "depth": 0.44, "blur": 0.6},
-              {"role": "fg", "image": "assets/s13_fg.png", "depth": 1.22},
+              {"role": "bg", "image": "assets/s13_bg.jpg", "depth": 0.44, "blur_from": 0.4, "blur_to": 2.6, "blur_at": 203.0, "blur_dur": 4.5},
+              {"role": "fg", "image": "assets/s13_fg.png", "depth": 1.22, "breathe_y": 1.4, "breathe_period": 3.6},
           ],
       })
 mark("confrontation")
@@ -668,9 +741,11 @@ sfx("riser", 0.0, -4.5, dur=0.8)
 blink("assets/c13_nam_blink.jpg", [0.231, 0.161, 0.354, 0.291], first_offset=2.1, interval=4.3, layer="fg")
 blink("assets/c13_proxy_blink.jpg", [0.737, 0.265, 0.839, 0.365], first_offset=1.4, interval=3.8, layer="fg")
 mouth("thang_tun", ["l32_nam", "l34_nam"], [0.248, 0.272, 0.337, 0.407], "mid",
-      "assets/c13_nam_mouth_closed.jpg", "assets/c13.jpg", "assets/c13_nam_mouth_open.jpg", layer="fg")
+      "assets/c13_nam_mouth_closed.jpg", "assets/c13.jpg", "assets/c13_nam_mouth_open.jpg", layer="fg",
+      round_image="assets/c13_nam_mouth_round.jpg")
 mouth("ke_ngot_ngao_nu", ["l33_proxy_nu"], [0.742, 0.350, 0.832, 0.469], "closed",
       "assets/c13.jpg", "assets/c13_proxy_mouth_mid.jpg", "assets/c13_proxy_mouth_open.jpg", layer="fg")
+fx({"type": "color_mood", "mood": "high_tension", "strength": 0.28, "vignette": 0.14, "grain": 0.008})
 beat(0.3)
 line("l32_nam", "NAM",
      "Hợp đồng tên chị nên chị dùng đúng tài khoản tên chị chuyển, ghi rõ biển số với ngày hợp đồng nha!",
@@ -683,8 +758,11 @@ line("l34_nam", "NAM",
      "kiên quyết đóng chặt mọi kẽ hở", pause=0.15)
 
 scene("s14_scammer_flees", "assets/c14.jpg", "pull_out_breathe", beat_type="aftermath", level="C",
-      intent="Lùi sáng sủa giải tỏa căng thẳng khi người mua hộ vội rút lui (l35) và Nam thở phào nhẹ nhõm (l36) với khẩu hình + chớp mắt đôi",
-      tr="flash_white", trd=0.2, shake=0.14)
+      intent="Zoom Punch giải tỏa khi người mua hộ vội rút lui + Nam thở phào với khẩu hình & chớp mắt đôi + hạt nắng ấm",
+      tr="zoom_punch", trd=0.22, shake=0.14)
+fx({"type": "chromatic_pulse", "at": 218.90, "dur": 0.26, "shift_px": 5, "zoom_blur": 0.018})
+fx({"type": "ambient_particles", "count": 18, "opacity": 0.22, "color": [255, 240, 195], "drift_dir": "float", "seed": 94})
+fx({"type": "color_mood", "mood": "warm_daily", "strength": 0.54, "vignette": 0.08, "grain": 0.0})
 sfx("impact", 0.0, -2.5)
 sfx("footsteps", 0.35, -4, dur=1.1)
 blink("assets/c14_nam_blink.jpg", [0.151, 0.192, 0.309, 0.319], first_offset=2.2, interval=4.2)
@@ -722,8 +800,13 @@ mark("rf_end")
 # ---- KẾT MỞ ĐƯỜNG DÂY NGẦM (CỘC GỌN SẮC LẠNH · HỘI TỤ MẮT XÍCH EP08 & EP08b · LIÊN ĐỚI MỜ CHỊ HAI EP04) ----
 amb("rain", -3.2); bgm("tension_drone", -2.4)
 scene("s17a_syndicate_grid", "assets/c16a.jpg", "push_in", beat_type="suspicion", level="C",
-      intent="Đẩy chậm trên lưới 4 ô đêm mưa hội tụ đường dây EP08 & EP08b kèm nhịp ánh xanh màn hình laptop & máy tính bảng",
-      tr="fade_black", trd=0.4)
+      intent="Luma Wipe sang lưới 4 ô đêm mưa hội tụ đường dây EP08 & EP08b: lớp mưa rain_layer + sóng âm đường dây + Noir Evidence",
+      tr="luma_wipe", trd=0.38)
+fx({"type": "rain_layer", "opacity": 0.26, "density": 0.85, "angle_deg": -14.0, "speed": 1120.0, "seed": 97})
+fx({"type": "phone_waveform", "speaker": "chu_no", "line_ids": ["l38a_ke_p", "l38b_long_p", "l38c_proxy_p"],
+    "start": 239.0, "end": 249.2, "pos": [0.24, 0.50], "size": [0.25, 0.056],
+    "color": [95, 225, 245], "label": "ĐƯỜNG DÂY · BÁO ĐỘNG"})
+fx({"type": "color_mood", "mood": "noir_evidence", "strength": 0.60, "vignette": 0.26, "grain": 0.016})
 mark("boss_coda")
 sfx("phone_vibrate", 0.1, -5, dur=0.5)
 detail("screen_glow", offset_start=0.15, end_scene=True, pos=[0.21, 0.35], radius=[0.14, 0.14],
@@ -742,8 +825,8 @@ line("l38c_proxy_p", "PROXY_NU_P",
      "gấp gáp, cộc gọn báo động qua điện thoại", pause=0.2)
 
 scene("s17b_boss_order", "assets/c16b.jpg", "push_in", beat_type="ending", level="B",
-      intent="Kết mở 2.5D lạnh sống lưng tách bóng lưng Người phụ nữ bí ẩn (tóc bob đen & cổ áo xanh ngọc lục bảo, thở chậm) trước cửa kính đêm mưa",
-      tr="dissolve", trd=0.25,
+      intent="Kết mở 2.5D lạnh sống lưng + Rack Focus + Breathing + mưa đêm rain_layer + ánh đèn xe quét + Chromatic Pulse cú chốt 3 nhịp",
+      tr="whip_pan_left", trd=0.25,
       parallax={
           "camera": "push_in",
           "dolly": [1.02, 1.10],
@@ -753,10 +836,14 @@ scene("s17b_boss_order", "assets/c16b.jpg", "push_in", beat_type="ending", level
           "strength": 0.88,
           "easing": "ease_out",
           "layers": [
-              {"role": "bg", "image": "assets/s16b_bg.jpg", "depth": 0.42, "blur": 0.5},
+              {"role": "bg", "image": "assets/s16b_bg.jpg", "depth": 0.42, "blur_from": 0.4, "blur_to": 3.2, "blur_at": 250.2, "blur_dur": 3.2},
               {"role": "fg", "image": "assets/s16b_fg.png", "depth": 1.28, "breathe_y": 1.4, "breathe_period": 3.8},
           ],
       })
+fx({"type": "rain_layer", "opacity": 0.28, "density": 0.90, "angle_deg": -12.0, "speed": 1150.0, "seed": 98})
+fx({"type": "light_sweep", "mode": "light", "color": [125, 215, 240], "intensity": 0.16, "width": 0.22, "angle_deg": -20.0, "repeat": 1})
+fx({"type": "chromatic_pulse", "at": 253.75, "dur": 0.28, "shift_px": 7, "zoom_blur": 0.025})
+fx({"type": "color_mood", "mood": "noir_evidence", "strength": 0.65, "vignette": 0.28, "grain": 0.018})
 sfx("heartbeat", 0.0, -5, dur=0.9)
 detail("screen_glow", offset_start=0.05, end_scene=True, space="frame", pos=[0.31, 0.79], radius=[0.16, 0.14],
        color=[95, 210, 235], intensity=0.22, mode="pulse", fade=0.30)
@@ -819,6 +906,13 @@ for kind, d in E:
         pending_fx.append((len(scenes) - 1, "blink", dict(d)))
     elif kind == "mouth":
         pending_fx.append((len(scenes) - 1, "mouth", dict(d)))
+    elif kind == "fx":
+        pending_fx.append((len(scenes) - 1, "raw_fx", dict(d)))
+    elif kind == "sfx_abs":
+        f = {"preset": d["preset"], "at": round(d["at"], 2), "gain_db": d["gain"]}
+        if d["dur"]:
+            f["dur"] = d["dur"]
+        foley.append(f)
     elif kind == "line":
         p = SPK[d["spk"]]
         dur = real.get(d["id"], est(d["text"]))
@@ -898,9 +992,13 @@ for sc_idx, fx_kind, item in pending_fx:
             "hold_dur": item["hold_dur"],
             "open_dur": item["open_dur"],
         }
+        if item.get("round_image"):
+            fx_obj["round_image"] = item["round_image"]
         if item.get("layer"):
             fx_obj["layer"] = item["layer"]
         dfx.append(fx_obj)
+    elif fx_kind == "raw_fx":
+        dfx.append(item)
     elif fx_kind == "mouth":
         fx_obj = {
             "type": "mouth_sync",
@@ -916,9 +1014,13 @@ for sc_idx, fx_kind, item in pending_fx:
             "thresh_open": item["thresh_open"],
             "feather": item["feather"],
         }
+        if item.get("round_image"):
+            fx_obj["round_image"] = item["round_image"]
         if item.get("layer"):
             fx_obj["layer"] = item["layer"]
         dfx.append(fx_obj)
+    elif fx_kind == "raw_fx":
+        dfx.append(item)
     elif fx_kind == "detail":
         anchor = float(item["anchor"])
         fx_obj = {"type": item["type"], **item["kwargs"]}
@@ -948,12 +1050,14 @@ _desc += [(c["start"] - 0.2, f"{c['kicker'].split('·')[0].strip().title()} – 
 _desc += [(marks["rf_start"], "Nhớ kỹ – Nguyên tắc 2 Phải, 3 Không khi bán xe, bán đất")]
 desc_chapters = "\n".join(f"{mmss(max(0.0, s))} {label}" for s, label in sorted(_desc))
 
+foley.sort(key=lambda item: float(item["at"]))
+
 episode = {
     "episode_id": "EP08b",
     "slug": "TienNoiRoiTenLaiKhac",
     "title": "Tiền nổi rồi, tên lại khác",
-    "version": "v2-level2-abc-staging",
-    "motion_upgrade": "level2",
+    "version": "v3-level3-full-abc-staging",
+    "motion_upgrade": "level3",
     "scam_family": "VAR-MITM-02 / VAR-COM-04 · TRIANGULATION-PAYMENT-MISMATCH – Nửa bên kia dòng tiền 45 triệu từ EP08: bẫy tam giác đẩy tiền của nạn nhân vụ lừa khác vào tài khoản người bán xe máy công chứng",
     "duration_sec": total,
     "visual_style_lock": (

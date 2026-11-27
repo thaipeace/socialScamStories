@@ -11,6 +11,14 @@
     "total_frames": 7804,
     "total_duration_sec": 260.13
   },
+  "render_stats": {
+    "hardware_profile": "dual16gb_cpu_l480",
+    "encoder": "libx264",
+    "workers": 4,
+    "has_cv2": true,
+    "elapsed_sec": 627.05,
+    "effective_fps": 12.4
+  },
   "safe_zone_rules": {
     "left_x": 120,
     "right_x": 1800,
@@ -20,19 +28,21 @@
     "all_overlays_compliant": true
   },
   "motion_summary": {
-    "hardware_profile": "low_ram_cpu_l480",
+    "hardware_profile": "dual16gb_cpu_l480",
+    "motion_version": "level3",
     "safe_motion_mode": false,
     "is_level2": true,
+    "is_level3": true,
     "declared_level_counts": {
-      "A": 5,
+      "A": 4,
       "B": 4,
-      "C": 14,
+      "C": 15,
       "D": 0
     },
     "effective_level_counts": {
-      "A": 5,
+      "A": 4,
       "B": 4,
-      "C": 14,
+      "C": 15,
       "D": 0
     },
     "fallbacks": [],
@@ -41,19 +51,28 @@
     "shake_scenes": 6,
     "sfx_sync": {
       "synced": [
+        "s00a_pulse_1205:chromatic_pulse@1.20s",
         "s00a_pulse_1205:screen_glow@1.30s",
         "s00a_pulse_1205:light_shift@1.55s",
         "s00b_hook_call:shake@2.83s",
         "s01_hook_freeze:shake@21.92s",
+        "s01_hook_freeze:red_circle_draw@22.10s",
+        "s01_hook_freeze:chromatic_pulse@21.95s",
         "s01_hook_freeze:screen_glow@22.22s",
         "s03_buyer_chat_dark:detail_reveal@55.80s",
         "s03_buyer_chat_dark:screen_glow@55.90s",
         "s05_money_arrives_mismatch:screen_glow@84.23s",
         "s05_money_arrives_mismatch:light_shift@84.23s",
         "s07_call_blocked:shake@101.95s",
+        "s07_call_blocked:chromatic_pulse@103.10s",
         "s08a_ep08_twist:shake@123.21s",
+        "s08a_ep08_twist:chromatic_pulse@123.25s",
+        "s08b_paper_trap:red_circle_draw@132.00s",
         "s09_triangle_reveal:shake@142.64s",
+        "s12_minh_warns_rule:chromatic_pulse@188.70s",
         "s14_scammer_flees:shake@218.88s",
+        "s14_scammer_flees:chromatic_pulse@218.90s",
+        "s17b_boss_order:chromatic_pulse@253.75s",
         "s17b_boss_order:light_shift@249.99s",
         "chat1@0.55s",
         "chat2@3.15s",
@@ -66,7 +85,9 @@
         "chat9@143.05s",
         "chat10@188.72s"
       ],
-      "unsynced": []
+      "unsynced": [
+        "s05_money_arrives_mismatch:chromatic_pulse@88.35s"
+      ]
     },
     "warnings": []
   },
@@ -78,7 +99,7 @@
       "end": 2.65,
       "beat_type": "establishing",
       "motion_level": "C",
-      "motion_intent": "Quét ngang theo dải sáng dòng tiền cyan-amber nối tay chuyển tiền (EP08) sang điện thoại Anh Minh",
+      "motion_intent": "Quét ngang theo dải sáng dòng tiền cyan-amber + bộ đếm +45.000.000đ + Chromatic Pulse nối EP08 sang điện thoại Anh Minh",
       "motion": {
         "preset": "pan_right",
         "scale": [
@@ -98,6 +119,36 @@
         "wobble": "none"
       },
       "detail_fx": [
+        {
+          "type": "animated_counter",
+          "start": 0.55,
+          "end": 2.55,
+          "count_dur": 1.1,
+          "from_val": 0,
+          "to_val": 45000000,
+          "fmt": "vnd",
+          "label": "TIỀN THẬT ĐÃ NỔI · 12:05",
+          "pos": [
+            0.24,
+            0.68
+          ],
+          "style": "safe",
+          "easing": "ease_out"
+        },
+        {
+          "type": "chromatic_pulse",
+          "at": 1.2,
+          "dur": 0.25,
+          "shift_px": 5,
+          "zoom_blur": 0.018
+        },
+        {
+          "type": "color_mood",
+          "mood": "warm_daily",
+          "strength": 0.45,
+          "vignette": 0.1,
+          "grain": 0.006
+        },
         {
           "type": "screen_glow",
           "pos": [
@@ -163,7 +214,7 @@
       "end": 21.77,
       "beat_type": "suspicion",
       "motion_level": "C",
-      "motion_intent": "Đẩy nhẹ kèm nhịp thở, chớp mắt và khẩu hình thật khi Anh Minh sững người nghe ngân hàng báo 45 triệu từ vụ lừa",
+      "motion_intent": "Zoom Punch vào Anh Minh + chớp mắt & chép miệng 4 trạng thái + sóng âm Ngân hàng xác minh 45 triệu + Cold Suspicion",
       "motion": {
         "preset": "subtle_push_right",
         "scale": [
@@ -184,8 +235,8 @@
         "easing": "ease_out"
       },
       "transition_in": {
-        "type": "flash_white",
-        "dur": 0.2
+        "type": "zoom_punch",
+        "dur": 0.24
       },
       "shakes": [
         {
@@ -233,9 +284,41 @@
             0.45
           ],
           "fps": 12,
-          "thresh_mid": 0.14,
-          "thresh_open": 0.68,
-          "feather": 0.006
+          "thresh_mid": 0.11,
+          "thresh_open": 0.52,
+          "feather": 0.006,
+          "round_image": "assets/c00_minh_mouth_round.jpg"
+        },
+        {
+          "type": "phone_waveform",
+          "speaker": "chi_tu",
+          "line_ids": [
+            "l01_bank_p",
+            "l03_bank_p"
+          ],
+          "start": 3.8,
+          "end": 21.4,
+          "pos": [
+            0.24,
+            0.56
+          ],
+          "size": [
+            0.25,
+            0.058
+          ],
+          "color": [
+            255,
+            95,
+            85
+          ],
+          "label": "NGÂN HÀNG · XÁC MINH 45TR"
+        },
+        {
+          "type": "color_mood",
+          "mood": "cold_suspicion",
+          "strength": 0.38,
+          "vignette": 0.16,
+          "grain": 0.008
         }
       ]
     },
@@ -246,13 +329,13 @@
       "end": 24.02,
       "beat_type": "anomaly",
       "motion_level": "C",
-      "motion_intent": "Giữ tĩnh lạnh sau cú impact, gom sáng vào ánh mắt sững sờ (chớp mắt 1 nhịp) và ánh màn hình sao kê",
+      "motion_intent": "Zoom Punch đứng hình: Anh Minh chớp mắt sững sờ + khoanh đỏ màn hình sao kê + Chromatic Pulse + High Tension",
       "motion": {
         "preset": "static_hold"
       },
       "transition_in": {
-        "type": "flash_white",
-        "dur": 0.22
+        "type": "zoom_punch",
+        "dur": 0.24
       },
       "shakes": [
         {
@@ -278,6 +361,39 @@
           "close_dur": 0.055,
           "hold_dur": 0.045,
           "open_dur": 0.085
+        },
+        {
+          "type": "red_circle_draw",
+          "region": [
+            0.51,
+            0.63,
+            0.65,
+            0.84
+          ],
+          "at": 22.1,
+          "dur": 0.4,
+          "end": 23.9,
+          "style": "circle",
+          "width": 5,
+          "color": [
+            248,
+            58,
+            58
+          ]
+        },
+        {
+          "type": "chromatic_pulse",
+          "at": 21.95,
+          "dur": 0.28,
+          "shift_px": 7,
+          "zoom_blur": 0.024
+        },
+        {
+          "type": "color_mood",
+          "mood": "high_tension",
+          "strength": 0.5,
+          "vignette": 0.24,
+          "grain": 0.012
         },
         {
           "type": "focus_highlight",
@@ -324,7 +440,7 @@
       "end": 55.23,
       "beat_type": "establishing",
       "motion_level": "C",
-      "motion_intent": "Pan ngang nắng sáng quán trà đá + Living-Character 3 nhân vật (Minh, Thảo, Nam chớp mắt lệch nhịp & khẩu hình đối thoại thật)",
+      "motion_intent": "Chuyển hồi Film Burn về quán trà đá sáng: 3 nhân vật (Minh, Thảo, Nam) chớp mắt & chép miệng + hạt nắng sớm ấm áp",
       "motion": {
         "preset": "pan_right",
         "scale": [
@@ -344,10 +460,29 @@
         "wobble": "breathe"
       },
       "transition_in": {
-        "type": "fade_black",
+        "type": "film_burn",
         "dur": 0.45
       },
       "detail_fx": [
+        {
+          "type": "ambient_particles",
+          "count": 20,
+          "opacity": 0.24,
+          "color": [
+            255,
+            240,
+            190
+          ],
+          "drift_dir": "float",
+          "seed": 82
+        },
+        {
+          "type": "color_mood",
+          "mood": "warm_daily",
+          "strength": 0.56,
+          "vignette": 0.08,
+          "grain": 0.0
+        },
         {
           "type": "eye_blink",
           "image": "assets/c02_minh_blink.jpg",
@@ -435,8 +570,8 @@
             0.481
           ],
           "fps": 12,
-          "thresh_mid": 0.14,
-          "thresh_open": 0.68,
+          "thresh_mid": 0.11,
+          "thresh_open": 0.52,
           "feather": 0.006
         },
         {
@@ -456,8 +591,8 @@
             0.511
           ],
           "fps": 12,
-          "thresh_mid": 0.14,
-          "thresh_open": 0.68,
+          "thresh_mid": 0.11,
+          "thresh_open": 0.52,
           "feather": 0.006
         },
         {
@@ -478,8 +613,8 @@
             0.512
           ],
           "fps": 12,
-          "thresh_mid": 0.14,
-          "thresh_open": 0.68,
+          "thresh_mid": 0.11,
+          "thresh_open": 0.52,
           "feather": 0.006
         }
       ]
@@ -491,7 +626,7 @@
       "end": 68.81,
       "beat_type": "information",
       "motion_level": "C",
-      "motion_intent": "Pan trái lạnh qua hai điện thoại phòng tối EP08 kèm màn hình phải bừng sáng (detail_reveal + screen_glow) đúng nhịp gõ tin",
+      "motion_intent": "Luma Wipe sang phòng tối EP08: màn hình bừng sáng detail_reveal + typing_indicator + sóng âm khách mua + Noir Evidence",
       "motion": {
         "preset": "pan_left",
         "scale": [
@@ -511,10 +646,48 @@
         "wobble": "none"
       },
       "transition_in": {
-        "type": "fade_black",
-        "dur": 0.4
+        "type": "luma_wipe",
+        "dur": 0.38
       },
       "detail_fx": [
+        {
+          "type": "typing_indicator",
+          "start": 55.3,
+          "end": 55.7,
+          "side": "left",
+          "y": 260
+        },
+        {
+          "type": "phone_waveform",
+          "speaker": "chu_no",
+          "line_ids": [
+            "l09_buyer_msg",
+            "l10_buyer_msg"
+          ],
+          "start": 56.0,
+          "end": 68.5,
+          "pos": [
+            0.24,
+            0.56
+          ],
+          "size": [
+            0.25,
+            0.058
+          ],
+          "color": [
+            95,
+            215,
+            245
+          ],
+          "label": "ANH HÙNG · CHỐT MUA NHANH"
+        },
+        {
+          "type": "color_mood",
+          "mood": "noir_evidence",
+          "strength": 0.52,
+          "vignette": 0.22,
+          "grain": 0.012
+        },
         {
           "type": "detail_reveal",
           "image": "assets/c03.jpg",
@@ -551,7 +724,7 @@
       "end": 83.73,
       "beat_type": "normal",
       "motion_level": "C",
-      "motion_intent": "Lùi nhẹ mở không gian phòng công chứng đông người + Living-Character 3 nhân vật (Minh, Thảo, Long chớp mắt & đối thoại khớp WAV)",
+      "motion_intent": "Whip Pan sang phòng công chứng đông người + 3 nhân vật (Minh, Thảo, Long) chớp mắt & chép miệng + hạt sáng dịu",
       "motion": {
         "preset": "slow_pull_out",
         "scale": [
@@ -571,10 +744,29 @@
         "wobble": "breathe"
       },
       "transition_in": {
-        "type": "fade_black",
-        "dur": 0.4
+        "type": "whip_pan_right",
+        "dur": 0.3
       },
       "detail_fx": [
+        {
+          "type": "ambient_particles",
+          "count": 16,
+          "opacity": 0.2,
+          "color": [
+            255,
+            242,
+            205
+          ],
+          "drift_dir": "float",
+          "seed": 84
+        },
+        {
+          "type": "color_mood",
+          "mood": "warm_daily",
+          "strength": 0.45,
+          "vignette": 0.08,
+          "grain": 0.0
+        },
         {
           "type": "eye_blink",
           "image": "assets/c04_minh_blink.jpg",
@@ -650,8 +842,8 @@
             0.476
           ],
           "fps": 12,
-          "thresh_mid": 0.14,
-          "thresh_open": 0.68,
+          "thresh_mid": 0.11,
+          "thresh_open": 0.52,
           "feather": 0.006
         },
         {
@@ -672,8 +864,8 @@
             0.461
           ],
           "fps": 12,
-          "thresh_mid": 0.14,
-          "thresh_open": 0.68,
+          "thresh_mid": 0.11,
+          "thresh_open": 0.52,
           "feather": 0.006
         }
       ]
@@ -685,7 +877,7 @@
       "end": 96.87,
       "beat_type": "anomaly",
       "motion_level": "C",
-      "motion_intent": "Đẩy nhẹ nhịp 12:05 khi tiếng ting vang lên + ánh sáng cyan-amber hắt màn hình + đối thoại 3 nhân vật khớp WAV thật",
+      "motion_intent": "Nhịp 12:05 tiếng ting vang lên + bộ đếm +45.000.000đ lệch tên Khang + Chromatic Pulse + đối thoại 3 nhân vật",
       "motion": {
         "preset": "slow_push_in",
         "scale": [
@@ -710,6 +902,36 @@
         "dur": 0.3
       },
       "detail_fx": [
+        {
+          "type": "animated_counter",
+          "start": 84.3,
+          "end": 91.2,
+          "count_dur": 1.4,
+          "from_val": 0,
+          "to_val": 45000000,
+          "fmt": "vnd",
+          "label": "NGƯỜI GỬI: KHANG (LỆCH TÊN)",
+          "pos": [
+            0.24,
+            0.72
+          ],
+          "style": "warn",
+          "easing": "ease_out"
+        },
+        {
+          "type": "chromatic_pulse",
+          "at": 88.35,
+          "dur": 0.26,
+          "shift_px": 5,
+          "zoom_blur": 0.018
+        },
+        {
+          "type": "color_mood",
+          "mood": "cold_suspicion",
+          "strength": 0.26,
+          "vignette": 0.12,
+          "grain": 0.006
+        },
         {
           "type": "eye_blink",
           "image": "assets/c05_thao_blink.jpg",
@@ -784,8 +1006,8 @@
             0.531
           ],
           "fps": 12,
-          "thresh_mid": 0.14,
-          "thresh_open": 0.68,
+          "thresh_mid": 0.11,
+          "thresh_open": 0.52,
           "feather": 0.006
         },
         {
@@ -805,8 +1027,8 @@
             0.463
           ],
           "fps": 12,
-          "thresh_mid": 0.14,
-          "thresh_open": 0.68,
+          "thresh_mid": 0.11,
+          "thresh_open": 0.52,
           "feather": 0.006
         },
         {
@@ -826,8 +1048,8 @@
             0.457
           ],
           "fps": 12,
-          "thresh_mid": 0.14,
-          "thresh_open": 0.68,
+          "thresh_mid": 0.11,
+          "thresh_open": 0.52,
           "feather": 0.006
         },
         {
@@ -873,8 +1095,8 @@
       "start": 96.87,
       "end": 101.8,
       "beat_type": "normal",
-      "motion_level": "A",
-      "motion_intent": "Pan ngang sáng trưa từ Long nhận xe tay ga xám bạc hướng về Minh & Thảo vẫy tay trước sảnh công chứng",
+      "motion_level": "C",
+      "motion_intent": "Pan ngang sáng trưa trước sảnh công chứng: Long chớp mắt & chép miệng nhận chìa khóa chạy xe đi + hạt nắng trưa",
       "motion": {
         "preset": "pan_left",
         "scale": [
@@ -896,7 +1118,66 @@
       "transition_in": {
         "type": "dissolve",
         "dur": 0.35
-      }
+      },
+      "detail_fx": [
+        {
+          "type": "eye_blink",
+          "image": "assets/c06_long_blink.jpg",
+          "region": [
+            0.74,
+            0.208,
+            0.799,
+            0.287
+          ],
+          "times": [
+            98.17
+          ],
+          "feather": 0.006,
+          "close_dur": 0.055,
+          "hold_dur": 0.045,
+          "open_dur": 0.085
+        },
+        {
+          "type": "mouth_sync",
+          "speaker": "ke_ngot_ngao_nam",
+          "line_ids": [
+            "l17_long"
+          ],
+          "default_state": "mid",
+          "closed_image": "assets/c06_long_mouth_closed.jpg",
+          "mid_image": "assets/c06.jpg",
+          "open_image": "assets/c06_long_mouth_open.jpg",
+          "region": [
+            0.742,
+            0.273,
+            0.799,
+            0.347
+          ],
+          "fps": 12,
+          "thresh_mid": 0.11,
+          "thresh_open": 0.52,
+          "feather": 0.006
+        },
+        {
+          "type": "ambient_particles",
+          "count": 18,
+          "opacity": 0.22,
+          "color": [
+            255,
+            244,
+            205
+          ],
+          "drift_dir": "float",
+          "seed": 86
+        },
+        {
+          "type": "color_mood",
+          "mood": "warm_daily",
+          "strength": 0.48,
+          "vignette": 0.08,
+          "grain": 0.0
+        }
+      ]
     },
     {
       "id": "s07_call_blocked",
@@ -905,7 +1186,7 @@
       "end": 123.03,
       "beat_type": "climax",
       "motion_level": "C",
-      "motion_intent": "Lùi căng thẳng khi mất dấu cả hai + ánh đỏ điện thoại nhấp nháy khớp call_end + chớp mắt & khẩu hình Minh/Thảo",
+      "motion_intent": "Luma Wipe sang 2 ngày sau: mất dấu cả hai + ánh đỏ nhấp nháy + Chromatic Pulse + chớp mắt & chép miệng Minh/Thảo",
       "motion": {
         "preset": "slow_pull_out",
         "scale": [
@@ -925,8 +1206,8 @@
         "wobble": "breathe"
       },
       "transition_in": {
-        "type": "fade_black",
-        "dur": 0.4
+        "type": "luma_wipe",
+        "dur": 0.38
       },
       "shakes": [
         {
@@ -936,6 +1217,20 @@
         }
       ],
       "detail_fx": [
+        {
+          "type": "chromatic_pulse",
+          "at": 103.1,
+          "dur": 0.28,
+          "shift_px": 6,
+          "zoom_blur": 0.022
+        },
+        {
+          "type": "color_mood",
+          "mood": "high_tension",
+          "strength": 0.48,
+          "vignette": 0.22,
+          "grain": 0.012
+        },
         {
           "type": "eye_blink",
           "image": "assets/c07_minh_blink.jpg",
@@ -997,8 +1292,8 @@
             0.581
           ],
           "fps": 12,
-          "thresh_mid": 0.14,
-          "thresh_open": 0.68,
+          "thresh_mid": 0.11,
+          "thresh_open": 0.52,
           "feather": 0.006
         },
         {
@@ -1018,8 +1313,8 @@
             0.503
           ],
           "fps": 12,
-          "thresh_mid": 0.14,
-          "thresh_open": 0.68,
+          "thresh_mid": 0.11,
+          "thresh_open": 0.52,
           "feather": 0.006
         },
         {
@@ -1052,7 +1347,7 @@
       "end": 129.69,
       "beat_type": "climax",
       "motion_level": "C",
-      "motion_intent": "Cú nổ twist nối trực tiếp EP08: hồi ức Khang & Anh Đạt với khẩu hình Khang khớp giọng Puck + ánh 2 điện thoại bàn gỗ",
+      "motion_intent": "Zoom Punch hồi ức EP08: Khang & Anh Đạt với khẩu hình Khang khớp giọng Puck + Chromatic Pulse + tông Flashback",
       "motion": {
         "preset": "slow_push_in",
         "scale": [
@@ -1073,8 +1368,8 @@
         "easing": "ease_out"
       },
       "transition_in": {
-        "type": "flash_white",
-        "dur": 0.22
+        "type": "zoom_punch",
+        "dur": 0.24
       },
       "shakes": [
         {
@@ -1084,6 +1379,20 @@
         }
       ],
       "detail_fx": [
+        {
+          "type": "chromatic_pulse",
+          "at": 123.25,
+          "dur": 0.3,
+          "shift_px": 7,
+          "zoom_blur": 0.025
+        },
+        {
+          "type": "color_mood",
+          "mood": "flashback",
+          "strength": 0.44,
+          "vignette": 0.2,
+          "grain": 0.014
+        },
         {
           "type": "eye_blink",
           "image": "assets/c08a_dat_blink.jpg",
@@ -1137,8 +1446,8 @@
             0.459
           ],
           "fps": 12,
-          "thresh_mid": 0.14,
-          "thresh_open": 0.68,
+          "thresh_mid": 0.11,
+          "thresh_open": 0.52,
           "feather": 0.006
         },
         {
@@ -1171,7 +1480,7 @@
       "end": 142.5,
       "beat_type": "information",
       "motion_level": "C",
-      "motion_intent": "Lùi chậm cận bàn phòng khách phơi bày khoảng cách giữa bìa hợp đồng công chứng và sao kê điện thoại",
+      "motion_intent": "Cận bàn phòng khách phơi bày bẫy giấy tờ lệch tên: khoanh đỏ cụm sao kê & điện thoại + Noir Evidence",
       "motion": {
         "preset": "slow_pull_out",
         "scale": [
@@ -1195,6 +1504,32 @@
         "dur": 0.35
       },
       "detail_fx": [
+        {
+          "type": "red_circle_draw",
+          "region": [
+            0.64,
+            0.36,
+            0.9,
+            0.68
+          ],
+          "at": 132.0,
+          "dur": 0.5,
+          "end": 141.8,
+          "style": "box",
+          "width": 5,
+          "color": [
+            248,
+            58,
+            58
+          ]
+        },
+        {
+          "type": "color_mood",
+          "mood": "noir_evidence",
+          "strength": 0.46,
+          "vignette": 0.2,
+          "grain": 0.012
+        },
         {
           "type": "focus_highlight",
           "pos": [
@@ -1240,7 +1575,7 @@
       "end": 157.3,
       "beat_type": "information",
       "motion_level": "B",
-      "motion_intent": "Parallax 2.5D hai lớp phòng tối tách bóng lưng kẻ đứng giữa (nhịp thở nhẹ) trước hai điện thoại & tam giác dòng tiền phát sáng",
+      "motion_intent": "2.5D Parallax phòng tối + Rack Focus + Breathing + bộ đếm 45.000.000đ rửa tiền tam giác + sóng âm kẻ đứng giữa + Noir Evidence",
       "motion": {
         "preset": "slow_push_in",
         "scale": [
@@ -1261,8 +1596,8 @@
         "easing": "ease_out"
       },
       "transition_in": {
-        "type": "flash_white",
-        "dur": 0.22
+        "type": "luma_wipe",
+        "dur": 0.36
       },
       "shakes": [
         {
@@ -1296,7 +1631,10 @@
             "role": "bg",
             "image": "assets/s09_bg.jpg",
             "depth": 0.42,
-            "blur": 0.6
+            "blur_from": 0.4,
+            "blur_to": 3.0,
+            "blur_at": 145.5,
+            "blur_dur": 4.0
           },
           {
             "role": "fg",
@@ -1308,6 +1646,53 @@
         ]
       },
       "detail_fx": [
+        {
+          "type": "animated_counter",
+          "start": 145.0,
+          "end": 156.5,
+          "count_dur": 1.6,
+          "from_val": 0,
+          "to_val": 45000000,
+          "fmt": "vnd",
+          "label": "TIỀN BẨN → XE THẬT (12:05)",
+          "pos": [
+            0.24,
+            0.56
+          ],
+          "style": "danger",
+          "easing": "ease_out"
+        },
+        {
+          "type": "phone_waveform",
+          "speaker": "chu_no",
+          "line_ids": [
+            "l23_buyer_room",
+            "l24_buyer_room"
+          ],
+          "start": 143.2,
+          "end": 156.8,
+          "pos": [
+            0.24,
+            0.72
+          ],
+          "size": [
+            0.25,
+            0.056
+          ],
+          "color": [
+            95,
+            220,
+            245
+          ],
+          "label": "KẺ ĐỨNG GIỮA · BẪY TAM GIÁC"
+        },
+        {
+          "type": "color_mood",
+          "mood": "noir_evidence",
+          "strength": 0.58,
+          "vignette": 0.26,
+          "grain": 0.014
+        },
         {
           "type": "screen_glow",
           "space": "frame",
@@ -1339,7 +1724,7 @@
       "end": 175.75,
       "beat_type": "aftermath",
       "motion_level": "C",
-      "motion_intent": "Pan ngang sáng sớm giữ mạch đối thoại cản rút tiền giữa Minh & Thảo (Living-Character chớp mắt + khẩu hình đôi)",
+      "motion_intent": "Chuyển cảnh Film Burn về sáng sớm: Minh & Thảo chớp mắt + chép miệng cản rút tiền đúng luật + hạt sáng ấm",
       "motion": {
         "preset": "pan_right",
         "scale": [
@@ -1359,10 +1744,29 @@
         "wobble": "breathe"
       },
       "transition_in": {
-        "type": "fade_black",
-        "dur": 0.4
+        "type": "film_burn",
+        "dur": 0.45
       },
       "detail_fx": [
+        {
+          "type": "ambient_particles",
+          "count": 18,
+          "opacity": 0.22,
+          "color": [
+            255,
+            238,
+            195
+          ],
+          "drift_dir": "float",
+          "seed": 90
+        },
+        {
+          "type": "color_mood",
+          "mood": "warm_daily",
+          "strength": 0.52,
+          "vignette": 0.1,
+          "grain": 0.0
+        },
         {
           "type": "eye_blink",
           "image": "assets/c10_minh_blink.jpg",
@@ -1422,8 +1826,8 @@
             0.422
           ],
           "fps": 12,
-          "thresh_mid": 0.14,
-          "thresh_open": 0.68,
+          "thresh_mid": 0.11,
+          "thresh_open": 0.52,
           "feather": 0.006
         },
         {
@@ -1443,8 +1847,8 @@
             0.442
           ],
           "fps": 12,
-          "thresh_mid": 0.14,
-          "thresh_open": 0.68,
+          "thresh_mid": 0.11,
+          "thresh_open": 0.52,
           "feather": 0.006
         }
       ]
@@ -1456,7 +1860,7 @@
       "end": 188.22,
       "beat_type": "establishing",
       "motion_level": "B",
-      "motion_intent": "Parallax 2.5D tách Nam tiền cảnh (nhịp thở, chớp mắt & khẩu hình khóa cứng theo layer FG) với người mua hộ nữ chờ sẵn ở sảnh sau",
+      "motion_intent": "2.5D Parallax tách Nam tiền cảnh + Rack Focus + Breathing + Head Micro-Tilt + Nam chớp mắt & chép miệng 4 trạng thái (fg) + sóng âm Anh Minh cản gấp",
       "motion": {
         "preset": "slow_push_in",
         "scale": [
@@ -1477,8 +1881,8 @@
         "easing": "ease_out"
       },
       "transition_in": {
-        "type": "fade_black",
-        "dur": 0.45
+        "type": "luma_wipe",
+        "dur": 0.42
       },
       "parallax": {
         "camera": "push_in",
@@ -1505,14 +1909,26 @@
             "role": "bg",
             "image": "assets/s11_bg.jpg",
             "depth": 0.42,
-            "blur": 0.6
+            "blur_from": 0.4,
+            "blur_to": 2.8,
+            "blur_at": 178.0,
+            "blur_dur": 4.0
           },
           {
             "role": "fg",
             "image": "assets/s11_fg.png",
             "depth": 1.26,
             "breathe_y": 1.8,
-            "breathe_period": 3.4
+            "breathe_period": 3.4,
+            "head_tilt_deg": 1.0,
+            "head_pivot": [
+              0.25,
+              0.85
+            ],
+            "tilt_speaker": "thang_tun",
+            "tilt_line_ids": [
+              "l28_nam"
+            ]
           }
         ]
       },
@@ -1554,10 +1970,41 @@
             0.48
           ],
           "fps": 12,
-          "thresh_mid": 0.14,
-          "thresh_open": 0.68,
+          "thresh_mid": 0.11,
+          "thresh_open": 0.52,
           "feather": 0.006,
+          "round_image": "assets/c11_nam_mouth_round.jpg",
           "layer": "fg"
+        },
+        {
+          "type": "phone_waveform",
+          "speaker": "anh_hai",
+          "line_ids": [
+            "l29_minh_p"
+          ],
+          "start": 182.6,
+          "end": 188.0,
+          "pos": [
+            0.56,
+            0.72
+          ],
+          "size": [
+            0.25,
+            0.058
+          ],
+          "color": [
+            255,
+            95,
+            85
+          ],
+          "label": "ANH MINH · CẢN KÝ GẤP"
+        },
+        {
+          "type": "color_mood",
+          "mood": "cold_suspicion",
+          "strength": 0.24,
+          "vignette": 0.12,
+          "grain": 0.006
         }
       ]
     },
@@ -1568,7 +2015,7 @@
       "end": 200.74,
       "beat_type": "climax",
       "motion_level": "C",
-      "motion_intent": "Trượt lên nhấn cử chỉ giơ 2 ngón tay dặn nguyên tắc 2 Phải của Anh Minh (chớp mắt + khẩu hình gấp khớp WAV + foley low_accent)",
+      "motion_intent": "Whip Pan sang Anh Minh giơ 2 ngón tay dặn nguyên tắc 2 Phải: chớp mắt & chép miệng 4 trạng thái + Chromatic Pulse + High Tension",
       "motion": {
         "preset": "drift_up",
         "scale": [
@@ -1589,8 +2036,8 @@
         "easing": "smoothstep"
       },
       "transition_in": {
-        "type": "dissolve",
-        "dur": 0.3
+        "type": "whip_pan_left",
+        "dur": 0.28
       },
       "detail_fx": [
         {
@@ -1630,9 +2077,24 @@
             0.46
           ],
           "fps": 12,
-          "thresh_mid": 0.14,
-          "thresh_open": 0.68,
-          "feather": 0.006
+          "thresh_mid": 0.11,
+          "thresh_open": 0.52,
+          "feather": 0.006,
+          "round_image": "assets/c12_minh_mouth_round.jpg"
+        },
+        {
+          "type": "chromatic_pulse",
+          "at": 188.7,
+          "dur": 0.26,
+          "shift_px": 5,
+          "zoom_blur": 0.018
+        },
+        {
+          "type": "color_mood",
+          "mood": "high_tension",
+          "strength": 0.32,
+          "vignette": 0.14,
+          "grain": 0.008
         }
       ]
     },
@@ -1643,7 +2105,7 @@
       "end": 218.74,
       "beat_type": "climax",
       "motion_level": "B",
-      "motion_intent": "Cảnh đối mặt đinh (Thumbnail): 2.5D Parallax tách bàn công chứng + Nam & người mua hộ nữ khỏi sảnh đông kèm khẩu hình đôi & chớp mắt khóa trên layer FG",
+      "motion_intent": "Cảnh đối mặt đinh: 2.5D Parallax + Rack Focus + Breathing + Nam chép miệng 4 trạng thái & người mua hộ chép miệng đôi trên fg",
       "motion": {
         "preset": "slow_push_in",
         "scale": [
@@ -1664,8 +2126,8 @@
         "easing": "ease_out"
       },
       "transition_in": {
-        "type": "dissolve",
-        "dur": 0.3
+        "type": "whip_pan_right",
+        "dur": 0.28
       },
       "parallax": {
         "camera": "push_in",
@@ -1692,12 +2154,17 @@
             "role": "bg",
             "image": "assets/s13_bg.jpg",
             "depth": 0.44,
-            "blur": 0.6
+            "blur_from": 0.4,
+            "blur_to": 2.6,
+            "blur_at": 203.0,
+            "blur_dur": 4.5
           },
           {
             "role": "fg",
             "image": "assets/s13_fg.png",
-            "depth": 1.22
+            "depth": 1.22,
+            "breathe_y": 1.4,
+            "breathe_period": 3.6
           }
         ]
       },
@@ -1763,9 +2230,10 @@
             0.407
           ],
           "fps": 12,
-          "thresh_mid": 0.14,
-          "thresh_open": 0.68,
+          "thresh_mid": 0.11,
+          "thresh_open": 0.52,
           "feather": 0.006,
+          "round_image": "assets/c13_nam_mouth_round.jpg",
           "layer": "fg"
         },
         {
@@ -1785,10 +2253,17 @@
             0.469
           ],
           "fps": 12,
-          "thresh_mid": 0.14,
-          "thresh_open": 0.68,
+          "thresh_mid": 0.11,
+          "thresh_open": 0.52,
           "feather": 0.006,
           "layer": "fg"
+        },
+        {
+          "type": "color_mood",
+          "mood": "high_tension",
+          "strength": 0.28,
+          "vignette": 0.14,
+          "grain": 0.008
         }
       ]
     },
@@ -1799,7 +2274,7 @@
       "end": 228.6,
       "beat_type": "aftermath",
       "motion_level": "C",
-      "motion_intent": "Lùi sáng sủa giải tỏa căng thẳng khi người mua hộ vội rút lui (l35) và Nam thở phào nhẹ nhõm (l36) với khẩu hình + chớp mắt đôi",
+      "motion_intent": "Zoom Punch giải tỏa khi người mua hộ vội rút lui + Nam thở phào với khẩu hình & chớp mắt đôi + hạt nắng ấm",
       "motion": {
         "preset": "slow_pull_out",
         "scale": [
@@ -1819,8 +2294,8 @@
         "wobble": "breathe"
       },
       "transition_in": {
-        "type": "flash_white",
-        "dur": 0.2
+        "type": "zoom_punch",
+        "dur": 0.22
       },
       "shakes": [
         {
@@ -1830,6 +2305,32 @@
         }
       ],
       "detail_fx": [
+        {
+          "type": "chromatic_pulse",
+          "at": 218.9,
+          "dur": 0.26,
+          "shift_px": 5,
+          "zoom_blur": 0.018
+        },
+        {
+          "type": "ambient_particles",
+          "count": 18,
+          "opacity": 0.22,
+          "color": [
+            255,
+            240,
+            195
+          ],
+          "drift_dir": "float",
+          "seed": 94
+        },
+        {
+          "type": "color_mood",
+          "mood": "warm_daily",
+          "strength": 0.54,
+          "vignette": 0.08,
+          "grain": 0.0
+        },
         {
           "type": "eye_blink",
           "image": "assets/c14_nam_blink.jpg",
@@ -1884,8 +2385,8 @@
             0.468
           ],
           "fps": 12,
-          "thresh_mid": 0.14,
-          "thresh_open": 0.68,
+          "thresh_mid": 0.11,
+          "thresh_open": 0.52,
           "feather": 0.006
         },
         {
@@ -1905,8 +2406,8 @@
             0.48
           ],
           "fps": 12,
-          "thresh_mid": 0.14,
-          "thresh_open": 0.68,
+          "thresh_mid": 0.11,
+          "thresh_open": 0.52,
           "feather": 0.006
         }
       ]
@@ -1950,7 +2451,7 @@
       "end": 249.44,
       "beat_type": "suspicion",
       "motion_level": "C",
-      "motion_intent": "Đẩy chậm trên lưới 4 ô đêm mưa hội tụ đường dây EP08 & EP08b kèm nhịp ánh xanh màn hình laptop & máy tính bảng",
+      "motion_intent": "Luma Wipe sang lưới 4 ô đêm mưa hội tụ đường dây EP08 & EP08b: lớp mưa rain_layer + sóng âm đường dây + Noir Evidence",
       "motion": {
         "preset": "slow_push_in",
         "scale": [
@@ -1971,10 +2472,50 @@
         "easing": "ease_out"
       },
       "transition_in": {
-        "type": "fade_black",
-        "dur": 0.4
+        "type": "luma_wipe",
+        "dur": 0.38
       },
       "detail_fx": [
+        {
+          "type": "rain_layer",
+          "opacity": 0.26,
+          "density": 0.85,
+          "angle_deg": -14.0,
+          "speed": 1120.0,
+          "seed": 97
+        },
+        {
+          "type": "phone_waveform",
+          "speaker": "chu_no",
+          "line_ids": [
+            "l38a_ke_p",
+            "l38b_long_p",
+            "l38c_proxy_p"
+          ],
+          "start": 239.0,
+          "end": 249.2,
+          "pos": [
+            0.24,
+            0.5
+          ],
+          "size": [
+            0.25,
+            0.056
+          ],
+          "color": [
+            95,
+            225,
+            245
+          ],
+          "label": "ĐƯỜNG DÂY · BÁO ĐỘNG"
+        },
+        {
+          "type": "color_mood",
+          "mood": "noir_evidence",
+          "strength": 0.6,
+          "vignette": 0.26,
+          "grain": 0.016
+        },
         {
           "type": "screen_glow",
           "pos": [
@@ -2026,7 +2567,7 @@
       "end": 254.13,
       "beat_type": "ending",
       "motion_level": "B",
-      "motion_intent": "Kết mở 2.5D lạnh sống lưng tách bóng lưng Người phụ nữ bí ẩn (tóc bob đen & cổ áo xanh ngọc lục bảo, thở chậm) trước cửa kính đêm mưa",
+      "motion_intent": "Kết mở 2.5D lạnh sống lưng + Rack Focus + Breathing + mưa đêm rain_layer + ánh đèn xe quét + Chromatic Pulse cú chốt 3 nhịp",
       "motion": {
         "preset": "slow_push_in",
         "scale": [
@@ -2047,7 +2588,7 @@
         "easing": "ease_out"
       },
       "transition_in": {
-        "type": "dissolve",
+        "type": "whip_pan_left",
         "dur": 0.25
       },
       "parallax": {
@@ -2075,7 +2616,10 @@
             "role": "bg",
             "image": "assets/s16b_bg.jpg",
             "depth": 0.42,
-            "blur": 0.5
+            "blur_from": 0.4,
+            "blur_to": 3.2,
+            "blur_at": 250.2,
+            "blur_dur": 3.2
           },
           {
             "role": "fg",
@@ -2087,6 +2631,41 @@
         ]
       },
       "detail_fx": [
+        {
+          "type": "rain_layer",
+          "opacity": 0.28,
+          "density": 0.9,
+          "angle_deg": -12.0,
+          "speed": 1150.0,
+          "seed": 98
+        },
+        {
+          "type": "light_sweep",
+          "mode": "light",
+          "color": [
+            125,
+            215,
+            240
+          ],
+          "intensity": 0.16,
+          "width": 0.22,
+          "angle_deg": -20.0,
+          "repeat": 1
+        },
+        {
+          "type": "chromatic_pulse",
+          "at": 253.75,
+          "dur": 0.28,
+          "shift_px": 7,
+          "zoom_blur": 0.025
+        },
+        {
+          "type": "color_mood",
+          "mood": "noir_evidence",
+          "strength": 0.65,
+          "vignette": 0.28,
+          "grain": 0.018
+        },
         {
           "type": "screen_glow",
           "space": "frame",
@@ -3726,6 +4305,16 @@
       "safezone": "factory196/staging/EP08b/preview_frames/qa_00_85s_safezone.jpg"
     },
     {
+      "timestamp_sec": 1.15,
+      "clean": "factory196/staging/EP08b/preview_frames/qa_01_15s_clean.jpg",
+      "safezone": "factory196/staging/EP08b/preview_frames/qa_01_15s_safezone.jpg"
+    },
+    {
+      "timestamp_sec": 1.26,
+      "clean": "factory196/staging/EP08b/preview_frames/qa_01_26s_clean.jpg",
+      "safezone": "factory196/staging/EP08b/preview_frames/qa_01_26s_safezone.jpg"
+    },
+    {
       "timestamp_sec": 1.32,
       "clean": "factory196/staging/EP08b/preview_frames/qa_01_32s_clean.jpg",
       "safezone": "factory196/staging/EP08b/preview_frames/qa_01_32s_safezone.jpg"
@@ -3749,6 +4338,16 @@
       "timestamp_sec": 12.21,
       "clean": "factory196/staging/EP08b/preview_frames/qa_12_21s_clean.jpg",
       "safezone": "factory196/staging/EP08b/preview_frames/qa_12_21s_safezone.jpg"
+    },
+    {
+      "timestamp_sec": 22.01,
+      "clean": "factory196/staging/EP08b/preview_frames/qa_22_01s_clean.jpg",
+      "safezone": "factory196/staging/EP08b/preview_frames/qa_22_01s_safezone.jpg"
+    },
+    {
+      "timestamp_sec": 22.65,
+      "clean": "factory196/staging/EP08b/preview_frames/qa_22_65s_clean.jpg",
+      "safezone": "factory196/staging/EP08b/preview_frames/qa_22_65s_safezone.jpg"
     },
     {
       "timestamp_sec": 22.72,
@@ -3796,6 +4395,16 @@
       "safezone": "factory196/staging/EP08b/preview_frames/qa_84_68s_safezone.jpg"
     },
     {
+      "timestamp_sec": 84.9,
+      "clean": "factory196/staging/EP08b/preview_frames/qa_84_90s_clean.jpg",
+      "safezone": "factory196/staging/EP08b/preview_frames/qa_84_90s_safezone.jpg"
+    },
+    {
+      "timestamp_sec": 88.41,
+      "clean": "factory196/staging/EP08b/preview_frames/qa_88_41s_clean.jpg",
+      "safezone": "factory196/staging/EP08b/preview_frames/qa_88_41s_safezone.jpg"
+    },
+    {
       "timestamp_sec": 90.3,
       "clean": "factory196/staging/EP08b/preview_frames/qa_90_30s_clean.jpg",
       "safezone": "factory196/staging/EP08b/preview_frames/qa_90_30s_safezone.jpg"
@@ -3806,6 +4415,11 @@
       "safezone": "factory196/staging/EP08b/preview_frames/qa_99_34s_safezone.jpg"
     },
     {
+      "timestamp_sec": 103.16,
+      "clean": "factory196/staging/EP08b/preview_frames/qa_103_16s_clean.jpg",
+      "safezone": "factory196/staging/EP08b/preview_frames/qa_103_16s_safezone.jpg"
+    },
+    {
       "timestamp_sec": 103.52,
       "clean": "factory196/staging/EP08b/preview_frames/qa_103_52s_clean.jpg",
       "safezone": "factory196/staging/EP08b/preview_frames/qa_103_52s_safezone.jpg"
@@ -3814,6 +4428,11 @@
       "timestamp_sec": 112.41,
       "clean": "factory196/staging/EP08b/preview_frames/qa_112_41s_clean.jpg",
       "safezone": "factory196/staging/EP08b/preview_frames/qa_112_41s_safezone.jpg"
+    },
+    {
+      "timestamp_sec": 123.31,
+      "clean": "factory196/staging/EP08b/preview_frames/qa_123_31s_clean.jpg",
+      "safezone": "factory196/staging/EP08b/preview_frames/qa_123_31s_safezone.jpg"
     },
     {
       "timestamp_sec": 124.03,
@@ -3831,6 +4450,11 @@
       "safezone": "factory196/staging/EP08b/preview_frames/qa_130_84s_safezone.jpg"
     },
     {
+      "timestamp_sec": 132.65,
+      "clean": "factory196/staging/EP08b/preview_frames/qa_132_65s_clean.jpg",
+      "safezone": "factory196/staging/EP08b/preview_frames/qa_132_65s_safezone.jpg"
+    },
+    {
       "timestamp_sec": 136.09,
       "clean": "factory196/staging/EP08b/preview_frames/qa_136_09s_clean.jpg",
       "safezone": "factory196/staging/EP08b/preview_frames/qa_136_09s_safezone.jpg"
@@ -3839,6 +4463,11 @@
       "timestamp_sec": 143.65,
       "clean": "factory196/staging/EP08b/preview_frames/qa_143_65s_clean.jpg",
       "safezone": "factory196/staging/EP08b/preview_frames/qa_143_65s_safezone.jpg"
+    },
+    {
+      "timestamp_sec": 145.6,
+      "clean": "factory196/staging/EP08b/preview_frames/qa_145_60s_clean.jpg",
+      "safezone": "factory196/staging/EP08b/preview_frames/qa_145_60s_safezone.jpg"
     },
     {
       "timestamp_sec": 149.9,
@@ -3856,6 +4485,11 @@
       "safezone": "factory196/staging/EP08b/preview_frames/qa_181_99s_safezone.jpg"
     },
     {
+      "timestamp_sec": 188.76,
+      "clean": "factory196/staging/EP08b/preview_frames/qa_188_76s_clean.jpg",
+      "safezone": "factory196/staging/EP08b/preview_frames/qa_188_76s_safezone.jpg"
+    },
+    {
       "timestamp_sec": 194.48,
       "clean": "factory196/staging/EP08b/preview_frames/qa_194_48s_clean.jpg",
       "safezone": "factory196/staging/EP08b/preview_frames/qa_194_48s_safezone.jpg"
@@ -3864,6 +4498,11 @@
       "timestamp_sec": 209.74,
       "clean": "factory196/staging/EP08b/preview_frames/qa_209_74s_clean.jpg",
       "safezone": "factory196/staging/EP08b/preview_frames/qa_209_74s_safezone.jpg"
+    },
+    {
+      "timestamp_sec": 218.96,
+      "clean": "factory196/staging/EP08b/preview_frames/qa_218_96s_clean.jpg",
+      "safezone": "factory196/staging/EP08b/preview_frames/qa_218_96s_safezone.jpg"
     },
     {
       "timestamp_sec": 223.67,
@@ -3914,6 +4553,11 @@
       "timestamp_sec": 251.78,
       "clean": "factory196/staging/EP08b/preview_frames/qa_251_78s_clean.jpg",
       "safezone": "factory196/staging/EP08b/preview_frames/qa_251_78s_safezone.jpg"
+    },
+    {
+      "timestamp_sec": 253.81,
+      "clean": "factory196/staging/EP08b/preview_frames/qa_253_81s_clean.jpg",
+      "safezone": "factory196/staging/EP08b/preview_frames/qa_253_81s_safezone.jpg"
     },
     {
       "timestamp_sec": 254.95,
