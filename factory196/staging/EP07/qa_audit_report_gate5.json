@@ -3,7 +3,7 @@
   "factory": "factory196",
   "gate": "GATE_5_RENDER_AND_QA",
   "staging_mp4_path": "factory196/staging/EP07/EP07_SauHaiTramTrieu_464s_staging.mp4",
-  "file_size_mb": 184.97,
+  "file_size_mb": 266.89,
   "stream_probe": {
     "programs": [],
     "stream_groups": [],
@@ -25,7 +25,7 @@
     ],
     "format": {
       "duration": "463.600000",
-      "size": "193957805"
+      "size": "279858532"
     }
   },
   "all_8_points_passed": true,
@@ -40,7 +40,7 @@
       "id": 2,
       "name": "Không hướng dẫn thủ đoạn chi tiết (chỉ bóc trần cơ chế tâm lý & dấu hiệu)",
       "status": "PASS",
-      "evidence": "Người duyệt: Chủ kênh."
+      "evidence": "Người duyệt: Chu kenh. Duyet Staging v6-level3-full-abc (24 blink, 22 mouth_sync 100% canh noi, 4x 2.5D, 82 L3 FX)"
     },
     {
       "id": 3,
@@ -50,15 +50,15 @@
     },
     {
       "id": 4,
-      "name": "Hình ảnh an toàn: không máu me/khỏa thân, không logo – giao diện – sắc phục thật",
+      "name": "Hình ảnh & chuyển động an toàn: không logo/giao diện/sắc phục thật, không máu me, motion mượt đúng nhịp & giữ continuity (QC 11 điểm)",
       "status": "PASS",
-      "evidence": "Người duyệt: Chủ kênh."
+      "evidence": "Người duyệt: Chu kenh. Duyet Staging v6-level3-full-abc (24 blink, 22 mouth_sync 100% canh noi, 4x 2.5D, 82 L3 FX)"
     },
     {
       "id": 5,
       "name": "Tôn trọng nạn nhân, không kỳ thị vùng miền / dân tộc / nghề nghiệp / tuổi tác",
       "status": "PASS",
-      "evidence": "Người duyệt: Chủ kênh."
+      "evidence": "Người duyệt: Chu kenh. Duyet Staging v6-level3-full-abc (24 blink, 22 mouth_sync 100% canh noi, 4x 2.5D, 82 L3 FX)"
     },
     {
       "id": 6,
@@ -78,5 +78,115 @@
       "status": "PASS",
       "evidence": "Hook bắt đầu 0.4s; thời lượng 463.61s (file 463.60s)"
     }
-  ]
+  ],
+  "motion_qc": {
+    "motion_version": "level3",
+    "hardware_profile": "dual16gb_cpu_l480",
+    "is_level2": true,
+    "is_level3": true,
+    "effective_level_counts": {
+      "A": 4,
+      "B": 4,
+      "C": 18,
+      "D": 0
+    },
+    "declared_level_counts": {
+      "A": 4,
+      "B": 4,
+      "C": 18,
+      "D": 0
+    },
+    "feature_counts": {
+      "parallax_scenes": 4,
+      "breathing_layers": 7,
+      "rack_focus_layers": 4,
+      "head_tilt_layers": 2,
+      "split_screen_scenes": 0,
+      "eye_blink": 24,
+      "mouth_sync": 22,
+      "mouth_sync_4state": 8,
+      "eye_gaze": 0,
+      "expr_swap": 0,
+      "l2_detail_fx": 9,
+      "l3_fx": 53,
+      "l3_transitions": 15
+    },
+    "min_requirements": {
+      "parallax_scenes": 1,
+      "breathing_layers": 1,
+      "eye_blink": 3,
+      "mouth_sync": 3
+    },
+    "l3_feature_total": 82,
+    "stage_checks": {
+      "check1": {
+        "status": "PASS"
+      },
+      "check2": {
+        "status": "PASS",
+        "blockers": [],
+        "waived": []
+      },
+      "check3": {
+        "status": "PASS",
+        "blockers": [],
+        "waived": []
+      }
+    },
+    "waivers_used": {},
+    "stale_signoff_reasons": {},
+    "fingerprint": {
+      "episode_version": "v6-level3-full-abc-staging",
+      "motion_upgrade": "level3",
+      "config_sha256": "f0aeb1904b6cb913",
+      "timeline_mtime": 1795742419.07
+    },
+    "has_highlights": true,
+    "zoom_repetition_streaks": [],
+    "shake_scenes": 2,
+    "fallbacks": [],
+    "sfx_sync": {
+      "synced": [
+        "s00_hook_midnight:shake@0.20s",
+        "s00_hook_midnight:chromatic_pulse@0.25s",
+        "s01_hook_freeze:shake@22.53s",
+        "s01_hook_freeze:chromatic_pulse@22.55s",
+        "s04_first_trap_aftermath:chromatic_pulse@95.55s",
+        "s04_first_trap_aftermath:red_circle_draw@97.20s",
+        "s06_meet_tam:red_circle_draw@151.00s",
+        "s09_insider_detail:chromatic_pulse@226.40s",
+        "s12_mask_off:chromatic_pulse@317.45s",
+        "s21b_tam_coda:red_circle_draw@453.20s",
+        "s21b_tam_coda:chromatic_pulse@456.25s",
+        "chat1@0.55s",
+        "chat2@95.43s",
+        "chat3@96.68s",
+        "chat4@143.49s",
+        "chat5@192.39s",
+        "chat6@193.79s",
+        "chat7@219.34s",
+        "chat8@241.32s",
+        "chat9@263.40s",
+        "chat10@267.45s",
+        "chat11@303.33s",
+        "chat12@306.48s",
+        "chat13@317.52s",
+        "chat14@321.82s",
+        "chat15@393.23s",
+        "chat16@444.28s"
+      ],
+      "unsynced": []
+    },
+    "errors": [],
+    "warnings": [],
+    "point4_human_signed": true,
+    "render_stats": {
+      "hardware_profile": "dual16gb_cpu_l480",
+      "encoder": "libx264",
+      "workers": 4,
+      "has_cv2": true,
+      "elapsed_sec": 1030.02,
+      "effective_fps": 13.5
+    }
+  }
 }
