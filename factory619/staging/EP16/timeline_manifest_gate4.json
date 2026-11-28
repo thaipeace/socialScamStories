@@ -1,0 +1,1852 @@
+{
+  "episode_id": "EP16",
+  "factory": "factory619",
+  "gate": "GATE_4_TIMELINE_SAFE_ZONE",
+  "preview_only": false,
+  "canvas": {
+    "width": 1080,
+    "height": 1920,
+    "fps": 30,
+    "aspect_ratio": "9:16",
+    "total_frames": 2336,
+    "total_duration_sec": 77.85
+  },
+  "render_stats": {
+    "hardware_profile": "dual16gb_cpu_l480",
+    "encoder": "libx264",
+    "workers": 4,
+    "has_cv2": true,
+    "elapsed_sec": 180.49,
+    "effective_fps": 12.9
+  },
+  "safe_zone_rules": {
+    "left_x": 80,
+    "right_x": 920,
+    "max_y": 1420,
+    "top_hook_y": 170,
+    "platform_ui_bottom_y": 1440,
+    "all_overlays_compliant": true
+  },
+  "motion_summary": {
+    "hardware_profile": "dual16gb_cpu_l480",
+    "motion_version": "level3",
+    "safe_motion_mode": false,
+    "is_level2": true,
+    "is_level3": true,
+    "declared_level_counts": {
+      "A": 2,
+      "B": 2,
+      "C": 6,
+      "D": 0
+    },
+    "effective_level_counts": {
+      "A": 2,
+      "B": 2,
+      "C": 6,
+      "D": 0
+    },
+    "fallbacks": [],
+    "detail_warnings": [],
+    "zoom_streaks": [],
+    "shake_scenes": 1,
+    "sfx_sync": {
+      "synced": [
+        "s3_nac1_chuyen_nghiep_mat_khau:detail_reveal@17.76s",
+        "s3_nac1_chuyen_nghiep_mat_khau:red_circle_draw@18.16s",
+        "s4_nac2_email_chinh_doi_quyen:shake@41.84s",
+        "s4_nac2_email_chinh_doi_quyen:red_circle_draw@27.93s",
+        "s4_nac2_email_chinh_doi_quyen:detail_reveal@41.84s",
+        "s4_nac2_email_chinh_doi_quyen:chromatic_pulse@41.84s",
+        "s8_boc_tran_mat_na_lich_su:detail_reveal@65.03s",
+        "s8_boc_tran_mat_na_lich_su:red_circle_draw@65.28s",
+        "s8_boc_tran_mat_na_lich_su:highlighter_sweep@66.98s"
+      ],
+      "unsynced": []
+    },
+    "warnings": []
+  },
+  "scenes": [
+    {
+      "id": "s1_hook_3phut_mat_trang",
+      "image": "assets/s1.jpg",
+      "start": 0.0,
+      "end": 4.92,
+      "beat_type": "establishing",
+      "motion_level": "C",
+      "motion_intent": "Phòng tối: Chị Ba tái mặt chìa điện thoại đỏ rực ổ khóa vỡ nói gấp với Anh Hai + animated_counter 03:00→00:00 + screen_glow đỏ + Living-Char Chị Ba & Anh Hai",
+      "motion": {
+        "preset": "slow_push_in",
+        "scale": [
+          1.02,
+          1.09
+        ],
+        "focus": [
+          [
+            0.5,
+            0.5
+          ],
+          [
+            0.48,
+            0.47
+          ]
+        ],
+        "wobble": "none",
+        "easing": "ease_out"
+      },
+      "detail_fx": [
+        {
+          "type": "eye_blink",
+          "image": "assets/s1_chiba_blink.jpg",
+          "region": [
+            0.293,
+            0.491,
+            0.527,
+            0.551
+          ],
+          "feather": 0.008,
+          "times": [
+            1.3,
+            4.3
+          ],
+          "close_dur": 0.055,
+          "hold_dur": 0.045,
+          "open_dur": 0.085
+        },
+        {
+          "type": "mouth_sync",
+          "speaker": "chi_ba",
+          "line_ids": [
+            "l1"
+          ],
+          "region": [
+            0.333,
+            0.558,
+            0.498,
+            0.631
+          ],
+          "feather": 0.008,
+          "closed_image": "assets/s1_chiba_mouth_closed.jpg",
+          "mid_image": "assets/s1.jpg",
+          "open_image": "assets/s1_chiba_mouth_open.jpg",
+          "fps": 12,
+          "thresh_mid": 0.14,
+          "thresh_open": 0.64
+        },
+        {
+          "type": "eye_blink",
+          "image": "assets/s1_anhhai_blink.jpg",
+          "region": [
+            0.597,
+            0.398,
+            0.783,
+            0.496
+          ],
+          "feather": 0.008,
+          "times": [
+            2.2
+          ],
+          "close_dur": 0.055,
+          "hold_dur": 0.045,
+          "open_dur": 0.085
+        },
+        {
+          "type": "animated_counter",
+          "start": 0.45,
+          "end": 4.77,
+          "count_dur": 2.4,
+          "from_val": 180,
+          "to_val": 0,
+          "fmt": "mmss",
+          "label": "MẤT QUYỀN TRANG CÁ NHÂN",
+          "pos": [
+            0.68,
+            0.215
+          ],
+          "style": "danger",
+          "easing": "ease_out"
+        },
+        {
+          "type": "screen_glow",
+          "pos": [
+            0.26,
+            0.715
+          ],
+          "radius": [
+            0.18,
+            0.15
+          ],
+          "color": [
+            235,
+            55,
+            65
+          ],
+          "intensity": 0.26,
+          "mode": "pulse",
+          "start": 0.25,
+          "end": 4.82,
+          "fade": 0.25
+        },
+        {
+          "type": "color_mood",
+          "mood": "cold_suspicion",
+          "strength": 0.26,
+          "vignette": 0.16,
+          "grain": 0.006
+        }
+      ]
+    },
+    {
+      "id": "s2_nguon_con_xay_trang_ca_nhan",
+      "image": "assets/s2.jpg",
+      "start": 4.92,
+      "end": 13.26,
+      "beat_type": "normal",
+      "motion_level": "B",
+      "motion_intent": "2.5D Parallax #1 phòng khách ban ngày: hậu cảnh kệ ảnh gia đình chuyển nét Rack Focus + Breathing + Head Micro-Tilt + Chị Ba chép miệng 4 trạng thái (round_image) & Anh Hai đối đáp",
+      "motion": {
+        "preset": "slow_push_in",
+        "scale": [
+          1.02,
+          1.07
+        ],
+        "focus": [
+          [
+            0.5,
+            0.48
+          ],
+          [
+            0.5,
+            0.46
+          ]
+        ],
+        "wobble": "none",
+        "easing": "smoothstep"
+      },
+      "parallax": {
+        "camera": "push_in",
+        "dolly": [
+          1.02,
+          1.07
+        ],
+        "shift_x": [
+          0.0,
+          0.0
+        ],
+        "shift_y": [
+          1.5,
+          -2.0
+        ],
+        "focus": [
+          0.5,
+          0.46
+        ],
+        "strength": 0.85,
+        "easing": "smoothstep",
+        "layers": [
+          {
+            "role": "bg",
+            "image": "assets/s2_bg.jpg",
+            "depth": 0.4,
+            "blur_from": 0.4,
+            "blur_to": 3.8,
+            "blur_at": 5.82,
+            "blur_dur": 2.4
+          },
+          {
+            "role": "fg",
+            "image": "assets/s2_fg.png",
+            "depth": 1.24,
+            "breathe_y": 2.0,
+            "breathe_period": 3.5,
+            "head_tilt_deg": 1.0,
+            "head_pivot": [
+              0.64,
+              0.5
+            ],
+            "tilt_speaker": "chi_ba",
+            "tilt_line_ids": [
+              "l3"
+            ]
+          }
+        ]
+      },
+      "detail_fx": [
+        {
+          "type": "eye_blink",
+          "image": "assets/s2_anhhai_blink.jpg",
+          "region": [
+            0.184,
+            0.403,
+            0.431,
+            0.508
+          ],
+          "feather": 0.008,
+          "times": [
+            6.12,
+            9.22,
+            12.32
+          ],
+          "close_dur": 0.055,
+          "hold_dur": 0.045,
+          "open_dur": 0.085,
+          "layer": "fg"
+        },
+        {
+          "type": "mouth_sync",
+          "speaker": "anh_hai",
+          "line_ids": [
+            "l2"
+          ],
+          "region": [
+            0.23,
+            0.489,
+            0.401,
+            0.561
+          ],
+          "feather": 0.008,
+          "closed_image": "assets/s2_anhhai_mouth_closed.jpg",
+          "mid_image": "assets/s2.jpg",
+          "open_image": "assets/s2_anhhai_mouth_open.jpg",
+          "fps": 12,
+          "thresh_mid": 0.14,
+          "thresh_open": 0.64,
+          "layer": "fg"
+        },
+        {
+          "type": "eye_blink",
+          "image": "assets/s2_chiba_blink.jpg",
+          "region": [
+            0.58,
+            0.468,
+            0.806,
+            0.559
+          ],
+          "feather": 0.008,
+          "times": [
+            6.92,
+            9.92
+          ],
+          "close_dur": 0.055,
+          "hold_dur": 0.045,
+          "open_dur": 0.085,
+          "layer": "fg"
+        },
+        {
+          "type": "mouth_sync",
+          "speaker": "chi_ba",
+          "line_ids": [
+            "l3"
+          ],
+          "region": [
+            0.582,
+            0.533,
+            0.768,
+            0.606
+          ],
+          "feather": 0.008,
+          "closed_image": "assets/s2_chiba_mouth_closed.jpg",
+          "mid_image": "assets/s2.jpg",
+          "open_image": "assets/s2_chiba_mouth_open.jpg",
+          "round_image": "assets/s2_chiba_mouth_round.jpg",
+          "fps": 12,
+          "thresh_mid": 0.14,
+          "thresh_open": 0.64,
+          "layer": "fg"
+        },
+        {
+          "type": "color_mood",
+          "mood": "warm_daily",
+          "strength": 0.22,
+          "vignette": 0.08,
+          "grain": 0.0
+        }
+      ],
+      "transition_in": {
+        "type": "dissolve",
+        "dur": 0.28
+      }
+    },
+    {
+      "id": "s3_nac1_chuyen_nghiep_mat_khau",
+      "image": "assets/s3.jpg",
+      "start": 13.26,
+      "end": 27.33,
+      "beat_type": "suspicion",
+      "motion_level": "C",
+      "motion_intent": "Quét trái mượt: đại diện nhãn hàng chuyên nghiệp bảo thêm email kế toán → máy bật yêu cầu nhập mật khẩu xác nhận chính chủ + detail_reveal + red_circle_draw + phone_waveform êm ái không hối + Living-Char Chị Ba",
+      "motion": {
+        "preset": "pan_left",
+        "scale": [
+          1.06,
+          1.06
+        ],
+        "focus": [
+          [
+            0.53,
+            0.5
+          ],
+          [
+            0.47,
+            0.5
+          ]
+        ],
+        "wobble": "none",
+        "easing": "smoothstep"
+      },
+      "detail_fx": [
+        {
+          "type": "detail_reveal",
+          "image": "assets/s3_reveal.jpg",
+          "at": 17.76,
+          "dur": 0.45
+        },
+        {
+          "type": "red_circle_draw",
+          "region": [
+            0.045,
+            0.565,
+            0.445,
+            0.825
+          ],
+          "at": 18.16,
+          "dur": 0.5,
+          "style": "circle"
+        },
+        {
+          "type": "phone_waveform",
+          "speaker": "ke_ngot_ngao_nu",
+          "line_ids": [
+            "l4",
+            "l6"
+          ],
+          "start": 13.56,
+          "end": 27.18,
+          "pos": [
+            0.28,
+            0.135
+          ],
+          "label": "ĐỐI TÁC NHÃN HÀNG",
+          "color": [
+            70,
+            210,
+            165
+          ]
+        },
+        {
+          "type": "typing_indicator",
+          "start": 13.41,
+          "end": 14.46,
+          "pos": [
+            0.22,
+            0.5
+          ]
+        },
+        {
+          "type": "eye_blink",
+          "image": "assets/s3_chiba_blink.jpg",
+          "region": [
+            0.366,
+            0.294,
+            0.59,
+            0.384
+          ],
+          "feather": 0.008,
+          "times": [
+            14.66,
+            17.86,
+            21.06,
+            24.26
+          ],
+          "close_dur": 0.055,
+          "hold_dur": 0.045,
+          "open_dur": 0.085
+        },
+        {
+          "type": "mouth_sync",
+          "speaker": "chi_ba",
+          "line_ids": [
+            "l5"
+          ],
+          "region": [
+            0.43,
+            0.423,
+            0.623,
+            0.496
+          ],
+          "feather": 0.008,
+          "closed_image": "assets/s3_chiba_mouth_closed.jpg",
+          "mid_image": "assets/s3.jpg",
+          "open_image": "assets/s3_chiba_mouth_open.jpg",
+          "fps": 12,
+          "thresh_mid": 0.14,
+          "thresh_open": 0.64
+        },
+        {
+          "type": "color_mood",
+          "mood": "warm_daily",
+          "strength": 0.18,
+          "vignette": 0.12,
+          "grain": 0.0
+        }
+      ],
+      "transition_in": {
+        "type": "dissolve",
+        "dur": 0.26
+      }
+    },
+    {
+      "id": "s4_nac2_email_chinh_doi_quyen",
+      "image": "assets/s4.jpg",
+      "start": 27.33,
+      "end": 42.69,
+      "beat_type": "climax",
+      "motion_level": "C",
+      "motion_intent": "Cao trào Nấc 2 (KHÔNG đồng hồ hối thúc): hộp thư email chính báo đổi quyền quản trị → đối tác vẫn nhã nhặn khuyên 'Cứ thong thả đọc kỹ!' → Chị Ba hạ phòng vệ bấm xác nhận → detail_reveal bùng đỏ vỡ khóa + chromatic_pulse + shakes",
+      "motion": {
+        "preset": "tense_push",
+        "scale": [
+          1.02,
+          1.1
+        ],
+        "focus": [
+          [
+            0.48,
+            0.48
+          ],
+          [
+            0.46,
+            0.45
+          ]
+        ],
+        "wobble": "breathe",
+        "easing": "ease_out"
+      },
+      "detail_fx": [
+        {
+          "type": "red_circle_draw",
+          "region": [
+            0.635,
+            0.575,
+            0.99,
+            0.855
+          ],
+          "at": 27.93,
+          "dur": 0.5,
+          "style": "circle"
+        },
+        {
+          "type": "phone_waveform",
+          "speaker": "ke_ngot_ngao_nu",
+          "line_ids": [
+            "l8"
+          ],
+          "start": 31.57,
+          "end": 37.06,
+          "pos": [
+            0.66,
+            0.125
+          ],
+          "label": "ĐỐI TÁC NHÃN HÀNG",
+          "color": [
+            70,
+            210,
+            165
+          ]
+        },
+        {
+          "type": "detail_reveal",
+          "image": "assets/s4_reveal.jpg",
+          "at": 41.84,
+          "dur": 0.3
+        },
+        {
+          "type": "chromatic_pulse",
+          "at": 41.84,
+          "dur": 0.32,
+          "shift_px": 7,
+          "zoom_blur": 0.025
+        },
+        {
+          "type": "eye_blink",
+          "image": "assets/s4_chiba_blink.jpg",
+          "region": [
+            0.432,
+            0.269,
+            0.732,
+            0.352
+          ],
+          "feather": 0.008,
+          "times": [
+            28.63,
+            31.73,
+            34.83,
+            37.93,
+            41.03
+          ],
+          "close_dur": 0.055,
+          "hold_dur": 0.045,
+          "open_dur": 0.085
+        },
+        {
+          "type": "mouth_sync",
+          "speaker": "chi_ba",
+          "line_ids": [
+            "l7",
+            "l8b"
+          ],
+          "region": [
+            0.438,
+            0.391,
+            0.623,
+            0.464
+          ],
+          "feather": 0.008,
+          "closed_image": "assets/s4_chiba_mouth_closed.jpg",
+          "mid_image": "assets/s4.jpg",
+          "open_image": "assets/s4_chiba_mouth_open.jpg",
+          "fps": 12,
+          "thresh_mid": 0.14,
+          "thresh_open": 0.64
+        },
+        {
+          "type": "color_mood",
+          "mood": "high_tension",
+          "strength": 0.28,
+          "vignette": 0.18,
+          "grain": 0.008
+        }
+      ],
+      "shakes": [
+        {
+          "at": 41.84,
+          "amp": 22
+        }
+      ],
+      "transition_in": {
+        "type": "zoom_punch",
+        "dur": 0.28
+      }
+    },
+    {
+      "id": "s5_lat_mat_lanh_tinh_doi_chuoc",
+      "image": "assets/s5.jpg",
+      "start": 42.69,
+      "end": 48.8,
+      "beat_type": "climax",
+      "motion_level": "C",
+      "motion_intent": "Cú lật lạnh tĩnh không la hét: bóng tối phòng kín + giọng nam đều đều đòi 20 triệu chuộc trang 10 năm ảnh gia đình + slow_pull_out + phone_waveform đỏ + screen_glow + Living-Char Chị Ba chớp mắt sững sờ",
+      "motion": {
+        "preset": "slow_pull_out",
+        "scale": [
+          1.08,
+          1.02
+        ],
+        "focus": [
+          [
+            0.5,
+            0.46
+          ],
+          [
+            0.5,
+            0.5
+          ]
+        ],
+        "wobble": "none",
+        "easing": "ease_out"
+      },
+      "detail_fx": [
+        {
+          "type": "phone_waveform",
+          "speaker": "ke_gia_danh",
+          "line_ids": [
+            "l9"
+          ],
+          "start": 42.99,
+          "end": 48.65,
+          "pos": [
+            0.5,
+            0.375
+          ],
+          "label": "SỐ LẠ",
+          "color": [
+            240,
+            75,
+            80
+          ]
+        },
+        {
+          "type": "screen_glow",
+          "pos": [
+            0.33,
+            0.92
+          ],
+          "radius": [
+            0.2,
+            0.14
+          ],
+          "color": [
+            235,
+            55,
+            65
+          ],
+          "intensity": 0.24,
+          "mode": "pulse",
+          "start": 42.69,
+          "end": 48.7,
+          "fade": 0.2
+        },
+        {
+          "type": "eye_blink",
+          "image": "assets/s5_chiba_blink.jpg",
+          "region": [
+            0.372,
+            0.5,
+            0.559,
+            0.558
+          ],
+          "feather": 0.008,
+          "times": [
+            44.19,
+            47.19
+          ],
+          "close_dur": 0.06,
+          "hold_dur": 0.055,
+          "open_dur": 0.095
+        },
+        {
+          "type": "color_mood",
+          "mood": "noir_evidence",
+          "strength": 0.34,
+          "vignette": 0.22,
+          "grain": 0.01
+        }
+      ],
+      "transition_in": {
+        "type": "whip_pan_left",
+        "dur": 0.26
+      }
+    },
+    {
+      "id": "s6_split_va_lay_doi_song",
+      "image": "assets/s6_chitu.jpg",
+      "start": 48.8,
+      "end": 59.83,
+      "beat_type": "climax",
+      "motion_level": "C",
+      "motion_intent": "Level 3 split_screen trên-dưới: Chị Tư tin đúng trang cá nhân 10 năm nhắn bị giữ nên vừa chuyển 10 triệu (panel trên) & Chị Ba hoảng loạn trước hàng loạt cuộc gọi của họ hàng đồng nghiệp (panel dưới) + Living-Char cả 2 panel",
+      "split_screen": {
+        "layout": "horizontal",
+        "ratio": 0.48,
+        "divider_width": 6,
+        "inactive_dim": 0.2,
+        "slide_in_dur": 0.28,
+        "panels": [
+          {
+            "image": "assets/s6_chitu.jpg",
+            "speaker": "chi_tu",
+            "line_ids": [
+              "l10"
+            ],
+            "label": "",
+            "label_rgb": [
+              185,
+              245,
+              215
+            ],
+            "waveform": false,
+            "crop_x": 0.5,
+            "crop_y": 0.44,
+            "motion": {
+              "preset": "slow_push_in",
+              "scale": [
+                1.02,
+                1.07
+              ],
+              "focus": [
+                [
+                  0.5,
+                  0.48
+                ],
+                [
+                  0.5,
+                  0.46
+                ]
+              ]
+            },
+            "detail_fx": [
+              {
+                "type": "eye_blink",
+                "image": "assets/s6_chitu_blink.jpg",
+                "region": [
+                  0.472,
+                  0.237,
+                  0.69,
+                  0.365
+                ],
+                "region_space": "source",
+                "feather": 0.008,
+                "times": [
+                  50.0,
+                  53.1,
+                  56.2
+                ],
+                "close_dur": 0.055,
+                "hold_dur": 0.045,
+                "open_dur": 0.085
+              },
+              {
+                "type": "mouth_sync",
+                "speaker": "chi_tu",
+                "line_ids": [
+                  "l10"
+                ],
+                "region": [
+                  0.483,
+                  0.358,
+                  0.649,
+                  0.488
+                ],
+                "region_space": "source",
+                "feather": 0.008,
+                "closed_image": "assets/s6_chitu_mouth_closed.jpg",
+                "mid_image": "assets/s6_chitu.jpg",
+                "open_image": "assets/s6_chitu_mouth_open.jpg",
+                "fps": 12,
+                "thresh_mid": 0.14,
+                "thresh_open": 0.64
+              }
+            ]
+          },
+          {
+            "image": "assets/s6_chiba.jpg",
+            "speaker": "chi_ba",
+            "line_ids": [
+              "l11"
+            ],
+            "label": "",
+            "label_rgb": [
+              255,
+              235,
+              215
+            ],
+            "waveform": false,
+            "crop_x": 0.5,
+            "crop_y": 0.44,
+            "motion": {
+              "preset": "slow_pull_out",
+              "scale": [
+                1.07,
+                1.02
+              ],
+              "focus": [
+                [
+                  0.5,
+                  0.46
+                ],
+                [
+                  0.5,
+                  0.48
+                ]
+              ]
+            },
+            "detail_fx": [
+              {
+                "type": "eye_blink",
+                "image": "assets/s6_chiba_blink.jpg",
+                "region": [
+                  0.404,
+                  0.227,
+                  0.6,
+                  0.326
+                ],
+                "region_space": "source",
+                "feather": 0.008,
+                "times": [
+                  50.8,
+                  54.0,
+                  57.2
+                ],
+                "close_dur": 0.055,
+                "hold_dur": 0.045,
+                "open_dur": 0.085
+              },
+              {
+                "type": "mouth_sync",
+                "speaker": "chi_ba",
+                "line_ids": [
+                  "l11"
+                ],
+                "region": [
+                  0.42,
+                  0.346,
+                  0.602,
+                  0.459
+                ],
+                "region_space": "source",
+                "feather": 0.008,
+                "closed_image": "assets/s6_chiba_mouth_closed.jpg",
+                "mid_image": "assets/s6_chiba.jpg",
+                "open_image": "assets/s6_chiba_mouth_open.jpg",
+                "fps": 12,
+                "thresh_mid": 0.14,
+                "thresh_open": 0.64
+              }
+            ]
+          }
+        ]
+      },
+      "detail_fx": [
+        {
+          "type": "color_mood",
+          "mood": "high_tension",
+          "strength": 0.24,
+          "vignette": 0.16,
+          "grain": 0.006
+        }
+      ],
+      "transition_in": {
+        "type": "whip_pan_right",
+        "dur": 0.26
+      }
+    },
+    {
+      "id": "s7_ung_pho_chan_va_lay",
+      "image": "assets/s7.jpg",
+      "start": 59.83,
+      "end": 64.53,
+      "beat_type": "information",
+      "motion_level": "B",
+      "motion_intent": "2.5D Parallax #2 phòng khách sáng ấm: Anh Hai chặn tay không cho Chị Ba chuyển chuộc, nhắn báo gấp người thân chặn vạ lây & chụp lưu chứng cứ + Rack Focus + Breathing + detail_reveal + Living-Char Anh Hai & Chị Ba",
+      "motion": {
+        "preset": "slow_pull_out",
+        "scale": [
+          1.07,
+          1.02
+        ],
+        "focus": [
+          [
+            0.5,
+            0.46
+          ],
+          [
+            0.5,
+            0.5
+          ]
+        ],
+        "wobble": "none",
+        "easing": "smoothstep"
+      },
+      "parallax": {
+        "camera": "pull_out",
+        "dolly": [
+          1.07,
+          1.02
+        ],
+        "shift_x": [
+          0.0,
+          0.0
+        ],
+        "shift_y": [
+          -1.8,
+          1.5
+        ],
+        "focus": [
+          0.5,
+          0.48
+        ],
+        "strength": 0.85,
+        "easing": "smoothstep",
+        "layers": [
+          {
+            "role": "bg",
+            "image": "assets/s7_bg.jpg",
+            "depth": 0.42,
+            "blur_from": 3.4,
+            "blur_to": 0.5,
+            "blur_at": 60.48,
+            "blur_dur": 2.0
+          },
+          {
+            "role": "fg",
+            "image": "assets/s7_fg.png",
+            "depth": 1.24,
+            "breathe_y": 1.8,
+            "breathe_period": 3.6
+          }
+        ]
+      },
+      "detail_fx": [
+        {
+          "type": "eye_blink",
+          "image": "assets/s7_anhhai_blink.jpg",
+          "region": [
+            0.244,
+            0.364,
+            0.449,
+            0.445
+          ],
+          "feather": 0.008,
+          "times": [
+            61.13
+          ],
+          "close_dur": 0.055,
+          "hold_dur": 0.045,
+          "open_dur": 0.085,
+          "layer": "fg"
+        },
+        {
+          "type": "mouth_sync",
+          "speaker": "anh_hai",
+          "line_ids": [
+            "l12"
+          ],
+          "region": [
+            0.263,
+            0.451,
+            0.427,
+            0.523
+          ],
+          "feather": 0.008,
+          "closed_image": "assets/s7_anhhai_mouth_closed.jpg",
+          "mid_image": "assets/s7.jpg",
+          "open_image": "assets/s7_anhhai_mouth_open.jpg",
+          "fps": 12,
+          "thresh_mid": 0.14,
+          "thresh_open": 0.64,
+          "layer": "fg"
+        },
+        {
+          "type": "eye_blink",
+          "image": "assets/s7_chiba_blink.jpg",
+          "region": [
+            0.612,
+            0.44,
+            0.824,
+            0.527
+          ],
+          "feather": 0.008,
+          "times": [
+            62.03
+          ],
+          "close_dur": 0.055,
+          "hold_dur": 0.045,
+          "open_dur": 0.085,
+          "layer": "fg"
+        },
+        {
+          "type": "ambient_particles",
+          "count": 16,
+          "opacity": 0.24,
+          "color": [
+            255,
+            240,
+            200
+          ],
+          "drift_dir": "up"
+        },
+        {
+          "type": "color_mood",
+          "mood": "warm_daily",
+          "strength": 0.24,
+          "vignette": 0.1,
+          "grain": 0.0
+        }
+      ],
+      "transition_in": {
+        "type": "dissolve",
+        "dur": 0.28
+      }
+    },
+    {
+      "id": "s8_boc_tran_mat_na_lich_su",
+      "image": "assets/s8.jpg",
+      "start": 64.53,
+      "end": 72.65,
+      "beat_type": "anomaly",
+      "motion_level": "C",
+      "motion_intent": "Kính lúp đỏ soi vỡ mặt nạ lịch sự lộ 2 nấc khóa chiếm trang & bức tường khiên xanh ngọc tách đôi Trang cá nhân vs Trang làm nội dung riêng + glitch + detail_reveal + red_circle_draw + highlighter_sweep",
+      "motion": {
+        "preset": "slow_push_in",
+        "scale": [
+          1.02,
+          1.09
+        ],
+        "focus": [
+          [
+            0.5,
+            0.48
+          ],
+          [
+            0.5,
+            0.46
+          ]
+        ],
+        "wobble": "none",
+        "easing": "ease_out"
+      },
+      "detail_fx": [
+        {
+          "type": "detail_reveal",
+          "image": "assets/s8_reveal.jpg",
+          "at": 65.03,
+          "dur": 0.45
+        },
+        {
+          "type": "red_circle_draw",
+          "region": [
+            0.215,
+            0.115,
+            0.775,
+            0.415
+          ],
+          "at": 65.28,
+          "dur": 0.5,
+          "style": "circle"
+        },
+        {
+          "type": "highlighter_sweep",
+          "region": [
+            0.05,
+            0.56,
+            0.95,
+            0.865
+          ],
+          "at": 66.98,
+          "dur": 0.5
+        },
+        {
+          "type": "focus_highlight",
+          "pos": [
+            0.5,
+            0.48
+          ],
+          "radius": [
+            0.46,
+            0.38
+          ],
+          "dim_outer": 0.2,
+          "start": 65.03,
+          "end": 72.55,
+          "fade": 0.3
+        },
+        {
+          "type": "color_mood",
+          "mood": "noir_evidence",
+          "strength": 0.38,
+          "vignette": 0.2,
+          "grain": 0.01
+        }
+      ],
+      "transition_in": {
+        "type": "glitch",
+        "dur": 0.34
+      }
+    },
+    {
+      "id": "s9_the_nho_ky",
+      "image": "assets/s9.jpg",
+      "start": 72.65,
+      "end": 75.3,
+      "beat_type": "ending",
+      "motion_level": "A",
+      "motion_intent": "Giữ tĩnh tuyệt đối trên nền phòng khách nắng ấm dịu mắt cho Thẻ Nhớ kỹ 5.0s",
+      "motion": {
+        "preset": "static_hold"
+      },
+      "transition_in": {
+        "type": "fade_black",
+        "dur": 0.28
+      }
+    },
+    {
+      "id": "s10_black_disclaimer",
+      "image": "assets/s10_black.jpg",
+      "start": 75.3,
+      "end": 77.85,
+      "beat_type": "ending",
+      "motion_level": "A",
+      "motion_intent": "Cắt đen tĩnh tuyệt đối cho bảng Lưu ý cuối video",
+      "motion": {
+        "preset": "static_hold"
+      },
+      "transition_in": {
+        "type": "cut",
+        "dur": 0.0
+      }
+    }
+  ],
+  "subtitle_srt": "factory619/staging/EP16/subtitles/EP16.srt",
+  "video_track_noaudio": "factory619/staging/EP16/timeline_video_gate4.mp4",
+  "channel_branding": {
+    "type": "channel_branding",
+    "logo_text": "VCH",
+    "watermark_text": "VẠN CHUYỆN",
+    "safe_zone_compliant": true
+  },
+  "overlays": [
+    {
+      "id": "000_hook",
+      "start_sec": 0.25,
+      "end_sec": 4.62,
+      "fade_sec": 0.3,
+      "png_path": "factory619/staging/EP16/overlays/000_hook.png",
+      "type": "text_hook",
+      "text": "XÂY KÊNH TRÊN TRANG CÁ NHÂN — Không hối một câu, 3 phút mất trắng!",
+      "bbox_px": [
+        128,
+        170,
+        872,
+        360
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "001_sub_l1",
+      "start_sec": 0.4,
+      "end_sec": 4.42,
+      "fade_sec": 0.1,
+      "png_path": "factory619/staging/EP16/overlays/001_sub_l1.png",
+      "type": "subtitle",
+      "lines": [
+        "Anh Hai ơi, mới xác nhận xong, mất",
+        "sạch trang rồi!"
+      ],
+      "bbox_px": [
+        110,
+        1268,
+        891,
+        1380
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "002_sub_l2",
+      "start_sec": 5.27,
+      "end_sec": 8.85,
+      "fade_sec": 0.1,
+      "png_path": "factory619/staging/EP16/overlays/002_sub_l2.png",
+      "type": "subtitle",
+      "lines": [
+        "Làm kênh phải lập trang riêng, trang",
+        "cá nhân rủi lắm!"
+      ],
+      "bbox_px": [
+        105,
+        1268,
+        895,
+        1380
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "003_sub_l3",
+      "start_sec": 9.13,
+      "end_sec": 12.76,
+      "fade_sec": 0.1,
+      "png_path": "factory619/staging/EP16/overlays/003_sub_l3.png",
+      "type": "subtitle",
+      "lines": [
+        "Sẵn bạn bè lên tương tác lẹ, em bảo",
+        "mật kỹ!"
+      ],
+      "bbox_px": [
+        107,
+        1268,
+        893,
+        1380
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "004_sub_l4",
+      "start_sec": 13.66,
+      "end_sec": 15.375,
+      "fade_sec": 0.1,
+      "png_path": "factory619/staging/EP16/overlays/004_sub_l4.png",
+      "type": "subtitle",
+      "lines": [
+        "Duyệt bài mười lăm triệu rồi!"
+      ],
+      "bbox_px": [
+        183,
+        1324,
+        817,
+        1380
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "005_sub_l4",
+      "start_sec": 15.375,
+      "end_sec": 17.562,
+      "fade_sec": 0.1,
+      "png_path": "factory619/staging/EP16/overlays/005_sub_l4.png",
+      "type": "subtitle",
+      "lines": [
+        "Chị thêm email kế toán giải ngân nha!"
+      ],
+      "bbox_px": [
+        91,
+        1324,
+        910,
+        1380
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "006_sub_l5",
+      "start_sec": 18.01,
+      "end_sec": 18.848,
+      "fade_sec": 0.1,
+      "png_path": "factory619/staging/EP16/overlays/006_sub_l5.png",
+      "type": "subtitle",
+      "lines": [
+        "Ủa kỳ vậy..."
+      ],
+      "bbox_px": [
+        365,
+        1324,
+        635,
+        1380
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "007_sub_l5",
+      "start_sec": 18.848,
+      "end_sec": 21.99,
+      "fade_sec": 0.1,
+      "png_path": "factory619/staging/EP16/overlays/007_sub_l5.png",
+      "type": "subtitle",
+      "lines": [
+        "sao máy bắt nhập mật khẩu xác nhận",
+        "chính chủ?"
+      ],
+      "bbox_px": [
+        96,
+        1268,
+        904,
+        1380
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "008_sub_l6",
+      "start_sec": 22.29,
+      "end_sec": 26.782,
+      "fade_sec": 0.1,
+      "png_path": "factory619/staging/EP16/overlays/008_sub_l6.png",
+      "type": "subtitle",
+      "lines": [
+        "Dạ hệ thống bắt chính chủ xác nhận,",
+        "bên em đâu đụng máy chị được!"
+      ],
+      "bbox_px": [
+        101,
+        1268,
+        899,
+        1380
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "009_sub_l7",
+      "start_sec": 27.78,
+      "end_sec": 28.122,
+      "fade_sec": 0.1,
+      "png_path": "factory619/staging/EP16/overlays/009_sub_l7.png",
+      "type": "subtitle",
+      "lines": [
+        "Khoan!"
+      ],
+      "bbox_px": [
+        407,
+        1324,
+        593,
+        1380
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "010_sub_l7",
+      "start_sec": 28.122,
+      "end_sec": 31.37,
+      "fade_sec": 0.1,
+      "png_path": "factory619/staging/EP16/overlays/010_sub_l7.png",
+      "type": "subtitle",
+      "lines": [
+        "Email chính báo đổi quyền quản trị",
+        "kìa, mất trang không?!"
+      ],
+      "bbox_px": [
+        120,
+        1268,
+        881,
+        1380
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "011_sub_l8",
+      "start_sec": 31.67,
+      "end_sec": 35.171,
+      "fade_sec": 0.1,
+      "png_path": "factory619/staging/EP16/overlays/011_sub_l8.png",
+      "type": "subtitle",
+      "lines": [
+        "Dạ mẫu mặc định, nhận tiền xong chị",
+        "gỡ liền!"
+      ],
+      "bbox_px": [
+        97,
+        1268,
+        904,
+        1380
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "012_sub_l8",
+      "start_sec": 35.171,
+      "end_sec": 36.762,
+      "fade_sec": 0.1,
+      "png_path": "factory619/staging/EP16/overlays/012_sub_l8.png",
+      "type": "subtitle",
+      "lines": [
+        "Cứ thong thả đọc kỹ!"
+      ],
+      "bbox_px": [
+        262,
+        1324,
+        738,
+        1380
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "013_sub_l8b",
+      "start_sec": 37.11,
+      "end_sec": 39.682,
+      "fade_sec": 0.1,
+      "png_path": "factory619/staging/EP16/overlays/013_sub_l8b.png",
+      "type": "subtitle",
+      "lines": [
+        "Chẳng hối gì, nghe cũng hợp lý..."
+      ],
+      "bbox_px": [
+        137,
+        1324,
+        864,
+        1380
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "014_sub_l8b",
+      "start_sec": 39.682,
+      "end_sec": 41.24,
+      "fade_sec": 0.1,
+      "png_path": "factory619/staging/EP16/overlays/014_sub_l8b.png",
+      "type": "subtitle",
+      "lines": [
+        "chắc quy trình thật!"
+      ],
+      "bbox_px": [
+        280,
+        1324,
+        721,
+        1380
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "015_sub_l9",
+      "start_sec": 43.09,
+      "end_sec": 46.346,
+      "fade_sec": 0.1,
+      "png_path": "factory619/staging/EP16/overlays/015_sub_l9.png",
+      "type": "subtitle",
+      "lines": [
+        "Trang mười năm ảnh gia đình tôi",
+        "đang giữ."
+      ],
+      "bbox_px": [
+        140,
+        1268,
+        860,
+        1380
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "016_sub_l9",
+      "start_sec": 46.346,
+      "end_sec": 48.252,
+      "fade_sec": 0.1,
+      "png_path": "factory619/staging/EP16/overlays/016_sub_l9.png",
+      "type": "subtitle",
+      "lines": [
+        "Hai mươi triệu nhận lại."
+      ],
+      "bbox_px": [
+        238,
+        1324,
+        762,
+        1380
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "017_sub_l10",
+      "start_sec": 49.25,
+      "end_sec": 50.389,
+      "fade_sec": 0.1,
+      "png_path": "factory619/staging/EP16/overlays/017_sub_l10.png",
+      "type": "subtitle",
+      "lines": [
+        "Ba nhận được chưa?"
+      ],
+      "bbox_px": [
+        261,
+        1324,
+        740,
+        1380
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "018_sub_l10",
+      "start_sec": 50.389,
+      "end_sec": 53.87,
+      "fade_sec": 0.1,
+      "png_path": "factory619/staging/EP16/overlays/018_sub_l10.png",
+      "type": "subtitle",
+      "lines": [
+        "Đúng trang bà nhắn mượn gấp, tui",
+        "chuyển mười triệu rồi!"
+      ],
+      "bbox_px": [
+        121,
+        1268,
+        880,
+        1380
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "019_sub_l11",
+      "start_sec": 54.22,
+      "end_sec": 54.943,
+      "fade_sec": 0.1,
+      "png_path": "factory619/staging/EP16/overlays/019_sub_l11.png",
+      "type": "subtitle",
+      "lines": [
+        "Trời ơi!"
+      ],
+      "bbox_px": [
+        405,
+        1324,
+        596,
+        1380
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "020_sub_l11",
+      "start_sec": 54.943,
+      "end_sec": 59.28,
+      "fade_sec": 0.1,
+      "png_path": "factory619/staging/EP16/overlays/020_sub_l11.png",
+      "type": "subtitle",
+      "lines": [
+        "Mất trang rồi, họ hàng đồng nghiệp",
+        "gọi quá trời!"
+      ],
+      "bbox_px": [
+        115,
+        1268,
+        886,
+        1380
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "021_sub_l12",
+      "start_sec": 60.23,
+      "end_sec": 61.578,
+      "fade_sec": 0.1,
+      "png_path": "factory619/staging/EP16/overlays/021_sub_l12.png",
+      "type": "subtitle",
+      "lines": [
+        "Đừng chuyển tiền chuộc!"
+      ],
+      "bbox_px": [
+        218,
+        1324,
+        782,
+        1380
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "022_sub_l12",
+      "start_sec": 61.578,
+      "end_sec": 63.98,
+      "fade_sec": 0.1,
+      "png_path": "factory619/staging/EP16/overlays/022_sub_l12.png",
+      "type": "subtitle",
+      "lines": [
+        "Báo người thân chặn vạ lây rồi trình",
+        "báo!"
+      ],
+      "bbox_px": [
+        107,
+        1268,
+        894,
+        1380
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "023_sub_l13",
+      "start_sec": 64.83,
+      "end_sec": 72.4,
+      "fade_sec": 0.1,
+      "png_path": "factory619/staging/EP16/overlays/023_sub_l13.png",
+      "type": "subtitle",
+      "lines": [
+        "Không hối, càng lịch sự càng dễ tin:",
+        "xây kênh trang cá nhân, mất là sập cả",
+        "đời!"
+      ],
+      "bbox_px": [
+        92,
+        1212,
+        908,
+        1380
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "024_redflags_0",
+      "start_sec": 72.65,
+      "end_sec": 72.83,
+      "fade_sec": 0.25,
+      "png_path": "factory619/staging/EP16/overlays/024_redflags_0.png",
+      "type": "red_flags",
+      "title": "NHỚ KỸ",
+      "lines": [
+        "Đối tác cực kỳ lịch sự, không hối gấp nhưng yêu cầu thêm email kế toán vào cài đặt, khiến máy đòi mật khẩu chính chủ",
+        "Hộp thư email chính báo đổi quyền quản trị — dù đối phương giải thích hợp lý, bảo “cứ thong thả đọc kỹ” vẫn là bẫy chiếm trang",
+        "Gộp kênh kiếm tiền vào trang cá nhân khiến mất trang là mất sạch ảnh gia đình và vạ lây người thân bị lừa tiền",
+        "Tách hẳn trang làm nội dung riêng (email riêng, bảo mật hai lớp bằng ứng dụng) · Thấy email chính báo đổi quyền là dừng tay ngay · Mất trang không chuyển tiền chuộc, báo gấp người thân chặn vạ lây và trình báo công an!"
+      ],
+      "bbox_px": [
+        80,
+        420,
+        920,
+        1316
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "025_redflags_1",
+      "start_sec": 72.83,
+      "end_sec": 73.01,
+      "fade_sec": 0.0,
+      "png_path": "factory619/staging/EP16/overlays/025_redflags_1.png",
+      "type": "red_flags",
+      "title": "NHỚ KỸ",
+      "lines": [
+        "Đối tác cực kỳ lịch sự, không hối gấp nhưng yêu cầu thêm email kế toán vào cài đặt, khiến máy đòi mật khẩu chính chủ",
+        "Hộp thư email chính báo đổi quyền quản trị — dù đối phương giải thích hợp lý, bảo “cứ thong thả đọc kỹ” vẫn là bẫy chiếm trang",
+        "Gộp kênh kiếm tiền vào trang cá nhân khiến mất trang là mất sạch ảnh gia đình và vạ lây người thân bị lừa tiền",
+        "Tách hẳn trang làm nội dung riêng (email riêng, bảo mật hai lớp bằng ứng dụng) · Thấy email chính báo đổi quyền là dừng tay ngay · Mất trang không chuyển tiền chuộc, báo gấp người thân chặn vạ lây và trình báo công an!"
+      ],
+      "bbox_px": [
+        80,
+        420,
+        920,
+        1316
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "026_redflags_2",
+      "start_sec": 73.01,
+      "end_sec": 73.19,
+      "fade_sec": 0.0,
+      "png_path": "factory619/staging/EP16/overlays/026_redflags_2.png",
+      "type": "red_flags",
+      "title": "NHỚ KỸ",
+      "lines": [
+        "Đối tác cực kỳ lịch sự, không hối gấp nhưng yêu cầu thêm email kế toán vào cài đặt, khiến máy đòi mật khẩu chính chủ",
+        "Hộp thư email chính báo đổi quyền quản trị — dù đối phương giải thích hợp lý, bảo “cứ thong thả đọc kỹ” vẫn là bẫy chiếm trang",
+        "Gộp kênh kiếm tiền vào trang cá nhân khiến mất trang là mất sạch ảnh gia đình và vạ lây người thân bị lừa tiền",
+        "Tách hẳn trang làm nội dung riêng (email riêng, bảo mật hai lớp bằng ứng dụng) · Thấy email chính báo đổi quyền là dừng tay ngay · Mất trang không chuyển tiền chuộc, báo gấp người thân chặn vạ lây và trình báo công an!"
+      ],
+      "bbox_px": [
+        80,
+        420,
+        920,
+        1316
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "027_redflags_3",
+      "start_sec": 73.19,
+      "end_sec": 75.3,
+      "fade_sec": 0.0,
+      "png_path": "factory619/staging/EP16/overlays/027_redflags_3.png",
+      "type": "red_flags",
+      "title": "NHỚ KỸ",
+      "lines": [
+        "Đối tác cực kỳ lịch sự, không hối gấp nhưng yêu cầu thêm email kế toán vào cài đặt, khiến máy đòi mật khẩu chính chủ",
+        "Hộp thư email chính báo đổi quyền quản trị — dù đối phương giải thích hợp lý, bảo “cứ thong thả đọc kỹ” vẫn là bẫy chiếm trang",
+        "Gộp kênh kiếm tiền vào trang cá nhân khiến mất trang là mất sạch ảnh gia đình và vạ lây người thân bị lừa tiền",
+        "Tách hẳn trang làm nội dung riêng (email riêng, bảo mật hai lớp bằng ứng dụng) · Thấy email chính báo đổi quyền là dừng tay ngay · Mất trang không chuyển tiền chuộc, báo gấp người thân chặn vạ lây và trình báo công an!"
+      ],
+      "bbox_px": [
+        80,
+        420,
+        920,
+        1316
+      ],
+      "safe_zone_compliant": true
+    },
+    {
+      "id": "028_disclaimer",
+      "start_sec": 75.3,
+      "end_sec": 77.85,
+      "fade_sec": 0.25,
+      "png_path": "factory619/staging/EP16/overlays/028_disclaimer.png",
+      "type": "disclaimer",
+      "text": "Tình huống được dựng lại để cảnh báo. Nhân vật, tên, số liệu đều là hư cấu.",
+      "bbox_px": [
+        80,
+        210,
+        920,
+        340
+      ],
+      "safe_zone_compliant": true
+    }
+  ],
+  "qa_preview_frames": [
+    {
+      "timestamp_sec": 0.7,
+      "clean": "factory619/staging/EP16/preview_frames/qa_00_70s_clean.jpg",
+      "safezone": "factory619/staging/EP16/preview_frames/qa_00_70s_safezone.jpg"
+    },
+    {
+      "timestamp_sec": 1.05,
+      "clean": "factory619/staging/EP16/preview_frames/qa_01_05s_clean.jpg",
+      "safezone": "factory619/staging/EP16/preview_frames/qa_01_05s_safezone.jpg"
+    },
+    {
+      "timestamp_sec": 1.25,
+      "clean": "factory619/staging/EP16/preview_frames/qa_01_25s_clean.jpg",
+      "safezone": "factory619/staging/EP16/preview_frames/qa_01_25s_safezone.jpg"
+    },
+    {
+      "timestamp_sec": 2.46,
+      "clean": "factory619/staging/EP16/preview_frames/qa_02_46s_clean.jpg",
+      "safezone": "factory619/staging/EP16/preview_frames/qa_02_46s_safezone.jpg"
+    },
+    {
+      "timestamp_sec": 9.09,
+      "clean": "factory619/staging/EP16/preview_frames/qa_09_09s_clean.jpg",
+      "safezone": "factory619/staging/EP16/preview_frames/qa_09_09s_safezone.jpg"
+    },
+    {
+      "timestamp_sec": 18.36,
+      "clean": "factory619/staging/EP16/preview_frames/qa_18_36s_clean.jpg",
+      "safezone": "factory619/staging/EP16/preview_frames/qa_18_36s_safezone.jpg"
+    },
+    {
+      "timestamp_sec": 18.81,
+      "clean": "factory619/staging/EP16/preview_frames/qa_18_81s_clean.jpg",
+      "safezone": "factory619/staging/EP16/preview_frames/qa_18_81s_safezone.jpg"
+    },
+    {
+      "timestamp_sec": 20.29,
+      "clean": "factory619/staging/EP16/preview_frames/qa_20_29s_clean.jpg",
+      "safezone": "factory619/staging/EP16/preview_frames/qa_20_29s_safezone.jpg"
+    },
+    {
+      "timestamp_sec": 28.58,
+      "clean": "factory619/staging/EP16/preview_frames/qa_28_58s_clean.jpg",
+      "safezone": "factory619/staging/EP16/preview_frames/qa_28_58s_safezone.jpg"
+    },
+    {
+      "timestamp_sec": 35.01,
+      "clean": "factory619/staging/EP16/preview_frames/qa_35_01s_clean.jpg",
+      "safezone": "factory619/staging/EP16/preview_frames/qa_35_01s_safezone.jpg"
+    },
+    {
+      "timestamp_sec": 41.9,
+      "clean": "factory619/staging/EP16/preview_frames/qa_41_90s_clean.jpg",
+      "safezone": "factory619/staging/EP16/preview_frames/qa_41_90s_safezone.jpg"
+    },
+    {
+      "timestamp_sec": 42.29,
+      "clean": "factory619/staging/EP16/preview_frames/qa_42_29s_clean.jpg",
+      "safezone": "factory619/staging/EP16/preview_frames/qa_42_29s_safezone.jpg"
+    },
+    {
+      "timestamp_sec": 43.09,
+      "clean": "factory619/staging/EP16/preview_frames/qa_43_09s_clean.jpg",
+      "safezone": "factory619/staging/EP16/preview_frames/qa_43_09s_safezone.jpg"
+    },
+    {
+      "timestamp_sec": 45.74,
+      "clean": "factory619/staging/EP16/preview_frames/qa_45_74s_clean.jpg",
+      "safezone": "factory619/staging/EP16/preview_frames/qa_45_74s_safezone.jpg"
+    },
+    {
+      "timestamp_sec": 54.31,
+      "clean": "factory619/staging/EP16/preview_frames/qa_54_31s_clean.jpg",
+      "safezone": "factory619/staging/EP16/preview_frames/qa_54_31s_safezone.jpg"
+    },
+    {
+      "timestamp_sec": 62.18,
+      "clean": "factory619/staging/EP16/preview_frames/qa_62_18s_clean.jpg",
+      "safezone": "factory619/staging/EP16/preview_frames/qa_62_18s_safezone.jpg"
+    },
+    {
+      "timestamp_sec": 65.63,
+      "clean": "factory619/staging/EP16/preview_frames/qa_65_63s_clean.jpg",
+      "safezone": "factory619/staging/EP16/preview_frames/qa_65_63s_safezone.jpg"
+    },
+    {
+      "timestamp_sec": 65.93,
+      "clean": "factory619/staging/EP16/preview_frames/qa_65_93s_clean.jpg",
+      "safezone": "factory619/staging/EP16/preview_frames/qa_65_93s_safezone.jpg"
+    },
+    {
+      "timestamp_sec": 67.63,
+      "clean": "factory619/staging/EP16/preview_frames/qa_67_63s_clean.jpg",
+      "safezone": "factory619/staging/EP16/preview_frames/qa_67_63s_safezone.jpg"
+    },
+    {
+      "timestamp_sec": 68.59,
+      "clean": "factory619/staging/EP16/preview_frames/qa_68_59s_clean.jpg",
+      "safezone": "factory619/staging/EP16/preview_frames/qa_68_59s_safezone.jpg"
+    },
+    {
+      "timestamp_sec": 73.97,
+      "clean": "factory619/staging/EP16/preview_frames/qa_73_97s_clean.jpg",
+      "safezone": "factory619/staging/EP16/preview_frames/qa_73_97s_safezone.jpg"
+    },
+    {
+      "timestamp_sec": 74.8,
+      "clean": "factory619/staging/EP16/preview_frames/qa_74_80s_clean.jpg",
+      "safezone": "factory619/staging/EP16/preview_frames/qa_74_80s_safezone.jpg"
+    },
+    {
+      "timestamp_sec": 76.57,
+      "clean": "factory619/staging/EP16/preview_frames/qa_76_57s_clean.jpg",
+      "safezone": "factory619/staging/EP16/preview_frames/qa_76_57s_safezone.jpg"
+    }
+  ]
+}

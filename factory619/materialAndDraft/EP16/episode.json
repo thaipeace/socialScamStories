@@ -1,0 +1,1520 @@
+{
+  "episode_id": "EP16",
+  "slug": "BayTrangCaNhanKiemTien",
+  "title": "Xây kênh kiếm tiền trên trang cá nhân – Không hối một câu, 3 phút mất trắng, vạ lây người thân!",
+  "version": "v5-level3-calm-scam-real-tts",
+  "scam_family": "VAR-ACC-01",
+  "motion_upgrade": "level3",
+  "duration_sec": 77.85,
+  "hook": {
+    "kicker": "XÂY KÊNH TRÊN TRANG CÁ NHÂN",
+    "title": "Không hối một câu, 3 phút mất trắng!",
+    "start": 0.25,
+    "end": 4.62
+  },
+  "scenes": [
+    {
+      "id": "s1_hook_3phut_mat_trang",
+      "image": "assets/s1.jpg",
+      "start": 0.0,
+      "end": 4.92,
+      "beat_type": "establishing",
+      "motion_level": "C",
+      "motion_intent": "Phòng tối: Chị Ba tái mặt chìa điện thoại đỏ rực ổ khóa vỡ nói gấp với Anh Hai + animated_counter 03:00→00:00 + screen_glow đỏ + Living-Char Chị Ba & Anh Hai",
+      "motion": {
+        "preset": "slow_push_in",
+        "scale": [
+          1.02,
+          1.09
+        ],
+        "focus": [
+          [
+            0.5,
+            0.5
+          ],
+          [
+            0.48,
+            0.47
+          ]
+        ],
+        "wobble": "none",
+        "easing": "ease_out"
+      },
+      "detail_fx": [
+        {
+          "type": "eye_blink",
+          "image": "assets/s1_chiba_blink.jpg",
+          "region": [
+            0.293,
+            0.491,
+            0.527,
+            0.551
+          ],
+          "feather": 0.008,
+          "times": [
+            1.3,
+            4.3
+          ],
+          "close_dur": 0.055,
+          "hold_dur": 0.045,
+          "open_dur": 0.085
+        },
+        {
+          "type": "mouth_sync",
+          "speaker": "chi_ba",
+          "line_ids": [
+            "l1"
+          ],
+          "region": [
+            0.333,
+            0.558,
+            0.498,
+            0.631
+          ],
+          "feather": 0.008,
+          "closed_image": "assets/s1_chiba_mouth_closed.jpg",
+          "mid_image": "assets/s1.jpg",
+          "open_image": "assets/s1_chiba_mouth_open.jpg",
+          "fps": 12,
+          "thresh_mid": 0.14,
+          "thresh_open": 0.64
+        },
+        {
+          "type": "eye_blink",
+          "image": "assets/s1_anhhai_blink.jpg",
+          "region": [
+            0.597,
+            0.398,
+            0.783,
+            0.496
+          ],
+          "feather": 0.008,
+          "times": [
+            2.2
+          ],
+          "close_dur": 0.055,
+          "hold_dur": 0.045,
+          "open_dur": 0.085
+        },
+        {
+          "type": "animated_counter",
+          "start": 0.45,
+          "end": 4.77,
+          "count_dur": 2.4,
+          "from_val": 180,
+          "to_val": 0,
+          "fmt": "mmss",
+          "label": "MẤT QUYỀN TRANG CÁ NHÂN",
+          "pos": [
+            0.68,
+            0.215
+          ],
+          "style": "danger",
+          "easing": "ease_out"
+        },
+        {
+          "type": "screen_glow",
+          "pos": [
+            0.26,
+            0.715
+          ],
+          "radius": [
+            0.18,
+            0.15
+          ],
+          "color": [
+            235,
+            55,
+            65
+          ],
+          "intensity": 0.26,
+          "mode": "pulse",
+          "start": 0.25,
+          "end": 4.82,
+          "fade": 0.25
+        },
+        {
+          "type": "color_mood",
+          "mood": "cold_suspicion",
+          "strength": 0.26,
+          "vignette": 0.16,
+          "grain": 0.006
+        }
+      ]
+    },
+    {
+      "id": "s2_nguon_con_xay_trang_ca_nhan",
+      "image": "assets/s2.jpg",
+      "start": 4.92,
+      "end": 13.26,
+      "beat_type": "normal",
+      "motion_level": "B",
+      "motion_intent": "2.5D Parallax #1 phòng khách ban ngày: hậu cảnh kệ ảnh gia đình chuyển nét Rack Focus + Breathing + Head Micro-Tilt + Chị Ba chép miệng 4 trạng thái (round_image) & Anh Hai đối đáp",
+      "motion": {
+        "preset": "slow_push_in",
+        "scale": [
+          1.02,
+          1.07
+        ],
+        "focus": [
+          [
+            0.5,
+            0.48
+          ],
+          [
+            0.5,
+            0.46
+          ]
+        ],
+        "wobble": "none",
+        "easing": "smoothstep"
+      },
+      "parallax": {
+        "camera": "push_in",
+        "dolly": [
+          1.02,
+          1.07
+        ],
+        "shift_x": [
+          0.0,
+          0.0
+        ],
+        "shift_y": [
+          1.5,
+          -2.0
+        ],
+        "focus": [
+          0.5,
+          0.46
+        ],
+        "strength": 0.85,
+        "easing": "smoothstep",
+        "layers": [
+          {
+            "role": "bg",
+            "image": "assets/s2_bg.jpg",
+            "depth": 0.4,
+            "blur_from": 0.4,
+            "blur_to": 3.8,
+            "blur_at": 5.82,
+            "blur_dur": 2.4
+          },
+          {
+            "role": "fg",
+            "image": "assets/s2_fg.png",
+            "depth": 1.24,
+            "breathe_y": 2.0,
+            "breathe_period": 3.5,
+            "head_tilt_deg": 1.0,
+            "head_pivot": [
+              0.64,
+              0.5
+            ],
+            "tilt_speaker": "chi_ba",
+            "tilt_line_ids": [
+              "l3"
+            ]
+          }
+        ]
+      },
+      "detail_fx": [
+        {
+          "type": "eye_blink",
+          "image": "assets/s2_anhhai_blink.jpg",
+          "region": [
+            0.184,
+            0.403,
+            0.431,
+            0.508
+          ],
+          "feather": 0.008,
+          "times": [
+            6.12,
+            9.22,
+            12.32
+          ],
+          "close_dur": 0.055,
+          "hold_dur": 0.045,
+          "open_dur": 0.085,
+          "layer": "fg"
+        },
+        {
+          "type": "mouth_sync",
+          "speaker": "anh_hai",
+          "line_ids": [
+            "l2"
+          ],
+          "region": [
+            0.23,
+            0.489,
+            0.401,
+            0.561
+          ],
+          "feather": 0.008,
+          "closed_image": "assets/s2_anhhai_mouth_closed.jpg",
+          "mid_image": "assets/s2.jpg",
+          "open_image": "assets/s2_anhhai_mouth_open.jpg",
+          "fps": 12,
+          "thresh_mid": 0.14,
+          "thresh_open": 0.64,
+          "layer": "fg"
+        },
+        {
+          "type": "eye_blink",
+          "image": "assets/s2_chiba_blink.jpg",
+          "region": [
+            0.58,
+            0.468,
+            0.806,
+            0.559
+          ],
+          "feather": 0.008,
+          "times": [
+            6.92,
+            9.92
+          ],
+          "close_dur": 0.055,
+          "hold_dur": 0.045,
+          "open_dur": 0.085,
+          "layer": "fg"
+        },
+        {
+          "type": "mouth_sync",
+          "speaker": "chi_ba",
+          "line_ids": [
+            "l3"
+          ],
+          "region": [
+            0.582,
+            0.533,
+            0.768,
+            0.606
+          ],
+          "feather": 0.008,
+          "closed_image": "assets/s2_chiba_mouth_closed.jpg",
+          "mid_image": "assets/s2.jpg",
+          "open_image": "assets/s2_chiba_mouth_open.jpg",
+          "round_image": "assets/s2_chiba_mouth_round.jpg",
+          "fps": 12,
+          "thresh_mid": 0.14,
+          "thresh_open": 0.64,
+          "layer": "fg"
+        },
+        {
+          "type": "color_mood",
+          "mood": "warm_daily",
+          "strength": 0.22,
+          "vignette": 0.08,
+          "grain": 0.0
+        }
+      ],
+      "transition_in": {
+        "type": "dissolve",
+        "dur": 0.28
+      }
+    },
+    {
+      "id": "s3_nac1_chuyen_nghiep_mat_khau",
+      "image": "assets/s3.jpg",
+      "start": 13.26,
+      "end": 27.33,
+      "beat_type": "suspicion",
+      "motion_level": "C",
+      "motion_intent": "Quét trái mượt: đại diện nhãn hàng chuyên nghiệp bảo thêm email kế toán → máy bật yêu cầu nhập mật khẩu xác nhận chính chủ + detail_reveal + red_circle_draw + phone_waveform êm ái không hối + Living-Char Chị Ba",
+      "motion": {
+        "preset": "pan_left",
+        "scale": [
+          1.06,
+          1.06
+        ],
+        "focus": [
+          [
+            0.53,
+            0.5
+          ],
+          [
+            0.47,
+            0.5
+          ]
+        ],
+        "wobble": "none",
+        "easing": "smoothstep"
+      },
+      "detail_fx": [
+        {
+          "type": "detail_reveal",
+          "image": "assets/s3_reveal.jpg",
+          "at": 17.76,
+          "dur": 0.45
+        },
+        {
+          "type": "red_circle_draw",
+          "region": [
+            0.045,
+            0.565,
+            0.445,
+            0.825
+          ],
+          "at": 18.16,
+          "dur": 0.5,
+          "style": "circle"
+        },
+        {
+          "type": "phone_waveform",
+          "speaker": "ke_ngot_ngao_nu",
+          "line_ids": [
+            "l4",
+            "l6"
+          ],
+          "start": 13.56,
+          "end": 27.18,
+          "pos": [
+            0.28,
+            0.135
+          ],
+          "label": "ĐỐI TÁC NHÃN HÀNG",
+          "color": [
+            70,
+            210,
+            165
+          ]
+        },
+        {
+          "type": "typing_indicator",
+          "start": 13.41,
+          "end": 14.46,
+          "pos": [
+            0.22,
+            0.5
+          ]
+        },
+        {
+          "type": "eye_blink",
+          "image": "assets/s3_chiba_blink.jpg",
+          "region": [
+            0.366,
+            0.294,
+            0.59,
+            0.384
+          ],
+          "feather": 0.008,
+          "times": [
+            14.66,
+            17.86,
+            21.06,
+            24.26
+          ],
+          "close_dur": 0.055,
+          "hold_dur": 0.045,
+          "open_dur": 0.085
+        },
+        {
+          "type": "mouth_sync",
+          "speaker": "chi_ba",
+          "line_ids": [
+            "l5"
+          ],
+          "region": [
+            0.43,
+            0.423,
+            0.623,
+            0.496
+          ],
+          "feather": 0.008,
+          "closed_image": "assets/s3_chiba_mouth_closed.jpg",
+          "mid_image": "assets/s3.jpg",
+          "open_image": "assets/s3_chiba_mouth_open.jpg",
+          "fps": 12,
+          "thresh_mid": 0.14,
+          "thresh_open": 0.64
+        },
+        {
+          "type": "color_mood",
+          "mood": "warm_daily",
+          "strength": 0.18,
+          "vignette": 0.12,
+          "grain": 0.0
+        }
+      ],
+      "transition_in": {
+        "type": "dissolve",
+        "dur": 0.26
+      }
+    },
+    {
+      "id": "s4_nac2_email_chinh_doi_quyen",
+      "image": "assets/s4.jpg",
+      "start": 27.33,
+      "end": 42.69,
+      "beat_type": "climax",
+      "motion_level": "C",
+      "motion_intent": "Cao trào Nấc 2 (KHÔNG đồng hồ hối thúc): hộp thư email chính báo đổi quyền quản trị → đối tác vẫn nhã nhặn khuyên 'Cứ thong thả đọc kỹ!' → Chị Ba hạ phòng vệ bấm xác nhận → detail_reveal bùng đỏ vỡ khóa + chromatic_pulse + shakes",
+      "motion": {
+        "preset": "tense_push",
+        "scale": [
+          1.02,
+          1.1
+        ],
+        "focus": [
+          [
+            0.48,
+            0.48
+          ],
+          [
+            0.46,
+            0.45
+          ]
+        ],
+        "wobble": "breathe",
+        "easing": "ease_out"
+      },
+      "detail_fx": [
+        {
+          "type": "red_circle_draw",
+          "region": [
+            0.635,
+            0.575,
+            0.99,
+            0.855
+          ],
+          "at": 27.93,
+          "dur": 0.5,
+          "style": "circle"
+        },
+        {
+          "type": "phone_waveform",
+          "speaker": "ke_ngot_ngao_nu",
+          "line_ids": [
+            "l8"
+          ],
+          "start": 31.57,
+          "end": 37.06,
+          "pos": [
+            0.66,
+            0.125
+          ],
+          "label": "ĐỐI TÁC NHÃN HÀNG",
+          "color": [
+            70,
+            210,
+            165
+          ]
+        },
+        {
+          "type": "detail_reveal",
+          "image": "assets/s4_reveal.jpg",
+          "at": 41.84,
+          "dur": 0.3
+        },
+        {
+          "type": "chromatic_pulse",
+          "at": 41.84,
+          "dur": 0.32,
+          "shift_px": 7,
+          "zoom_blur": 0.025
+        },
+        {
+          "type": "eye_blink",
+          "image": "assets/s4_chiba_blink.jpg",
+          "region": [
+            0.432,
+            0.269,
+            0.732,
+            0.352
+          ],
+          "feather": 0.008,
+          "times": [
+            28.63,
+            31.73,
+            34.83,
+            37.93,
+            41.03
+          ],
+          "close_dur": 0.055,
+          "hold_dur": 0.045,
+          "open_dur": 0.085
+        },
+        {
+          "type": "mouth_sync",
+          "speaker": "chi_ba",
+          "line_ids": [
+            "l7",
+            "l8b"
+          ],
+          "region": [
+            0.438,
+            0.391,
+            0.623,
+            0.464
+          ],
+          "feather": 0.008,
+          "closed_image": "assets/s4_chiba_mouth_closed.jpg",
+          "mid_image": "assets/s4.jpg",
+          "open_image": "assets/s4_chiba_mouth_open.jpg",
+          "fps": 12,
+          "thresh_mid": 0.14,
+          "thresh_open": 0.64
+        },
+        {
+          "type": "color_mood",
+          "mood": "high_tension",
+          "strength": 0.28,
+          "vignette": 0.18,
+          "grain": 0.008
+        }
+      ],
+      "shakes": [
+        {
+          "at": 41.84,
+          "amp": 22
+        }
+      ],
+      "transition_in": {
+        "type": "zoom_punch",
+        "dur": 0.28
+      }
+    },
+    {
+      "id": "s5_lat_mat_lanh_tinh_doi_chuoc",
+      "image": "assets/s5.jpg",
+      "start": 42.69,
+      "end": 48.8,
+      "beat_type": "climax",
+      "motion_level": "C",
+      "motion_intent": "Cú lật lạnh tĩnh không la hét: bóng tối phòng kín + giọng nam đều đều đòi 20 triệu chuộc trang 10 năm ảnh gia đình + slow_pull_out + phone_waveform đỏ + screen_glow + Living-Char Chị Ba chớp mắt sững sờ",
+      "motion": {
+        "preset": "slow_pull_out",
+        "scale": [
+          1.08,
+          1.02
+        ],
+        "focus": [
+          [
+            0.5,
+            0.46
+          ],
+          [
+            0.5,
+            0.5
+          ]
+        ],
+        "wobble": "none",
+        "easing": "ease_out"
+      },
+      "detail_fx": [
+        {
+          "type": "phone_waveform",
+          "speaker": "ke_gia_danh",
+          "line_ids": [
+            "l9"
+          ],
+          "start": 42.99,
+          "end": 48.65,
+          "pos": [
+            0.5,
+            0.375
+          ],
+          "label": "SỐ LẠ",
+          "color": [
+            240,
+            75,
+            80
+          ]
+        },
+        {
+          "type": "screen_glow",
+          "pos": [
+            0.33,
+            0.92
+          ],
+          "radius": [
+            0.2,
+            0.14
+          ],
+          "color": [
+            235,
+            55,
+            65
+          ],
+          "intensity": 0.24,
+          "mode": "pulse",
+          "start": 42.69,
+          "end": 48.7,
+          "fade": 0.2
+        },
+        {
+          "type": "eye_blink",
+          "image": "assets/s5_chiba_blink.jpg",
+          "region": [
+            0.372,
+            0.5,
+            0.559,
+            0.558
+          ],
+          "feather": 0.008,
+          "times": [
+            44.19,
+            47.19
+          ],
+          "close_dur": 0.06,
+          "hold_dur": 0.055,
+          "open_dur": 0.095
+        },
+        {
+          "type": "color_mood",
+          "mood": "noir_evidence",
+          "strength": 0.34,
+          "vignette": 0.22,
+          "grain": 0.01
+        }
+      ],
+      "transition_in": {
+        "type": "whip_pan_left",
+        "dur": 0.26
+      }
+    },
+    {
+      "id": "s6_split_va_lay_doi_song",
+      "image": "assets/s6_chitu.jpg",
+      "start": 48.8,
+      "end": 59.83,
+      "beat_type": "climax",
+      "motion_level": "C",
+      "motion_intent": "Level 3 split_screen trên-dưới: Chị Tư tin đúng trang cá nhân 10 năm nhắn bị giữ nên vừa chuyển 10 triệu (panel trên) & Chị Ba hoảng loạn trước hàng loạt cuộc gọi của họ hàng đồng nghiệp (panel dưới) + Living-Char cả 2 panel",
+      "split_screen": {
+        "layout": "horizontal",
+        "ratio": 0.48,
+        "divider_width": 6,
+        "inactive_dim": 0.2,
+        "slide_in_dur": 0.28,
+        "panels": [
+          {
+            "image": "assets/s6_chitu.jpg",
+            "speaker": "chi_tu",
+            "line_ids": [
+              "l10"
+            ],
+            "label": "",
+            "label_rgb": [
+              185,
+              245,
+              215
+            ],
+            "waveform": false,
+            "crop_x": 0.5,
+            "crop_y": 0.44,
+            "motion": {
+              "preset": "slow_push_in",
+              "scale": [
+                1.02,
+                1.07
+              ],
+              "focus": [
+                [
+                  0.5,
+                  0.48
+                ],
+                [
+                  0.5,
+                  0.46
+                ]
+              ]
+            },
+            "detail_fx": [
+              {
+                "type": "eye_blink",
+                "image": "assets/s6_chitu_blink.jpg",
+                "region": [
+                  0.472,
+                  0.237,
+                  0.69,
+                  0.365
+                ],
+                "region_space": "source",
+                "feather": 0.008,
+                "times": [
+                  50.0,
+                  53.1,
+                  56.2
+                ],
+                "close_dur": 0.055,
+                "hold_dur": 0.045,
+                "open_dur": 0.085
+              },
+              {
+                "type": "mouth_sync",
+                "speaker": "chi_tu",
+                "line_ids": [
+                  "l10"
+                ],
+                "region": [
+                  0.483,
+                  0.358,
+                  0.649,
+                  0.488
+                ],
+                "region_space": "source",
+                "feather": 0.008,
+                "closed_image": "assets/s6_chitu_mouth_closed.jpg",
+                "mid_image": "assets/s6_chitu.jpg",
+                "open_image": "assets/s6_chitu_mouth_open.jpg",
+                "fps": 12,
+                "thresh_mid": 0.14,
+                "thresh_open": 0.64
+              }
+            ]
+          },
+          {
+            "image": "assets/s6_chiba.jpg",
+            "speaker": "chi_ba",
+            "line_ids": [
+              "l11"
+            ],
+            "label": "",
+            "label_rgb": [
+              255,
+              235,
+              215
+            ],
+            "waveform": false,
+            "crop_x": 0.5,
+            "crop_y": 0.44,
+            "motion": {
+              "preset": "slow_pull_out",
+              "scale": [
+                1.07,
+                1.02
+              ],
+              "focus": [
+                [
+                  0.5,
+                  0.46
+                ],
+                [
+                  0.5,
+                  0.48
+                ]
+              ]
+            },
+            "detail_fx": [
+              {
+                "type": "eye_blink",
+                "image": "assets/s6_chiba_blink.jpg",
+                "region": [
+                  0.404,
+                  0.227,
+                  0.6,
+                  0.326
+                ],
+                "region_space": "source",
+                "feather": 0.008,
+                "times": [
+                  50.8,
+                  54.0,
+                  57.2
+                ],
+                "close_dur": 0.055,
+                "hold_dur": 0.045,
+                "open_dur": 0.085
+              },
+              {
+                "type": "mouth_sync",
+                "speaker": "chi_ba",
+                "line_ids": [
+                  "l11"
+                ],
+                "region": [
+                  0.42,
+                  0.346,
+                  0.602,
+                  0.459
+                ],
+                "region_space": "source",
+                "feather": 0.008,
+                "closed_image": "assets/s6_chiba_mouth_closed.jpg",
+                "mid_image": "assets/s6_chiba.jpg",
+                "open_image": "assets/s6_chiba_mouth_open.jpg",
+                "fps": 12,
+                "thresh_mid": 0.14,
+                "thresh_open": 0.64
+              }
+            ]
+          }
+        ]
+      },
+      "detail_fx": [
+        {
+          "type": "color_mood",
+          "mood": "high_tension",
+          "strength": 0.24,
+          "vignette": 0.16,
+          "grain": 0.006
+        }
+      ],
+      "transition_in": {
+        "type": "whip_pan_right",
+        "dur": 0.26
+      }
+    },
+    {
+      "id": "s7_ung_pho_chan_va_lay",
+      "image": "assets/s7.jpg",
+      "start": 59.83,
+      "end": 64.53,
+      "beat_type": "information",
+      "motion_level": "B",
+      "motion_intent": "2.5D Parallax #2 phòng khách sáng ấm: Anh Hai chặn tay không cho Chị Ba chuyển chuộc, nhắn báo gấp người thân chặn vạ lây & chụp lưu chứng cứ + Rack Focus + Breathing + detail_reveal + Living-Char Anh Hai & Chị Ba",
+      "motion": {
+        "preset": "slow_pull_out",
+        "scale": [
+          1.07,
+          1.02
+        ],
+        "focus": [
+          [
+            0.5,
+            0.46
+          ],
+          [
+            0.5,
+            0.5
+          ]
+        ],
+        "wobble": "none",
+        "easing": "smoothstep"
+      },
+      "parallax": {
+        "camera": "pull_out",
+        "dolly": [
+          1.07,
+          1.02
+        ],
+        "shift_x": [
+          0.0,
+          0.0
+        ],
+        "shift_y": [
+          -1.8,
+          1.5
+        ],
+        "focus": [
+          0.5,
+          0.48
+        ],
+        "strength": 0.85,
+        "easing": "smoothstep",
+        "layers": [
+          {
+            "role": "bg",
+            "image": "assets/s7_bg.jpg",
+            "depth": 0.42,
+            "blur_from": 3.4,
+            "blur_to": 0.5,
+            "blur_at": 60.48,
+            "blur_dur": 2.0
+          },
+          {
+            "role": "fg",
+            "image": "assets/s7_fg.png",
+            "depth": 1.24,
+            "breathe_y": 1.8,
+            "breathe_period": 3.6
+          }
+        ]
+      },
+      "detail_fx": [
+        {
+          "type": "eye_blink",
+          "image": "assets/s7_anhhai_blink.jpg",
+          "region": [
+            0.244,
+            0.364,
+            0.449,
+            0.445
+          ],
+          "feather": 0.008,
+          "times": [
+            61.13
+          ],
+          "close_dur": 0.055,
+          "hold_dur": 0.045,
+          "open_dur": 0.085,
+          "layer": "fg"
+        },
+        {
+          "type": "mouth_sync",
+          "speaker": "anh_hai",
+          "line_ids": [
+            "l12"
+          ],
+          "region": [
+            0.263,
+            0.451,
+            0.427,
+            0.523
+          ],
+          "feather": 0.008,
+          "closed_image": "assets/s7_anhhai_mouth_closed.jpg",
+          "mid_image": "assets/s7.jpg",
+          "open_image": "assets/s7_anhhai_mouth_open.jpg",
+          "fps": 12,
+          "thresh_mid": 0.14,
+          "thresh_open": 0.64,
+          "layer": "fg"
+        },
+        {
+          "type": "eye_blink",
+          "image": "assets/s7_chiba_blink.jpg",
+          "region": [
+            0.612,
+            0.44,
+            0.824,
+            0.527
+          ],
+          "feather": 0.008,
+          "times": [
+            62.03
+          ],
+          "close_dur": 0.055,
+          "hold_dur": 0.045,
+          "open_dur": 0.085,
+          "layer": "fg"
+        },
+        {
+          "type": "ambient_particles",
+          "count": 16,
+          "opacity": 0.24,
+          "color": [
+            255,
+            240,
+            200
+          ],
+          "drift_dir": "up"
+        },
+        {
+          "type": "color_mood",
+          "mood": "warm_daily",
+          "strength": 0.24,
+          "vignette": 0.1,
+          "grain": 0.0
+        }
+      ],
+      "transition_in": {
+        "type": "dissolve",
+        "dur": 0.28
+      }
+    },
+    {
+      "id": "s8_boc_tran_mat_na_lich_su",
+      "image": "assets/s8.jpg",
+      "start": 64.53,
+      "end": 72.65,
+      "beat_type": "anomaly",
+      "motion_level": "C",
+      "motion_intent": "Kính lúp đỏ soi vỡ mặt nạ lịch sự lộ 2 nấc khóa chiếm trang & bức tường khiên xanh ngọc tách đôi Trang cá nhân vs Trang làm nội dung riêng + glitch + detail_reveal + red_circle_draw + highlighter_sweep",
+      "motion": {
+        "preset": "slow_push_in",
+        "scale": [
+          1.02,
+          1.09
+        ],
+        "focus": [
+          [
+            0.5,
+            0.48
+          ],
+          [
+            0.5,
+            0.46
+          ]
+        ],
+        "wobble": "none",
+        "easing": "ease_out"
+      },
+      "detail_fx": [
+        {
+          "type": "detail_reveal",
+          "image": "assets/s8_reveal.jpg",
+          "at": 65.03,
+          "dur": 0.45
+        },
+        {
+          "type": "red_circle_draw",
+          "region": [
+            0.215,
+            0.115,
+            0.775,
+            0.415
+          ],
+          "at": 65.28,
+          "dur": 0.5,
+          "style": "circle"
+        },
+        {
+          "type": "highlighter_sweep",
+          "region": [
+            0.05,
+            0.56,
+            0.95,
+            0.865
+          ],
+          "at": 66.98,
+          "dur": 0.5
+        },
+        {
+          "type": "focus_highlight",
+          "pos": [
+            0.5,
+            0.48
+          ],
+          "radius": [
+            0.46,
+            0.38
+          ],
+          "dim_outer": 0.2,
+          "start": 65.03,
+          "end": 72.55,
+          "fade": 0.3
+        },
+        {
+          "type": "color_mood",
+          "mood": "noir_evidence",
+          "strength": 0.38,
+          "vignette": 0.2,
+          "grain": 0.01
+        }
+      ],
+      "transition_in": {
+        "type": "glitch",
+        "dur": 0.34
+      }
+    },
+    {
+      "id": "s9_the_nho_ky",
+      "image": "assets/s9.jpg",
+      "start": 72.65,
+      "end": 75.3,
+      "beat_type": "ending",
+      "motion_level": "A",
+      "motion_intent": "Giữ tĩnh tuyệt đối trên nền phòng khách nắng ấm dịu mắt cho Thẻ Nhớ kỹ 5.0s",
+      "motion": {
+        "preset": "static_hold"
+      },
+      "transition_in": {
+        "type": "fade_black",
+        "dur": 0.28
+      }
+    },
+    {
+      "id": "s10_black_disclaimer",
+      "image": "assets/s10_black.jpg",
+      "start": 75.3,
+      "end": 77.85,
+      "beat_type": "ending",
+      "motion_level": "A",
+      "motion_intent": "Cắt đen tĩnh tuyệt đối cho bảng Lưu ý cuối video",
+      "motion": {
+        "preset": "static_hold"
+      },
+      "transition_in": {
+        "type": "cut",
+        "dur": 0.0
+      }
+    }
+  ],
+  "dialogue": [
+    {
+      "id": "l1",
+      "speaker": "chi_ba",
+      "start": 0.4,
+      "window": 4.47,
+      "text": "Anh Hai ơi, mới xác nhận xong, mất sạch trang rồi!",
+      "style": "Giọng phụ nữ miền Nam Sài Gòn 35 tuổi, phát âm chuẩn phương ngữ miền Nam xuyên suốt mọi câu, giữ cố định một âm sắc rõ chữ; hốt hoảng run giọng gọi anh trai khi vừa bị đá văng khỏi trang cá nhân."
+    },
+    {
+      "id": "l2",
+      "speaker": "anh_hai",
+      "start": 5.27,
+      "window": 3.81,
+      "text": "Làm kênh phải lập trang riêng, trang cá nhân rủi lắm!",
+      "style": "Giọng nam miền Nam Sài Gòn 35 tuổi, thẳng tính, ấm áp và tỉnh táo như anh trai nhắc em gái; tốc độ vừa phải, rõ chữ."
+    },
+    {
+      "id": "l3",
+      "speaker": "chi_ba",
+      "start": 9.13,
+      "window": 4.08,
+      "text": "Sẵn bạn bè lên tương tác lẹ, em bảo mật kỹ!",
+      "style": "Giọng phụ nữ miền Nam Sài Gòn 35 tuổi, giữ cố định cùng một âm sắc rõ chữ; vui vẻ, tự tin và hơi chủ quan khi trả lời anh trai."
+    },
+    {
+      "id": "l4",
+      "speaker": "ke_ngot_ngao_nu",
+      "af": "phone",
+      "start": 13.66,
+      "window": 4.3,
+      "text": "Duyệt bài mười lăm triệu rồi! Chị thêm email kế toán giải ngân nha!",
+      "style": "Giọng nữ miền Nam Sài Gòn 30 tuổi chuyên viên nhãn hàng cực kỳ lịch sự, điềm tĩnh, chuyên nghiệp và niềm nở tự nhiên như quy trình thanh toán thật; tuyệt đối không hối thúc, không gấp gáp."
+    },
+    {
+      "id": "l5",
+      "speaker": "chi_ba",
+      "start": 18.01,
+      "window": 4.23,
+      "text": "Ủa kỳ vậy... sao máy bắt nhập mật khẩu xác nhận chính chủ?",
+      "style": "Giọng phụ nữ miền Nam Sài Gòn 35 tuổi, giữ cố định cùng một âm sắc rõ chữ; khựng lại ngạc nhiên và nghi ngờ nhẹ, tự lẩm bẩm rồi hỏi lại đầu dây."
+    },
+    {
+      "id": "l6",
+      "speaker": "ke_ngot_ngao_nu",
+      "af": "phone",
+      "start": 22.29,
+      "window": 4.99,
+      "text": "Dạ hệ thống bắt chính chủ xác nhận, bên em đâu đụng máy chị được!",
+      "style": "Giọng nữ miền Nam Sài Gòn 30 tuổi, giữ cố định cùng một âm sắc; cực kỳ lễ phép, điềm đạm, giải thích rành mạch hợp lý và tôn trọng, tuyệt đối không hối gấp hay gây áp lực."
+    },
+    {
+      "id": "l7",
+      "speaker": "chi_ba",
+      "start": 27.78,
+      "window": 3.84,
+      "text": "Khoan! Email chính báo đổi quyền quản trị kìa, mất trang không?!",
+      "style": "Giọng phụ nữ miền Nam Sài Gòn 35 tuổi, giữ cố định cùng một âm sắc rõ chữ; giật mình căng thẳng hẳn lên khi thấy cảnh báo ở hộp thư email chính, vội hỏi lại lần hai."
+    },
+    {
+      "id": "l8",
+      "speaker": "ke_ngot_ngao_nu",
+      "af": "phone",
+      "start": 31.67,
+      "window": 5.39,
+      "text": "Dạ mẫu mặc định, nhận tiền xong chị gỡ liền! Cứ thong thả đọc kỹ!",
+      "style": "Giọng nữ miền Nam Sài Gòn 30 tuổi, giữ cố định cùng một âm sắc; vô cùng nhã nhặn, kiên nhẫn, thong thả và chu đáo như nhân viên chăm sóc khách hàng cao cấp, tuyệt đối không thúc giục."
+    },
+    {
+      "id": "l8b",
+      "speaker": "chi_ba",
+      "start": 37.11,
+      "window": 4.33,
+      "text": "Chẳng hối gì, nghe cũng hợp lý... chắc quy trình thật!",
+      "style": "Giọng phụ nữ miền Nam Sài Gòn 35 tuổi, giữ cố định cùng một âm sắc rõ chữ; hạ giọng tự trấn an, thở nhẹ buông lỏng cảnh giác rồi quyết định bấm xác nhận."
+    },
+    {
+      "id": "l9",
+      "speaker": "ke_gia_danh",
+      "af": "phone",
+      "start": 43.09,
+      "window": 5.66,
+      "text": "Trang mười năm ảnh gia đình tôi đang giữ. Hai mươi triệu nhận lại.",
+      "style": "Giọng nam miền Nam Sài Gòn 40 tuổi, trầm, đều, lạnh tĩnh và dửng dưng như đang báo giá một giao dịch thường ngày; tuyệt đối không la hét, không dồn dập, nói gọn mà rợn."
+    },
+    {
+      "id": "l10",
+      "speaker": "chi_tu",
+      "start": 49.25,
+      "window": 4.92,
+      "text": "Ba nhận được chưa? Đúng trang bà nhắn mượn gấp, tui chuyển mười triệu rồi!",
+      "style": "Giọng phụ nữ miền Nam Sài Gòn 36 tuổi, phát âm chuẩn phương ngữ miền Nam xuyên suốt mọi câu, giữ cố định một âm sắc ấm áp; gọi điện hỏi thăm gấp và lo lắng xác nhận bạn thân đã nhận được mười triệu vừa chuyển mượn gấp chưa."
+    },
+    {
+      "id": "l11",
+      "speaker": "chi_ba",
+      "start": 54.22,
+      "window": 5.56,
+      "text": "Trời ơi! Mất trang rồi, họ hàng đồng nghiệp gọi quá trời!",
+      "style": "Giọng phụ nữ miền Nam Sài Gòn 35 tuổi, giữ cố định cùng một âm sắc rõ chữ; bàng hoàng hoảng hốt rụng rời khi biết bạn thân đã mất tiền và cả đời sống bị kéo theo."
+    },
+    {
+      "id": "l12",
+      "speaker": "anh_hai",
+      "start": 60.23,
+      "window": 4.25,
+      "text": "Đừng chuyển tiền chuộc! Báo người thân chặn vạ lây rồi trình báo!",
+      "style": "Giọng nam miền Nam Sài Gòn 35 tuổi, giữ cố định cùng một âm sắc; bình tĩnh, dứt khoát ngăn em gái không chuyển tiền chuộc và vững chãi dẫn dắt xử lý đúng cách."
+    },
+    {
+      "id": "l13",
+      "speaker": "nguoi_boc_tran",
+      "start": 64.83,
+      "window": 7.77,
+      "text": "Không hối, càng lịch sự càng dễ tin: xây kênh trang cá nhân, mất là sập cả đời!",
+      "style": "Giọng nam trung niên miền Nam Sài Gòn 40 tuổi, phát âm chuẩn phương ngữ miền Nam, trầm tĩnh, sắc lạnh và gọn dứt khoát; nhấn rõ không hối, lịch sự và sập cả đời."
+    }
+  ],
+  "chat_bubbles": [],
+  "notifications": [],
+  "callouts": [],
+  "red_flags": {
+    "start": 72.65,
+    "end": 75.3,
+    "stagger_sec": 0.18,
+    "title": "NHỚ KỸ",
+    "items": [
+      "Đối tác cực kỳ lịch sự, không hối gấp nhưng yêu cầu thêm email kế toán vào cài đặt, khiến máy đòi mật khẩu chính chủ",
+      "Hộp thư email chính báo đổi quyền quản trị — dù đối phương giải thích hợp lý, bảo “cứ thong thả đọc kỹ” vẫn là bẫy chiếm trang",
+      "Gộp kênh kiếm tiền vào trang cá nhân khiến mất trang là mất sạch ảnh gia đình và vạ lây người thân bị lừa tiền"
+    ],
+    "action": "Tách hẳn trang làm nội dung riêng (email riêng, bảo mật hai lớp bằng ứng dụng) · Thấy email chính báo đổi quyền là dừng tay ngay · Mất trang không chuyển tiền chuộc, báo gấp người thân chặn vạ lây và trình báo công an!"
+  },
+  "disclaimer": {
+    "start": 75.3,
+    "end": 77.85
+  },
+  "audio": {
+    "duck_ambience_db": -6.5,
+    "ambience": [
+      {
+        "preset": "night_room",
+        "start": 0.0,
+        "end": 4.92,
+        "gain_db": -8.0
+      },
+      {
+        "preset": "room_tone",
+        "start": 4.92,
+        "end": 13.26,
+        "gain_db": -8.5
+      },
+      {
+        "preset": "night_room",
+        "start": 13.26,
+        "end": 59.83,
+        "gain_db": -8.0
+      },
+      {
+        "preset": "room_tone",
+        "start": 59.83,
+        "end": 77.85,
+        "gain_db": -8.5
+      }
+    ],
+    "foley": [
+      {
+        "preset": "phone_vibrate",
+        "at": 0.18,
+        "gain_db": 0.4
+      },
+      {
+        "preset": "notification",
+        "at": 0.35,
+        "gain_db": -0.5
+      },
+      {
+        "preset": "counter_tick",
+        "at": 0.55,
+        "gain_db": -1.8
+      },
+      {
+        "preset": "counter_tick",
+        "at": 1.65,
+        "gain_db": -2.0
+      },
+      {
+        "preset": "click",
+        "at": 5.22,
+        "gain_db": -1.0
+      },
+      {
+        "preset": "notification",
+        "at": 13.44,
+        "gain_db": -0.5
+      },
+      {
+        "preset": "typing",
+        "at": 13.56,
+        "dur": 0.8,
+        "gain_db": -2.0
+      },
+      {
+        "preset": "low_accent",
+        "at": 17.76,
+        "dur": 0.85,
+        "gain_db": 0.4
+      },
+      {
+        "preset": "marker_draw",
+        "at": 18.16,
+        "dur": 0.48,
+        "gain_db": 0.7
+      },
+      {
+        "preset": "click",
+        "at": 26.98,
+        "gain_db": 0.6
+      },
+      {
+        "preset": "notification",
+        "at": 27.51,
+        "gain_db": 0.4
+      },
+      {
+        "preset": "marker_draw",
+        "at": 27.93,
+        "dur": 0.48,
+        "gain_db": 0.8
+      },
+      {
+        "preset": "heartbeat",
+        "at": 32.47,
+        "dur": 8.94,
+        "gain_db": -2.8
+      },
+      {
+        "preset": "click",
+        "at": 41.46,
+        "gain_db": 1.0
+      },
+      {
+        "preset": "riser",
+        "at": 41.51,
+        "dur": 0.35,
+        "gain_db": 0.2
+      },
+      {
+        "preset": "impact",
+        "at": 41.84,
+        "dur": 0.9,
+        "gain_db": 1.6
+      },
+      {
+        "preset": "glitch",
+        "at": 41.89,
+        "dur": 0.3,
+        "gain_db": 0.6
+      },
+      {
+        "preset": "low_accent",
+        "at": 42.89,
+        "dur": 0.9,
+        "gain_db": 0.6
+      },
+      {
+        "preset": "heartbeat",
+        "at": 43.19,
+        "dur": 5.31,
+        "gain_db": -2.8
+      },
+      {
+        "preset": "bank_ting",
+        "at": 49.0,
+        "gain_db": 0.6
+      },
+      {
+        "preset": "phone_ring",
+        "at": 53.97,
+        "dur": 0.85,
+        "gain_db": -2.0
+      },
+      {
+        "preset": "notification",
+        "at": 55.42,
+        "gain_db": -1.0
+      },
+      {
+        "preset": "click",
+        "at": 60.13,
+        "gain_db": 0.2
+      },
+      {
+        "preset": "message_send",
+        "at": 61.63,
+        "gain_db": 0.4
+      },
+      {
+        "preset": "low_accent",
+        "at": 61.73,
+        "dur": 0.8,
+        "gain_db": 0.2
+      },
+      {
+        "preset": "glitch",
+        "at": 64.58,
+        "dur": 0.34,
+        "gain_db": 1.0
+      },
+      {
+        "preset": "low_accent",
+        "at": 65.03,
+        "dur": 0.9,
+        "gain_db": 0.8
+      },
+      {
+        "preset": "marker_draw",
+        "at": 65.28,
+        "dur": 0.48,
+        "gain_db": 0.8
+      },
+      {
+        "preset": "marker_draw",
+        "at": 66.98,
+        "dur": 0.48,
+        "gain_db": 0.8
+      }
+    ],
+    "bgm": [
+      {
+        "preset": "suspense_pulse",
+        "start": 0.0,
+        "end": 4.92,
+        "gain_db": -1.5
+      },
+      {
+        "preset": "investigative_story",
+        "start": 4.92,
+        "end": 27.33,
+        "gain_db": -1.2
+      },
+      {
+        "preset": "tension_drone",
+        "start": 27.33,
+        "end": 48.8,
+        "gain_db": 0.4
+      },
+      {
+        "preset": "action_climax",
+        "start": 48.8,
+        "end": 59.83,
+        "gain_db": -1.0
+      },
+      {
+        "preset": "investigative_story",
+        "start": 59.83,
+        "end": 72.65,
+        "gain_db": 0.2
+      },
+      {
+        "preset": "warm_outro",
+        "start": 72.65,
+        "end": 75.3,
+        "gain_db": 0.0
+      }
+    ],
+    "duck_extra": []
+  },
+  "forbidden_terms": [],
+  "publish": {
+    "titles": [
+      "Không hối một câu, càng lịch sự càng mất trắng: Bẫy xây kênh trang cá nhân! #shorts #bóctrầnlừađảo",
+      "Thấy email chính báo đổi quyền quản trị mà vẫn bấm vì đối tác quá chuyên nghiệp! #shorts",
+      "Đừng xây kênh kiếm tiền trên trang cá nhân: Mất một trang, vạ lây người thân! #shorts #vạnchuyện"
+    ],
+    "description": "Chiêu lừa chiếm trang cá nhân của người làm nội dung thế hệ mới không còn hối thúc gấp gáp hay gây áp lực lộ liễu nữa — mà giả làm đối tác nhãn hàng cực kỳ lịch sự, giải thích hợp logic từng bước và còn chủ động khuyên “cứ thong thả đọc kỹ” để bạn tự hạ phòng vệ!\n\nChính vì chủ quan xây kênh kiếm thu nhập ngay trên trang cá nhân dùng suốt 10 năm, nạn nhân vừa tự tay bấm qua 2 nấc xác nhận (nhập mật khẩu chính chủ & xác nhận đổi quyền ở hộp thư email chính) là mất trắng trang lẫn ảnh gia đình — kéo theo bạn thân bị mạo danh lừa mất 10 triệu và đảo lộn cả đời sống.\n\n3 nguyên tắc sống còn:\n1. Tách biệt hoàn toàn trang cá nhân (riêng tư) và trang làm nội dung/công việc (email riêng, bảo mật hai lớp bằng ứng dụng xác thực).\n2. Không đánh giá thật–giả qua thái độ lịch sự hay không hối thúc: hễ thấy yêu cầu thêm email lạ hoặc hộp thư email chính báo đổi quyền quản trị là dừng tay ngay lập tức.\n3. Nếu lỡ mất trang: tuyệt đối không chuyển tiền chuộc, không thuê dịch vụ “lấy lại trang” trên mạng — báo gấp cho gia đình, đồng nghiệp chặn vạ lây, giữ chứng cứ và trình báo cơ quan công an.",
+    "pinned_comment": "📌 Ai đang làm nội dung kiếm thu nhập ngay trên trang cá nhân nhớ lưu và gửi cho bạn bè, người thân! Chiêu mới bây giờ KHÔNG HỐI GẤP — càng lịch sự, càng bảo “cứ thong thả đọc kỹ” càng khiến mình hạ phòng vệ tự bấm xác nhận đổi quyền trong email chính! Luôn tách riêng trang cá nhân và trang công việc (email riêng, bảo mật 2 lớp bằng ứng dụng). Nếu lỡ mất trang: tuyệt đối không chuyển tiền chuộc, không thuê dịch vụ “lấy lại trang” trên mạng — báo gấp gia đình, đồng nghiệp để chặn vạ lây và giữ chứng cứ trình báo cơ quan công an! (Lưu ý: không đăng SĐT, STK hay tên người thật dưới phần bình luận nhé.)",
+    "hashtags": [
+      "#shorts",
+      "#bóctrầnlừađảo",
+      "#cảnhgiáclừađảo"
+    ],
+    "tags": [
+      "bẫy xây kênh trên trang cá nhân",
+      "chiếm trang cá nhân",
+      "lừa đảo người làm nội dung",
+      "thêm email đối tác mất trang",
+      "bóc trần lừa đảo",
+      "vạn chuyện",
+      "shorts"
+    ],
+    "category": "Education (Giáo dục)",
+    "playlist": "Bóc Trần Lừa Đảo – Kỹ Năng Cảnh Giác & An Toàn Đời Thực",
+    "thumbnail_sec": 42.32
+  }
+}
